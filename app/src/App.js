@@ -675,7 +675,25 @@ class App extends React.Component {
                                       tags: [...this.state.tags]
                                     }}
                                     render={props => {
-                                      console.log("PROPS", props);
+                                      const filteredKnowledge =
+                                        [...this.state.tags].length > 0
+                                          ? props.knowledge
+                                              .map(k => {
+                                                const res = k.tags.find(
+                                                  t =>
+                                                    [
+                                                      ...this.state.tags
+                                                    ].indexOf(t) !== -1
+                                                );
+                                                if (res) {
+                                                  return k;
+                                                }
+                                                return undefined;
+                                              })
+                                              .filter(
+                                                know => know !== undefined
+                                              )
+                                          : props.knowledge;
                                       return (
                                         <>
                                           {[...this.state.tags].map(tag => (
@@ -697,6 +715,7 @@ class App extends React.Component {
                                           <Knowledge
                                             {...routeProps}
                                             {...props}
+                                            knowledge={filteredKnowledge}
                                           />
                                         </>
                                       );
