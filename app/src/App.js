@@ -78,7 +78,7 @@ const offlineStorage = {
     });
   }
 };
-const Knowledge = ({ knowledge, history, currentTags }) => {
+const Knowledge = ({ knowledge, history, currentTags, setState }) => {
   return (
     <List>
       <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
@@ -91,13 +91,38 @@ const Knowledge = ({ knowledge, history, currentTags }) => {
               src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
             />
           </ListItemAvatar>
-          <a onClick={() => history.push(`/zone/${title}`)}>
-            <ListItemText primary={title}></ListItemText>
-          </a>
+          <ListItemText
+            primary={
+              <a
+                href={`/#/zone/${title}`}
+                onClick={() => history.push(`/zone/${title}`)}
+              >
+                {title}
+              </a>
+            }
+            secondary={tags.map(t => (
+              <Chip
+                label={t}
+                onClick={() => {
+                  setState({
+                    tags:
+                      currentTags.length === 0
+                        ? new Set([t])
+                        : currentTags.add(t)
+                  });
+                }}
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  border: "1px solid #000000"
+                }}
+              ></Chip>
+            ))}
+          ></ListItemText>
           <ListItemSecondaryAction>
-            <IconButton variant="contained" color="primary">
+            <Button>
               <i className="material-icons">view</i>
-            </IconButton>
+              View
+            </Button>
           </ListItemSecondaryAction>
         </ListItem>
       ))}
@@ -598,9 +623,7 @@ class App extends React.Component {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
-                        return routeProps.history.push(
-                          `${route}`
-                        );
+                        return routeProps.history.push(`${route}`);
                       }}
                       classes={{
                         ...classes,
@@ -726,6 +749,7 @@ class App extends React.Component {
                                       tags: [...this.state.tags]
                                     }}
                                     render={props => {
+                                      console.log(this.state.tags, "tags");
                                       const filteredKnowledge =
                                         [...this.state.tags].length > 0
                                           ? props.knowledge
@@ -766,7 +790,10 @@ class App extends React.Component {
                                           <Knowledge
                                             {...routeProps}
                                             {...props}
-                                            currentTags={[...this.state.tags]}
+                                            currentTags={this.state.tags}
+                                            setState={props =>
+                                              this.setState(props)
+                                            }
                                             knowledge={filteredKnowledge}
                                           />
                                         </>
