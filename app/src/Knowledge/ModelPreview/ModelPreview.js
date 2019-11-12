@@ -12,11 +12,11 @@ import {
   Icon
 } from "@material-ui/core";
 import Reveal from "./Reveal";
-import Autocomplete from "Templates/_shared/Autocomplete/Autocomplete";
+import Autocomplete from "../../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
 import ListTree from "./ListTree.js";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
-import ConfirmDeleteModal from "Templates/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
+import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
 import GraphTree from "./GraphTree";
 import { withState, compose } from "recompose";
 import {
@@ -142,12 +142,16 @@ const ModelPreview = props => {
   const [wikipedia, setWikipedia] = React.useState();
   const [wikipediaVisible, setWikipediaVisible] = React.useState(false);
   React.useEffect(() => {
-    props.fetchPageByTopic(model.title).then(data => {
-      setWikipedia(data);
-    });
-    props.fetchImagesByTopic(model.title).then(data => {
-      console.log("data", data);
-    });
+    model &&
+      props.fetchPageByTopic &&
+      props.fetchPageByTopic(model.title).then(data => {
+        setWikipedia(data);
+      });
+    model &&
+      props.fetchImagesByTopic &&
+      props.fetchImagesByTopic(model.title).then(data => {
+        console.log("data", data);
+      });
   }, []);
   if (!mindmapByKeys && model && model.body) {
     setMindmapByKeys(model.body);

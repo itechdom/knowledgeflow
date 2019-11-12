@@ -14,7 +14,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import CancelIcon from "@material-ui/icons/Cancel";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
-import TextField from "Templates/_shared/Forms/Inputs/Forms.TextFieldInput";
+import TextField from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import { compose, withState } from "recompose";
 

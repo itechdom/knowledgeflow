@@ -21,7 +21,8 @@ import {
   CardContent,
   CardActions,
   CardHeader,
-  Card
+  Card,
+  Chip
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -49,6 +50,7 @@ import Camera from "./Camera/Camera";
 import "./global.css";
 import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
 import { Formik } from "formik";
+import ModelPreview from "./Knowledge/ModelPreview/ModelPreview";
 const loginBG = "https://orbital-clients.s3.amazonaws.com/login-bg.jpg";
 const registerBG = "https://orbital-clients.s3.amazonaws.com/register-bg.jpg";
 const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
@@ -583,102 +585,128 @@ class App extends React.Component {
                       }}
                       render={currentProps => (
                         <MainWrapper
+                          routeList={shapesFilterRouteList}
                           isTabMenu={true}
                           tabMenuPosition="top"
-                          routeList={clothingFilterRouteList}
                           {...routeProps}
                           {...this.props}
-                          onRouteClick={route => {}}
+                          onRouteClick={route => {
+                            this.setState({
+                              tags:
+                                this.state.tags.length === 0
+                                  ? new Set([route.replace("/", "")])
+                                  : this.state.tags.add(route.replace("/", ""))
+                            });
+                          }}
                           classes={{
                             ...classes,
-                            tabMenu: `${classes["top40"]} ${classes["relative"]}`
+                            tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
                           }}
-                          render={currentProps => {
-                            return (
-                              <MainWrapper
-                                routeList={shapesFilterRouteList}
-                                isTabMenu={true}
-                                tabMenuPosition="top"
-                                {...routeProps}
-                                {...this.props}
-                                onRouteClick={route => {}}
-                                classes={{
-                                  ...classes,
-                                  tabMenu: `${classes["white"]} ${classes["relative"]}`
-                                }}
-                              >
-                                <Switch>
-                                  <Route
-                                    path={`${routeProps.match.path}zone/:zone`}
-                                    render={routeProps => {
-                                      return (
-                                        <Crud
-                                          modelName="knowledge"
-                                          SERVER={config.SERVER}
-                                          offlineStorage={offlineStorage}
-                                          notificationDomainStore={
-                                            rootStore.notificationDomainStore
-                                          }
-                                          crudDomainStore={
-                                            rootStore.crudDomainStore
-                                          }
-                                          query={{
-                                            tags: [...this.state.tags]
-                                          }}
-                                          render={props => {
-                                            const zone =
-                                              routeProps.match.params.zone;
-                                            const knowledge = props.knowledge.find(
-                                              ({ title }) => title === zone
-                                            );
-                                            console.log("knowledge", knowledge);
-                                            return (
-                                              <>
-                                                {knowledge &&
-                                                  JSON.stringify(
-                                                    knowledge.body
-                                                  )}
-                                              </>
-                                            );
-                                          }}
-                                        />
-                                      );
+                        >
+                          <Switch>
+                            <Route
+                              path={`${routeProps.match.path}zone/:zone`}
+                              render={routeProps => {
+                                return (
+                                  <Crud
+                                    modelName="knowledge"
+                                    SERVER={config.SERVER}
+                                    offlineStorage={offlineStorage}
+                                    notificationDomainStore={
+                                      rootStore.notificationDomainStore
+                                    }
+                                    crudDomainStore={rootStore.crudDomainStore}
+                                    query={{
+                                      tags: [...this.state.tags]
                                     }}
-                                  ></Route>
-                                  <Route
-                                    path={`${routeProps.match.path}`}
                                     render={props => {
+                                      const {
+                                        knowledge_createModel: createModel,
+                                        knowledge_updateModel: updateModel,
+                                        knowledge_deleteModel: deleteModel,
+                                        knowledge_getModel: getModel,
+                                        knowledge_searchModel: searchModel,
+                                        knowledgeSearch
+                                      } = props;
+                                      const zone = routeProps.match.params.zone;
+                                      const knowledge = props.knowledge.find(
+                                        ({ title }) => title === zone
+                                      );
+                                      const modelPreviewProps = {
+                                        model: knowledge,
+                                        updateModel,
+                                        createModel,
+                                        searchModel,
+                                        deleteModel,
+                                        knowledgeSearch,
+                                        classes,
+                                        onAdd: () => {},
+                                        onEdit: () => {},
+                                        onDelete: () => {},
+                                        onCreate: () => {},
+                                        onView: () => {}
+                                      };
                                       return (
-                                        <Crud
-                                          modelName="knowledge"
-                                          SERVER={config.SERVER}
-                                          offlineStorage={offlineStorage}
-                                          notificationDomainStore={
-                                            rootStore.notificationDomainStore
-                                          }
-                                          crudDomainStore={
-                                            rootStore.crudDomainStore
-                                          }
-                                          query={{
-                                            tags: [...this.state.tags]
-                                          }}
-                                          render={props => {
-                                            return (
-                                              <Knowledge
-                                                {...routeProps}
-                                                {...props}
-                                              />
-                                            );
-                                          }}
-                                        />
+                                        <>
+                                          <ModelPreview
+                                            {...modelPreviewProps}
+                                            {...routeProps}
+                                          />
+                                        </>
                                       );
                                     }}
-                                  ></Route>
-                                </Switch>
-                              </MainWrapper>
-                            );
-                          }}
-                        ></MainWrapper>
+                                  />
+                                );
+                              }}
+                            ></Route>
+                            <Route
+                              path={`${routeProps.match.path}`}
+                              render={props => {
+                                return (
+                                  <Crud
+                                    modelName="knowledge"
+                                    SERVER={config.SERVER}
+                                    offlineStorage={offlineStorage}
+                                    notificationDomainStore={
+                                      rootStore.notificationDomainStore
+                                    }
+                                    crudDomainStore={rootStore.crudDomainStore}
+                                    query={{
+                                      tags: [...this.state.tags]
+                                    }}
+                                    render={props => {
+                                      console.log("PROPS", props);
+                                      return (
+                                        <>
+                                          {[...this.state.tags].map(tag => (
+                                            <Chip
+                                              label={tag}
+                                              key={tag}
+                                              id={tag}
+                                              onDelete={() =>
+                                                this.setState({
+                                                  tags: new Set(
+                                                    [...this.state.tags].filter(
+                                                      t => t !== tag
+                                                    )
+                                                  )
+                                                })
+                                              }
+                                            />
+                                          ))}
+                                          <Knowledge
+                                            {...routeProps}
+                                            {...props}
+                                          />
+                                        </>
+                                      );
+                                    }}
+                                  />
+                                );
+                              }}
+                            ></Route>
+                          </Switch>
+                        </MainWrapper>
                       )}
                     />
                   );
