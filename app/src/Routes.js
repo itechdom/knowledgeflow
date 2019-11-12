@@ -7,7 +7,5 @@ export const shapesFilterRouteList = [
 ];
 
 export const mainRouteList = [
-  { url: "/", name: "Home", icon: "" },
-  { url: "/camera", name: "", icon: "camera", type: "button" },
-  { url: "/me", name: "Profile", icon: "", type: "" }
+  { url: "/", name: "Home", icon: "" }
 ];

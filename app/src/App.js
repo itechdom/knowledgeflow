@@ -16,13 +16,23 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
+  Divider,
   TextField,
   Button,
+  IconButton,
   CardContent,
   CardActions,
   CardHeader,
   Card,
-  Chip
+  Chip,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemAvatar,
+  ListItemSecondaryAction,
+  ListItemText,
+  ListSubheader,
+  Avatar
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -68,15 +78,30 @@ const offlineStorage = {
     });
   }
 };
-const Knowledge = ({ knowledge, history }) => {
+const Knowledge = ({ knowledge, history, currentTags }) => {
   return (
-    <>
-      {knowledge.map(({ title }) => (
-        <a onClick={() => history.push(`/zone/${title}`)}>
-          <h1>{title}</h1>{" "}
-        </a>
+    <List>
+      <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
+      <Divider></Divider>
+      {knowledge.map(({ title, tags }) => (
+        <ListItem>
+          <ListItemAvatar>
+            <Avatar
+              alt={`Avatar n°`}
+              src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
+            />
+          </ListItemAvatar>
+          <a onClick={() => history.push(`/zone/${title}`)}>
+            <ListItemText primary={title}></ListItemText>
+          </a>
+          <ListItemSecondaryAction>
+            <IconButton variant="contained" color="primary">
+              <i className="material-icons">view</i>
+            </IconButton>
+          </ListItemSecondaryAction>
+        </ListItem>
       ))}
-    </>
+    </List>
   );
 };
 class App extends React.Component {
@@ -579,6 +604,8 @@ class App extends React.Component {
                       }}
                       classes={{
                         ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        title: `${classes["white"]}`,
                         menuTabsClasses: {
                           flexContainer: `${classes["center"]}`
                         }
@@ -600,6 +627,7 @@ class App extends React.Component {
                           }}
                           classes={{
                             ...classes,
+                            title: `${classes["white"]}`,
                             tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
                           }}
                         >
@@ -715,6 +743,7 @@ class App extends React.Component {
                                           <Knowledge
                                             {...routeProps}
                                             {...props}
+                                            currentTags={[...this.state.tags]}
                                             knowledge={filteredKnowledge}
                                           />
                                         </>

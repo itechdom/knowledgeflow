@@ -74,8 +74,7 @@ const MainWrapper = props => {
             style={{
               bottom: tabMenuPosition === "top" ? "auto" : 0,
               top: tabMenuPosition === "top" ? 0 : "auto",
-              backgroundColor: "white",
-              color: "black"
+              backgroundColor: "white"
             }}
             className={classes.tabMenu}
           >
@@ -118,7 +117,6 @@ const MainWrapper = props => {
         <AppBar className={classes.menu}>
           <Toolbar className={classes.toolbar}>
             <IconButton
-              color="inherit"
               aria-label="Open drawer"
               onClick={() => setOpen(true)}
               className={classNames(
@@ -128,12 +126,7 @@ const MainWrapper = props => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography
-              variant="title"
-              color="inherit"
-              noWrap
-              className={classes.title}
-            >
+            <Typography variant="title" noWrap className={classes.title}>
               {brand
                 ? brand
                 : (routeList[currentRoute] && routeList[currentRoute].name) ||
