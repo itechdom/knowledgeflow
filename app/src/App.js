@@ -586,6 +586,84 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
+                path={`${this.props.match.path}zone/:zone`}
+                render={routeProps => {
+                  return (
+                    <MainWrapper
+                      routeList={mainRouteList}
+                      {...routeProps}
+                      {...this.props}
+                      isTabMenu={true}
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(
+                          `${route}`
+                        );
+                      }}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        title: `${classes["white"]}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`
+                        }
+                      }}
+                    >
+                      <Crud
+                        modelName="knowledge"
+                        SERVER={config.SERVER}
+                        offlineStorage={offlineStorage}
+                        notificationDomainStore={
+                          rootStore.notificationDomainStore
+                        }
+                        crudDomainStore={rootStore.crudDomainStore}
+                        query={{
+                          tags: [...this.state.tags]
+                        }}
+                        render={props => {
+                          const {
+                            knowledge_createModel: createModel,
+                            knowledge_updateModel: updateModel,
+                            knowledge_deleteModel: deleteModel,
+                            knowledge_getModel: getModel,
+                            knowledge_searchModel: searchModel,
+                            knowledgeSearch
+                          } = props;
+                          const zone = routeProps.match.params.zone;
+                          const knowledge = props.knowledge.find(
+                            ({ title }) => title === zone
+                          );
+                          const modelPreviewProps = {
+                            model: knowledge,
+                            updateModel,
+                            createModel,
+                            searchModel,
+                            deleteModel,
+                            knowledgeSearch,
+                            classes,
+                            onAdd: () => {},
+                            onEdit: () => {},
+                            onDelete: () => {},
+                            onCreate: () => {},
+                            onView: () => {}
+                          };
+                          return (
+                            <>
+                              <ModelPreview
+                                {...modelPreviewProps}
+                                {...routeProps}
+                              />
+                            </>
+                          );
+                        }}
+                      />
+                    </MainWrapper>
+                  );
+                }}
+              ></Route>
+              <Route
                 path={`${this.props.match.path}`}
                 render={routeProps => {
                   return (
@@ -632,61 +710,6 @@ class App extends React.Component {
                           }}
                         >
                           <Switch>
-                            <Route
-                              path={`${routeProps.match.path}zone/:zone`}
-                              render={routeProps => {
-                                return (
-                                  <Crud
-                                    modelName="knowledge"
-                                    SERVER={config.SERVER}
-                                    offlineStorage={offlineStorage}
-                                    notificationDomainStore={
-                                      rootStore.notificationDomainStore
-                                    }
-                                    crudDomainStore={rootStore.crudDomainStore}
-                                    query={{
-                                      tags: [...this.state.tags]
-                                    }}
-                                    render={props => {
-                                      const {
-                                        knowledge_createModel: createModel,
-                                        knowledge_updateModel: updateModel,
-                                        knowledge_deleteModel: deleteModel,
-                                        knowledge_getModel: getModel,
-                                        knowledge_searchModel: searchModel,
-                                        knowledgeSearch
-                                      } = props;
-                                      const zone = routeProps.match.params.zone;
-                                      const knowledge = props.knowledge.find(
-                                        ({ title }) => title === zone
-                                      );
-                                      const modelPreviewProps = {
-                                        model: knowledge,
-                                        updateModel,
-                                        createModel,
-                                        searchModel,
-                                        deleteModel,
-                                        knowledgeSearch,
-                                        classes,
-                                        onAdd: () => {},
-                                        onEdit: () => {},
-                                        onDelete: () => {},
-                                        onCreate: () => {},
-                                        onView: () => {}
-                                      };
-                                      return (
-                                        <>
-                                          <ModelPreview
-                                            {...modelPreviewProps}
-                                            {...routeProps}
-                                          />
-                                        </>
-                                      );
-                                    }}
-                                  />
-                                );
-                              }}
-                            ></Route>
                             <Route
                               path={`${routeProps.match.path}`}
                               render={props => {
