@@ -66,8 +66,16 @@ const offlineStorage = {
     });
   }
 };
-const Knowledge = ({ knowledge }) => {
-  return <>{knowledge.map(({ title }) => `${title}`)}</>;
+const Knowledge = ({ knowledge, history }) => {
+  return (
+    <>
+      {knowledge.map(({ title }) => (
+        <a onClick={() => history.push(`/zone/${title}`)}>
+          <h1>{title}</h1>{" "}
+        </a>
+      ))}
+    </>
+  );
 };
 class App extends React.Component {
   state = {
@@ -601,6 +609,43 @@ class App extends React.Component {
                               >
                                 <Switch>
                                   <Route
+                                    path={`${routeProps.match.path}zone/:zone`}
+                                    render={routeProps => {
+                                      return (
+                                        <Crud
+                                          modelName="knowledge"
+                                          SERVER={config.SERVER}
+                                          offlineStorage={offlineStorage}
+                                          notificationDomainStore={
+                                            rootStore.notificationDomainStore
+                                          }
+                                          crudDomainStore={
+                                            rootStore.crudDomainStore
+                                          }
+                                          query={{
+                                            tags: [...this.state.tags]
+                                          }}
+                                          render={props => {
+                                            const zone =
+                                              routeProps.match.params.zone;
+                                            const knowledge = props.knowledge.find(
+                                              ({ title }) => title === zone
+                                            );
+                                            console.log("knowledge", knowledge);
+                                            return (
+                                              <>
+                                                {knowledge &&
+                                                  JSON.stringify(
+                                                    knowledge.body
+                                                  )}
+                                              </>
+                                            );
+                                          }}
+                                        />
+                                      );
+                                    }}
+                                  ></Route>
+                                  <Route
                                     path={`${routeProps.match.path}`}
                                     render={props => {
                                       return (
@@ -618,7 +663,12 @@ class App extends React.Component {
                                             tags: [...this.state.tags]
                                           }}
                                           render={props => {
-                                            return <Knowledge {...props} />;
+                                            return (
+                                              <Knowledge
+                                                {...routeProps}
+                                                {...props}
+                                              />
+                                            );
                                           }}
                                         />
                                       );
@@ -634,12 +684,11 @@ class App extends React.Component {
                   );
                 }}
               />
-              <Redirect
+              {/* <Redirect
                 to={{
                   pathname: "/"
                 }}
-              />
-              ;
+              /> */}
             </Switch>
           )}
         </Router>
