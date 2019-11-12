@@ -11,7 +11,7 @@
 #
 # Happy Coding!
 
-service: celebrateapp
+service: knowledgeflow.markab.io 
 
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
@@ -108,5 +108,5 @@ plugins:
 
 custom:
   client:
-    bucketName: celebrateapp # (see Configuration Parameters below)
+    bucketName: knowledgeflow.markab.io # (see Configuration Parameters below)
     distributionFolder: platforms/browser/www

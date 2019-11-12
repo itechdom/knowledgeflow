@@ -31,9 +31,9 @@ import {
   Media,
   Forms,
   Auth,
-  Notification,
-  Crud
+  Notification
 } from "@markab.io/react";
+import { Crud } from "../react-services/crud-service/crud-service-mst";
 import config from "Config";
 import ReactGA from "react-ga";
 import rootStore from "./Store/rootStore";
@@ -46,7 +46,6 @@ import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
-import Celebrate from "./Celebrate/Celebrate";
 import "./global.css";
 import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
 import { Formik } from "formik";
@@ -67,12 +66,16 @@ const offlineStorage = {
     });
   }
 };
+const Knowledge = ({ knowledge }) => {
+  return <>{knowledge.map(({ title }) => `${title}`)}</>;
+};
 class App extends React.Component {
   state = {
     isLoggedIn: false,
     currentUser: {},
     appSettings: {},
-    tags: []
+    tags: [],
+    initialTags: []
   };
   constructor(props) {
     super(props);
@@ -580,9 +583,7 @@ class App extends React.Component {
                           onRouteClick={route => {}}
                           classes={{
                             ...classes,
-                            tabMenu: `${classes["top40"]} ${
-                              classes["relative"]
-                            }`
+                            tabMenu: `${classes["top40"]} ${classes["relative"]}`
                           }}
                           render={currentProps => {
                             return (
@@ -595,9 +596,7 @@ class App extends React.Component {
                                 onRouteClick={route => {}}
                                 classes={{
                                   ...classes,
-                                  tabMenu: `${classes["white"]} ${
-                                    classes["relative"]
-                                  }`
+                                  tabMenu: `${classes["white"]} ${classes["relative"]}`
                                 }}
                               >
                                 <Switch>
@@ -618,9 +617,10 @@ class App extends React.Component {
                                           query={{
                                             tags: [...this.state.tags]
                                           }}
-                                        >
-                                          <Celebrate {...routeProps} />
-                                        </Crud>
+                                          render={props => {
+                                            return <Knowledge {...props} />;
+                                          }}
+                                        />
                                       );
                                     }}
                                   ></Route>

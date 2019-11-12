@@ -2,27 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, HashRouter as Router } from "react-router-dom";
 import App from "./src/App";
-// import { styles } from "Styles";
-// import theme from "Theme";
-// import withOrbital from "./src/withOrbitalMobile";
-// import {
-//   mainRouteList,
-//   homeFilterRouteList,
-//   meFilterRouteList
-// } from "./src/Routes";
-// const offlineStorage = {
-//   getItem: () => {
-//     return new Promise((resolve, reject) => {
-//       resolve("resolved");
-//     });
-//   },
-//   setItem: () => {
-//     return new Promise((resolve, reject) => {
-//       resolve("resolved");
-//     });
-//   }
-// };
-// import rootStore from "./src/Store/rootStore";
 
 const FireApp = props => {
   const MyApp = props => (
@@ -35,14 +14,6 @@ const FireApp = props => {
       />
     </Router>
   );
-  // const EnhancedApp = withOrbital({
-  //   rootStore,
-  //   offlineStorage,
-  //   routeList: mainRouteList,
-  //   disableAuth: true,
-  //   styles,
-  //   theme
-  // })(MyApp);
   ReactDOM.render(<MyApp />, document.getElementById("app"));
 };
 

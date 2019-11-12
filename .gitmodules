@@ -1,0 +1,3 @@
+[submodule "app/react-services"]
+	path = app/react-services
+	url = https://github.com/markab-io/react-services
