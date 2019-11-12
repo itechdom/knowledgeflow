@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Celebrate",
+  "short_name": "Celebrate",
+  "version": "io.markab.celebrate",
+  "description": "Body positive, Fashion forward, social media network.",
+  "author": "Sam Alghanmi",
+  "icons": [],
+  "start_url": "index.html"
+}

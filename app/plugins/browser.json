@@ -1,0 +1,22 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "io.markab.makingthecase"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.markab.celebrate"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.markab.makingthecase"
+    }
+  }
+}
