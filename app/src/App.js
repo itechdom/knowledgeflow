@@ -84,47 +84,53 @@ const Knowledge = ({ knowledge, history, currentTags, setState }) => {
       <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
       <Divider></Divider>
       {knowledge.map(({ title, tags }) => (
-        <ListItem>
-          <ListItemAvatar>
-            <Avatar
-              alt={`Avatar n°`}
-              src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
-            />
-          </ListItemAvatar>
-          <ListItemText
-            primary={
-              <a
-                href={`/#/zone/${title}`}
+        <>
+          <ListItem>
+            <ListItemAvatar>
+              <Avatar
+                alt={`Avatar n°`}
+                src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
+              />
+            </ListItemAvatar>
+            <ListItemText
+              primary={
+                <a
+                  href={`/#/zone/${title}`}
+                  onClick={() => history.push(`/zone/${title}`)}
+                >
+                  {title}
+                </a>
+              }
+              secondary={tags.map(t => (
+                <Chip
+                  label={t}
+                  onClick={() => {
+                    setState({
+                      tags:
+                        currentTags.length === 0
+                          ? new Set([t])
+                          : currentTags.add(t)
+                    });
+                  }}
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #000000"
+                  }}
+                ></Chip>
+              ))}
+            ></ListItemText>
+            <ListItemSecondaryAction>
+              <Button
                 onClick={() => history.push(`/zone/${title}`)}
+                variant="contained"
+                color="primary"
               >
-                {title}
-              </a>
-            }
-            secondary={tags.map(t => (
-              <Chip
-                label={t}
-                onClick={() => {
-                  setState({
-                    tags:
-                      currentTags.length === 0
-                        ? new Set([t])
-                        : currentTags.add(t)
-                  });
-                }}
-                style={{
-                  backgroundColor: "#FFFFFF",
-                  border: "1px solid #000000"
-                }}
-              ></Chip>
-            ))}
-          ></ListItemText>
-          <ListItemSecondaryAction>
-            <Button>
-              <i className="material-icons">view</i>
-              View
-            </Button>
-          </ListItemSecondaryAction>
-        </ListItem>
+                <span style={{ color: "white" }}>View</span>
+              </Button>
+            </ListItemSecondaryAction>
+          </ListItem>
+          <Divider></Divider>
+        </>
       ))}
     </List>
   );
