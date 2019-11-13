@@ -606,7 +606,7 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
-                path={`${this.props.match.path}locations`}
+                path={`${this.props.match.path}timeline`}
                 render={props => {
                   return (
                     <MainWrapper
@@ -629,7 +629,7 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
-                path={`${this.props.match.path}camera`}
+                path={`${this.props.match.path}experiments`}
                 render={props => {
                   return (
                     <MainWrapper
@@ -766,6 +766,13 @@ class App extends React.Component {
                                   : this.state.tags.add(route.replace("/", ""))
                             });
                           }}
+                          onDrawerRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          drawerRouteList={mainRouteList}
                           classes={{
                             ...classes,
                             title: `${classes["white"]}`,

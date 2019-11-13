@@ -42,6 +42,7 @@ const MainWrapper = props => {
     hasPadding,
     onLogout,
     routeList,
+    drawerRouteList,
     brand,
     anchorEl,
     setAnchorEl,
@@ -53,6 +54,7 @@ const MainWrapper = props => {
     noMargin,
     isTabMenu,
     tabMenuPosition,
+    onDrawerRouteClick,
     onRouteClick,
     selectedRoute,
     render
@@ -194,10 +196,13 @@ const MainWrapper = props => {
           <Routes
             currentRoute={currentRoute || 0}
             classes={classes}
-            routeList={routeList}
+            routeList={drawerRouteList ? drawerRouteList : routeList}
             isLoggedIn={user && !!user.name}
             onClick={route => {
               setOpen(false);
+              if (onDrawerRouteClick) {
+                return onDrawerRouteClick(`${route.url}`);
+              }
               onRouteClick
                 ? onRouteClick(`${route.url}`)
                 : history.push(`${match.path}${route.url}`);
