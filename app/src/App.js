@@ -60,6 +60,7 @@ import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
 import "./global.css";
 import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
+import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
 import { Formik } from "formik";
 import ModelPreview from "./Knowledge/ModelPreview/ModelPreview";
 const loginBG = "https://orbital-clients.s3.amazonaws.com/login-bg.jpg";
@@ -90,7 +91,7 @@ const Knowledge = ({
     <List>
       <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
       <Divider></Divider>
-      {knowledge_loading && <CircularProgress></CircularProgress>}
+      {knowledge_loading && <Loading />}
       {knowledge.map(({ title, tags }) => (
         <>
           <ListItem>
