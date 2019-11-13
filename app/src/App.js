@@ -21,7 +21,9 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   ListSubheader,
-  Avatar
+  Avatar,
+  Grid,
+  Paper
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -637,22 +639,79 @@ class App extends React.Component {
                       {...props}
                       {...this.props}
                       isTabMenu={true}
-                      classes={classes}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        title: `${classes["white"]}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`
+                        }
+                      }}
                     >
-                      <Camera
-                        onData={data => {
-                          this.setState({
-                            currentImage: `data:image/png;base64,${data}`
-                          });
-                          this.setState({
-                            showConfirmModal: true
-                          });
+                      <Grid
+                        style={{ marginTop: "6em", height: "100vh" }}
+                        container
+                        justify="center"
+                      >
+                        {[
+                          {
+                            title: "I Saw someting!",
+                            icon: "panorama_fish_eye"
+                          },
+                          {
+                            title: "I want to say something!",
+                            icon: "audiotrack"
+                          },
+                          {
+                            title: "I want to write down some thoughts",
+                            icon: "edit"
+                          }
+                        ].map(({ title, icon }) => (
+                          <Grid xs={12} md={6} item>
+                            <Card>
+                              <Grid container justify="center">
+                                <Grid item xs={6} md={6}>
+                                  <CardContent style={{ textAlign: "center" }}>
+                                    <Button color="primary" variant="contained">
+                                      <i class="material-icons">{icon}</i>
+                                    </Button>
+                                    <p
+                                      style={{
+                                        fontWeight: "bold",
+                                        fontSize:
+                                          title === "I Saw someting!" ? 20 : 16
+                                      }}
+                                    >
+                                      {title}
+                                    </p>
+                                  </CardContent>
+                                </Grid>
+                              </Grid>
+                            </Card>
+                          </Grid>
+                        ))}
+                      </Grid>
+                      <Route
+                        path={`${this.props.match.path}record`}
+                        render={routeProps => {
+                          return (
+                            <Camera
+                              onData={data => {
+                                this.setState({
+                                  currentImage: `data:image/png;base64,${data}`
+                                });
+                                this.setState({
+                                  showConfirmModal: true
+                                });
+                              }}
+                              onError={err => {
+                                console.error("ERROR!", err);
+                              }}
+                              {...props}
+                            ></Camera>
+                          );
                         }}
-                        onError={err => {
-                          console.error("ERROR!", err);
-                        }}
-                        {...props}
-                      ></Camera>
+                      ></Route>
                       {this.renderDialog()}
                     </MainWrapper>
                   );

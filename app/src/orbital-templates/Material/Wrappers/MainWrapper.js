@@ -85,7 +85,11 @@ const MainWrapper = props => {
             <Tabs
               className={classes.menuTabs}
               classes={
-                classes.menuTabsClasses ? classes.menuTabsClasses : undefined
+                classes.menuTabsClasses
+                  ? tabMenuPosition === "top"
+                    ? `${classes.menuTabsClasses} ${classes.tagTabs}`
+                    : classes.menuTabsClasses
+                  : undefined
               }
               value={currentRoute || 0}
               onChange={(event, route) => {
@@ -108,9 +112,11 @@ const MainWrapper = props => {
                     key={index}
                     button
                     className={
-                      route.type === "button"
-                        ? classes.buttonListItem
-                        : classes.listItem
+                      tabMenuPosition === "top"
+                        ? route.type === "button"
+                          ? classes.buttonListItem
+                          : classes.listItem
+                        : classes.tagTab
                     }
                   />
                 );
@@ -210,7 +216,10 @@ const MainWrapper = props => {
           />
         </Drawer>
         <Paper>
-          <main className={`${classes.hasPadding} ${classes.content}`}>
+          <main
+            style={{ height: "100vh", marginBottom: "100px" }}
+            className={`${classes.hasPadding} ${classes.content}`}
+          >
             {render ? render(props) : children}
           </main>
         </Paper>

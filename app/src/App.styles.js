@@ -19,6 +19,9 @@ export const styles = theme => {
     appBar: {
       zIndex: theme.zIndex.drawer + 1
     },
+    tagTabs: {
+      backgroundColor: "black"
+    },
     menu: {},
     menuButton: {
       // marginLeft: 30,
