@@ -85,27 +85,6 @@ export const Register = ({
               <Icon>keyboard</Icon>
             </Avatar>
             <Typography variant="headline">Sign up</Typography>
-            {/* <Button
-              onClick={() => onProviderAuth("google")}
-              size="large"
-              fullWidth
-            >
-              Login with Google
-            </Button> */}
-            {/* <Button
-              onClick={() => onProviderAuth("facebook")}
-              size="large"
-              fullWidth
-            >
-              Login with facebook
-            </Button>
-            <Button
-              onClick={() => onProviderAuth("twitter")}
-              size="large"
-              fullWidth
-            >
-              Login with twitter
-            </Button> */}
           </Grid>
         )}
       />
@@ -162,7 +141,7 @@ export const Register = ({
                     <Typography
                       style={{ textTransform: "lowercase" }}
                       variant="subtitle2"
-                      color="secondary"
+                      color="primary"
                     >
                       already have an account? login here
                     </Typography>

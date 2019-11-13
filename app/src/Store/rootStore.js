@@ -29,14 +29,19 @@ const rootStore = new Store({
   skipAuth: true,
   config,
   offlineStorage: {
-    getItem: () => {
+    getItem: key => {
       return new Promise((resolve, reject) => {
-        resolve("resolved");
+        return resolve(localStorage.getItem(key));
       });
     },
-    setItem: () => {
+    setItem: (key, value) => {
       return new Promise((resolve, reject) => {
-        resolve("resolved");
+        return resolve(localStorage.setItem(key, value));
+      });
+    },
+    removeItem: key => {
+      return new Promise((resolve, reject) => {
+        return resolve(localStorage.removeItem(key));
       });
     }
   }

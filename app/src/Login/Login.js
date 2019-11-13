@@ -7,6 +7,7 @@ const LoginModule = ({
   onProviderAuth,
   onRegister,
   onForgotPassword,
+  onSuccess,
   classes,
   location,
   history,
@@ -20,6 +21,7 @@ const LoginModule = ({
         onProviderAuth={onProviderAuth}
         onRegister={onRegister}
         onForgotPassword={onForgotPassword}
+        onSuccess={onSuccess}
         classes={classes}
         location={location}
         history={history}

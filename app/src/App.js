@@ -61,14 +61,19 @@ const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
 const gaTrackingCode = "UA-46023413-2";
 const disableAuth = false;
 const offlineStorage = {
-  getItem: () => {
+  getItem: key => {
     return new Promise((resolve, reject) => {
-      resolve("resolved");
+      return resolve(localStorage.getItem(key));
     });
   },
-  setItem: () => {
+  setItem: (key, value) => {
     return new Promise((resolve, reject) => {
-      resolve("resolved");
+      return resolve(localStorage.setItem(key, value));
+    });
+  },
+  removeItem: key => {
+    return new Promise((resolve, reject) => {
+      return resolve(localStorage.removeItem(key));
     });
   }
 };
@@ -180,8 +185,9 @@ class App extends React.Component {
     rootStore.authDomainStore
       .isAuthenticated()
       .then(res => {
-        if (!res.data.success) {
+        if (res.data.success === false) {
           this.setState({ isLoggedIn: false });
+          return this.props.history.push("/auth/login");
         } else {
           this.setState({ isLoggedIn: true, currentUser: res.data });
         }
@@ -196,6 +202,7 @@ class App extends React.Component {
   };
   onLogout() {
     rootStore.authDomainStore.logout();
+    this.props.history.push("/auth/login");
   }
   onDialogClose = () => {
     this.props.history.goBack();
@@ -243,10 +250,15 @@ class App extends React.Component {
   };
   render() {
     const { classes } = this.props;
+    const logOutRoute = {
+      url: "logout",
+      name: "Log Out",
+      icon: "exit_to_app"
+    };
     return (
       <ThemeProvider theme={theme}>
         <Router>
-          {false ? (
+          {!disableAuth && !this.state.isLoggedIn ? (
             <Switch>
               <Route
                 path="/onboarding/1"
@@ -300,7 +312,7 @@ class App extends React.Component {
                         }) => {
                           return (
                             <Card>
-                              <CardHeader title="Pick your body type"></CardHeader>
+                              <CardHeader title="Survey 1"></CardHeader>
                               <CardContent>
                                 <form onSubmit={handleSubmit}>
                                   <FormsList
@@ -407,7 +419,7 @@ class App extends React.Component {
                         }) => {
                           return (
                             <Card>
-                              <CardHeader title="Give us some more information (optional)"></CardHeader>
+                              <CardHeader title="Terms of service"></CardHeader>
                               <CardContent>
                                 <form onSubmit={handleSubmit}>
                                   <FormsList
@@ -504,6 +516,10 @@ class App extends React.Component {
                           onForgotPassword={() =>
                             history.push("/auth/forgot-password")
                           }
+                          onSuccess={values => {
+                            console.log("SUCCESS");
+                            history.push("/home");
+                          }}
                           location={location}
                           history={history}
                           match={match}
@@ -546,6 +562,13 @@ class App extends React.Component {
                 render={({ location, match, history }) => {
                   return (
                     <MainWrapper
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return history.push(`${route}`);
+                      }}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
                       classes={classes}
                       routeList={currentRouteList}
                       location={location}
@@ -593,29 +616,43 @@ class App extends React.Component {
               />
               <Route
                 path={`${this.props.match.path}me`}
-                render={props => {
+                render={routeProps => {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
-                      {...props}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      {...routeProps}
                       {...this.props}
                       isTabMenu={true}
                       classes={classes}
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                     >
-                      <Profile {...props}></Profile>
+                      <Profile {...routeProps}></Profile>
                     </MainWrapper>
                   );
                 }}
               ></Route>
               <Route
                 path={`${this.props.match.path}timeline`}
-                render={props => {
+                render={routeProps => {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
-                      {...props}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      {...routeProps}
                       {...this.props}
                       isTabMenu={true}
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
@@ -625,18 +662,25 @@ class App extends React.Component {
                         }
                       }}
                     >
-                      <Maps {...props} classes={classes}></Maps>
+                      <Maps {...routeProps} classes={classes}></Maps>
                     </MainWrapper>
                   );
                 }}
               ></Route>
               <Route
                 path={`${this.props.match.path}experiments`}
-                render={props => {
+                render={routeProps => {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
-                      {...props}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
+                      {...routeProps}
                       {...this.props}
                       isTabMenu={true}
                       classes={{
@@ -726,6 +770,13 @@ class App extends React.Component {
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
@@ -826,12 +877,15 @@ class App extends React.Component {
                             });
                           }}
                           onDrawerRouteClick={route => {
+                            if (route === "logout") {
+                              return this.onLogout();
+                            }
                             if (route.indexOf("http") !== -1) {
                               return window.open(route);
                             }
                             return routeProps.history.push(`${route}`);
                           }}
-                          drawerRouteList={mainRouteList}
+                          drawerRouteList={[...mainRouteList, logOutRoute]}
                           classes={{
                             ...classes,
                             title: `${classes["white"]}`,

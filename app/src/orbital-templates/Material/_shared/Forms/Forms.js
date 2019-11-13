@@ -4,7 +4,6 @@ import { styles } from "./Forms.styles";
 import { withStyles } from "@material-ui/styles";
 import { withState, compose } from "recompose";
 import theme from "Theme";
-import RichTextEditor from "react-rte";
 import moment from "moment";
 import { Button, Typography, CircularProgress } from "@material-ui/core";
 import * as Inputs from "./Inputs";
@@ -12,11 +11,6 @@ import Autocomplete from "../Autocomplete/Autocomplete";
 import ClientNotification from "../ClientNotification/ClientNotification";
 
 const enhance = compose(
-  withState(
-    "textEditorValue",
-    "setTextEditorValue",
-    RichTextEditor.createEmptyValue()
-  ),
   withState("timeoutValue", "setTimeoutValue", null),
   withState("currentGalleryIndex", "setCurrentGalleryIndex", 0)
 );

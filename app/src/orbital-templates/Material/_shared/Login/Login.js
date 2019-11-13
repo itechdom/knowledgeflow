@@ -51,7 +51,8 @@ export const Login = ({
   classes,
   location,
   history,
-  match
+  match,
+  onSuccess
 }) => {
   return (
     <Card className={classes.layout}>
@@ -68,27 +69,6 @@ export const Login = ({
               <LockIcon />
             </Avatar>
             <Typography variant="headline">Sign in</Typography>
-            {/* <Button
-              onClick={() => onProviderAuth("google")}
-              size="large"
-              fullWidth
-            >
-              Login with Google
-            </Button> */}
-            {/* <Button
-              onClick={() => onProviderAuth("facebook")}
-              size="large"
-              fullWidth
-            >
-              Login with facebook
-            </Button>
-            <Button
-              onClick={() => onProviderAuth("twitter")}
-              size="large"
-              fullWidth
-            >
-              Login with twitter
-            </Button> */}
           </Grid>
         )}
       />
@@ -97,7 +77,7 @@ export const Login = ({
         onSubmit={(values, actions) => {
           onSubmit(values)
             .then(() => {
-              history.push("/");
+              onSuccess ? onSuccess(values) : history.push("/");
               actions.setSubmitting(false);
             })
             .catch(err => {
@@ -144,7 +124,7 @@ export const Login = ({
                     <Typography
                       style={{ textTransform: "lowercase" }}
                       variant="subtitle2"
-                      color="secondary"
+                      color="primary"
                     >
                       Forgot Password?
                     </Typography>
@@ -158,7 +138,7 @@ export const Login = ({
                     <Typography
                       style={{ textTransform: "lowercase" }}
                       variant="subtitle2"
-                      color="secondary"
+                      color="primary"
                     >
                       You don't have an account? register here
                     </Typography>
