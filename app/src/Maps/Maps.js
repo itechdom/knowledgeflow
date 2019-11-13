@@ -46,34 +46,6 @@ const ModelList = ({
   };
   return (
     <Paper style={{ height: "50vh", width: "100%" }} elevation={2}>
-      <AppBar
-        className={classes.autocompleteContainer}
-        position="static"
-        color="default"
-      >
-        <Toolbar>
-          <Autocomplete
-            inputClassName={classes.autocomplete}
-            placeholder={"Where would you like to go ..."}
-            onSelect={suggestion => {
-              onSearchSelect
-                ? onSearchSelect(suggestion)
-                : history.push(
-                    `/${suggestion.resource}/view/${suggestion._id}`
-                  );
-            }}
-            loadSuggestions={text => {
-              let query = {
-                [modelKey]: { $regex: event.target.value }
-              };
-              if (onSearch) {
-                return onSearch(query);
-              }
-              return searchModel(query);
-            }}
-          />
-        </Toolbar>
-      </AppBar>
       <GoogleMapReact
         bootstrapURLKeys={{ key: "AIzaSyDBMdHRkDHz3ARxGAxRs4ZkPRTxsiS-9fw" }}
         defaultCenter={position}

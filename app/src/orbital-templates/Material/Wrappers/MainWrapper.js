@@ -67,8 +67,8 @@ const MainWrapper = props => {
     ? selectedRoute
     : (route.length > 0 && routeList.indexOf(route[route.length - 1])) || 0;
   let isRoot = routeList[currentRoute] === "/";
-  console.log("ISROOOT!", routeList[currentRoute]);
-  console.log("MAIN WRAPPER CLASSES", classes);
+  // console.log("ISROOOT!", routeList[currentRoute]);
+  // console.log("MAIN WRAPPER CLASSES", classes);
   return (
     <>
       <CssBaseline />

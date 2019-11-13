@@ -90,10 +90,10 @@ const Knowledge = ({
       <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
       <Divider></Divider>
       {knowledge_loading && <Loading />}
-      <AutoSizer>
+      {/* <AutoSizer>
         {({ width, height }) => (
           <VirtualList
-            width={width}
+            width={500}
             height={height}
             rowCount={knowledge && knowledge.length}
             rowHeight={10}
@@ -104,61 +104,61 @@ const Knowledge = ({
               key,
               parent,
               style
-            }) => {
-              const { title, tags } = knowledge[index];
-              return (
-                <>
-                  <ListItem>
-                    <ListItemAvatar>
-                      <Avatar
-                        alt={`Avatar n°`}
-                        src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
-                      />
-                    </ListItemAvatar>
-                    <ListItemText
-                      primary={
-                        <a
-                          href={`/#/zone/${title}`}
-                          onClick={() => history.push(`/zone/${title}`)}
-                        >
-                          {title}
-                        </a>
-                      }
-                      secondary={tags.map(t => (
-                        <Chip
-                          label={t}
-                          onClick={() => {
-                            setState({
-                              tags:
-                                currentTags.length === 0
-                                  ? new Set([t])
-                                  : currentTags.add(t)
-                            });
-                          }}
-                          style={{
-                            backgroundColor: "#FFFFFF",
-                            border: "1px solid #000000"
-                          }}
-                        ></Chip>
-                      ))}
-                    ></ListItemText>
-                    <ListItemSecondaryAction>
-                      <Button
-                        onClick={() => history.push(`/zone/${title}`)}
-                        color="primary"
-                        style={{ padding: "0px" }}
-                      >
-                        <i class="material-icons">arrow_right_alt</i>
-                      </Button>
-                    </ListItemSecondaryAction>
-                  </ListItem>
-                  <Divider></Divider>
-                </>
-              );
-            }}
-          />
+            }) => { */}
+      {knowledge.map(({ title, tags }) => {
+        return (
+          <>
+            <ListItem>
+              <ListItemAvatar>
+                <Avatar
+                  alt={`Avatar n°`}
+                  src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
+                />
+              </ListItemAvatar>
+              <ListItemText
+                primary={
+                  <a
+                    href={`/#/zone/${title}`}
+                    onClick={() => history.push(`/zone/${title}`)}
+                  >
+                    {title}
+                  </a>
+                }
+                secondary={tags.map(t => (
+                  <Chip
+                    label={t}
+                    onClick={() => {
+                      setState({
+                        tags:
+                          currentTags.length === 0
+                            ? new Set([t])
+                            : currentTags.add(t)
+                      });
+                    }}
+                    style={{
+                      backgroundColor: "#FFFFFF",
+                      border: "1px solid #000000"
+                    }}
+                  ></Chip>
+                ))}
+              ></ListItemText>
+              <ListItemSecondaryAction>
+                <Button
+                  onClick={() => history.push(`/zone/${title}`)}
+                  color="primary"
+                  style={{ padding: "0px" }}
+                >
+                  <i class="material-icons">arrow_right_alt</i>
+                </Button>
+              </ListItemSecondaryAction>
+            </ListItem>
+            <Divider></Divider>
+          </>
+        );
+      })}
+      {/* />
         )}
-      </AutoSizer>
+      </AutoSizer> */}
     </List>
   );
 };
@@ -214,16 +214,16 @@ class App extends React.Component {
     // this.props.celebrate_createModel();
   };
   onSwipeStart(event) {
-    console.log("Start swiping...", event);
+    // console.log("Start swiping...", event);
   }
 
   onSwipeMove(position, event) {
-    console.log(`Moved ${position.x} pixels horizontally`, event);
-    console.log(`Moved ${position.y} pixels vertically`, event);
+    // console.log(`Moved ${position.x} pixels horizontally`, event);
+    // console.log(`Moved ${position.y} pixels vertically`, event);
   }
 
   onSwipeEnd(event) {
-    console.log("End swiping...", event);
+    // console.log("End swiping...", event);
   }
   renderDialog = () => {
     return (
@@ -266,7 +266,6 @@ class App extends React.Component {
       name: "Log Out",
       icon: "exit_to_app"
     };
-    console.log("CURRENT USER", this.state.currentUser);
     return (
       <ThemeProvider theme={theme}>
         <Router>
@@ -581,6 +580,15 @@ class App extends React.Component {
                         }
                         return history.push(`${route}`);
                       }}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return history.push(`${route}`);
+                      }}
                       isTabMenu={true}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
                       classes={classes}
@@ -631,6 +639,15 @@ class App extends React.Component {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
                       {...routeProps}
                       {...this.props}
@@ -655,6 +672,15 @@ class App extends React.Component {
                     <MainWrapper
                       routeList={mainRouteList}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
@@ -685,6 +711,15 @@ class App extends React.Component {
                     <MainWrapper
                       routeList={mainRouteList}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       onRouteClick={route => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
@@ -782,6 +817,15 @@ class App extends React.Component {
                       {...this.props}
                       isTabMenu={true}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
                       onRouteClick={route => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
@@ -920,7 +964,6 @@ class App extends React.Component {
                                       tags: [...this.state.tags]
                                     }}
                                     render={props => {
-                                      console.log(this.state.tags, "tags");
                                       const filteredKnowledge =
                                         [...this.state.tags].length > 0
                                           ? props.knowledge
