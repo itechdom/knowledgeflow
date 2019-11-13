@@ -163,7 +163,7 @@ const Knowledge = ({
 };
 class App extends React.Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: true,
     currentUser: {},
     appSettings: {},
     tags: [],
@@ -187,14 +187,12 @@ class App extends React.Component {
       .then(res => {
         if (res.data.success === false) {
           this.setState({ isLoggedIn: false });
-          return this.props.history.push("/auth/login");
         } else {
           this.setState({ isLoggedIn: true, currentUser: res.data });
         }
       })
       .catch(err => {
         this.setState({ isLoggedIn: false });
-        this.props.history.push("/auth/login");
       });
   };
   componentDidMount = () => {
@@ -202,7 +200,7 @@ class App extends React.Component {
   };
   onLogout() {
     rootStore.authDomainStore.logout();
-    this.props.history.push("/auth/login");
+    this.setState({ isLoggedIn: false });
   }
   onDialogClose = () => {
     this.props.history.goBack();
@@ -518,8 +516,7 @@ class App extends React.Component {
                             history.push("/auth/forgot-password")
                           }
                           onSuccess={values => {
-                            console.log("SUCCESS");
-                            history.push("/home");
+                            this.setState({ isLoggedIn: true });
                           }}
                           location={location}
                           history={history}
@@ -542,14 +539,16 @@ class App extends React.Component {
                         authDomainStore={rootStore.authDomainStore}
                         authUiStore={rootStore.authUiStore}
                       >
-                        <Register
-                          onLogin={() => history.push("/auth/login")}
-                          onSuccess={() => history.push("/onboarding/1")}
-                          location={location}
-                          history={history}
-                          match={match}
-                          classes={classes}
-                        />
+                        {!this.state.isLoggedIn && (
+                          <Register
+                            onLogin={() => history.push("/auth/login")}
+                            onSuccess={() => history.push("/onboarding/1")}
+                            location={location}
+                            history={history}
+                            match={match}
+                            classes={classes}
+                          />
+                        )}
                       </RegisterWithAuth>
                     </LoginWrapper>
                   );
