@@ -32,7 +32,8 @@ import {
   ListItemSecondaryAction,
   ListItemText,
   ListSubheader,
-  Avatar
+  Avatar,
+  CircularProgress
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -78,11 +79,18 @@ const offlineStorage = {
     });
   }
 };
-const Knowledge = ({ knowledge, history, currentTags, setState }) => {
+const Knowledge = ({
+  knowledge,
+  knowledge_loading,
+  history,
+  currentTags,
+  setState
+}) => {
   return (
     <List>
       <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
       <Divider></Divider>
+      {knowledge_loading && <CircularProgress></CircularProgress>}
       {knowledge.map(({ title, tags }) => (
         <>
           <ListItem>
