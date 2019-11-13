@@ -9,7 +9,9 @@ import {
   List,
   ListItem,
   IconButton,
-  Icon
+  Icon,
+  Tabs,
+  Tab
 } from "@material-ui/core";
 import Reveal from "./Reveal";
 import Autocomplete from "../../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
@@ -60,7 +62,7 @@ const ModelPreviewViewOption = ({ viewOption, setViewOption, classes }) => {
       container
       justify={"flex-end"}
     >
-      <Grid item>
+      {/* <Grid item>
         <Paper>
           <Button
             className={
@@ -84,7 +86,7 @@ const ModelPreviewViewOption = ({ viewOption, setViewOption, classes }) => {
             List
           </Button>
         </Paper>
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };
@@ -239,26 +241,29 @@ const ModelPreview = props => {
         </AppBar>
       </header>
       {model && (
-        <Grid container justify="flex-end">
-          <Button
-            variant="contained"
-            aria-label="Edit Note"
-            label="Edit Note"
-            color="primary"
-            onClick={() => onEdit(model)}
-          >
-            <EditIcon style={{ marginRight: "5px" }} />
-          </Button>
-          <Button
-            variant="contained"
-            aria-label="Edit Note"
-            label="Edit Note"
-            color="secondary"
-            onClick={() => setDeleting(true)}
-          >
-            <DeleteIcon style={{ marginRight: "5px" }} />
-          </Button>
-        </Grid>
+        <Toolbar>
+          <Grid container justify="flex-end">
+            <Button
+              variant="contained"
+              aria-label="Edit Note"
+              label="Edit Note"
+              color="primary"
+              style={{ marginRight: "10px" }}
+              onClick={() => onEdit(model)}
+            >
+              <EditIcon style={{ marginRight: "5px" }} />
+            </Button>
+            <Button
+              variant="contained"
+              aria-label="Edit Note"
+              label="Edit Note"
+              color="secondary"
+              onClick={() => setDeleting(true)}
+            >
+              <DeleteIcon style={{ marginRight: "5px" }} />
+            </Button>
+          </Grid>
+        </Toolbar>
       )}
       <ConfirmDeleteModal
         open={deleting}

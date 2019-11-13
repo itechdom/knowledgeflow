@@ -122,10 +122,10 @@ const Knowledge = ({ knowledge, history, currentTags, setState }) => {
             <ListItemSecondaryAction>
               <Button
                 onClick={() => history.push(`/zone/${title}`)}
-                variant="contained"
                 color="primary"
+                style={{ padding: "0px" }}
               >
-                <span style={{ color: "white" }}>View</span>
+                <i class="material-icons">arrow_right_alt</i>
               </Button>
             </ListItemSecondaryAction>
           </ListItem>
@@ -679,12 +679,12 @@ class App extends React.Component {
                             onView: () => {}
                           };
                           return (
-                            <>
+                            <div style={{ marginTop: "5em" }}>
                               <ModelPreview
                                 {...modelPreviewProps}
                                 {...routeProps}
                               />
-                            </>
+                            </div>
                           );
                         }}
                       />
