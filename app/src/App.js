@@ -1,15 +1,6 @@
 import React from "react";
-import {
-  Route,
-  Switch,
-  HashRouter as Router,
-  Redirect
-} from "react-router-dom";
-import {
-  mainRouteList,
-  shapesFilterRouteList,
-  clothingFilterRouteList
-} from "./Routes";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
+import { mainRouteList, shapesFilterRouteList } from "./Routes";
 import {
   Dialog,
   DialogActions,
@@ -19,7 +10,6 @@ import {
   Divider,
   TextField,
   Button,
-  IconButton,
   CardContent,
   CardActions,
   CardHeader,
@@ -27,13 +17,11 @@ import {
   Chip,
   List,
   ListItem,
-  ListItemIcon,
   ListItemAvatar,
   ListItemSecondaryAction,
   ListItemText,
   ListSubheader,
-  Avatar,
-  CircularProgress
+  Avatar
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -58,6 +46,7 @@ import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
+import Maps from "./Maps/Maps";
 import "./global.css";
 import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
 import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
@@ -596,6 +585,29 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
+                path={`${this.props.match.path}locations`}
+                render={props => {
+                  return (
+                    <MainWrapper
+                      routeList={mainRouteList}
+                      {...props}
+                      {...this.props}
+                      isTabMenu={true}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        title: `${classes["white"]}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`
+                        }
+                      }}
+                    >
+                      <Maps {...props} classes={classes}></Maps>
+                    </MainWrapper>
+                  );
+                }}
+              ></Route>
+              <Route
                 path={`${this.props.match.path}camera`}
                 render={props => {
                   return (
@@ -634,12 +646,6 @@ class App extends React.Component {
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
@@ -714,9 +720,7 @@ class App extends React.Component {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
-                        return routeProps.history.push(
-                          `${routeProps.match.path}${route}`
-                        );
+                        return routeProps.history.push(`${route}`);
                       }}
                       classes={{
                         ...classes,
