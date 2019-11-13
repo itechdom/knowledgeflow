@@ -25,6 +25,7 @@ import {
   Grid,
   Paper
 } from "@material-ui/core";
+import Swipe from "react-easy-swipe";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
 import {
@@ -95,7 +96,7 @@ const Knowledge = ({
             width={width}
             height={height}
             rowCount={knowledge && knowledge.length}
-            rowHeight={50}
+            rowHeight={10}
             rowRenderer={({
               index,
               isScrolling,
@@ -212,6 +213,18 @@ class App extends React.Component {
     this.props.history.goBack();
     // this.props.celebrate_createModel();
   };
+  onSwipeStart(event) {
+    console.log("Start swiping...", event);
+  }
+
+  onSwipeMove(position, event) {
+    console.log(`Moved ${position.x} pixels horizontally`, event);
+    console.log(`Moved ${position.y} pixels vertically`, event);
+  }
+
+  onSwipeEnd(event) {
+    console.log("End swiping...", event);
+  }
   renderDialog = () => {
     return (
       <Dialog
@@ -929,6 +942,32 @@ class App extends React.Component {
                                           : props.knowledge;
                                       return (
                                         <>
+                                          <Swipe
+                                            onSwipeStart={this.onSwipeStart}
+                                            onSwipeMove={this.onSwipeMove}
+                                            onSwipeEnd={this.onSwipeEnd}
+                                          >
+                                            <Paper>
+                                              <Maps
+                                                {...routeProps}
+                                                classes={classes}
+                                              ></Maps>
+                                            </Paper>
+                                          </Swipe>
+                                          <div style={{ marginTop: "67px" }}>
+                                            <img
+                                              src={
+                                                "https://s3.amazonaws.com/knowledgeflow.markab.io/images/Rectangle+5.png"
+                                              }
+                                              width="100px"
+                                              height="10px"
+                                              style={{
+                                                display: "block",
+                                                marginLeft: "auto",
+                                                marginRight: "auto"
+                                              }}
+                                            />
+                                          </div>
                                           {[...this.state.tags].map(tag => (
                                             <Chip
                                               label={tag}
