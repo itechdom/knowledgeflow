@@ -8,7 +8,6 @@ export const shapesFilterRouteList = [
 
 export const mainRouteList = [
   { url: "/", name: "Home", icon: "home" },
-  { url: "/timeline", name: "Timeline", icon: "timeline" },
-  { url: "/locations", name: "Locations", icon: "map" },
-  { url: "/profile", name: "Profile", icon: "person" }
+  { url: "/experiments", name: "Experiments", icon: "waves" },
+  { url: "/timeline", name: "Timeline", icon: "timeline" }
 ];

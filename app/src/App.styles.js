@@ -41,6 +41,7 @@ export const styles = theme => {
       marginBottom: "15px"
     },
     content: {
+      scroll: "none"
       // flexGrow: 1,
       // height: "100vh",
       // overflow: "auto",
