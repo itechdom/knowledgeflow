@@ -255,6 +255,7 @@ class App extends React.Component {
       name: "Log Out",
       icon: "exit_to_app"
     };
+    console.log("CURRENT USER", this.state.currentUser);
     return (
       <ThemeProvider theme={theme}>
         <Router>
@@ -568,15 +569,13 @@ class App extends React.Component {
                         }
                         return history.push(`${route}`);
                       }}
+                      isTabMenu={true}
                       drawerRouteList={[...mainRouteList, logOutRoute]}
                       classes={classes}
-                      routeList={currentRouteList}
+                      routeList={mainRouteList}
                       location={location}
                       match={match}
                       history={history}
-                      auth={this.state.isLoggedIn}
-                      user={this.state.currentUser}
-                      logo={logo}
                       hasPadding={true}
                       onLogout={this.onLogout}
                     >

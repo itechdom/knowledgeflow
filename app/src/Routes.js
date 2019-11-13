@@ -10,4 +10,5 @@ export const mainRouteList = [
   { url: "/", name: "Home", icon: "home" },
   { url: "/experiments", name: "Experiments", icon: "waves" },
   { url: "/timeline", name: "Timeline", icon: "timeline" },
+  { url: "/profile", name: "Profile", icon: "person" }
 ];

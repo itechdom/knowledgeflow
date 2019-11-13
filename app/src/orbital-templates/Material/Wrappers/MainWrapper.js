@@ -217,7 +217,11 @@ const MainWrapper = props => {
         </Drawer>
         <Paper>
           <main
-            style={{ height: "100vh", marginBottom: "100px" }}
+            style={{
+              height: "100vh",
+              marginBottom: "100px",
+              overflow: "scroll"
+            }}
             className={`${classes.hasPadding} ${classes.content}`}
           >
             {render ? render(props) : children}
