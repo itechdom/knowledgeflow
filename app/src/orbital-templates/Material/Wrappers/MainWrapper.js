@@ -18,7 +18,8 @@ import {
   Tabs,
   Tab,
   Drawer,
-  Paper
+  Paper,
+  Grid
 } from "@material-ui/core";
 const Icon = ({ children }) => {
   return <i className="material-icons">{children}</i>;
@@ -39,7 +40,7 @@ const MainWrapper = props => {
     history,
     auth,
     user,
-    hasPadding,
+    logo,
     onLogout,
     routeList,
     drawerRouteList,
@@ -48,15 +49,14 @@ const MainWrapper = props => {
     setAnchorEl,
     open,
     setOpen,
-    menuOpen,
     setMenuOpen,
     classes,
-    noMargin,
     isTabMenu,
     tabMenuPosition,
     onDrawerRouteClick,
     onRouteClick,
     selectedRoute,
+    hideDrawer,
     render
   } = props;
   const isAnchor = Boolean(anchorEl);
@@ -126,24 +126,44 @@ const MainWrapper = props => {
         )}
         <AppBar className={classes.menu}>
           <Toolbar className={classes.toolbar}>
-            <IconButton
-              aria-label="Open drawer"
-              onClick={() => setOpen(true)}
-              className={classNames(
-                classes.menuButton,
-                open && classes.menuButtonHidden
-              )}
+            <Grid
+              container
+              justify="space-between"
+              alignItems="center"
+              alignContent="center"
             >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="title" noWrap className={classes.title}>
-              {brand
-                ? brand
-                : (routeList[currentRoute] && routeList[currentRoute].name) ||
-                  routeList[0].name}
-            </Typography>
-            {auth && (
-              <div>
+              {!hideDrawer && (
+                <Grid item>
+                  <IconButton
+                    aria-label="Open drawer"
+                    onClick={() => setOpen(true)}
+                    className={classNames(
+                      classes.menuButton,
+                      open && classes.menuButtonHidden
+                    )}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Grid>
+              )}
+              <Grid item>
+                <img src={logo} width="71px" height="23px" />
+              </Grid>
+              <Grid item>
+                <Typography
+                  style={{ fontWeight: "bold" }}
+                  variant="title"
+                  noWrap
+                  className={classes.title}
+                >
+                  {brand
+                    ? brand
+                    : (routeList[currentRoute] &&
+                        routeList[currentRoute].name) ||
+                      routeList[0].name}
+                </Typography>
+              </Grid>
+              <Grid item>
                 <Tooltip title={(user && user.name) || ""}>
                   <IconButton
                     aria-owns={isAnchor ? "menu-appbar" : null}
@@ -179,18 +199,27 @@ const MainWrapper = props => {
                 >
                   <MenuItem
                     onClick={event => {
-                      onLogout();
                       setMenuOpen(false);
                       onRouteClick
-                        ? onRouteClick("/auth/login")
+                        ? onRouteClick("/settings")
+                        : history.push(`${match.path}settings`);
+                    }}
+                  >
+                    Settings
+                  </MenuItem>
+                  <MenuItem
+                    onClick={event => {
+                      setMenuOpen(false);
+                      onRouteClick
+                        ? onRouteClick("logout")
                         : history.push(`${match.path}auth/login`);
                     }}
                   >
                     Log out
                   </MenuItem>
                 </Menu>
-              </div>
-            )}
+              </Grid>
+            </Grid>
           </Toolbar>
         </AppBar>
         <Divider />

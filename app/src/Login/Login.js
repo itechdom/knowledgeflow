@@ -8,10 +8,10 @@ const LoginModule = ({
   onRegister,
   onForgotPassword,
   onSuccess,
-  classes,
   location,
   history,
-  match
+  match,
+  ...rest
 }) => {
   return (
     <React.Fragment>
@@ -22,10 +22,10 @@ const LoginModule = ({
         onRegister={onRegister}
         onForgotPassword={onForgotPassword}
         onSuccess={onSuccess}
-        classes={classes}
         location={location}
         history={history}
         match={match}
+        {...rest}
       />
     </React.Fragment>
   );

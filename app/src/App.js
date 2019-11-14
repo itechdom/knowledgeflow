@@ -30,13 +30,13 @@ import Swipe from "react-easy-swipe";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
 import {
-  LoginWithAuth,
   RegisterWithAuth,
   Media,
   Forms,
   Auth,
   Notification
 } from "@markab.io/react";
+import { LoginWithAuth } from "../react-services/auth-service/auth-service";
 import { Crud } from "../react-services/crud-service/crud-service-mst";
 import config from "Config";
 import ReactGA from "react-ga";
@@ -46,6 +46,7 @@ import ResetPassword from "./ResetPassword/ResetPassword";
 import Register from "./Register/Register";
 import Login from "./Login/Login";
 import Profile from "./Profile/Profile";
+import Admin from "./Admin/Admin";
 import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
@@ -57,9 +58,10 @@ import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
 import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
 import { Formik } from "formik";
 import ModelPreview from "./Knowledge/ModelPreview/ModelPreview";
-const loginBG = "https://orbital-clients.s3.amazonaws.com/login-bg.jpg";
-const registerBG = "https://orbital-clients.s3.amazonaws.com/register-bg.jpg";
-const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
+const loginBG = "";
+const registerBG = "";
+const logo =
+  "https://s3.amazonaws.com/knowledgeflow.markab.io/images/worth-manifesto.png";
 const gaTrackingCode = "UA-46023413-2";
 const disableAuth = false;
 const offlineStorage = {
@@ -328,9 +330,9 @@ class App extends React.Component {
                       <LoginWithAuth
                         authUiStore={rootStore.authUiStore}
                         authDomainStore={rootStore.authDomainStore}
+                        classes={classes}
                       >
                         <Login
-                          classes={classes}
                           onRegister={() => history.push("/auth/register")}
                           onForgotPassword={() =>
                             history.push("/auth/forgot-password")
@@ -848,6 +850,76 @@ class App extends React.Component {
                 }}
               />
               <Route
+                path="/admin"
+                render={({ location, match, history }) => {
+                  const routeProps = { location, match, history };
+                  console.log("ADMIN!");
+                  return (
+                    <MainWrapper
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return history.push(`${route}`);
+                      }}
+                      onDrawerRouteClick={route => {
+                        if (route === "logout") {
+                          return this.onLogout();
+                        }
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return history.push(`${route}`);
+                      }}
+                      isTabMenu={true}
+                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      classes={classes}
+                      routeList={mainRouteList}
+                      location={location}
+                      match={match}
+                      history={history}
+                      hasPadding={true}
+                      onLogout={this.onLogout}
+                    >
+                      <Crud
+                        modelName="volunteerings"
+                        SERVER={config.SERVER}
+                        offlineStorage={offlineStorage}
+                        notificationDomainStore={
+                          rootStore.notificationDomainStore
+                        }
+                        crudDomainStore={rootStore.crudDomainStore}
+                      >
+                        <Crud
+                          modelName="users"
+                          SERVER={config.SERVER}
+                          offlineStorage={offlineStorage}
+                          notificationDomainStore={
+                            rootStore.notificationDomainStore
+                          }
+                          crudDomainStore={rootStore.crudDomainStore}
+                        >
+                          <Forms formsDomainStore={rootStore.formsDomainStore}>
+                            <Media
+                              extension="image/jpg"
+                              mediaDomainStore={rootStore.mediaDomainStore}
+                            >
+                              <Notification
+                                notificationDomainStore={
+                                  rootStore.notificationDomainStore
+                                }
+                              >
+                                <Admin {...routeProps} />
+                              </Notification>
+                            </Media>
+                          </Forms>
+                        </Crud>
+                      </Crud>
+                    </MainWrapper>
+                  );
+                }}
+              />
+              <Route
                 path={`${this.props.match.path}me`}
                 render={routeProps => {
                   return (
@@ -1113,6 +1185,9 @@ class App extends React.Component {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
+                      logo={logo}
+                      hideDrawer={true}
+                      user={this.state.currentUser}
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
@@ -1125,13 +1200,16 @@ class App extends React.Component {
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
                         menuTabsClasses: {
                           flexContainer: `${classes["center"]}`
                         }
                       }}
                       render={currentProps => (
                         <MainWrapper
+                          logo={logo}
+                          brand={"Locations"}
+                          hideDrawer={true}
+                          user={this.state.currentUser}
                           routeList={shapesFilterRouteList}
                           isTabMenu={true}
                           tabMenuPosition="top"
@@ -1157,7 +1235,6 @@ class App extends React.Component {
                           drawerRouteList={[...mainRouteList, logOutRoute]}
                           classes={{
                             ...classes,
-                            title: `${classes["white"]}`,
                             tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
                           }}
                         >

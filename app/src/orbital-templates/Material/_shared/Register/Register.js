@@ -11,11 +11,8 @@ import {
   Grid
 } from "@material-ui/core";
 import Forms from "../Forms/Forms";
-import theme from "Theme";
-import { withStyles } from "@material-ui/styles";
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { styles } from "./Register.styles";
 
 // Synchronous validation
 const registerSchema = Yup.object().shape({
@@ -169,4 +166,4 @@ export const Register = ({
   );
 };
 
-export default withStyles(styles, { defaultTheme: theme })(Register);
+export default Register;
