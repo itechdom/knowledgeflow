@@ -23,7 +23,8 @@ import {
   ListSubheader,
   Avatar,
   Grid,
-  Paper
+  Paper,
+  Typography
 } from "@material-ui/core";
 import Swipe from "react-easy-swipe";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
@@ -198,6 +199,7 @@ class App extends React.Component {
   };
   componentDidMount = () => {
     !disableAuth && this.onRouteChanged();
+    offlineStorage.setItem("onboardingStep", "0");
   };
   onLogout() {
     rootStore.authDomainStore.logout();
@@ -271,205 +273,6 @@ class App extends React.Component {
         <Router>
           {!disableAuth && !this.state.isLoggedIn ? (
             <Switch>
-              <Route
-                path="/onboarding/1"
-                render={({ location, history, match }) => {
-                  let form = {
-                    fields: [
-                      {
-                        placeholder: "Body Type",
-                        required: true,
-                        type: "select",
-                        name: "body-type",
-                        options: [
-                          "Pear",
-                          "Rectangle",
-                          "Apple",
-                          "Hourglass",
-                          "Strawberry"
-                        ]
-                      }
-                    ]
-                  };
-                  return (
-                    <LoginWrapper
-                      classes={classes}
-                      backgroundImage={registerBG}
-                    >
-                      <Formik
-                        initialValues={{ email: "", password: "" }}
-                        onSubmit={(values, actions) => {
-                          onSubmit(values)
-                            .then(() => {
-                              history.push("/");
-                              actions.setSubmitting(false);
-                            })
-                            .catch(err => {
-                              actions.setErrors({ server: err });
-                              actions.setSubmitting(false);
-                            });
-                        }}
-                        render={({
-                          values,
-                          errors,
-                          touched,
-                          handleBlur,
-                          handleChange,
-                          handleSubmit,
-                          isSubmitting,
-                          setFieldValue,
-                          setFieldTouched,
-                          ...rest
-                        }) => {
-                          return (
-                            <Card>
-                              <CardHeader title="Survey 1"></CardHeader>
-                              <CardContent>
-                                <form onSubmit={handleSubmit}>
-                                  <FormsList
-                                    id="login-fields"
-                                    form={form}
-                                    errors={errors}
-                                    setFieldValue={setFieldValue}
-                                    setFieldTouched={setFieldTouched}
-                                    values={values}
-                                    touched={touched}
-                                    isSubmitting={isSubmitting}
-                                    {...rest}
-                                  />
-                                  <img src="https://celebrateapp.s3.amazonaws.com/images/body-shapes.jpg" />
-                                </form>
-                                <CardActions
-                                  style={{ justifyContent: "flex-end" }}
-                                >
-                                  <Button
-                                    variant="raised"
-                                    size="small"
-                                    color="primary"
-                                    onClick={() =>
-                                      history.push("/onboarding/2")
-                                    }
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                  >
-                                    Next
-                                  </Button>
-                                </CardActions>
-                              </CardContent>
-                            </Card>
-                          );
-                        }}
-                      />
-                    </LoginWrapper>
-                  );
-                }}
-              />
-              <Route
-                path="/onboarding/2"
-                render={({ location, history, match }) => {
-                  let form = {
-                    fields: [
-                      {
-                        placeholder: "Hip",
-                        type: "text",
-                        name: "hip"
-                      },
-                      {
-                        placeholder: "Bust",
-                        required: true,
-                        type: "text",
-                        name: "bust"
-                      },
-                      {
-                        placeholder: "Waist",
-                        type: "text",
-                        name: "waist"
-                      },
-                      {
-                        placeholder: "Height",
-                        type: "text",
-                        name: "height"
-                      },
-                      {
-                        placeholder:
-                          "Weight (we won't show this to other users)",
-                        type: "text",
-                        name: "weight"
-                      }
-                    ]
-                  };
-                  return (
-                    <LoginWrapper
-                      classes={classes}
-                      backgroundImage={registerBG}
-                    >
-                      <Formik
-                        initialValues={{ email: "", password: "" }}
-                        onSubmit={(values, actions) => {
-                          onSubmit(values)
-                            .then(() => {
-                              history.push("/");
-                              actions.setSubmitting(false);
-                            })
-                            .catch(err => {
-                              actions.setErrors({ server: err });
-                              actions.setSubmitting(false);
-                            });
-                        }}
-                        render={({
-                          values,
-                          errors,
-                          touched,
-                          handleBlur,
-                          handleChange,
-                          handleSubmit,
-                          isSubmitting,
-                          setFieldValue,
-                          setFieldTouched,
-                          ...rest
-                        }) => {
-                          return (
-                            <Card>
-                              <CardHeader title="Terms of service"></CardHeader>
-                              <CardContent>
-                                <form onSubmit={handleSubmit}>
-                                  <FormsList
-                                    id="login-fields"
-                                    form={form}
-                                    errors={errors}
-                                    setFieldValue={setFieldValue}
-                                    setFieldTouched={setFieldTouched}
-                                    values={values}
-                                    touched={touched}
-                                    isSubmitting={isSubmitting}
-                                    {...rest}
-                                  />
-                                </form>
-                                <CardActions
-                                  style={{ justifyContent: "flex-end" }}
-                                >
-                                  <Button
-                                    variant="raised"
-                                    size="small"
-                                    color="primary"
-                                    onClick={() =>
-                                      history.push("/onboarding/2")
-                                    }
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                  >
-                                    Next
-                                  </Button>
-                                </CardActions>
-                              </CardContent>
-                            </Card>
-                          );
-                        }}
-                      />
-                    </LoginWrapper>
-                  );
-                }}
-              />
               <Route
                 path="/auth/forgot-password"
                 render={({ location, history, match }) => {
@@ -569,368 +372,359 @@ class App extends React.Component {
             </Switch>
           ) : (
             <Switch>
-              <Route
-                path="/profile"
-                render={({ location, match, history }) => {
-                  return (
-                    <MainWrapper
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return history.push(`${route}`);
-                      }}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return history.push(`${route}`);
-                      }}
-                      isTabMenu={true}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      classes={classes}
-                      routeList={mainRouteList}
-                      location={location}
-                      match={match}
-                      history={history}
-                      hasPadding={true}
-                      onLogout={this.onLogout}
-                    >
-                      <Crud
-                        modelName="users"
-                        SERVER={config.SERVER}
-                        offlineStorage={offlineStorage}
-                        notificationDomainStore={
-                          rootStore.notificationDomainStore
-                        }
-                        crudDomainStore={rootStore.crudDomainStore}
-                      >
-                        <Forms formsDomainStore={rootStore.formsDomainStore}>
-                          <Media
-                            extension="image/jpg"
-                            mediaDomainStore={rootStore.mediaDomainStore}
-                          >
-                            <Notification
-                              notificationDomainStore={
-                                rootStore.notificationDomainStore
-                              }
-                            >
-                              <Profile
-                                user={this.state.currentUser}
-                                formsDomainStore={rootStore.formsDomainStore}
-                                location={location}
-                                match={match}
-                                history={history}
-                              />
-                            </Notification>
-                          </Media>
-                        </Forms>
-                      </Crud>
-                    </MainWrapper>
-                  );
-                }}
-              />
-              <Route
-                path={`${this.props.match.path}me`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      classes={classes}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                    >
-                      <Profile {...routeProps}></Profile>
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}timeline`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                    >
-                      <Maps {...routeProps} classes={classes}></Maps>
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}experiments`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                    >
-                      <Grid
-                        style={{ marginTop: "6em", height: "100vh" }}
-                        container
-                        justify="center"
-                      >
-                        {[
-                          {
-                            title: "I Saw someting!",
-                            icon: "panorama_fish_eye"
-                          },
-                          {
-                            title: "I want to say something!",
-                            icon: "audiotrack"
-                          },
-                          {
-                            title: "I want to write down some thoughts",
-                            icon: "edit"
-                          }
-                        ].map(({ title, icon }) => (
-                          <Grid xs={12} md={6} item>
-                            <Card>
-                              <Grid container justify="center">
-                                <Grid item xs={6} md={6}>
-                                  <CardContent style={{ textAlign: "center" }}>
-                                    <Button color="primary" variant="contained">
-                                      <i class="material-icons">{icon}</i>
-                                    </Button>
-                                    <p
-                                      style={{
-                                        fontWeight: "bold",
-                                        fontSize:
-                                          title === "I Saw someting!" ? 20 : 16
-                                      }}
+              {!this.state.currentUser.hasSeenTutorial ? (
+                <Switch>
+                  <Route
+                    path={`${this.props.match.path}`}
+                    render={({ location, history, match }) => {
+                      return (
+                        <LoginWrapper classes={classes} backgroundImage={""}>
+                          <Formik
+                            initialValues={{ email: "", password: "" }}
+                            onSubmit={(values, actions) => {
+                              onSubmit(values)
+                                .then(() => {
+                                  history.push("/");
+                                  actions.setSubmitting(false);
+                                })
+                                .catch(err => {
+                                  actions.setErrors({ server: err });
+                                  actions.setSubmitting(false);
+                                });
+                            }}
+                            render={({
+                              values,
+                              errors,
+                              touched,
+                              handleBlur,
+                              handleChange,
+                              handleSubmit,
+                              isSubmitting,
+                              setFieldValue,
+                              setFieldTouched,
+                              ...rest
+                            }) => {
+                              return (
+                                <Card>
+                                  <CardHeader title="Welcome!"></CardHeader>
+                                  <CardContent>
+                                    <Typography>Hi friend!</Typography>
+                                    <Typography>
+                                      Worth Manifesto is on a mission to
+                                      acknowledge the humanity of marginalized
+                                      women, and you can help!
+                                    </Typography>
+                                    <CardActions
+                                      style={{ justifyContent: "flex-end" }}
                                     >
-                                      {title}
-                                    </p>
+                                      <Button
+                                        variant="raised"
+                                        fullWidth={true}
+                                        color="secondary"
+                                        onClick={() =>
+                                          history.push("/onboarding/1")
+                                        }
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                      >
+                                        Yes, I want to help
+                                      </Button>
+                                    </CardActions>
+                                    <img src="https://knowledgeflow.markab.io.s3.amazonaws.com/images/welcome-bottom.png" />
                                   </CardContent>
-                                </Grid>
-                              </Grid>
-                            </Card>
-                          </Grid>
-                        ))}
-                      </Grid>
-                      <Route
-                        path={`${this.props.match.path}record`}
-                        render={routeProps => {
-                          return (
-                            <Camera
-                              onData={data => {
-                                this.setState({
-                                  currentImage: `data:image/png;base64,${data}`
+                                </Card>
+                              );
+                            }}
+                          />
+                        </LoginWrapper>
+                      );
+                    }}
+                  />
+                  <Route
+                    path="/onboarding/1"
+                    render={({ location, history, match }) => {
+                      let form = {
+                        fields: [
+                          {
+                            placeholder: "Body Type",
+                            required: true,
+                            type: "select",
+                            name: "body-type",
+                            options: [
+                              "Pear",
+                              "Rectangle",
+                              "Apple",
+                              "Hourglass",
+                              "Strawberry"
+                            ]
+                          }
+                        ]
+                      };
+                      return (
+                        <LoginWrapper
+                          classes={classes}
+                          backgroundImage={registerBG}
+                        >
+                          <Formik
+                            initialValues={{ email: "", password: "" }}
+                            onSubmit={(values, actions) => {
+                              onSubmit(values)
+                                .then(() => {
+                                  history.push("/");
+                                  actions.setSubmitting(false);
+                                })
+                                .catch(err => {
+                                  actions.setErrors({ server: err });
+                                  actions.setSubmitting(false);
                                 });
-                                this.setState({
-                                  showConfirmModal: true
+                            }}
+                            render={({
+                              values,
+                              errors,
+                              touched,
+                              handleBlur,
+                              handleChange,
+                              handleSubmit,
+                              isSubmitting,
+                              setFieldValue,
+                              setFieldTouched,
+                              ...rest
+                            }) => {
+                              return (
+                                <Card>
+                                  <CardHeader title="Survey 1"></CardHeader>
+                                  <CardContent>
+                                    <form onSubmit={handleSubmit}>
+                                      <FormsList
+                                        id="login-fields"
+                                        form={form}
+                                        errors={errors}
+                                        setFieldValue={setFieldValue}
+                                        setFieldTouched={setFieldTouched}
+                                        values={values}
+                                        touched={touched}
+                                        isSubmitting={isSubmitting}
+                                        {...rest}
+                                      />
+                                      <img src="https://celebrateapp.s3.amazonaws.com/images/body-shapes.jpg" />
+                                    </form>
+                                    <CardActions
+                                      style={{ justifyContent: "flex-end" }}
+                                    >
+                                      <Button
+                                        variant="raised"
+                                        size="small"
+                                        color="primary"
+                                        onClick={() =>
+                                          history.push("/onboarding/2")
+                                        }
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                      >
+                                        Next
+                                      </Button>
+                                    </CardActions>
+                                  </CardContent>
+                                </Card>
+                              );
+                            }}
+                          />
+                        </LoginWrapper>
+                      );
+                    }}
+                  />
+                  <Route
+                    path="/onboarding/2"
+                    render={({ location, history, match }) => {
+                      let form = {
+                        fields: [
+                          {
+                            placeholder: "Hip",
+                            type: "text",
+                            name: "hip"
+                          },
+                          {
+                            placeholder: "Bust",
+                            required: true,
+                            type: "text",
+                            name: "bust"
+                          },
+                          {
+                            placeholder: "Waist",
+                            type: "text",
+                            name: "waist"
+                          },
+                          {
+                            placeholder: "Height",
+                            type: "text",
+                            name: "height"
+                          },
+                          {
+                            placeholder:
+                              "Weight (we won't show this to other users)",
+                            type: "text",
+                            name: "weight"
+                          }
+                        ]
+                      };
+                      return (
+                        <LoginWrapper
+                          classes={classes}
+                          backgroundImage={registerBG}
+                        >
+                          <Formik
+                            initialValues={{ email: "", password: "" }}
+                            onSubmit={(values, actions) => {
+                              onSubmit(values)
+                                .then(() => {
+                                  history.push("/");
+                                  actions.setSubmitting(false);
+                                })
+                                .catch(err => {
+                                  actions.setErrors({ server: err });
+                                  actions.setSubmitting(false);
                                 });
-                              }}
-                              onError={err => {
-                                console.error("ERROR!", err);
-                              }}
-                              {...props}
-                            ></Camera>
-                          );
-                        }}
-                      ></Route>
-                      {this.renderDialog()}
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}zone/:zone`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                    >
-                      <Crud
-                        modelName="knowledge"
-                        SERVER={config.SERVER}
-                        offlineStorage={offlineStorage}
-                        notificationDomainStore={
-                          rootStore.notificationDomainStore
-                        }
-                        crudDomainStore={rootStore.crudDomainStore}
-                        query={{
-                          tags: [...this.state.tags]
-                        }}
-                        render={props => {
-                          const {
-                            knowledge_createModel: createModel,
-                            knowledge_updateModel: updateModel,
-                            knowledge_deleteModel: deleteModel,
-                            knowledge_getModel: getModel,
-                            knowledge_searchModel: searchModel,
-                            knowledgeSearch
-                          } = props;
-                          const zone = routeProps.match.params.zone;
-                          const knowledge = props.knowledge.find(
-                            ({ title }) => title === zone
-                          );
-                          const modelPreviewProps = {
-                            model: knowledge,
-                            updateModel,
-                            createModel,
-                            searchModel,
-                            deleteModel,
-                            knowledgeSearch,
-                            classes,
-                            onAdd: () => {},
-                            onEdit: () => {},
-                            onDelete: () => {},
-                            onCreate: () => {},
-                            onView: () => {}
-                          };
-                          return (
-                            <div style={{ marginTop: "5em" }}>
-                              <ModelPreview
-                                {...modelPreviewProps}
-                                {...routeProps}
-                              />
-                            </div>
-                          );
-                        }}
-                      />
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                      render={currentProps => (
+                            }}
+                            render={({
+                              values,
+                              errors,
+                              touched,
+                              handleBlur,
+                              handleChange,
+                              handleSubmit,
+                              isSubmitting,
+                              setFieldValue,
+                              setFieldTouched,
+                              ...rest
+                            }) => {
+                              return (
+                                <Card>
+                                  <CardHeader title="Terms of service"></CardHeader>
+                                  <CardContent>
+                                    <form onSubmit={handleSubmit}>
+                                      <FormsList
+                                        id="login-fields"
+                                        form={form}
+                                        errors={errors}
+                                        setFieldValue={setFieldValue}
+                                        setFieldTouched={setFieldTouched}
+                                        values={values}
+                                        touched={touched}
+                                        isSubmitting={isSubmitting}
+                                        {...rest}
+                                      />
+                                    </form>
+                                    <CardActions
+                                      style={{ justifyContent: "flex-end" }}
+                                    >
+                                      <Button
+                                        variant="raised"
+                                        size="small"
+                                        color="primary"
+                                        onClick={() => {
+                                          this.setState({
+                                            currentUser: {
+                                              ...this.state.currentUser,
+                                              hasSeenTutorial: true
+                                            }
+                                          });
+                                          offlineStorage.setItem(
+                                            "onboardingStep",
+                                            "done"
+                                          );
+                                        }}
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                      >
+                                        Next
+                                      </Button>
+                                    </CardActions>
+                                  </CardContent>
+                                </Card>
+                              );
+                            }}
+                          />
+                        </LoginWrapper>
+                      );
+                    }}
+                  />
+                </Switch>
+              ) : (
+                <Switch>
+                  <Route
+                    path="/profile"
+                    render={({ location, match, history }) => {
+                      return (
                         <MainWrapper
-                          routeList={shapesFilterRouteList}
-                          isTabMenu={true}
-                          tabMenuPosition="top"
-                          {...routeProps}
-                          {...this.props}
                           onRouteClick={route => {
-                            this.setState({
-                              tags:
-                                this.state.tags.length === 0
-                                  ? new Set([route.replace("/", "")])
-                                  : this.state.tags.add(route.replace("/", ""))
-                            });
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return history.push(`${route}`);
                           }}
+                          onDrawerRouteClick={route => {
+                            if (route === "logout") {
+                              return this.onLogout();
+                            }
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return history.push(`${route}`);
+                          }}
+                          isTabMenu={true}
+                          drawerRouteList={[...mainRouteList, logOutRoute]}
+                          classes={classes}
+                          routeList={mainRouteList}
+                          location={location}
+                          match={match}
+                          history={history}
+                          hasPadding={true}
+                          onLogout={this.onLogout}
+                        >
+                          <Crud
+                            modelName="users"
+                            SERVER={config.SERVER}
+                            offlineStorage={offlineStorage}
+                            notificationDomainStore={
+                              rootStore.notificationDomainStore
+                            }
+                            crudDomainStore={rootStore.crudDomainStore}
+                          >
+                            <Forms
+                              formsDomainStore={rootStore.formsDomainStore}
+                            >
+                              <Media
+                                extension="image/jpg"
+                                mediaDomainStore={rootStore.mediaDomainStore}
+                              >
+                                <Notification
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
+                                  }
+                                >
+                                  <Profile
+                                    user={this.state.currentUser}
+                                    formsDomainStore={
+                                      rootStore.formsDomainStore
+                                    }
+                                    location={location}
+                                    match={match}
+                                    history={history}
+                                  />
+                                </Notification>
+                              </Media>
+                            </Forms>
+                          </Crud>
+                        </MainWrapper>
+                      );
+                    }}
+                  />
+                  <Route
+                    path={`${this.props.match.path}me`}
+                    render={routeProps => {
+                      return (
+                        <MainWrapper
+                          routeList={mainRouteList}
                           onDrawerRouteClick={route => {
                             if (route === "logout") {
                               return this.onLogout();
@@ -941,115 +735,422 @@ class App extends React.Component {
                             return routeProps.history.push(`${route}`);
                           }}
                           drawerRouteList={[...mainRouteList, logOutRoute]}
-                          classes={{
-                            ...classes,
-                            title: `${classes["white"]}`,
-                            tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
+                          {...routeProps}
+                          {...this.props}
+                          isTabMenu={true}
+                          classes={classes}
+                          onRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
                           }}
                         >
-                          <Switch>
-                            <Route
-                              path={`${routeProps.match.path}`}
-                              render={props => {
-                                return (
-                                  <Crud
-                                    modelName="knowledge"
-                                    SERVER={config.SERVER}
-                                    offlineStorage={offlineStorage}
-                                    notificationDomainStore={
-                                      rootStore.notificationDomainStore
-                                    }
-                                    crudDomainStore={rootStore.crudDomainStore}
-                                    query={{
-                                      tags: [...this.state.tags]
-                                    }}
-                                    render={props => {
-                                      const filteredKnowledge =
-                                        [...this.state.tags].length > 0
-                                          ? props.knowledge
-                                              .map(k => {
-                                                const res = k.tags.find(
-                                                  t =>
-                                                    [
-                                                      ...this.state.tags
-                                                    ].indexOf(t) !== -1
-                                                );
-                                                if (res) {
-                                                  return k;
-                                                }
-                                                return undefined;
-                                              })
-                                              .filter(
-                                                know => know !== undefined
-                                              )
-                                          : props.knowledge;
-                                      return (
-                                        <>
-                                          <Swipe
-                                            onSwipeStart={this.onSwipeStart}
-                                            onSwipeMove={this.onSwipeMove}
-                                            onSwipeEnd={this.onSwipeEnd}
-                                          >
-                                            <Paper>
-                                              <Maps
-                                                {...routeProps}
-                                                classes={classes}
-                                              ></Maps>
-                                            </Paper>
-                                          </Swipe>
-                                          <div style={{ marginTop: "67px" }}>
-                                            <img
-                                              src={
-                                                "https://s3.amazonaws.com/knowledgeflow.markab.io/images/Rectangle+5.png"
-                                              }
-                                              width="100px"
-                                              height="10px"
-                                              style={{
-                                                display: "block",
-                                                marginLeft: "auto",
-                                                marginRight: "auto"
-                                              }}
-                                            />
-                                          </div>
-                                          {[...this.state.tags].map(tag => (
-                                            <Chip
-                                              label={tag}
-                                              key={tag}
-                                              id={tag}
-                                              onDelete={() =>
-                                                this.setState({
-                                                  tags: new Set(
-                                                    [...this.state.tags].filter(
-                                                      t => t !== tag
-                                                    )
-                                                  )
-                                                })
-                                              }
-                                            />
-                                          ))}
-                                          <Knowledge
-                                            {...routeProps}
-                                            {...props}
-                                            currentTags={this.state.tags}
-                                            setState={props =>
-                                              this.setState(props)
-                                            }
-                                            knowledge={filteredKnowledge}
-                                          />
-                                        </>
-                                      );
-                                    }}
-                                  />
-                                );
-                              }}
-                            ></Route>
-                          </Switch>
+                          <Profile {...routeProps}></Profile>
                         </MainWrapper>
-                      )}
-                    />
-                  );
-                }}
-              />
+                      );
+                    }}
+                  ></Route>
+                  <Route
+                    path={`${this.props.match.path}timeline`}
+                    render={routeProps => {
+                      return (
+                        <MainWrapper
+                          routeList={mainRouteList}
+                          drawerRouteList={[...mainRouteList, logOutRoute]}
+                          onDrawerRouteClick={route => {
+                            if (route === "logout") {
+                              return this.onLogout();
+                            }
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          {...routeProps}
+                          {...this.props}
+                          isTabMenu={true}
+                          onRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          classes={{
+                            ...classes,
+                            tabMenu: `${classes["white"]}`,
+                            title: `${classes["white"]}`,
+                            menuTabsClasses: {
+                              flexContainer: `${classes["center"]}`
+                            }
+                          }}
+                        >
+                          <Maps {...routeProps} classes={classes}></Maps>
+                        </MainWrapper>
+                      );
+                    }}
+                  ></Route>
+                  <Route
+                    path={`${this.props.match.path}experiments`}
+                    render={routeProps => {
+                      return (
+                        <MainWrapper
+                          routeList={mainRouteList}
+                          drawerRouteList={[...mainRouteList, logOutRoute]}
+                          onDrawerRouteClick={route => {
+                            if (route === "logout") {
+                              return this.onLogout();
+                            }
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          onRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          {...routeProps}
+                          {...this.props}
+                          isTabMenu={true}
+                          classes={{
+                            ...classes,
+                            tabMenu: `${classes["white"]}`,
+                            title: `${classes["white"]}`,
+                            menuTabsClasses: {
+                              flexContainer: `${classes["center"]}`
+                            }
+                          }}
+                        >
+                          <Grid
+                            style={{ marginTop: "6em", height: "100vh" }}
+                            container
+                            justify="center"
+                          >
+                            {[
+                              {
+                                title: "I Saw someting!",
+                                icon: "panorama_fish_eye"
+                              },
+                              {
+                                title: "I want to say something!",
+                                icon: "audiotrack"
+                              },
+                              {
+                                title: "I want to write down some thoughts",
+                                icon: "edit"
+                              }
+                            ].map(({ title, icon }) => (
+                              <Grid xs={12} md={6} item>
+                                <Card>
+                                  <Grid container justify="center">
+                                    <Grid item xs={6} md={6}>
+                                      <CardContent
+                                        style={{ textAlign: "center" }}
+                                      >
+                                        <Button
+                                          color="primary"
+                                          variant="contained"
+                                        >
+                                          <i class="material-icons">{icon}</i>
+                                        </Button>
+                                        <p
+                                          style={{
+                                            fontWeight: "bold",
+                                            fontSize:
+                                              title === "I Saw someting!"
+                                                ? 20
+                                                : 16
+                                          }}
+                                        >
+                                          {title}
+                                        </p>
+                                      </CardContent>
+                                    </Grid>
+                                  </Grid>
+                                </Card>
+                              </Grid>
+                            ))}
+                          </Grid>
+                          <Route
+                            path={`${this.props.match.path}record`}
+                            render={routeProps => {
+                              return (
+                                <Camera
+                                  onData={data => {
+                                    this.setState({
+                                      currentImage: `data:image/png;base64,${data}`
+                                    });
+                                    this.setState({
+                                      showConfirmModal: true
+                                    });
+                                  }}
+                                  onError={err => {
+                                    console.error("ERROR!", err);
+                                  }}
+                                  {...props}
+                                ></Camera>
+                              );
+                            }}
+                          ></Route>
+                          {this.renderDialog()}
+                        </MainWrapper>
+                      );
+                    }}
+                  ></Route>
+                  <Route
+                    path={`${this.props.match.path}zone/:zone`}
+                    render={routeProps => {
+                      return (
+                        <MainWrapper
+                          routeList={mainRouteList}
+                          {...routeProps}
+                          {...this.props}
+                          isTabMenu={true}
+                          drawerRouteList={[...mainRouteList, logOutRoute]}
+                          onDrawerRouteClick={route => {
+                            if (route === "logout") {
+                              return this.onLogout();
+                            }
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          onRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          classes={{
+                            ...classes,
+                            tabMenu: `${classes["white"]}`,
+                            title: `${classes["white"]}`,
+                            menuTabsClasses: {
+                              flexContainer: `${classes["center"]}`
+                            }
+                          }}
+                        >
+                          <Crud
+                            modelName="knowledge"
+                            SERVER={config.SERVER}
+                            offlineStorage={offlineStorage}
+                            notificationDomainStore={
+                              rootStore.notificationDomainStore
+                            }
+                            crudDomainStore={rootStore.crudDomainStore}
+                            query={{
+                              tags: [...this.state.tags]
+                            }}
+                            render={props => {
+                              const {
+                                knowledge_createModel: createModel,
+                                knowledge_updateModel: updateModel,
+                                knowledge_deleteModel: deleteModel,
+                                knowledge_getModel: getModel,
+                                knowledge_searchModel: searchModel,
+                                knowledgeSearch
+                              } = props;
+                              const zone = routeProps.match.params.zone;
+                              const knowledge = props.knowledge.find(
+                                ({ title }) => title === zone
+                              );
+                              const modelPreviewProps = {
+                                model: knowledge,
+                                updateModel,
+                                createModel,
+                                searchModel,
+                                deleteModel,
+                                knowledgeSearch,
+                                classes,
+                                onAdd: () => {},
+                                onEdit: () => {},
+                                onDelete: () => {},
+                                onCreate: () => {},
+                                onView: () => {}
+                              };
+                              return (
+                                <div style={{ marginTop: "5em" }}>
+                                  <ModelPreview
+                                    {...modelPreviewProps}
+                                    {...routeProps}
+                                  />
+                                </div>
+                              );
+                            }}
+                          />
+                        </MainWrapper>
+                      );
+                    }}
+                  ></Route>
+                  <Route
+                    path={`${this.props.match.path}`}
+                    render={routeProps => {
+                      return (
+                        <MainWrapper
+                          routeList={mainRouteList}
+                          {...routeProps}
+                          {...this.props}
+                          isTabMenu={true}
+                          onRouteClick={route => {
+                            if (route.indexOf("http") !== -1) {
+                              return window.open(route);
+                            }
+                            return routeProps.history.push(`${route}`);
+                          }}
+                          classes={{
+                            ...classes,
+                            tabMenu: `${classes["white"]}`,
+                            title: `${classes["white"]}`,
+                            menuTabsClasses: {
+                              flexContainer: `${classes["center"]}`
+                            }
+                          }}
+                          render={currentProps => (
+                            <MainWrapper
+                              routeList={shapesFilterRouteList}
+                              isTabMenu={true}
+                              tabMenuPosition="top"
+                              {...routeProps}
+                              {...this.props}
+                              onRouteClick={route => {
+                                this.setState({
+                                  tags:
+                                    this.state.tags.length === 0
+                                      ? new Set([route.replace("/", "")])
+                                      : this.state.tags.add(
+                                          route.replace("/", "")
+                                        )
+                                });
+                              }}
+                              onDrawerRouteClick={route => {
+                                if (route === "logout") {
+                                  return this.onLogout();
+                                }
+                                if (route.indexOf("http") !== -1) {
+                                  return window.open(route);
+                                }
+                                return routeProps.history.push(`${route}`);
+                              }}
+                              drawerRouteList={[...mainRouteList, logOutRoute]}
+                              classes={{
+                                ...classes,
+                                title: `${classes["white"]}`,
+                                tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
+                              }}
+                            >
+                              <Switch>
+                                <Route
+                                  path={`${routeProps.match.path}`}
+                                  render={props => {
+                                    return (
+                                      <Crud
+                                        modelName="knowledge"
+                                        SERVER={config.SERVER}
+                                        offlineStorage={offlineStorage}
+                                        notificationDomainStore={
+                                          rootStore.notificationDomainStore
+                                        }
+                                        crudDomainStore={
+                                          rootStore.crudDomainStore
+                                        }
+                                        query={{
+                                          tags: [...this.state.tags]
+                                        }}
+                                        render={props => {
+                                          const filteredKnowledge =
+                                            [...this.state.tags].length > 0
+                                              ? props.knowledge
+                                                  .map(k => {
+                                                    const res = k.tags.find(
+                                                      t =>
+                                                        [
+                                                          ...this.state.tags
+                                                        ].indexOf(t) !== -1
+                                                    );
+                                                    if (res) {
+                                                      return k;
+                                                    }
+                                                    return undefined;
+                                                  })
+                                                  .filter(
+                                                    know => know !== undefined
+                                                  )
+                                              : props.knowledge;
+                                          return (
+                                            <>
+                                              <Swipe
+                                                onSwipeStart={this.onSwipeStart}
+                                                onSwipeMove={this.onSwipeMove}
+                                                onSwipeEnd={this.onSwipeEnd}
+                                              >
+                                                <Paper>
+                                                  <Maps
+                                                    {...routeProps}
+                                                    classes={classes}
+                                                  ></Maps>
+                                                </Paper>
+                                              </Swipe>
+                                              <div
+                                                style={{ marginTop: "67px" }}
+                                              >
+                                                <img
+                                                  src={
+                                                    "https://s3.amazonaws.com/knowledgeflow.markab.io/images/Rectangle+5.png"
+                                                  }
+                                                  width="100px"
+                                                  height="10px"
+                                                  style={{
+                                                    display: "block",
+                                                    marginLeft: "auto",
+                                                    marginRight: "auto"
+                                                  }}
+                                                />
+                                              </div>
+                                              {[...this.state.tags].map(tag => (
+                                                <Chip
+                                                  label={tag}
+                                                  key={tag}
+                                                  id={tag}
+                                                  onDelete={() =>
+                                                    this.setState({
+                                                      tags: new Set(
+                                                        [
+                                                          ...this.state.tags
+                                                        ].filter(t => t !== tag)
+                                                      )
+                                                    })
+                                                  }
+                                                />
+                                              ))}
+                                              <Knowledge
+                                                {...routeProps}
+                                                {...props}
+                                                currentTags={this.state.tags}
+                                                setState={props =>
+                                                  this.setState(props)
+                                                }
+                                                knowledge={filteredKnowledge}
+                                              />
+                                            </>
+                                          );
+                                        }}
+                                      />
+                                    );
+                                  }}
+                                ></Route>
+                              </Switch>
+                            </MainWrapper>
+                          )}
+                        />
+                      );
+                    }}
+                  />
+                </Switch>
+              )}
               {/* <Redirect
                 to={{
                   pathname: "/"
