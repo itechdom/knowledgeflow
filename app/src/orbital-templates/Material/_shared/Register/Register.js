@@ -131,10 +131,23 @@ export const Register = ({
                     {...rest}
                   />
                 </form>
+
+                <CardActions style={{ justifyContent: "flex-end" }}>
+                  <Button
+                    variant="contained"
+                    fullWidth={true}
+                    color="secondary"
+                    onClick={handleSubmit}
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    Register
+                  </Button>
+                </CardActions>
                 <Grid container direction="column">
                   <Button
                     color="secondary"
-                    size="small"
+                    variant="outlined"
                     color="secondary"
                     onClick={onLogin}
                   >
@@ -147,18 +160,6 @@ export const Register = ({
                     </Typography>
                   </Button>
                 </Grid>
-                <CardActions style={{ justifyContent: "flex-end" }}>
-                  <Button
-                    variant="raised"
-                    size="small"
-                    color="primary"
-                    onClick={handleSubmit}
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    Register
-                  </Button>
-                </CardActions>
               </CardContent>
             </>
           );

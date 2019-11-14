@@ -1,6 +1,8 @@
 import { red } from "@material-ui/core/colors";
 import { createMuiTheme } from "@material-ui/core/styles";
 
+const tertiary = "#1ABCFE";
+
 // A custom theme for this app
 const theme = createMuiTheme({
   palette: {

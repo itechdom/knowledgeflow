@@ -115,10 +115,24 @@ export const Login = ({
                     {...rest}
                   />
                 </form>
+
+                <CardActions style={{ justifyContent: "flex-end" }}>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    fullWidth={true}
+                    onClick={handleSubmit}
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    login
+                  </Button>
+                </CardActions>
                 <Grid container direction="column">
                   <Button
-                    size="small"
                     color="secondary"
+                    fullWidth={true}
+                    vairant="outlined"
                     onClick={onForgotPassword}
                   >
                     <Typography
@@ -131,8 +145,8 @@ export const Login = ({
                   </Button>
                   <Button
                     color="secondary"
-                    size="small"
-                    color="secondary"
+                    variant="outlined"
+                    fullWidth={true}
                     onClick={onRegister}
                   >
                     <Typography
@@ -144,18 +158,6 @@ export const Login = ({
                     </Typography>
                   </Button>
                 </Grid>
-                <CardActions style={{ justifyContent: "flex-end" }}>
-                  <Button
-                    variant="raised"
-                    size="small"
-                    color="primary"
-                    onClick={handleSubmit}
-                    type="submit"
-                    disabled={isSubmitting}
-                  >
-                    login
-                  </Button>
-                </CardActions>
               </CardContent>
             </>
           );
