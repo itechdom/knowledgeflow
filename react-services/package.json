@@ -1,0 +1,66 @@
+{
+  "name": "@markab.io/react",
+  "version": "1.11.1",
+  "description": "A way to get up and running quickly with any programming task.",
+  "main": "./lib/react-services.js",
+  "scripts": {
+    "build": "rm -rf lib/* && webpack",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "analyze": "webpack --profile --json > stats.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markab-io/react-services.git"
+  },
+  "author": "Sam Alghanmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markab-io/react-services-services/issues"
+  },
+  "homepage": "https://github.com/markab-io/react-services#readme",
+  "dependencies": {
+    "apollo-boost": "^0.1.17",
+    "axios": "^0.18.0",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.10.0",
+    "mobx": "^5.1.1",
+    "mobx-react": "^5.2.8",
+    "mobx-state-tree": "^3.14.1",
+    "moment": "^2.23.0",
+    "query-string": "^6.8.1",
+    "react": "^16.5.0",
+    "react-apollo": "^2.2.4",
+    "react-dom": "^16.5.0",
+    "react-game-kit": "^1.0.6",
+    "react-webcam": "^3.1.1",
+    "rrule": "^2.6.0",
+    "socket.io-client": "^2.2.0",
+    "yup": "^0.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.0",
+    "@babel/plugin-transform-async-to-generator": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.5.2",
+    "normalize.css": "^8.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.18.1",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "3.1.8"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [
+    "reactjs-services"
+  ]
+}
