@@ -4,7 +4,7 @@ import { Paper, AppBar, Toolbar } from "@material-ui/core";
 import GoogleMapReact from "google-map-react";
 import Autocomplete from "../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
 import { compose } from "recompose";
-const Marker = ({ text }) => <>{text}</>;
+const Marker = () => <i class="material-icons">store_mall_directory</i>;
 const ModelList = ({
   users,
   model,
@@ -41,8 +41,8 @@ const ModelList = ({
   ...rest
 }) => {
   const position = {
-    lat: (coords && coords.latitude) || 50,
-    lng: (coords && coords.longitude) || 50
+    lat: (coords && coords.latitude) || "40.4418",
+    lng: (coords && coords.longitude) || "80.0004"
   };
   return (
     <Paper style={{ height: "50vh", width: "100%" }} elevation={2}>
@@ -51,7 +51,7 @@ const ModelList = ({
         defaultCenter={position}
         defaultZoom={8}
       >
-        <Marker lat={position.lat} lng={position.lng} text="You are here" />
+        <Marker lat={position.lat} lng={position.lng} />
       </GoogleMapReact>
       {/* <RidePreview
         onCancel={() => console.log("cancelled")}

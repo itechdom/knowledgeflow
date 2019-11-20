@@ -1318,7 +1318,7 @@ class App extends React.Component {
                                               }
                                             />
                                           ))}
-                                          <Knowledge
+                                          {/* <Knowledge
                                             {...routeProps}
                                             {...props}
                                             currentTags={this.state.tags}
@@ -1326,7 +1326,7 @@ class App extends React.Component {
                                               this.setState(props)
                                             }
                                             knowledge={filteredKnowledge}
-                                          />
+                                          /> */}
                                         </>
                                       );
                                     }}
