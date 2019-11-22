@@ -13,7 +13,7 @@ import ModelListItems from "../ModelList/ModelListItems";
 import ModelFilterList from "../ModelList/ModelFilterList";
 //shared components
 import theme from "Theme";
-import { Grid, Fade, Card, CardContent } from "@material-ui/core";
+import { Grid, Fade, Card, CardContent, Button } from "@material-ui/core";
 import ClientNotification from "../ClientNotification/ClientNotification";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 
@@ -86,15 +86,20 @@ const ModelList = enhance(
     ModelListItemComponent,
     noPagination,
     onAdd,
+    onAddText,
     onDelete,
     onEdit,
+    onEditSubmit,
     onCreate,
+    onCreateSubmit,
     onView,
+    onSubmit,
     defaultView,
     gridSizes,
     currentQuery,
     setCurrentQuery,
     showFilters,
+    justify,
     ...rest
   }) => {
     const onEditWrapper = model => {
@@ -119,7 +124,7 @@ const ModelList = enhance(
       if (onCreate) {
         return onCreate(model);
       }
-      onViewWrapper(model);
+      model && onViewWrapper(model);
     };
     const onViewWrapper = model => {
       if (onView) {
@@ -155,7 +160,7 @@ const ModelList = enhance(
                       modelSchema={modelSchema}
                       onSave={values => {
                         createModel(values).then(res => {
-                          onCreateWrapper(res);
+                          onCreateSubmit && onCreateSubmit(values);
                         });
                       }}
                       onCancel={() => {
@@ -179,7 +184,7 @@ const ModelList = enhance(
                         modelSchema={modelSchema}
                         onSave={values => {
                           createModel(values).then(res => {
-                            onCreateWrapper(res);
+                            onCreateSubmit && onCreateSubmit(values);
                           });
                         }}
                         onCancel={() => {
@@ -210,7 +215,9 @@ const ModelList = enhance(
                         history.goBack();
                       }}
                       onSave={(updatedModel, values) => {
-                        updateModel(updatedModel, values);
+                        updateModel(updatedModel, values).then(res => {
+                          onEditSubmit && onEditSubmit(updatedModel);
+                        });
                       }}
                       form={form}
                       modelSchema={modelSchema}
@@ -269,7 +276,9 @@ const ModelList = enhance(
                           history.goBack();
                         }}
                         onSave={(updatedModel, values) => {
-                          updateModel(updatedModel, values);
+                          updateModel(updatedModel, values).then(res => {
+                            onEditSubmit && onEditSubmit(updatedModel);
+                          });
                         }}
                         form={form}
                         modelSchema={modelSchema}
@@ -400,9 +409,18 @@ const ModelList = enhance(
               console.log("On Root");
               return (
                 <>
-                  {ModelListActions && <ModelListActions {...Actions} />}
+                  {(ModelListActions && <ModelListActions {...Actions} />) || (
+                    <Button
+                      color="secondary"
+                      classes={classes.addButton}
+                      onClick={onAddWrapper}
+                      variant="contained"
+                    >
+                      {onAddText ? onAddText : `Create ${modelName}`}
+                    </Button>
+                  )}
                   {viewOption === 0 && (
-                    <Grid container justify="space-between">
+                    <Grid container justify={justify}>
                       {showFilters && (
                         <Grid item md={2} sm={2} xs={2}>
                           <Card style={{ minHeight: "75vh" }}>
@@ -441,7 +459,7 @@ const ModelList = enhance(
                         {defaultView ? (
                           defaultView
                         ) : (
-                          <Grid container>
+                          <Grid container justify={justify}>
                             <ModelListItems
                               models={models}
                               classes={classes}

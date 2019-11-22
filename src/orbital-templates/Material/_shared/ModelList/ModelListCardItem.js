@@ -56,7 +56,7 @@ const ModelListCardItem = ({
           }}
         >
           <Grid container direction="column" justify="center">
-            <CardMedia
+            {/* <CardMedia
               className={classes.cardImage}
               component="img"
               image={
@@ -64,7 +64,7 @@ const ModelListCardItem = ({
                 "https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
               }
             />
-            <Divider />
+            <Divider /> */}
             <CardContent>
               <Typography style={{ fontSize: "14px", fontWeight: "400" }}>
                 {model.name || model.title}

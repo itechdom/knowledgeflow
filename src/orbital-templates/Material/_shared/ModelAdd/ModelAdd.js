@@ -80,20 +80,20 @@ export default class ModelAdd extends React.Component {
                   variant="contained"
                   color="primary"
                   onClick={event => {
-                    handleSubmit(event);
+                    onCancel(event);
                   }}
                 >
-                  <Icon>add_circle</Icon>
-                  <span style={{ marginLeft: "3px" }}>Add</span>
+                  Cancel
                 </Button>
                 <Button
                   variant="contained"
                   color="secondary"
                   onClick={event => {
-                    onCancel(event);
+                    handleSubmit(event);
                   }}
                 >
-                  Cancel
+                  <Icon>save</Icon>
+                  <span style={{ marginLeft: "3px" }}>Save</span>
                 </Button>
               </CardActions>
             </Card>

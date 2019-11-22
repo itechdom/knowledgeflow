@@ -2,47 +2,21 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { Route, HashRouter as Router } from "react-router-dom";
 import App from "./src/App";
-import config from "Config";
-import { Crud } from "./react-services/crud-service/crud-service-mst";
-import rootStore from "./src/Store/rootStore";
-const offlineStorage = {
-  getItem: key => {
-    return new Promise((resolve, reject) => {
-      return resolve(localStorage.getItem(key));
-    });
-  },
-  setItem: (key, value) => {
-    return new Promise((resolve, reject) => {
-      return resolve(localStorage.setItem(key, value));
-    });
-  },
-  removeItem: key => {
-    return new Promise((resolve, reject) => {
-      return resolve(localStorage.removeItem(key));
-    });
-  }
-};
+import { MuiPickersUtilsProvider } from "@material-ui/pickers";
+import MomentUtils from "@date-io/moment";
 
 const FireApp = props => {
   const MyApp = props => (
-    <Router>
-      <Route
-        path="/"
-        render={routeProps => {
-          return (
-            <Crud
-              modelName="users"
-              SERVER={config.SERVER}
-              offlineStorage={offlineStorage}
-              notificationDomainStore={rootStore.notificationDomainStore}
-              crudDomainStore={rootStore.crudDomainStore}
-            >
-              <App {...props} {...routeProps} />
-            </Crud>
-          );
-        }}
-      />
-    </Router>
+    <MuiPickersUtilsProvider utils={MomentUtils}>
+      <Router>
+        <Route
+          path="/"
+          render={routeProps => {
+            return <App {...props} {...routeProps} />;
+          }}
+        />
+      </Router>
+    </MuiPickersUtilsProvider>
   );
   ReactDOM.render(<MyApp />, document.getElementById("app"));
 };

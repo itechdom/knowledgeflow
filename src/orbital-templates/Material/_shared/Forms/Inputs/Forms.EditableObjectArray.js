@@ -69,7 +69,7 @@ const EditableObjectArray = ({
                     values[index] = { ...values[index], [key]: value };
                     setFieldValue(field.name, values);
                   }}
-                  setFieldTouched={setFieldTouched}
+                  setFieldTouched={() => {}}
                   onMediaDrop={onMediaDrop}
                   onGalleryDrop={onGalleryDrop}
                   onMediaDelete={onMediaDelete}

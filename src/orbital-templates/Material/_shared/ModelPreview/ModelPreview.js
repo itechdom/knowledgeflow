@@ -4,9 +4,11 @@ import EditIcon from "@material-ui/icons/Edit";
 import ImageGallery from "react-image-gallery";
 import ConfirmDeleteModal from "../ConfirmDeleteModal/ConfirmDeleteModal";
 import * as Inputs from "../Forms/Inputs";
+import Forms from "../Forms";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { withState, compose } from "recompose";
 import { Formik } from "formik";
+import moment from "moment";
 import {
   Grid,
   Card,
@@ -101,7 +103,21 @@ const ModelPreview = enhance(
               <TableCell>
                 <Typography>{field.placeholder}</Typography>
               </TableCell>
-              <TableCell>{model[field.name]}</TableCell>
+              <TableCell>
+                {moment(model[field.name]).format("MMMM Do YYYY")}
+              </TableCell>
+            </TableRow>
+          );
+        }
+        if (field.type === "time") {
+          return (
+            <TableRow selected={index % 2 === 0}>
+              <TableCell>
+                <Typography>{field.placeholder}</Typography>
+              </TableCell>
+              <TableCell>
+                {moment(model[field.name]).format("hh:mm a")}
+              </TableCell>
             </TableRow>
           );
         }
@@ -133,7 +149,7 @@ const ModelPreview = enhance(
         }
         if (field.type === "object-array") {
           return (
-            <>
+            <TableRow selected={index % 2 === 0}>
               <Formik>
                 <Inputs.EditableObjectArray
                   form={field.form}
@@ -154,7 +170,7 @@ const ModelPreview = enhance(
                   />
                 )}
               </Grid>
-            </>
+            </TableRow>
           );
         }
         if (field.type === "markdown") {

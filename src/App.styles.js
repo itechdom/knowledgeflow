@@ -5,6 +5,8 @@ export const styles = theme => {
   console.log("THEME!", theme);
   return {
     root: {},
+    hasPadding: {
+    },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
       height: appBarHeight
@@ -19,8 +21,18 @@ export const styles = theme => {
     appBar: {
       zIndex: theme.zIndex.drawer + 1
     },
-    tagTabs: {
-      backgroundColor: "black"
+    chip: {
+      width: "100px",
+      height: "auto",
+      padding: "0.5em",
+      margin: "0.5em"
+    },
+    chip__selected: {
+      backgroundColor: "#d32fa559",
+      width: "100px",
+      height: "auto",
+      padding: "0.5em",
+      margin: "0.5em"
     },
     menu: {
       backgroundColor: "white",
@@ -29,7 +41,6 @@ export const styles = theme => {
     menuButton: {
       // marginLeft: 30,
       // marginRight: 20
-      color: "white"
     },
     menuDropdown: {
       // marginLeft: -12,
@@ -47,26 +58,6 @@ export const styles = theme => {
       color: "white",
       borderRadius: "46px",
       marginBottom: "15px"
-    },
-    content: {
-      scroll: "none"
-      // flexGrow: 1,
-      // height: "100vh",
-      // overflow: "auto",
-      // [theme.breakpoints.up("md")]: {
-      // marginTop: appBarHeight,
-      // marginLeft: drawerWidth
-      // }
-    },
-    hasPadding: {
-      // padding: theme.spacing(3),
-      // flexGrow: 1,
-      // height: "100vh",
-      // overflow: "auto",
-      // [theme.breakpoints.up("md")]: {
-      // marginTop: appBarHeight,
-      // marginLeft: drawerWidth
-      // }
     },
     layout: {
       width: "auto",
@@ -150,6 +141,9 @@ export const styles = theme => {
       // marginRight: "auto",
       // marginBottom: "22px"
     },
+    top1: {
+      marginTop: "10px"
+    },
     top10: {
       marginTop: "1em"
     },
@@ -183,14 +177,77 @@ export const styles = theme => {
     top100: {
       marginTop: "10em"
     },
+    bottom1: {
+      marginBottom: "10px"
+    },
+    bottom10: {
+      marginBottom: "1em"
+    },
+    bottom20: {
+      marginBottom: "2em"
+    },
+    bottom30: {
+      marginBottom: "3em"
+    },
+    bottom40: {
+      marginBottom: "4em"
+    },
+    bottom50: {
+      marginBottom: "5em"
+    },
+    bottom60: {
+      marginBottom: "6em"
+    },
+    bottom70: {
+      marginBottom: "7em"
+    },
+    bottom80: {
+      marginBottom: "8em"
+    },
+    bottom90: {
+      marginBottom: "9em"
+    },
+    bottom95: {
+      marginBottom: "9.1em"
+    },
+    bottom100: {
+      marginBottom: "10em"
+    },
     center: {
+      display: "flex",
       justifyContent: "center"
+    },
+    start: {
+      display: "flex",
+      justifyContent: "flex-start"
+    },
+    end: {
+      display: "flex",
+      justifyContent: "flex-end"
     },
     relative: {
       position: "relative"
     },
     white: {
       color: "white!important"
+    },
+    noScroll: {
+      maxHeight: "100vh"
+    },
+    noHeight: {
+      height: "0px"
+    },
+    noWidth: {
+      width: "0px"
+    },
+    noMargin: {
+      margin: "0px"
+    },
+    noPadding: {
+      padding: "0px"
+    },
+    bold: {
+      fontWeight: "bold"
     }
   };
 };

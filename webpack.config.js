@@ -109,7 +109,8 @@ module.exports = env => {
     },
     //To run development server
     devServer: {
-      contentBase: base
+      contentBase: base,
+      disableHostCheck: true // That solved it
     },
     devtool: "eval-source-map"
   };

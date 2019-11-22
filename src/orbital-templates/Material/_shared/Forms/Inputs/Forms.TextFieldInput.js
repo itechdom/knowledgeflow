@@ -23,7 +23,7 @@ const TextFieldInput = ({
           setFieldValue(field.name, event.target.value);
         }}
         onBlur={e => {
-          setFieldTouched(field.name, true);
+          setFieldTouched && setFieldTouched(field.name, true);
         }}
         required={field.required || false}
         fullWidth={true}
@@ -44,7 +44,7 @@ const TextFieldInput = ({
                 setFieldValue(field.name, event.target.value);
               }}
               onBlur={e => {
-                setFieldTouched(field.name, true);
+                setFieldTouched && setFieldTouched(field.name, true);
               }}
               required={field.required || false}
               fullWidth={true}

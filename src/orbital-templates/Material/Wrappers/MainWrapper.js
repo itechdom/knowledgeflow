@@ -19,7 +19,8 @@ import {
   Tab,
   Drawer,
   Paper,
-  Grid
+  Grid,
+  Chip
 } from "@material-ui/core";
 const Icon = ({ children }) => {
   return <i className="material-icons">{children}</i>;
@@ -52,12 +53,17 @@ const MainWrapper = props => {
     setMenuOpen,
     classes,
     isTabMenu,
+    isTagMenu,
+    tags,
+    setState,
     tabMenuPosition,
     onDrawerRouteClick,
     onRouteClick,
     selectedRoute,
     hideDrawer,
-    render
+    hideAppBar,
+    render,
+    length
   } = props;
   const isAnchor = Boolean(anchorEl);
   let route = routeList.filter(({ name, url }) => {
@@ -66,13 +72,40 @@ const MainWrapper = props => {
   let currentRoute = selectedRoute
     ? selectedRoute
     : (route.length > 0 && routeList.indexOf(route[route.length - 1])) || 0;
-  let isRoot = routeList[currentRoute] === "/";
-  // console.log("ISROOOT!", routeList[currentRoute]);
-  // console.log("MAIN WRAPPER CLASSES", classes);
   return (
     <>
       <CssBaseline />
       <div className={classes.root}>
+        {isTagMenu && (
+          <AppBar
+            style={{
+              bottom: tabMenuPosition === "top" ? "auto" : 0,
+              top: tabMenuPosition === "top" ? 0 : "auto",
+              backgroundColor: "white"
+            }}
+            className={classes.tabMenu}
+          >
+            <Grid container justify="flex-start">
+              {routeList.map((route, index) => {
+                return (
+                  <Grid item>
+                    <Chip
+                      label={route.name}
+                      key={route.name}
+                      id={route.name}
+                      className={
+                        [...tags].indexOf(route.name) !== -1
+                          ? classes.chip__selected
+                          : classes.chip
+                      }
+                      onClick={() => onRouteClick(route.name)}
+                    />
+                  </Grid>
+                );
+              })}
+            </Grid>
+          </AppBar>
+        )}
         {isTabMenu && (
           <AppBar
             style={{
@@ -82,12 +115,31 @@ const MainWrapper = props => {
             }}
             className={classes.tabMenu}
           >
+            {tabMenuPosition === "top" && (
+              <Grid container>
+                <Grid item>
+                  <IconButton
+                    aria-label="Open drawer"
+                    onClick={() => setOpen(true)}
+                    className={classNames(
+                      classes.menuButton,
+                      open && classes.menuButtonHidden
+                    )}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                </Grid>
+                <Grid item>
+                  <img src={logo} width="80px" height="45px" />
+                </Grid>
+              </Grid>
+            )}
             <Tabs
               className={classes.menuTabs}
               classes={
                 classes.menuTabsClasses
                   ? tabMenuPosition === "top"
-                    ? `${classes.menuTabsClasses} ${classes.tagTabs}`
+                    ? classes.menuTabsClasses
                     : classes.menuTabsClasses
                   : undefined
               }
@@ -98,16 +150,18 @@ const MainWrapper = props => {
                   : history.push(`${match.path}${routeList[route].url}`);
               }}
               variant="scrollable"
-              indicatorColor="primary"
-              textColor="primary"
-              centered
+              indicatorColor="secondary"
+              textColor="secondary"
               scrollButtons="off"
               aria-label="scrollable force tabs example"
             >
               {routeList.map((route, index) => {
                 return (
                   <Tab
-                    label={route.name}
+                    label={route.name.replace(
+                      "${length}",
+                      length && length[index] ? length[index] : "0"
+                    )}
                     icon={<Icon>{route.icon}</Icon>}
                     key={index}
                     button
@@ -124,104 +178,106 @@ const MainWrapper = props => {
             </Tabs>
           </AppBar>
         )}
-        <AppBar className={classes.menu}>
-          <Toolbar className={classes.toolbar}>
-            <Grid
-              container
-              justify="space-between"
-              alignItems="center"
-              alignContent="center"
-            >
-              {!hideDrawer && (
+        {!hideAppBar && (
+          <AppBar className={classes.menu}>
+            <Toolbar className={classes.toolbar}>
+              <Grid
+                container
+                justify="flex-start"
+                alignItems="center"
+                alignContent="center"
+              >
+                {!hideDrawer && (
+                  <Grid item>
+                    <IconButton
+                      aria-label="Open drawer"
+                      onClick={() => setOpen(true)}
+                      className={classNames(
+                        classes.menuButton,
+                        open && classes.menuButtonHidden
+                      )}
+                    >
+                      <MenuIcon />
+                    </IconButton>
+                  </Grid>
+                )}
                 <Grid item>
-                  <IconButton
-                    aria-label="Open drawer"
-                    onClick={() => setOpen(true)}
-                    className={classNames(
-                      classes.menuButton,
-                      open && classes.menuButtonHidden
-                    )}
-                  >
-                    <MenuIcon />
-                  </IconButton>
+                  <img src={logo} width="80px" height="45px" />
                 </Grid>
-              )}
-              <Grid item>
-                <img src={logo} width="71px" height="23px" />
-              </Grid>
-              <Grid item>
-                <Typography
-                  style={{ fontWeight: "bold" }}
-                  variant="title"
-                  noWrap
-                  className={classes.title}
-                >
-                  {brand
-                    ? brand
-                    : (routeList[currentRoute] &&
-                        routeList[currentRoute].name) ||
-                      routeList[0].name}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Tooltip title={(user && user.name) || ""}>
-                  <IconButton
-                    aria-owns={isAnchor ? "menu-appbar" : null}
-                    aria-haspopup="true"
-                    onClick={event => {
-                      setAnchorEl(event.currentTarget);
-                    }}
-                    color="inherit"
+                <Grid item>
+                  <Typography
+                    style={{ fontWeight: "bold" }}
+                    variant="title"
+                    noWrap
+                    className={classes.title}
                   >
-                    <img
-                      style={{ borderRadius: "30px" }}
-                      src={user && user.image}
-                      width={"40px"}
-                      height={"auto"}
-                      alt="Profile"
-                    />
-                  </IconButton>
-                </Tooltip>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorEl}
-                  keepMounted
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left"
-                  }}
-                  transformOrigin={{
-                    vertical: "bottom",
-                    horizontal: "left"
-                  }}
-                  open={isAnchor}
-                  onClose={() => setAnchorEl(null)}
-                >
-                  <MenuItem
-                    onClick={event => {
-                      setMenuOpen(false);
-                      onRouteClick
-                        ? onRouteClick("/settings")
-                        : history.push(`${match.path}settings`);
+                    {brand
+                      ? brand
+                      : (routeList[currentRoute] &&
+                          routeList[currentRoute].name) ||
+                        routeList[0].name}
+                  </Typography>
+                </Grid>
+                <Grid style={{ marginLeft: "auto" }} item>
+                  {/* <Tooltip title={(user && user.name) || ""}>
+                    <IconButton
+                      aria-owns={isAnchor ? "menu-appbar" : null}
+                      aria-haspopup="true"
+                      onClick={event => {
+                        setAnchorEl(event.currentTarget);
+                      }}
+                      color="inherit"
+                    >
+                      <img
+                        style={{ borderRadius: "30px" }}
+                        src={user && user.image}
+                        width={"40px"}
+                        height={"auto"}
+                        alt="Profile"
+                      />
+                    </IconButton>
+                  </Tooltip> */}
+                  <Menu
+                    id="menu-appbar"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    anchorOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left"
                     }}
-                  >
-                    Settings
-                  </MenuItem>
-                  <MenuItem
-                    onClick={event => {
-                      setMenuOpen(false);
-                      onRouteClick
-                        ? onRouteClick("logout")
-                        : history.push(`${match.path}auth/login`);
+                    transformOrigin={{
+                      vertical: "bottom",
+                      horizontal: "left"
                     }}
+                    open={isAnchor}
+                    onClose={() => setAnchorEl(null)}
                   >
-                    Log out
-                  </MenuItem>
-                </Menu>
+                    <MenuItem
+                      onClick={event => {
+                        setMenuOpen(false);
+                        onRouteClick
+                          ? onRouteClick("/settings")
+                          : history.push(`${match.path}settings`);
+                      }}
+                    >
+                      Settings
+                    </MenuItem>
+                    <MenuItem
+                      onClick={event => {
+                        setMenuOpen(false);
+                        onRouteClick
+                          ? onRouteClick("logout")
+                          : history.push(`${match.path}auth/login`);
+                      }}
+                    >
+                      Log out
+                    </MenuItem>
+                  </Menu>
+                </Grid>
               </Grid>
-            </Grid>
-          </Toolbar>
-        </AppBar>
+            </Toolbar>
+          </AppBar>
+        )}
         <Divider />
         <Drawer
           className={classes.menu}
@@ -244,18 +300,9 @@ const MainWrapper = props => {
             }}
           />
         </Drawer>
-        <Paper>
-          <main
-            style={{
-              height: "100vh",
-              marginBottom: "100px",
-              overflow: "scroll"
-            }}
-            className={`${classes.hasPadding} ${classes.content}`}
-          >
-            {render ? render(props) : children}
-          </main>
-        </Paper>
+        <main className={`${classes.hasPadding} ${classes.content}`}>
+          {render ? render(props) : children}
+        </main>
       </div>
     </>
   );

@@ -9,6 +9,11 @@ import { Button, Typography, CircularProgress } from "@material-ui/core";
 import * as Inputs from "./Inputs";
 import Autocomplete from "../Autocomplete/Autocomplete";
 import ClientNotification from "../ClientNotification/ClientNotification";
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker
+} from "@material-ui/pickers";
 
 const enhance = compose(
   withState("timeoutValue", "setTimeoutValue", null),
@@ -57,7 +62,7 @@ const Fields = enhance(
           [true, false],
           values
         );
-        if (falseDecisions.length > 0) {
+        if (falseDecisions.length > 0 || field.editable === false) {
           return;
         }
         return (
@@ -104,11 +109,34 @@ const Fields = enhance(
             )}
             {field.type === "date" && (
               <div>
-                <Inputs.TextFieldInput
-                  type="date"
-                  value={moment(values[field.name]).format("YYYY-MM-DD")}
-                  field={field}
-                  InputProps={{ shrink: true }}
+                <KeyboardDatePicker
+                  margin="normal"
+                  id="date-picker-dialog"
+                  label={field.placeholder}
+                  value={moment(values[field.name])}
+                  onChange={date => {
+                    setFieldValue(field.name, date);
+                  }}
+                  KeyboardButtonProps={{
+                    "aria-label": "change date"
+                  }}
+                />
+              </div>
+            )}
+            {field.type === "time" && (
+              <div>
+                <KeyboardTimePicker
+                  margin="normal"
+                  id="time-picker"
+                  label={field.placeholder}
+                  value={values[field.name]}
+                  onChange={date => {
+                    console.log("date", moment(date).utc());
+                    setFieldValue(field.name, date);
+                  }}
+                  KeyboardButtonProps={{
+                    "aria-label": "change time"
+                  }}
                 />
               </div>
             )}
@@ -119,6 +147,8 @@ const Fields = enhance(
                   value={moment(values[field.name]).format("YYYY-MM-DDThh:mm")}
                   field={field}
                   InputProps={{ shrink: true }}
+                  setFieldTouched={setFieldTouched}
+                  setFieldValue={setFieldValue}
                 />
               </div>
             )}
@@ -129,6 +159,7 @@ const Fields = enhance(
                   value={values[field.name]}
                   field={field}
                   setFieldValue={setFieldValue}
+                  setFieldTouched={setFieldTouched}
                 />
               </div>
             )}

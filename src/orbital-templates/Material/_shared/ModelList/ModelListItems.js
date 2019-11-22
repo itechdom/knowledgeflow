@@ -3,6 +3,7 @@ import ModelListCardItem from "../ModelList/ModelListCardItem";
 import { compose, withState, lifecycle } from "recompose";
 import { Paper, Grid, Grow, Fade } from "@material-ui/core";
 import Empty from "../Empty/Empty";
+import Loading from "../Loading/Loading";
 const enhance = compose(
   withState("open", "setOpen", false),
   withState("deletedModel", "setDeletedModel", {}),

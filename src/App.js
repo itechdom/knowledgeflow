@@ -1,6 +1,16 @@
 import React from "react";
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
-import { mainRouteList, shapesFilterRouteList } from "./Routes";
+import {
+  mainRouteList,
+  mainFilterRouteList,
+  dateFilterRouteList,
+  waiver,
+  locations,
+  notifications,
+  editableSchemas,
+  adminRoute,
+  logoutRoute
+} from "./Routes";
 import {
   Dialog,
   DialogActions,
@@ -27,6 +37,7 @@ import {
   Typography
 } from "@material-ui/core";
 import Swipe from "react-easy-swipe";
+import { useSwipeable, Swipeable } from "react-swipeable";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
 import {
@@ -50,18 +61,17 @@ import Admin from "./Admin/Admin";
 import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
-import { List as VirtualList, AutoSizer } from "react-virtualized";
 import Camera from "./Camera/Camera";
 import Maps from "./Maps/Maps";
 import "./global.css";
-import FormsList from "./orbital-templates/Material/_shared/Forms/Forms";
 import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
 import { Formik } from "formik";
-import ModelPreview from "./Knowledge/ModelPreview/ModelPreview";
+import { RRule } from "rrule";
+import moment from "moment";
+import Knowledge from "./Knowledge/Knowledge";
 const loginBG = "";
 const registerBG = "";
-const logo =
-  "https://s3.amazonaws.com/knowledgeflow.markab.io/images/worth-manifesto.png";
+const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
 const gaTrackingCode = "UA-46023413-2";
 const disableAuth = false;
 const offlineStorage = {
@@ -82,89 +92,52 @@ const offlineStorage = {
   }
 };
 const tertiary = "#1ABCFE";
-const Knowledge = ({
-  knowledge,
-  knowledge_loading,
-  history,
-  currentTags,
-  setState
-}) => {
-  return (
-    <List style={{ height: "100vh" }}>
-      <ListSubheader>{(currentTags && currentTags[0]) || "All"}</ListSubheader>
-      <Divider></Divider>
-      {knowledge_loading && <Loading />}
-      {/* <AutoSizer>
-        {({ width, height }) => (
-          <VirtualList
-            width={500}
-            height={height}
-            rowCount={knowledge && knowledge.length}
-            rowHeight={10}
-            rowRenderer={({
-              index,
-              isScrolling,
-              isVisible,
-              key,
-              parent,
-              style
-            }) => { */}
-      {knowledge.map(({ title, tags }) => {
-        return (
-          <>
-            <ListItem>
-              <ListItemAvatar>
-                <Avatar
-                  alt={`Avatar n°`}
-                  src="https://orbital-clients.s3.amazonaws.com/_Main/Markab-logo-only.svg"
-                />
-              </ListItemAvatar>
-              <ListItemText
-                primary={
-                  <a
-                    href={`/#/zone/${title}`}
-                    onClick={() => history.push(`/zone/${title}`)}
-                  >
-                    {title}
-                  </a>
-                }
-                secondary={tags.map(t => (
-                  <Chip
-                    label={t}
-                    onClick={() => {
-                      setState({
-                        tags:
-                          currentTags.length === 0
-                            ? new Set([t])
-                            : currentTags.add(t)
-                      });
-                    }}
-                    style={{
-                      backgroundColor: "#FFFFFF",
-                      border: "1px solid #000000"
-                    }}
-                  ></Chip>
-                ))}
-              ></ListItemText>
-              <ListItemSecondaryAction>
-                <Button
-                  onClick={() => history.push(`/zone/${title}`)}
-                  color="primary"
-                  style={{ padding: "0px" }}
-                >
-                  <i class="material-icons">arrow_right_alt</i>
-                </Button>
-              </ListItemSecondaryAction>
-            </ListItem>
-            <Divider></Divider>
-          </>
-        );
-      })}
-      {/* />
-        )}
-      </AutoSizer> */}
-    </List>
+const getRecurringInstances = event => {
+  if (event.recurringRule) {
+    if (typeof event.recurringRule === "string") {
+      let recurringRule = RRule.fromString(event.recurringRule);
+      event.recurringRuleValue = recurringRule.toText();
+      event.instances = recurringRule.all();
+    }
+  }
+  return event;
+};
+const Logout = ({ onLogout }) => {
+  React.useEffect(() => {
+    onLogout();
+  }, []);
+  return <></>;
+};
+export const getDerivatives = knowledge => {
+  const eventWithInstances = getRecurringInstances(knowledge);
+  const instances = eventWithInstances.instances.length > 0;
+  const tags = [...knowledge.tags];
+  const today = moment();
+  const begin = moment(knowledge.startDate);
+  const beginTime = moment(knowledge.startTime).format("hh:mm a");
+  const end = moment(knowledge.endDate);
+  const endTime = moment(knowledge.endTime).format("hh:mm a");
+  const dropoffStartTime = moment(knowledge.dropoffStartTime).format("hh:mm a");
+  const dropoffEndTime = moment(knowledge.dropoffEndTime).format("hh:mm a");
+  const pickupObj = locations.find(
+    location => location.businessName === knowledge.pickup
   );
+  const dropoffObj = locations.find(
+    location => location.businessName === knowledge.dropoff
+  );
+  return {
+    instances,
+    today,
+    tags,
+    begin,
+    beginTime,
+    end,
+    endTime,
+    dropoffStartTime,
+    dropoffEndTime,
+    pickupObj,
+    dropoffObj
+  };
 };
 class App extends React.Component {
   state = {
@@ -172,7 +145,10 @@ class App extends React.Component {
     currentUser: {},
     appSettings: {},
     tags: [],
-    initialTags: []
+    initialTags: [],
+    mainRouteState: {},
+    expandMap: true,
+    selected: null
   };
   constructor(props) {
     super(props);
@@ -218,6 +194,16 @@ class App extends React.Component {
       showConfirmModal: false
     });
   };
+  expandMap = () => {
+    this.setState({
+      expandMap: true
+    });
+  };
+  collapseMap = () => {
+    this.setState({
+      expandMap: false
+    });
+  };
   onDialogSave = () => {
     this.props.history.goBack();
     // this.props.celebrate_createModel();
@@ -234,35 +220,25 @@ class App extends React.Component {
   onSwipeEnd(event) {
     // console.log("End swiping...", event);
   }
-  renderDialog = () => {
+  renderDialog = ({ title, message, yes, no, onYes, onNo, extra }) => {
     return (
       <Dialog
-        open={this.state.showConfirmModal}
-        onClose={this.onDialogClose}
+        open={true}
+        onClose={onNo}
         aria-labelledby="form-dialog-title"
         fullScreen
       >
-        <DialogTitle id="form-dialog-title">Celebrate yourself!</DialogTitle>
+        <DialogTitle id="form-dialog-title">{title}</DialogTitle>
         <DialogContent>
-          <DialogContentText>
-            highlight the clothing items you want to share with other people
-          </DialogContentText>
-          <img src={this.state.currentImage} />
-          <TextField
-            autoFocus
-            margin="dense"
-            id="name"
-            label="What clothing items you want to highlight?"
-            type="text"
-            fullWidth
-          />
+          <DialogContentText>{message}</DialogContentText>
+          <DialogContentText>{extra ? extra : <></>}</DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={this.onDialogClose} color="primary">
-            Cancel
+          <Button onClick={onNo} variant="outlined" color="primary">
+            {no}
           </Button>
-          <Button onClick={this.onDialogSave} color="primary">
-            Save
+          <Button onClick={onYes} variant="contained" color="secondary">
+            {yes}
           </Button>
         </DialogActions>
       </Dialog>
@@ -270,11 +246,6 @@ class App extends React.Component {
   };
   render() {
     const { classes } = this.props;
-    const logOutRoute = {
-      url: "logout",
-      name: "Log Out",
-      icon: "exit_to_app"
-    };
     return (
       <ThemeProvider theme={theme}>
         <Router>
@@ -391,7 +362,7 @@ class App extends React.Component {
                                     marginLeft: "auto",
                                     marginRight: "auto"
                                   }}
-                                  src="https://s3.amazonaws.com/knowledgeflow.markab.io/images/worth-manifesto.png"
+                                  src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/worth_manifesto-words.jpg"
                                 />
                                 <Typography style={{ textAlign: "center" }}>
                                   Welcome to Worth Manifesto!
@@ -433,7 +404,7 @@ class App extends React.Component {
                                     marginLeft: "auto",
                                     marginRight: "auto"
                                   }}
-                                  src="https://s3.amazonaws.com/knowledgeflow.markab.io/images/welcome-bottom.png"
+                                  src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/welcome-bottom.png"
                                 />
                               </CardContent>
                             </Card>
@@ -486,15 +457,56 @@ class App extends React.Component {
                                     marginLeft: "auto",
                                     marginRight: "auto"
                                   }}
-                                  src="https://s3.amazonaws.com/knowledgeflow.markab.io/images/worth-manifesto.png"
+                                  src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/worth-manifesto.png"
                                 />
                                 <Typography style={{ textAlign: "center" }}>
                                   Welcome to Worth Manifesto!
                                 </Typography>
                                 <Typography style={{ textAlign: "center" }}>
-                                  Worth Manifesto is on a mission to acknowledge
-                                  the humanity of marginalized women, and you
-                                  can help!
+                                  Volunteer Waiver
+                                </Typography>
+                                <Typography>
+                                  I, _______________________________________
+                                  (please PRINT name), being ⎕ over 18 years of
+                                  age and competent ⎕ under 18 years of age,
+                                  have agreed to act as a volunteer for Worth
+                                  Manifesto, a non-profit organization, in its
+                                  charitable endeavors to help marginalized
+                                  women, specifically homeless and displaced at
+                                  the border. I understand that any act I do is
+                                  done by me entirely as a volunteer, rather
+                                  than as an agent, employee, or independent
+                                  contractor of Worth Manifesto. I agree that I
+                                  will not look to Worth Manifesto for my
+                                  personal safety measures even when performing
+                                  tasks while I am acting as a volunteer. I
+                                  waive any right to make a claim against Worth
+                                  Manifesto for any injury, personal or
+                                  otherwise, that I may suffer when I am acting
+                                  as a volunteer. I agree to defend fully and to
+                                  indemnify Worth Manifesto in any claim that
+                                  may be made against it for any injury,
+                                  personal or otherwise, arising from my
+                                  volunteer activities. I consent and authorize
+                                  Worth Manifesto to use and reproduce in any
+                                  form, style or color, together with any
+                                  writing, any photographs or other likeness of
+                                  me taken in my capacity as a volunteer and
+                                  circulated for the purposes of Worth
+                                  Manifesto. This consent and release is given
+                                  without limitation upon any internal or
+                                  external use for advertising, promotion,
+                                  illustration, or any other purpose, in print
+                                  publication, audio-visual presentation,
+                                  digital or electronic media or any other
+                                  medium. I further waive any right to inspect
+                                  or approve the commercial, advertising or
+                                  other materials. I agree that such photograph
+                                  or likeness remains the exclusive property of
+                                  Worth Manifesto. Additionally, I waive any
+                                  right to royalties or other compensation
+                                  arising or related to the use of the
+                                  photograph.
                                 </Typography>
                                 <CardActions
                                   style={{
@@ -584,6 +596,7 @@ class App extends React.Component {
                           return (
                             <Card>
                               <CardContent>
+                                Notifications
                                 <CardActions
                                   style={{ justifyContent: "flex-end" }}
                                 >
@@ -797,16 +810,13 @@ class App extends React.Component {
                         return history.push(`${route}`);
                       }}
                       onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return history.push(`${route}`);
                       }}
                       isTabMenu={true}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      drawerRouteList={[...mainRouteList, logoutRoute]}
                       classes={classes}
                       routeList={mainRouteList}
                       location={location}
@@ -850,10 +860,18 @@ class App extends React.Component {
                 }}
               />
               <Route
-                path="/admin"
+                path={`${this.props.match.path}logout`}
                 render={({ location, match, history }) => {
                   const routeProps = { location, match, history };
-                  console.log("ADMIN!");
+                  return (
+                    <Logout {...routeProps} onLogout={() => this.onLogout()} />
+                  );
+                }}
+              />
+              <Route
+                path={`${this.props.match.path}admin`}
+                render={({ location, match, history }) => {
+                  const routeProps = { location, match, history };
                   return (
                     <MainWrapper
                       onRouteClick={route => {
@@ -863,26 +881,42 @@ class App extends React.Component {
                         return history.push(`${route}`);
                       }}
                       onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return history.push(`${route}`);
                       }}
                       isTabMenu={true}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
                       classes={classes}
-                      routeList={mainRouteList}
+                      routeList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute]
+                          : [...mainRouteList]
+                      }
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
                       location={location}
                       match={match}
+                      logo={logo}
                       history={history}
                       hasPadding={true}
                       onLogout={this.onLogout}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
+                        title: `${classes["white"]}`,
+                        addButton: `${classes["bold"]}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`
+                        }
+                      }}
                     >
                       <Crud
-                        modelName="volunteerings"
+                        modelName="knowledge"
                         SERVER={config.SERVER}
                         offlineStorage={offlineStorage}
                         notificationDomainStore={
@@ -899,7 +933,10 @@ class App extends React.Component {
                           }
                           crudDomainStore={rootStore.crudDomainStore}
                         >
-                          <Forms formsDomainStore={rootStore.formsDomainStore}>
+                          <Forms
+                            modelName="knowledge"
+                            formsDomainStore={rootStore.formsDomainStore}
+                          >
                             <Media
                               extension="image/jpg"
                               mediaDomainStore={rootStore.mediaDomainStore}
@@ -909,7 +946,11 @@ class App extends React.Component {
                                   rootStore.notificationDomainStore
                                 }
                               >
-                                <Admin {...routeProps} />
+                                <Admin
+                                  classes={classes}
+                                  schemas={editableSchemas}
+                                  {...routeProps}
+                                />
                               </Notification>
                             </Media>
                           </Forms>
@@ -926,15 +967,16 @@ class App extends React.Component {
                     <MainWrapper
                       routeList={mainRouteList}
                       onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return routeProps.history.push(`${route}`);
                       }}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
@@ -952,55 +994,21 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
-                path={`${this.props.match.path}timeline`}
+                path={`${this.props.match.path}info`}
                 render={routeProps => {
                   return (
                     <MainWrapper
-                      routeList={mainRouteList}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
+                      routeList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute]
+                          : [...mainRouteList]
+                      }
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
                       onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                    >
-                      <Maps {...routeProps} classes={classes}></Maps>
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}experiments`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -1012,12 +1020,14 @@ class App extends React.Component {
                         }
                         return routeProps.history.push(`${route}`);
                       }}
+                      logo={logo}
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
+                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
                         title: `${classes["white"]}`,
                         menuTabsClasses: {
                           flexContainer: `${classes["center"]}`
@@ -1039,7 +1049,10 @@ class App extends React.Component {
                             icon: "audiotrack"
                           },
                           {
-                            title: "I want to write down some thoughts",
+                            title: `Social Media Links
+                                    @worthmanifesto
+                                    [On Facebook, twitter, instagram, linkedin]
+                                    Facebook group https://www.facebook.com/groups/worthmanifesto/`,
                             icon: "edit"
                           }
                         ].map(({ title, icon }) => (
@@ -1088,93 +1101,6 @@ class App extends React.Component {
                           );
                         }}
                       ></Route>
-                      {this.renderDialog()}
-                    </MainWrapper>
-                  );
-                }}
-              ></Route>
-              <Route
-                path={`${this.props.match.path}zone/:zone`}
-                render={routeProps => {
-                  return (
-                    <MainWrapper
-                      routeList={mainRouteList}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      drawerRouteList={[...mainRouteList, logOutRoute]}
-                      onDrawerRouteClick={route => {
-                        if (route === "logout") {
-                          return this.onLogout();
-                        }
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        title: `${classes["white"]}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                    >
-                      <Crud
-                        modelName="knowledge"
-                        SERVER={config.SERVER}
-                        offlineStorage={offlineStorage}
-                        notificationDomainStore={
-                          rootStore.notificationDomainStore
-                        }
-                        crudDomainStore={rootStore.crudDomainStore}
-                        query={{
-                          tags: [...this.state.tags]
-                        }}
-                        render={props => {
-                          const {
-                            knowledge_createModel: createModel,
-                            knowledge_updateModel: updateModel,
-                            knowledge_deleteModel: deleteModel,
-                            knowledge_getModel: getModel,
-                            knowledge_searchModel: searchModel,
-                            knowledgeSearch
-                          } = props;
-                          const zone = routeProps.match.params.zone;
-                          const knowledge = props.knowledge.find(
-                            ({ title }) => title === zone
-                          );
-                          const modelPreviewProps = {
-                            model: knowledge,
-                            updateModel,
-                            createModel,
-                            searchModel,
-                            deleteModel,
-                            knowledgeSearch,
-                            classes,
-                            onAdd: () => {},
-                            onEdit: () => {},
-                            onDelete: () => {},
-                            onCreate: () => {},
-                            onView: () => {}
-                          };
-                          return (
-                            <div style={{ marginTop: "5em" }}>
-                              <ModelPreview
-                                {...modelPreviewProps}
-                                {...routeProps}
-                              />
-                            </div>
-                          );
-                        }}
-                      />
                     </MainWrapper>
                   );
                 }}
@@ -1184,13 +1110,23 @@ class App extends React.Component {
                 render={routeProps => {
                   return (
                     <MainWrapper
-                      routeList={mainRouteList}
                       logo={logo}
                       hideDrawer={true}
+                      hideAppBar={true}
                       user={this.state.currentUser}
                       {...routeProps}
                       {...this.props}
                       isTabMenu={true}
+                      routeList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute]
+                          : [...mainRouteList]
+                      }
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
                       onRouteClick={route => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
@@ -1200,142 +1136,94 @@ class App extends React.Component {
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
+                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
+                        content: `${classes.noScroll}`,
                         menuTabsClasses: {
                           flexContainer: `${classes["center"]}`
                         }
                       }}
                       render={currentProps => (
-                        <MainWrapper
-                          logo={logo}
-                          brand={"Locations"}
-                          hideDrawer={true}
-                          user={this.state.currentUser}
-                          routeList={shapesFilterRouteList}
-                          isTabMenu={true}
-                          tabMenuPosition="top"
-                          {...routeProps}
-                          {...this.props}
-                          onRouteClick={route => {
-                            this.setState({
-                              tags:
-                                this.state.tags.length === 0
-                                  ? new Set([route.replace("/", "")])
-                                  : this.state.tags.add(route.replace("/", ""))
-                            });
-                          }}
-                          onDrawerRouteClick={route => {
-                            if (route === "logout") {
-                              return this.onLogout();
-                            }
-                            if (route.indexOf("http") !== -1) {
-                              return window.open(route);
-                            }
-                            return routeProps.history.push(`${route}`);
-                          }}
-                          drawerRouteList={[...mainRouteList, logOutRoute]}
-                          classes={{
-                            ...classes,
-                            tabMenu: `${classes["white"]} ${classes["relative"]} ${classes["top50"]}`
-                          }}
-                        >
-                          <Switch>
-                            <Route
-                              path={`${routeProps.match.path}`}
-                              render={props => {
-                                return (
-                                  <Crud
-                                    modelName="knowledge"
-                                    SERVER={config.SERVER}
-                                    offlineStorage={offlineStorage}
-                                    notificationDomainStore={
-                                      rootStore.notificationDomainStore
-                                    }
-                                    crudDomainStore={rootStore.crudDomainStore}
-                                    query={{
-                                      tags: [...this.state.tags]
-                                    }}
-                                    render={props => {
-                                      const filteredKnowledge =
-                                        [...this.state.tags].length > 0
-                                          ? props.knowledge
-                                              .map(k => {
-                                                const res = k.tags.find(
-                                                  t =>
-                                                    [
-                                                      ...this.state.tags
-                                                    ].indexOf(t) !== -1
-                                                );
-                                                if (res) {
-                                                  return k;
-                                                }
-                                                return undefined;
-                                              })
-                                              .filter(
-                                                know => know !== undefined
-                                              )
-                                          : props.knowledge;
-                                      return (
-                                        <>
-                                          <Swipe
-                                            onSwipeStart={this.onSwipeStart}
-                                            onSwipeMove={this.onSwipeMove}
-                                            onSwipeEnd={this.onSwipeEnd}
-                                          >
-                                            <Paper>
-                                              <Maps
-                                                {...routeProps}
-                                                classes={classes}
-                                              ></Maps>
-                                            </Paper>
-                                          </Swipe>
-                                          <div style={{ marginTop: "67px" }}>
-                                            <img
-                                              src={
-                                                "https://s3.amazonaws.com/knowledgeflow.markab.io/images/Rectangle+5.png"
-                                              }
-                                              width="100px"
-                                              height="10px"
-                                              style={{
-                                                display: "block",
-                                                marginLeft: "auto",
-                                                marginRight: "auto"
-                                              }}
-                                            />
-                                          </div>
-                                          {[...this.state.tags].map(tag => (
-                                            <Chip
-                                              label={tag}
-                                              key={tag}
-                                              id={tag}
-                                              onDelete={() =>
-                                                this.setState({
-                                                  tags: new Set(
-                                                    [...this.state.tags].filter(
-                                                      t => t !== tag
-                                                    )
-                                                  )
-                                                })
-                                              }
-                                            />
-                                          ))}
-                                          {/* <Knowledge
-                                            {...routeProps}
-                                            {...props}
-                                            currentTags={this.state.tags}
-                                            setState={props =>
-                                              this.setState(props)
-                                            }
-                                            knowledge={filteredKnowledge}
-                                          /> */}
-                                        </>
-                                      );
-                                    }}
-                                  />
-                                );
-                              }}
-                            ></Route>
-                          </Switch>
-                        </MainWrapper>
+                        <Switch>
+                          <Route
+                            path={`${routeProps.match.path}`}
+                            render={props => {
+                              const mainFilter = props.location.pathname;
+                              return (
+                                <Crud
+                                  modelName="knowledge"
+                                  SERVER={config.SERVER}
+                                  offlineStorage={offlineStorage}
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
+                                  }
+                                  crudDomainStore={rootStore.crudDomainStore}
+                                  query={{
+                                    tags: [...this.state.tags]
+                                  }}
+                                  render={props => {
+                                    return (
+                                      <MainWrapper
+                                        logo={logo}
+                                        routeList={mainFilterRouteList}
+                                        hideAppBar={true}
+                                        drawerRouteList={
+                                          this.state.currentUser &&
+                                          this.state.currentUser.isAdmin
+                                            ? [
+                                                ...mainRouteList,
+                                                adminRoute,
+                                                logoutRoute
+                                              ]
+                                            : [...mainRouteList, logoutRoute]
+                                        }
+                                        user={this.state.currentUser}
+                                        {...routeProps}
+                                        {...this.props}
+                                        length={[props.knowledge.length]}
+                                        isTabMenu={true}
+                                        onRouteClick={route => {
+                                          this.setState({
+                                            tags: new Set([])
+                                          });
+                                          if (route.indexOf("http") !== -1) {
+                                            return window.open(route);
+                                          }
+                                          return routeProps.history.push(
+                                            `${route}`
+                                          );
+                                        }}
+                                        tabMenuPosition="top"
+                                        classes={{
+                                          ...classes,
+                                          tabMenu: `${classes["white"]}`,
+                                          menuTabsClasses: {
+                                            flexContainer: `${classes["center"]}`
+                                          }
+                                        }}
+                                      >
+                                        <Knowledge
+                                          {...routeProps}
+                                          {...props}
+                                          location={this.props.location}
+                                          currentTags={this.state.tags}
+                                          selected={this.state.selected}
+                                          currentUser={this.state.currentUser}
+                                          setState={props =>
+                                            this.setState(props)
+                                          }
+                                          renderDialog={props =>
+                                            this.renderDialog(props)
+                                          }
+                                          knowledge={props.knowledge}
+                                        />
+                                      </MainWrapper>
+                                    );
+                                  }}
+                                />
+                              );
+                            }}
+                          ></Route>
+                        </Switch>
                       )}
                     />
                   );
