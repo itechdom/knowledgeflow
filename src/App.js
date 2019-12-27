@@ -58,6 +58,7 @@ import Register from "./Register/Register";
 import Login from "./Login/Login";
 import Profile from "./Profile/Profile";
 import Admin from "./Admin/Admin";
+import Physics from "./Physics/Physics";
 import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
@@ -1105,6 +1106,130 @@ class App extends React.Component {
                   );
                 }}
               ></Route>
+              <Route
+                path={`${this.props.match.path}simulations`}
+                render={routeProps => {
+                  return (
+                    <MainWrapper
+                      logo={logo}
+                      hideDrawer={true}
+                      hideAppBar={true}
+                      user={this.state.currentUser}
+                      {...routeProps}
+                      {...this.props}
+                      isTabMenu={true}
+                      routeList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute]
+                          : [...mainRouteList]
+                      }
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
+                      onRouteClick={route => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
+                        content: `${classes.noScroll}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`
+                        }
+                      }}
+                      render={currentProps => (
+                        <Switch>
+                          <Route
+                            path={`${routeProps.match.path}`}
+                            render={props => {
+                              const mainFilter = props.location.pathname;
+                              return (
+                                <Crud
+                                  modelName="knowledge"
+                                  SERVER={config.SERVER}
+                                  offlineStorage={offlineStorage}
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
+                                  }
+                                  crudDomainStore={rootStore.crudDomainStore}
+                                  query={{
+                                    tags: [...this.state.tags]
+                                  }}
+                                  render={props => {
+                                    return (
+                                      <MainWrapper
+                                        logo={logo}
+                                        routeList={mainFilterRouteList}
+                                        hideAppBar={true}
+                                        drawerRouteList={
+                                          this.state.currentUser &&
+                                          this.state.currentUser.isAdmin
+                                            ? [
+                                                ...mainRouteList,
+                                                adminRoute,
+                                                logoutRoute
+                                              ]
+                                            : [...mainRouteList, logoutRoute]
+                                        }
+                                        user={this.state.currentUser}
+                                        {...routeProps}
+                                        {...this.props}
+                                        length={[props.knowledge.length]}
+                                        isTabMenu={true}
+                                        onRouteClick={route => {
+                                          this.setState({
+                                            tags: new Set([])
+                                          });
+                                          if (route.indexOf("http") !== -1) {
+                                            return window.open(route);
+                                          }
+                                          return routeProps.history.push(
+                                            `${route}`
+                                          );
+                                        }}
+                                        tabMenuPosition="top"
+                                        classes={{
+                                          ...classes,
+                                          tabMenu: `${classes["white"]}`,
+                                          menuTabsClasses: {
+                                            flexContainer: `${classes["center"]}`
+                                          }
+                                        }}
+                                      >
+                                        <Physics
+                                          {...routeProps}
+                                          {...props}
+                                          location={this.props.location}
+                                          currentTags={this.state.tags}
+                                          selected={this.state.selected}
+                                          currentUser={this.state.currentUser}
+                                          setState={props =>
+                                            this.setState(props)
+                                          }
+                                          renderDialog={props =>
+                                            this.renderDialog(props)
+                                          }
+                                          knowledge={props.knowledge}
+                                        />
+                                      </MainWrapper>
+                                    );
+                                  }}
+                                />
+                              );
+                            }}
+                          ></Route>
+                        </Switch>
+                      )}
+                    />
+                  );
+                }}
+              />
               <Route
                 path={`${this.props.match.path}`}
                 render={routeProps => {

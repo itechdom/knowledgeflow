@@ -11,6 +11,7 @@ export const mainFilterRouteList = [
 
 export const mainRouteList = [
   { url: "/", name: "Home", icon: "home" },
+  { url: "/simulations", name: "Simulations", icon: "info" },
   { url: "/info", name: "About", icon: "info" }
 ];
 
