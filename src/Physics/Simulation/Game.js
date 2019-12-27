@@ -19,30 +19,28 @@ export default class Game extends Component {
   };
 
   startAnimating(fps) {
-    fpsInterval = 1000 / fps;
-    then = Date.now();
-    startTime = then;
     animate();
   }
 
   animate = () => {
     // request another frame
 
-    requestAnimationFrame(animate);
+    requestAnimationFrame(this.animate);
 
     // calc elapsed time since last loop
 
-    now = Date.now();
-    elapsed = now - then;
+    let now = Date.now();
+    let elapsed = now - this.then;
 
     // if enough time has elapsed, draw the next frame
 
-    if (elapsed > fpsInterval) {
+    if (elapsed > this.fpsInterval) {
       // Get ready for next frame by setting then=now, but also adjust for your
       // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
-      then = now - (elapsed % fpsInterval);
+      this.then = now - (elapsed % this.fpsInterval);
 
       // Put your drawing code here
+      console.log("Hello", this.then);
     }
   };
 
@@ -74,10 +72,12 @@ export default class Game extends Component {
     //     this.keyListener.SPACE,
     //     65
     //   ]);
+    this.then = Date.now();
+    const fps = 1;
+    this.fpsInterval = 1000 / fps;
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
-    const draw = this.draw.bind(this);
-    draw();
+    this.animate();
   }
 
   componentWillUnmount() {
