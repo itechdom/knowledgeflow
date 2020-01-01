@@ -44,15 +44,44 @@ export default class Game extends Component {
     }
   };
 
-  draw = timestamp => {
-    const seconds = timestamp / (10 * 7);
-    const ctx = this.ctx;
-    ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    // const { x, y } = this.state.position;
-    ctx.fillStyle = "blue";
-    ctx.fillRect(seconds, seconds, 150, 100);
-    this.requestId = window.requestAnimationFrame(this.draw);
+  vector = ctx => {
+    return (ax, ay, bx, by) => {
+      ctx.beginPath();
+      ctx.moveTo(ax, ay);
+      ctx.lineTo(bx, by);
+      ctx.stroke();
+    };
   };
+
+  point = (ctx, color) => {
+    return (ax, ay, bx, by) => {
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(ax, ay, 5, 0, 2 * Math.PI); // Start point
+      ctx.fill();
+    };
+  };
+
+  draw = () => {
+    const ctx = this.ctx;
+    const vectors = [
+      [5, 50, 300, 70],
+      [5, 50, 300, 148],
+      [300, 70, 5, 50],
+      [300, 70, 5, 148]
+    ];
+    vectors.map((v, i) => {
+      this.vector(ctx)(
+        vectors[i][0],
+        vectors[i][1],
+        vectors[i][2],
+        vectors[i][3]
+      );
+      this.point(ctx, "red")(vectors[i][0], vectors[i][1]);
+      this.point(ctx, "blue")(vectors[i][2], vectors[i][3]);
+    });
+  };
+
   componentDidMount() {
     //   let { fileLocation } = this.props;
     //   this.player = new AudioPlayer(`${fileLocation}/music.wav`, () => {
@@ -77,7 +106,8 @@ export default class Game extends Component {
     this.fpsInterval = 1000 / fps;
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
-    this.animate();
+    // this.animate();
+    this.draw(Date.now());
   }
 
   componentWillUnmount() {
@@ -100,7 +130,6 @@ export default class Game extends Component {
       <div
         style={{
           width: "300px",
-          height: "300px",
           marginTop: "100px",
           marginLeft: "100px",
           border: "1px solid black"
