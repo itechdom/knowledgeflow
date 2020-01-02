@@ -40,7 +40,8 @@ export default class Game extends Component {
       this.then = now - (elapsed % this.fpsInterval);
 
       // Put your drawing code here
-      console.log("Hello", this.then);
+      // console.log("Hello", this.then);
+      this.onDraw();
     }
   };
 
@@ -62,14 +63,16 @@ export default class Game extends Component {
     };
   };
 
-  draw = () => {
+  draw = vec => {
     const ctx = this.ctx;
-    const vectors = [
-      [5, 50, 300, 70],
-      [5, 50, 300, 148],
-      [300, 70, 5, 50],
-      [300, 70, 5, 148]
-    ];
+    const vectors = vec
+      ? vec
+      : [
+          [5, 50, 300, 70],
+          [5, 50, 300, 140],
+          [300, 70, 5, 50],
+          [300, 70, 5, 140]
+        ];
     vectors.map((v, i) => {
       this.vector(ctx)(
         vectors[i][0],
@@ -78,9 +81,33 @@ export default class Game extends Component {
         vectors[i][3]
       );
       this.point(ctx, "red")(vectors[i][0], vectors[i][1]);
-      this.point(ctx, "blue")(vectors[i][2], vectors[i][3]);
+      // this.point(ctx, "blue")(vectors[i][2], vectors[i][3]);
     });
   };
+
+  drawGrid = (ax, ay, bx, by, increase) => {
+    const proj = increase;
+    const presA = [
+      [ax, ay, bx, by],
+      [ax, ay, bx + proj, by / 2],
+      [ax, ay, bx + proj, by]
+    ];
+    const presB = [
+      [bx, ay, ax, ay],
+      [bx, ay, ax, ay + proj / 2],
+      [bx, ay, ax, ay + proj]
+    ];
+    this.draw(presA);
+    this.draw(presB);
+  };
+
+  drawHorizon = (gridVector, i) => {
+    this.draw([[gridVector[0] + i, gridVector[1], gridVector[0] + i, 0]]);
+  };
+
+  drawBox = () => {};
+
+  drawSphere = () => {};
 
   componentDidMount() {
     //   let { fileLocation } = this.props;
@@ -102,12 +129,20 @@ export default class Game extends Component {
     //     65
     //   ]);
     this.then = Date.now();
-    const fps = 1;
+    const fps = 30;
     this.fpsInterval = 1000 / fps;
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
-    // this.animate();
-    this.draw(Date.now());
+    let increase = 0;
+    const gridVector = [5, 50, 300, 150];
+    this.onDraw = () => {
+      increase++;
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+      this.drawGrid(...gridVector, increase);
+      this.drawHorizon(gridVector, increase);
+    };
+    this.animate();
+    // this.drawGrid(5, 20, 300, 75);
   }
 
   componentWillUnmount() {
