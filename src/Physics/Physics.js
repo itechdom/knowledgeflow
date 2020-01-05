@@ -3,6 +3,7 @@ import { styles } from "./Physics.styles.js";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import theme from "Theme";
 import Simulation from "./Simulation/Game";
+import Webgl from "./Simulation/Webgl";
 import ModelList from "../orbital-templates/Material/_shared/ModelList/ModelList";
 import ModelListItem from "./ModelList/ModelListItem";
 import ModelPreview from "./ModelPreview/ModelPreview";
@@ -52,7 +53,12 @@ const Physics = ({
   knowledge_loading,
   ...rest
 }) => {
-  return <Simulation />;
+  return (
+    <>
+      <Webgl></Webgl>
+      <Simulation />
+    </>
+  );
   return (
     <ModelList
       modelArray={knowledge}
