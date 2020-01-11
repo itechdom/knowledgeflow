@@ -47,20 +47,23 @@ export default class Game extends Component {
       case "w":
         console.log("UP!");
         this.camera.position.z -= 0.1;
-        end;
+        break;
       case "s":
         console.log("DOWN!");
         this.camera.position.z += 0.1;
-        end;
-        end;
+        break;
       case "a":
         console.log("LEFT!");
-        this.camera.position.x -= 0.1;
-        end;
+        // this.camera.rotation.x -= 0.1;
+        this.camera.rotation.y += 0.1;
+        // this.camera.position.y -= 0.1;
+        break;
       case "d":
         console.log("RIGHT");
-        this.camera.position.x += 0.1;
-        end;
+        // this.camera.rotation.x += 0.1;
+        this.camera.rotation.y -= 0.1;
+        // this.camera.position.y += 0.1;
+        break;
     }
   }
 
@@ -71,14 +74,14 @@ export default class Game extends Component {
       0.01,
       10
     );
-    this.camera.position.z = 0.5;
+    this.camera.position.z = 8;
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(this.renderer.domElement);
   }
 
-  drawGrid = (ax, ay, bx, by, increase) => {
+  drawCube = (ax, ay, bx, by, increase) => {
     let geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
     let material = new THREE.MeshNormalMaterial();
     let mesh = new THREE.Mesh(geometry, material);
@@ -86,33 +89,15 @@ export default class Game extends Component {
     return mesh;
   };
 
-  drawHorizon = (gridVector, i) => {
-    this.draw([[gridVector[0] + i, gridVector[1], gridVector[0] + i, 0]]);
+  drawSphere = () => {
+    var geometry = new THREE.SphereGeometry(0.1, 0.1, 0.1);
+    var material = new THREE.MeshNormalMaterial();
+    var sphere = new THREE.Mesh(geometry, material);
+    this.scene.add(sphere);
+    return sphere;
   };
 
-  drawBox = () => {};
-
-  drawSphere = () => {};
-
   componentDidMount() {
-    //   let { fileLocation } = this.props;
-    //   this.player = new AudioPlayer(`${fileLocation}/music.wav`, () => {
-    //     this.stopMusic = this.player.play({
-    //       loop: true,
-    //       offset: 1,
-    //       volume: 0.35
-    //     });
-    //   });
-    //   this.setState({
-    //     fade: false
-    //   });
-    //   this.keyListener.subscribe([
-    //     this.keyListener.LEFT,
-    //     this.keyListener.RIGHT,
-    //     this.keyListener.UP,
-    //     this.keyListener.SPACE,
-    //     65
-    //   ]);
     this.then = Date.now();
     const fps = 60;
     this.fpsInterval = 1000 / fps;
@@ -121,13 +106,15 @@ export default class Game extends Component {
     this.init();
     let increase = 0;
     const gridVector = [5, 50, 300, 150];
-    let mesh = this.drawGrid(...gridVector, increase);
+    let mesh = this.drawCube(...gridVector, increase);
+    let sphere = this.drawSphere(...gridVector, increase);
     this.onDraw = () => {
-      increase++;
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
-      // mesh.rotation.z = mesh.rotation.z > 0 ? 0 : 0.1;
+      sphere.position.x = Math.sin(increase / 30);
+      sphere.position.y = Math.cos(increase / 30);
       this.renderer.render(this.scene, this.camera);
+      increase++;
     };
     this.animate();
   }
@@ -159,8 +146,6 @@ export default class Game extends Component {
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
         <canvas
-          onKeyPress={e => console.log("keyboard event", e)}
-          onClick={e => console.log("EVENT", e)}
           id="my-canvas"
         ></canvas>
       </div>
