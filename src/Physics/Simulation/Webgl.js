@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as THREE from "three";
+import KeyboardEventHandler from "react-keyboard-event-handler";
 
 export default class Game extends Component {
   static propTypes = {
@@ -41,45 +42,27 @@ export default class Game extends Component {
     }
   };
 
-  vector = ctx => {
-    return (ax, ay, bx, by) => {
-      ctx.beginPath();
-      ctx.moveTo(ax, ay);
-      ctx.lineTo(bx, by);
-      ctx.stroke();
-    };
-  };
-
-  point = (ctx, color) => {
-    return (ax, ay, bx, by) => {
-      ctx.fillStyle = color;
-      ctx.beginPath();
-      ctx.arc(ax, ay, 5, 0, 2 * Math.PI); // Start point
-      ctx.fill();
-    };
-  };
-
-  draw = vec => {
-    const ctx = this.ctx;
-    const vectors = vec
-      ? vec
-      : [
-          [5, 50, 300, 70],
-          [5, 50, 300, 140],
-          [300, 70, 5, 50],
-          [300, 70, 5, 140]
-        ];
-    vectors.map((v, i) => {
-      this.vector(ctx)(
-        vectors[i][0],
-        vectors[i][1],
-        vectors[i][2],
-        vectors[i][3]
-      );
-      this.point(ctx, "red")(vectors[i][0], vectors[i][1]);
-      // this.point(ctx, "blue")(vectors[i][2], vectors[i][3]);
-    });
-  };
+  onKeyPress(key) {
+    switch (key) {
+      case "w":
+        console.log("UP!");
+        this.camera.position.z -= 0.1;
+        end;
+      case "s":
+        console.log("DOWN!");
+        this.camera.position.z += 0.1;
+        end;
+        end;
+      case "a":
+        console.log("LEFT!");
+        this.camera.position.x -= 0.1;
+        end;
+      case "d":
+        console.log("RIGHT");
+        this.camera.position.x += 0.1;
+        end;
+    }
+  }
 
   init() {
     this.camera = new THREE.PerspectiveCamera(
@@ -88,7 +71,7 @@ export default class Game extends Component {
       0.01,
       10
     );
-    this.camera.position.z = 1;
+    this.camera.position.z = 0.5;
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -143,7 +126,7 @@ export default class Game extends Component {
       increase++;
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
-      mesh.rotation.z = mesh.rotation.z > 0 ? 0 : 0.1;
+      // mesh.rotation.z = mesh.rotation.z > 0 ? 0 : 0.1;
       this.renderer.render(this.scene, this.camera);
     };
     this.animate();
@@ -171,7 +154,15 @@ export default class Game extends Component {
           border: "1px solid black"
         }}
       >
-        <canvas id="my-canvas"></canvas>
+        <KeyboardEventHandler
+          handleKeys={["w", "s", "d", "a"]}
+          onKeyEvent={(key, e) => this.onKeyPress(key)}
+        />
+        <canvas
+          onKeyPress={e => console.log("keyboard event", e)}
+          onClick={e => console.log("EVENT", e)}
+          id="my-canvas"
+        ></canvas>
       </div>
     );
   }

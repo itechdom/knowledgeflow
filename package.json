@@ -53,6 +53,7 @@
     "react-geolocated": "^3.0.1",
     "react-image-gallery": "^0.8.18",
     "react-inlinesvg": "^1.1.5",
+    "react-keyboard-event-handler": "^1.5.3",
     "react-loadable": "^5.5.0",
     "react-mde": "^7.6.2",
     "react-router": "^4.3.1",
