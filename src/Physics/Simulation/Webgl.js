@@ -100,11 +100,12 @@ export default class Game extends Component {
   };
 
   drawFloor = () => {
-    var geometry = new THREE.PlaneGeometry(5, 20, 32);
-    var material = new THREE.MeshNormalMaterial();
-    var plane = new THREE.Mesh(geometry, material);
-    this.scene.add(plane);
-    return plane;
+    // var geometry = new THREE.PlaneGeometry(5, 20, 32);
+    // var material = new THREE.MeshNormalMaterial();
+    // var plane = new THREE.Mesh(geometry, material);
+    var grid = new THREE.GridHelper(100, 10);
+    this.scene.add(grid);
+    return grid;
   };
 
   componentDidMount() {
@@ -119,12 +120,7 @@ export default class Game extends Component {
     let mesh = this.drawCube(...gridVector, increase);
     let sphere = this.drawSphere(...gridVector, increase);
     let floor = this.drawFloor(...gridVector, increase);
-    floor.position.x = 0;
-    floor.position.y = 1;
-    floor.rotation.x = 1.5;
     this.onDraw = () => {
-      if (increase % 2 === 0) {
-      }
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
       sphere.position.x = Math.sin(increase / 30);
