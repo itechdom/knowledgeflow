@@ -69,12 +69,14 @@ export default class Game extends Component {
 
   init() {
     this.camera = new THREE.PerspectiveCamera(
-      70,
+      45,
       window.innerWidth / window.innerHeight,
-      0.01,
-      10
+      1,
+      1000
     );
     this.camera.position.z = 8;
+    this.camera.position.x = 0;
+    this.camera.position.y = 1;
     this.scene = new THREE.Scene();
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -97,6 +99,14 @@ export default class Game extends Component {
     return sphere;
   };
 
+  drawFloor = () => {
+    var geometry = new THREE.PlaneGeometry(5, 20, 32);
+    var material = new THREE.MeshNormalMaterial();
+    var plane = new THREE.Mesh(geometry, material);
+    this.scene.add(plane);
+    return plane;
+  };
+
   componentDidMount() {
     this.then = Date.now();
     const fps = 60;
@@ -108,7 +118,13 @@ export default class Game extends Component {
     const gridVector = [5, 50, 300, 150];
     let mesh = this.drawCube(...gridVector, increase);
     let sphere = this.drawSphere(...gridVector, increase);
+    let floor = this.drawFloor(...gridVector, increase);
+    floor.position.x = 0;
+    floor.position.y = 1;
+    floor.rotation.x = 1.5;
     this.onDraw = () => {
+      if (increase % 2 === 0) {
+      }
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
       sphere.position.x = Math.sin(increase / 30);
@@ -145,9 +161,7 @@ export default class Game extends Component {
           handleKeys={["w", "s", "d", "a"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
-        <canvas
-          id="my-canvas"
-        ></canvas>
+        <canvas id="my-canvas"></canvas>
       </div>
     );
   }
