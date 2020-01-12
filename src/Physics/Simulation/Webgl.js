@@ -12,7 +12,8 @@ export default class Game extends Component {
     user: {},
     fileLocation: null,
     fade: true,
-    position: null
+    position: null,
+    log: {}
   };
 
   startAnimating(fps) {
@@ -64,6 +65,24 @@ export default class Game extends Component {
         this.camera.rotation.y -= 0.1;
         // this.camera.position.y += 0.1;
         break;
+      case "e":
+        this.camera.position.x += 0.1;
+        break;
+      case "q":
+        this.camera.position.y += 0.1;
+        break;
+      case "c":
+        this.camera.position.x -= 0.1;
+        break;
+      case "z":
+        this.camera.position.y -= 0.1;
+        break;
+      case "x":
+        this.camera.rotation.z += 0.1;
+        break;
+      case "v":
+        this.camera.rotation.z -= 0.1;
+        break;
     }
   }
 
@@ -74,7 +93,7 @@ export default class Game extends Component {
       1,
       1000
     );
-    this.camera.position.z = 8;
+    this.camera.position.z = 0;
     this.camera.position.x = 0;
     this.camera.position.y = 1;
     this.scene = new THREE.Scene();
@@ -126,6 +145,9 @@ export default class Game extends Component {
       sphere.position.x = Math.sin(increase / 30);
       sphere.position.y = Math.cos(increase / 30);
       this.renderer.render(this.scene, this.camera);
+      this.setState({
+        log: { other: this.camera, position: this.camera.position }
+      });
       increase++;
     };
     this.animate();
@@ -154,9 +176,10 @@ export default class Game extends Component {
         }}
       >
         <KeyboardEventHandler
-          handleKeys={["w", "s", "d", "a"]}
+          handleKeys={["w", "s", "d", "a", "e", "q", "c", "z", "x", "v"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
+        <div>{JSON.stringify(this.state.log)}</div>
         <canvas id="my-canvas"></canvas>
       </div>
     );
