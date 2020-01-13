@@ -60,10 +60,10 @@ export default class Game extends Component {
           : (this.camera.position.z -= 0.1);
         break;
       case "a":
-        this.camera.rotation.y += Math.PI;
+        this.camera.rotation.y += 0.1;
         break;
       case "d":
-        this.camera.rotation.y += -1 * Math.PI;
+        this.camera.rotation.y += -1 * 0.1;
         break;
       case "e":
         this.camera.position.x += this.isInverted() ? 1 * 0.1 : -1 * 0.1;
