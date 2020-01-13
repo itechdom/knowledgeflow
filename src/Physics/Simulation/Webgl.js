@@ -43,49 +43,45 @@ export default class Game extends Component {
     }
   };
 
+  isInverted() {
+    return Math.round(this.camera.rotation.y / Math.PI) % 2 === 0;
+  }
+
   onKeyPress(key) {
     switch (key) {
       case "w":
-        console.log("UP!");
-        Math.round(this.camera.rotation.y / Math.PI) % 2 === 0
+        this.isInverted()
           ? (this.camera.position.z -= 0.1)
           : (this.camera.position.z += 0.1);
         break;
       case "s":
-        console.log("DOWN!");
-        Math.round(this.camera.rotation.y / Math.PI) % 2 === 0
+        this.isInverted()
           ? (this.camera.position.z += 0.1)
           : (this.camera.position.z -= 0.1);
         break;
       case "a":
-        console.log("LEFT!", this.camera.rotation.y / Math.PI);
-        // this.camera.rotation.x -= 0.1;
         this.camera.rotation.y += Math.PI;
-        // this.camera.position.y -= 0.1;
         break;
       case "d":
-        console.log("RIGHT");
-        // this.camera.rotation.x += 0.1;
-        this.camera.rotation.y -= Math.PI;
-        // this.camera.position.y += 0.1;
+        this.camera.rotation.y += -1 * Math.PI;
         break;
       case "e":
-        this.camera.position.x += 0.1;
+        this.camera.position.x += this.isInverted() ? 1 * 0.1 : -1 * 0.1;
         break;
       case "q":
-        this.camera.position.y += 0.1;
+        this.camera.position.x += this.isInverted() ? -1 * 0.1 : 1 * 0.1;
         break;
       case "c":
-        this.camera.position.x -= 0.1;
+        this.camera.position.y += 0.1;
         break;
       case "z":
-        this.camera.position.y -= 0.1;
+        this.camera.position.y += -1 * 0.1;
         break;
       case "x":
         this.camera.rotation.z += 0.1;
         break;
       case "v":
-        this.camera.rotation.z -= 0.1;
+        this.camera.rotation.z += -1 * 0.1;
         break;
     }
   }
