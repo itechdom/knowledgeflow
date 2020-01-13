@@ -47,22 +47,26 @@ export default class Game extends Component {
     switch (key) {
       case "w":
         console.log("UP!");
-        this.camera.position.z -= 0.1;
+        Math.round(this.camera.rotation.y / Math.PI) % 2 === 0
+          ? (this.camera.position.z -= 0.1)
+          : (this.camera.position.z += 0.1);
         break;
       case "s":
         console.log("DOWN!");
-        this.camera.position.z += 0.1;
+        Math.round(this.camera.rotation.y / Math.PI) % 2 === 0
+          ? (this.camera.position.z += 0.1)
+          : (this.camera.position.z -= 0.1);
         break;
       case "a":
-        console.log("LEFT!");
+        console.log("LEFT!", this.camera.rotation.y / Math.PI);
         // this.camera.rotation.x -= 0.1;
-        this.camera.rotation.y += 0.1;
+        this.camera.rotation.y += Math.PI;
         // this.camera.position.y -= 0.1;
         break;
       case "d":
         console.log("RIGHT");
         // this.camera.rotation.x += 0.1;
-        this.camera.rotation.y -= 0.1;
+        this.camera.rotation.y -= Math.PI;
         // this.camera.position.y += 0.1;
         break;
       case "e":
@@ -146,7 +150,11 @@ export default class Game extends Component {
       sphere.position.y = Math.cos(increase / 30);
       this.renderer.render(this.scene, this.camera);
       this.setState({
-        log: { other: this.camera, position: this.camera.position }
+        log: {
+          other: this.camera,
+          position: this.camera.position,
+          rotation: this.camera.rotation
+        }
       });
       increase++;
     };
