@@ -97,10 +97,20 @@ export default class Game extends Component {
     this.camera.position.x = 0;
     this.camera.position.y = 1;
     this.scene = new THREE.Scene();
+    this.scene.add(this.camera);
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(this.renderer.domElement);
   }
+
+  drawSkybox = (ax, ay, bx, by, increase) => {};
+
+  drawFlashLight = () => {
+    //color, intensity, distance, decay
+    let light = new THREE.PointLight(0xff0000, 1, 100);
+    this.scene.add(light);
+    return light;
+  };
 
   drawCube = (ax, ay, bx, by, increase) => {
     let geometry = new THREE.BoxGeometry(0.2, 0.2, 0.2);
@@ -108,6 +118,14 @@ export default class Game extends Component {
     let mesh = new THREE.Mesh(geometry, material);
     this.scene.add(mesh);
     return mesh;
+  };
+
+  drawCone = () => {
+    var geometry = new THREE.ConeGeometry(0.1, 1, 32);
+    var material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+    var cone = new THREE.Mesh(geometry, material);
+    this.scene.add(cone);
+    return cone;
   };
 
   drawSphere = () => {
@@ -139,12 +157,18 @@ export default class Game extends Component {
     let mesh = this.drawCube(...gridVector, increase);
     let sphere = this.drawSphere(...gridVector, increase);
     let floor = this.drawFloor(...gridVector, increase);
+    let light = this.drawFlashLight(...gridVector, increase);
+    let cone = this.drawCone(...gridVector, increase);
+    this.camera.add(cone);
+    cone.position.set(0, 0, -10);
     this.onDraw = () => {
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
       sphere.position.x = Math.sin(increase / 30);
       sphere.position.y = Math.cos(increase / 30);
+      let { x, y, z } = this.camera.position;
       this.renderer.render(this.scene, this.camera);
+      cone.rotation.set(-Math.PI / 16, 0, 0);
       this.setState({
         log: {
           other: this.camera,
