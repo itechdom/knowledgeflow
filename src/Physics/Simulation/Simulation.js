@@ -13,6 +13,7 @@ export default class Game extends Component {
     fileLocation: null,
     fade: true,
     position: null,
+    jumping: false,
     log: {}
   };
 
@@ -22,13 +23,12 @@ export default class Game extends Component {
 
   animate = () => {
     // request another frame
-
     requestAnimationFrame(this.animate);
 
     // calc elapsed time since last loop
-
     let now = Date.now();
     let elapsed = now - this.then;
+    this.elapsed = elapsed;
 
     // if enough time has elapsed, draw the next frame
 
@@ -36,9 +36,6 @@ export default class Game extends Component {
       // Get ready for next frame by setting then=now, but also adjust for your
       // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
       this.then = now - (elapsed % this.fpsInterval);
-
-      // Put your drawing code here
-      // console.log("Hello", this.then);
       this.onDraw();
     }
   };
@@ -82,6 +79,9 @@ export default class Game extends Component {
         break;
       case "v":
         this.camera.rotation.z += -1 * 0.1;
+        break;
+      case "space":
+        this.setState({ jumping: true });
         break;
     }
   }
@@ -162,6 +162,13 @@ export default class Game extends Component {
     this.camera.add(cone);
     cone.position.set(0, 0, -10);
     this.onDraw = () => {
+      if (this.state.jumping) {
+        // if(this.camera.position.y < 2 + Math.sin(increase/30)){
+        // }
+        // console.log(Math.tan(increase / 30));
+        // console.log(Math.cosh(increase / 30));
+        this.camera.position.y = Math.cos(increase / 30);
+      }
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
       sphere.position.x = Math.sin(increase / 30);
@@ -173,7 +180,8 @@ export default class Game extends Component {
         log: {
           other: this.camera,
           position: this.camera.position,
-          rotation: this.camera.rotation
+          rotation: this.camera.rotation,
+          state: this.state.jumping
         }
       });
       increase++;
@@ -204,7 +212,7 @@ export default class Game extends Component {
         }}
       >
         <KeyboardEventHandler
-          handleKeys={["w", "s", "d", "a", "e", "q", "c", "z", "x", "v"]}
+          handleKeys={["all"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
         <div>{JSON.stringify(this.state.log)}</div>
