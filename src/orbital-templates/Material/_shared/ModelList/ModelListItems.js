@@ -46,9 +46,6 @@ const ModelListItems = enhance(
           return (
             <Fade in={In} timeout={index * 200}>
               <Grid
-                style={{
-                  marginRight: "2em"
-                }}
                 key={index}
                 xs={gridSizes ? gridSizes.xs : 12}
                 sm={gridSizes ? gridSizes.sm : 12}

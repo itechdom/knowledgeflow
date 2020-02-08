@@ -15,6 +15,7 @@ import {
   CardMedia,
   Typography,
   IconButton,
+  Grid,
   Divider
 } from "@material-ui/core";
 
@@ -105,11 +106,7 @@ class ModelListItem extends React.Component {
     } = this.props;
     return (
       <>
-        <Card
-          style={{ width: "250px" }}
-          key={model._id}
-          className={classes.card}
-        >
+        <Card key={model._id} className={classes.card}>
           <CardActionArea
             onClick={() => {
               onView
@@ -117,28 +114,27 @@ class ModelListItem extends React.Component {
                 : history.push(`${match.path}/view/${model._id}`);
             }}
           >
-            {this.props.fetchedImage && this.props.fetchedImage.length > 0 ? (
-              <CardMedia
-                className={classes.cardImage}
-                component="img"
-                alt="Contemplative Reptile"
-                image={this.props.fetchedImage[0].small}
-                title="Contemplative Reptile"
-              />
-            ) : (
-              <img
-                width="250px"
-                height="250px"
-                src="https://picsum.photos/500/500"
-              />
-            )}
+            <Grid justify="center" container>
+              {this.props.fetchedImage && this.props.fetchedImage.length > 0 ? (
+                <CardMedia
+                  className={classes.cardImage}
+                  component="img"
+                  alt="Contemplative Reptile"
+                  image={this.props.fetchedImage[0].small}
+                  title="Contemplative Reptile"
+                />
+              ) : (
+                <img
+                  width="250px"
+                  height="250px"
+                  src="https://picsum.photos/500/500"
+                />
+              )}
+            </Grid>
             <CardContent>
               <Typography style={{ fontSize: "14px", fontWeight: "400" }}>
                 {model.name || model.title}
               </Typography>
-              {/* <Typography variant="subtitle2" color="textSecondary" component="p">
-                {moment(model.createdAt).format("ddd MMMM YYYY")}
-              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions>

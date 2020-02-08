@@ -2,10 +2,14 @@ import { fade } from "@material-ui/core/styles/colorManipulator";
 const drawerWidth = 180;
 const appBarHeight = 64;
 export const styles = theme => {
-  console.log("THEME!", theme);
   return {
     root: {},
-    hasPadding: {
+    hasPadding: {},
+    card: {
+      width: "100%"
+    },
+    content: {
+      marginTop: "2em"
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed

@@ -69,11 +69,6 @@ const ModelList = enhance(
     ModelPreviewAttachment,
     modelKey,
     columnNumber,
-    xs,
-    sm,
-    md,
-    lg,
-    xl,
     onSearch,
     onSearchSelect,
     viewOption,
@@ -406,7 +401,6 @@ const ModelList = enhance(
           <Route
             path={`${match.path}`}
             render={props => {
-              console.log("On Root");
               return (
                 <>
                   {(ModelListActions && <ModelListActions {...Actions} />) || (

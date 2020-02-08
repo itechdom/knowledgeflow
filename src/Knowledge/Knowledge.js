@@ -101,15 +101,12 @@ const Knowledge = ({
       removeNotification={removeNotification}
       ModelPreviewPage={ModelPreview}
       ModelListItemComponent={ModelListItem}
-      xl={2}
-      lg={2}
-      md={4}
-      sm={6}
-      xs={6}
-      // noPagination={true}
+      gridSizes={{ xl: 8, lg: 8, md: 8, sm: 12, xs: 12 }}
       ModelListActions={ModelListActions}
+      noPagination={false}
       loading={knowledge_loading}
       getUnsplash={getUnsplash}
+      justify={"center"}
       onAdd={() => {
         history.push(`${match.path}/add`);
       }}

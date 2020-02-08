@@ -4,10 +4,7 @@ export const dateFilterRouteList = [
   { url: "next-week", name: "Next week", icon: "", type: "" }
 ];
 
-export const mainFilterRouteList = [
-  { url: "all", name: "All (${length})", icon: "" },
-  { url: "accepted", name: "Accepted (${length})", icon: "", type: "" }
-];
+export const mainFilterRouteList = [{ url: "all", name: "All", icon: "" }];
 
 export const mainRouteList = [
   { url: "/", name: "Home", icon: "home" },
@@ -26,92 +23,6 @@ export const logoutRoute = {
   name: "Log Out",
   icon: "exit_to_app"
 };
-
-export const locations = [
-  {
-    neighborhood: `Squirrel Hills`,
-    businessName: `The Chocolate Moose`,
-    addressText: `5830 Forbes Ave, Pittsburgh, PA 15217`,
-    lat: 40.4378,
-    long: -79.9217
-  },
-  {
-    neighborhood: `Greenfield`,
-    businessName: `HQ`,
-    addressText: `932 Mirror st. Pittsburgh PA 15217`,
-    lat: 40.42663,
-    long: -79.931566
-  },
-  {
-    neighborhood: `Mt Lebanon`,
-    businessName: `Oliver Rose Events`,
-    addressText: `143 Beverly Rd, Pittsburgh, PA 15216`,
-    lat: 40.39255,
-    long: -80.046667
-  },
-  {
-    neighborhood: `Sewickley`,
-    businessName: `Adesso Cafe`,
-    addressText: `441 1/2 Walnut Street, Sewickley, PA 15143`,
-    lat: 40.54112,
-    long: -80.18186
-  },
-  {
-    neighborhood: `Ross Township`,
-    businessName: `The Tiny Bookstore`,
-    addressText: `1130 Perry Hwy Suite 106, Pittsburgh, PA 15237,`,
-    lat: 40.547688,
-    long: -80.03554
-  },
-  {
-    neighborhood: `Butler`,
-    businessName: `Lightning Hair Lounge`,
-    addressText: `456 Pittsburgh Rd, Butler, PA 16002`,
-    lat: 40.774142,
-    long: -79.928837
-  },
-  {
-    neighborhood: `Brookline`,
-    businessName: `Thrive on health`,
-    addressText: `730 Brookline Blvd, Pittsburgh, PA 15226`,
-    lat: 40.394082,
-    long: -80.020851
-  },
-  {
-    neighborhood: `Strip District`,
-    businessName: `Salems`,
-    addressText: `2923 Penn Ave, Pittsburgh, PA 15201`,
-    lat: 40.458475,
-    long: -79.973756
-  },
-  {
-    neighborhood: `Upper Lawrenceville`,
-    businessName: `Spruce & Adorn (inside Ineffable)`,
-    addressText: `3920 Penn Ave, Pittsburgh, PA 15224`,
-    lat: 40.464654,
-    long: -79.959291
-  },
-  {
-    neighborhood: `Lower Lawrenceville`,
-    businessName: `Hippie and French`,
-    addressText: `5122 Butler St, Pittsburgh, PA 15201`,
-    lat: 40.478912,
-    long: -79.955084
-  },
-  {
-    neighborhood: `East Liberty(ish)`,
-    addressText: `East End coop: 7516 Meade St, Pittsburgh, PA 15208`,
-    lat: 40.462559,
-    long: -79.92185
-  }
-];
-
-export const notifications = [
-  `DEC 3RD: Card writing party (location JCC, but more details to come)`,
-  `DEC 10TH: First assembling party (still looking for a location)`,
-  `JAN 4TH: Farewell assembling party  at Union Project Building`,
-  `From noon to 8pm | 801 N Negley Ave, Pittsburgh, PA 15206`
-];
 
 export const waiver = `
 Volunteer Waiver:

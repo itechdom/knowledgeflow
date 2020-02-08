@@ -219,24 +219,6 @@ const MainWrapper = props => {
                   </Typography>
                 </Grid>
                 <Grid style={{ marginLeft: "auto" }} item>
-                  {/* <Tooltip title={(user && user.name) || ""}>
-                    <IconButton
-                      aria-owns={isAnchor ? "menu-appbar" : null}
-                      aria-haspopup="true"
-                      onClick={event => {
-                        setAnchorEl(event.currentTarget);
-                      }}
-                      color="inherit"
-                    >
-                      <img
-                        style={{ borderRadius: "30px" }}
-                        src={user && user.image}
-                        width={"40px"}
-                        height={"auto"}
-                        alt="Profile"
-                      />
-                    </IconButton>
-                  </Tooltip> */}
                   <Menu
                     id="menu-appbar"
                     anchorEl={anchorEl}

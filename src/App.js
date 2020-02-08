@@ -3,10 +3,7 @@ import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import {
   mainRouteList,
   mainFilterRouteList,
-  dateFilterRouteList,
-  waiver,
   locations,
-  notifications,
   editableSchemas,
   adminRoute,
   logoutRoute
@@ -887,7 +884,7 @@ class App extends React.Component {
                         }
                         return history.push(`${route}`);
                       }}
-                      isTabMenu={true}
+                      // isTabMenu={true}
                       classes={classes}
                       routeList={
                         this.state.currentUser && this.state.currentUser.isAdmin
@@ -1234,123 +1231,81 @@ class App extends React.Component {
                 path={`${this.props.match.path}`}
                 render={routeProps => {
                   return (
-                    <MainWrapper
-                      logo={logo}
-                      hideDrawer={true}
-                      hideAppBar={true}
-                      user={this.state.currentUser}
-                      {...routeProps}
-                      {...this.props}
-                      isTabMenu={true}
-                      routeList={
-                        this.state.currentUser && this.state.currentUser.isAdmin
-                          ? [...mainRouteList, adminRoute]
-                          : [...mainRouteList]
-                      }
-                      drawerRouteList={
-                        this.state.currentUser && this.state.currentUser.isAdmin
-                          ? [...mainRouteList, adminRoute, logoutRoute]
-                          : [...mainRouteList, logoutRoute]
-                      }
-                      onRouteClick={route => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
-                        content: `${classes.noScroll}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
-                      }}
-                      render={currentProps => (
-                        <Switch>
-                          <Route
-                            path={`${routeProps.match.path}`}
-                            render={props => {
-                              const mainFilter = props.location.pathname;
-                              return (
-                                <Crud
-                                  modelName="knowledge"
-                                  SERVER={config.SERVER}
-                                  offlineStorage={offlineStorage}
-                                  notificationDomainStore={
-                                    rootStore.notificationDomainStore
-                                  }
-                                  crudDomainStore={rootStore.crudDomainStore}
-                                  query={{
-                                    tags: [...this.state.tags]
-                                  }}
-                                  render={props => {
-                                    return (
-                                      <MainWrapper
-                                        logo={logo}
-                                        routeList={mainFilterRouteList}
-                                        hideAppBar={true}
-                                        drawerRouteList={
-                                          this.state.currentUser &&
-                                          this.state.currentUser.isAdmin
-                                            ? [
-                                                ...mainRouteList,
-                                                adminRoute,
-                                                logoutRoute
-                                              ]
-                                            : [...mainRouteList, logoutRoute]
-                                        }
-                                        user={this.state.currentUser}
-                                        {...routeProps}
-                                        {...this.props}
-                                        length={[props.knowledge.length]}
-                                        isTabMenu={true}
-                                        onRouteClick={route => {
-                                          this.setState({
-                                            tags: new Set([])
-                                          });
-                                          if (route.indexOf("http") !== -1) {
-                                            return window.open(route);
-                                          }
-                                          return routeProps.history.push(
-                                            `${route}`
-                                          );
-                                        }}
-                                        tabMenuPosition="top"
-                                        classes={{
-                                          ...classes,
-                                          tabMenu: `${classes["white"]}`,
-                                          menuTabsClasses: {
-                                            flexContainer: `${classes["center"]}`
-                                          }
-                                        }}
-                                      >
-                                        <Knowledge
-                                          {...routeProps}
-                                          {...props}
-                                          location={this.props.location}
-                                          currentTags={this.state.tags}
-                                          selected={this.state.selected}
-                                          currentUser={this.state.currentUser}
-                                          setState={props =>
-                                            this.setState(props)
-                                          }
-                                          renderDialog={props =>
-                                            this.renderDialog(props)
-                                          }
-                                          knowledge={props.knowledge}
-                                        />
-                                      </MainWrapper>
-                                    );
-                                  }}
-                                />
-                              );
-                            }}
-                          ></Route>
-                        </Switch>
-                      )}
-                    />
+                    <Switch>
+                      <Route
+                        path={`${routeProps.match.path}`}
+                        render={props => {
+                          return (
+                            <Crud
+                              modelName="knowledge"
+                              SERVER={config.SERVER}
+                              offlineStorage={offlineStorage}
+                              notificationDomainStore={
+                                rootStore.notificationDomainStore
+                              }
+                              crudDomainStore={rootStore.crudDomainStore}
+                              query={{
+                                tags: [...this.state.tags]
+                              }}
+                              render={props => {
+                                return (
+                                  <MainWrapper
+                                    logo={logo}
+                                    routeList={mainFilterRouteList}
+                                    drawerRouteList={
+                                      this.state.currentUser &&
+                                      this.state.currentUser.isAdmin
+                                        ? [
+                                            ...mainRouteList,
+                                            adminRoute,
+                                            logoutRoute
+                                          ]
+                                        : [...mainRouteList, logoutRoute]
+                                    }
+                                    user={this.state.currentUser}
+                                    {...routeProps}
+                                    {...this.props}
+                                    onRouteClick={route => {
+                                      this.setState({
+                                        tags: new Set([])
+                                      });
+                                      if (route.indexOf("http") !== -1) {
+                                        return window.open(route);
+                                      }
+                                      return routeProps.history.push(
+                                        `${route}`
+                                      );
+                                    }}
+                                    classes={{
+                                      ...classes,
+                                      tabMenu: `${classes["white"]}`,
+                                      listContainer: `${classes["top100"]}`,
+                                      menuTabsClasses: {
+                                        flexContainer: `${classes["center"]}`
+                                      }
+                                    }}
+                                  >
+                                    <Knowledge
+                                      {...routeProps}
+                                      {...props}
+                                      location={this.props.location}
+                                      currentTags={this.state.tags}
+                                      selected={this.state.selected}
+                                      currentUser={this.state.currentUser}
+                                      setState={props => this.setState(props)}
+                                      renderDialog={props =>
+                                        this.renderDialog(props)
+                                      }
+                                      knowledge={props.knowledge}
+                                    />
+                                  </MainWrapper>
+                                );
+                              }}
+                            />
+                          );
+                        }}
+                      ></Route>
+                    </Switch>
                   );
                 }}
               />
