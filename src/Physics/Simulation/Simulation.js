@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import * as THREE from "three";
+import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 
 export default class Game extends Component {
@@ -42,6 +43,31 @@ export default class Game extends Component {
 
   isInverted() {
     return Math.round(this.camera.rotation.y / Math.PI) % 2 === 0;
+  }
+
+  playSound() {
+    var filter = new Tone.Filter({
+      type: "bandpass",
+      Q: 12
+    }).toMaster();
+
+    //schedule a series of frequency changes
+    filter.frequency.setValueAtTime("C5", 0);
+    filter.frequency.setValueAtTime("E5", 0.5);
+    filter.frequency.setValueAtTime("G5", 1);
+    filter.frequency.setValueAtTime("B5", 1.5);
+    filter.frequency.setValueAtTime("C6", 2);
+    filter.frequency.linearRampToValueAtTime("C1", 3);
+
+    var noise = new Tone.Noise("brown")
+      .connect(filter)
+      .start(0)
+      .stop(3);
+
+    //schedule an amplitude curve
+    noise.volume.setValueAtTime(-20, 0);
+    noise.volume.linearRampToValueAtTime(20, 2);
+    noise.volume.linearRampToValueAtTime(-Infinity, 3);
   }
 
   onKeyPress(key) {
@@ -100,6 +126,7 @@ export default class Game extends Component {
     this.scene.add(this.camera);
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.synth = new Tone.FMSynth().toMaster();
     document.body.appendChild(this.renderer.domElement);
   }
 
@@ -146,12 +173,12 @@ export default class Game extends Component {
   };
 
   componentDidMount() {
+    this.init();
     this.then = Date.now();
     const fps = 60;
     this.fpsInterval = 1000 / fps;
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
-    this.init();
     let increase = 0;
     const gridVector = [5, 50, 300, 150];
     let mesh = this.drawCube(...gridVector, increase);
@@ -163,11 +190,9 @@ export default class Game extends Component {
     cone.position.set(0, 0, -10);
     this.onDraw = () => {
       if (this.state.jumping) {
-        // if(this.camera.position.y < 2 + Math.sin(increase/30)){
-        // }
-        // console.log(Math.tan(increase / 30));
-        // console.log(Math.cosh(increase / 30));
-        this.camera.position.y = Math.cos(increase / 30);
+        this.camera.position.x = Math.sin(increase / 30);
+        // this.camera.position.z = Math.cos(increase / 30);
+        // this.playSound();
       }
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
