@@ -1,0 +1,33 @@
+import * as THREE from "three";
+
+const loadModel = path => {
+  // Instantiate a loader
+  var loader = new THREE.GLTFLoader();
+
+  // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+  var dracoLoader = new THREE.DRACOLoader();
+  dracoLoader.setDecoderPath("/examples/js/libs/draco/");
+  loader.setDRACOLoader(dracoLoader);
+
+  // Load a glTF resource
+  return new Promise((resolve, reject) => {
+    loader.load(
+      // resource URL
+      path,
+      // called when the resource is loaded
+      function(gltf) {
+        return resolve(gltf);
+      },
+      // called while loading is progressing
+      function(xhr) {
+        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+      },
+      // called when loading has errors
+      function(error) {
+        return reject(error);
+      }
+    );
+  });
+};
+
+export default loadModel;

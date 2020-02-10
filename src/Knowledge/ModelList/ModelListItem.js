@@ -3,7 +3,6 @@ import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
 import ImageGallery from "react-image-gallery";
-import moment from "moment";
 import { withState, compose } from "recompose";
 
 import {
@@ -15,8 +14,7 @@ import {
   CardMedia,
   Typography,
   IconButton,
-  Grid,
-  Divider
+  Grid
 } from "@material-ui/core";
 
 const enhance = compose(
@@ -105,8 +103,12 @@ class ModelListItem extends React.Component {
       onView
     } = this.props;
     return (
-      <>
-        <Card key={model._id} className={classes.card}>
+      <Grid justify="center" container>
+        <Card
+          key={model._id}
+          className={classes.card}
+          style={{ width: "500px" }}
+        >
           <CardActionArea
             onClick={() => {
               onView
@@ -158,7 +160,7 @@ class ModelListItem extends React.Component {
             });
           }}
         />
-      </>
+      </Grid>
     );
   }
 }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import * as THREE from "three";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
+import ModelLoader from "../ModelLoader/ModelLoader";
 
 export default class Game extends Component {
   static propTypes = {
@@ -173,6 +174,11 @@ export default class Game extends Component {
   };
 
   componentDidMount() {
+    ModelLoader("../../../assets/models/compass.glb")
+      .then(gltf => {
+        console.log("loaded model", gltf);
+      })
+      .reject(err => console.log("error", err));
     this.init();
     this.then = Date.now();
     const fps = 60;
