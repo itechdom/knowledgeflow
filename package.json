@@ -11,7 +11,7 @@
     "deploy": "npm run assets && ./node_modules/.bin/webpack --env.production && ./node_modules/.bin/serverless client deploy --no-confirm",
     "prepare": "npm run assets && npm run build && cordova prepare android && cordova prepare browser",
     "build": "./node_modules/.bin/webpack --env.production",
-    "web": "rm -rf ./platforms/browser/www/index.js && ./node_modules/.bin/webpack-dev-server --mode=development --port 8085",
+    "web": "rm -rf ./platforms/browser/www/index.js && npm run assets && ./node_modules/.bin/webpack-dev-server --mode=development --port 8085",
     "serve": "npm run web",
     "build:dev": "cp -a index.html ./www/ && ./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"

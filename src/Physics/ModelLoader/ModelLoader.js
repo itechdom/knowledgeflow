@@ -1,13 +1,15 @@
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 const loadModel = path => {
   // Instantiate a loader
-  var loader = new THREE.GLTFLoader();
+  var loader = new GLTFLoader();
 
-  // Optional: Provide a DRACOLoader instance to decode compressed mesh data
-  var dracoLoader = new THREE.DRACOLoader();
-  dracoLoader.setDecoderPath("/examples/js/libs/draco/");
-  loader.setDRACOLoader(dracoLoader);
+//   // Optional: Provide a DRACOLoader instance to decode compressed mesh data
+//   var dracoLoader = new DRACOLoader();
+//   dracoLoader.setDecoderPath("/examples/js/libs/draco/");
+//   loader.setDRACOLoader(dracoLoader);
 
   // Load a glTF resource
   return new Promise((resolve, reject) => {

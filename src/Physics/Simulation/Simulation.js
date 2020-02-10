@@ -174,11 +174,6 @@ export default class Game extends Component {
   };
 
   componentDidMount() {
-    ModelLoader("../../../assets/models/compass.glb")
-      .then(gltf => {
-        console.log("loaded model", gltf);
-      })
-      .reject(err => console.log("error", err));
     this.init();
     this.then = Date.now();
     const fps = 60;
@@ -191,9 +186,16 @@ export default class Game extends Component {
     let sphere = this.drawSphere(...gridVector, increase);
     let floor = this.drawFloor(...gridVector, increase);
     let light = this.drawFlashLight(...gridVector, increase);
-    let cone = this.drawCone(...gridVector, increase);
-    this.camera.add(cone);
-    cone.position.set(0, 0, -10);
+    // let cone = this.drawCone(...gridVector, increase);
+    // this.camera.add(cone);
+    // cone.position.set(0, 0, -10);
+    ModelLoader("/models/compass.glb")
+      .then(gltf => {
+        console.log("loaded model", gltf);
+        console.log(gltf.scene);
+        this.scene.add(gltf.scene);
+      })
+      .catch(err => console.log("error", err));
     this.onDraw = () => {
       if (this.state.jumping) {
         this.camera.position.x = Math.sin(increase / 30);
@@ -206,7 +208,7 @@ export default class Game extends Component {
       sphere.position.y = Math.cos(increase / 30);
       let { x, y, z } = this.camera.position;
       this.renderer.render(this.scene, this.camera);
-      cone.rotation.set(-Math.PI / 16, 0, 0);
+      // cone.rotation.set(-Math.PI / 16, 0, 0);
       this.setState({
         log: {
           other: this.camera,
