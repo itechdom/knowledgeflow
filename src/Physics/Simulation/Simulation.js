@@ -108,6 +108,7 @@ export default class Game extends Component {
         this.camera.rotation.z += -1 * 0.1;
         break;
       case "space":
+        this.compass[4].rotation.z -= Math.PI/10;
         this.setState({ jumping: true });
         break;
     }
@@ -124,6 +125,8 @@ export default class Game extends Component {
     this.camera.position.x = 0;
     this.camera.position.y = 1;
     this.scene = new THREE.Scene();
+    this.scene.background = new THREE.Color(0xe0e0e0);
+    // this.scene.fog = new THREE.Fog(0xe0e0e0, 20, 100);
     this.scene.add(this.camera);
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
@@ -132,6 +135,19 @@ export default class Game extends Component {
   }
 
   drawSkybox = (ax, ay, bx, by, increase) => {};
+
+  drawHemisphereLight = () => {
+    var light = new THREE.HemisphereLight(0xffffff, 0x444444);
+    light.position.set(0, 20, 0);
+    this.scene.add(light);
+
+    light = new THREE.DirectionalLight(0xffffff);
+    light.position.set(0, 20, 10);
+    this.scene.add(light);
+    // var light = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
+    // this.scene.add(light);
+    return light;
+  };
 
   drawFlashLight = () => {
     //color, intensity, distance, decay
@@ -164,13 +180,42 @@ export default class Game extends Component {
     return sphere;
   };
 
+  drawGround = () => {
+    // ground
+
+    var mesh = new THREE.Mesh(
+      new THREE.PlaneBufferGeometry(2000, 2000),
+      new THREE.MeshPhongMaterial({ color: 0x999999, depthWrite: false })
+    );
+    mesh.rotation.x = -Math.PI / 2;
+    this.scene.add(mesh);
+
+    var grid = new THREE.GridHelper(200, 40, 0x000000, 0x000000);
+    grid.material.opacity = 0.2;
+    grid.material.transparent = true;
+    this.scene.add(grid);
+  };
+
   drawFloor = () => {
     // var geometry = new THREE.PlaneGeometry(5, 20, 32);
     // var material = new THREE.MeshNormalMaterial();
     // var plane = new THREE.Mesh(geometry, material);
-    var grid = new THREE.GridHelper(100, 10);
-    this.scene.add(grid);
-    return grid;
+    // var grid = new THREE.GridHelper(100, 10);
+    // each square
+    var planeW = 50; // pixels
+    var planeH = 50; // pixels
+    var numW = 50; // how many wide (50*50 = 2500 pixels wide)
+    var numH = 50; // how many tall (50*50 = 2500 pixels tall)
+    var plane = new THREE.Mesh(
+      new THREE.PlaneGeometry(planeW * numW, planeH * numH, planeW, planeH),
+      new THREE.MeshPhysicalMaterial({
+        color: 0x808080,
+        wireframe: true
+      })
+    );
+    // scene.add(plane);
+    this.scene.add(plane);
+    return plane;
   };
 
   componentDidMount() {
@@ -184,23 +229,27 @@ export default class Game extends Component {
     const gridVector = [5, 50, 300, 150];
     let mesh = this.drawCube(...gridVector, increase);
     let sphere = this.drawSphere(...gridVector, increase);
-    let floor = this.drawFloor(...gridVector, increase);
+    // let floor = this.drawFloor(...gridVector, increase);
+    let ground = this.drawGround();
     let light = this.drawFlashLight(...gridVector, increase);
+    let HemisphereLight = this.drawHemisphereLight();
     // let cone = this.drawCone(...gridVector, increase);
     // this.camera.add(cone);
     // cone.position.set(0, 0, -10);
     ModelLoader("/models/compass.glb")
       .then(gltf => {
-        console.log("loaded model", gltf);
-        console.log(gltf.scene);
+        this.compass = gltf.scene.children;
         this.scene.add(gltf.scene);
       })
       .catch(err => console.log("error", err));
     this.onDraw = () => {
       if (this.state.jumping) {
-        this.camera.position.x = Math.sin(increase / 30);
-        // this.camera.position.z = Math.cos(increase / 30);
-        // this.playSound();
+        // this.camera.position.x = Math.sin(increase / 30);
+        this.compass[4].position.x = Math.sin(increase / 30);
+        this.compass[4].position.y = Math.cos(increase / 30);
+        this.compass[3].position.x = -Math.sin(increase / 30);
+        this.compass[3].position.y = -Math.cos(increase / 30);
+        // this.compass[3].rotation.z += 0.02;
       }
       mesh.rotation.x += 0.02;
       mesh.rotation.y += 0.02;
@@ -208,7 +257,6 @@ export default class Game extends Component {
       sphere.position.y = Math.cos(increase / 30);
       let { x, y, z } = this.camera.position;
       this.renderer.render(this.scene, this.camera);
-      // cone.rotation.set(-Math.PI / 16, 0, 0);
       this.setState({
         log: {
           other: this.camera,
