@@ -108,7 +108,6 @@ export default class Game extends Component {
         this.camera.rotation.z += -1 * 0.1;
         break;
       case "space":
-        this.compass[4].rotation.z -= Math.PI/10;
         this.setState({ jumping: true });
         break;
     }
@@ -226,16 +225,11 @@ export default class Game extends Component {
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
     let increase = 0;
+    let initialValue = 1;
     const gridVector = [5, 50, 300, 150];
-    let mesh = this.drawCube(...gridVector, increase);
-    let sphere = this.drawSphere(...gridVector, increase);
-    // let floor = this.drawFloor(...gridVector, increase);
     let ground = this.drawGround();
-    let light = this.drawFlashLight(...gridVector, increase);
+    // let light = this.drawFlashLight(...gridVector, increase);
     let HemisphereLight = this.drawHemisphereLight();
-    // let cone = this.drawCone(...gridVector, increase);
-    // this.camera.add(cone);
-    // cone.position.set(0, 0, -10);
     ModelLoader("/models/compass.glb")
       .then(gltf => {
         this.compass = gltf.scene.children;
@@ -244,18 +238,13 @@ export default class Game extends Component {
       .catch(err => console.log("error", err));
     this.onDraw = () => {
       if (this.state.jumping) {
-        // this.camera.position.x = Math.sin(increase / 30);
-        this.compass[4].position.x = Math.sin(increase / 30);
-        this.compass[4].position.y = Math.cos(increase / 30);
-        this.compass[3].position.x = -Math.sin(increase / 30);
-        this.compass[3].position.y = -Math.cos(increase / 30);
-        // this.compass[3].rotation.z += 0.02;
+        this.compass[3].position.x =
+          initialValue * Math.sin(-1 * Math.sin(increase / 30));
+        this.compass[3].position.y =
+          Math.sin(Math.cos(increase / 30));
+        // this.compass[3].rotation.z = (initialValue * increase) / 30;
+        initialValue = initialValue / 1.001;
       }
-      mesh.rotation.x += 0.02;
-      mesh.rotation.y += 0.02;
-      sphere.position.x = Math.sin(increase / 30);
-      sphere.position.y = Math.cos(increase / 30);
-      let { x, y, z } = this.camera.position;
       this.renderer.render(this.scene, this.camera);
       this.setState({
         log: {
