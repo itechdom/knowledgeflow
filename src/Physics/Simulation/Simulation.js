@@ -236,12 +236,26 @@ export default class Game extends Component {
         this.scene.add(gltf.scene);
       })
       .catch(err => console.log("error", err));
+    ModelLoader("/models/wire.glb")
+      .then(gltf => {
+        this.wire = gltf.scene.children;
+        this.scene.add(gltf.scene);
+        this.wire[2].position.x = 0;
+        this.wire[2].position.y = 0;
+        this.wire[2].position.z = 0;
+        this.wire[2].rotation.y = Math.PI / 2;
+        for (let i = 0; i < 10; i++) {
+          let newWire = this.wire[2].clone();
+          newWire.position.z = (i + 1) * 10;
+          this.scene.add(newWire);
+        }
+      })
+      .catch(err => console.log("error", err));
     this.onDraw = () => {
       if (this.state.jumping) {
         this.compass[3].position.x =
           initialValue * Math.sin(-1 * Math.sin(increase / 30));
-        this.compass[3].position.y =
-          Math.sin(Math.cos(increase / 30));
+        this.compass[3].position.y = Math.sin(Math.cos(increase / 30));
         // this.compass[3].rotation.z = (initialValue * increase) / 30;
         initialValue = initialValue / 1.001;
       }
