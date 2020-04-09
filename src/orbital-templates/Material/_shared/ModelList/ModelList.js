@@ -232,11 +232,9 @@ const ModelList = enhance(
                       form={form}
                       modelSchema={modelSchema}
                       model={
-                        modelArray &&
-                        modelArray.length > 0 &&
-                        modelArray.find(
-                          ({ _id }) => _id === props.match.params.id
-                        )
+                        models &&
+                        models.length > 0 &&
+                        models.find(({ _id }) => _id === props.match.params.id)
                       }
                       media={media}
                       gallery={
@@ -293,9 +291,9 @@ const ModelList = enhance(
                         form={form}
                         modelSchema={modelSchema}
                         model={
-                          modelArray &&
-                          modelArray.length > 0 &&
-                          modelArray.find(
+                          models &&
+                          models.length > 0 &&
+                          models.find(
                             ({ _id }) => _id === props.match.params.id
                           )
                         }
@@ -356,11 +354,9 @@ const ModelList = enhance(
                       searchModel={searchModel}
                       form={form}
                       model={
-                        modelArray &&
-                        modelArray.length > 0 &&
-                        modelArray.find(
-                          ({ _id }) => _id === props.match.params.id
-                        )
+                        models &&
+                        models.length > 0 &&
+                        models.find(({ _id }) => _id === props.match.params.id)
                       }
                       classes={classes}
                       match={props.match}
@@ -386,9 +382,9 @@ const ModelList = enhance(
                         form={form}
                         classes={classes}
                         model={
-                          modelArray &&
-                          modelArray.length > 0 &&
-                          modelArray.find(
+                          models &&
+                          models.length > 0 &&
+                          models.find(
                             ({ _id }) => _id === props.match.params.id
                           )
                         }
@@ -401,9 +397,9 @@ const ModelList = enhance(
                       {ModelPreviewAttachment && (
                         <ModelPreviewAttachment
                           model={
-                            modelArray &&
-                            modelArray.length > 0 &&
-                            modelArray.find(
+                            models &&
+                            models.length > 0 &&
+                            models.find(
                               ({ _id }) => _id === props.match.params.id
                             )
                           }
