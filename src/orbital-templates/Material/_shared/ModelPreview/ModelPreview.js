@@ -9,6 +9,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { withState, compose } from "recompose";
 import { Formik } from "formik";
 import moment from "moment";
+import ClientNotification from "../ClientNotification/ClientNotification";
 import {
   Grid,
   Card,
@@ -37,9 +38,10 @@ const ModelPreview = enhance(
     classes,
     ModelPreviewActions,
     ModelPreviewAction,
-    onAction
+    onAction,
+    notifications,
+    removeNotification
   }) => {
-    console.log("MODEL PREVIEW", form, model);
     if (form && model) {
       let previewList = form.fields.map((field, index) => {
         const values = model[field.name];
@@ -247,6 +249,12 @@ const ModelPreview = enhance(
                 <TableBody>{previewList}</TableBody>
               </Table>
             </CardContent>
+            <ClientNotification
+              notifications={notifications}
+              handleClose={(event, reason, notification) => {
+                removeNotification(notification);
+              }}
+            />
           </Card>
           <ConfirmDeleteModal
             open={open}

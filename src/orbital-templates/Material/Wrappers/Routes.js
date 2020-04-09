@@ -8,7 +8,6 @@ export const Routes = ({ onClick, currentRoute, routeList, classes }) => {
   return (
     <React.Fragment>
       {routeList.map((route, index) => {
-        console.log(route.type);
         return (
           <ListItem
             style={{ borderRadius: "50px" }}

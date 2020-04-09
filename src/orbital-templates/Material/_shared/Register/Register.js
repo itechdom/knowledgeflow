@@ -12,6 +12,7 @@ import {
 } from "@material-ui/core";
 import Forms from "../Forms/Forms";
 import { Formik } from "formik";
+import ClientNotification from "../ClientNotification/ClientNotification";
 import * as Yup from "yup";
 
 // Synchronous validation
@@ -65,7 +66,8 @@ export const Register = ({
   classes,
   location,
   history,
-  match
+  match,
+  logo
 }) => {
   return (
     <Card className={classes.layout}>
@@ -78,10 +80,19 @@ export const Register = ({
             justifyContent={"center"}
             alignContent="center"
           >
-            <Avatar className={classes.avatar}>
-              <Icon>keyboard</Icon>
-            </Avatar>
-            <Typography variant="headline">Sign up</Typography>
+            {logo ? (
+              <img className={classes.logo} src={logo} />
+            ) : (
+              <Avatar className={classes.avatar}>
+                <Icon>keyboard</Icon>
+              </Avatar>
+            )}
+            <Typography
+              style={{ textAlign: "center", fontWeight: "bold" }}
+              variant="headline"
+            >
+              Sign Up
+            </Typography>
           </Grid>
         )}
       />
@@ -89,8 +100,8 @@ export const Register = ({
         initialValues={{ email: "", password: "" }}
         onSubmit={(values, actions) => {
           onSubmit(values)
-            .then(() => {
-              onSuccess(values);
+            .then(res => {
+              onSuccess(res);
               actions.setSubmitting(false);
             })
             .catch(err => {
@@ -109,8 +120,18 @@ export const Register = ({
           isSubmitting,
           setFieldValue,
           setFieldTouched,
+          submitCount,
+          setErrors,
           ...rest
         }) => {
+          let notifications =
+            errors &&
+            Object.keys(errors).map(k => {
+              return {
+                message: `${k}: ${errors[k]}`,
+                type: "error"
+              };
+            });
           return (
             <>
               <CardContent>
@@ -157,6 +178,16 @@ export const Register = ({
                     </Typography>
                   </Button>
                 </Grid>
+                {notifications && notifications.length > 0 && submitCount > 0 && (
+                  <ClientNotification
+                    notifications={
+                      (notifications.length > 0 && notifications) || []
+                    }
+                    handleClose={() => {
+                      setErrors({});
+                    }}
+                  />
+                )}
               </CardContent>
             </>
           );

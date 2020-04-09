@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/styles";
 import DeleteIcon from "@material-ui/icons/Delete";
 import FilterListIcon from "@material-ui/icons/FilterList";
-import theme from "Theme";
+import theme from "../../../../theme";
 import { styles, toolbarStyles } from "./Table.styles";
 import {
   Grid,

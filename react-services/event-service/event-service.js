@@ -3,7 +3,7 @@ import { Crud } from "../crud-service/crud-service";
 import { RRule } from "rrule";
 import moment from "moment";
 
-let getRecurringInstances = event => {
+export const getRecurringInstances = event => {
   if (event) {
     return event.map(ev => {
       if (ev.recurringRule) {
@@ -18,7 +18,7 @@ let getRecurringInstances = event => {
   }
   return event;
 };
-let saveRecurringRule = event => {
+export const saveRecurringRule = event => {
   if (event.isRecurring) {
     let recurringRule = new RRule({
       freq: RRule[event.recurringRule],

@@ -8,8 +8,8 @@ import CloseIcon from "@material-ui/icons/Close";
 import green from "@material-ui/core/colors/green";
 import amber from "@material-ui/core/colors/amber";
 import WarningIcon from "@material-ui/icons/Warning";
-import theme from "Theme";
-// import theme from "Theme";
+import theme from "../../../../theme";
+// import theme from "../../../../theme";
 import { withStyles } from "@material-ui/styles";
 import { IconButton, Snackbar, SnackbarContent } from "@material-ui/core";
 

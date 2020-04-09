@@ -1,10 +1,11 @@
 "use strict";
 var webpack = require("webpack");
 var path = require("path");
+const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
+  .BundleAnalyzerPlugin;
 module.exports = env => {
   console.log("env", env);
-  const base = path.resolve(__dirname, "./platforms/browser/www");
-  const js = path.resolve(__dirname, "./platforms/browser/www/js");
+  const base = path.resolve(__dirname, "./www/js");
   return {
     entry: {
       index: "./index.js"
@@ -13,10 +14,6 @@ module.exports = env => {
       path: base,
       chunkFilename: "[name].bundle.js",
       filename: "[name].js"
-    },
-    optimization: {
-      // We no not want to minimize our code.
-      minimize: false
     },
     module: {
       rules: [
@@ -109,9 +106,9 @@ module.exports = env => {
     },
     //To run development server
     devServer: {
-      contentBase: base,
+      contentBase: "./",
       disableHostCheck: true // That solved it
-    },
-    devtool: "eval-source-map"
+    }
+    // plugins: [new BundleAnalyzerPlugin()]
   };
 };

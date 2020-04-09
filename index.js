@@ -1,10 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Route, HashRouter as Router } from "react-router-dom";
-import App from "./src/App";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import MomentUtils from "@date-io/moment";
-
+// import Loadable from "react-loadable";
+// import Loading from "./src/orbital-templates/Material/_shared/Loading/Loading";
+import App from "./src/App";
+// const App = Loadable({
+//   loader: () => import(/* webpackChunkName: "App" */ "./src/App"),
+//   loading: err => <Loading err={err} />
+// });
 const FireApp = props => {
   const MyApp = props => (
     <MuiPickersUtilsProvider utils={MomentUtils}>
@@ -57,4 +62,4 @@ var app = {
   }
 };
 
-app.initialize();
+app.onDeviceReady();

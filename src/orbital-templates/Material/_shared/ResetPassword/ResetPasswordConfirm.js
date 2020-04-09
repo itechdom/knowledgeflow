@@ -1,22 +1,38 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import theme from "Theme";
+import theme from "../../../../theme";
 import { styles } from "./ResetPassword.styles";
-import { Typography, Button } from "@material-ui/core";
 import { CssBaseline } from "@material-ui/core";
+import LockIcon from "@material-ui/icons/LockOutlined";
+import {
+  Typography,
+  Button,
+  Card,
+  CardHeader,
+  CardContent,
+  Grid,
+  Avatar
+} from "@material-ui/core";
 
-export const ResetPasswordConfirm = ({ classes, onDone }) => {
+export const ResetPasswordConfirmation = ({ classes, onDone, history }) => {
   return (
     <React.Fragment>
-      <CssBaseline />
-      <Typography variant="headline">Your password has been changed</Typography>
-      <Button color="primary" onClick={onDone}>
-        Go to Login Page
-      </Button>
+      <Grid
+        alignContent="center"
+        alignItems="center"
+        justify="center"
+        container
+      >
+        <Grid item>
+          <Typography variant="headline">
+            Your password has been reset!
+          </Typography>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 };
 
 export default withStyles(styles, { defaultTheme: theme })(
-  ResetPasswordConfirm
+  ResetPasswordConfirmation
 );

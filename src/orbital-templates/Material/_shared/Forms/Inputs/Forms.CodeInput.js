@@ -6,8 +6,6 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 
 const CodeInput = ({ type, value, field, setFieldValue }) => {
-  // const res = loadLanguages([type]);
-  // console.log("res", res);
   return (
     <Editor
       value={value || ""}

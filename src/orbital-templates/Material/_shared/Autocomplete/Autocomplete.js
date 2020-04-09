@@ -1,14 +1,14 @@
 import React from "react";
-import theme from "Theme";
+import theme from "../../../../theme";
 import PropTypes from "prop-types";
 import Autosuggest from "react-autosuggest";
 import match from "autosuggest-highlight/match";
 import parse from "autosuggest-highlight/parse";
 import { styles } from "./Autocomplete.styles";
 import { withStyles } from "@material-ui/styles";
-import { throttle } from "lodash";
+// import { throttle } from "lodash";
 import { MenuItem, Paper } from "@material-ui/core";
-import * as Inputs from"../Forms/Inputs";
+import * as Inputs from "../Forms/Inputs";
 
 function renderInputComponent(inputProps) {
   const {
@@ -78,7 +78,9 @@ class Autocomplete extends React.Component {
 
   handleSuggestionsFetchRequested = ({ value }) => {
     const { loadSuggestions, isMultiple } = this.props;
-    return loadSuggestions(value).then(res => {
+    const updateSuggestions = (newState, prevState) =>
+      this.setState({ ...prevState, newState });
+    return loadSuggestions(value, updateSuggestions).then(res => {
       this.setState({ suggestions: res });
     });
   };
@@ -105,12 +107,12 @@ class Autocomplete extends React.Component {
       throttleSearch
     } = this.props;
 
-    if (throttleSearch) {
-      this.handleSuggestionsFetchRequested = throttle(
-        this.handleSuggestionsFetchRequested.bind(this),
-        500
-      );
-    }
+    // if (throttleSearch) {
+    //   this.handleSuggestionsFetchRequested = throttle(
+    //     this.handleSuggestionsFetchRequested.bind(this),
+    //     500
+    //   );
+    // }
 
     const autosuggestProps = {
       renderInputComponent,

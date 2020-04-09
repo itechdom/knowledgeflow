@@ -28,7 +28,8 @@ export class authDomainStore {
     return new Promise((resolve, reject) => {
       return axios
         .post(`${this.SERVER.host}:${this.SERVER.port}/auth/forgot-password`, {
-          email
+          email,
+          callback: this.SERVER.callback
         })
         .then(res => {
           return resolve(res.data);
@@ -44,8 +45,28 @@ export class authDomainStore {
         .post(`${this.SERVER.host}:${this.SERVER.port}/auth/change-password`, {
           email,
           token,
-          newPassword
+          newPassword,
+          callback: this.SERVER.callback
         })
+        .then(res => {
+          return resolve(res.data);
+        })
+        .catch(err => {
+          return reject(err.response.data);
+        });
+    });
+  }
+  confirmEmail({ token, email }) {
+    return new Promise((resolve, reject) => {
+      return axios
+        .post(
+          `${this.SERVER.host}:${this.SERVER.port}/auth/email-confirmation`,
+          {
+            email,
+            token,
+            callback: this.SERVER.callback
+          }
+        )
         .then(res => {
           return resolve(res.data);
         })
@@ -60,7 +81,8 @@ export class authDomainStore {
         .post(
           `${this.SERVER.host}:${this.SERVER.port}/auth/resend-email-confirmation`,
           {
-            email
+            email,
+            callback: this.SERVER.callback
           }
         )
         .then(res => {
@@ -89,7 +111,10 @@ export class authDomainStore {
   register(values) {
     return new Promise((resolve, reject) => {
       return axios
-        .post(`${this.SERVER.host}:${this.SERVER.port}/auth/register`, values)
+        .post(`${this.SERVER.host}:${this.SERVER.port}/auth/register`, {
+          ...values,
+          callback: this.SERVER.callback
+        })
         .then(res => {
           this.user = res.data;
           this.isLoggedIn = true;
@@ -211,6 +236,8 @@ const injectProps = (authDomainStore, props, child) => {
     forgotPassword: email => authDomainStore.forgotPassword(email),
     changePassword: ({ newPassword, email, token }) =>
       authDomainStore.changePassword({ newPassword, email, token }),
+    confirmEmail: ({ email, token }) =>
+      authDomainStore.confirmEmail({ email, token }),
     loginWithProvider: providerName =>
       authDomainStore.loginWithProvider(providerName),
     registerWithProvider: providerName =>

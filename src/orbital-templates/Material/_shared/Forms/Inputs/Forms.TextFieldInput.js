@@ -1,6 +1,6 @@
 import React from "react";
 import { FastField } from "formik";
-import { TextField } from '@material-ui/core';
+import { TextField } from "@material-ui/core";
 
 const TextFieldInput = ({
   type,
@@ -37,7 +37,7 @@ const TextFieldInput = ({
           <>
             <TextField
               id={field.name}
-              label={field.name}
+              label={field.placeholder}
               type={type}
               value={value}
               onChange={event => {

@@ -132,6 +132,18 @@ const MainWrapper = props => {
                 <Grid item>
                   <img src={logo} width="80px" height="45px" />
                 </Grid>
+                {user && user.name && (
+                  <Grid
+                    style={{
+                      marginLeft: "auto",
+                      marginRight: "10px",
+                      color: "black"
+                    }}
+                    item
+                  >
+                    <p>welcome, {user.name}!</p>
+                  </Grid>
+                )}
               </Grid>
             )}
             <Tabs
@@ -219,6 +231,24 @@ const MainWrapper = props => {
                   </Typography>
                 </Grid>
                 <Grid style={{ marginLeft: "auto" }} item>
+                  {/* <Tooltip title={(user && user.name) || ""}>
+                    <IconButton
+                      aria-owns={isAnchor ? "menu-appbar" : null}
+                      aria-haspopup="true"
+                      onClick={event => {
+                        setAnchorEl(event.currentTarget);
+                      }}
+                      color="inherit"
+                    >
+                      <img
+                        style={{ borderRadius: "30px" }}
+                        src={user && user.image}
+                        width={"40px"}
+                        height={"auto"}
+                        alt="Profile"
+                      />
+                    </IconButton>
+                  </Tooltip> */}
                   <Menu
                     id="menu-appbar"
                     anchorEl={anchorEl}

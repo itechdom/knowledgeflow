@@ -3,10 +3,10 @@ import { withStyles } from "@material-ui/styles";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import LockIcon from "@material-ui/icons/LockOutlined";
-import theme from "Theme";
+import theme from "../../../../theme";
 import { styles } from "./ForgotPassword.styles";
 import { Route } from "react-router-dom";
-import ForgotPasswordConfirm from "../ForgotPassword/ForgotPasswordConfirm";
+import ForgotPasswordConfirm from "./ForgotPasswordConfirm";
 import {
   Button,
   Typography,
@@ -107,14 +107,14 @@ export const ForgotPassword = ({ forgotPassword, history, classes, match }) => {
                         </form>
                         <CardActions style={{ justifyContent: "flex-end" }}>
                           <Button
-                            variant="raised"
+                            variant="contained"
                             size="small"
-                            color="primary"
+                            color="secondary"
                             onClick={handleSubmit}
                             type="submit"
                             disabled={isSubmitting}
                           >
-                            login
+                            Reset Password
                           </Button>
                         </CardActions>
                       </CardContent>
@@ -131,6 +131,7 @@ export const ForgotPassword = ({ forgotPassword, history, classes, match }) => {
         render={({ match }) => {
           return (
             <ForgotPasswordConfirm
+              classes={classes}
               onDone={() => {
                 history.push("/auth/login");
               }}

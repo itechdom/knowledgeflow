@@ -1,17 +1,17 @@
 {
   "name": "celebrae",
-  "displayName": "HelloCordova",
+  "displayName": "Worth Manifesto",
   "version": "1.0.0",
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf www/*",
-    "assets": "cp -a ./index.html ./platforms/browser/www && cp -a ./assets/* ./platforms/browser/www",
+    "assets": "cp -a ./assets/* ./www",
     "start": "npm run prepare && cordova run android",
     "deploy": "npm run assets && ./node_modules/.bin/webpack --env.production && ./node_modules/.bin/serverless client deploy --no-confirm",
     "prepare": "npm run assets && npm run build && cordova prepare android && cordova prepare browser",
     "build": "./node_modules/.bin/webpack --env.production",
-    "web": "rm -rf ./platforms/browser/www/index.js && npm run assets && ./node_modules/.bin/webpack-dev-server --mode=development --port 8085",
+    "web": "rm -rf ./platforms/browser/www/index.js && ./node_modules/.bin/webpack-dev-server --mode=development --port 8085",
     "serve": "npm run web",
     "build:dev": "cp -a index.html ./www/ && ./node_modules/.bin/webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -81,6 +81,7 @@
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "cordova-lib": "^9.0.1",
+    "cordova-plugin-whitelist": "1",
     "css-loader": "^1.0.1",
     "detect-port-alt": "^1.1.6",
     "enzyme": "^3.9.0",
@@ -101,9 +102,9 @@
     "serverless-finch": "^2.4.2",
     "style-loader": "^0.23.1",
     "webpack": "^4.29.0",
+    "webpack-bundle-analyzer": "^3.6.0",
     "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.7.1",
-    "cordova-plugin-whitelist": "1"
+    "webpack-dev-server": "^3.7.1"
   },
   "cordova": {
     "plugins": {

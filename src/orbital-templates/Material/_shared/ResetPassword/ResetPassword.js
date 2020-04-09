@@ -1,18 +1,22 @@
 import React from "react";
 import { withStyles } from "@material-ui/styles";
-import theme from "Theme";
+import theme from "../../../../theme";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import LockIcon from "@material-ui/icons/LockOutlined";
 import { Route } from "react-router-dom";
 import { styles } from "./ResetPassword.styles";
-import ResetPasswordConfirm from "../ResetPassword/ResetPasswordConfirm";
+import ResetPasswordConfirm from "./ResetPasswordConfirm";
 import queryString from "query-string";
 import {
   Button,
   Typography,
   Avatar,
   CssBaseline,
+  Card,
+  CardHeader,
+  CardContent,
+  Grid,
   Paper
 } from "@material-ui/core";
 import * as Inputs from "../Forms/Inputs";
@@ -43,6 +47,7 @@ let fields = [
 
 export const ResetPassword = ({
   changePassword,
+  onDone,
   classes,
   location,
   history,
@@ -52,17 +57,28 @@ export const ResetPassword = ({
   return (
     <React.Fragment>
       <CssBaseline />
-      <main className={classes.layout}>
-        <Avatar className={classes.avatar}>
-          <LockIcon />
-        </Avatar>
-        <Route
-          exact
-          path={`${match.path}`}
-          render={({ match }) => {
-            return (
-              <Paper className={classes.paper}>
-                <Typography variant="headline">Reset Password</Typography>
+      <Card className={classes.layout}>
+        <CardHeader
+          style={{ justifyContent: "center" }}
+          component={props => (
+            <Grid
+              container
+              direction={"column"}
+              justifyContent={"center"}
+              alignContent="center"
+            >
+              <Typography className={classes.bold} variant="headline">
+                Password Reset!
+              </Typography>
+            </Grid>
+          )}
+        />
+        <CardContent>
+          <Route
+            exact
+            path={`${match.path}`}
+            render={({ match }) => {
+              return (
                 <Formik
                   initialValues={{ newPassword: "", confirmNewPassword: "" }}
                   onSubmit={(values, actions) => {
@@ -97,6 +113,7 @@ export const ResetPassword = ({
                             <div key={index}>
                               <Inputs.TextFieldInput
                                 id={field.name}
+                                field={field}
                                 label={field.placeholder}
                                 type={field.type}
                                 onChange={handleChange}
@@ -115,36 +132,51 @@ export const ResetPassword = ({
                             </div>
                           );
                         })}
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={handleSubmit}
-                          type="submit"
-                          disabled={isSubmitting}
+                        <Grid
+                          justify="center"
+                          className={classes["top30"]}
+                          container
                         >
-                          Reset Password
-                        </Button>
+                          <Grid item>
+                            <Button
+                              color="secondary"
+                              variant="contained"
+                              onClick={handleSubmit}
+                              type="submit"
+                              disabled={isSubmitting}
+                            >
+                              Reset Password
+                            </Button>
+                          </Grid>
+                        </Grid>
                       </form>
                     );
                   }}
                 />
-              </Paper>
-            );
-          }}
-        />
-        <Route
-          path={`${match.path}/confirm`}
-          render={({ match }) => {
-            return (
-              <ResetPasswordConfirm
-                onDone={() => {
-                  history.push("/auth/login");
-                }}
-              />
-            );
-          }}
-        />
-      </main>
+              );
+            }}
+          />
+          <Route
+            path={`${match.path}/confirm`}
+            render={({ match }) => {
+              return <ResetPasswordConfirm />;
+            }}
+          />
+          <Grid
+            container
+            justify="center"
+            alignContent="center"
+            alignItems="center"
+            className={classes["top30"]}
+          >
+            <Grid item>
+              <Button variant="contained" color="secondary" onClick={onDone}>
+                Home
+              </Button>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </Card>
     </React.Fragment>
   );
 };

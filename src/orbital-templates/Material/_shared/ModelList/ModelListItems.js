@@ -1,9 +1,8 @@
 import React from "react";
-import ModelListCardItem from "../ModelList/ModelListCardItem";
+import ModelListCardItem from "./ModelListCardItem";
 import { compose, withState, lifecycle } from "recompose";
 import { Paper, Grid, Grow, Fade } from "@material-ui/core";
 import Empty from "../Empty/Empty";
-import Loading from "../Loading/Loading";
 const enhance = compose(
   withState("open", "setOpen", false),
   withState("deletedModel", "setDeletedModel", {}),
@@ -46,6 +45,9 @@ const ModelListItems = enhance(
           return (
             <Fade in={In} timeout={index * 200}>
               <Grid
+                style={{
+                  marginRight: "2em"
+                }}
                 key={index}
                 xs={gridSizes ? gridSizes.xs : 12}
                 sm={gridSizes ? gridSizes.sm : 12}

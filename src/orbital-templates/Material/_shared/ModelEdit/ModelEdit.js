@@ -11,6 +11,7 @@ import {
 import Forms from "../Forms/Forms";
 import FormsValidate from "../Forms/Forms.Validate";
 import Loading from "../Loading/Loading";
+import ClientNotification from "../ClientNotification/ClientNotification";
 
 export default class ModelEdit extends React.Component {
   componentWillReceiveProps(nextProps) {}
@@ -21,6 +22,7 @@ export default class ModelEdit extends React.Component {
       modelSchema,
       onSave,
       onCancel,
+      onSelect,
       form,
       uploadMedia,
       deleteMedia,
@@ -31,6 +33,8 @@ export default class ModelEdit extends React.Component {
       uploadGallery,
       gallery,
       media,
+      notifications,
+      removeNotification,
       classes,
       ...rest
     } = this.props;
@@ -93,6 +97,7 @@ export default class ModelEdit extends React.Component {
                         onMediaDeleteComplete(model, image);
                       });
                     }}
+                    onSelect={onSelect}
                     {...rest}
                   />
                 </form>
@@ -118,6 +123,12 @@ export default class ModelEdit extends React.Component {
                   Cancel
                 </Button>
               </CardActions>
+              <ClientNotification
+                notifications={notifications}
+                handleClose={(event, reason, notification) => {
+                  removeNotification(notification);
+                }}
+              />
             </Card>
           );
         }}

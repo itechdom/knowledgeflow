@@ -2,6 +2,7 @@ import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import LockIcon from "@material-ui/icons/LockOutlined";
+import ClientNotification from "../ClientNotification/ClientNotification";
 import {
   Button,
   Typography,
@@ -50,6 +51,7 @@ export const Login = ({
   history,
   match,
   onSuccess,
+  logo,
   ...rest
 }) => {
   return (
@@ -67,10 +69,19 @@ export const Login = ({
               justifyContent={"center"}
               alignContent="center"
             >
-              <Avatar className={classes.avatar}>
-                <LockIcon />
-              </Avatar>
-              <Typography variant="headline">Sign in</Typography>
+              {logo ? (
+                <img className={classes.logo} src={logo} />
+              ) : (
+                <Avatar className={classes.avatar}>
+                  <LockIcon />
+                </Avatar>
+              )}
+              <Typography
+                style={{ textAlign: "center", fontWeight: "bold" }}
+                variant="headline"
+              >
+                Sign in
+              </Typography>
             </Grid>
           )}
         />
@@ -98,8 +109,18 @@ export const Login = ({
             isSubmitting,
             setFieldValue,
             setFieldTouched,
+            submitCount,
+            setErrors,
             ...rest
           }) => {
+            let notifications =
+              errors &&
+              Object.keys(errors).map(k => {
+                return {
+                  message: `${k}: ${errors[k]}`,
+                  type: "error"
+                };
+              });
             return (
               <>
                 <CardContent>
@@ -160,6 +181,18 @@ export const Login = ({
                       </Typography>
                     </Button>
                   </Grid>
+                  {notifications &&
+                    notifications.length > 0 &&
+                    submitCount > 0 && (
+                      <ClientNotification
+                        notifications={
+                          (notifications.length > 0 && notifications) || []
+                        }
+                        handleClose={() => {
+                          setErrors({});
+                        }}
+                      />
+                    )}
                 </CardContent>
               </>
             );
@@ -170,4 +203,4 @@ export const Login = ({
   );
 };
 
-export default Login
+export default Login;

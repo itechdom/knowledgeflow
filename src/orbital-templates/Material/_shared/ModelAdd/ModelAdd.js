@@ -9,6 +9,7 @@ import {
   Typography
 } from "@material-ui/core";
 import Forms from "../Forms/Forms";
+import ClientNotification from "../ClientNotification/ClientNotification";
 import FormsValidate from "../Forms/Forms.Validate";
 
 export default class ModelAdd extends React.Component {
@@ -31,6 +32,8 @@ export default class ModelAdd extends React.Component {
       form,
       modelSchema,
       modelName,
+      notifications,
+      removeNotification,
       ...rest
     } = this.props;
     return (
@@ -96,6 +99,12 @@ export default class ModelAdd extends React.Component {
                   <span style={{ marginLeft: "3px" }}>Save</span>
                 </Button>
               </CardActions>
+              <ClientNotification
+                notifications={notifications}
+                handleClose={(event, reason, notification) => {
+                  removeNotification(notification);
+                }}
+              />
             </Card>
           );
         }}

@@ -18,8 +18,7 @@ import {
 
 class LoginWrapper extends React.Component {
   render() {
-    console.log("here in login wrapper");
-    const { classes, children, backgroundImage } = this.props;
+    const { classes, children, backgroundImage} = this.props;
     return (
       <React.Fragment>
         <main

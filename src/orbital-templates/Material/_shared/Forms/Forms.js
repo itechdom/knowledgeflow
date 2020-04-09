@@ -1,16 +1,14 @@
 import React from "react";
-import { visibleWhenFilter } from "../Forms/VisibleWhenFilter";
+import { visibleWhenFilter } from "./VisibleWhenFilter";
 import { styles } from "./Forms.styles";
 import { withStyles } from "@material-ui/styles";
 import { withState, compose } from "recompose";
-import theme from "Theme";
+import theme from "../../../../theme";
 import moment from "moment";
 import { Button, Typography, CircularProgress } from "@material-ui/core";
 import * as Inputs from "./Inputs";
 import Autocomplete from "../Autocomplete/Autocomplete";
-import ClientNotification from "../ClientNotification/ClientNotification";
 import {
-  MuiPickersUtilsProvider,
   KeyboardTimePicker,
   KeyboardDatePicker
 } from "@material-ui/pickers";
@@ -44,6 +42,7 @@ const Fields = enhance(
     theme,
     classes,
     onRefGet,
+    onSelect,
     onRefCreate,
     onRefUpdate,
     onRefFormGet,
@@ -131,7 +130,6 @@ const Fields = enhance(
                   label={field.placeholder}
                   value={values[field.name]}
                   onChange={date => {
-                    console.log("date", moment(date).utc());
                     setFieldValue(field.name, date);
                   }}
                   KeyboardButtonProps={{
@@ -247,11 +245,12 @@ const Fields = enhance(
               <Autocomplete
                 placeholder={field.placeholder}
                 onSelect={suggestion => {
-                  const value = [suggestion._id];
+                  const value = suggestion;
                   setFieldValue(field.name, value);
+                  onSelect && onSelect(field.name, value);
                 }}
-                loadSuggestions={text => {
-                  return onRefGet(field.name);
+                loadSuggestions={(text, updateSuggestions) => {
+                  return onRefGet(field.name, text, updateSuggestions);
                 }}
               />
             )}
@@ -287,22 +286,8 @@ const Fields = enhance(
           </div>
         );
       });
-      let notifications =
-        errors &&
-        Object.keys(errors).map(k => {
-          return {
-            message: `${k}: ${errors[k]}`,
-            type: "error"
-          };
-        });
       return (
         <>
-          {notifications && notifications.length > 0 && (
-            <ClientNotification
-              notifications={(notifications.length > 0 && notifications) || []}
-              handleClose={() => {}}
-            />
-          )}
           {fieldsView}
         </>
       );

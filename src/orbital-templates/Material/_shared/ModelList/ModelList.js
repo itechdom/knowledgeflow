@@ -9,13 +9,13 @@ import { withState, compose, lifecycle } from "recompose";
 import ModelAdd from "../ModelAdd/ModelAdd";
 import ModelEdit from "../ModelEdit/ModelEdit";
 import ModelPreview from "../ModelPreview/ModelPreview";
-import ModelListItems from "../ModelList/ModelListItems";
-import ModelFilterList from "../ModelList/ModelFilterList";
+import ModelListItems from "./ModelListItems";
+import ModelFilterList from "./ModelFilterList";
 //shared components
-import theme from "Theme";
+import theme from "../../../../theme";
 import { Grid, Fade, Card, CardContent, Button } from "@material-ui/core";
-import ClientNotification from "../ClientNotification/ClientNotification";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
+import ClientNotification from "../ClientNotification/ClientNotification";
 
 const enhance = compose(
   withState("viewOption", "setViewOption", 0),
@@ -69,6 +69,11 @@ const ModelList = enhance(
     ModelPreviewAttachment,
     modelKey,
     columnNumber,
+    xs,
+    sm,
+    md,
+    lg,
+    xl,
     onSearch,
     onSearchSelect,
     viewOption,
@@ -107,7 +112,7 @@ const ModelList = enhance(
       if (onDelete) {
         return onDelete(model);
       }
-      history.push(`${match.path}}`);
+      history.push(`${match.path}`);
     };
     const onAddWrapper = () => {
       if (onAdd) {
@@ -116,6 +121,7 @@ const ModelList = enhance(
       history.push(`${match.path}/add`);
     };
     const onCreateWrapper = model => {
+      console.log("on Create !!");
       if (onCreate) {
         return onCreate(model);
       }
@@ -145,7 +151,6 @@ const ModelList = enhance(
           <Route
             path={`${match.path}/add`}
             render={props => {
-              console.log("On Add");
               return ModelAddPage ? (
                 <Grid container justify="center">
                   <Grid item xs={12}>
@@ -178,8 +183,10 @@ const ModelList = enhance(
                         form={form}
                         modelSchema={modelSchema}
                         onSave={values => {
-                          createModel(values).then(res => {
-                            onCreateSubmit && onCreateSubmit(values);
+                          createModel(values).then(model => {
+                            onCreateSubmit
+                              ? onCreateSubmit(values)
+                              : history.push(`${match.path}/view/${model._id}`);
                           });
                         }}
                         onCancel={() => {
@@ -189,6 +196,8 @@ const ModelList = enhance(
                         location={location}
                         match={match}
                         history={history}
+                        notifications={notifications}
+                        removeNotification={removeNotification}
                         {...rest}
                       />
                     </Grid>
@@ -200,7 +209,6 @@ const ModelList = enhance(
           <Route
             path={`${match.path}/edit/:id`}
             render={props => {
-              console.log("On Edit");
               return ModelEditPage ? (
                 <Grid container justify="center">
                   <Grid xs={12}>
@@ -316,6 +324,8 @@ const ModelList = enhance(
                           model.gallery.remove(index);
                           updateModel(model, { gallery: model.gallery });
                         }}
+                        notifications={notifications}
+                        removeNotification={removeNotification}
                         {...rest}
                       />
                     </Grid>
@@ -327,7 +337,6 @@ const ModelList = enhance(
           <Route
             path={`${match.path}/view/:id`}
             render={props => {
-              console.log("On View", props.match.params, modelArray);
               return ModelPreviewPage ? (
                 <Grid container>
                   <Grid item xs={12}>
@@ -378,6 +387,8 @@ const ModelList = enhance(
                         }
                         ModelPreviewActions={ModelPreviewActions}
                         ModelPreviewAction={ModelPreviewAction}
+                        notifications={notifications}
+                        removeNotification={removeNotification}
                         {...rest}
                       />
                       {ModelPreviewAttachment && (
@@ -475,16 +486,15 @@ const ModelList = enhance(
                       </Grid>
                     </Grid>
                   )}
+                  <ClientNotification
+                    notifications={notifications}
+                    handleClose={(event, reason, notification) => {
+                      removeNotification(notification);
+                    }}
+                  />
                   <FloatingAddButton onClick={onAddWrapper} />
                 </>
               );
-            }}
-          />
-
-          <ClientNotification
-            notifications={notifications}
-            handleClose={(event, reason, notification) => {
-              removeNotification(notification);
             }}
           />
         </Switch>
