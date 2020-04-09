@@ -1070,6 +1070,7 @@ class App extends React.Component {
                                   notificationDomainStore={
                                     rootStore.notificationDomainStore
                                   }
+                                  paginate={true}
                                   crudDomainStore={rootStore.crudDomainStore}
                                   query={{
                                     tags: [...this.state.tags],
@@ -1112,72 +1113,80 @@ class App extends React.Component {
                         path={`${routeProps.match.path}`}
                         render={(props) => {
                           return (
-                            <Crud
+                            <Forms
+                              formsDomainStore={rootStore.formsDomainStore}
                               modelName="knowledge"
-                              SERVER={config.SERVER}
-                              offlineStorage={offlineStorage}
-                              notificationDomainStore={
-                                rootStore.notificationDomainStore
-                              }
-                              crudDomainStore={rootStore.crudDomainStore}
-                              query={{
-                                tags: [...this.state.tags],
-                              }}
-                              render={(props) => {
-                                return (
-                                  <MainWrapper
-                                    logo={logo}
-                                    routeList={mainFilterRouteList}
-                                    drawerRouteList={
-                                      this.state.currentUser &&
-                                      this.state.currentUser.isAdmin
-                                        ? [
-                                            ...mainRouteList,
-                                            adminRoute,
-                                            logoutRoute,
-                                          ]
-                                        : [...mainRouteList, logoutRoute]
-                                    }
-                                    user={this.state.currentUser}
-                                    {...routeProps}
-                                    {...this.props}
-                                    onRouteClick={(route) => {
-                                      this.setState({
-                                        tags: new Set([]),
-                                      });
-                                      if (route.indexOf("http") !== -1) {
-                                        return window.open(route);
+                            >
+                              <Crud
+                                modelName="knowledge"
+                                SERVER={config.SERVER}
+                                offlineStorage={offlineStorage}
+                                notificationDomainStore={
+                                  rootStore.notificationDomainStore
+                                }
+                                crudDomainStore={rootStore.crudDomainStore}
+                                query={{
+                                  tags: [...this.state.tags],
+                                }}
+                                paginate={true}
+                                render={(props) => {
+                                  return (
+                                    <MainWrapper
+                                      logo={logo}
+                                      routeList={mainFilterRouteList}
+                                      drawerRouteList={
+                                        this.state.currentUser &&
+                                        this.state.currentUser.isAdmin
+                                          ? [
+                                              ...mainRouteList,
+                                              adminRoute,
+                                              logoutRoute,
+                                            ]
+                                          : [...mainRouteList, logoutRoute]
                                       }
-                                      return routeProps.history.push(
-                                        `${route}`
-                                      );
-                                    }}
-                                    classes={{
-                                      ...classes,
-                                      tabMenu: `${classes["white"]}`,
-                                      listContainer: `${classes["top100"]}`,
-                                      menuTabsClasses: {
-                                        flexContainer: `${classes["center"]}`,
-                                      },
-                                    }}
-                                  >
-                                    <Knowledge
+                                      user={this.state.currentUser}
                                       {...routeProps}
-                                      {...props}
-                                      location={this.props.location}
-                                      currentTags={this.state.tags}
-                                      selected={this.state.selected}
-                                      currentUser={this.state.currentUser}
-                                      setState={(props) => this.setState(props)}
-                                      renderDialog={(props) =>
-                                        this.renderDialog(props)
-                                      }
-                                      knowledge={props.knowledge}
-                                    />
-                                  </MainWrapper>
-                                );
-                              }}
-                            />
+                                      {...this.props}
+                                      onRouteClick={(route) => {
+                                        this.setState({
+                                          tags: new Set([]),
+                                        });
+                                        if (route.indexOf("http") !== -1) {
+                                          return window.open(route);
+                                        }
+                                        return routeProps.history.push(
+                                          `${route}`
+                                        );
+                                      }}
+                                      classes={{
+                                        ...classes,
+                                        tabMenu: `${classes["white"]}`,
+                                        listContainer: `${classes["top100"]}`,
+                                        menuTabsClasses: {
+                                          flexContainer: `${classes["center"]}`,
+                                        },
+                                      }}
+                                    >
+                                      <Knowledge
+                                        {...routeProps}
+                                        {...props}
+                                        location={this.props.location}
+                                        currentTags={this.state.tags}
+                                        selected={this.state.selected}
+                                        currentUser={this.state.currentUser}
+                                        setState={(props) =>
+                                          this.setState(props)
+                                        }
+                                        renderDialog={(props) =>
+                                          this.renderDialog(props)
+                                        }
+                                        knowledge={props.knowledge}
+                                      />
+                                    </MainWrapper>
+                                  );
+                                }}
+                              />
+                            </Forms>
                           );
                         }}
                       ></Route>

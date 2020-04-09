@@ -113,6 +113,11 @@ class ModelListItem extends React.Component {
                   : history.push(`${match.path}/view/${model._id}`);
               }}
             >
+              <CardContent>
+                <Typography variant="h5">
+                  {model.name || model.title}
+                </Typography>
+              </CardContent>
               <Grid container>
                 {this.props.fetchedImage &&
                 this.props.fetchedImage.length > 0 ? (
@@ -120,6 +125,7 @@ class ModelListItem extends React.Component {
                     className={classes.cardImage}
                     component="img"
                     alt="Contemplative Reptile"
+                    style={{ borderRadius: "150px", margin: "10px" }}
                     image={this.props.fetchedImage[0].small}
                     title="Contemplative Reptile"
                   />
@@ -127,15 +133,11 @@ class ModelListItem extends React.Component {
                   <img
                     width="250px"
                     height="250px"
+                    style={{ borderRadius: "150px", margin: "10px" }}
                     src="https://picsum.photos/500/500"
                   />
                 )}
               </Grid>
-              <CardContent>
-                <Typography style={{ fontSize: "14px", fontWeight: "400" }}>
-                  {model.name || model.title}
-                </Typography>
-              </CardContent>
             </CardActionArea>
             <CardActions>
               {model.tags.map((tag, index) => (

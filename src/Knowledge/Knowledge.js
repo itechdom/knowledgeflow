@@ -22,6 +22,7 @@ const ModelListActions = ({ onAdd }) => {
 };
 const Knowledge = ({
   knowledge,
+  knowledge_fetchModel,
   knowledge_createModel,
   knowledge_getModel,
   knowledge_updateModel,
@@ -108,6 +109,10 @@ const Knowledge = ({
       getUnsplash={getUnsplash}
       onAdd={() => {
         history.push(`${match.path}/add`);
+      }}
+      onChangePage={(page) => {
+        console.log("PAGE", page);
+        knowledge_fetchModel(page);
       }}
       {...rest}
     />

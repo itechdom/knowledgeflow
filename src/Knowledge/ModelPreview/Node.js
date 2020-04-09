@@ -5,7 +5,7 @@ import {
   IconButton,
   Typography,
   Menu,
-  MenuItem
+  MenuItem,
 } from "@material-ui/core";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
@@ -69,7 +69,7 @@ class Node extends React.Component {
       borderBottom: "1px solid lightgrey",
       marginTop: isHighlighted ? "30px" : "0",
       fontWeight: isHighlighted ? "bold" : "",
-      cursor: "pointer"
+      cursor: "pointer",
     };
   }
   renderActions() {
@@ -80,7 +80,7 @@ class Node extends React.Component {
           aria-label="more"
           aria-controls="long-menu"
           aria-haspopup="true"
-          onClick={event => {
+          onClick={(event) => {
             setActionOpen(true);
             setAnchorEl(event.currentTarget);
           }}
@@ -91,7 +91,7 @@ class Node extends React.Component {
           open={actionOpen}
           id="fade-menu"
           keepMounted
-          onClose={event => {
+          onClose={(event) => {
             setActionOpen(false);
             setAnchorEl(event.currentTarget);
           }}
@@ -163,6 +163,7 @@ class Node extends React.Component {
 
   render() {
     const isHighlighted = this.props.level.length <= 6;
+    console.log(this.props);
     return (
       <div key={this.props._id} ref={this.props.innerRef} id={this.props._id}>
         <ListItem
@@ -184,7 +185,7 @@ class Node extends React.Component {
           {this.props.note && (
             <IconButton
               onClick={() => {
-                this.props.setShowNote(prevState => {
+                this.props.setShowNote((prevState) => {
                   return !prevState;
                 });
               }}

@@ -5,7 +5,7 @@ import axios from "axios";
 
 const Filter = types.model("Filter", {
   name: types.string,
-  value: types.string
+  value: types.string,
 });
 
 //export store
@@ -22,103 +22,108 @@ export const getCrudDomainStore = (
       state: types.frozen(),
       status: types.string,
       loading: types.optional(types.boolean, true),
-      filters: types.array(Filter)
+      filters: types.array(Filter),
     })
-    .actions(self => ({
-      fetchModel(query) {
+    .actions((self) => ({
+      fetchModel(page, query) {
         self.loading = true;
         return offlineStorage
           .getItem("jwtToken")
-          .then(token => {
+          .then((token) => {
             return axios
-              .get(`${SERVER.host}:${SERVER.port}/${modelName}`, {
-                params: { token, query }
-              })
-              .then(res => {
+              .get(
+                page
+                  ? `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${page}/10`
+                  : `${SERVER.host}:${SERVER.port}/${modelName}`,
+                {
+                  params: { token, query },
+                }
+              )
+              .then((res) => {
                 transform
                   ? self.setSuccess(transform(res.data))
                   : self.setSuccess(res.data);
               })
-              .catch(err => {
+              .catch((err) => {
                 self.setError(err);
               });
           })
-          .catch(err => {
+          .catch((err) => {
             return self.setError(err);
           });
       },
       createModel(model) {
         self.loading = true;
-        return offlineStorage.getItem("jwtToken").then(token => {
+        return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .post(`${SERVER.host}:${SERVER.port}/${modelName}/create`, {
               model,
-              token
+              token,
             })
-            .then(res => {
+            .then((res) => {
               self.setSuccess(
                 [...self.state, model],
                 `${modelName} successfully created!`
               );
               return res.data;
             })
-            .catch(err => {
+            .catch((err) => {
               return self.setError(err);
             });
         });
       },
       updateModel(model, updateValues) {
         self.loading = true;
-        Object.keys(updateValues).map(key => {
+        Object.keys(updateValues).map((key) => {
           model[key] = updateValues[key];
         });
-        return offlineStorage.getItem("jwtToken").then(token => {
+        return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .put(`${SERVER.host}:${SERVER.port}/${modelName}`, {
               model,
-              token
+              token,
             })
-            .then(res => {
+            .then((res) => {
               self.setSuccess(
-                [...self.state.filter(m => model._id !== m._id), model],
+                [...self.state.filter((m) => model._id !== m._id), model],
                 `${modelName} successfully updated!`
               );
             })
-            .catch(err => {
+            .catch((err) => {
               return self.setError(err);
             });
         });
       },
       deleteModel(model) {
         self.loading = true;
-        return offlineStorage.getItem("jwtToken").then(token => {
+        return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .delete(`${SERVER.host}:${SERVER.port}/${modelName}/${model._id}`, {
-              params: { token }
+              params: { token },
             })
-            .then(res => {
+            .then((res) => {
               self.setSuccess(
-                self.state.filter(m => m !== model),
+                self.state.filter((m) => m !== model),
                 `${modelName} successfully deleted!`
               );
             })
-            .catch(err => {
+            .catch((err) => {
               return self.setError(err);
             });
         });
       },
       searchModel(query) {
         self.loading = true;
-        return offlineStorage.getItem("jwtToken").then(token => {
+        return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
               query,
-              token
+              token,
             })
-            .then(res => {
+            .then((res) => {
               return res.data;
             })
-            .catch(err => {
+            .catch((err) => {
               console.log("err", err);
               return self.setError(err);
             });
@@ -126,16 +131,16 @@ export const getCrudDomainStore = (
       },
       searchModels(query, modelName) {
         self.loading = true;
-        return offlineStorage.getItem("jwtToken").then(token => {
+        return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
               query,
-              token
+              token,
             })
-            .then(res => {
+            .then((res) => {
               return res.data;
             })
-            .catch(err => {
+            .catch((err) => {
               console.log("err", err);
               return self.setError(err);
             });
@@ -143,13 +148,13 @@ export const getCrudDomainStore = (
       },
       setFilter(filter) {
         //add if not already defined
-        const foundFilter = self.filters.find(f => f.name === filter.name);
+        const foundFilter = self.filters.find((f) => f.name === filter.name);
         if (!foundFilter) {
           self.filters.push(filter);
         }
       },
       removeFilter(filter) {
-        self.filters = self.filters.filter(f => f.name !== filter.name);
+        self.filters = self.filters.filter((f) => f.name !== filter.name);
       },
       setError(err) {
         self.loading = false;
@@ -158,7 +163,7 @@ export const getCrudDomainStore = (
             message: !err.response
               ? err
               : err && err.response && err.response.data.message,
-            type: "error"
+            type: "error",
           });
         }
         self.status = "error";
@@ -168,60 +173,63 @@ export const getCrudDomainStore = (
         if (notificationDomainStore && successMessage) {
           notificationDomainStore.saveNotification(modelName, {
             message: successMessage,
-            type: "success"
+            type: "success",
           });
         }
         if (data) {
           self.state = data;
         }
         self.status = "success";
-      }
+      },
     }))
-    .views(self => ({
+    .views((self) => ({
       getModel() {
         return self.state;
       },
       isLoading() {
         return self.loading;
-      }
+      },
     }));
 
 const injectProps = (crudDomainStore, modelName, props, child, transform) => {
   let injected = {
     ...props,
-    ...child.props
+    ...child.props,
   };
   injected[modelName] = transform
     ? transform(crudDomainStore.state)
     : crudDomainStore.state;
+  injected[`${modelName}_fetchModel`] = (page, query) => {
+    crudDomainStore.fetchModel(page, query);
+  };
   injected[`${modelName}_getModel`] = () => {
     crudDomainStore.getModel(transform);
   };
-  injected[`${modelName}_createModel`] = model =>
+  injected[`${modelName}_createModel`] = (model) =>
     crudDomainStore.createModel(model);
 
   injected[`${modelName}_updateModel`] = (model, updateValues) =>
     crudDomainStore.updateModel(model, updateValues);
 
-  injected[`${modelName}_deleteModel`] = model =>
+  injected[`${modelName}_deleteModel`] = (model) =>
     crudDomainStore.deleteModel(model);
 
-  injected[`${modelName}_searchModel`] = query =>
+  injected[`${modelName}_searchModel`] = (query) =>
     crudDomainStore.searchModel(query);
 
   injected[`searchModels`] = (query, modelNames) => {
-    let promises = modelNames.map(mName => {
-      return crudDomainStore.searchModels(query, mName).then(res => {
+    let promises = modelNames.map((mName) => {
+      return crudDomainStore.searchModels(query, mName).then((res) => {
         return { res };
       });
     });
     return promises;
   };
 
-  injected[`${modelName}_set_filter`] = filter =>
+  injected[`${modelName}_set_filter`] = (filter) =>
     crudDomainStore.setFilter(filter);
 
-  injected[`${modelName}_remove_filter`] = filter =>
+  injected[`${modelName}_remove_filter`] = (filter) =>
     crudDomainStore.removeFilter(filter);
 
   injected[`${modelName}_loading`] = crudDomainStore.isLoading();
@@ -247,7 +255,8 @@ class CrudContainer extends React.Component {
       offlineStorage,
       SERVER,
       notificationDomainStore,
-      render
+      render,
+      paginate,
     } = this.props;
     if (modelName && !this.stores[modelName] && !skipLoadOnInit) {
       const crudDomainStore = getCrudDomainStore(
@@ -259,15 +268,15 @@ class CrudContainer extends React.Component {
       ).create({
         state: [],
         id: "1",
-        status: "initial"
+        status: "initial",
       });
-      crudDomainStore.fetchModel();
+      paginate ? crudDomainStore.fetchModel(1) : crudDomainStore.fetchModel();
       this.stores[modelName] = crudDomainStore;
     }
 
     const childrenWithProps = render
       ? render(injectProps(this.stores[modelName], modelName, this.props, {}))
-      : React.Children.map(children, child => {
+      : React.Children.map(children, (child) => {
           let injectedProps = injectProps(
             this.stores[modelName],
             modelName,

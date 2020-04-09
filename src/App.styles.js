@@ -4,13 +4,16 @@ const appBarHeight = 64;
 export const styles = (theme) => {
   return {
     root: {},
-    hasPadding: {},
+    hasPadding: {
+      padding: "1em",
+    },
     card: {
       width: "100%",
     },
     content: {
       marginTop: "5em",
       marginBottom: "5em",
+      backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed

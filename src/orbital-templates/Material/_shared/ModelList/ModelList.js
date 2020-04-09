@@ -20,10 +20,12 @@ import {
   CardContent,
   Button,
   Paper,
+  Backdrop,
 } from "@material-ui/core";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 import ClientNotification from "../ClientNotification/ClientNotification";
 import TablePagination from "@material-ui/core/TablePagination";
+import Loading from "../Loading/Loading";
 
 const enhance = compose(
   withState("viewOption", "setViewOption", 0),
@@ -93,6 +95,7 @@ const ModelList = enhance(
     ModelListActions,
     ModelListItemComponent,
     noPagination,
+    onChangePage,
     onAdd,
     onAddText,
     onDelete,
@@ -148,11 +151,7 @@ const ModelList = enhance(
       onView: onViewWrapper,
       onAdd: onAddWrapper,
     };
-    let models =
-      modelArray &&
-      (!noPagination
-        ? modelArray.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-        : modelArray);
+    let models = modelArray.data;
     return (
       <Router>
         <Switch>
@@ -422,6 +421,15 @@ const ModelList = enhance(
             render={(props) => {
               return (
                 <>
+                  <Backdrop
+                    style={{
+                      zIndex: 99,
+                      color: "#fff",
+                    }}
+                    open={loading}
+                  >
+                    <Loading></Loading>
+                  </Backdrop>
                   {(ModelListActions && <ModelListActions {...Actions} />) || (
                     <Button
                       color="secondary"
@@ -498,10 +506,13 @@ const ModelList = enhance(
                             <TablePagination
                               rowsPerPageOptions={[5, 10, 25]}
                               component="div"
-                              count={modelArray.length}
+                              count={modelArray.count}
                               rowsPerPage={rowsPerPage}
                               page={page}
-                              onChangePage={(ev, page) => setPage(page)}
+                              onChangePage={(ev, page) => {
+                                onChangePage(page + 1);
+                                setPage(page);
+                              }}
                               onChangeRowsPerPage={(ev, rowsPerPage) =>
                                 setRowsPerPage(rowsPerPage)
                               }

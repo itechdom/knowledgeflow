@@ -3,18 +3,18 @@ var webpack = require("webpack");
 var path = require("path");
 const BundleAnalyzerPlugin = require("webpack-bundle-analyzer")
   .BundleAnalyzerPlugin;
-module.exports = env => {
+module.exports = (env) => {
   console.log("env", env);
   const base = path.resolve(__dirname, "./www/js");
   return {
     entry: {
-      index: "./index.js"
+      index: "./index.js",
     },
-    devtool: 'source-map',
+    devtool: env && env.production ? "" : "source-map",
     output: {
       path: base,
       chunkFilename: "[name].bundle.js",
-      filename: "[name].js"
+      filename: "[name].js",
     },
     module: {
       rules: [
@@ -23,24 +23,24 @@ module.exports = env => {
           use: [
             {
               loader: "babel-loader",
-              options: { babelrcRoots: [".", "../"] }
-            }
+              options: { babelrcRoots: [".", "../"] },
+            },
           ],
-          exclude: /(node_modules|bower_compontents)/
+          exclude: /(node_modules|bower_compontents)/,
         },
         {
           test: /\.jsx$/, //Check for all js files
           use: [
             {
               loader: "babel-loader",
-              options: { babelrcRoots: [".", "../"] }
-            }
+              options: { babelrcRoots: [".", "../"] },
+            },
           ],
-          exclude: /(node_modules|bower_compontents)/
+          exclude: /(node_modules|bower_compontents)/,
         },
         {
           test: /\.(css|sass|scss)$/, //Check for sass or scss file names
-          use: ["style-loader", "css-loader", "sass-loader"]
+          use: ["style-loader", "css-loader", "sass-loader"],
         },
         {
           test: /\.(gif|png|jpe?g|svg)$/i,
@@ -50,17 +50,17 @@ module.exports = env => {
               options: {
                 name: "[name].[ext]",
                 publicPath:
-                  env && env.production ? "/playground/dist/" : "dist/"
-              }
+                  env && env.production ? "/playground/dist/" : "dist/",
+              },
             },
             {
               loader: "image-webpack-loader",
               options: {
                 bypassOnDebug: true, // webpack@1.x
-                disable: true // webpack@2.x and newer
-              }
-            }
-          ]
+                disable: true, // webpack@2.x and newer
+              },
+            },
+          ],
         },
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -69,12 +69,12 @@ module.exports = env => {
               loader: "file-loader",
               options: {
                 name: "[name].[ext]",
-                outputPath: "fonts/"
-              }
-            }
-          ]
-        }
-      ]
+                outputPath: "fonts/",
+              },
+            },
+          ],
+        },
+      ],
     },
     resolve: {
       alias: {
@@ -102,14 +102,14 @@ module.exports = env => {
         Store: path.resolve(__dirname, "./Orbital/Store"),
         "@material-ui/styles": path.resolve(
           "./node_modules/@material-ui/styles"
-        )
-      }
+        ),
+      },
     },
     //To run development server
     devServer: {
       contentBase: "./",
-      disableHostCheck: true // That solved it
-    }
+      disableHostCheck: true, // That solved it
+    },
     // plugins: [new BundleAnalyzerPlugin()]
   };
 };
