@@ -10,6 +10,7 @@ module.exports = env => {
     entry: {
       index: "./index.js"
     },
+    devtool: 'source-map',
     output: {
       path: base,
       chunkFilename: "[name].bundle.js",

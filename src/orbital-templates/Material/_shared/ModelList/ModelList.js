@@ -24,7 +24,7 @@ const enhance = compose(
   lifecycle({
     componentDidMount() {
       this.props.setPage(0);
-    }
+    },
   }),
   withState("currentQuery", "setCurrentQuery", {})
 );
@@ -102,13 +102,13 @@ const ModelList = enhance(
     justify,
     ...rest
   }) => {
-    const onEditWrapper = model => {
+    const onEditWrapper = (model) => {
       if (onEdit) {
         return onEdit(model);
       }
       history.push(`${match.path}/edit/${model._id}`);
     };
-    const onDeleteWrapper = model => {
+    const onDeleteWrapper = (model) => {
       if (onDelete) {
         return onDelete(model);
       }
@@ -120,14 +120,14 @@ const ModelList = enhance(
       }
       history.push(`${match.path}/add`);
     };
-    const onCreateWrapper = model => {
+    const onCreateWrapper = (model) => {
       console.log("on Create !!");
       if (onCreate) {
         return onCreate(model);
       }
       model && onViewWrapper(model);
     };
-    const onViewWrapper = model => {
+    const onViewWrapper = (model) => {
       if (onView) {
         return onView(model);
       }
@@ -138,7 +138,7 @@ const ModelList = enhance(
       onDelete: onDeleteWrapper,
       onCreate: onCreateWrapper,
       onView: onViewWrapper,
-      onAdd: onAddWrapper
+      onAdd: onAddWrapper,
     };
     let models =
       modelArray &&
@@ -150,7 +150,7 @@ const ModelList = enhance(
         <Switch>
           <Route
             path={`${match.path}/add`}
-            render={props => {
+            render={(props) => {
               return ModelAddPage ? (
                 <Grid container justify="center">
                   <Grid item xs={12}>
@@ -158,8 +158,8 @@ const ModelList = enhance(
                       model={{}}
                       form={form}
                       modelSchema={modelSchema}
-                      onSave={values => {
-                        createModel(values).then(res => {
+                      onSave={(values) => {
+                        createModel(values).then((res) => {
                           onCreateSubmit && onCreateSubmit(values);
                         });
                       }}
@@ -182,8 +182,8 @@ const ModelList = enhance(
                         model={{}}
                         form={form}
                         modelSchema={modelSchema}
-                        onSave={values => {
-                          createModel(values).then(model => {
+                        onSave={(values) => {
+                          createModel(values).then((model) => {
                             onCreateSubmit
                               ? onCreateSubmit(values)
                               : history.push(`${match.path}/view/${model._id}`);
@@ -208,7 +208,7 @@ const ModelList = enhance(
           />
           <Route
             path={`${match.path}/edit/:id`}
-            render={props => {
+            render={(props) => {
               return ModelEditPage ? (
                 <Grid container justify="center">
                   <Grid xs={12}>
@@ -218,7 +218,7 @@ const ModelList = enhance(
                         history.goBack();
                       }}
                       onSave={(updatedModel, values) => {
-                        updateModel(updatedModel, values).then(res => {
+                        updateModel(updatedModel, values).then((res) => {
                           onEditSubmit && onEditSubmit(updatedModel);
                         });
                       }}
@@ -248,12 +248,12 @@ const ModelList = enhance(
                       removeFromMedia={removeFromMedia}
                       onMediaUploadComplete={(model, media) => {
                         updateModel(model, {
-                          image: `${media}&q=${Date.now()}`
+                          image: `${media}&q=${Date.now()}`,
                         });
                       }}
                       onGalleryUploadComplete={(model, media) => {
                         updateModel(model, {
-                          gallery: [...model.gallery, ...media]
+                          gallery: [...model.gallery, ...media],
                         });
                       }}
                       onMediaDeleteComplete={(model, media) => {
@@ -279,7 +279,7 @@ const ModelList = enhance(
                           history.goBack();
                         }}
                         onSave={(updatedModel, values) => {
-                          updateModel(updatedModel, values).then(res => {
+                          updateModel(updatedModel, values).then((res) => {
                             onEditSubmit && onEditSubmit(updatedModel);
                           });
                         }}
@@ -309,12 +309,12 @@ const ModelList = enhance(
                         removeFromMedia={removeFromMedia}
                         onMediaUploadComplete={(model, media) => {
                           updateModel(model, {
-                            image: `${media}&q=${Date.now()}`
+                            image: `${media}&q=${Date.now()}`,
                           });
                         }}
                         onGalleryUploadComplete={(model, media) => {
                           updateModel(model, {
-                            gallery: [...model.gallery, ...media]
+                            gallery: [...model.gallery, ...media],
                           });
                         }}
                         onMediaDeleteComplete={(model, media) => {
@@ -336,7 +336,7 @@ const ModelList = enhance(
           />
           <Route
             path={`${match.path}/view/:id`}
-            render={props => {
+            render={(props) => {
               return ModelPreviewPage ? (
                 <Grid container>
                   <Grid item xs={12}>
@@ -411,7 +411,7 @@ const ModelList = enhance(
           />
           <Route
             path={`${match.path}`}
-            render={props => {
+            render={(props) => {
               return (
                 <>
                   {(ModelListActions && <ModelListActions {...Actions} />) || (
@@ -433,16 +433,16 @@ const ModelList = enhance(
                               <Autocomplete
                                 inputClassName={classes.autocomplete}
                                 placeholder={"Search…"}
-                                onSelect={suggestion => {
+                                onSelect={(suggestion) => {
                                   onSearchSelect
                                     ? onSearchSelect(suggestion)
                                     : history.push(
                                         `/${suggestion.resource}/view/${suggestion._id}`
                                       );
                                 }}
-                                loadSuggestions={text => {
+                                loadSuggestions={(text) => {
                                   let query = {
-                                    [modelKey]: { $regex: event.target.value }
+                                    [modelKey]: { $regex: event.target.value },
                                   };
                                   if (onSearch) {
                                     return onSearch(query);
@@ -483,6 +483,7 @@ const ModelList = enhance(
                             />
                           </Grid>
                         )}
+                        {!noPagination ? <></> : <></>}
                       </Grid>
                     </Grid>
                   )}

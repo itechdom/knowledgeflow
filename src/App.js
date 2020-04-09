@@ -14,27 +14,14 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Divider,
-  TextField,
   Button,
   CardContent,
   CardActions,
   CardHeader,
   Card,
-  Chip,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemSecondaryAction,
-  ListItemText,
-  ListSubheader,
-  Avatar,
   Grid,
-  Paper,
   Typography
 } from "@material-ui/core";
-import Swipe from "react-easy-swipe";
-import { useSwipeable, Swipeable } from "react-swipeable";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
 import {
@@ -60,9 +47,7 @@ import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
-import Maps from "./Maps/Maps";
 import "./global.css";
-import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
 import { Formik } from "formik";
 import { RRule } from "rrule";
 import moment from "moment";
@@ -90,52 +75,11 @@ const offlineStorage = {
   }
 };
 const tertiary = "#1ABCFE";
-const getRecurringInstances = event => {
-  if (event.recurringRule) {
-    if (typeof event.recurringRule === "string") {
-      let recurringRule = RRule.fromString(event.recurringRule);
-      event.recurringRuleValue = recurringRule.toText();
-      event.instances = recurringRule.all();
-    }
-  }
-  return event;
-};
 const Logout = ({ onLogout }) => {
   React.useEffect(() => {
     onLogout();
   }, []);
   return <></>;
-};
-export const getDerivatives = knowledge => {
-  const eventWithInstances = getRecurringInstances(knowledge);
-  const instances = eventWithInstances.instances.length > 0;
-  const tags = [...knowledge.tags];
-  const today = moment();
-  const begin = moment(knowledge.startDate);
-  const beginTime = moment(knowledge.startTime).format("hh:mm a");
-  const end = moment(knowledge.endDate);
-  const endTime = moment(knowledge.endTime).format("hh:mm a");
-  const dropoffStartTime = moment(knowledge.dropoffStartTime).format("hh:mm a");
-  const dropoffEndTime = moment(knowledge.dropoffEndTime).format("hh:mm a");
-  const pickupObj = locations.find(
-    location => location.businessName === knowledge.pickup
-  );
-  const dropoffObj = locations.find(
-    location => location.businessName === knowledge.dropoff
-  );
-  return {
-    instances,
-    today,
-    tags,
-    begin,
-    beginTime,
-    end,
-    endTime,
-    dropoffStartTime,
-    dropoffEndTime,
-    pickupObj,
-    dropoffObj
-  };
 };
 class App extends React.Component {
   state = {

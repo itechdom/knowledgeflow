@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Link } from "react-router-dom";
 import AdminEdit from "./AdminEdit";
-import { MainWrapper } from "../orbital-templates/Material/Wrappers/MainWrapper";
+import MainWrapper from "../orbital-templates/Material/Wrappers/MainWrapper";
 import { CircularProgress } from "@material-ui/core";
 
 //this will take Admin from "admin-service"
@@ -19,15 +19,15 @@ const AdminPage = ({
   user,
   onLogout,
   logo,
-  classes
+  classes,
 }) => {
   let routeList =
     schemas &&
-    schemas.map(schema => {
+    schemas.map((schema) => {
       return {
         url: schema.resource && `${match.path}/${schema.resource.defaultValue}`,
         name: schema.modelName,
-        icon: schema.resource.defaultValue
+        icon: schema.resource.defaultValue,
       };
     });
   if (Array.isArray(schemas)) {
@@ -56,7 +56,7 @@ const AdminPage = ({
                 formsDomainStore={formsDomainStore}
                 notificationDomainStore={notificationDomainStore}
                 modelName={match.params.modelName}
-                schema={schemas.find(schema => {
+                schema={schemas.find((schema) => {
                   return (
                     schema.modelName.toLowerCase() ===
                     match.params.modelName.toLowerCase()
