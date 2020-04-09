@@ -13,9 +13,17 @@ import ModelListItems from "./ModelListItems";
 import ModelFilterList from "./ModelFilterList";
 //shared components
 import theme from "../../../../theme";
-import { Grid, Fade, Card, CardContent, Button } from "@material-ui/core";
+import {
+  Grid,
+  Fade,
+  Card,
+  CardContent,
+  Button,
+  Paper,
+} from "@material-ui/core";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 import ClientNotification from "../ClientNotification/ClientNotification";
+import TablePagination from "@material-ui/core/TablePagination";
 
 const enhance = compose(
   withState("viewOption", "setViewOption", 0),
@@ -483,7 +491,25 @@ const ModelList = enhance(
                             />
                           </Grid>
                         )}
-                        {!noPagination ? <></> : <></>}
+                      </Grid>
+                      <Grid style={{ marginTop: "1em" }} item md={6}>
+                        {!noPagination ? (
+                          <Paper>
+                            <TablePagination
+                              rowsPerPageOptions={[5, 10, 25]}
+                              component="div"
+                              count={modelArray.length}
+                              rowsPerPage={rowsPerPage}
+                              page={page}
+                              onChangePage={(ev, page) => setPage(page)}
+                              onChangeRowsPerPage={(ev, rowsPerPage) =>
+                                setRowsPerPage(rowsPerPage)
+                              }
+                            />
+                          </Paper>
+                        ) : (
+                          <></>
+                        )}
                       </Grid>
                     </Grid>
                   )}

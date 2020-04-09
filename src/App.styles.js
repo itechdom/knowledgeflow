@@ -10,6 +10,7 @@ export const styles = (theme) => {
     },
     content: {
       marginTop: "5em",
+      marginBottom: "5em",
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
