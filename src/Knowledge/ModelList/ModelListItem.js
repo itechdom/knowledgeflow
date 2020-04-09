@@ -14,7 +14,7 @@ import {
   CardMedia,
   Typography,
   IconButton,
-  Grid
+  Grid,
 } from "@material-ui/core";
 
 const enhance = compose(
@@ -34,7 +34,7 @@ class ModelListItem extends React.Component {
           ? segments[segments.length - 1]
           : this.props.model.title;
       this.props.getUnsplash &&
-        this.props.getUnsplash(modelName.toLowerCase()).then(urls => {
+        this.props.getUnsplash(modelName.toLowerCase()).then((urls) => {
           this.props.setFetchedImage(urls);
         });
     }
@@ -55,7 +55,7 @@ class ModelListItem extends React.Component {
         showBullets={false}
         showPlayButton={false}
         showThumbnails={false}
-        onSlide={currentIndex => {
+        onSlide={(currentIndex) => {
           this.props.setSelectedImage(currentIndex);
         }}
         renderLeftNav={(onClick, disabled) => {
@@ -78,9 +78,9 @@ class ModelListItem extends React.Component {
         }}
         items={
           this.props.fetchedImage &&
-          this.props.fetchedImage.map(url => {
+          this.props.fetchedImage.map((url) => {
             return {
-              original: url.small
+              original: url.small,
             };
           })
         }
@@ -100,66 +100,65 @@ class ModelListItem extends React.Component {
       match,
       history,
       onEdit,
-      onView
+      onView,
     } = this.props;
     return (
-      <Grid justify="center" container>
-        <Card
-          key={model._id}
-          className={classes.card}
-          style={{ width: "500px" }}
-        >
-          <CardActionArea
-            onClick={() => {
-              onView
-                ? onView(model)
-                : history.push(`${match.path}/view/${model._id}`);
+      <Grid container justify="center">
+        <Grid item>
+          <Card key={model._id} className={classes.card}>
+            <CardActionArea
+              onClick={() => {
+                onView
+                  ? onView(model)
+                  : history.push(`${match.path}/view/${model._id}`);
+              }}
+            >
+              <Grid container>
+                {this.props.fetchedImage &&
+                this.props.fetchedImage.length > 0 ? (
+                  <CardMedia
+                    className={classes.cardImage}
+                    component="img"
+                    alt="Contemplative Reptile"
+                    image={this.props.fetchedImage[0].small}
+                    title="Contemplative Reptile"
+                  />
+                ) : (
+                  <img
+                    width="250px"
+                    height="250px"
+                    src="https://picsum.photos/500/500"
+                  />
+                )}
+              </Grid>
+              <CardContent>
+                <Typography style={{ fontSize: "14px", fontWeight: "400" }}>
+                  {model.name || model.title}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              {model.tags.map((tag, index) => (
+                <Chip
+                  key={index}
+                  size="small"
+                  style={{ fontSize: "10px", marginRight: "3px" }}
+                  variant="outlined"
+                  label={<>{tag}</>}
+                />
+              ))}
+            </CardActions>
+          </Card>
+          <ConfirmDeleteModal
+            open={open}
+            setOpen={setOpen}
+            onConfirm={() => {
+              deleteModel(deletedModel).then(() => {
+                setOpen(false);
+              });
             }}
-          >
-            <Grid justify="center" container>
-              {this.props.fetchedImage && this.props.fetchedImage.length > 0 ? (
-                <CardMedia
-                  className={classes.cardImage}
-                  component="img"
-                  alt="Contemplative Reptile"
-                  image={this.props.fetchedImage[0].small}
-                  title="Contemplative Reptile"
-                />
-              ) : (
-                <img
-                  width="250px"
-                  height="250px"
-                  src="https://picsum.photos/500/500"
-                />
-              )}
-            </Grid>
-            <CardContent>
-              <Typography style={{ fontSize: "14px", fontWeight: "400" }}>
-                {model.name || model.title}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            {model.tags.map((tag, index) => (
-              <Chip
-                key={index}
-                size="small"
-                style={{ fontSize: "10px", marginRight: "3px" }}
-                variant="outlined"
-                label={<>{tag}</>}
-              />
-            ))}
-          </CardActions>
-        </Card>
-        <ConfirmDeleteModal
-          open={open}
-          setOpen={setOpen}
-          onConfirm={() => {
-            deleteModel(deletedModel).then(() => {
-              setOpen(false);
-            });
-          }}
-        />
+          />
+        </Grid>
       </Grid>
     );
   }

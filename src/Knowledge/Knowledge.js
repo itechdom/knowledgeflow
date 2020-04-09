@@ -57,7 +57,7 @@ const Knowledge = ({
       modelKey={"title"}
       modelName={"knowledge"}
       columns={["title"]}
-      createModel={val => {
+      createModel={(val) => {
         let group = "0";
         let size = 20;
         val.body = {
@@ -74,9 +74,9 @@ const Knowledge = ({
               title: val.title,
               target: "1",
               source: "1",
-              group
-            }
-          }
+              group,
+            },
+          },
         };
         return knowledge_createModel(val);
       }}
@@ -101,11 +101,11 @@ const Knowledge = ({
       removeNotification={removeNotification}
       ModelPreviewPage={ModelPreview}
       ModelListItemComponent={ModelListItem}
-      gridSizes={{ xl: 8, lg: 8, md: 8, sm: 12, xs: 12 }}
+      gridSizes={{ xl: 3, lg: 3, md: 3, sm: 12, xs: 12 }}
       ModelListActions={ModelListActions}
+      justify={"center"}
       loading={knowledge_loading}
       getUnsplash={getUnsplash}
-      justify={"center"}
       onAdd={() => {
         history.push(`${match.path}/add`);
       }}

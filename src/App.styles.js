@@ -1,46 +1,46 @@
 import { fade } from "@material-ui/core/styles/colorManipulator";
 const drawerWidth = 180;
 const appBarHeight = 64;
-export const styles = theme => {
+export const styles = (theme) => {
   return {
     root: {},
     hasPadding: {},
     card: {
-      width: "100%"
+      width: "100%",
     },
     content: {
-      marginTop: "2em"
+      marginTop: "5em",
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
-      height: appBarHeight
+      height: appBarHeight,
     },
     toolbarIcon: {
       display: "flex",
       alignItems: "center",
       justifyContent: "flex-end",
-      padding: "0 8px"
+      padding: "0 8px",
     },
     tabs: {},
     appBar: {
-      zIndex: theme.zIndex.drawer + 1
+      zIndex: theme.zIndex.drawer + 1,
     },
     chip: {
       width: "100px",
       height: "auto",
       padding: "0.5em",
-      margin: "0.5em"
+      margin: "0.5em",
     },
     chip__selected: {
       backgroundColor: "#d32fa559",
       width: "100px",
       height: "auto",
       padding: "0.5em",
-      margin: "0.5em"
+      margin: "0.5em",
     },
     menu: {
       backgroundColor: "white",
-      color: "#000000"
+      color: "#000000",
     },
     menuButton: {
       // marginLeft: 30,
@@ -55,36 +55,36 @@ export const styles = theme => {
     },
     title: {
       // flexGrow: 1
-      color: "#000000"
+      color: "#000000",
     },
     buttonListItem: {
       backgroundColor: "#000000",
       color: "white",
       borderRadius: "46px",
-      marginBottom: "15px"
+      marginBottom: "15px",
     },
     layout: {
       width: "auto",
       display: "block", // Fix IE11 issue.
       position: "relative",
-      top: "7em"
+      top: "7em",
     },
     paper: {
       paddingTop: "1em",
       display: "flex",
       flexDirection: "column",
-      alignItems: "center"
+      alignItems: "center",
     },
     avatar: {
       margin: theme && theme.spacing && theme.spacing(),
-      backgroundColor: theme && theme.palette.secondary.main
+      backgroundColor: theme && theme.palette.secondary.main,
     },
     form: {
       width: "100%", // Fix IE11 issue.
-      marginTop: theme && theme.spacing && theme.spacing()
+      marginTop: theme && theme.spacing && theme.spacing(),
     },
     submit: {
-      marginTop: theme && theme.spacing(3)
+      marginTop: theme && theme.spacing(3),
     },
     chartContainer: {
       // marginLeft: -22
@@ -146,112 +146,112 @@ export const styles = theme => {
       // marginBottom: "22px"
     },
     top1: {
-      marginTop: "10px"
+      marginTop: "10px",
     },
     top10: {
-      marginTop: "1em"
+      marginTop: "1em",
     },
     top20: {
-      marginTop: "2em"
+      marginTop: "2em",
     },
     top30: {
-      marginTop: "3em"
+      marginTop: "3em",
     },
     top40: {
-      marginTop: "4em"
+      marginTop: "4em",
     },
     top50: {
-      marginTop: "5em"
+      marginTop: "5em",
     },
     top60: {
-      marginTop: "6em"
+      marginTop: "6em",
     },
     top70: {
-      marginTop: "7em"
+      marginTop: "7em",
     },
     top80: {
-      marginTop: "8em"
+      marginTop: "8em",
     },
     top90: {
-      marginTop: "9em"
+      marginTop: "9em",
     },
     top95: {
-      marginTop: "9.1em"
+      marginTop: "9.1em",
     },
     top100: {
-      marginTop: "10em"
+      marginTop: "10em",
     },
     bottom1: {
-      marginBottom: "10px"
+      marginBottom: "10px",
     },
     bottom10: {
-      marginBottom: "1em"
+      marginBottom: "1em",
     },
     bottom20: {
-      marginBottom: "2em"
+      marginBottom: "2em",
     },
     bottom30: {
-      marginBottom: "3em"
+      marginBottom: "3em",
     },
     bottom40: {
-      marginBottom: "4em"
+      marginBottom: "4em",
     },
     bottom50: {
-      marginBottom: "5em"
+      marginBottom: "5em",
     },
     bottom60: {
-      marginBottom: "6em"
+      marginBottom: "6em",
     },
     bottom70: {
-      marginBottom: "7em"
+      marginBottom: "7em",
     },
     bottom80: {
-      marginBottom: "8em"
+      marginBottom: "8em",
     },
     bottom90: {
-      marginBottom: "9em"
+      marginBottom: "9em",
     },
     bottom95: {
-      marginBottom: "9.1em"
+      marginBottom: "9.1em",
     },
     bottom100: {
-      marginBottom: "10em"
+      marginBottom: "10em",
     },
     center: {
       display: "flex",
-      justifyContent: "center"
+      justifyContent: "center",
     },
     start: {
       display: "flex",
-      justifyContent: "flex-start"
+      justifyContent: "flex-start",
     },
     end: {
       display: "flex",
-      justifyContent: "flex-end"
+      justifyContent: "flex-end",
     },
     relative: {
-      position: "relative"
+      position: "relative",
     },
     white: {
-      color: "white!important"
+      color: "white!important",
     },
     noScroll: {
-      maxHeight: "100vh"
+      maxHeight: "100vh",
     },
     noHeight: {
-      height: "0px"
+      height: "0px",
     },
     noWidth: {
-      width: "0px"
+      width: "0px",
     },
     noMargin: {
-      margin: "0px"
+      margin: "0px",
     },
     noPadding: {
-      padding: "0px"
+      padding: "0px",
     },
     bold: {
-      fontWeight: "bold"
-    }
+      fontWeight: "bold",
+    },
   };
 };
