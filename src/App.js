@@ -3,10 +3,9 @@ import { Route, Switch, HashRouter as Router } from "react-router-dom";
 import {
   mainRouteList,
   mainFilterRouteList,
-  locations,
   editableSchemas,
   adminRoute,
-  logoutRoute
+  logoutRoute,
 } from "./Routes";
 import {
   Dialog,
@@ -20,7 +19,7 @@ import {
   CardHeader,
   Card,
   Grid,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import MainWrapper from "./orbital-templates/Material/Wrappers/MainWrapper";
 import LoginWrapper from "./orbital-templates/Material/Wrappers/LoginWrapper";
@@ -29,7 +28,7 @@ import {
   Media,
   Forms,
   Auth,
-  Notification
+  Notification,
 } from "@markab.io/react";
 import { LoginWithAuth } from "../react-services/auth-service/auth-service";
 import { Crud } from "../react-services/crud-service/crud-service-mst";
@@ -49,8 +48,6 @@ import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
 import "./global.css";
 import { Formik } from "formik";
-import { RRule } from "rrule";
-import moment from "moment";
 import Knowledge from "./Knowledge/Knowledge";
 const loginBG = "";
 const registerBG = "";
@@ -58,7 +55,7 @@ const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
 const gaTrackingCode = "UA-46023413-2";
 const disableAuth = true;
 const offlineStorage = {
-  getItem: key => {
+  getItem: (key) => {
     return new Promise((resolve, reject) => {
       return resolve(localStorage.getItem(key));
     });
@@ -68,11 +65,11 @@ const offlineStorage = {
       return resolve(localStorage.setItem(key, value));
     });
   },
-  removeItem: key => {
+  removeItem: (key) => {
     return new Promise((resolve, reject) => {
       return resolve(localStorage.removeItem(key));
     });
-  }
+  },
 };
 const tertiary = "#1ABCFE";
 const Logout = ({ onLogout }) => {
@@ -90,7 +87,7 @@ class App extends React.Component {
     initialTags: [],
     mainRouteState: {},
     expandMap: true,
-    selected: null
+    selected: null,
   };
   constructor(props) {
     super(props);
@@ -107,19 +104,19 @@ class App extends React.Component {
     gaTrackingCode && ReactGA.pageview(this.props.location.pathname);
     rootStore.authDomainStore
       .isAuthenticated()
-      .then(res => {
+      .then((res) => {
         if (res.data.success === false) {
           this.setState({ isLoggedIn: false });
         } else {
           this.setState({ isLoggedIn: true, currentUser: res.data });
         }
       })
-      .catch(err => {
+      .catch((err) => {
         this.setState({ isLoggedIn: false });
       });
   };
   componentDidMount = () => {
-    offlineStorage.getItem("onboardingStep").then(value => {
+    offlineStorage.getItem("onboardingStep").then((value) => {
       if (value !== "final") {
         return this.props.history(`/onboarding/${value}`);
       }
@@ -133,35 +130,13 @@ class App extends React.Component {
   onDialogClose = () => {
     this.props.history.goBack();
     return this.setState({
-      showConfirmModal: false
-    });
-  };
-  expandMap = () => {
-    this.setState({
-      expandMap: true
-    });
-  };
-  collapseMap = () => {
-    this.setState({
-      expandMap: false
+      showConfirmModal: false,
     });
   };
   onDialogSave = () => {
     this.props.history.goBack();
     // this.props.celebrate_createModel();
   };
-  onSwipeStart(event) {
-    // console.log("Start swiping...", event);
-  }
-
-  onSwipeMove(position, event) {
-    // console.log(`Moved ${position.x} pixels horizontally`, event);
-    // console.log(`Moved ${position.y} pixels vertically`, event);
-  }
-
-  onSwipeEnd(event) {
-    // console.log("End swiping...", event);
-  }
   renderDialog = ({ title, message, yes, no, onYes, onNo, extra }) => {
     return (
       <Dialog
@@ -250,7 +225,7 @@ class App extends React.Component {
                           onForgotPassword={() =>
                             history.push("/auth/forgot-password")
                           }
-                          onSuccess={values => {
+                          onSuccess={(values) => {
                             this.setState({ isLoggedIn: true });
                           }}
                           location={location}
@@ -278,7 +253,7 @@ class App extends React.Component {
                               history.push("/");
                               actions.setSubmitting(false);
                             })
-                            .catch(err => {
+                            .catch((err) => {
                               actions.setErrors({ server: err });
                               actions.setSubmitting(false);
                             });
@@ -302,7 +277,7 @@ class App extends React.Component {
                                   style={{
                                     display: "block",
                                     marginLeft: "auto",
-                                    marginRight: "auto"
+                                    marginRight: "auto",
                                   }}
                                   src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/worth_manifesto-words.jpg"
                                 />
@@ -317,13 +292,13 @@ class App extends React.Component {
                                 <CardActions
                                   style={{
                                     justifyContent: "center",
-                                    flexDirection: "column"
+                                    flexDirection: "column",
                                   }}
                                 >
                                   <div
                                     style={{
                                       marginTop: "2em",
-                                      marginBottom: "2em"
+                                      marginBottom: "2em",
                                     }}
                                   >
                                     <Button
@@ -344,7 +319,7 @@ class App extends React.Component {
                                   style={{
                                     display: "block",
                                     marginLeft: "auto",
-                                    marginRight: "auto"
+                                    marginRight: "auto",
                                   }}
                                   src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/welcome-bottom.png"
                                 />
@@ -373,7 +348,7 @@ class App extends React.Component {
                               history.push("/");
                               actions.setSubmitting(false);
                             })
-                            .catch(err => {
+                            .catch((err) => {
                               actions.setErrors({ server: err });
                               actions.setSubmitting(false);
                             });
@@ -397,7 +372,7 @@ class App extends React.Component {
                                   style={{
                                     display: "block",
                                     marginLeft: "auto",
-                                    marginRight: "auto"
+                                    marginRight: "auto",
                                   }}
                                   src="https://s3.amazonaws.com/worthmanifesto.markab.io/images/worth-manifesto.png"
                                 />
@@ -453,13 +428,13 @@ class App extends React.Component {
                                 <CardActions
                                   style={{
                                     justifyContent: "center",
-                                    flexDirection: "column"
+                                    flexDirection: "column",
                                   }}
                                 >
                                   <div
                                     style={{
                                       marginTop: "2em",
-                                      marginBottom: "2em"
+                                      marginBottom: "2em",
                                     }}
                                   >
                                     <Button
@@ -478,7 +453,7 @@ class App extends React.Component {
                                   <div>
                                     <Button
                                       style={{
-                                        backgroundColor: tertiary
+                                        backgroundColor: tertiary,
                                       }}
                                       variant="contained"
                                       color="secondary"
@@ -518,7 +493,7 @@ class App extends React.Component {
                               history.push("/");
                               actions.setSubmitting(false);
                             })
-                            .catch(err => {
+                            .catch((err) => {
                               actions.setErrors({ server: err });
                               actions.setSubmitting(false);
                             });
@@ -549,8 +524,8 @@ class App extends React.Component {
                                       this.setState({
                                         currentUser: {
                                           ...this.state.currentUser,
-                                          hasSeenTutorial: true
-                                        }
+                                          hasSeenTutorial: true,
+                                        },
                                       });
                                       offlineStorage.setItem(
                                         "onboardingStep",
@@ -618,7 +593,7 @@ class App extends React.Component {
                               history.push("/");
                               actions.setSubmitting(false);
                             })
-                            .catch(err => {
+                            .catch((err) => {
                               actions.setErrors({ server: err });
                               actions.setSubmitting(false);
                             });
@@ -648,8 +623,8 @@ class App extends React.Component {
                                       this.setState({
                                         currentUser: {
                                           ...this.state.currentUser,
-                                          hasSeenTutorial: true
-                                        }
+                                          hasSeenTutorial: true,
+                                        },
                                       });
                                       offlineStorage.setItem(
                                         "onboardingStep",
@@ -687,7 +662,7 @@ class App extends React.Component {
                               history.push("/");
                               actions.setSubmitting(false);
                             })
-                            .catch(err => {
+                            .catch((err) => {
                               actions.setErrors({ server: err });
                               actions.setSubmitting(false);
                             });
@@ -717,8 +692,8 @@ class App extends React.Component {
                                       this.setState({
                                         currentUser: {
                                           ...this.state.currentUser,
-                                          hasSeenTutorial: true
-                                        }
+                                          hasSeenTutorial: true,
+                                        },
                                       });
                                       offlineStorage.setItem(
                                         "onboardingStep",
@@ -745,13 +720,13 @@ class App extends React.Component {
                 render={({ location, match, history }) => {
                   return (
                     <MainWrapper
-                      onRouteClick={route => {
+                      onRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return history.push(`${route}`);
                       }}
-                      onDrawerRouteClick={route => {
+                      onDrawerRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -816,13 +791,13 @@ class App extends React.Component {
                   const routeProps = { location, match, history };
                   return (
                     <MainWrapper
-                      onRouteClick={route => {
+                      onRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return history.push(`${route}`);
                       }}
-                      onDrawerRouteClick={route => {
+                      onDrawerRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -853,8 +828,8 @@ class App extends React.Component {
                         title: `${classes["white"]}`,
                         addButton: `${classes["bold"]}`,
                         menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
+                          flexContainer: `${classes["center"]}`,
+                        },
                       }}
                     >
                       <Crud
@@ -904,11 +879,11 @@ class App extends React.Component {
               />
               <Route
                 path={`${this.props.match.path}me`}
-                render={routeProps => {
+                render={(routeProps) => {
                   return (
                     <MainWrapper
                       routeList={mainRouteList}
-                      onDrawerRouteClick={route => {
+                      onDrawerRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -923,7 +898,7 @@ class App extends React.Component {
                       {...this.props}
                       isTabMenu={true}
                       classes={classes}
-                      onRouteClick={route => {
+                      onRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -937,7 +912,7 @@ class App extends React.Component {
               ></Route>
               <Route
                 path={`${this.props.match.path}info`}
-                render={routeProps => {
+                render={(routeProps) => {
                   return (
                     <MainWrapper
                       routeList={
@@ -950,13 +925,13 @@ class App extends React.Component {
                           ? [...mainRouteList, adminRoute, logoutRoute]
                           : [...mainRouteList, logoutRoute]
                       }
-                      onDrawerRouteClick={route => {
+                      onDrawerRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
                         return routeProps.history.push(`${route}`);
                       }}
-                      onRouteClick={route => {
+                      onRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -972,8 +947,8 @@ class App extends React.Component {
                         hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
                         title: `${classes["white"]}`,
                         menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
+                          flexContainer: `${classes["center"]}`,
+                        },
                       }}
                     >
                       <Grid
@@ -984,19 +959,19 @@ class App extends React.Component {
                         {[
                           {
                             title: "I Saw someting!",
-                            icon: "panorama_fish_eye"
+                            icon: "panorama_fish_eye",
                           },
                           {
                             title: "I want to say something!",
-                            icon: "audiotrack"
+                            icon: "audiotrack",
                           },
                           {
                             title: `Social Media Links
                                     @worthmanifesto
                                     [On Facebook, twitter, instagram, linkedin]
                                     Facebook group https://www.facebook.com/groups/worthmanifesto/`,
-                            icon: "edit"
-                          }
+                            icon: "edit",
+                          },
                         ].map(({ title, icon }) => (
                           <Grid xs={12} md={6} item>
                             <Card>
@@ -1010,7 +985,7 @@ class App extends React.Component {
                                       style={{
                                         fontWeight: "bold",
                                         fontSize:
-                                          title === "I Saw someting!" ? 20 : 16
+                                          title === "I Saw someting!" ? 20 : 16,
                                       }}
                                     >
                                       {title}
@@ -1024,18 +999,18 @@ class App extends React.Component {
                       </Grid>
                       <Route
                         path={`${this.props.match.path}record`}
-                        render={routeProps => {
+                        render={(routeProps) => {
                           return (
                             <Camera
-                              onData={data => {
+                              onData={(data) => {
                                 this.setState({
-                                  currentImage: `data:image/png;base64,${data}`
+                                  currentImage: `data:image/png;base64,${data}`,
                                 });
                                 this.setState({
-                                  showConfirmModal: true
+                                  showConfirmModal: true,
                                 });
                               }}
-                              onError={err => {
+                              onError={(err) => {
                                 console.error("ERROR!", err);
                               }}
                               {...props}
@@ -1049,16 +1024,13 @@ class App extends React.Component {
               ></Route>
               <Route
                 path={`${this.props.match.path}simulations`}
-                render={routeProps => {
+                render={(routeProps) => {
                   return (
                     <MainWrapper
                       logo={logo}
-                      hideDrawer={true}
-                      hideAppBar={true}
                       user={this.state.currentUser}
                       {...routeProps}
                       {...this.props}
-                      isTabMenu={true}
                       routeList={
                         this.state.currentUser && this.state.currentUser.isAdmin
                           ? [...mainRouteList, adminRoute]
@@ -1069,7 +1041,7 @@ class App extends React.Component {
                           ? [...mainRouteList, adminRoute, logoutRoute]
                           : [...mainRouteList, logoutRoute]
                       }
-                      onRouteClick={route => {
+                      onRouteClick={(route) => {
                         if (route.indexOf("http") !== -1) {
                           return window.open(route);
                         }
@@ -1081,14 +1053,14 @@ class App extends React.Component {
                         hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
                         content: `${classes.noScroll}`,
                         menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`
-                        }
+                          flexContainer: `${classes["center"]}`,
+                        },
                       }}
-                      render={currentProps => (
+                      render={(currentProps) => (
                         <Switch>
                           <Route
                             path={`${routeProps.match.path}`}
-                            render={props => {
+                            render={(props) => {
                               const mainFilter = props.location.pathname;
                               return (
                                 <Crud
@@ -1100,65 +1072,25 @@ class App extends React.Component {
                                   }
                                   crudDomainStore={rootStore.crudDomainStore}
                                   query={{
-                                    tags: [...this.state.tags]
+                                    tags: [...this.state.tags],
                                   }}
-                                  render={props => {
+                                  render={(props) => {
                                     return (
-                                      <MainWrapper
-                                        logo={logo}
-                                        routeList={mainFilterRouteList}
-                                        hideAppBar={true}
-                                        drawerRouteList={
-                                          this.state.currentUser &&
-                                          this.state.currentUser.isAdmin
-                                            ? [
-                                                ...mainRouteList,
-                                                adminRoute,
-                                                logoutRoute
-                                              ]
-                                            : [...mainRouteList, logoutRoute]
-                                        }
-                                        user={this.state.currentUser}
+                                      <Physics
                                         {...routeProps}
-                                        {...this.props}
-                                        length={[props.knowledge.length]}
-                                        isTabMenu={true}
-                                        onRouteClick={route => {
-                                          this.setState({
-                                            tags: new Set([])
-                                          });
-                                          if (route.indexOf("http") !== -1) {
-                                            return window.open(route);
-                                          }
-                                          return routeProps.history.push(
-                                            `${route}`
-                                          );
-                                        }}
-                                        tabMenuPosition="top"
-                                        classes={{
-                                          ...classes,
-                                          tabMenu: `${classes["white"]}`,
-                                          menuTabsClasses: {
-                                            flexContainer: `${classes["center"]}`
-                                          }
-                                        }}
-                                      >
-                                        <Physics
-                                          {...routeProps}
-                                          {...props}
-                                          location={this.props.location}
-                                          currentTags={this.state.tags}
-                                          selected={this.state.selected}
-                                          currentUser={this.state.currentUser}
-                                          setState={props =>
-                                            this.setState(props)
-                                          }
-                                          renderDialog={props =>
-                                            this.renderDialog(props)
-                                          }
-                                          knowledge={props.knowledge}
-                                        />
-                                      </MainWrapper>
+                                        {...props}
+                                        location={this.props.location}
+                                        currentTags={this.state.tags}
+                                        selected={this.state.selected}
+                                        currentUser={this.state.currentUser}
+                                        setState={(props) =>
+                                          this.setState(props)
+                                        }
+                                        renderDialog={(props) =>
+                                          this.renderDialog(props)
+                                        }
+                                        knowledge={props.knowledge}
+                                      />
                                     );
                                   }}
                                 />
@@ -1173,12 +1105,12 @@ class App extends React.Component {
               />
               <Route
                 path={`${this.props.match.path}`}
-                render={routeProps => {
+                render={(routeProps) => {
                   return (
                     <Switch>
                       <Route
                         path={`${routeProps.match.path}`}
-                        render={props => {
+                        render={(props) => {
                           return (
                             <Crud
                               modelName="knowledge"
@@ -1189,9 +1121,9 @@ class App extends React.Component {
                               }
                               crudDomainStore={rootStore.crudDomainStore}
                               query={{
-                                tags: [...this.state.tags]
+                                tags: [...this.state.tags],
                               }}
-                              render={props => {
+                              render={(props) => {
                                 return (
                                   <MainWrapper
                                     logo={logo}
@@ -1202,16 +1134,16 @@ class App extends React.Component {
                                         ? [
                                             ...mainRouteList,
                                             adminRoute,
-                                            logoutRoute
+                                            logoutRoute,
                                           ]
                                         : [...mainRouteList, logoutRoute]
                                     }
                                     user={this.state.currentUser}
                                     {...routeProps}
                                     {...this.props}
-                                    onRouteClick={route => {
+                                    onRouteClick={(route) => {
                                       this.setState({
-                                        tags: new Set([])
+                                        tags: new Set([]),
                                       });
                                       if (route.indexOf("http") !== -1) {
                                         return window.open(route);
@@ -1225,8 +1157,8 @@ class App extends React.Component {
                                       tabMenu: `${classes["white"]}`,
                                       listContainer: `${classes["top100"]}`,
                                       menuTabsClasses: {
-                                        flexContainer: `${classes["center"]}`
-                                      }
+                                        flexContainer: `${classes["center"]}`,
+                                      },
                                     }}
                                   >
                                     <Knowledge
@@ -1236,8 +1168,8 @@ class App extends React.Component {
                                       currentTags={this.state.tags}
                                       selected={this.state.selected}
                                       currentUser={this.state.currentUser}
-                                      setState={props => this.setState(props)}
-                                      renderDialog={props =>
+                                      setState={(props) => this.setState(props)}
+                                      renderDialog={(props) =>
                                         this.renderDialog(props)
                                       }
                                       knowledge={props.knowledge}
