@@ -20,7 +20,8 @@ import {
   Drawer,
   Paper,
   Grid,
-  Chip
+  Chip,
+  useMediaQuery,
 } from "@material-ui/core";
 const Icon = ({ children }) => {
   return <i className="material-icons">{children}</i>;
@@ -33,7 +34,7 @@ const enhance = compose(
   withState("route", "setRoute", 0)
 );
 
-const MainWrapper = props => {
+const MainWrapper = (props) => {
   const {
     children,
     location,
@@ -63,9 +64,10 @@ const MainWrapper = props => {
     hideDrawer,
     hideAppBar,
     render,
-    length
+    length,
   } = props;
   const isAnchor = Boolean(anchorEl);
+
   let route = routeList.filter(({ name, url }) => {
     return location.pathname.replace("/", "/").indexOf(url) !== -1;
   });
@@ -81,7 +83,7 @@ const MainWrapper = props => {
             style={{
               bottom: tabMenuPosition === "top" ? "auto" : 0,
               top: tabMenuPosition === "top" ? 0 : "auto",
-              backgroundColor: "white"
+              backgroundColor: "white",
             }}
             className={classes.tabMenu}
           >
@@ -111,7 +113,7 @@ const MainWrapper = props => {
             style={{
               bottom: tabMenuPosition === "top" ? "auto" : 0,
               top: tabMenuPosition === "top" ? 0 : "auto",
-              backgroundColor: "white"
+              backgroundColor: "white",
             }}
             className={classes.tabMenu}
           >
@@ -137,7 +139,7 @@ const MainWrapper = props => {
                     style={{
                       marginLeft: "auto",
                       marginRight: "10px",
-                      color: "black"
+                      color: "black",
                     }}
                     item
                   >
@@ -255,17 +257,17 @@ const MainWrapper = props => {
                     keepMounted
                     anchorOrigin={{
                       vertical: "bottom",
-                      horizontal: "left"
+                      horizontal: "left",
                     }}
                     transformOrigin={{
                       vertical: "bottom",
-                      horizontal: "left"
+                      horizontal: "left",
                     }}
                     open={isAnchor}
                     onClose={() => setAnchorEl(null)}
                   >
                     <MenuItem
-                      onClick={event => {
+                      onClick={(event) => {
                         setMenuOpen(false);
                         onRouteClick
                           ? onRouteClick("/settings")
@@ -275,7 +277,7 @@ const MainWrapper = props => {
                       Settings
                     </MenuItem>
                     <MenuItem
-                      onClick={event => {
+                      onClick={(event) => {
                         setMenuOpen(false);
                         onRouteClick
                           ? onRouteClick("logout")
@@ -301,7 +303,7 @@ const MainWrapper = props => {
             classes={classes}
             routeList={drawerRouteList ? drawerRouteList : routeList}
             isLoggedIn={user && !!user.name}
-            onClick={route => {
+            onClick={(route) => {
               setOpen(false);
               if (onDrawerRouteClick) {
                 return onDrawerRouteClick(`${route.url}`);

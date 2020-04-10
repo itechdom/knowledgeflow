@@ -11,7 +11,7 @@ import {
   IconButton,
   Icon,
   Tabs,
-  Tab
+  Tab,
 } from "@material-ui/core";
 import Reveal from "./Reveal";
 import Autocomplete from "../../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
@@ -20,6 +20,7 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
 import GraphTree from "./GraphTree";
+import Mindmap from "./Mindmap";
 import { withState, compose } from "recompose";
 import {
   handleNodeAdd,
@@ -29,7 +30,7 @@ import {
   handleNodeSwap,
   handleNodeToggle,
   handleNodeUpdate,
-  isVisible
+  isVisible,
 } from "./Model.Preview.state";
 
 const enhance = compose(
@@ -43,7 +44,7 @@ const enhance = compose(
   withState("graphContainer", "setGraphContainer"),
   withState("listContainer", "setListContainer")
 );
-const ExpandCollapse = props => {
+const ExpandCollapse = (props) => {
   const { handleNodeToggle, visible } = props;
   return visible ? (
     <IconButton onClick={handleNodeToggle}>
@@ -103,7 +104,7 @@ const listRefCallback = (listConainer, setListContainer, ref) => {
   }
 };
 
-const ModelPreview = props => {
+const ModelPreview = (props) => {
   let {
     model,
     edit,
@@ -146,12 +147,12 @@ const ModelPreview = props => {
   React.useEffect(() => {
     model &&
       props.fetchPageByTopic &&
-      props.fetchPageByTopic(model.title).then(data => {
+      props.fetchPageByTopic(model.title).then((data) => {
         setWikipedia(data);
       });
     model &&
       props.fetchImagesByTopic &&
-      props.fetchImagesByTopic(model.title).then(data => {
+      props.fetchImagesByTopic(model.title).then((data) => {
         console.log("data", data);
       });
   }, []);
@@ -164,7 +165,11 @@ const ModelPreview = props => {
       graphContainer,
       setGraphContainer
     ),
-    listRefCallback: listRefCallback.bind(null, listContainer, setListContainer)
+    listRefCallback: listRefCallback.bind(
+      null,
+      listContainer,
+      setListContainer
+    ),
   };
   const TreeOperations = {
     handleNodeAdd: handleNodeAdd.bind(null, mindmapByKeys, setMindmapByKeys),
@@ -187,21 +192,21 @@ const ModelPreview = props => {
       mindmapByKeys,
       setMindmapByKeys
     ),
-    isVisible: isVisible.bind(null, mindmapByKeys, visibleNodeKeys)
+    isVisible: isVisible.bind(null, mindmapByKeys, visibleNodeKeys),
   };
   const listTreeSizes = {
     xs: viewOption === 1 ? 12 : 12,
     sm: viewOption === 1 ? 12 : 12,
     md: viewOption === 1 ? 12 : 4,
     lg: viewOption === 1 ? 12 : 4,
-    xl: viewOption === 1 ? 12 : 4
+    xl: viewOption === 1 ? 12 : 4,
   };
   const graphTreeSizes = {
     xs: viewOption === 0 ? 12 : 12,
     sm: viewOption === 0 ? 12 : 12,
     md: viewOption === 0 ? 8 : 1,
     lg: viewOption === 0 ? 8 : 1,
-    xl: viewOption === 0 ? 8 : 1
+    xl: viewOption === 0 ? 8 : 1,
   };
 
   return (
@@ -217,7 +222,7 @@ const ModelPreview = props => {
               inputClassName={classes.autocomplete}
               throttleSearch={true}
               placeholder={"Search…"}
-              onSelect={suggestion => {
+              onSelect={(suggestion) => {
                 window.setTimeout(() => {
                   if (
                     references[suggestion.id] &&
@@ -230,7 +235,7 @@ const ModelPreview = props => {
                 }, 1000);
                 TreeOperations.handleNodeToggle(suggestion.id);
               }}
-              loadSuggestions={text => {
+              loadSuggestions={(text) => {
                 return new Promise((resolve, reject) => {
                   const res = knowledgeSearch(mindmapByKeys, text);
                   res && resolve(res);
@@ -270,7 +275,7 @@ const ModelPreview = props => {
         setOpen={setDeleting}
         onConfirm={() => {
           setDeleting(false);
-          deleteModel(model).then(res => {
+          deleteModel(model).then((res) => {
             onDelete();
           });
         }}
@@ -285,7 +290,7 @@ const ModelPreview = props => {
           <Grid {...listTreeSizes} item>
             <Paper>
               <div
-                ref={ref => {
+                ref={(ref) => {
                   if (!listContainer) {
                     measure.listRefCallback(ref);
                   }
@@ -315,7 +320,7 @@ const ModelPreview = props => {
                   editedNode={editedNode}
                   edit={edit}
                   level={level}
-                  onRefs={references => {
+                  onRefs={(references) => {
                     setReferences(references);
                   }}
                   {...TreeOperations}
@@ -326,7 +331,7 @@ const ModelPreview = props => {
           <Grid {...graphTreeSizes} item>
             <Paper>
               <div
-                ref={ref => {
+                ref={(ref) => {
                   if (!graphContainer) {
                     measure.graphRefCallback(ref);
                   }

@@ -19,12 +19,15 @@ import {
   Card,
   CardContent,
   Button,
+  IconButton,
+  Icon,
   Paper,
   Backdrop,
+  useMediaQuery,
 } from "@material-ui/core";
+import Pagination from "../Pagination/Pagination";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 import ClientNotification from "../ClientNotification/ClientNotification";
-import TablePagination from "@material-ui/core/TablePagination";
 import Loading from "../Loading/Loading";
 
 const enhance = compose(
@@ -144,6 +147,9 @@ const ModelList = enhance(
       }
       history.push(`${match.path}/view/${model._id}`);
     };
+    const isXS = useMediaQuery((theme) => theme.breakpoints.down("xs"));
+    const isSm = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+    const isBig = useMediaQuery((theme) => theme.breakpoints.up("sm"));
     const Actions = {
       onEdit: onEditWrapper,
       onDelete: onDeleteWrapper,
@@ -496,27 +502,31 @@ const ModelList = enhance(
                           </Grid>
                         )}
                       </Grid>
-                      <Grid style={{ marginTop: "1em" }} item md={6}>
-                        {!noPagination ? (
-                          <Paper>
-                            <TablePagination
-                              rowsPerPageOptions={[5, 10, 25]}
-                              component="div"
-                              count={modelArray.count}
-                              rowsPerPage={rowsPerPage}
-                              page={page}
-                              onChangePage={(ev, page) => {
-                                onChangePage(page + 1);
-                                setPage(page);
-                              }}
-                              onChangeRowsPerPage={(ev, rowsPerPage) =>
-                                setRowsPerPage(rowsPerPage)
-                              }
-                            />
-                          </Paper>
-                        ) : (
-                          <></>
-                        )}
+                      <Grid container>
+                        <Grid style={{ marginTop: "4em" }} item md={4}>
+                          {!noPagination ? (
+                            <Paper>
+                              <Pagination
+                                isSm={isSm}
+                                component="div"
+                                count={modelArray.count}
+                                rowsPerPage={rowsPerPage}
+                                page={page}
+                                onChangePage={(page) => {
+                                  page === 0
+                                    ? onChangePage(1)
+                                    : onChangePage(page + 1);
+                                  setPage(page);
+                                }}
+                                onChangeRowsPerPage={(rowsPerPage) =>
+                                  setRowsPerPage(rowsPerPage)
+                                }
+                              />
+                            </Paper>
+                          ) : (
+                            <></>
+                          )}
+                        </Grid>
                       </Grid>
                     </Grid>
                   )}

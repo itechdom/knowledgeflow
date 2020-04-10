@@ -34,9 +34,9 @@ class Node extends React.Component {
     this.props.setNodeValue({ value: this.props.title, key: "title" });
   }
 
-  shouldComponentUpdate(nextProps) {
-    return nextProps.visible !== this.props.visible;
-  }
+  // shouldComponentUpdate(nextProps) {
+  //   return nextProps.visible !== this.props.visible;
+  // }
 
   testHtml(title) {
     var expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
@@ -163,7 +163,6 @@ class Node extends React.Component {
 
   render() {
     const isHighlighted = this.props.level.length <= 6;
-    console.log(this.props);
     return (
       <div key={this.props._id} ref={this.props.innerRef} id={this.props._id}>
         <ListItem
