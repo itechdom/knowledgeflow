@@ -337,7 +337,7 @@ const ModelPreview = (props) => {
                   }
                 }}
               >
-                <GraphTree
+                <Mindmap
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
                   edit={edit}
@@ -345,7 +345,16 @@ const ModelPreview = (props) => {
                   width={graphContainer && graphContainer.width}
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
-                />
+                ></Mindmap>
+                {/* <GraphTree
+                  mindmapByKeys={mindmapByKeys}
+                  editedNode={editedNode}
+                  edit={edit}
+                  level={level}
+                  width={graphContainer && graphContainer.width}
+                  height={graphContainer && graphContainer.height}
+                  {...TreeOperations}
+                /> */}
               </div>
             </Paper>
           </Grid>
