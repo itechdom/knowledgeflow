@@ -4,39 +4,38 @@ import MindmapTree from "react-d3-tree";
 import Node from "./Node";
 import { TransitionGroup, Transition } from "react-transition-group";
 
-export const convertToMindmap = node => {
-  if (node) {
-    Object.keys(node).map(key => {
-      const currentNode = node[key];
-      currentNode.name = currentNode.title;
-      currentNode._collapsed = false;
-      currentNode.children =
-        currentNode.ideas &&
-        Object.keys(currentNode.ideas).map(key => {
-          let child = currentNode.ideas[key];
-          child.name = child.title;
-          return child;
-        });
-      return convertToMindmap(node[key].ideas);
-    });
-  }
-  return;
+export const convertToMindmap = (node, mindmapByKeys) => {
+  const keyList = Object.keys(node);
+  console.log("KEY LIST", keyList);
+  keyList.map((key) => {
+    const currentNode = mindmapByKeys[key];
+    console.log(key, "CURRENTNODE", currentNode);
+    currentNode.name = currentNode.title;
+    currentNode._collapsed = false;
+    currentNode.children =
+      currentNode.children &&
+      currentNode.children.map((key) => {
+        return mindmapByKeys[key];
+      });
+    return convertToMindmap(currentNode.children, mindmapByKeys);
+  });
 };
 class Tree extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: [],
     };
   }
 
-  formatData(nodeList) {
-    convertToMindmap(nodeList, null);
-    this.setState({ data: [nodeList["1"]] });
+  formatData(mindmapByKeys) {
+    const root = Object.keys(this.props.mindmapByKeys)[0];
+    convertToMindmap(mindmapByKeys[root], mindmapByKeys[root]);
+    this.setState({ data: [mindmapByKeys["1"]] });
   }
 
   componentDidMount() {
-    this.formatData(this.props.nodeList);
+    this.formatData(this.props.mindmapByKeys);
   }
 
   toggleEnterState = () => {
@@ -46,7 +45,6 @@ class Tree extends React.Component {
   addNode() {}
 
   render() {
-    console.log(this.state.data);
     return (
       <div style={{ width: "50em", height: "20em" }}>
         {this.state.data.length > 0 && (

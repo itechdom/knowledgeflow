@@ -219,12 +219,7 @@ const MainWrapper = (props) => {
                   <img src={logo} width="80px" height="45px" />
                 </Grid>
                 <Grid item>
-                  <Typography
-                    style={{ fontWeight: "bold" }}
-                    variant="title"
-                    noWrap
-                    className={classes.title}
-                  >
+                  <Typography variant="h6" noWrap className={classes.title}>
                     {brand
                       ? brand
                       : (routeList[currentRoute] &&

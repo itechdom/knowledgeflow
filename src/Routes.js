@@ -1,27 +1,27 @@
 export const dateFilterRouteList = [
   { url: "today", name: "Today", icon: "", type: "" },
   { url: "this-week", name: "This week", icon: "", type: "" },
-  { url: "next-week", name: "Next week", icon: "", type: "" }
+  { url: "next-week", name: "Next week", icon: "", type: "" },
 ];
 
 export const mainFilterRouteList = [{ url: "all", name: "All", icon: "" }];
 
 export const mainRouteList = [
-  { url: "/", name: "Home", icon: "home" },
-  { url: "/simulations", name: "Simulations", icon: "info" },
-  { url: "/info", name: "About", icon: "info" }
+  { url: "/", name: "My Knowledge", icon: "memory" },
+  { url: "/simulations", name: "Simulations", icon: "router" },
+  { url: "/record", name: "Record", icon: "radio_button_checked" },
 ];
 
 export const adminRoute = {
   url: "/admin",
   name: "Admin",
-  icon: "settings_applications"
+  icon: "settings_applications",
 };
 
 export const logoutRoute = {
   url: "/logout",
   name: "Log Out",
-  icon: "exit_to_app"
+  icon: "exit_to_app",
 };
 
 export const waiver = `
@@ -41,6 +41,6 @@ I release Worth Manifesto from any and all liability related to use and dissemin
 export const editableSchemas = [
   {
     modelName: "volunteerings",
-    resource: { defaultValue: "volunteerings" }
-  }
+    resource: { defaultValue: "volunteerings" },
+  },
 ];

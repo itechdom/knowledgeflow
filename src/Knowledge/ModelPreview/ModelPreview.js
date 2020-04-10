@@ -144,6 +144,7 @@ const ModelPreview = (props) => {
   } = props;
   const [wikipedia, setWikipedia] = React.useState();
   const [wikipediaVisible, setWikipediaVisible] = React.useState(false);
+  console.log(mindmapByKeys, "mindmap by keys");
   React.useEffect(() => {
     model &&
       props.fetchPageByTopic &&
@@ -337,7 +338,7 @@ const ModelPreview = (props) => {
                   }
                 }}
               >
-                <Mindmap
+                {/* <Mindmap
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
                   edit={edit}
@@ -345,8 +346,8 @@ const ModelPreview = (props) => {
                   width={graphContainer && graphContainer.width}
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
-                ></Mindmap>
-                {/* <GraphTree
+                ></Mindmap> */}
+                <GraphTree
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
                   edit={edit}
@@ -354,7 +355,7 @@ const ModelPreview = (props) => {
                   width={graphContainer && graphContainer.width}
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
-                /> */}
+                />
               </div>
             </Paper>
           </Grid>

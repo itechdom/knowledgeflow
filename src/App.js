@@ -911,7 +911,7 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
-                path={`${this.props.match.path}info`}
+                path={`${this.props.match.path}record`}
                 render={(routeProps) => {
                   return (
                     <MainWrapper
