@@ -1,6 +1,6 @@
 import React from "react";
 import TablePagination from "@material-ui/core/TablePagination";
-import { Paper } from "@material-ui/core";
+import { Paper, IconButton, Icon } from "@material-ui/core";
 const Pagination = ({
   isSm,
   rowsPerPage,
@@ -27,7 +27,15 @@ const Pagination = ({
       />
     </Paper>
   ) : (
-    <></>
+    <Paper>
+      <IconButton onClick={() => onChangePage(page - 1)}>
+        <Icon>navigate_before</Icon>
+      </IconButton>
+      {10 * (page + 1) - 9} to {`${10 * (page + 1)}`} of {count}
+      <IconButton onClick={() => onChangePage(page + 1)}>
+        <Icon>navigate_next</Icon>
+      </IconButton>
+    </Paper>
   );
 };
 export default Pagination;

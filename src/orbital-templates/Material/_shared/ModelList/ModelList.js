@@ -503,7 +503,7 @@ const ModelList = enhance(
                         )}
                       </Grid>
                       <Grid container>
-                        <Grid style={{ marginTop: "4em" }} item md={4}>
+                        <Grid style={{ marginTop: "4em" }} item md={12}>
                           {!noPagination ? (
                             <Paper>
                               <Pagination
