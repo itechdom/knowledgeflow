@@ -5,7 +5,7 @@ export const styles = (theme) => {
   return {
     root: {},
     hasPadding: {
-      padding: "2em 5em",
+      padding: "2em",
     },
     card: {
       width: "100%",
@@ -14,6 +14,7 @@ export const styles = (theme) => {
       marginTop: "5em",
       marginBottom: "5em",
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
+      minHeight: "100vh",
     },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed

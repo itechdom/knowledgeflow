@@ -30,6 +30,7 @@ import {
   Auth,
   Notification,
 } from "@markab.io/react";
+import { Wikipedia } from "../react-services-pro/wikipedia-service/wikipedia-service";
 import { LoginWithAuth } from "../react-services/auth-service/auth-service";
 import { Crud } from "../react-services/crud-service/crud-service-mst";
 import config from "Config";
@@ -1167,21 +1168,29 @@ class App extends React.Component {
                                         },
                                       }}
                                     >
-                                      <Knowledge
-                                        {...routeProps}
-                                        {...props}
-                                        location={this.props.location}
-                                        currentTags={this.state.tags}
-                                        selected={this.state.selected}
-                                        currentUser={this.state.currentUser}
-                                        setState={(props) =>
-                                          this.setState(props)
+                                      <Wikipedia
+                                        SERVER={config.SERVER}
+                                        offlineStorage={offlineStorage}
+                                        notificationDomainStore={
+                                          rootStore.notificationDomainStore
                                         }
-                                        renderDialog={(props) =>
-                                          this.renderDialog(props)
-                                        }
-                                        knowledge={props.knowledge}
-                                      />
+                                      >
+                                        <Knowledge
+                                          {...routeProps}
+                                          {...props}
+                                          location={this.props.location}
+                                          currentTags={this.state.tags}
+                                          selected={this.state.selected}
+                                          currentUser={this.state.currentUser}
+                                          setState={(props) =>
+                                            this.setState(props)
+                                          }
+                                          renderDialog={(props) =>
+                                            this.renderDialog(props)
+                                          }
+                                          knowledge={props.knowledge}
+                                        />
+                                      </Wikipedia>
                                     </MainWrapper>
                                   );
                                 }}

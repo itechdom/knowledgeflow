@@ -103,7 +103,7 @@ class ModelListItem extends React.Component {
       onView,
     } = this.props;
     return (
-      <Grid container justify="center">
+      <Grid style={{ marginBottom: "10em" }} container justify="center">
         <Grid item>
           <Card key={model._id} className={classes.card}>
             <CardActionArea

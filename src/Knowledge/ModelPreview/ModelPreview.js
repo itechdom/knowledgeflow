@@ -12,9 +12,10 @@ import {
   Icon,
   Tabs,
   Tab,
+  Typography,
 } from "@material-ui/core";
-import Reveal from "./Reveal";
 import Autocomplete from "../../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
+import Markdown from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.MarkdownInput";
 import ListTree from "./ListTree.js";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
@@ -142,21 +143,23 @@ const ModelPreview = (props) => {
     onView,
     ...rest
   } = props;
-  const [wikipedia, setWikipedia] = React.useState();
-  const [wikipediaVisible, setWikipediaVisible] = React.useState(false);
-  console.log(mindmapByKeys, "mindmap by keys");
+  const [wikipedia, setWikipedia] = React.useState([]);
+  const [wikipediaImages, setWikipediaImages] = React.useState([]);
   React.useEffect(() => {
     model &&
-      props.fetchPageByTopic &&
-      props.fetchPageByTopic(model.title).then((data) => {
-        setWikipedia(data);
-      });
-    model &&
-      props.fetchImagesByTopic &&
-      props.fetchImagesByTopic(model.title).then((data) => {
-        console.log("data", data);
-      });
-  }, []);
+      model.title &&
+      props
+        .fetchPageByTopic(model.title)
+        .then((data) => {
+          setWikipedia(data);
+        })
+        .catch((err) => console.error(err));
+    // model &&
+    //   props.fetchImagesByTopic &&
+    //   props.fetchImagesByTopic(model.title).then((data) => {
+    //     setWikipediaImages(data);
+    //   });
+  }, [model]);
   if (!mindmapByKeys && model && model.body) {
     setMindmapByKeys(model.body);
   }
@@ -198,18 +201,17 @@ const ModelPreview = (props) => {
   const listTreeSizes = {
     xs: viewOption === 1 ? 12 : 12,
     sm: viewOption === 1 ? 12 : 12,
-    md: viewOption === 1 ? 12 : 4,
-    lg: viewOption === 1 ? 12 : 4,
-    xl: viewOption === 1 ? 12 : 4,
+    md: viewOption === 1 ? 12 : 12,
+    lg: viewOption === 1 ? 12 : 12,
+    xl: viewOption === 1 ? 12 : 12,
   };
   const graphTreeSizes = {
     xs: viewOption === 0 ? 12 : 12,
     sm: viewOption === 0 ? 12 : 12,
-    md: viewOption === 0 ? 8 : 1,
-    lg: viewOption === 0 ? 8 : 1,
-    xl: viewOption === 0 ? 8 : 1,
+    md: viewOption === 0 ? 5 : 1,
+    lg: viewOption === 0 ? 5 : 1,
+    xl: viewOption === 0 ? 5 : 1,
   };
-
   return (
     <>
       <header>
@@ -287,35 +289,27 @@ const ModelPreview = (props) => {
         classes={classes}
       />
       {mindmapByKeys && (
-        <Grid container>
-          <Grid {...listTreeSizes} item>
-            <Paper>
+        <Grid container justify="space-between">
+          <Grid
+            style={{
+              marginBottom: "6em",
+            }}
+            {...listTreeSizes}
+            item
+          >
+            <Paper
+              style={{
+                height: "400px",
+                overflow: "scroll",
+              }}
+            >
               <div
                 ref={(ref) => {
                   if (!listContainer) {
                     measure.listRefCallback(ref);
                   }
                 }}
-                style={{ height: "500px", overflow: "scroll" }}
               >
-                <List>
-                  <ListItem>
-                    <ExpandCollapse
-                      handleNodeToggle={() =>
-                        setWikipediaVisible(!wikipediaVisible)
-                      }
-                      visible={wikipediaVisible}
-                    />
-                    <h1>Wikipedia</h1>
-                    {wikipediaVisible ? (
-                      <div>
-                        <Reveal Node={wikipedia} />
-                      </div>
-                    ) : (
-                      <></>
-                    )}
-                  </ListItem>
-                </List>
                 <ListTree
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
@@ -330,6 +324,13 @@ const ModelPreview = (props) => {
             </Paper>
           </Grid>
           <Grid {...graphTreeSizes} item>
+            <Grid container justify="center" style={{ marginBottom: "10px" }}>
+              <Grid item md={4}>
+                <Typography variant="h5" style={{ fontWeight: "300" }}>
+                  Force Directed Graph
+                </Typography>
+              </Grid>
+            </Grid>
             <Paper>
               <div
                 ref={(ref) => {
@@ -358,6 +359,39 @@ const ModelPreview = (props) => {
                 />
               </div>
             </Paper>
+          </Grid>
+          <Grid {...graphTreeSizes} item>
+            <Grid item>
+              <Grid container justify="center" style={{ marginBottom: "10px" }}>
+                <Grid item md={4}>
+                  <Typography variant="h5" style={{ fontWeight: "300" }}>
+                    Wikipedia
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Paper>
+                <List>
+                  {wikipedia.map((link) => (
+                    <ListItem>
+                      <a target="_blank" href={link}>
+                        <Typography style={{ whiteSpace: "nowrap" }}>
+                          {link}
+                        </Typography>
+                      </a>
+                    </ListItem>
+                  ))}
+                </List>
+                {/* <List>
+                  {wikipediaImages.map((image) => (
+                    <ListItem>
+                      <a target="_blank" href={image}>
+                        <img src={image} />
+                      </a>
+                    </ListItem>
+                  ))}
+                </List> */}
+              </Paper>
+            </Grid>
           </Grid>
         </Grid>
       )}
