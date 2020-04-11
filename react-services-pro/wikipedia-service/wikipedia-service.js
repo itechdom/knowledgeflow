@@ -25,12 +25,9 @@ export const Wikipedia = ({
   const modelName = "wikipedia";
   const myActions = (props) => {
     return {
-      wikipediaFetchModel: () => {
-        return props.self.state;
-      },
       fetchPageByTopic: (topic) => {
         if (store[topic]) {
-          props.self.setSuccess(store[topic]);
+          return props.self.setSuccess(store[topic]);
         }
         return offlineStorage.getItem("jwtToken").then((token) => {
           return axios({
