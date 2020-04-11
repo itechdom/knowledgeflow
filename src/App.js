@@ -1109,97 +1109,80 @@ class App extends React.Component {
                 path={`${this.props.match.path}`}
                 render={(routeProps) => {
                   return (
-                    <Switch>
-                      <Route
-                        path={`${routeProps.match.path}`}
-                        render={(props) => {
-                          return (
+                    <Crud
+                      modelName="knowledge"
+                      SERVER={config.SERVER}
+                      offlineStorage={offlineStorage}
+                      notificationDomainStore={
+                        rootStore.notificationDomainStore
+                      }
+                      crudDomainStore={rootStore.crudDomainStore}
+                      query={{
+                        tags: [...this.state.tags],
+                      }}
+                      paginate={true}
+                      render={(props) => {
+                        return (
+                          <MainWrapper
+                            logo={logo}
+                            routeList={mainFilterRouteList}
+                            drawerRouteList={
+                              this.state.currentUser &&
+                              this.state.currentUser.isAdmin
+                                ? [...mainRouteList, adminRoute, logoutRoute]
+                                : [...mainRouteList, logoutRoute]
+                            }
+                            user={this.state.currentUser}
+                            {...routeProps}
+                            {...this.props}
+                            onRouteClick={(route) => {
+                              this.setState({
+                                tags: new Set([]),
+                              });
+                              if (route.indexOf("http") !== -1) {
+                                return window.open(route);
+                              }
+                              return routeProps.history.push(`${route}`);
+                            }}
+                            classes={{
+                              ...classes,
+                              tabMenu: `${classes["white"]}`,
+                              listContainer: `${classes["top100"]}`,
+                              menuTabsClasses: {
+                                flexContainer: `${classes["center"]}`,
+                              },
+                            }}
+                          >
                             <Forms
                               formsDomainStore={rootStore.formsDomainStore}
                               modelName="knowledge"
                             >
-                              <Crud
-                                modelName="knowledge"
+                              <Wikipedia
                                 SERVER={config.SERVER}
                                 offlineStorage={offlineStorage}
                                 notificationDomainStore={
                                   rootStore.notificationDomainStore
                                 }
-                                crudDomainStore={rootStore.crudDomainStore}
-                                query={{
-                                  tags: [...this.state.tags],
-                                }}
-                                paginate={true}
-                                render={(props) => {
-                                  return (
-                                    <MainWrapper
-                                      logo={logo}
-                                      routeList={mainFilterRouteList}
-                                      drawerRouteList={
-                                        this.state.currentUser &&
-                                        this.state.currentUser.isAdmin
-                                          ? [
-                                              ...mainRouteList,
-                                              adminRoute,
-                                              logoutRoute,
-                                            ]
-                                          : [...mainRouteList, logoutRoute]
-                                      }
-                                      user={this.state.currentUser}
-                                      {...routeProps}
-                                      {...this.props}
-                                      onRouteClick={(route) => {
-                                        this.setState({
-                                          tags: new Set([]),
-                                        });
-                                        if (route.indexOf("http") !== -1) {
-                                          return window.open(route);
-                                        }
-                                        return routeProps.history.push(
-                                          `${route}`
-                                        );
-                                      }}
-                                      classes={{
-                                        ...classes,
-                                        tabMenu: `${classes["white"]}`,
-                                        listContainer: `${classes["top100"]}`,
-                                        menuTabsClasses: {
-                                          flexContainer: `${classes["center"]}`,
-                                        },
-                                      }}
-                                    >
-                                      <Wikipedia
-                                        SERVER={config.SERVER}
-                                        offlineStorage={offlineStorage}
-                                        notificationDomainStore={
-                                          rootStore.notificationDomainStore
-                                        }
-                                      >
-                                        <Knowledge
-                                          {...routeProps}
-                                          {...props}
-                                          location={this.props.location}
-                                          currentTags={this.state.tags}
-                                          selected={this.state.selected}
-                                          currentUser={this.state.currentUser}
-                                          setState={(props) =>
-                                            this.setState(props)
-                                          }
-                                          renderDialog={(props) =>
-                                            this.renderDialog(props)
-                                          }
-                                          knowledge={props.knowledge}
-                                        />
-                                      </Wikipedia>
-                                    </MainWrapper>
-                                  );
-                                }}
-                              />
+                              >
+                                <Knowledge
+                                  {...routeProps}
+                                  {...props}
+                                  location={this.props.location}
+                                  currentTags={this.state.tags}
+                                  selected={this.state.selected}
+                                  currentUser={this.state.currentUser}
+                                  setState={(props) => this.setState(props)}
+                                  renderDialog={(props) =>
+                                    this.renderDialog(props)
+                                  }
+                                  knowledge={props.knowledge}
+                                />
+                              </Wikipedia>
                             </Forms>
-                          );
-                        }}
-                      ></Route>
-                    </Switch>
+                          </MainWrapper>
+                        );
+                      }}
+                    />
                   );
                 }}
               />

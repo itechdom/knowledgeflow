@@ -30,10 +30,7 @@ import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 import ClientNotification from "../ClientNotification/ClientNotification";
 import Loading from "../Loading/Loading";
 
-const enhance = compose(
-  withState("viewOption", "setViewOption", 0),
-  withState("currentQuery", "setCurrentQuery", {})
-);
+const enhance = compose(withState("viewOption", "setViewOption", 0));
 
 const ModelList = enhance(
   ({
@@ -103,8 +100,6 @@ const ModelList = enhance(
     onSubmit,
     defaultView,
     gridSizes,
-    currentQuery,
-    setCurrentQuery,
     showFilters,
     justify,
     ...rest
@@ -341,6 +336,13 @@ const ModelList = enhance(
           <Route
             path={`${match.path}/view/:id`}
             render={(props) => {
+              const model =
+                models &&
+                models.length > 0 &&
+                models.find(({ _id }) => _id === props.match.params.id);
+              if (!model) {
+                return <></>;
+              }
               return ModelPreviewPage ? (
                 <Grid container>
                   <Grid item xs={12}>
@@ -352,11 +354,7 @@ const ModelList = enhance(
                       updateModel={updateModel}
                       searchModel={searchModel}
                       form={form}
-                      model={
-                        models &&
-                        models.length > 0 &&
-                        models.find(({ _id }) => _id === props.match.params.id)
-                      }
+                      model={model}
                       classes={classes}
                       match={props.match}
                       location={location}
@@ -380,13 +378,7 @@ const ModelList = enhance(
                         searchModel={searchModel}
                         form={form}
                         classes={classes}
-                        model={
-                          models &&
-                          models.length > 0 &&
-                          models.find(
-                            ({ _id }) => _id === props.match.params.id
-                          )
-                        }
+                        model={model}
                         ModelPreviewActions={ModelPreviewActions}
                         ModelPreviewAction={ModelPreviewAction}
                         notifications={notifications}
@@ -394,15 +386,7 @@ const ModelList = enhance(
                         {...rest}
                       />
                       {ModelPreviewAttachment && (
-                        <ModelPreviewAttachment
-                          model={
-                            models &&
-                            models.length > 0 &&
-                            models.find(
-                              ({ _id }) => _id === props.match.params.id
-                            )
-                          }
-                        />
+                        <ModelPreviewAttachment model={model} />
                       )}
                       <FloatingAddButton onClick={onAddWrapper} />
                     </Grid>

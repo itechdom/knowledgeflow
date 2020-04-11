@@ -12,6 +12,8 @@ const testHtml = (title) => {
   return title && title.match(regex);
 };
 
+const store = {};
+
 export const Wikipedia = ({
   children,
   notificationDomainStore,
@@ -27,7 +29,9 @@ export const Wikipedia = ({
         return props.self.state;
       },
       fetchPageByTopic: (topic) => {
-        console.log("topic", topic, "HELLO");
+        if (store[topic]) {
+          props.self.setSuccess(store[topic]);
+        }
         return offlineStorage.getItem("jwtToken").then((token) => {
           return axios({
             url: `${SERVER.wikipedia.host}`,
@@ -40,21 +44,18 @@ export const Wikipedia = ({
             },
           })
             .then((res) => {
-              return transform
-                ? props.self.setSuccess(transform(res.data))
-                : props.self.setSuccess(
-                    res.data
-                      .map((d) => {
-                        if (Array.isArray(d)) {
-                          if (testHtml(d[0])) {
-                            return d;
-                          }
-                        }
-                        return;
-                      })
-                      .filter((d) => d)[0],
-                    "Query successfully run"
-                  );
+              const formattedData = res.data
+                .map((d) => {
+                  if (Array.isArray(d)) {
+                    if (testHtml(d[0])) {
+                      return d;
+                    }
+                  }
+                  return;
+                })
+                .filter((d) => d)[0];
+              store[topic] = formattedData;
+              props.self.setSuccess(formattedData, "Query successfully run");
             })
             .catch((err) => {
               return props.self.setError(err);

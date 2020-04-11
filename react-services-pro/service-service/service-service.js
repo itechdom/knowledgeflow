@@ -70,6 +70,19 @@ export const generateDomainStore = ({ myActionGenerator, modelName }) => {
     SERVER,
     transform,
   }) => {
+    const getmyViews = (self) => {
+      const myViews = {
+        getState() {
+          return self.state;
+        },
+        isLoading() {
+          return self.loading;
+        },
+      };
+      myViews[`${modelName}_getState`] = () => self.state;
+      myViews[`${modelName}_isLoading`] = () => self.loading;
+      return myViews;
+    };
     return types
       .model({
         id: types.identifier,
@@ -88,14 +101,7 @@ export const generateDomainStore = ({ myActionGenerator, modelName }) => {
           offlineStorage,
         })
       )
-      .views((self) => ({
-        getModel() {
-          return self.state;
-        },
-        isLoading() {
-          return self.loading;
-        },
-      }))
+      .views((self) => getmyViews(self))
       .create({
         state: [],
         id: "1",
@@ -111,9 +117,7 @@ export const getServiceInjector = ({ modelName, domainStore, myActions }) => {
       ...props,
       ...child.props,
     };
-    injected[modelName] = transform
-      ? transform(domainStore.state)
-      : domainStore.state;
+    injected[modelName] = domainStore.getState();
 
     injected[`${modelName}_set_filter`] = (filter) =>
       domainStore.setFilter(filter);
@@ -148,6 +152,7 @@ export const getServiceHOC = ({
     componentWillReceiveProps(nextProps) {}
     componentDidUpdate() {}
     render() {
+      console.log(domainStore);
       const childrenWithProps = React.Children.map(children, (child) => {
         let injectedProps = serviceInjector({
           domainStore,

@@ -105,6 +105,8 @@ const listRefCallback = (listConainer, setListContainer, ref) => {
   }
 };
 
+const store = {};
+
 const ModelPreview = (props) => {
   let {
     model,
@@ -141,25 +143,12 @@ const ModelPreview = (props) => {
     onDelete,
     onCreate,
     onView,
+    wikipedia,
     ...rest
   } = props;
-  const [wikipedia, setWikipedia] = React.useState([]);
-  const [wikipediaImages, setWikipediaImages] = React.useState([]);
   React.useEffect(() => {
-    model &&
-      model.title &&
-      props
-        .fetchPageByTopic(model.title)
-        .then((data) => {
-          setWikipedia(data);
-        })
-        .catch((err) => console.error(err));
-    // model &&
-    //   props.fetchImagesByTopic &&
-    //   props.fetchImagesByTopic(model.title).then((data) => {
-    //     setWikipediaImages(data);
-    //   });
-  }, [model]);
+    props.fetchPageByTopic && props.fetchPageByTopic(model.title);
+  }, []);
   if (!mindmapByKeys && model && model.body) {
     setMindmapByKeys(model.body);
   }

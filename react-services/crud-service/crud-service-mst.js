@@ -289,7 +289,7 @@ class CrudContainer extends React.Component {
       crudDomainStore.fetchModel();
       this.stores[modelName] = crudDomainStore;
     }
-
+    console.log("rerender crud service");
     const childrenWithProps = render
       ? render(injectProps(this.stores[modelName], modelName, this.props, {}))
       : React.Children.map(children, (child) => {
