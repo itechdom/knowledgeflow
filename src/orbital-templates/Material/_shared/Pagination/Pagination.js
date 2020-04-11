@@ -31,7 +31,7 @@ const Pagination = ({
       <IconButton onClick={() => onChangePage(page - 1)}>
         <Icon>navigate_before</Icon>
       </IconButton>
-      {10 * (page + 1) - 9} to {`${10 * (page + 1)}`} of {count}
+      {10 * (page) - 9} to {`${10 * (page)}`} of {count}
       <IconButton onClick={() => onChangePage(page + 1)}>
         <Icon>navigate_next</Icon>
       </IconButton>

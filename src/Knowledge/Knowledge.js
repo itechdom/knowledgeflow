@@ -32,6 +32,8 @@ const Knowledge = ({
   knowledge_media_upload,
   knowledge_media_delete,
   knowledge_count,
+  knowledge_setPage,
+  knowledge_page,
   knowledge_set_filter,
   knowledge_remove_filter,
   location,
@@ -110,9 +112,11 @@ const Knowledge = ({
       onAdd={() => {
         history.push(`${match.path}/add`);
       }}
+      page={knowledge_page}
+      setPage={knowledge_setPage}
       onChangePage={(page) => {
-        console.log("PAGE", page);
-        knowledge_fetchModel(page);
+        knowledge_setPage(page);
+        knowledge_fetchModel();
       }}
       {...rest}
     />

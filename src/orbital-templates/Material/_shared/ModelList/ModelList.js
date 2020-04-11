@@ -32,13 +32,6 @@ import Loading from "../Loading/Loading";
 
 const enhance = compose(
   withState("viewOption", "setViewOption", 0),
-  withState("page", "setPage", 1),
-  withState("rowsPerPage", "setRowsPerPage", 10),
-  lifecycle({
-    componentDidMount() {
-      this.props.setPage(0);
-    },
-  }),
   withState("currentQuery", "setCurrentQuery", {})
 );
 
@@ -510,17 +503,11 @@ const ModelList = enhance(
                                 isSm={isSm}
                                 component="div"
                                 count={modelArray.count}
-                                rowsPerPage={rowsPerPage}
+                                rowsPerPage={10}
                                 page={page}
-                                onChangePage={(page) => {
-                                  page === 0
-                                    ? onChangePage(1)
-                                    : onChangePage(page + 1);
-                                  setPage(page);
+                                onChangePage={(p) => {
+                                  onChangePage(p);
                                 }}
-                                onChangeRowsPerPage={(rowsPerPage) =>
-                                  setRowsPerPage(rowsPerPage)
-                                }
                               />
                             </Paper>
                           ) : (

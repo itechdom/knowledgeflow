@@ -22,18 +22,26 @@ export const getCrudDomainStore = (
       state: types.frozen(),
       status: types.string,
       loading: types.optional(types.boolean, true),
+      paginate: types.optional(types.boolean, false),
+      page: types.optional(types.number, 1),
       filters: types.array(Filter),
     })
     .actions((self) => ({
-      fetchModel(page, query) {
+      setPage(page) {
+        self.page = page;
+      },
+      setPaginate(paginate) {
+        self.paginate = paginate;
+      },
+      fetchModel(query) {
         self.loading = true;
         return offlineStorage
           .getItem("jwtToken")
           .then((token) => {
             return axios
               .get(
-                page
-                  ? `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${page}/10`
+                self.paginate
+                  ? `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`
                   : `${SERVER.host}:${SERVER.port}/${modelName}`,
                 {
                   params: { token, query },
@@ -189,6 +197,9 @@ export const getCrudDomainStore = (
       isLoading() {
         return self.loading;
       },
+      getPage() {
+        return self.page;
+      },
     }));
 
 const injectProps = (crudDomainStore, modelName, props, child, transform) => {
@@ -199,8 +210,8 @@ const injectProps = (crudDomainStore, modelName, props, child, transform) => {
   injected[modelName] = transform
     ? transform(crudDomainStore.state)
     : crudDomainStore.state;
-  injected[`${modelName}_fetchModel`] = (page, query) => {
-    crudDomainStore.fetchModel(page, query);
+  injected[`${modelName}_fetchModel`] = (query) => {
+    crudDomainStore.fetchModel(query);
   };
   injected[`${modelName}_getModel`] = () => {
     crudDomainStore.getModel(transform);
@@ -216,6 +227,10 @@ const injectProps = (crudDomainStore, modelName, props, child, transform) => {
 
   injected[`${modelName}_searchModel`] = (query) =>
     crudDomainStore.searchModel(query);
+
+  injected[`${modelName}_setPage`] = (page) => crudDomainStore.setPage(page);
+
+  injected[`${modelName}_page`] = crudDomainStore.getPage();
 
   injected[`searchModels`] = (query, modelNames) => {
     let promises = modelNames.map((mName) => {
@@ -255,8 +270,8 @@ class CrudContainer extends React.Component {
       offlineStorage,
       SERVER,
       notificationDomainStore,
-      render,
       paginate,
+      render,
     } = this.props;
     if (modelName && !this.stores[modelName] && !skipLoadOnInit) {
       const crudDomainStore = getCrudDomainStore(
@@ -270,7 +285,8 @@ class CrudContainer extends React.Component {
         id: "1",
         status: "initial",
       });
-      paginate ? crudDomainStore.fetchModel(1) : crudDomainStore.fetchModel();
+      crudDomainStore.setPaginate(paginate || false);
+      crudDomainStore.fetchModel();
       this.stores[modelName] = crudDomainStore;
     }
 
