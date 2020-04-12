@@ -1122,7 +1122,7 @@ class App extends React.Component {
                     const id = urlParts[urlParts.length - 1];
                     query = { _id: id };
                   } else {
-                    paginate = true;
+                    paginate = false;
                   }
                   return (
                     <Crud
@@ -1215,9 +1215,10 @@ class App extends React.Component {
                             }}
                           >
                             <MainWrapper
+                              isTabMenu={true}
+                              hideAppBar={true}
                               logo={logo}
                               routeList={filteredRoutes}
-                              hideAppBar={true}
                               drawerRouteList={
                                 this.state.currentUser &&
                                 this.state.currentUser.isAdmin
@@ -1228,7 +1229,6 @@ class App extends React.Component {
                               {...routeProps}
                               {...this.props}
                               length={[]}
-                              isTabMenu={true}
                               onRouteClick={(route) => {
                                 return routeProps.history.push({
                                   pathname: `${this.props.match.path}${route}`,
@@ -1237,7 +1237,6 @@ class App extends React.Component {
                               tabMenuPosition="top"
                               classes={{
                                 ...classes,
-                                tabMenu: `${classes["white"]}`,
                                 menuTabsClasses: {
                                   flexContainer: `${classes["center"]}`,
                                 },

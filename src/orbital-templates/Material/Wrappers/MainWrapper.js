@@ -149,24 +149,17 @@ const MainWrapper = (props) => {
               </Grid>
             )}
             <Tabs
-              className={classes.menuTabs}
-              classes={
-                classes.menuTabsClasses
-                  ? tabMenuPosition === "top"
-                    ? classes.menuTabsClasses
-                    : classes.menuTabsClasses
-                  : undefined
-              }
               value={currentRoute || 0}
               onChange={(event, route) => {
                 onRouteClick
                   ? onRouteClick(`${routeList[route].url}`)
                   : history.push(`${match.path}${routeList[route].url}`);
               }}
+              style={{ color: "black" }}
               variant="scrollable"
-              indicatorColor="secondary"
+              indicatorColor="sblack"
               textColor="secondary"
-              scrollButtons="off"
+              scrollButtons="on"
               aria-label="scrollable force tabs example"
             >
               {routeList.map((route, index) => {

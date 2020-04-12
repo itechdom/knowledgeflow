@@ -43,6 +43,8 @@ export const getCrudDomainStore = (
               url = `${SERVER.host}:${SERVER.port}/${modelName}`;
             } else if (self.paginate) {
               url = `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`;
+            } else {
+              url = `${SERVER.host}:${SERVER.port}/${modelName}`;
             }
             return axios
               .get(url, { params: { token, query } })
@@ -266,7 +268,10 @@ class CrudContainer extends React.Component {
   }
   componentDidMount() {}
   componentWillReceiveProps(nextProps) {
-    if (nextProps.paginate !== this.props.paginate) {
+    if (
+      nextProps.paginate !== this.props.paginate ||
+      nextProps.query !== this.props.query
+    ) {
       const crudDomainStore = this.stores[this.props.modelName];
       if (crudDomainStore.state.data.length <= 1) {
         crudDomainStore.setPaginate(nextProps.paginate);
