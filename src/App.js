@@ -1122,7 +1122,7 @@ class App extends React.Component {
                     const id = urlParts[urlParts.length - 1];
                     query = { _id: id };
                   } else {
-                    paginate = false;
+                    paginate = true;
                   }
                   return (
                     <Crud
@@ -1134,7 +1134,7 @@ class App extends React.Component {
                       }
                       crudDomainStore={rootStore.crudDomainStore}
                       query={query}
-                      paginate={true}
+                      paginate={paginate}
                       render={(props) => {
                         let knowledge = props.knowledge;
                         let filteredRoutes = [];

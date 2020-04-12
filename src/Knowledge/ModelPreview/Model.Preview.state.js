@@ -14,7 +14,7 @@ export const handleNodeAdd = (
     ...mindmapByKeys,
     [nodeId]: {
       ...mindmapByKeys[nodeId],
-      children: [...mindmapByKeys[nodeId].children, _id]
+      children: [...mindmapByKeys[nodeId].children, _id],
     },
     [_id]: {
       _id,
@@ -31,9 +31,9 @@ export const handleNodeAdd = (
       links: {
         source: parent,
         target: _id,
-        title: title
-      }
-    }
+        title: title,
+      },
+    },
   };
   setMindmapByKeys(newState);
 };
@@ -55,8 +55,8 @@ export const handleNodeUpdate = (
     ...mindmapByKeys,
     [nodeId]: {
       ...mindmapByKeys[nodeId],
-      [key]: value
-    }
+      [key]: value,
+    },
   };
   setMindmapByKeys(newState, () => {
     handleNodeSave(updateModel, model, newState);
@@ -67,14 +67,14 @@ export const handleNodeUpdate = (
 export const handleNodeSave = (updateModel, model, mindmapByKeys) => {
   //format mindmapByKeys
   let newMindmap = {};
-  Object.keys(mindmapByKeys).map(kn => {
+  Object.keys(mindmapByKeys).map((kn) => {
     return (newMindmap[kn] = {
       ...mindmapByKeys[kn],
       links: {
         source: mindmapByKeys[kn].parent || mindmapByKeys[kn]._id,
         target: mindmapByKeys[kn]._id,
-        title: mindmapByKeys[kn].title
-      }
+        title: mindmapByKeys[kn].title,
+      },
     });
   });
   updateModel(model, { body: newMindmap });
@@ -90,8 +90,8 @@ export const handleNodeDelete = (mindmapByKeys, setMindmapByKeys, nodeId) => {
     ...mindmapByKeysWithoutNodeId,
     [parent]: {
       ...mindmapByKeys[parent],
-      children: mindmapByKeys[parent].children.filter(id => id !== nodeId)
-    }
+      children: mindmapByKeys[parent].children.filter((id) => id !== nodeId),
+    },
   };
   setMindmapByKeys(newState);
 };
@@ -105,21 +105,31 @@ export const handleNodeToggle = (mindmapByKeys, setMindmapByKeys, nodeId) => {
     if (currentParent) {
       parents[currentParent] = {
         ...mindmapByKeys[currentParent],
-        visible: true
+        visible: true,
       };
     }
     currentParent = currentParent && mindmapByKeys[currentParent].parent;
   } while (currentParent);
-  setMindmapByKeys(prevState => {
+  setMindmapByKeys((prevState) => {
     return {
       ...prevState,
       ...parents,
       [nodeId]: {
         ...prevState[nodeId],
-        visible: !!!mindmapByKeys[nodeId].visible
-      }
+        visible: !!!mindmapByKeys[nodeId].visible,
+      },
     };
   });
+};
+
+export const handleNodeSearch = (mindmapByKeys, text) => {
+  let found = Object.keys(mindmapByKeys)
+    .filter((mk) => {
+      const title = mindmapByKeys[mk].title;
+      return title.toLowerCase().match(new RegExp(text.toLowerCase()));
+    })
+    .map((f) => mindmapByKeys[f]);
+  return found;
 };
 
 export const comparePath = (currentLevel, visibleLevel) => {
@@ -137,7 +147,7 @@ export const isVisible = (mindmapByKeys, visibleNodeKeys, nodeId) => {
     visible = false;
   } else {
     visible =
-      Object.keys(visibleNodeKeys).filter(visibleLevel => {
+      Object.keys(visibleNodeKeys).filter((visibleLevel) => {
         let res = comparePath(
           mindmapByKeys[nodeId].level,
           visibleLevel,

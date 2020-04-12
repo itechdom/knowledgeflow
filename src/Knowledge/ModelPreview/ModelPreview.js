@@ -31,6 +31,7 @@ import {
   handleNodeSwap,
   handleNodeToggle,
   handleNodeUpdate,
+  handleNodeSearch,
   isVisible,
 } from "./Model.Preview.state";
 
@@ -45,18 +46,7 @@ const enhance = compose(
   withState("graphContainer", "setGraphContainer"),
   withState("listContainer", "setListContainer")
 );
-const ExpandCollapse = (props) => {
-  const { handleNodeToggle, visible } = props;
-  return visible ? (
-    <IconButton onClick={handleNodeToggle}>
-      <Icon>keyboard_arrow_down</Icon>
-    </IconButton>
-  ) : (
-    <IconButton onClick={handleNodeToggle}>
-      <Icon>keyboard_arrow_right</Icon>
-    </IconButton>
-  );
-};
+
 const ModelPreviewViewOption = ({ viewOption, setViewOption, classes }) => {
   return (
     <Grid
@@ -216,22 +206,21 @@ const ModelPreview = (props) => {
               throttleSearch={true}
               placeholder={`Search ${model.title}`}
               onSelect={(suggestion) => {
-                window.setTimeout(() => {
-                  if (
-                    references[suggestion.id] &&
-                    references[suggestion.id].current
-                  ) {
-                    const elOffset =
-                      references[suggestion.id].current.offsetTop;
-                    listContainer.scrollTop = elOffset;
-                  }
-                }, 1000);
                 TreeOperations.handleNodeToggle(suggestion.id);
+                setTimeout(() => {
+                  document.getElementById(suggestion.id).style =
+                    "border:black 0.2px solid";
+                  document.getElementById(suggestion.id).scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                    inline: "start",
+                  });
+                }, 1000);
               }}
               loadSuggestions={(text) => {
                 return new Promise((resolve, reject) => {
-                  const res = knowledgeSearch(mindmapByKeys, text);
-                  res && resolve(res);
+                  let found = handleNodeSearch(mindmapByKeys, text);
+                  found && resolve(found);
                 });
               }}
             />
