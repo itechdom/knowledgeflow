@@ -1105,6 +1105,181 @@ class App extends React.Component {
                   );
                 }}
               />
+              {/* View knowledge, since it's an independent page */}
+              {/* <Route
+                path={`${this.props.match.path}view/:id`}
+                render={(routeProps) => {
+                  const {
+                    location: { pathname },
+                  } = routeProps;
+                  let query;
+                  let paginate = false;
+                  //if there is a category
+                  let tag = routeProps.match.params.tag;
+                  const isEditPage = pathname.indexOf("edit") !== -1;
+                  const isViewPage = pathname.indexOf("view") !== -1;
+                  if (isEditPage || isViewPage) {
+                    const urlParts = pathname.split("/");
+                    const id = urlParts[urlParts.length - 1];
+                    query = { _id: id };
+                  } else {
+                    paginate = true;
+                    query = null;
+                  }
+                  return (
+                    <Crud
+                      modelName="knowledge"
+                      SERVER={config.SERVER}
+                      offlineStorage={offlineStorage}
+                      notificationDomainStore={
+                        rootStore.notificationDomainStore
+                      }
+                      crudDomainStore={rootStore.crudDomainStore}
+                      query={query}
+                      paginate={paginate}
+                      render={(props) => {
+                        let knowledge = props.knowledge;
+                        let filteredRoutes = [];
+                        if (isEditPage || isViewPage) {
+                          filteredRoutes = [];
+                        } else {
+                          if (props.knowledge && props.knowledge.data) {
+                            let routes = props.knowledge.data
+                              .map((kn) => kn.tags)
+                              .map((t) => {
+                                const routes = t.map((tag) => {
+                                  return { url: tag, name: tag, icon: "" };
+                                });
+                                return routes;
+                              });
+                            const newRoutes = routes.reduce((prev, cur) => {
+                              return [...prev, ...cur];
+                            });
+                            filteredRoutes = newRoutes.filter((r, i) => {
+                              return (
+                                newRoutes
+                                  .map((ro) => ro.name)
+                                  .indexOf(r.name) === i
+                              );
+                            });
+                            filteredRoutes = [
+                              { url: "", name: "All", icon: "" },
+                              ...filteredRoutes,
+                            ];
+                          }
+                        }
+                        if (tag) {
+                          knowledge =
+                            props.knowledge && props.knowledge.data
+                              ? {
+                                  data: props.knowledge.data.filter(
+                                    (k) => k.tags.indexOf(tag) !== -1
+                                  ),
+                                  count: props.knowledge.count,
+                                }
+                              : props.knowledge;
+                        }
+                        return (
+                          <MainWrapper
+                            logo={logo}
+                            routeList={[
+                              {
+                                url: "all",
+                                name: "All",
+                                icon: "",
+                              },
+                            ]}
+                            drawerRouteList={
+                              this.state.currentUser &&
+                              this.state.currentUser.isAdmin
+                                ? [...mainRouteList, adminRoute, logoutRoute]
+                                : [...mainRouteList, logoutRoute]
+                            }
+                            user={this.state.currentUser}
+                            {...routeProps}
+                            {...this.props}
+                            onRouteClick={(route) => {
+                              this.setState({
+                                tags: new Set([]),
+                              });
+                              if (route.indexOf("http") !== -1) {
+                                return window.open(route);
+                              }
+                              return routeProps.history.push(`${route}`);
+                            }}
+                            classes={{
+                              ...classes,
+                              tabMenu: `${classes["white"]}`,
+                              menuTabsClasses: {
+                                flexContainer: `${classes["center"]}`,
+                              },
+                            }}
+                          >
+                            <MainWrapper
+                              isTabMenu={
+                                isViewPage || isEditPage ? false : true
+                              }
+                              hideAppBar={true}
+                              logo={logo}
+                              routeList={filteredRoutes}
+                              drawerRouteList={
+                                this.state.currentUser &&
+                                this.state.currentUser.isAdmin
+                                  ? [...mainRouteList, adminRoute, logoutRoute]
+                                  : [...mainRouteList, logoutRoute]
+                              }
+                              user={this.state.currentUser}
+                              {...routeProps}
+                              {...this.props}
+                              length={[]}
+                              onRouteClick={(route) => {
+                                return routeProps.history.push({
+                                  pathname: `${this.props.match.path}${route}`,
+                                });
+                              }}
+                              tabMenuPosition="top"
+                              classes={{
+                                ...classes,
+                                listContainer: `${classes["top100"]}`,
+                                menuTabsClasses: {
+                                  flexContainer: `${classes["center"]}`,
+                                },
+                              }}
+                            >
+                              <Forms
+                                formsDomainStore={rootStore.formsDomainStore}
+                                modelName="knowledge"
+                              >
+                                <Wikipedia
+                                  SERVER={config.SERVER}
+                                  offlineStorage={offlineStorage}
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
+                                  }
+                                >
+                                  <Knowledge
+                                    {...routeProps}
+                                    {...props}
+                                    location={this.props.location}
+                                    currentTags={this.state.tags}
+                                    selected={this.state.selected}
+                                    currentUser={this.state.currentUser}
+                                    setState={(props) => this.setState(props)}
+                                    renderDialog={(props) =>
+                                      this.renderDialog(props)
+                                    }
+                                    knowledge={knowledge}
+                                  />
+                                </Wikipedia>
+                              </Forms>
+                            </MainWrapper>
+                          </MainWrapper>
+                        );
+                      }}
+                    />
+                  );
+                }}
+              /> */}
               <Route
                 path={`${this.props.match.path}:tag?`}
                 render={(routeProps) => {
@@ -1123,6 +1298,7 @@ class App extends React.Component {
                     query = { _id: id };
                   } else {
                     paginate = true;
+                    query = null;
                   }
                   return (
                     <Crud

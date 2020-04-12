@@ -191,6 +191,7 @@ const ModelPreview = (props) => {
     lg: viewOption === 0 ? 5 : 1,
     xl: viewOption === 0 ? 5 : 1,
   };
+  console.log("rerendering");
   return (
     <>
       <header>

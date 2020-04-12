@@ -39,9 +39,7 @@ export const getCrudDomainStore = (
           .getItem("jwtToken")
           .then((token) => {
             let url;
-            if (query) {
-              url = `${SERVER.host}:${SERVER.port}/${modelName}`;
-            } else if (self.paginate) {
+            if (self.paginate) {
               url = `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`;
             } else {
               url = `${SERVER.host}:${SERVER.port}/${modelName}`;
@@ -273,13 +271,18 @@ class CrudContainer extends React.Component {
   }
   componentDidMount() {}
   componentWillReceiveProps(nextProps) {
-    if (
-      nextProps.paginate !== this.props.paginate ||
-      nextProps.query !== this.props.query
-    ) {
+    if (nextProps.paginate !== this.props.paginate) {
+      console.log("updating state ...");
       const crudDomainStore = this.stores[this.props.modelName];
       crudDomainStore.setPaginate(nextProps.paginate);
-      crudDomainStore.fetchModel(nextProps.query);
+      return crudDomainStore.fetchModel(nextProps.query);
+    }
+    if (nextProps.query !== this.props.query) {
+      console.log("updating state ...");
+      const crudDomainStore = this.stores[this.props.modelName];
+      if (nextProps.query) {
+        return crudDomainStore.fetchModel(nextProps.query);
+      }
     }
   }
   componentDidUpdate() {}
