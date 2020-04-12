@@ -54,6 +54,9 @@ const Knowledge = ({
   knowledge_loading,
   ...rest
 }) => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <ModelList
       modelArray={knowledge}
