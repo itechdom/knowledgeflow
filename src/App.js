@@ -1106,7 +1106,7 @@ class App extends React.Component {
                 }}
               />
               <Route
-                path={`${this.props.match.path}`}
+                path={`${this.props.match.path}:category?`}
                 render={(routeProps) => {
                   const {
                     location: { pathname },
@@ -1135,10 +1135,41 @@ class App extends React.Component {
                       query={query}
                       paginate={paginate}
                       render={(props) => {
+                        let filteredRoutes;
+                        if (isEditPage || isViewPage) {
+                          filteredRoutes = [];
+                        } else {
+                          let routes =
+                            props.knowledge && props.knowledge.data
+                              ? props.knowledge.data
+                                  .map((kn) => kn.tags)
+                                  .map((t) => {
+                                    const routes = t.map((tag) => {
+                                      return { url: tag, name: tag, icon: "" };
+                                    });
+                                    return routes;
+                                  })
+                              : [[{ url: "all", name: "All", icon: "" }]];
+                          const newRoutes = routes.reduce((prev, cur) => {
+                            return [...prev, ...cur];
+                          });
+                          filteredRoutes = newRoutes.filter((r, i) => {
+                            return (
+                              newRoutes.map((ro) => ro.name).indexOf(r.name) ===
+                              i
+                            );
+                          });
+                        }
                         return (
                           <MainWrapper
                             logo={logo}
-                            routeList={mainFilterRouteList}
+                            routeList={[
+                              {
+                                url: "all",
+                                name: "All",
+                                icon: "",
+                              },
+                            ]}
                             drawerRouteList={
                               this.state.currentUser &&
                               this.state.currentUser.isAdmin
@@ -1166,32 +1197,62 @@ class App extends React.Component {
                               },
                             }}
                           >
-                            <Forms
-                              formsDomainStore={rootStore.formsDomainStore}
-                              modelName="knowledge"
+                            <MainWrapper
+                              logo={logo}
+                              routeList={filteredRoutes}
+                              hideAppBar={true}
+                              drawerRouteList={
+                                this.state.currentUser &&
+                                this.state.currentUser.isAdmin
+                                  ? [...mainRouteList, adminRoute, logoutRoute]
+                                  : [...mainRouteList, logoutRoute]
+                              }
+                              user={this.state.currentUser}
+                              {...routeProps}
+                              {...this.props}
+                              length={[]}
+                              isTabMenu={true}
+                              onRouteClick={(route) => {
+                                return routeProps.history.push({
+                                  pathname: `${this.props.match.path}${route}`,
+                                });
+                              }}
+                              tabMenuPosition="top"
+                              classes={{
+                                ...classes,
+                                tabMenu: `${classes["white"]}`,
+                                menuTabsClasses: {
+                                  flexContainer: `${classes["center"]}`,
+                                },
+                              }}
                             >
-                              <Wikipedia
-                                SERVER={config.SERVER}
-                                offlineStorage={offlineStorage}
-                                notificationDomainStore={
-                                  rootStore.notificationDomainStore
-                                }
+                              <Forms
+                                formsDomainStore={rootStore.formsDomainStore}
+                                modelName="knowledge"
                               >
-                                <Knowledge
-                                  {...routeProps}
-                                  {...props}
-                                  location={this.props.location}
-                                  currentTags={this.state.tags}
-                                  selected={this.state.selected}
-                                  currentUser={this.state.currentUser}
-                                  setState={(props) => this.setState(props)}
-                                  renderDialog={(props) =>
-                                    this.renderDialog(props)
+                                <Wikipedia
+                                  SERVER={config.SERVER}
+                                  offlineStorage={offlineStorage}
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
                                   }
-                                  knowledge={props.knowledge}
-                                />
-                              </Wikipedia>
-                            </Forms>
+                                >
+                                  <Knowledge
+                                    {...routeProps}
+                                    {...props}
+                                    location={this.props.location}
+                                    currentTags={this.state.tags}
+                                    selected={this.state.selected}
+                                    currentUser={this.state.currentUser}
+                                    setState={(props) => this.setState(props)}
+                                    renderDialog={(props) =>
+                                      this.renderDialog(props)
+                                    }
+                                    knowledge={props.knowledge}
+                                  />
+                                </Wikipedia>
+                              </Forms>
+                            </MainWrapper>
                           </MainWrapper>
                         );
                       }}
