@@ -39,6 +39,7 @@ const ModelList = enhance(
     columns,
     createModel,
     modelName,
+    fetchModel,
     updateModel,
     deleteModel,
     searchModel,
@@ -336,12 +337,12 @@ const ModelList = enhance(
           <Route
             path={`${match.path}/view/:id`}
             render={(props) => {
-              const model =
+              let model =
                 models &&
                 models.length > 0 &&
                 models.find(({ _id }) => _id === props.match.params.id);
               if (!model) {
-                return <></>;
+                return <Loading></Loading>;
               }
               return ModelPreviewPage ? (
                 <Grid container>
@@ -366,7 +367,7 @@ const ModelList = enhance(
                   </Grid>
                 </Grid>
               ) : (
-                <Fade timeout={1000} in={!loading}>
+                // <Fade timeout={1000} in={!loading}>
                   <Grid container>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                       <ModelPreview
@@ -391,7 +392,7 @@ const ModelList = enhance(
                       <FloatingAddButton onClick={onAddWrapper} />
                     </Grid>
                   </Grid>
-                </Fade>
+                // </Fade>
               );
             }}
           />

@@ -43,7 +43,7 @@ const ModelListItems = enhance(
       if (Array.isArray(models) && models.length > 0) {
         return models.map((model, index) => {
           return (
-            <Fade in={In} timeout={index * 200}>
+            // <Fade in={In} timeout={index * 200}>
               <Grid
                 style={{
                   marginRight: "2em",
@@ -97,7 +97,7 @@ const ModelListItems = enhance(
                   )}
                 </div>
               </Grid>
-            </Fade>
+            // </Fade>
           );
         });
       }

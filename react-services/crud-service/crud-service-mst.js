@@ -38,15 +38,14 @@ export const getCrudDomainStore = (
         return offlineStorage
           .getItem("jwtToken")
           .then((token) => {
+            let url;
+            if (query) {
+              url = `${SERVER.host}:${SERVER.port}/${modelName}`;
+            } else if (self.paginate) {
+              url = `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`;
+            }
             return axios
-              .get(
-                self.paginate
-                  ? `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`
-                  : `${SERVER.host}:${SERVER.port}/${modelName}`,
-                {
-                  params: { token, query },
-                }
-              )
+              .get(url, { params: { token, query } })
               .then((res) => {
                 transform
                   ? self.setSuccess(transform(res.data))
@@ -202,7 +201,14 @@ export const getCrudDomainStore = (
       },
     }));
 
-const injectProps = (crudDomainStore, modelName, props, child, transform) => {
+const injectProps = (
+  crudDomainStore,
+  modelName,
+  props,
+  child,
+  transform,
+  query
+) => {
   let injected = {
     ...props,
     ...child.props,
@@ -210,8 +216,9 @@ const injectProps = (crudDomainStore, modelName, props, child, transform) => {
   injected[modelName] = transform
     ? transform(crudDomainStore.state)
     : crudDomainStore.state;
-  injected[`${modelName}_fetchModel`] = (query) => {
-    crudDomainStore.fetchModel(query);
+  injected[`${modelName}_fetchModel`] = (q) => {
+    let Query = q ? q : query;
+    crudDomainStore.fetchModel(Query);
   };
   injected[`${modelName}_getModel`] = () => {
     crudDomainStore.getModel(transform);
@@ -225,8 +232,7 @@ const injectProps = (crudDomainStore, modelName, props, child, transform) => {
   injected[`${modelName}_deleteModel`] = (model) =>
     crudDomainStore.deleteModel(model);
 
-  injected[`${modelName}_searchModel`] = (query) =>
-    crudDomainStore.searchModel(query);
+  injected[`${modelName}_searchModel`] = (q) => crudDomainStore.searchModel(q);
 
   injected[`${modelName}_setPage`] = (page) => crudDomainStore.setPage(page);
 
@@ -259,7 +265,15 @@ class CrudContainer extends React.Component {
     this.stores = {};
   }
   componentDidMount() {}
-  componentWillReceiveProps(nextProps) {}
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.paginate !== this.props.paginate) {
+      const crudDomainStore = this.stores[this.props.modelName];
+      if (crudDomainStore.state.data.length <= 1) {
+        crudDomainStore.setPaginate(nextProps.paginate);
+        crudDomainStore.fetchModel(nextProps.query);
+      }
+    }
+  }
   componentDidUpdate() {}
   render() {
     let {
@@ -270,6 +284,7 @@ class CrudContainer extends React.Component {
       offlineStorage,
       SERVER,
       notificationDomainStore,
+      query,
       paginate,
       render,
     } = this.props;
@@ -286,19 +301,29 @@ class CrudContainer extends React.Component {
         status: "initial",
       });
       crudDomainStore.setPaginate(paginate || false);
-      crudDomainStore.fetchModel();
+      crudDomainStore.fetchModel(query);
       this.stores[modelName] = crudDomainStore;
     }
     console.log("rerender crud service");
     const childrenWithProps = render
-      ? render(injectProps(this.stores[modelName], modelName, this.props, {}))
+      ? render(
+          injectProps(
+            this.stores[modelName],
+            modelName,
+            this.props,
+            {},
+            null,
+            query
+          )
+        )
       : React.Children.map(children, (child) => {
           let injectedProps = injectProps(
             this.stores[modelName],
             modelName,
             this.props,
             child,
-            transform
+            transform,
+            query
           );
           return React.cloneElement(child, { ...injectedProps });
         });

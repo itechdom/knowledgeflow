@@ -152,7 +152,6 @@ export const getServiceHOC = ({
     componentWillReceiveProps(nextProps) {}
     componentDidUpdate() {}
     render() {
-      console.log(domainStore);
       const childrenWithProps = React.Children.map(children, (child) => {
         let injectedProps = serviceInjector({
           domainStore,

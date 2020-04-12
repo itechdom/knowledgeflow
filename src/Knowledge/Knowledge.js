@@ -83,6 +83,7 @@ const Knowledge = ({
         };
         return knowledge_createModel(val);
       }}
+      fetchModel={knowledge_fetchModel}
       updateModel={knowledge_updateModel}
       getModel={knowledge_getModel}
       deleteModel={knowledge_deleteModel}

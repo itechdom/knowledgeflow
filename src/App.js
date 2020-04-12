@@ -1108,6 +1108,21 @@ class App extends React.Component {
               <Route
                 path={`${this.props.match.path}`}
                 render={(routeProps) => {
+                  const {
+                    location: { pathname },
+                  } = routeProps;
+                  let query;
+                  let paginate = false;
+                  console.log("Back to main page");
+                  const isEditPage = pathname.indexOf("edit") !== -1;
+                  const isViewPage = pathname.indexOf("view") !== -1;
+                  if (isEditPage || isViewPage) {
+                    const urlParts = pathname.split("/");
+                    const id = urlParts[urlParts.length - 1];
+                    query = { _id: id };
+                  } else {
+                    paginate = true;
+                  }
                   return (
                     <Crud
                       modelName="knowledge"
@@ -1117,10 +1132,8 @@ class App extends React.Component {
                         rootStore.notificationDomainStore
                       }
                       crudDomainStore={rootStore.crudDomainStore}
-                      query={{
-                        tags: [...this.state.tags],
-                      }}
-                      paginate={true}
+                      query={query}
+                      paginate={paginate}
                       render={(props) => {
                         return (
                           <MainWrapper
