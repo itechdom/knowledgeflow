@@ -57,6 +57,7 @@ const Knowledge = ({
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  match.path = "/";
   return (
     <ModelList
       modelArray={knowledge}

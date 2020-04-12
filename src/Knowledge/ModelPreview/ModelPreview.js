@@ -313,6 +313,37 @@ const ModelPreview = (props) => {
             </Paper>
           </Grid>
           <Grid {...graphTreeSizes} item>
+            <Grid item>
+              <Grid container justify="center" style={{ marginBottom: "10px" }}>
+                <Grid item md={4}>
+                  <Typography variant="h5" style={{ fontWeight: "300" }}>
+                    Wikipedia
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Paper>
+                <List>
+                  {wikipedia.map((link) => (
+                    <ListItem>
+                      <a target="_blank" href={link}>
+                        {link}
+                      </a>
+                    </ListItem>
+                  ))}
+                </List>
+                {/* <List>
+                  {wikipediaImages.map((image) => (
+                    <ListItem>
+                      <a target="_blank" href={image}>
+                        <img src={image} />
+                      </a>
+                    </ListItem>
+                  ))}
+                </List> */}
+              </Paper>
+            </Grid>
+          </Grid>
+          <Grid {...graphTreeSizes} item>
             <Grid container justify="center" style={{ marginBottom: "10px" }}>
               <Grid item md={4}>
                 <Typography variant="h5" style={{ fontWeight: "300" }}>
@@ -337,7 +368,7 @@ const ModelPreview = (props) => {
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
                 ></Mindmap> */}
-                {/* <GraphTree
+                <GraphTree
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
                   edit={edit}
@@ -345,42 +376,9 @@ const ModelPreview = (props) => {
                   width={graphContainer && graphContainer.width}
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
-                /> */}
+                />
               </div>
             </Paper>
-          </Grid>
-          <Grid {...graphTreeSizes} item>
-            <Grid item>
-              <Grid container justify="center" style={{ marginBottom: "10px" }}>
-                <Grid item md={4}>
-                  <Typography variant="h5" style={{ fontWeight: "300" }}>
-                    Wikipedia
-                  </Typography>
-                </Grid>
-              </Grid>
-              <Paper>
-                <List>
-                  {wikipedia.map((link) => (
-                    <ListItem>
-                      <a target="_blank" href={link}>
-                        <Typography style={{ whiteSpace: "nowrap" }}>
-                          {link}
-                        </Typography>
-                      </a>
-                    </ListItem>
-                  ))}
-                </List>
-                {/* <List>
-                  {wikipediaImages.map((image) => (
-                    <ListItem>
-                      <a target="_blank" href={image}>
-                        <img src={image} />
-                      </a>
-                    </ListItem>
-                  ))}
-                </List> */}
-              </Paper>
-            </Grid>
           </Grid>
         </Grid>
       )}
