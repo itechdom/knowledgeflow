@@ -1106,14 +1106,15 @@ class App extends React.Component {
                 }}
               />
               <Route
-                path={`${this.props.match.path}:category?`}
+                path={`${this.props.match.path}:tag?`}
                 render={(routeProps) => {
                   const {
                     location: { pathname },
                   } = routeProps;
                   let query;
                   let paginate = false;
-                  console.log("Back to main page");
+                  //if there is a category
+                  let tag = routeProps.match.params.tag;
                   const isEditPage = pathname.indexOf("edit") !== -1;
                   const isViewPage = pathname.indexOf("view") !== -1;
                   if (isEditPage || isViewPage) {
@@ -1135,30 +1136,46 @@ class App extends React.Component {
                       query={query}
                       paginate={paginate}
                       render={(props) => {
-                        let filteredRoutes;
+                        let knowledge = props.knowledge;
+                        let filteredRoutes = [];
                         if (isEditPage || isViewPage) {
                           filteredRoutes = [];
                         } else {
-                          let routes =
+                          if (props.knowledge && props.knowledge.data) {
+                            let routes = props.knowledge.data
+                              .map((kn) => kn.tags)
+                              .map((t) => {
+                                const routes = t.map((tag) => {
+                                  return { url: tag, name: tag, icon: "" };
+                                });
+                                return routes;
+                              });
+                            const newRoutes = routes.reduce((prev, cur) => {
+                              return [...prev, ...cur];
+                            });
+                            filteredRoutes = newRoutes.filter((r, i) => {
+                              return (
+                                newRoutes
+                                  .map((ro) => ro.name)
+                                  .indexOf(r.name) === i
+                              );
+                            });
+                            filteredRoutes = [
+                              { url: "", name: "All", icon: "" },
+                              ...filteredRoutes,
+                            ];
+                          }
+                        }
+                        if (tag) {
+                          knowledge =
                             props.knowledge && props.knowledge.data
-                              ? props.knowledge.data
-                                  .map((kn) => kn.tags)
-                                  .map((t) => {
-                                    const routes = t.map((tag) => {
-                                      return { url: tag, name: tag, icon: "" };
-                                    });
-                                    return routes;
-                                  })
-                              : [[{ url: "all", name: "All", icon: "" }]];
-                          const newRoutes = routes.reduce((prev, cur) => {
-                            return [...prev, ...cur];
-                          });
-                          filteredRoutes = newRoutes.filter((r, i) => {
-                            return (
-                              newRoutes.map((ro) => ro.name).indexOf(r.name) ===
-                              i
-                            );
-                          });
+                              ? {
+                                  data: props.knowledge.data.filter(
+                                    (k) => k.tags.indexOf(tag) !== -1
+                                  ),
+                                  count: props.knowledge.count,
+                                }
+                              : props.knowledge;
                         }
                         return (
                           <MainWrapper
@@ -1248,7 +1265,7 @@ class App extends React.Component {
                                     renderDialog={(props) =>
                                       this.renderDialog(props)
                                     }
-                                    knowledge={props.knowledge}
+                                    knowledge={knowledge}
                                   />
                                 </Wikipedia>
                               </Forms>

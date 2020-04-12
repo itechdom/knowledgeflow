@@ -121,6 +121,7 @@ const Knowledge = ({
       onChangePage={(page) => {
         knowledge_setPage(page);
         knowledge_fetchModel();
+        history.push("/");
       }}
       {...rest}
     />
