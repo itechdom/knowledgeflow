@@ -109,7 +109,7 @@ const MainWrapper = (props) => {
           </AppBar>
         )}
         {isTabMenu && (
-          <AppBar
+          <Paper
             style={{
               bottom: tabMenuPosition === "top" ? "auto" : 0,
               top: tabMenuPosition === "top" ? 0 : "auto",
@@ -117,37 +117,6 @@ const MainWrapper = (props) => {
             }}
             className={classes.tabMenu}
           >
-            {tabMenuPosition === "top" && (
-              <Grid container>
-                <Grid item>
-                  <IconButton
-                    aria-label="Open drawer"
-                    onClick={() => setOpen(true)}
-                    className={classNames(
-                      classes.menuButton,
-                      open && classes.menuButtonHidden
-                    )}
-                  >
-                    <MenuIcon />
-                  </IconButton>
-                </Grid>
-                <Grid item>
-                  <img src={logo} width="80px" height="45px" />
-                </Grid>
-                {user && user.name && (
-                  <Grid
-                    style={{
-                      marginLeft: "auto",
-                      marginRight: "10px",
-                      color: "black",
-                    }}
-                    item
-                  >
-                    <p>welcome, {user.name}!</p>
-                  </Grid>
-                )}
-              </Grid>
-            )}
             <Tabs
               value={currentRoute || 0}
               onChange={(event, route) => {
@@ -183,7 +152,7 @@ const MainWrapper = (props) => {
                 );
               })}
             </Tabs>
-          </AppBar>
+          </Paper>
         )}
         {!hideAppBar && (
           <AppBar className={classes.menu}>
@@ -211,7 +180,7 @@ const MainWrapper = (props) => {
                 <Grid item>
                   <img src={logo} width="80px" height="45px" />
                 </Grid>
-                <Grid item>
+                {/* <Grid item>
                   <Typography variant="h6" noWrap className={classes.title}>
                     {brand
                       ? brand
@@ -219,26 +188,8 @@ const MainWrapper = (props) => {
                           routeList[currentRoute].name) ||
                         routeList[0].name}
                   </Typography>
-                </Grid>
+                </Grid> */}
                 <Grid style={{ marginLeft: "auto" }} item>
-                  {/* <Tooltip title={(user && user.name) || ""}>
-                    <IconButton
-                      aria-owns={isAnchor ? "menu-appbar" : null}
-                      aria-haspopup="true"
-                      onClick={event => {
-                        setAnchorEl(event.currentTarget);
-                      }}
-                      color="inherit"
-                    >
-                      <img
-                        style={{ borderRadius: "30px" }}
-                        src={user && user.image}
-                        width={"40px"}
-                        height={"auto"}
-                        alt="Profile"
-                      />
-                    </IconButton>
-                  </Tooltip> */}
                   <Menu
                     id="menu-appbar"
                     anchorEl={anchorEl}
@@ -280,7 +231,6 @@ const MainWrapper = (props) => {
             </Toolbar>
           </AppBar>
         )}
-        <Divider />
         <Drawer
           className={classes.menu}
           open={open}

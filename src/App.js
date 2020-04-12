@@ -1215,7 +1215,9 @@ class App extends React.Component {
                             }}
                           >
                             <MainWrapper
-                              isTabMenu={true}
+                              isTabMenu={
+                                isViewPage || isEditPage ? false : true
+                              }
                               hideAppBar={true}
                               logo={logo}
                               routeList={filteredRoutes}

@@ -94,6 +94,9 @@ export const styles = (theme) => {
     chartContainer: {
       // marginLeft: -22
     },
+    tabMenu: {
+      borderRadius: "50px",
+    },
     tableContainer: {
       // height: 320
     },
