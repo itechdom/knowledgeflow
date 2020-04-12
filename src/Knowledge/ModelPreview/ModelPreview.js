@@ -204,6 +204,7 @@ const ModelPreview = (props) => {
   return (
     <>
       <header>
+        <h1>{model.title}</h1>
         <AppBar
           className={classes.autocompleteContainer}
           position="static"
@@ -213,7 +214,7 @@ const ModelPreview = (props) => {
             <Autocomplete
               inputClassName={classes.autocomplete}
               throttleSearch={true}
-              placeholder={"Search…"}
+              placeholder={`Search ${model.title}`}
               onSelect={(suggestion) => {
                 window.setTimeout(() => {
                   if (
