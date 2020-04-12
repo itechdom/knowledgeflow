@@ -1134,7 +1134,7 @@ class App extends React.Component {
                       }
                       crudDomainStore={rootStore.crudDomainStore}
                       query={query}
-                      paginate={paginate}
+                      paginate={true}
                       render={(props) => {
                         let knowledge = props.knowledge;
                         let filteredRoutes = [];
