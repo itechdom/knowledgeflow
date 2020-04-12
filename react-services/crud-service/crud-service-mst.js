@@ -130,7 +130,12 @@ export const getCrudDomainStore = (
               token,
             })
             .then((res) => {
-              return res.data;
+              //new data
+              let formattedData = {
+                data: res.data.data,
+                count: res.data.count,
+              };
+              return formattedData;
             })
             .catch((err) => {
               console.log("err", err);
@@ -273,10 +278,8 @@ class CrudContainer extends React.Component {
       nextProps.query !== this.props.query
     ) {
       const crudDomainStore = this.stores[this.props.modelName];
-      if (crudDomainStore.state.data.length <= 1) {
-        crudDomainStore.setPaginate(nextProps.paginate);
-        crudDomainStore.fetchModel(nextProps.query);
-      }
+      crudDomainStore.setPaginate(nextProps.paginate);
+      crudDomainStore.fetchModel(nextProps.query);
     }
   }
   componentDidUpdate() {}

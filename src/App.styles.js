@@ -11,7 +11,7 @@ export const styles = (theme) => {
       width: "100%",
     },
     content: {
-      marginTop: "5em",
+      marginTop: "3em",
       marginBottom: "5em",
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
       minHeight: "100vh",

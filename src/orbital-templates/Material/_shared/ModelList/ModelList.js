@@ -411,6 +411,43 @@ const ModelList = enhance(
                   >
                     <Loading></Loading>
                   </Backdrop>
+                  {enableSearch && (
+                    <Grid
+                      style={{ marginBottom: "1em" }}
+                      container
+                      justify="flex-end"
+                    >
+                      <Grid item xs={12}>
+                        <Paper style={{ padding: "1em", borderRadius: "50px" }}>
+                          <Autocomplete
+                            inputClassName={classes.autocomplete}
+                            placeholder={"Search…"}
+                            onSelect={(suggestion) => {
+                              onSearchSelect
+                                ? onSearchSelect(suggestion)
+                                : history.push(
+                                    `${match.path}/view/${suggestion._id}`
+                                  );
+                            }}
+                            loadSuggestions={(text) => {
+                              let query = {
+                                [modelKey]: { $regex: text },
+                              };
+                              if (onSearch) {
+                                return onSearch(query);
+                              }
+                              return new Promise((resolve, reject) => {
+                                searchModel(query).then((res) => {
+                                  console.log("RESULT", res);
+                                  return resolve(res.data);
+                                });
+                              });
+                            }}
+                          />
+                        </Paper>
+                      </Grid>
+                    </Grid>
+                  )}
                   {(ModelListActions && <ModelListActions {...Actions} />) || (
                     <Button
                       color="secondary"
@@ -423,28 +460,6 @@ const ModelList = enhance(
                   )}
                   {viewOption === 0 && (
                     <Grid container justify={justify}>
-                      {enableSearch && (
-                        <Autocomplete
-                          inputClassName={classes.autocomplete}
-                          placeholder={"Search…"}
-                          onSelect={(suggestion) => {
-                            onSearchSelect
-                              ? onSearchSelect(suggestion)
-                              : history.push(
-                                  `${match.path}/view/${suggestion._id}`
-                                );
-                          }}
-                          loadSuggestions={(text) => {
-                            let query = {
-                              [modelKey]: { $regex: text },
-                            };
-                            if (onSearch) {
-                              return onSearch(query);
-                            }
-                            return searchModel(query);
-                          }}
-                        />
-                      )}
                       {modelCount && (
                         <ModelFilterList form={form} modelCount={modelCount} />
                       )}
