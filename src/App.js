@@ -1208,7 +1208,6 @@ class App extends React.Component {
                             classes={{
                               ...classes,
                               tabMenu: `${classes["white"]}`,
-                              listContainer: `${classes["top100"]}`,
                               menuTabsClasses: {
                                 flexContainer: `${classes["center"]}`,
                               },
@@ -1239,6 +1238,7 @@ class App extends React.Component {
                               tabMenuPosition="top"
                               classes={{
                                 ...classes,
+                                listContainer: `${classes["top100"]}`,
                                 menuTabsClasses: {
                                   flexContainer: `${classes["center"]}`,
                                 },

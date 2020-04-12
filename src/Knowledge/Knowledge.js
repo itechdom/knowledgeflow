@@ -119,6 +119,7 @@ const Knowledge = ({
       }}
       page={knowledge_page}
       setPage={knowledge_setPage}
+      enableSearch={true}
       onChangePage={(page) => {
         knowledge_setPage(page);
         knowledge_fetchModel();

@@ -16,6 +16,9 @@ export const styles = (theme) => {
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
       minHeight: "100vh",
     },
+    suggestionsContainerOpen: {
+      zIndex: 9999,
+    },
     toolbar: {
       paddingRight: 24, // keep right padding when drawer closed
       height: appBarHeight,

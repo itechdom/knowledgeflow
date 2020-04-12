@@ -122,7 +122,7 @@ export const getCrudDomainStore = (
         });
       },
       searchModel(query) {
-        self.loading = true;
+        // self.loading = true;
         return offlineStorage.getItem("jwtToken").then((token) => {
           return axios
             .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {

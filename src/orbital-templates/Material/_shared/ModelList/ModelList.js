@@ -26,6 +26,7 @@ import {
   useMediaQuery,
 } from "@material-ui/core";
 import Pagination from "../Pagination/Pagination";
+import Autocomplete from "../Autocomplete/Autocomplete";
 import FloatingAddButton from "../FloatingAddButton/FloatingAddButton";
 import ClientNotification from "../ClientNotification/ClientNotification";
 import Loading from "../Loading/Loading";
@@ -101,7 +102,7 @@ const ModelList = enhance(
     onSubmit,
     defaultView,
     gridSizes,
-    showFilters,
+    enableSearch,
     justify,
     ...rest
   }) => {
@@ -368,30 +369,30 @@ const ModelList = enhance(
                 </Grid>
               ) : (
                 // <Fade timeout={1000} in={!loading}>
-                  <Grid container>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                      <ModelPreview
-                        modelName={modelName}
-                        onEdit={onEditWrapper}
-                        onDelete={onDeleteWrapper}
-                        deleteModel={deleteModel}
-                        updateModel={updateModel}
-                        searchModel={searchModel}
-                        form={form}
-                        classes={classes}
-                        model={model}
-                        ModelPreviewActions={ModelPreviewActions}
-                        ModelPreviewAction={ModelPreviewAction}
-                        notifications={notifications}
-                        removeNotification={removeNotification}
-                        {...rest}
-                      />
-                      {ModelPreviewAttachment && (
-                        <ModelPreviewAttachment model={model} />
-                      )}
-                      <FloatingAddButton onClick={onAddWrapper} />
-                    </Grid>
+                <Grid container>
+                  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <ModelPreview
+                      modelName={modelName}
+                      onEdit={onEditWrapper}
+                      onDelete={onDeleteWrapper}
+                      deleteModel={deleteModel}
+                      updateModel={updateModel}
+                      searchModel={searchModel}
+                      form={form}
+                      classes={classes}
+                      model={model}
+                      ModelPreviewActions={ModelPreviewActions}
+                      ModelPreviewAction={ModelPreviewAction}
+                      notifications={notifications}
+                      removeNotification={removeNotification}
+                      {...rest}
+                    />
+                    {ModelPreviewAttachment && (
+                      <ModelPreviewAttachment model={model} />
+                    )}
+                    <FloatingAddButton onClick={onAddWrapper} />
                   </Grid>
+                </Grid>
                 // </Fade>
               );
             }}
@@ -422,39 +423,30 @@ const ModelList = enhance(
                   )}
                   {viewOption === 0 && (
                     <Grid container justify={justify}>
-                      {showFilters && (
-                        <Grid item md={2} sm={2} xs={2}>
-                          <Card style={{ minHeight: "75vh" }}>
-                            <CardContent>
-                              <Autocomplete
-                                inputClassName={classes.autocomplete}
-                                placeholder={"Search…"}
-                                onSelect={(suggestion) => {
-                                  onSearchSelect
-                                    ? onSearchSelect(suggestion)
-                                    : history.push(
-                                        `/${suggestion.resource}/view/${suggestion._id}`
-                                      );
-                                }}
-                                loadSuggestions={(text) => {
-                                  let query = {
-                                    [modelKey]: { $regex: event.target.value },
-                                  };
-                                  if (onSearch) {
-                                    return onSearch(query);
-                                  }
-                                  return searchModel(query);
-                                }}
-                              />
-                              {modelCount && (
-                                <ModelFilterList
-                                  form={form}
-                                  modelCount={modelCount}
-                                />
-                              )}
-                            </CardContent>
-                          </Card>
-                        </Grid>
+                      {enableSearch && (
+                        <Autocomplete
+                          inputClassName={classes.autocomplete}
+                          placeholder={"Search…"}
+                          onSelect={(suggestion) => {
+                            onSearchSelect
+                              ? onSearchSelect(suggestion)
+                              : history.push(
+                                  `${match.path}/view/${suggestion._id}`
+                                );
+                          }}
+                          loadSuggestions={(text) => {
+                            let query = {
+                              [modelKey]: { $regex: text },
+                            };
+                            if (onSearch) {
+                              return onSearch(query);
+                            }
+                            return searchModel(query);
+                          }}
+                        />
+                      )}
+                      {modelCount && (
+                        <ModelFilterList form={form} modelCount={modelCount} />
                       )}
                       <Grid item md={12}>
                         {defaultView ? (

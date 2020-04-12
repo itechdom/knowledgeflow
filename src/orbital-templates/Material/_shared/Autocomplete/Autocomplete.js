@@ -25,10 +25,10 @@ function renderInputComponent(inputProps) {
       standAlone={true}
       value={"Type"}
       InputProps={{
-        inputRef: node => {
+        inputRef: (node) => {
           ref(node);
           inputRef(node);
-        }
+        },
       }}
       {...other}
     />
@@ -73,27 +73,27 @@ class Autocomplete extends React.Component {
   state = {
     single: "",
     popper: "",
-    suggestions: []
+    suggestions: [],
   };
 
   handleSuggestionsFetchRequested = ({ value }) => {
     const { loadSuggestions, isMultiple } = this.props;
     const updateSuggestions = (newState, prevState) =>
       this.setState({ ...prevState, newState });
-    return loadSuggestions(value, updateSuggestions).then(res => {
+    return loadSuggestions(value, updateSuggestions).then((res) => {
       this.setState({ suggestions: res });
     });
   };
 
   handleSuggestionsClearRequested = () => {
     this.setState({
-      suggestions: []
+      suggestions: [],
     });
   };
 
-  handleChange = name => (event, { newValue }) => {
+  handleChange = (name) => (event, { newValue }) => {
     this.setState({
-      [name]: newValue
+      [name]: newValue,
     });
   };
 
@@ -104,7 +104,7 @@ class Autocomplete extends React.Component {
       onSelect,
       placeholder,
       inputClassName,
-      throttleSearch
+      throttleSearch,
     } = this.props;
 
     // if (throttleSearch) {
@@ -120,7 +120,7 @@ class Autocomplete extends React.Component {
       onSuggestionsFetchRequested: this.handleSuggestionsFetchRequested,
       onSuggestionsClearRequested: this.handleSuggestionsClearRequested,
       getSuggestionValue,
-      renderSuggestion
+      renderSuggestion,
     };
     return (
       <Autosuggest
@@ -130,18 +130,18 @@ class Autocomplete extends React.Component {
           classes,
           placeholder: placeholder ? placeholder : "Search",
           value: this.state.single,
-          onChange: this.handleChange("single")
+          onChange: this.handleChange("single"),
         }}
         theme={{
           container: inputClassName ? inputClassName : classes.container,
           suggestionsContainerOpen: classes.suggestionsContainerOpen,
           suggestionsList: classes.suggestionsList,
-          suggestion: classes.suggestion
+          suggestion: classes.suggestion,
         }}
         multiSection={isMultiple}
         getSectionSuggestions={getSectionSuggestions}
         renderSectionTitle={renderSectionTitle}
-        renderSuggestionsContainer={options => (
+        renderSuggestionsContainer={(options) => (
           <Paper {...options.containerProps} square>
             {options.children}
           </Paper>
@@ -158,7 +158,7 @@ class Autocomplete extends React.Component {
 }
 
 Autocomplete.propTypes = {
-  classes: PropTypes.object.isRequired
+  classes: PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { defaultTheme: theme })(Autocomplete);

@@ -1,7 +1,11 @@
 import React from "react";
 import { ListItem, ListItemText } from "@material-ui/core";
-const Icon = ({ children }) => {
-  return <i className="material-icons">{children}</i>;
+const Icon = ({ children, style }) => {
+  return (
+    <i className="material-icons" style={style}>
+      {children}
+    </i>
+  );
 };
 
 export const Routes = ({ onClick, currentRoute, routeList, classes }) => {
@@ -13,7 +17,7 @@ export const Routes = ({ onClick, currentRoute, routeList, classes }) => {
             style={{ borderRadius: "50px" }}
             selected={index === currentRoute}
             key={index}
-            onClick={event => (!route.external ? onClick(route) : "")}
+            onClick={(event) => (!route.external ? onClick(route) : "")}
             button={route.type === "button"}
             component={route.type === "button" ? "button" : "a"}
             className={
@@ -23,7 +27,7 @@ export const Routes = ({ onClick, currentRoute, routeList, classes }) => {
             }
           >
             <>
-              <Icon>{route.icon}</Icon>
+              <Icon style={{ marginRight: "10px" }}>{route.icon}</Icon>
               {!route.external ? (
                 <ListItemText primary={route.name} />
               ) : (
