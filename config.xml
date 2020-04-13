@@ -20,6 +20,7 @@
     <preference name="CameraUsesGeolocation" value="true" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <resource-file src="google-services.json" target="app/google-services.json" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
