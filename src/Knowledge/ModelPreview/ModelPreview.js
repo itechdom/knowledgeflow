@@ -196,37 +196,35 @@ const ModelPreview = (props) => {
     <>
       <header>
         <h1>{model.title}</h1>
-        <AppBar
-          className={classes.autocompleteContainer}
-          position="static"
-          color="default"
-        >
-          <Toolbar>
-            <Autocomplete
-              inputClassName={classes.autocomplete}
-              throttleSearch={true}
-              placeholder={`Search ${model.title}`}
-              onSelect={(suggestion) => {
-                TreeOperations.handleNodeToggle(suggestion.id);
-                setTimeout(() => {
-                  document.getElementById(suggestion.id).style =
-                    "border:black 0.2px solid";
-                  document.getElementById(suggestion.id).scrollIntoView({
-                    behavior: "smooth",
-                    block: "nearest",
-                    inline: "start",
+        <Paper style={{ padding: "1em", borderRadius: "50px" }}>
+          <Grid style={{ marginBottom: "1em" }} container justify="flex-end">
+            <Grid item xs={12}>
+              <Autocomplete
+                inputClassName={classes.autocomplete}
+                throttleSearch={true}
+                placeholder={`Search ${model.title}`}
+                onSelect={(suggestion) => {
+                  TreeOperations.handleNodeToggle(suggestion.id);
+                  setTimeout(() => {
+                    document.getElementById(suggestion.id).style =
+                      "border:black 0.2px solid";
+                    document.getElementById(suggestion.id).scrollIntoView({
+                      behavior: "smooth",
+                      block: "nearest",
+                      inline: "start",
+                    });
+                  }, 1000);
+                }}
+                loadSuggestions={(text) => {
+                  return new Promise((resolve, reject) => {
+                    let found = handleNodeSearch(mindmapByKeys, text);
+                    found && resolve(found);
                   });
-                }, 1000);
-              }}
-              loadSuggestions={(text) => {
-                return new Promise((resolve, reject) => {
-                  let found = handleNodeSearch(mindmapByKeys, text);
-                  found && resolve(found);
-                });
-              }}
-            />
-          </Toolbar>
-        </AppBar>
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Paper>
       </header>
       {model && (
         <Toolbar>

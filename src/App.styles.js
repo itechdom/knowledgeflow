@@ -16,6 +16,8 @@ export const styles = (theme) => {
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
       minHeight: "100vh",
     },
+    autocomplete:{
+    },
     suggestionsContainerOpen: {
       zIndex: 9999,
     },
