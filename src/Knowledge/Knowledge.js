@@ -61,7 +61,7 @@ const Knowledge = ({
   return (
     <ModelList
       modelArray={knowledge}
-      disableDetailPages={true}
+      disableViewPage={true}
       modelKey={"title"}
       modelName={"knowledge"}
       columns={["title"]}
@@ -119,6 +119,9 @@ const Knowledge = ({
         history.push(`${match.path}/add`);
       }}
       onView={(model) => {
+        history.push(`${match.path}knowledge/view/${model._id}`);
+      }}
+      onCreateSubmit={(model) => {
         history.push(`${match.path}knowledge/view/${model._id}`);
       }}
       page={knowledge_page}

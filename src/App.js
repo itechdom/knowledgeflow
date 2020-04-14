@@ -1179,6 +1179,14 @@ class App extends React.Component {
                               <KnowledgePreview
                                 {...routeProps}
                                 {...props}
+                                onEdit={(model) => {
+                                  routeProps.history.push(
+                                    `//edit/${model._id}`
+                                  );
+                                }}
+                                onDelete={() => {
+                                  routeProps.history.goBack();
+                                }}
                                 classes={classes}
                                 location={this.props.location}
                                 currentTags={this.state.tags}
@@ -1227,9 +1235,11 @@ class App extends React.Component {
                               });
                               return routes;
                             });
-                          const newRoutes = routes.reduce((prev, cur) => {
-                            return [...prev, ...cur];
-                          });
+                          const newRoutes = Array.isArray(routes)
+                            ? routes.reduce((prev, cur) => {
+                                return [...prev, ...cur];
+                              }, [])
+                            : [];
                           filteredRoutes = newRoutes.filter((r, i) => {
                             return (
                               newRoutes.map((ro) => ro.name).indexOf(r.name) ===

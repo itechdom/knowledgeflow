@@ -68,8 +68,9 @@ export const getCrudDomainStore = (
               token,
             })
             .then((res) => {
+              console.log("CREATE", res, self.state);
               self.setSuccess(
-                [...self.state, model],
+                [...self.state.data, model],
                 `${modelName} successfully created!`
               );
               return res.data;

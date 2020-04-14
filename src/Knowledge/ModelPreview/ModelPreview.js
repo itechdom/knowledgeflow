@@ -256,8 +256,8 @@ const ModelPreview = (props) => {
         setOpen={setDeleting}
         onConfirm={() => {
           setDeleting(false);
-          deleteModel(model).then((res) => {
-            onDelete();
+          knowledge_deleteModel(model).then((res) => {
+            onDelete && onDelete();
           });
         }}
       />

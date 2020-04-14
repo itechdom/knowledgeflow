@@ -102,7 +102,8 @@ const ModelList = enhance(
     onSubmit,
     defaultView,
     gridSizes,
-    disableDetailPages,
+    disableViewPage,
+    disableEditPage,
     enableSearch,
     justify,
     ...rest
@@ -126,7 +127,6 @@ const ModelList = enhance(
       history.push(`${match.path}/add`);
     };
     const onCreateWrapper = (model) => {
-      console.log("on Create !!");
       if (onCreate) {
         return onCreate(model);
       }
@@ -163,8 +163,8 @@ const ModelList = enhance(
                       form={form}
                       modelSchema={modelSchema}
                       onSave={(values) => {
-                        createModel(values).then((res) => {
-                          onCreateSubmit && onCreateSubmit(values);
+                        createModel(values).then((model) => {
+                          onCreateSubmit && onCreateSubmit(model);
                         });
                       }}
                       onCancel={() => {
@@ -189,7 +189,7 @@ const ModelList = enhance(
                         onSave={(values) => {
                           createModel(values).then((model) => {
                             onCreateSubmit
-                              ? onCreateSubmit(values)
+                              ? onCreateSubmit(model)
                               : history.push(`${match.path}/view/${model._id}`);
                           });
                         }}
@@ -211,7 +211,7 @@ const ModelList = enhance(
             }}
           />
 
-          {!disableDetailPages && (
+          {!disableEditPage && (
             <Route
               path={`${match.path}/edit/:id`}
               render={(props) => {
@@ -341,7 +341,7 @@ const ModelList = enhance(
               }}
             />
           )}
-          {!disableDetailPages && (
+          {!disableViewPage && (
             <Route
               path={`${match.path}/view/:id`}
               render={(props) => {
@@ -431,7 +431,7 @@ const ModelList = enhance(
                             inputClassName={classes.autocomplete}
                             placeholder={"Search…"}
                             onSelect={(suggestion) => {
-                              onSearchSelect && disableDetailPages
+                              onSearchSelect || disableViewPage
                                 ? onSearchSelect(suggestion)
                                 : history.push(
                                     `${match.path}/view/${suggestion._id}`
