@@ -1204,20 +1204,7 @@ class App extends React.Component {
                   const {
                     location: { pathname },
                   } = routeProps;
-                  let query;
-                  let paginate = false;
-                  //if there is a category
                   let tag = routeProps.match.params.tag;
-                  const isEditPage = pathname.indexOf("edit") !== -1;
-                  const isViewPage = pathname.indexOf("view") !== -1;
-                  if (isEditPage || isViewPage) {
-                    const urlParts = pathname.split("/");
-                    const id = urlParts[urlParts.length - 1];
-                    query = { _id: id };
-                  } else {
-                    paginate = true;
-                    query = null;
-                  }
                   return (
                     <Crud
                       modelName="knowledge"
@@ -1227,38 +1214,32 @@ class App extends React.Component {
                         rootStore.notificationDomainStore
                       }
                       crudDomainStore={rootStore.crudDomainStore}
-                      query={query}
-                      paginate={paginate}
+                      paginate={true}
                       render={(props) => {
                         let knowledge = props.knowledge;
                         let filteredRoutes = [];
-                        if (isEditPage || isViewPage) {
-                          filteredRoutes = [];
-                        } else {
-                          if (props.knowledge && props.knowledge.data) {
-                            let routes = props.knowledge.data
-                              .map((kn) => kn.tags)
-                              .map((t) => {
-                                const routes = t.map((tag) => {
-                                  return { url: tag, name: tag, icon: "" };
-                                });
-                                return routes;
+                        if (props.knowledge && props.knowledge.data) {
+                          let routes = props.knowledge.data
+                            .map((kn) => kn.tags)
+                            .map((t) => {
+                              const routes = t.map((tag) => {
+                                return { url: tag, name: tag, icon: "" };
                               });
-                            const newRoutes = routes.reduce((prev, cur) => {
-                              return [...prev, ...cur];
+                              return routes;
                             });
-                            filteredRoutes = newRoutes.filter((r, i) => {
-                              return (
-                                newRoutes
-                                  .map((ro) => ro.name)
-                                  .indexOf(r.name) === i
-                              );
-                            });
-                            filteredRoutes = [
-                              { url: "", name: "All", icon: "" },
-                              ...filteredRoutes,
-                            ];
-                          }
+                          const newRoutes = routes.reduce((prev, cur) => {
+                            return [...prev, ...cur];
+                          });
+                          filteredRoutes = newRoutes.filter((r, i) => {
+                            return (
+                              newRoutes.map((ro) => ro.name).indexOf(r.name) ===
+                              i
+                            );
+                          });
+                          filteredRoutes = [
+                            { url: "", name: "All", icon: "" },
+                            ...filteredRoutes,
+                          ];
                         }
                         if (tag) {
                           knowledge =
@@ -1308,9 +1289,7 @@ class App extends React.Component {
                             }}
                           >
                             <MainWrapper
-                              isTabMenu={
-                                isViewPage || isEditPage ? false : true
-                              }
+                              isTabMenu={true}
                               hideAppBar={true}
                               logo={logo}
                               routeList={filteredRoutes}
