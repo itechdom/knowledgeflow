@@ -193,6 +193,25 @@ class Node extends React.Component {
             </IconButton>
           )}
           {this.renderActions()}
+          {
+            <a
+              href={`https://www.google.com/search?q=${this.props.rootTitle}+${this.props.title}`}
+              target="_blank"
+              style={{ marginRight: "5px" }}
+            >
+              Google
+            </a>
+          }
+          |
+          {
+            <a
+              href={`https://en.wikipedia.org/wiki/Special:Search?search=${this.props.rootTitle}+${this.props.title}`}
+              target="_blank"
+              style={{ marginLeft: "5px" }}
+            >
+              Wikipedia
+            </a>
+          }
         </ListItem>
       </div>
     );

@@ -5,28 +5,29 @@ class ListTree extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      visible: {}
+      visible: {},
     };
     this.references = {};
-    Object.keys(this.props.mindmapByKeys).map(nodeId => {
+    Object.keys(this.props.mindmapByKeys).map((nodeId) => {
       this.references[nodeId] = React.createRef();
     });
     this.props.onRefs(this.references);
   }
   renderNode(nodeId, index, parent) {
-    const { mindmapByKeys } = this.props;
+    const { mindmapByKeys, title } = this.props;
     const TreeOperations = {
       handleNodeAdd: this.props.handleNodeAdd.bind(null, nodeId),
       handleNodeEdit: this.props.handleNodeEdit.bind(null, nodeId),
       handleNodeUpdate: this.props.handleNodeUpdate.bind(null, nodeId),
       handleNodeToggle: this.props.handleNodeToggle.bind(null, nodeId),
-      handleNodeDelete: this.props.handleNodeDelete.bind(null, nodeId)
+      handleNodeDelete: this.props.handleNodeDelete.bind(null, nodeId),
     };
     return (
       <div key={nodeId}>
         <Node
           _id={nodeId}
           index={index}
+          rootTitle={title}
           title={mindmapByKeys[nodeId] && mindmapByKeys[nodeId].title}
           level={mindmapByKeys[nodeId] && mindmapByKeys[nodeId].level}
           visible={mindmapByKeys[nodeId].visible}

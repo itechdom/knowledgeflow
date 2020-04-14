@@ -290,6 +290,7 @@ const ModelPreview = (props) => {
               >
                 <ListTree
                   mindmapByKeys={mindmapByKeys}
+                  title={model.title}
                   editedNode={editedNode}
                   edit={edit}
                   level={level}
