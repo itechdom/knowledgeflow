@@ -49,7 +49,9 @@ import { withStyles, ThemeProvider } from "@material-ui/core/styles";
 import Camera from "./Camera/Camera";
 import "./global.css";
 import { Formik } from "formik";
+import Loading from "./orbital-templates/Material/_shared/Loading/Loading";
 import Knowledge from "./Knowledge/Knowledge";
+import KnowledgePreview from "./Knowledge/ModelPreview/ModelPreview";
 const loginBG = "";
 const registerBG = "";
 const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
@@ -1106,26 +1108,13 @@ class App extends React.Component {
                 }}
               />
               {/* View knowledge, since it's an independent page */}
-              {/* <Route
-                path={`${this.props.match.path}view/:id`}
+              <Route
+                path={`${this.props.match.path}knowledge/view/:id`}
                 render={(routeProps) => {
                   const {
-                    location: { pathname },
+                    match: { params },
                   } = routeProps;
-                  let query;
-                  let paginate = false;
-                  //if there is a category
-                  let tag = routeProps.match.params.tag;
-                  const isEditPage = pathname.indexOf("edit") !== -1;
-                  const isViewPage = pathname.indexOf("view") !== -1;
-                  if (isEditPage || isViewPage) {
-                    const urlParts = pathname.split("/");
-                    const id = urlParts[urlParts.length - 1];
-                    query = { _id: id };
-                  } else {
-                    paginate = true;
-                    query = null;
-                  }
+                  let query = { _id: params.id };
                   return (
                     <Crud
                       modelName="knowledge"
@@ -1136,48 +1125,13 @@ class App extends React.Component {
                       }
                       crudDomainStore={rootStore.crudDomainStore}
                       query={query}
-                      paginate={paginate}
                       render={(props) => {
-                        let knowledge = props.knowledge;
-                        let filteredRoutes = [];
-                        if (isEditPage || isViewPage) {
-                          filteredRoutes = [];
-                        } else {
-                          if (props.knowledge && props.knowledge.data) {
-                            let routes = props.knowledge.data
-                              .map((kn) => kn.tags)
-                              .map((t) => {
-                                const routes = t.map((tag) => {
-                                  return { url: tag, name: tag, icon: "" };
-                                });
-                                return routes;
-                              });
-                            const newRoutes = routes.reduce((prev, cur) => {
-                              return [...prev, ...cur];
-                            });
-                            filteredRoutes = newRoutes.filter((r, i) => {
-                              return (
-                                newRoutes
-                                  .map((ro) => ro.name)
-                                  .indexOf(r.name) === i
-                              );
-                            });
-                            filteredRoutes = [
-                              { url: "", name: "All", icon: "" },
-                              ...filteredRoutes,
-                            ];
-                          }
-                        }
-                        if (tag) {
-                          knowledge =
-                            props.knowledge && props.knowledge.data
-                              ? {
-                                  data: props.knowledge.data.filter(
-                                    (k) => k.tags.indexOf(tag) !== -1
-                                  ),
-                                  count: props.knowledge.count,
-                                }
-                              : props.knowledge;
+                        let knowledge =
+                          props.knowledge &&
+                          props.knowledge.data &&
+                          props.knowledge.data[0];
+                        if (!knowledge || props.knowledge_loading) {
+                          return <Loading></Loading>;
                         }
                         return (
                           <MainWrapper
@@ -1215,71 +1169,35 @@ class App extends React.Component {
                               },
                             }}
                           >
-                            <MainWrapper
-                              isTabMenu={
-                                isViewPage || isEditPage ? false : true
+                            <Wikipedia
+                              SERVER={config.SERVER}
+                              offlineStorage={offlineStorage}
+                              notificationDomainStore={
+                                rootStore.notificationDomainStore
                               }
-                              hideAppBar={true}
-                              logo={logo}
-                              routeList={filteredRoutes}
-                              drawerRouteList={
-                                this.state.currentUser &&
-                                this.state.currentUser.isAdmin
-                                  ? [...mainRouteList, adminRoute, logoutRoute]
-                                  : [...mainRouteList, logoutRoute]
-                              }
-                              user={this.state.currentUser}
-                              {...routeProps}
-                              {...this.props}
-                              length={[]}
-                              onRouteClick={(route) => {
-                                return routeProps.history.push({
-                                  pathname: `${this.props.match.path}${route}`,
-                                });
-                              }}
-                              tabMenuPosition="top"
-                              classes={{
-                                ...classes,
-                                listContainer: `${classes["top100"]}`,
-                                menuTabsClasses: {
-                                  flexContainer: `${classes["center"]}`,
-                                },
-                              }}
                             >
-                              <Forms
-                                formsDomainStore={rootStore.formsDomainStore}
-                                modelName="knowledge"
-                              >
-                                <Wikipedia
-                                  SERVER={config.SERVER}
-                                  offlineStorage={offlineStorage}
-                                  notificationDomainStore={
-                                    rootStore.notificationDomainStore
-                                  }
-                                >
-                                  <Knowledge
-                                    {...routeProps}
-                                    {...props}
-                                    location={this.props.location}
-                                    currentTags={this.state.tags}
-                                    selected={this.state.selected}
-                                    currentUser={this.state.currentUser}
-                                    setState={(props) => this.setState(props)}
-                                    renderDialog={(props) =>
-                                      this.renderDialog(props)
-                                    }
-                                    knowledge={knowledge}
-                                  />
-                                </Wikipedia>
-                              </Forms>
-                            </MainWrapper>
+                              <KnowledgePreview
+                                {...routeProps}
+                                {...props}
+                                classes={classes}
+                                location={this.props.location}
+                                currentTags={this.state.tags}
+                                selected={this.state.selected}
+                                currentUser={this.state.currentUser}
+                                setState={(props) => this.setState(props)}
+                                model={knowledge}
+                                renderDialog={(props) =>
+                                  this.renderDialog(props)
+                                }
+                              />
+                            </Wikipedia>
                           </MainWrapper>
                         );
                       }}
                     />
                   );
                 }}
-              /> */}
+              />
               <Route
                 path={`${this.props.match.path}:tag?`}
                 render={(routeProps) => {

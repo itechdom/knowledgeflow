@@ -102,6 +102,7 @@ const ModelList = enhance(
     onSubmit,
     defaultView,
     gridSizes,
+    disableDetailPages,
     enableSearch,
     justify,
     ...rest
@@ -209,72 +210,15 @@ const ModelList = enhance(
               );
             }}
           />
-          <Route
-            path={`${match.path}/edit/:id`}
-            render={(props) => {
-              return ModelEditPage ? (
-                <Grid container justify="center">
-                  <Grid xs={12}>
-                    <ModelEditPage
-                      modelName={modelName}
-                      onCancel={() => {
-                        history.goBack();
-                      }}
-                      onSave={(updatedModel, values) => {
-                        updateModel(updatedModel, values).then((res) => {
-                          onEditSubmit && onEditSubmit(updatedModel);
-                        });
-                      }}
-                      form={form}
-                      modelSchema={modelSchema}
-                      model={
-                        models &&
-                        models.length > 0 &&
-                        models.find(({ _id }) => _id === props.match.params.id)
-                      }
-                      media={media}
-                      gallery={
-                        gallery &&
-                        gallery.length > 0 &&
-                        gallery.filter(
-                          ({ modelId }) => modelId === props.match.params.id
-                        )
-                      }
-                      uploadMedia={uploadMedia}
-                      uploadGallery={uploadGallery}
-                      addToGallery={addToGallery}
-                      removeFromGallery={removeFromGallery}
-                      addToMedia={addToMedia}
-                      deleteMedia={deleteMedia}
-                      removeFromMedia={removeFromMedia}
-                      onMediaUploadComplete={(model, media) => {
-                        updateModel(model, {
-                          image: `${media}&q=${Date.now()}`,
-                        });
-                      }}
-                      onGalleryUploadComplete={(model, media) => {
-                        updateModel(model, {
-                          gallery: [...model.gallery, ...media],
-                        });
-                      }}
-                      onMediaDeleteComplete={(model, media) => {
-                        updateModel(model, { image: `` });
-                      }}
-                      onGalleryDeleteComplete={(model, index) => {
-                        model.gallery.remove(index);
-                        updateModel(model, { gallery: model.gallery });
-                      }}
-                      match={match}
-                      deleteModel={deleteModel}
-                      {...rest}
-                    />
-                  </Grid>
-                </Grid>
-              ) : (
-                <Fade timeout={1000} in={!loading}>
+
+          {!disableDetailPages && (
+            <Route
+              path={`${match.path}/edit/:id`}
+              render={(props) => {
+                return ModelEditPage ? (
                   <Grid container justify="center">
                     <Grid xs={12}>
-                      <ModelEdit
+                      <ModelEditPage
                         modelName={modelName}
                         onCancel={() => {
                           history.goBack();
@@ -325,78 +269,142 @@ const ModelList = enhance(
                           model.gallery.remove(index);
                           updateModel(model, { gallery: model.gallery });
                         }}
-                        notifications={notifications}
-                        removeNotification={removeNotification}
+                        match={match}
+                        deleteModel={deleteModel}
                         {...rest}
                       />
                     </Grid>
                   </Grid>
-                </Fade>
-              );
-            }}
-          />
-          <Route
-            path={`${match.path}/view/:id`}
-            render={(props) => {
-              let model =
-                models &&
-                models.length > 0 &&
-                models.find(({ _id }) => _id === props.match.params.id);
-              if (!model) {
-                return <Loading></Loading>;
-              }
-              return ModelPreviewPage ? (
-                <Grid container>
-                  <Grid item xs={12}>
-                    <ModelPreviewPage
-                      modelName={modelName}
-                      onEdit={onEditWrapper}
-                      onDelete={onDeleteWrapper}
-                      deleteModel={deleteModel}
-                      updateModel={updateModel}
-                      searchModel={searchModel}
-                      form={form}
-                      model={model}
-                      classes={classes}
-                      match={props.match}
-                      location={location}
-                      history={history}
-                      ModelPreviewActions={ModelPreviewActions}
-                      ModelPreviewAction={ModelPreviewAction}
-                      {...rest}
-                    />
+                ) : (
+                  <Fade timeout={1000} in={!loading}>
+                    <Grid container justify="center">
+                      <Grid xs={12}>
+                        <ModelEdit
+                          modelName={modelName}
+                          onCancel={() => {
+                            history.goBack();
+                          }}
+                          onSave={(updatedModel, values) => {
+                            updateModel(updatedModel, values).then((res) => {
+                              onEditSubmit && onEditSubmit(updatedModel);
+                            });
+                          }}
+                          form={form}
+                          modelSchema={modelSchema}
+                          model={
+                            models &&
+                            models.length > 0 &&
+                            models.find(
+                              ({ _id }) => _id === props.match.params.id
+                            )
+                          }
+                          media={media}
+                          gallery={
+                            gallery &&
+                            gallery.length > 0 &&
+                            gallery.filter(
+                              ({ modelId }) => modelId === props.match.params.id
+                            )
+                          }
+                          uploadMedia={uploadMedia}
+                          uploadGallery={uploadGallery}
+                          addToGallery={addToGallery}
+                          removeFromGallery={removeFromGallery}
+                          addToMedia={addToMedia}
+                          deleteMedia={deleteMedia}
+                          removeFromMedia={removeFromMedia}
+                          onMediaUploadComplete={(model, media) => {
+                            updateModel(model, {
+                              image: `${media}&q=${Date.now()}`,
+                            });
+                          }}
+                          onGalleryUploadComplete={(model, media) => {
+                            updateModel(model, {
+                              gallery: [...model.gallery, ...media],
+                            });
+                          }}
+                          onMediaDeleteComplete={(model, media) => {
+                            updateModel(model, { image: `` });
+                          }}
+                          onGalleryDeleteComplete={(model, index) => {
+                            model.gallery.remove(index);
+                            updateModel(model, { gallery: model.gallery });
+                          }}
+                          notifications={notifications}
+                          removeNotification={removeNotification}
+                          {...rest}
+                        />
+                      </Grid>
+                    </Grid>
+                  </Fade>
+                );
+              }}
+            />
+          )}
+          {!disableDetailPages && (
+            <Route
+              path={`${match.path}/view/:id`}
+              render={(props) => {
+                let model =
+                  models &&
+                  models.length > 0 &&
+                  models.find(({ _id }) => _id === props.match.params.id);
+                if (!model) {
+                  return <Loading></Loading>;
+                }
+                return ModelPreviewPage ? (
+                  <Grid container>
+                    <Grid item xs={12}>
+                      <ModelPreviewPage
+                        modelName={modelName}
+                        onEdit={onEditWrapper}
+                        onDelete={onDeleteWrapper}
+                        deleteModel={deleteModel}
+                        updateModel={updateModel}
+                        searchModel={searchModel}
+                        form={form}
+                        model={model}
+                        classes={classes}
+                        match={props.match}
+                        location={location}
+                        history={history}
+                        ModelPreviewActions={ModelPreviewActions}
+                        ModelPreviewAction={ModelPreviewAction}
+                        {...rest}
+                      />
+                    </Grid>
                   </Grid>
-                </Grid>
-              ) : (
-                // <Fade timeout={1000} in={!loading}>
-                <Grid container>
-                  <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <ModelPreview
-                      modelName={modelName}
-                      onEdit={onEditWrapper}
-                      onDelete={onDeleteWrapper}
-                      deleteModel={deleteModel}
-                      updateModel={updateModel}
-                      searchModel={searchModel}
-                      form={form}
-                      classes={classes}
-                      model={model}
-                      ModelPreviewActions={ModelPreviewActions}
-                      ModelPreviewAction={ModelPreviewAction}
-                      notifications={notifications}
-                      removeNotification={removeNotification}
-                      {...rest}
-                    />
-                    {ModelPreviewAttachment && (
-                      <ModelPreviewAttachment model={model} />
-                    )}
-                    <FloatingAddButton onClick={onAddWrapper} />
+                ) : (
+                  // <Fade timeout={1000} in={!loading}>
+                  <Grid container>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                      <ModelPreview
+                        modelName={modelName}
+                        onEdit={onEditWrapper}
+                        onDelete={onDeleteWrapper}
+                        deleteModel={deleteModel}
+                        updateModel={updateModel}
+                        searchModel={searchModel}
+                        form={form}
+                        classes={classes}
+                        model={model}
+                        ModelPreviewActions={ModelPreviewActions}
+                        ModelPreviewAction={ModelPreviewAction}
+                        notifications={notifications}
+                        removeNotification={removeNotification}
+                        {...rest}
+                      />
+                      {ModelPreviewAttachment && (
+                        <ModelPreviewAttachment model={model} />
+                      )}
+                      <FloatingAddButton onClick={onAddWrapper} />
+                    </Grid>
                   </Grid>
-                </Grid>
-                // </Fade>
-              );
-            }}
-          />
+                  // </Fade>
+                );
+              }}
+            />
+          )}
           <Route
             path={`${match.path}`}
             render={(props) => {
@@ -423,7 +431,7 @@ const ModelList = enhance(
                             inputClassName={classes.autocomplete}
                             placeholder={"Search…"}
                             onSelect={(suggestion) => {
-                              onSearchSelect
+                              onSearchSelect && disableDetailPages
                                 ? onSearchSelect(suggestion)
                                 : history.push(
                                     `${match.path}/view/${suggestion._id}`

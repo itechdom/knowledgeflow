@@ -61,6 +61,7 @@ const Knowledge = ({
   return (
     <ModelList
       modelArray={knowledge}
+      disableDetailPages={true}
       modelKey={"title"}
       modelName={"knowledge"}
       columns={["title"]}
@@ -117,9 +118,15 @@ const Knowledge = ({
       onAdd={() => {
         history.push(`${match.path}/add`);
       }}
+      onView={(model) => {
+        history.push(`${match.path}knowledge/view/${model._id}`);
+      }}
       page={knowledge_page}
       setPage={knowledge_setPage}
       enableSearch={true}
+      onSearchSelect={(model) => {
+        history.push(`${match.path}knowledge/view/${model._id}`);
+      }}
       onChangePage={(page) => {
         knowledge_setPage(page);
         knowledge_fetchModel();
