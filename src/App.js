@@ -1328,6 +1328,26 @@ class App extends React.Component {
                                     rootStore.notificationDomainStore
                                   }
                                 >
+                                  {/* <Grid
+                                    container
+                                    justify="center"
+                                    style={{ marginBottom: "5em" }}
+                                  >
+                                    <Grid
+                                      item
+                                      style={{
+                                        borderRadius: "150px",
+                                        background: "white",
+                                        boxShadow: "black 0px 1px 3px",
+                                        padding: "3em",
+                                      }}
+                                    >
+                                      <Typography variant="h4" component="h1">
+                                        {JSON.stringify(this.state.currentUser)}
+                                        's Knowledge
+                                      </Typography>
+                                    </Grid>
+                                  </Grid> */}
                                   <Knowledge
                                     {...routeProps}
                                     {...props}
