@@ -137,6 +137,20 @@ const ModelPreview = (props) => {
     ...rest
   } = props;
   React.useEffect(() => {
+    setTimeout(() => {
+      const container = document.getElementById("scrollContainer");
+      if (store[model.title]) {
+        document.getElementById("scrollContainer").scrollTop =
+          store[model.title];
+      } else {
+        container
+          ? (container.onscroll = function () {
+              let scrollPos = this.scrollTop; //check the number in console
+              store[model.title] = scrollPos;
+            })
+          : "";
+      }
+    }, 1000);
     props.fetchPageByTopic && props.fetchPageByTopic(model.title);
   }, []);
   if (!mindmapByKeys && model && model.body) {
@@ -280,6 +294,7 @@ const ModelPreview = (props) => {
                 height: "400px",
                 overflow: "scroll",
               }}
+              id="scrollContainer"
             >
               <div
                 ref={(ref) => {

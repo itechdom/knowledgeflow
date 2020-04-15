@@ -81,7 +81,7 @@ export const getCrudDomainStore = (
         });
       },
       updateModel(model, updateValues) {
-        self.loading = true;
+        // self.loading = true;
         Object.keys(updateValues).map((key) => {
           model[key] = updateValues[key];
         });
