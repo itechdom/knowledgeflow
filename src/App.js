@@ -1072,16 +1072,11 @@ class App extends React.Component {
                                   notificationDomainStore={
                                     rootStore.notificationDomainStore
                                   }
-                                  paginate={true}
                                   crudDomainStore={rootStore.crudDomainStore}
-                                  query={{
-                                    tags: [...this.state.tags],
-                                  }}
                                   render={(props) => {
+                                    console.log("PROPS", props);
                                     return (
                                       <Physics
-                                        {...routeProps}
-                                        {...props}
                                         location={this.props.location}
                                         currentTags={this.state.tags}
                                         selected={this.state.selected}
@@ -1123,12 +1118,13 @@ class App extends React.Component {
                         rootStore.notificationDomainStore
                       }
                       crudDomainStore={rootStore.crudDomainStore}
+                      paginate={false}
                       query={query}
                       render={(props) => {
                         let knowledge =
-                          props.knowledge &&
-                          props.knowledge.data &&
-                          props.knowledge.data[0];
+                          props.knowledge_queryResult &&
+                          props.knowledge_queryResult.data &&
+                          props.knowledge_queryResult.data[0];
                         if (!knowledge) {
                           return <Loading></Loading>;
                         }
@@ -1176,8 +1172,6 @@ class App extends React.Component {
                               }
                             >
                               <KnowledgePreview
-                                {...routeProps}
-                                {...props}
                                 onEdit={(model) => {
                                   routeProps.history.push(
                                     `//edit/${model._id}`
@@ -1193,6 +1187,12 @@ class App extends React.Component {
                                 currentUser={this.state.currentUser}
                                 setState={(props) => this.setState(props)}
                                 model={knowledge}
+                                knowledge_updateModel={
+                                  props.knowledge_updateModel
+                                }
+                                knowledge_deleteModel={
+                                  props.knowledge_deleteModel
+                                }
                                 renderDialog={(props) =>
                                   this.renderDialog(props)
                                 }
@@ -1222,7 +1222,6 @@ class App extends React.Component {
                       query={{}}
                       render={(props) => {
                         let knowledge = props.knowledge;
-                        console.log("KNOWLEDGE", knowledge);
                         let filteredRoutes = [];
                         if (props.knowledge && props.knowledge.data) {
                           let routes = props.knowledge.data

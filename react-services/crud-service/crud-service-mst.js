@@ -21,6 +21,7 @@ export const getCrudDomainStore = (
     .model({
       id: types.identifier,
       state: types.frozen(),
+      query: types.frozen(),
       status: types.string,
       loading: types.optional(types.boolean, true),
       paginate: types.optional(types.boolean, false),
@@ -48,7 +49,10 @@ export const getCrudDomainStore = (
             return axios
               .get(url, { params: { token, query } })
               .then((res) => {
-                self.setSuccess(res.data);
+                if (query && Object.keys(query).length > 0) {
+                  return self.setQueryResult(res.data);
+                }
+                return self.setSuccess(res.data);
               })
               .catch((err) => {
                 console.log("ERR", err);
@@ -177,6 +181,11 @@ export const getCrudDomainStore = (
         }
         self.status = "error";
       },
+      setQueryResult(data) {
+        self.query = data;
+        self.loading = false;
+        self.status = "success";
+      },
       setSuccess(data, successMessage) {
         self.loading = false;
         if (notificationDomainStore && successMessage) {
@@ -219,6 +228,7 @@ const injectProps = (
   injected[modelName] = transform
     ? transform(crudDomainStore.state)
     : crudDomainStore.state;
+  injected[`${modelName}_queryResult`] = crudDomainStore.query;
   injected[`${modelName}_fetchModel`] = (q) => {
     let Query = q ? q : query;
     crudDomainStore.fetchModel(Query);
@@ -269,6 +279,11 @@ class CrudContainer extends React.Component {
   }
   componentDidMount() {}
   componentWillReceiveProps(nextProps) {
+    if (nextProps.paginate !== this.props.paginate) {
+      const crudDomainStore = this.stores[this.props.modelName];
+      crudDomainStore.setPaginate(nextProps.paginate);
+      return crudDomainStore.fetchModel(nextProps.query);
+    }
     if (nextProps.query !== this.props.query) {
       console.log("change query ...");
       console.log("updating state ...");
