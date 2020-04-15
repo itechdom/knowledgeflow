@@ -1064,7 +1064,6 @@ class App extends React.Component {
                           <Route
                             path={`${routeProps.match.path}`}
                             render={(props) => {
-                              const mainFilter = props.location.pathname;
                               return (
                                 <Crud
                                   modelName="knowledge"
@@ -1209,9 +1208,6 @@ class App extends React.Component {
               <Route
                 path={`${this.props.match.path}:tag?`}
                 render={(routeProps) => {
-                  const {
-                    location: { pathname },
-                  } = routeProps;
                   let tag = routeProps.match.params.tag;
                   return (
                     <Crud
@@ -1223,8 +1219,10 @@ class App extends React.Component {
                       }
                       crudDomainStore={rootStore.crudDomainStore}
                       paginate={true}
+                      query={{}}
                       render={(props) => {
                         let knowledge = props.knowledge;
+                        console.log("KNOWLEDGE", knowledge);
                         let filteredRoutes = [];
                         if (props.knowledge && props.knowledge.data) {
                           let routes = props.knowledge.data

@@ -14,7 +14,8 @@ export const getCrudDomainStore = (
   offlineStorage,
   SERVER,
   notificationDomainStore,
-  transform
+  transform,
+  url
 ) =>
   types
     .model({
@@ -47,11 +48,10 @@ export const getCrudDomainStore = (
             return axios
               .get(url, { params: { token, query } })
               .then((res) => {
-                transform
-                  ? self.setSuccess(transform(res.data))
-                  : self.setSuccess(res.data);
+                self.setSuccess(res.data);
               })
               .catch((err) => {
+                console.log("ERR", err);
                 self.setError(err);
               });
           })
@@ -68,7 +68,6 @@ export const getCrudDomainStore = (
               token,
             })
             .then((res) => {
-              console.log("CREATE", res, self.state);
               self.setSuccess(
                 [...self.state.data, model],
                 `${modelName} successfully created!`
@@ -92,10 +91,7 @@ export const getCrudDomainStore = (
               token,
             })
             .then((res) => {
-              self.setSuccess(
-                [...self.state.filter((m) => model._id !== m._id), model],
-                `${modelName} successfully updated!`
-              );
+              return res.data;
             })
             .catch((err) => {
               return self.setError(err);
@@ -190,6 +186,7 @@ export const getCrudDomainStore = (
           });
         }
         if (data) {
+          //only add data if you know where ...
           self.state = data;
         }
         self.status = "success";
@@ -272,13 +269,8 @@ class CrudContainer extends React.Component {
   }
   componentDidMount() {}
   componentWillReceiveProps(nextProps) {
-    if (nextProps.paginate !== this.props.paginate) {
-      console.log("updating state ...");
-      const crudDomainStore = this.stores[this.props.modelName];
-      crudDomainStore.setPaginate(nextProps.paginate);
-      return crudDomainStore.fetchModel(nextProps.query);
-    }
     if (nextProps.query !== this.props.query) {
+      console.log("change query ...");
       console.log("updating state ...");
       const crudDomainStore = this.stores[this.props.modelName];
       if (nextProps.query) {
@@ -290,6 +282,7 @@ class CrudContainer extends React.Component {
   render() {
     let {
       modelName,
+      url,
       children,
       skipLoadOnInit,
       transform,
@@ -300,13 +293,15 @@ class CrudContainer extends React.Component {
       paginate,
       render,
     } = this.props;
-    if (modelName && !this.stores[modelName] && !skipLoadOnInit) {
+    let store = this.stores[modelName];
+    if (modelName && !store && !skipLoadOnInit) {
       const crudDomainStore = getCrudDomainStore(
         modelName,
         offlineStorage,
         SERVER,
         notificationDomainStore,
-        transform
+        transform,
+        url
       ).create({
         state: [],
         id: "1",
@@ -315,22 +310,14 @@ class CrudContainer extends React.Component {
       crudDomainStore.setPaginate(paginate || false);
       crudDomainStore.fetchModel(query);
       this.stores[modelName] = crudDomainStore;
+      store = this.stores[modelName];
     }
     console.log("rerender crud service");
     const childrenWithProps = render
-      ? render(
-          injectProps(
-            this.stores[modelName],
-            modelName,
-            this.props,
-            {},
-            null,
-            query
-          )
-        )
+      ? render(injectProps(store, modelName, this.props, {}, null, query))
       : React.Children.map(children, (child) => {
           let injectedProps = injectProps(
-            this.stores[modelName],
+            store,
             modelName,
             this.props,
             child,
@@ -341,30 +328,6 @@ class CrudContainer extends React.Component {
         });
     return <React.Fragment>{childrenWithProps}</React.Fragment>;
   }
-}
-
-export function withCrud(WrappedComponent) {
-  class WithCrud extends React.Component {
-    constructor(props) {
-      super(props);
-    }
-    componentDidMount() {
-      let { crudDomainStore, transform, query } = this.props;
-      crudDomainStore.getModel(query, transform);
-    }
-    componentWillReceiveProps() {}
-    render() {
-      let { crudDomainStore, transform } = this.props;
-      let injectedProps = injectProps(
-        crudDomainStore,
-        this.props,
-        this,
-        transform
-      );
-      return <WrappedComponent {...injectedProps} />;
-    }
-  }
-  return observer(WithCrud);
 }
 
 export const Crud = observer(CrudContainer);
