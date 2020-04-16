@@ -362,15 +362,6 @@ const ModelPreview = (props) => {
                   }
                 }}
               >
-                {/* <Mindmap
-                  mindmapByKeys={mindmapByKeys}
-                  editedNode={editedNode}
-                  edit={edit}
-                  level={level}
-                  width={graphContainer && graphContainer.width}
-                  height={graphContainer && graphContainer.height}
-                  {...TreeOperations}
-                ></Mindmap> */}
                 <GraphTree
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
@@ -383,6 +374,34 @@ const ModelPreview = (props) => {
               </div>
             </Paper>
           </Grid>
+          {/* <Grid {...graphTreeSizes} item>
+            <Grid container justify="center" style={{ marginBottom: "10px" }}>
+              <Grid item md={4}>
+                <Typography variant="h5" style={{ fontWeight: "300" }}>
+                  Mindmap
+                </Typography>
+              </Grid>
+            </Grid>
+            <Paper>
+              <div
+                ref={(ref) => {
+                  if (!graphContainer) {
+                    measure.graphRefCallback(ref);
+                  }
+                }}
+              >
+                <Mindmap
+                  mindmapByKeys={mindmapByKeys}
+                  editedNode={editedNode}
+                  edit={edit}
+                  level={level}
+                  width={graphContainer && graphContainer.width}
+                  height={graphContainer && graphContainer.height}
+                  {...TreeOperations}
+                ></Mindmap>
+              </div>
+            </Paper>
+          </Grid> */}
         </Grid>
       )}
       {!mindmapByKeys && (

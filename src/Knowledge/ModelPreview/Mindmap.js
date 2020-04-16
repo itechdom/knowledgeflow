@@ -1,24 +1,21 @@
-import { List, Paper, Grid } from "@material-ui/core";
 import React from "react";
 import MindmapTree from "react-d3-tree";
-import Node from "./Node";
-import { TransitionGroup, Transition } from "react-transition-group";
 
-export const convertToMindmap = (node, mindmapByKeys) => {
-  const keyList = Object.keys(node);
-  console.log("KEY LIST", keyList);
-  keyList.map((key) => {
-    const currentNode = mindmapByKeys[key];
-    console.log(key, "CURRENTNODE", currentNode);
-    currentNode.name = currentNode.title;
-    currentNode._collapsed = false;
-    currentNode.children =
-      currentNode.children &&
-      currentNode.children.map((key) => {
-        return mindmapByKeys[key];
-      });
-    return convertToMindmap(currentNode.children, mindmapByKeys);
+export const convertToMindmap = (currentNode, mindmapByKeys) => {
+  currentNode.name = currentNode.title;
+  currentNode._collapsed = false;
+  currentNode.children = currentNode.children.map((child) => {
+    let nchild = Object.assign({}, mindmapByKeys[child]);
+    let { x, ...rest } = nchild;
+    return rest;
   });
+  if (currentNode.children.length > 0) {
+    currentNode.children = currentNode.children.map((child, index) => {
+      let converted = convertToMindmap(child, mindmapByKeys);
+      return converted;
+    });
+  }
+  return currentNode;
 };
 class Tree extends React.Component {
   constructor(props) {
@@ -29,13 +26,16 @@ class Tree extends React.Component {
   }
 
   formatData(mindmapByKeys) {
-    const root = Object.keys(this.props.mindmapByKeys)[0];
-    convertToMindmap(mindmapByKeys[root], mindmapByKeys[root]);
-    this.setState({ data: [mindmapByKeys["1"]] });
+    const rootKey = Object.keys(mindmapByKeys)[0];
+    const tmp = Object.assign({}, mindmapByKeys[rootKey]);
+    const { x, ...rootNode } = tmp;
+    convertToMindmap(rootNode, mindmapByKeys);
+    return [rootNode];
   }
 
   componentDidMount() {
-    this.formatData(this.props.mindmapByKeys);
+    let data = this.formatData(Object.assign({}, this.props.mindmapByKeys));
+    this.setState({ data });
   }
 
   toggleEnterState = () => {
@@ -47,13 +47,7 @@ class Tree extends React.Component {
   render() {
     return (
       <div style={{ width: "50em", height: "20em" }}>
-        {this.state.data.length > 0 && (
-          <MindmapTree
-            separation={{ siblings: 2, nonSiblings: 2 }}
-            transitionDuration={0}
-            data={this.state.data}
-          />
-        )}
+        {this.state.data.length > 0 && <MindmapTree data={this.state.data} />}
       </div>
     );
   }
