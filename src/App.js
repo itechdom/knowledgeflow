@@ -968,13 +968,6 @@ class App extends React.Component {
                             title: "I want to say something!",
                             icon: "audiotrack",
                           },
-                          {
-                            title: `Social Media Links
-                                    @worthmanifesto
-                                    [On Facebook, twitter, instagram, linkedin]
-                                    Facebook group https://www.facebook.com/groups/worthmanifesto/`,
-                            icon: "edit",
-                          },
                         ].map(({ title, icon }) => (
                           <Grid xs={12} md={6} item>
                             <Card>
@@ -1000,7 +993,7 @@ class App extends React.Component {
                           </Grid>
                         ))}
                       </Grid>
-                      <Route
+                      {/* <Route
                         path={`${this.props.match.path}record`}
                         render={(routeProps) => {
                           return (
@@ -1020,7 +1013,7 @@ class App extends React.Component {
                             ></Camera>
                           );
                         }}
-                      ></Route>
+                      ></Route> */}
                     </MainWrapper>
                   );
                 }}

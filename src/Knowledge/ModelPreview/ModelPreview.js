@@ -23,6 +23,7 @@ import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/Confirm
 import GraphTree from "./GraphTree";
 import Mindmap from "./Mindmap";
 import { withState, compose } from "recompose";
+import star from "../../../assets/images/star.jpg";
 import {
   handleNodeAdd,
   handleNodeDelete,

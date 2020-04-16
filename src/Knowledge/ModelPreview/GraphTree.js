@@ -5,27 +5,39 @@ class Tree extends React.Component {
     super(props);
     this.state = {
       graphData: { nodes: [], links: [] },
-      showText: false
+      showText: false,
     };
     this.renderer = {};
   }
   updateGraphContainerWidth() {}
+  isValidLink(links) {
+    return (
+      !!this.props.mindmapByKeys[links.source] &&
+      !!this.props.mindmapByKeys[links.target]
+    );
+  }
   componentDidMount() {
     window.addEventListener(
       "resize",
       this.updateGraphContainerWidth.bind(this)
     );
-    let graphNodes = Object.keys(this.props.mindmapByKeys).map(nodeId => {
+    let graphNodes = Object.keys(this.props.mindmapByKeys).map((nodeId) => {
       return this.props.mindmapByKeys[nodeId];
     });
-    let graphLinks = Object.keys(this.props.mindmapByKeys).map(nodeId => {
-      return this.props.mindmapByKeys[nodeId].links;
-    });
+    let graphLinks = Object.keys(this.props.mindmapByKeys)
+      .map((nodeId) => {
+        //verify if link is valid
+        const links = this.props.mindmapByKeys[nodeId].links;
+        return links;
+      })
+      .filter((links) => {
+        return this.isValidLink(links);
+      });
     this.setState({
       graphData: {
         nodes: graphNodes,
-        links: graphLinks
-      }
+        links: graphLinks,
+      },
     });
   }
 
@@ -41,13 +53,13 @@ class Tree extends React.Component {
         graphData={this.state.graphData}
         width={this.props.width || 700}
         height={this.props.height || 700}
-        nodeLabel={node => {
+        nodeLabel={(node) => {
           if (node.attr && node.attr.note && node.attr.note.text) {
             return node.title + ": \n" + node.attr.note.text;
           }
           return node.title;
         }}
-        nodeVal={node => {
+        nodeVal={(node) => {
           return node.size;
         }}
         nodeCanvasObject={(node, ctx, globalScale) => {
@@ -56,7 +68,7 @@ class Tree extends React.Component {
           ctx.font = `${fontSize}px Sans-Serif`;
           const textWidth = ctx.measureText(label).width;
           const bckgDimensions = [textWidth, fontSize].map(
-            n => n + fontSize * 0.2
+            (n) => n + fontSize * 0.2
           ); // some padding
           ctx.fillStyle = "#000000";
           ctx.fillRect(
@@ -76,13 +88,13 @@ class Tree extends React.Component {
         // centerAt={null}
         width={this.props.width || 700}
         height={this.props.height || 700}
-        nodeLabel={node => {
+        nodeLabel={(node) => {
           if (node.attr && node.attr.note && node.attr.note.text) {
             return node.title + ": \n" + node.attr.note.text;
           }
           return node.title;
         }}
-        nodeVal={node => {
+        nodeVal={(node) => {
           return node.size;
         }}
         nodeAutoColorBy="group"
