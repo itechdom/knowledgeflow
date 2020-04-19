@@ -16,8 +16,7 @@ export const styles = (theme) => {
       backgroundImage: "linear-gradient(to top, #fff1eb 0%, #e2eef6 100%)",
       minHeight: "100vh",
     },
-    autocomplete:{
-    },
+    autocomplete: {},
     suggestionsContainerOpen: {
       zIndex: 9999,
     },
@@ -249,7 +248,7 @@ export const styles = (theme) => {
       color: "white!important",
     },
     noScroll: {
-      maxHeight: "100vh",
+      maxHeight: "0px",
     },
     noHeight: {
       height: "0px",

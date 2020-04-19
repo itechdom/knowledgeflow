@@ -1046,7 +1046,6 @@ class App extends React.Component {
                       classes={{
                         ...classes,
                         tabMenu: `${classes["white"]}`,
-                        hasPadding: `${classes["top50"]} ${classes["bottom50"]}`,
                         content: `${classes.noScroll}`,
                         menuTabsClasses: {
                           flexContainer: `${classes["center"]}`,

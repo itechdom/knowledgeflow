@@ -7,7 +7,7 @@ import ModelLoader from "../ModelLoader/ModelLoader";
 
 export default class Game extends Component {
   static propTypes = {
-    onLeave: PropTypes.func
+    onLeave: PropTypes.func,
   };
 
   state = {
@@ -16,8 +16,31 @@ export default class Game extends Component {
     fade: true,
     position: null,
     jumping: false,
-    log: {}
+    log: {},
   };
+  loadModels() {
+    ModelLoader("/models/compass.glb")
+      .then((gltf) => {
+        this.compass = gltf.scene.children;
+        this.scene.add(gltf.scene);
+      })
+      .catch((err) => console.log("error", err));
+    // ModelLoader("/models/wire.glb")
+    //   .then((gltf) => {
+    //     this.wire = gltf.scene.children;
+    //     this.scene.add(gltf.scene);
+    //     this.wire[2].position.x = 0;
+    //     this.wire[2].position.y = 0;
+    //     this.wire[2].position.z = 0;
+    //     this.wire[2].rotation.y = Math.PI / 2;
+    //     for (let i = 0; i < 10; i++) {
+    //       let newWire = this.wire[2].clone();
+    //       newWire.position.z = (i + 1) * 10;
+    //       this.scene.add(newWire);
+    //     }
+    //   })
+    // .catch((err) => console.log("error", err));
+  }
 
   startAnimating(fps) {
     animate();
@@ -49,7 +72,7 @@ export default class Game extends Component {
   playSound() {
     var filter = new Tone.Filter({
       type: "bandpass",
-      Q: 12
+      Q: 12,
     }).toMaster();
 
     //schedule a series of frequency changes
@@ -60,10 +83,7 @@ export default class Game extends Component {
     filter.frequency.setValueAtTime("C6", 2);
     filter.frequency.linearRampToValueAtTime("C1", 3);
 
-    var noise = new Tone.Noise("brown")
-      .connect(filter)
-      .start(0)
-      .stop(3);
+    var noise = new Tone.Noise("brown").connect(filter).start(0).stop(3);
 
     //schedule an amplitude curve
     noise.volume.setValueAtTime(-20, 0);
@@ -91,6 +111,8 @@ export default class Game extends Component {
         break;
       case "e":
         this.camera.position.x += this.isInverted() ? 1 * 0.1 : -1 * 0.1;
+        // this.grid.rotation.y = this.grid.rotation.y + 1;
+        // this.grid.rotation.z = this.grid.rotation.z + 1;
         break;
       case "q":
         this.camera.position.x += this.isInverted() ? -1 * 0.1 : 1 * 0.1;
@@ -120,7 +142,7 @@ export default class Game extends Component {
       1,
       1000
     );
-    this.camera.position.z = 0;
+    this.camera.position.z = 20;
     this.camera.position.x = 0;
     this.camera.position.y = 1;
     this.scene = new THREE.Scene();
@@ -192,6 +214,8 @@ export default class Game extends Component {
     var grid = new THREE.GridHelper(200, 40, 0x000000, 0x000000);
     grid.material.opacity = 0.2;
     grid.material.transparent = true;
+    this.grid = grid;
+    this.grid.rotation.x = Math.PI / 2;
     this.scene.add(grid);
   };
 
@@ -209,13 +233,31 @@ export default class Game extends Component {
       new THREE.PlaneGeometry(planeW * numW, planeH * numH, planeW, planeH),
       new THREE.MeshPhysicalMaterial({
         color: 0x808080,
-        wireframe: true
+        wireframe: true,
       })
     );
     // scene.add(plane);
     this.scene.add(plane);
     return plane;
   };
+
+  rotateWithEntropy(increase, gas) {
+    this.compass[3].position.x = gas * Math.sin(Math.sin(increase));
+    // this.compass[3].position.y = Math.sin(Math.cos(increase / 30));
+    // this.compass[3].rotation.z = (gas * increase) / 30;
+    //initial value is used to decrease the rotation angle of the compass
+    gas = gas / 1.001;
+  }
+  //pendulem swing
+  swing(increase, gas) {
+    // this.compass[3].position.x = 0;
+    //multiplying by -1 makes the shape rotate clockwise
+    const val1 = gas * Math.sin(-1 * increase);
+    const val2 = gas * Math.cos(-1 * increase);
+    this.compass[3].position.x = val1;
+    this.compass[3].position.y = val2;
+    // this.compass[3].position.x = gas * Math.sin(Math.sin(increase));
+  }
 
   componentDidMount() {
     this.init();
@@ -225,39 +267,17 @@ export default class Game extends Component {
     this.canvas = document.getElementById("my-canvas");
     this.ctx = this.canvas.getContext("2d");
     let increase = 0;
-    let initialValue = 1;
+    let gas = 1;
     const gridVector = [5, 50, 300, 150];
     let ground = this.drawGround();
     // let light = this.drawFlashLight(...gridVector, increase);
     let HemisphereLight = this.drawHemisphereLight();
-    ModelLoader("/models/compass.glb")
-      .then(gltf => {
-        this.compass = gltf.scene.children;
-        this.scene.add(gltf.scene);
-      })
-      .catch(err => console.log("error", err));
-    ModelLoader("/models/wire.glb")
-      .then(gltf => {
-        this.wire = gltf.scene.children;
-        this.scene.add(gltf.scene);
-        this.wire[2].position.x = 0;
-        this.wire[2].position.y = 0;
-        this.wire[2].position.z = 0;
-        this.wire[2].rotation.y = Math.PI / 2;
-        for (let i = 0; i < 10; i++) {
-          let newWire = this.wire[2].clone();
-          newWire.position.z = (i + 1) * 10;
-          this.scene.add(newWire);
-        }
-      })
-      .catch(err => console.log("error", err));
+    this.loadModels();
     this.onDraw = () => {
       if (this.state.jumping) {
-        this.compass[3].position.x =
-          initialValue * Math.sin(-1 * Math.sin(increase / 30));
-        this.compass[3].position.y = Math.sin(Math.cos(increase / 30));
-        // this.compass[3].rotation.z = (initialValue * increase) / 30;
-        initialValue = initialValue / 1.001;
+        //this would be gas?
+        gas = gas / 1.01;
+        this.swing(increase, gas);
       }
       this.renderer.render(this.scene, this.camera);
       this.setState({
@@ -265,8 +285,8 @@ export default class Game extends Component {
           other: this.camera,
           position: this.camera.position,
           rotation: this.camera.rotation,
-          state: this.state.jumping
-        }
+          state: this.state.jumping,
+        },
       });
       increase++;
     };
@@ -283,23 +303,16 @@ export default class Game extends Component {
       characterPosition,
       setStageX,
       setCharacterPosition,
-      fileLocation
+      fileLocation,
     } = this.props;
 
     return (
-      <div
-        style={{
-          width: "300px",
-          marginTop: "100px",
-          marginLeft: "100px",
-          border: "1px solid black"
-        }}
-      >
+      <div>
         <KeyboardEventHandler
           handleKeys={["all"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
-        <div>{JSON.stringify(this.state.log)}</div>
+        {/* <div>{JSON.stringify(this.state.log)}</div> */}
         <canvas id="my-canvas"></canvas>
       </div>
     );

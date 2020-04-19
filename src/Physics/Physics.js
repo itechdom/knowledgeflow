@@ -2,7 +2,7 @@ import React from "react";
 import { styles } from "./Physics.styles.js";
 import theme from "Theme";
 import Simulation from "./Simulation/Simulation";
-import Math from "../Math/Math";
+// import Math from "../Math/Math";
 import { withStyles, Button } from "@material-ui/core";
 const Physics = ({
   knowledge,
@@ -37,7 +37,6 @@ const Physics = ({
 }) => {
   return (
     <>
-      <Math />
       <Simulation />
     </>
   );
