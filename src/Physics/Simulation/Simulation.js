@@ -136,6 +136,16 @@ export default class Game extends Component {
   }
 
   init() {
+    Element.prototype.remove = function () {
+      this.parentElement.removeChild(this);
+    };
+    NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+      for (var i = this.length - 1; i >= 0; i--) {
+        if (this[i] && this[i].parentElement) {
+          this[i].parentElement.removeChild(this[i]);
+        }
+      }
+    };
     this.camera = new THREE.PerspectiveCamera(
       45,
       window.innerWidth / window.innerHeight,
@@ -151,7 +161,8 @@ export default class Game extends Component {
     this.scene.add(this.camera);
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.synth = new Tone.FMSynth().toMaster();
+    this.renderer.domElement.id = "my-canvas";
+    // this.synth = new Tone.FMSynth().toMaster();
     document.body.appendChild(this.renderer.domElement);
   }
 
@@ -264,8 +275,6 @@ export default class Game extends Component {
     this.then = Date.now();
     const fps = 60;
     this.fpsInterval = 1000 / fps;
-    this.canvas = document.getElementById("my-canvas");
-    this.ctx = this.canvas.getContext("2d");
     let increase = 0;
     let gas = 1;
     const gridVector = [5, 50, 300, 150];
@@ -280,20 +289,24 @@ export default class Game extends Component {
         this.swing(increase, gas);
       }
       this.renderer.render(this.scene, this.camera);
-      this.setState({
-        log: {
-          other: this.camera,
-          position: this.camera.position,
-          rotation: this.camera.rotation,
-          state: this.state.jumping,
-        },
-      });
+      // this.setState({
+      //   log: {
+      //     other: this.camera,
+      //     position: this.camera.position,
+      //     rotation: this.camera.rotation,
+      //     state: this.state.jumping,
+      //   },
+      // });
       increase++;
     };
     this.animate();
   }
 
   componentWillUnmount() {
+    this.canvas = document.getElementById("my-canvas");
+    setTimeout(() => {
+      this.canvas.remove();
+    }, 1000);
     window.cancelAnimationFrame(this.requestId);
   }
 
@@ -313,7 +326,6 @@ export default class Game extends Component {
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
         {/* <div>{JSON.stringify(this.state.log)}</div> */}
-        <canvas id="my-canvas"></canvas>
       </div>
     );
   }
