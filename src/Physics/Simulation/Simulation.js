@@ -156,7 +156,9 @@ export default class Game extends Component {
     this.camera.position.z = 20;
     this.camera.position.x = 0;
     this.camera.position.y = 1;
-    this.scene = new THREE.Scene();
+    this.scene = new Physijs.Scene();
+    this.scene.setGravity(new THREE.Vector3(0, -30, 0));
+    this.scene.simulate();
     this.scene.background = new THREE.Color(0xe0e0e0);
     // this.scene.fog = new THREE.Fog(0xe0e0e0, 20, 100);
     this.scene.add(this.camera);
