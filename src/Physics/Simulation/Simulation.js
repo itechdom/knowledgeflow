@@ -4,6 +4,7 @@ import * as THREE from "three";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 import ModelLoader from "../ModelLoader/ModelLoader";
+import Physijs from "physijs-webpack";
 
 export default class Game extends Component {
   static propTypes = {
@@ -214,7 +215,6 @@ export default class Game extends Component {
 
   drawGround = () => {
     // ground
-
     var mesh = new THREE.Mesh(
       new THREE.PlaneBufferGeometry(2000, 2000),
       new THREE.MeshPhongMaterial({ color: 0x999999, depthWrite: false })
@@ -311,21 +311,12 @@ export default class Game extends Component {
   }
 
   render() {
-    let {
-      stageX,
-      characterPosition,
-      setStageX,
-      setCharacterPosition,
-      fileLocation,
-    } = this.props;
-
     return (
       <div>
         <KeyboardEventHandler
           handleKeys={["all"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
-        {/* <div>{JSON.stringify(this.state.log)}</div> */}
       </div>
     );
   }
