@@ -165,6 +165,14 @@ export default class Game extends Component {
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.domElement.id = "my-canvas";
+    // var controls = new THREE.DragControls(this.compass, camera, renderer.domElement);
+    // // add event listener to highlight dragged objects
+    // controls.addEventListener("dragstart", function (event) {
+    //   event.object.material.emissive.set(0xaaaaaa);
+    // });
+    // controls.addEventListener("dragend", function (event) {
+    //   event.object.material.emissive.set(0x000000);
+    // });
     // this.synth = new Tone.FMSynth().toMaster();
     document.body.appendChild(this.renderer.domElement);
   }
@@ -291,14 +299,14 @@ export default class Game extends Component {
         this.swing(increase, gas);
       }
       this.renderer.render(this.scene, this.camera);
-      // this.setState({
-      //   log: {
-      //     other: this.camera,
-      //     position: this.camera.position,
-      //     rotation: this.camera.rotation,
-      //     state: this.state.jumping,
-      //   },
-      // });
+      this.setState({
+        log: {
+          other: this.camera,
+          position: this.camera.position,
+          rotation: this.camera.rotation,
+          state: this.state.jumping,
+        },
+      });
       increase++;
     };
     this.animate();
@@ -306,9 +314,7 @@ export default class Game extends Component {
 
   componentWillUnmount() {
     this.canvas = document.getElementById("my-canvas");
-    setTimeout(() => {
-      this.canvas.remove();
-    }, 1000);
+    this.canvas.remove();
     window.cancelAnimationFrame(this.requestId);
   }
 
@@ -319,6 +325,9 @@ export default class Game extends Component {
           handleKeys={["all"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
+        <div style={{ position: "fixed", top: "5em" }}>
+          {JSON.stringify(this.state.log)}
+        </div>
       </div>
     );
   }
