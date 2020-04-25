@@ -39,6 +39,7 @@
     "history": "4.9.0",
     "immutable": "^3.8.2",
     "matter-js": "^0.14.2",
+    "mst-middlewares": "^3.16.0",
     "physijs-webpack": "^0.1.4",
     "prismjs": "^1.17.1",
     "prop-types": "^15.6.2",

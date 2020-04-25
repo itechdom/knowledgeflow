@@ -1113,6 +1113,10 @@ class App extends React.Component {
                       paginate={false}
                       query={query}
                       render={(props) => {
+                        // console.log(
+                        //   "PROPS",
+                        //   props.knowledge_undoManager.history
+                        // );
                         let knowledge =
                           props.knowledge_queryResult &&
                           props.knowledge_queryResult.data &&

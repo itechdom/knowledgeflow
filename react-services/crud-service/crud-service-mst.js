@@ -2,11 +2,16 @@ import { observer } from "mobx-react";
 import { types } from "mobx-state-tree";
 import React from "react";
 import axios from "axios";
+import { UndoManager } from "mst-middlewares";
 
 const Filter = types.model("Filter", {
   name: types.string,
   value: types.string,
 });
+export let undoManager = {};
+export const setUndoManager = (targetStore) => {
+  undoManager = targetStore.history;
+};
 
 //export store
 export const getCrudDomainStore = (
@@ -27,180 +32,187 @@ export const getCrudDomainStore = (
       paginate: types.optional(types.boolean, false),
       page: types.optional(types.number, 1),
       filters: types.array(Filter),
+      history: types.optional(UndoManager, {}),
     })
-    .actions((self) => ({
-      setPage(page) {
-        self.page = page;
-      },
-      setPaginate(paginate) {
-        self.paginate = paginate;
-      },
-      fetchModel(query) {
-        self.loading = true;
-        return offlineStorage
-          .getItem("jwtToken")
-          .then((token) => {
-            let url;
-            if (self.paginate) {
-              url = `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`;
-            } else {
-              url = `${SERVER.host}:${SERVER.port}/${modelName}`;
-            }
+    .actions((self) => {
+      setUndoManager(self);
+      return {
+        setPage(page) {
+          self.page = page;
+        },
+        setPaginate(paginate) {
+          self.paginate = paginate;
+        },
+        fetchModel(query) {
+          self.loading = true;
+          return offlineStorage
+            .getItem("jwtToken")
+            .then((token) => {
+              let url;
+              if (self.paginate) {
+                url = `${SERVER.host}:${SERVER.port}/${modelName}/paginate/${self.page}/10`;
+              } else {
+                url = `${SERVER.host}:${SERVER.port}/${modelName}`;
+              }
+              return axios
+                .get(url, { params: { token, query } })
+                .then((res) => {
+                  if (query && Object.keys(query).length > 0) {
+                    return self.setQueryResult(res.data);
+                  }
+                  return self.setSuccess(res.data);
+                })
+                .catch((err) => {
+                  console.log("ERR", err);
+                  self.setError(err);
+                });
+            })
+            .catch((err) => {
+              return self.setError(err);
+            });
+        },
+        createModel(model) {
+          self.loading = true;
+          return offlineStorage.getItem("jwtToken").then((token) => {
             return axios
-              .get(url, { params: { token, query } })
+              .post(`${SERVER.host}:${SERVER.port}/${modelName}/create`, {
+                model,
+                token,
+              })
               .then((res) => {
-                if (query && Object.keys(query).length > 0) {
-                  return self.setQueryResult(res.data);
-                }
-                return self.setSuccess(res.data);
+                self.setSuccess(
+                  [...self.state.data, model],
+                  `${modelName} successfully created!`
+                );
+                return res.data;
               })
               .catch((err) => {
-                console.log("ERR", err);
-                self.setError(err);
+                return self.setError(err);
               });
-          })
-          .catch((err) => {
-            return self.setError(err);
           });
-      },
-      createModel(model) {
-        self.loading = true;
-        return offlineStorage.getItem("jwtToken").then((token) => {
-          return axios
-            .post(`${SERVER.host}:${SERVER.port}/${modelName}/create`, {
-              model,
-              token,
-            })
-            .then((res) => {
-              self.setSuccess(
-                [...self.state.data, model],
-                `${modelName} successfully created!`
-              );
-              return res.data;
-            })
-            .catch((err) => {
-              return self.setError(err);
-            });
-        });
-      },
-      updateModel(model, updateValues) {
-        // self.loading = true;
-        Object.keys(updateValues).map((key) => {
-          model[key] = updateValues[key];
-        });
-        return offlineStorage.getItem("jwtToken").then((token) => {
-          return axios
-            .put(`${SERVER.host}:${SERVER.port}/${modelName}`, {
-              model,
-              token,
-            })
-            .then((res) => {
-              return res.data;
-            })
-            .catch((err) => {
-              return self.setError(err);
-            });
-        });
-      },
-      deleteModel(model) {
-        self.loading = true;
-        return offlineStorage.getItem("jwtToken").then((token) => {
-          return axios
-            .delete(`${SERVER.host}:${SERVER.port}/${modelName}/${model._id}`, {
-              params: { token },
-            })
-            .then((res) => {
-              self.setSuccess(
-                self.state.filter((m) => m !== model),
-                `${modelName} successfully deleted!`
-              );
-            })
-            .catch((err) => {
-              return self.setError(err);
-            });
-        });
-      },
-      searchModel(query) {
-        // self.loading = true;
-        return offlineStorage.getItem("jwtToken").then((token) => {
-          return axios
-            .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
-              query,
-              token,
-            })
-            .then((res) => {
-              //new data
-              let formattedData = {
-                data: res.data.data,
-                count: res.data.count,
-              };
-              return formattedData;
-            })
-            .catch((err) => {
-              console.log("err", err);
-              return self.setError(err);
-            });
-        });
-      },
-      searchModels(query, modelName) {
-        self.loading = true;
-        return offlineStorage.getItem("jwtToken").then((token) => {
-          return axios
-            .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
-              query,
-              token,
-            })
-            .then((res) => {
-              return res.data;
-            })
-            .catch((err) => {
-              console.log("err", err);
-              return self.setError(err);
-            });
-        });
-      },
-      setFilter(filter) {
-        //add if not already defined
-        const foundFilter = self.filters.find((f) => f.name === filter.name);
-        if (!foundFilter) {
-          self.filters.push(filter);
-        }
-      },
-      removeFilter(filter) {
-        self.filters = self.filters.filter((f) => f.name !== filter.name);
-      },
-      setError(err) {
-        self.loading = false;
-        if (notificationDomainStore) {
-          notificationDomainStore.saveNotification(modelName, {
-            message: !err.response
-              ? err
-              : err && err.response && err.response.data.message,
-            type: "error",
+        },
+        updateModel(model, updateValues) {
+          // self.loading = true;
+          Object.keys(updateValues).map((key) => {
+            model[key] = updateValues[key];
           });
-        }
-        self.status = "error";
-      },
-      setQueryResult(data) {
-        self.query = data;
-        self.loading = false;
-        self.status = "success";
-      },
-      setSuccess(data, successMessage) {
-        self.loading = false;
-        if (notificationDomainStore && successMessage) {
-          notificationDomainStore.saveNotification(modelName, {
-            message: successMessage,
-            type: "success",
+          return offlineStorage.getItem("jwtToken").then((token) => {
+            return axios
+              .put(`${SERVER.host}:${SERVER.port}/${modelName}`, {
+                model,
+                token,
+              })
+              .then((res) => {
+                return res.data;
+              })
+              .catch((err) => {
+                return self.setError(err);
+              });
           });
-        }
-        if (data) {
-          //only add data if you know where ...
-          self.state = data;
-        }
-        self.status = "success";
-      },
-    }))
+        },
+        deleteModel(model) {
+          self.loading = true;
+          return offlineStorage.getItem("jwtToken").then((token) => {
+            return axios
+              .delete(
+                `${SERVER.host}:${SERVER.port}/${modelName}/${model._id}`,
+                {
+                  params: { token },
+                }
+              )
+              .then((res) => {
+                self.setSuccess(
+                  self.state.filter((m) => m !== model),
+                  `${modelName} successfully deleted!`
+                );
+              })
+              .catch((err) => {
+                return self.setError(err);
+              });
+          });
+        },
+        searchModel(query) {
+          // self.loading = true;
+          return offlineStorage.getItem("jwtToken").then((token) => {
+            return axios
+              .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
+                query,
+                token,
+              })
+              .then((res) => {
+                //new data
+                let formattedData = {
+                  data: res.data.data,
+                  count: res.data.count,
+                };
+                return formattedData;
+              })
+              .catch((err) => {
+                console.log("err", err);
+                return self.setError(err);
+              });
+          });
+        },
+        searchModels(query, modelName) {
+          self.loading = true;
+          return offlineStorage.getItem("jwtToken").then((token) => {
+            return axios
+              .post(`${SERVER.host}:${SERVER.port}/${modelName}/search`, {
+                query,
+                token,
+              })
+              .then((res) => {
+                return res.data;
+              })
+              .catch((err) => {
+                console.log("err", err);
+                return self.setError(err);
+              });
+          });
+        },
+        setFilter(filter) {
+          //add if not already defined
+          const foundFilter = self.filters.find((f) => f.name === filter.name);
+          if (!foundFilter) {
+            self.filters.push(filter);
+          }
+        },
+        removeFilter(filter) {
+          self.filters = self.filters.filter((f) => f.name !== filter.name);
+        },
+        setError(err) {
+          self.loading = false;
+          if (notificationDomainStore) {
+            notificationDomainStore.saveNotification(modelName, {
+              message: !err.response
+                ? err
+                : err && err.response && err.response.data.message,
+              type: "error",
+            });
+          }
+          self.status = "error";
+        },
+        setQueryResult(data) {
+          self.query = data;
+          self.loading = false;
+          self.status = "success";
+        },
+        setSuccess(data, successMessage) {
+          self.loading = false;
+          if (notificationDomainStore && successMessage) {
+            notificationDomainStore.saveNotification(modelName, {
+              message: successMessage,
+              type: "success",
+            });
+          }
+          if (data) {
+            //only add data if you know where ...
+            self.state = data;
+          }
+          self.status = "success";
+        },
+      };
+    })
     .views((self) => ({
       getModel() {
         return self.state;
@@ -219,7 +231,8 @@ const injectProps = (
   props,
   child,
   transform,
-  query
+  query,
+  undoManager
 ) => {
   let injected = {
     ...props,
@@ -267,6 +280,8 @@ const injectProps = (
     crudDomainStore.removeFilter(filter);
 
   injected[`${modelName}_loading`] = crudDomainStore.isLoading();
+
+  injected[`${modelName}_undoManager`] = undoManager;
 
   return injected;
 };
@@ -329,7 +344,17 @@ class CrudContainer extends React.Component {
     }
     console.log("rerender crud service");
     const childrenWithProps = render
-      ? render(injectProps(store, modelName, this.props, {}, null, query))
+      ? render(
+          injectProps(
+            store,
+            modelName,
+            this.props,
+            {},
+            null,
+            query,
+            undoManager
+          )
+        )
       : React.Children.map(children, (child) => {
           let injectedProps = injectProps(
             store,
@@ -337,12 +362,12 @@ class CrudContainer extends React.Component {
             this.props,
             child,
             transform,
-            query
+            query,
+            undoManager
           );
           return React.cloneElement(child, { ...injectedProps });
         });
     return <React.Fragment>{childrenWithProps}</React.Fragment>;
   }
 }
-
 export const Crud = observer(CrudContainer);
