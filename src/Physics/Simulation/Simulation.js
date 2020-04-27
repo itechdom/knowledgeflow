@@ -6,7 +6,7 @@ import KeyboardEventHandler from "react-keyboard-event-handler";
 import ModelLoader from "../ModelLoader/ModelLoader";
 import Physijs from "physijs-webpack";
 
-export default class Game extends Component {
+export default class Simulation extends Component {
   static propTypes = {
     onLeave: PropTypes.func,
   };

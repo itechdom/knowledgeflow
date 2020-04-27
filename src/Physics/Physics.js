@@ -4,6 +4,8 @@ import theme from "Theme";
 import Simulation from "./Simulation/Simulation";
 // import Math from "../Math/Math";
 import { withStyles, Button } from "@material-ui/core";
+import { Game, GameState } from "../BoardGame/BoardGame";
+
 const Physics = ({
   knowledge,
   knowledge_createModel,
@@ -36,9 +38,19 @@ const Physics = ({
   ...rest
 }) => {
   return (
-    <>
-      <Simulation />
-    </>
+    <div
+      style={{
+        marginTop: "5em",
+        backgroundImage: `url("/assets/game/hexagonTiles/webb.png")`,
+        backgroundRepeat: "repeat",
+        height: "100vh",
+      }}
+    >
+      {/* <Simulation /> */}
+      <GameState>
+        <Game></Game>
+      </GameState>
+    </div>
   );
 };
 
