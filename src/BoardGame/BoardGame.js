@@ -28,7 +28,7 @@ export const GameState = ({ children, knowledge }) => {
   const [phase, setPhase] = React.useState();
   //we are going to pick a random knowledge, then pick a random branch
   //setup a map
-  const getTile = () => {
+  const getTile = (tile, selected) => {
     const tiles = [
       "Grass",
       "Dirt",
@@ -39,13 +39,22 @@ export const GameState = ({ children, knowledge }) => {
       "Stone",
       "Water",
     ];
+    if (tile) {
+      if (selected) {
+        return `${tile.url.replace("_tile", "")}`;
+      }
+      if (tile.url.indexOf("_tile") === -1) {
+        return `${tile.url.replace(".png", "")}_tile.png`;
+      }
+      return tile.url;
+    }
     return `/assets/game/hexagonTiles/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
-    }.png`;
+    }_tile.png`;
   };
   const getRandomKnowledge = () => {};
   const initGrid = () => {
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 20; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 10; j++) {
         grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
@@ -56,17 +65,25 @@ export const GameState = ({ children, knowledge }) => {
   const updateAllGrids = (data) => {
     setGrid([...data]);
   };
+  const selectGrid = (i, j) => {
+    return updateGrid(i, j, {
+      ...grid[i][j],
+      url: getTile(grid[i][j], !grid[i][j].selected),
+      selected: !grid[i][j].selected,
+    });
+  };
   const updateGrid = (position1, position2, data) => {
     setGrid(
       grid.map((g, i) =>
         i === position1 ? g.map((gr, j) => (j === position2 ? data : gr)) : g
       )
     );
+    console.log(grid, "GRID");
   };
   const unSelectAll = (grid) => {
     const newGrid = grid.map((g, i) => {
       return g.map((gr, j) => {
-        return { ...gr, selected: false };
+        return { ...gr, selected: false, url: getTile(grid[i][j], false) };
       });
     });
     setGrid([...newGrid]);
@@ -85,12 +102,13 @@ export const GameState = ({ children, knowledge }) => {
       updateGrid: updateGrid,
       updateAllGrids: updateAllGrids,
       unSelectAll: unSelectAll,
+      selectGrid: selectGrid,
       RollADice: RollADice,
     });
   });
   return <>{childrenWithProps}</>;
 };
-export const Game = ({ grid, updateGrid, unSelectAll }) => {
+export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
   const handleClick = (ev, data) => {
     data ? unSelectAll(grid) : "";
   };
@@ -111,27 +129,34 @@ export const Game = ({ grid, updateGrid, unSelectAll }) => {
         handleClick(ev, "container");
       }}
     >
-      <Grid container justify="center" direction="row">
+      <Grid
+        container
+        justify="center"
+        direction="row"
+        style={{ marginTop: "3em" }}
+      >
         {grid.length > 0 ? (
           grid.map((g, i) => (
             <Grid
               container
+              style={{
+                position: "relative",
+                bottom: `${45 * (i + 1)}px`,
+                left: (i + 1) % 2 !== 0 ? "30px" : "0px",
+              }}
               justify="center"
-              // style={{ border: "1px solid black" }}
             >
               {g.map((gr, j) => (
                 <Grid
                   style={{
-                    width: "80px",
-                    height: "100px",
+                    width: "56px",
+                    height: "85px",
+                    zIndex: gr.selected ? "999" : "0",
                   }}
                   item
                   onClick={(ev) => {
                     ev.stopPropagation();
-                    return updateGrid(i, j, {
-                      ...grid[i][j],
-                      selected: !grid[i][j].selected,
-                    });
+                    return selectGrid(i, j);
                   }}
                 >
                   <span
@@ -152,6 +177,8 @@ export const Game = ({ grid, updateGrid, unSelectAll }) => {
                     style={{
                       boxShadow: gr.selected ? "#00000061 0px 1px 9px" : "",
                       padding: "3px 5px",
+                      position: "relative",
+                      // right: "10px",
                     }}
                     src={gr.url}
                   />
