@@ -47,30 +47,53 @@ export const GameState = ({ children, knowledge }) => {
   const initGrid = () => {
     for (let i = 0; i < 5; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 5; j++) {
-        grid[i][j] = { name: `${i}x${j}`, url: getTile() };
+      for (let j = 0; j < 10; j++) {
+        grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
       }
     }
     setGrid(grid);
   };
-  const updateGrid = (position, data) => {};
+  const updateAllGrids = (data) => {
+    setGrid([...data]);
+  };
+  const updateGrid = (position1, position2, data) => {
+    setGrid(
+      grid.map((g, i) =>
+        i === position1 ? g.map((gr, j) => (j === position2 ? data : gr)) : g
+      )
+    );
+  };
+  const unSelectAll = (grid) => {
+    const newGrid = grid.map((g, i) => {
+      return g.map((gr, j) => {
+        return { ...gr, selected: false };
+      });
+    });
+    setGrid([...newGrid]);
+  };
   const RollADice = () => {};
   const onDraw = () => {};
   React.useEffect(() => {
     initGrid();
     setPhase("0-a");
   }, []);
+  console.log("rerender");
   //knowledgeflow.markab.io
   const childrenWithProps = React.Children.map(children, (child) => {
     return React.cloneElement(child, {
       grid: grid,
       updateGrid: updateGrid,
+      updateAllGrids: updateAllGrids,
+      unSelectAll: unSelectAll,
       RollADice: RollADice,
     });
   });
   return <>{childrenWithProps}</>;
 };
-export const Game = ({ grid }) => {
+export const Game = ({ grid, updateGrid, unSelectAll }) => {
+  const handleClick = (ev, data) => {
+    data ? unSelectAll(grid) : "";
+  };
   React.useEffect(() => {
     animate(() => {
       console.log("ANIMATE");
@@ -84,12 +107,11 @@ export const Game = ({ grid }) => {
         marginLeft: "auto",
         marginRight: "auto",
       }}
+      onClick={(ev) => {
+        handleClick(ev, "container");
+      }}
     >
-      <Grid
-        container
-        justify="center"
-        direction="row"
-      >
+      <Grid container justify="center" direction="row">
         {grid.length > 0 ? (
           grid.map((g, i) => (
             <Grid
@@ -98,7 +120,20 @@ export const Game = ({ grid }) => {
               // style={{ border: "1px solid black" }}
             >
               {g.map((gr, j) => (
-                <Grid style={{ width: "65.5px", height: "80px" }} item>
+                <Grid
+                  style={{
+                    width: "80px",
+                    height: "100px",
+                  }}
+                  item
+                  onClick={(ev) => {
+                    ev.stopPropagation();
+                    return updateGrid(i, j, {
+                      ...grid[i][j],
+                      selected: !grid[i][j].selected,
+                    });
+                  }}
+                >
                   <span
                     style={{
                       padding: "2px",
@@ -106,13 +141,20 @@ export const Game = ({ grid }) => {
                       color: "white",
                       textShadow: "black 0px 1px 1px",
                       position: "relative",
-                      left: "20px",
-                      top: "45px",
+                      left: "24px",
+                      top: "48px",
                     }}
                   >
                     {gr.name}
                   </span>
-                  <img src={gr.url} />
+                  <img
+                    data-id="tile"
+                    style={{
+                      boxShadow: gr.selected ? "#00000061 0px 1px 9px" : "",
+                      padding: "3px 5px",
+                    }}
+                    src={gr.url}
+                  />
                 </Grid>
               ))}
             </Grid>
