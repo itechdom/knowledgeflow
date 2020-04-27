@@ -122,6 +122,8 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
       container
       style={{
         width: "100%",
+        minWidth: "750px",
+        overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
       }}
