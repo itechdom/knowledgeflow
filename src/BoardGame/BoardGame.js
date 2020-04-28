@@ -179,16 +179,13 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
+        backgroundColor: "#8BE1EB",
       }}
       onClick={(ev) => {
         handleClick(ev, "container");
       }}
     >
-      <Grid
-        container
-        justify="center"
-        direction="row"
-      >
+      <Grid container justify="center" direction="row">
         {grid.length > 0 ? (
           grid.map((g, i) => (
             <Grid
