@@ -1,6 +1,20 @@
 import React from "react";
 import { getRandomInt } from "./utils";
 import { Grid } from "@material-ui/core";
+const tiles = [
+  "Grass",
+  "Lava",
+  "Magic",
+  // "Dirt",
+  // "Sand",
+  // "Snow",
+  // "Stone",
+  // "Water",
+];
+//the problem here is each tile has a specific type of terrain
+const sceneObjects = [];
+
+const characters = [];
 let fpsInterval = 1000 / 60,
   then = Date.now();
 const animate = (onDraw) => {
@@ -28,32 +42,22 @@ export const GameState = ({ children, knowledge }) => {
   //we are going to pick a random knowledge, then pick a random branch
   //setup a map
   const getTile = (tile, selected) => {
-    const tiles = [
-      "Grass",
-      "Lava",
-      "Magic",
-      // "Dirt",
-      // "Sand",
-      // "Snow",
-      // "Stone",
-      // "Water",
-    ];
+    const suffix = "_full";
     if (tile) {
       if (selected) {
-        return `${tile.url.replace("_tile", "")}`;
+        return `${tile.url.replace(suffix, "")}`;
       }
-      if (tile.url.indexOf("_tile") === -1) {
-        return `${tile.url.replace(".png", "")}_tile.png`;
+      if (tile.url.indexOf(suffix) === -1) {
+        return `${tile.url.replace(".png", "")}${suffix}.png`;
       }
       return tile.url;
     }
     return `http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/game/hexagonTiles/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
-    }_tile.png`;
+    }${suffix}.png`;
   };
-  const getRandomSceneObject = (tile) => {
-    console.log("TILE!", tile);
-  };
+  const getRandomSceneObjects = (grid) => {};
+  const getSurroundingWater = (grid) => {};
   const getRandomKnowledge = () => {};
   const initGrid = () => {
     for (let i = 0; i < 11; i++) {
@@ -150,7 +154,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${28 * (i + 1)}px`,
+                bottom: `${15 * (i + 1)}px`,
                 left: (i + 1) % 2 !== 0 ? "33px" : "0px",
               }}
               justify="center"
