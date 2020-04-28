@@ -147,7 +147,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${35 * (i + 1)}px`,
+                bottom: `${10 * (i + 1)}px`,
                 left: (i + 1) % 2 !== 0 ? "35px" : "0px",
               }}
               justify="center"
@@ -161,6 +161,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                   item
                 >
                   <span
+                    data-id={`${i}-${j}`}
                     style={{
                       padding: "2px",
                       // background: "white",
@@ -170,17 +171,17 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                       left: "24px",
                       top: "48px",
                       display: "inline-block",
+                      zIndex: 400,
                     }}
                   >
-                    {gr.name}
+                    {/* {gr.name} */}
                   </span>
                   <img
                     data-id={`${i}-${j}`}
                     style={{
-                      boxShadow: gr.selected ? "#00000061 0px 1px 9px" : "",
                       padding: "3px 5px",
                       position: "relative",
-                      zIndex: 9999,
+                      zIndex: 300,
                     }}
                     src={gr.url}
                     onClick={(ev) => {
