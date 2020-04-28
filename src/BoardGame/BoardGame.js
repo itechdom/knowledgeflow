@@ -1,17 +1,16 @@
 import React from "react";
 import { getRandomInt } from "./utils";
 import { Grid } from "@material-ui/core";
-let fpsInterval, then;
+let fpsInterval = 1000 / 60,
+  then = Date.now();
 const animate = (onDraw) => {
   // request another frame
-  requestAnimationFrame(animate.bind(onDraw));
-
+  requestAnimationFrame(animate.bind(null, onDraw));
   // calc elapsed time since last loop
   let now = Date.now();
   let elapsed = now - then;
 
   // if enough time has elapsed, draw the next frame
-
   if (elapsed > fpsInterval) {
     // Get ready for next frame by setting then=now, but also adjust for your
     // specified fpsInterval not being a multiple of RAF's interval (16.7ms)
@@ -31,13 +30,13 @@ export const GameState = ({ children, knowledge }) => {
   const getTile = (tile, selected) => {
     const tiles = [
       "Grass",
-      "Dirt",
+      // "Dirt",
       "Lava",
       "Magic",
-      "Sand",
-      "Snow",
-      "Stone",
-      "Water",
+      // "Sand",
+      // "Snow",
+      // "Stone",
+      // "Water",
     ];
     if (tile) {
       if (selected) {
@@ -56,7 +55,7 @@ export const GameState = ({ children, knowledge }) => {
   const initGrid = () => {
     for (let i = 0; i < 20; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 10; j++) {
+      for (let j = 0; j < 20; j++) {
         grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
       }
     }
@@ -78,7 +77,6 @@ export const GameState = ({ children, knowledge }) => {
         i === position1 ? g.map((gr, j) => (j === position2 ? data : gr)) : g
       )
     );
-    console.log(grid, "GRID");
   };
   const unSelectAll = (grid) => {
     const newGrid = grid.map((g, i) => {
@@ -110,22 +108,28 @@ export const GameState = ({ children, knowledge }) => {
 };
 export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
   const handleClick = (ev, data) => {
-    data ? unSelectAll(grid) : "";
+    let pos = ev.target.dataset.id;
+    if (pos) {
+      let arr = pos.split("-");
+      return selectGrid(parseInt(arr[0]), parseInt(arr[1]));
+    }
+    return unSelectAll(grid);
   };
   React.useEffect(() => {
-    animate(() => {
-      console.log("ANIMATE");
-    });
+    // animate(() => {
+    //   console.log("ANIMATE");
+    // });
   }, []);
   return (
     <Grid
       container
       style={{
         width: "100%",
-        minWidth: "750px",
+        minWidth: "1300px",
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
+        backgroundColor: "#8BE1EB",
       }}
       onClick={(ev) => {
         handleClick(ev, "container");
@@ -143,23 +147,18 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${45 * (i + 1)}px`,
-                left: (i + 1) % 2 !== 0 ? "30px" : "0px",
+                bottom: `${35 * (i + 1)}px`,
+                left: (i + 1) % 2 !== 0 ? "35px" : "0px",
               }}
               justify="center"
             >
               {g.map((gr, j) => (
                 <Grid
                   style={{
-                    width: "56px",
+                    width: "70px",
                     height: "85px",
-                    zIndex: gr.selected ? "999" : "0",
                   }}
                   item
-                  onClick={(ev) => {
-                    ev.stopPropagation();
-                    return selectGrid(i, j);
-                  }}
                 >
                   <span
                     style={{
@@ -170,19 +169,24 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                       position: "relative",
                       left: "24px",
                       top: "48px",
+                      display: "inline-block",
                     }}
                   >
                     {gr.name}
                   </span>
                   <img
-                    data-id="tile"
+                    data-id={`${i}-${j}`}
                     style={{
                       boxShadow: gr.selected ? "#00000061 0px 1px 9px" : "",
                       padding: "3px 5px",
                       position: "relative",
-                      // right: "10px",
+                      zIndex: 9999,
                     }}
                     src={gr.url}
+                    onClick={(ev) => {
+                      console.log("hello");
+                      // return selectGrid(i, j);
+                    }}
                   />
                 </Grid>
               ))}
