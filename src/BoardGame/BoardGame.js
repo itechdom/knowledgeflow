@@ -30,9 +30,9 @@ export const GameState = ({ children, knowledge }) => {
   const getTile = (tile, selected) => {
     const tiles = [
       "Grass",
-      // "Dirt",
       "Lava",
       "Magic",
+      // "Dirt",
       // "Sand",
       // "Snow",
       // "Stone",
@@ -53,9 +53,9 @@ export const GameState = ({ children, knowledge }) => {
   };
   const getRandomKnowledge = () => {};
   const initGrid = () => {
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 11; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 20; j++) {
+      for (let j = 0; j < 10; j++) {
         grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
       }
     }
@@ -129,7 +129,6 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
-        backgroundColor: "#8BE1EB",
       }}
       onClick={(ev) => {
         handleClick(ev, "container");
@@ -147,7 +146,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${33 * (i + 1)}px`,
+                bottom: `${28 * (i + 1)}px`,
                 left: (i + 1) % 2 !== 0 ? "33px" : "0px",
               }}
               justify="center"
@@ -182,6 +181,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                       padding: "3px 5px",
                       position: "relative",
                       zIndex: 300,
+                      opacity: gr.selected ? 1 : 0.4,
                     }}
                     src={gr.url}
                     onClick={(ev) => {
