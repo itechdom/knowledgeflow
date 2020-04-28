@@ -147,7 +147,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${10 * (i + 1)}px`,
+                bottom: `${25 * (i + 1)}px`,
                 left: (i + 1) % 2 !== 0 ? "35px" : "0px",
               }}
               justify="center"
@@ -155,7 +155,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               {g.map((gr, j) => (
                 <Grid
                   style={{
-                    width: "70px",
+                    width: "65px",
                     height: "85px",
                   }}
                   item
