@@ -32,7 +32,6 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const Tile = (type) => {};
 export const GameState = ({ children, knowledge }) => {
   //rendered grid
   //grid: array of arrays, imageUrl, number of soldiers
@@ -41,6 +40,13 @@ export const GameState = ({ children, knowledge }) => {
   const [phase, setPhase] = React.useState();
   //we are going to pick a random knowledge, then pick a random branch
   //setup a map
+  const getATile = (tile) => {
+    let suffix = "";
+    if (tile === "Water") {
+      suffix = "_shadow";
+    }
+    return `http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/game/hexagonTiles/Tiles/tile${tile}${suffix}.png`;
+  };
   const getTile = (tile, selected) => {
     const suffix = "_full";
     if (tile) {
@@ -60,10 +66,39 @@ export const GameState = ({ children, knowledge }) => {
   const getSurroundingWater = (grid) => {};
   const getRandomKnowledge = () => {};
   const initGrid = () => {
-    for (let i = 0; i < 11; i++) {
+    for (let i = 0; i < 9; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 10; j++) {
-        grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
+      if (i === 0 || i === 1) {
+        for (let j = 0; j < 10; j++) {
+          grid[i][j] = {
+            name: `Water`,
+            url: getATile("Water"),
+            selected: true,
+          };
+        }
+      } else {
+        for (let j = 0; j < 10; j++) {
+          grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
+        }
+      }
+    }
+    grid.map((g, i) => {
+      for (let a = 0; a < 9; a++) {
+        g.unshift({ name: `Water`, url: getATile("Water"), selected: true });
+        g.push({ name: `Water`, url: getATile("Water"), selected: true });
+      }
+    });
+    for (let b = 0; b < 3; b++) {
+      let initialLength = grid.length;
+      for (let a = 0; a < 28; a++) {
+        if (!grid[initialLength]) {
+          grid[initialLength] = [];
+        }
+        grid[initialLength].push({
+          name: `Water`,
+          url: getATile("Water"),
+          selected: true,
+        });
       }
     }
     //generate random scene object
@@ -73,6 +108,10 @@ export const GameState = ({ children, knowledge }) => {
     setGrid([...data]);
   };
   const selectGrid = (i, j) => {
+    console.log(grid[i][j]);
+    if (grid[i][j].name === "Water") {
+      return;
+    }
     return updateGrid(i, j, {
       ...grid[i][j],
       url: getTile(grid[i][j], !grid[i][j].selected),
@@ -89,7 +128,10 @@ export const GameState = ({ children, knowledge }) => {
   const unSelectAll = (grid) => {
     const newGrid = grid.map((g, i) => {
       return g.map((gr, j) => {
-        return { ...gr, selected: false, url: getTile(grid[i][j], false) };
+        if (gr.name !== "Water") {
+          return { ...gr, selected: false, url: getTile(grid[i][j], false) };
+        }
+        return { ...gr };
       });
     });
     setGrid([...newGrid]);
@@ -146,7 +188,6 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
         container
         justify="center"
         direction="row"
-        style={{ marginTop: "3em" }}
       >
         {grid.length > 0 ? (
           grid.map((g, i) => (
@@ -155,7 +196,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               style={{
                 position: "relative",
                 bottom: `${15 * (i + 1)}px`,
-                left: (i + 1) % 2 !== 0 ? "33px" : "0px",
+                left: (i + 1) % 2 === 0 ? "33px" : "0px",
               }}
               justify="center"
             >
