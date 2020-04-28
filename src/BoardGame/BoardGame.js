@@ -51,6 +51,9 @@ export const GameState = ({ children, knowledge }) => {
       tiles[getRandomInt(0, tiles.length - 1)]
     }_tile.png`;
   };
+  const getRandomSceneObject = (tile) => {
+    console.log("TILE!", tile);
+  };
   const getRandomKnowledge = () => {};
   const initGrid = () => {
     for (let i = 0; i < 11; i++) {
@@ -59,6 +62,7 @@ export const GameState = ({ children, knowledge }) => {
         grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
       }
     }
+    //generate random scene object
     setGrid(grid);
   };
   const updateAllGrids = (data) => {
@@ -181,7 +185,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                       padding: "3px 5px",
                       position: "relative",
                       zIndex: 300,
-                      opacity: gr.selected ? 1 : 0.4,
+                      opacity: gr.selected ? 1 : 0.25,
                     }}
                     src={gr.url}
                     onClick={(ev) => {
