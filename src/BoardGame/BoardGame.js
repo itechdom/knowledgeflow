@@ -47,7 +47,7 @@ export const GameState = ({ children, knowledge }) => {
       }
       return tile.url;
     }
-    return `/assets/game/hexagonTiles/Tiles/tile${
+    return `http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/game/hexagonTiles/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
     }_tile.png`;
   };
@@ -147,8 +147,8 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
               container
               style={{
                 position: "relative",
-                bottom: `${25 * (i + 1)}px`,
-                left: (i + 1) % 2 !== 0 ? "35px" : "0px",
+                bottom: `${33 * (i + 1)}px`,
+                left: (i + 1) % 2 !== 0 ? "33px" : "0px",
               }}
               justify="center"
             >
