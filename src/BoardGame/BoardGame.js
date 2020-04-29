@@ -90,8 +90,9 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                           position: "relative",
                           left: `${(index / 2) * 24}px`,
                           top: `${48}px`,
-                          display: "inline-block",
-                          zIndex: gr.type === "background" ? 100 : 300,
+                          display: "inline",
+                          height: gr.type === "background" ? "auto" : "87px",
+                          zIndex: gr.type === "background" ? 150 : 300,
                           visibility:
                             !gr.display && gr.selected ? "" : "hidden",
                         }}

@@ -12,19 +12,14 @@ const tiles = [
   // "Stone",
   // "Water",
 ];
-const trees = ["Blue", "Green"];
-const treeSizes = ["low"];
-//the problem here is each tile has a specific type of terrain
-const sceneObjects = [];
-const characters = [];
 export const GameState = ({ children, knowledge }) => {
-  //rendered grid
-  //grid: array of arrays, imageUrl, number of soldiers
   const [grid, setGrid] = React.useState([]);
-  //phase of the game
   const [phase, setPhase] = React.useState();
-  //we are going to pick a random knowledge, then pick a random branch
-  //setup a map
+  const getRandomCharacter = () => {
+    const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
+    const randomCharacter = options[getRandomInt(0, options.length - 1)];
+    return `${assetLocation}game/hexagonTiles/Tiles/alien${randomCharacter}.png`;
+  };
   const getATile = (tile) => {
     let suffix = "";
     if (tile === "Water") {
@@ -48,6 +43,7 @@ export const GameState = ({ children, knowledge }) => {
     }${suffix}.png`;
   };
   const getRandomTree = (season) => {
+    const trees = ["Blue", "Green"];
     const suffix = "_low";
     const randomTree = `${assetLocation}game/hexagonTiles/Tiles/tree${
       trees[getRandomInt(0, trees.length - 1)]
@@ -77,37 +73,52 @@ export const GameState = ({ children, knowledge }) => {
   const initGrid = () => {
     for (let i = 0; i < 9; i++) {
       if (!grid[i]) grid[i] = [];
-      if (i === 0 || i === 1) {
-        for (let j = 0; j < 10; j++) {
-          grid[i][j] = getBackgroundTile();
-        }
-      } else {
-        for (let j = 0; j < 10; j++) {
+      for (let j = 0; j < 10; j++) {
+        grid[i][j] = {
+          name: `${i}x${j}`,
+          url: getTile(),
+          environment: [getRandomTree()],
+          display: getRandomInt(1, 2) === 2 ? true : false,
+          selected: false,
+        };
+      }
+    }
+
+    //ADDING RANDOM CHRACTERS
+    grid.map((g, i) => {
+      g.map((gr, j) => {
+        if (
+          (i === 0 && j === 0) ||
+          (i === grid.length - 1 && j === g.length - 1)
+        ) {
           grid[i][j] = {
             name: `${i}x${j}`,
             url: getTile(),
-            environment: [getRandomTree()],
-            display: getRandomInt(1, 2) === 2 ? true : false,
-            selected: false,
+            environment: [getRandomCharacter()],
+            type: "character",
+            selected: true,
           };
         }
-      }
-    }
-    grid.map((g, i) => {
-      for (let a = 0; a < 9; a++) {
-        g.unshift(getBackgroundTile());
-        g.push(getBackgroundTile());
-      }
+      });
     });
-    for (let b = 0; b < 3; b++) {
-      let initialLength = grid.length;
-      for (let a = 0; a < 28; a++) {
-        if (!grid[initialLength]) {
-          grid[initialLength] = [];
-        }
-        grid[initialLength].push(getBackgroundTile());
-      }
-    }
+
+    ///ADDING WATER TILES
+    //add water tiles to the beginning and end of each row
+    // grid.map((g, i) => {
+    //   for (let a = 0; a < 9; a++) {
+    //     g.unshift(getBackgroundTile());
+    //     g.push(getBackgroundTile());
+    //   }
+    // });
+    // for (let b = 0; b < 3; b++) {
+    //   let initialLength = grid.length;
+    //   for (let a = 0; a < 28; a++) {
+    //     if (!grid[initialLength]) {
+    //       grid[initialLength] = [];
+    //     }
+    //     grid[initialLength].push(getBackgroundTile());
+    //   }
+    // }
     //generate random scene object
     setGrid(grid);
   };
@@ -134,7 +145,7 @@ export const GameState = ({ children, knowledge }) => {
   const unSelectAll = (grid) => {
     const newGrid = grid.map((g, i) => {
       return g.map((gr, j) => {
-        if (gr.name !== "Water") {
+        if (gr.name !== "Water" && gr.type !== "character") {
           return { ...gr, selected: false, url: getTile(grid[i][j], false) };
         }
         return { ...gr };
