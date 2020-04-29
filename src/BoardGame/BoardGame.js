@@ -5,6 +5,7 @@ import {
   Divider,
   Dialog,
   DialogContent,
+  Tooltip,
   Button,
 } from "@material-ui/core";
 let fpsInterval = 1000 / 60,
@@ -163,69 +164,100 @@ export const Game = ({
               container
               style={{
                 position: "relative",
-                bottom: `${15 * (i + 1)}px`,
+                bottom: `${i + 1}px`,
                 left: (i + 1) % 2 === 0 ? "33px" : "0px",
               }}
               justify="center"
             >
               {g.map((gr, j) => (
-                <Grid
-                  style={{
-                    width: "65px",
-                    height: "85px",
-                    position: "relative",
-                  }}
-                  item
+                <Tooltip
+                  title={
+                    gr.type === "character"
+                      ? j === 0
+                        ? "This is you!"
+                        : "Player2"
+                      : ""
+                  }
                 >
-                  {gr.environment &&
-                    gr.environment.map((env, index) => (
-                      <img
+                  <Grid
+                    style={{
+                      width: "70px",
+                      height: "85px",
+                      position: "relative",
+                    }}
+                    item
+                  >
+                    {gr.environment &&
+                      gr.environment.map((env, index) => (
+                        <img
+                          data-id={`${i}-${j}`}
+                          className={
+                            gr.type === "character" ? "game_character" : ""
+                          }
+                          style={{
+                            position: "absolute",
+                            left: `${(index / 2) * 28}px`,
+                            top: gr.type !== "character" ? `${48}px` : "",
+                            bottom: gr.type === "character" ? `${24}px` : "",
+                            display: "inline",
+                            height: gr.type === "background" ? "auto" : "87px",
+                            zIndex: gr.type === "background" ? 150 : 300,
+                            visibility:
+                              !gr.display && gr.selected ? "" : "hidden",
+                          }}
+                          src={env}
+                        />
+                      ))}
+                    {gr.type === "character" && (
+                      <span
                         data-id={`${i}-${j}`}
                         style={{
+                          padding: "2px",
+                          color: "white",
+                          textShadow: "black 0px 1px 1px",
+                          fontSize: 18,
                           position: "absolute",
-                          left: `${(index / 2) * 24}px`,
-                          top: `${48}px`,
-                          display: "inline",
-                          height: gr.type === "background" ? "auto" : "87px",
-                          zIndex: gr.type === "background" ? 150 : 300,
-                          visibility:
-                            !gr.display && gr.selected ? "" : "hidden",
+                          left: "48px",
+                          bottom: "84px",
+                          display: "inline-block",
+                          zIndex: 400,
                         }}
-                        src={env}
-                      />
-                    ))}
-                  {gr.type === "character" && (
-                    <span
+                      >
+                        {gr.name}
+                      </span>
+                    )}
+                    <img
                       data-id={`${i}-${j}`}
                       style={{
-                        padding: "2px",
-                        color: "white",
-                        textShadow: "black 0px 1px 1px",
-                        fontSize: 18,
+                        padding: "3px 5px",
                         position: "absolute",
-                        left: "48px",
-                        top: "48px",
-                        display: "inline-block",
-                        zIndex: 400,
+                        left: 0,
+                        boxShadow: gr.guide ? "green 0px 0px 15px" : "",
+                        borderRadius: gr.guide ? "50px" : "",
+                        zIndex: gr.type === "background" ? 100 : 200,
+                        opacity: gr.selected ? 1 : 0.25,
                       }}
-                    >
-                      {gr.name}
-                    </span>
-                  )}
-                  <img
-                    data-id={`${i}-${j}`}
-                    style={{
-                      padding: "3px 5px",
-                      position: "absolute",
-                      top: 84,
-                      left: 0,
-                      zIndex: gr.type === "background" ? 100 : 200,
-                      opacity: gr.selected ? 1 : 0.25,
-                    }}
-                    src={gr.url}
-                    onClick={(ev) => {}}
-                  />
-                </Grid>
+                      src={gr.url}
+                      onClick={(ev) => {}}
+                    />
+                    {gr.guide ? (
+                      <span
+                        style={{
+                          position: "absolute",
+                          top: 108,
+                          left: 12,
+                          zIndex: 9999,
+                          color: "white",
+                          textShadow: "black 0px 1px 1px",
+                        }}
+                      >
+                        move here
+                      </span>
+                    ) : (
+                      <></>
+                    )}
+                  </Grid>
+                </Tooltip>
               ))}
             </Grid>
           ))

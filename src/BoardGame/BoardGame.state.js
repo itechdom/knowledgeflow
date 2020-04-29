@@ -130,6 +130,21 @@ export const GameState = ({ children, knowledge }) => {
     if (grid[i][j].name === "Water") {
       return unSelectAll(grid);
     }
+    //you want to move a character
+    if (phase === 0 && grid[i][j].type === "character") {
+      //show nearby tiles that the user can move to
+      let adj1 = grid[i][j + 1];
+      let adj2 = grid[i + 1][j];
+      grid[i][j + 1] = {
+        ...adj1,
+        guide: !adj1.guide,
+      };
+      grid[i + 1][j] = {
+        ...adj2,
+        guide: !adj2.guide,
+      };
+      return setGrid([...grid]);
+    }
     return updateGrid(i, j, {
       ...grid[i][j],
       url: getTile(grid[i][j], !grid[i][j].selected),
@@ -147,7 +162,12 @@ export const GameState = ({ children, knowledge }) => {
     const newGrid = grid.map((g, i) => {
       return g.map((gr, j) => {
         if (gr.name !== "Water" && gr.type !== "character") {
-          return { ...gr, selected: false, url: getTile(grid[i][j], false) };
+          return {
+            ...gr,
+            selected: false,
+            guide: false,
+            url: getTile(grid[i][j], false),
+          };
         }
         return { ...gr };
       });

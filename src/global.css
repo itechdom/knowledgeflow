@@ -69,3 +69,21 @@
     rgba(255, 255, 255, 0.5) 70px
   );
 }
+.game_character {
+  animation-name: character;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+@keyframes character {
+  from {
+    bottom: 24px;
+  }
+  to {
+    bottom: 48px;
+  }
+}
