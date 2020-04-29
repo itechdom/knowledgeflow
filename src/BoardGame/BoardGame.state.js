@@ -1,5 +1,7 @@
 import React from "react";
 import { getRandomInt } from "./utils";
+const assetLocation =
+  "http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/";
 const tiles = [
   "Grass",
   "Lava",
@@ -10,6 +12,8 @@ const tiles = [
   // "Stone",
   // "Water",
 ];
+const trees = ["Blue", "Green"];
+const treeSizes = ["high", "low", "mid"];
 //the problem here is each tile has a specific type of terrain
 const sceneObjects = [];
 const characters = [];
@@ -26,7 +30,7 @@ export const GameState = ({ children, knowledge }) => {
     if (tile === "Water") {
       suffix = "_shadow";
     }
-    return `http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/game/hexagonTiles/Tiles/tile${tile}${suffix}.png`;
+    return `${assetLocation}game/hexagonTiles/Tiles/tile${tile}${suffix}.png`;
   };
   const getTile = (tile, selected) => {
     const suffix = "_full";
@@ -39,34 +43,55 @@ export const GameState = ({ children, knowledge }) => {
       }
       return tile.url;
     }
-    return `http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/game/hexagonTiles/Tiles/tile${
+    return `${assetLocation}game/hexagonTiles/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
     }${suffix}.png`;
   };
-  const getRandomSceneObjects = (grid) => {};
-  const getSurroundingWater = (grid) => {};
-  const getRandomKnowledge = () => {};
+  const getRandomTree = (season) => {
+    const suffix = "_high";
+    const randomTree = `${assetLocation}game/hexagonTiles/Tiles/tree${
+      trees[getRandomInt(0, trees.length - 1)]
+    }${suffix}.png`;
+    return randomTree;
+  };
+  const getBackgroundEnvironment = () => {
+    return getRandomInt(0, 1) < 1
+      ? `${assetLocation}game/hexagonTiles/Tiles/waveWater.png`
+      : ``;
+  };
+  const getBackgroundTile = () => {
+    const tile = {
+      name: `Water`,
+      url: getATile("Water"),
+      selected: true,
+      type: "background",
+      environment: [getBackgroundEnvironment()],
+    };
+    return tile;
+  };
   const initGrid = () => {
     for (let i = 0; i < 9; i++) {
       if (!grid[i]) grid[i] = [];
       if (i === 0 || i === 1) {
         for (let j = 0; j < 10; j++) {
-          grid[i][j] = {
-            name: `Water`,
-            url: getATile("Water"),
-            selected: true,
-          };
+          grid[i][j] = getBackgroundTile();
         }
       } else {
         for (let j = 0; j < 10; j++) {
-          grid[i][j] = { name: `${i}x${j}`, url: getTile(), selected: false };
+          grid[i][j] = {
+            name: `${i}x${j}`,
+            url: getTile(),
+            environment: [getRandomTree()],
+            display: getRandomInt(1, 2) === 2 ? true : false,
+            selected: false,
+          };
         }
       }
     }
     grid.map((g, i) => {
       for (let a = 0; a < 9; a++) {
-        g.unshift({ name: `Water`, url: getATile("Water"), selected: true });
-        g.push({ name: `Water`, url: getATile("Water"), selected: true });
+        g.unshift(getBackgroundTile());
+        g.push(getBackgroundTile());
       }
     });
     for (let b = 0; b < 3; b++) {
@@ -75,11 +100,7 @@ export const GameState = ({ children, knowledge }) => {
         if (!grid[initialLength]) {
           grid[initialLength] = [];
         }
-        grid[initialLength].push({
-          name: `Water`,
-          url: getATile("Water"),
-          selected: true,
-        });
+        grid[initialLength].push(getBackgroundTile());
       }
     }
     //generate random scene object
@@ -116,8 +137,10 @@ export const GameState = ({ children, knowledge }) => {
     });
     setGrid([...newGrid]);
   };
-  const RollADice = () => {};
-  const onDraw = () => {};
+  const RollADice = () => {
+    let roll = getRandomInt(1, 6);
+    return roll;
+  };
   React.useEffect(() => {
     initGrid();
     setPhase("0-a");

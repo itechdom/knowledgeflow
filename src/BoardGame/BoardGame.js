@@ -91,7 +91,8 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                           left: "24px",
                           top: "48px",
                           display: "inline-block",
-                          zIndex: 400,
+                          visibility: gr.display ? "" : "hidden",
+                          zIndex: 300,
                         }}
                         src={gr.environment}
                       />
@@ -101,7 +102,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                     style={{
                       padding: "3px 5px",
                       position: "relative",
-                      zIndex: 300,
+                      zIndex: gr.type === "background" ? 100 : 200,
                       opacity: gr.selected ? 1 : 0.25,
                     }}
                     src={gr.url}
