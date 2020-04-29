@@ -48,10 +48,15 @@ export const GameState = ({ children, knowledge }) => {
     }${suffix}.png`;
   };
   const getRandomTree = (season) => {
-    const suffix = "_high";
+    const suffix = "_low";
     const randomTree = `${assetLocation}game/hexagonTiles/Tiles/tree${
       trees[getRandomInt(0, trees.length - 1)]
     }${suffix}.png`;
+    return randomTree;
+  };
+  const getRandomRock = (season) => {
+    const randomTree = `${assetLocation}game/hexagonTiles/Tiles/smallRockGrass.png`;
+    console.log(randomTree);
     return randomTree;
   };
   const getBackgroundEnvironment = () => {

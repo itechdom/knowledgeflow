@@ -88,14 +88,14 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                         data-id={`${i}-${j}`}
                         style={{
                           position: "relative",
-                          left: "24px",
-                          top: "48px",
+                          left: `${(index / 2) * 24}px`,
+                          top: `${48}px`,
                           display: "inline-block",
                           zIndex: gr.type === "background" ? 100 : 300,
                           visibility:
                             !gr.display && gr.selected ? "" : "hidden",
                         }}
-                        src={gr.environment}
+                        src={env}
                       />
                     ))}
                   <img
