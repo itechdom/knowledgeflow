@@ -36,3 +36,6 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
+body {
+  font-family: "Bangers", cursive;
+}

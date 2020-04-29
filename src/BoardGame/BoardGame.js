@@ -108,7 +108,6 @@ export const GameState = ({ children, knowledge }) => {
     setGrid([...data]);
   };
   const selectGrid = (i, j) => {
-    console.log(grid[i][j]);
     if (grid[i][j].name === "Water") {
       return;
     }
@@ -231,8 +230,6 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                     }}
                     src={gr.url}
                     onClick={(ev) => {
-                      console.log("hello");
-                      // return selectGrid(i, j);
                     }}
                   />
                 </Grid>
