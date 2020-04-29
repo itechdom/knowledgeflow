@@ -36,6 +36,33 @@
   /* Support for IE. */
   font-feature-settings: "liga";
 }
-body {
-  font-family: "Bangers", cursive;
+.game {
+  font-family: "Bangers", cursive !important;
+}
+.game h1 {
+  padding: 2px;
+  color: white;
+  text-shadow: black 0px 1px 1px;
+  z-index: 400;
+  text-align: center;
+}
+.game_button {
+  background-color: #a681b5 !important;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.5) 35px,
+    rgba(255, 255, 255, 0.5) 70px
+  );
+}
+.game_button_cancel {
+  background-color: #e97b33 !important;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.5) 35px,
+    rgba(255, 255, 255, 0.5) 70px
+  );
 }

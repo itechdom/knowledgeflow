@@ -14,7 +14,8 @@ const tiles = [
 ];
 export const GameState = ({ children, knowledge }) => {
   const [grid, setGrid] = React.useState([]);
-  const [phase, setPhase] = React.useState();
+  const [phase, setPhase] = React.useState(0);
+  const [currentPlayer, setCurrentPlayer] = React.useState(0);
   const getRandomCharacter = () => {
     const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
     const randomCharacter = options[getRandomInt(0, options.length - 1)];
@@ -75,7 +76,7 @@ export const GameState = ({ children, knowledge }) => {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 10; j++) {
         grid[i][j] = {
-          name: `${i}x${j}`,
+          // name: `${i}x${j}`,
           url: getTile(),
           environment: [getRandomTree()],
           display: getRandomInt(1, 2) === 2 ? true : false,
@@ -92,7 +93,7 @@ export const GameState = ({ children, knowledge }) => {
           (i === grid.length - 1 && j === g.length - 1)
         ) {
           grid[i][j] = {
-            name: `${i}x${j}`,
+            name: `x90`,
             url: getTile(),
             environment: [getRandomCharacter()],
             type: "character",
@@ -159,7 +160,8 @@ export const GameState = ({ children, knowledge }) => {
   };
   React.useEffect(() => {
     initGrid();
-    setPhase("0-a");
+    setPhase(0);
+    setCurrentPlayer(0);
   }, []);
   console.log("rerender");
   //knowledgeflow.markab.io
@@ -171,6 +173,8 @@ export const GameState = ({ children, knowledge }) => {
       unSelectAll: unSelectAll,
       selectGrid: selectGrid,
       RollADice: RollADice,
+      phase,
+      currentPlayer,
     });
   });
   return <>{childrenWithProps}</>;
