@@ -91,7 +91,8 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                           left: "24px",
                           top: "48px",
                           display: "inline-block",
-                          visibility: gr.display ? "" : "hidden",
+                          visibility:
+                            !gr.display && gr.selected ? "" : "hidden",
                           zIndex: 300,
                         }}
                         src={gr.environment}

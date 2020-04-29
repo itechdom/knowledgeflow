@@ -13,7 +13,7 @@ const tiles = [
   // "Water",
 ];
 const trees = ["Blue", "Green"];
-const treeSizes = ["high", "low", "mid"];
+const treeSizes = ["low"];
 //the problem here is each tile has a specific type of terrain
 const sceneObjects = [];
 const characters = [];
