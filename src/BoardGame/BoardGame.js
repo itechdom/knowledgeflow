@@ -196,9 +196,9 @@ export const Game = ({
                           }
                           style={{
                             position: "absolute",
-                            left: `${(index / 2) * 28}px`,
-                            top: gr.type !== "character" ? `${48}px` : "",
-                            bottom: gr.type === "character" ? `${24}px` : "",
+                            left: gr.type === "character" ? "0px" : `48px`,
+                            bottom:
+                              gr.type === "character" ? `${24}px` : "33px",
                             display: "inline",
                             height: gr.type === "background" ? "auto" : "87px",
                             zIndex: gr.type === "background" ? 150 : 300,
@@ -244,7 +244,7 @@ export const Game = ({
                       <span
                         style={{
                           position: "absolute",
-                          top: 108,
+                          top: 24,
                           left: 12,
                           zIndex: 9999,
                           color: "white",
