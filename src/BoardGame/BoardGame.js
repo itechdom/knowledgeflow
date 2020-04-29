@@ -31,6 +31,7 @@ export const Game = ({
   selectGrid,
   phase,
   currentPlayer,
+  endTurn,
 }) => {
   const [paused, setPaused] = React.useState(true);
   const handleClick = (ev, data) => {
@@ -107,43 +108,51 @@ export const Game = ({
         <Grid item>
           <h1>Knowledge Board !</h1>
         </Grid>
-        {currentPlayer === 0 && (
+        <Grid container justify="center">
+          {currentPlayer === 0 && (
+            <Grid item>
+              <h1>
+                Player <b>1</b> -
+              </h1>
+            </Grid>
+          )}
+          {currentPlayer === 1 && (
+            <Grid item>
+              <h1>
+                Player <b>2</b> -
+              </h1>
+            </Grid>
+          )}
+          {phase === 0 && (
+            <Grid item>
+              <h1>Move</h1>
+            </Grid>
+          )}
+          {phase === 1 && (
+            <Grid item>
+              <h1 style={{ color: "#E97B33" }}>Attack</h1>
+            </Grid>
+          )}
+          {phase === 2 && (
+            <Grid item>
+              <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
+            </Grid>
+          )}
           <Grid item>
-            <h1>Player 1's turn</h1>
-          </Grid>
-        )}
-        {currentPlayer === 1 && (
-          <Grid item>
-            <h1>Player 2's turn</h1>
-          </Grid>
-        )}
-        {phase === 0 && (
-          <Grid item>
-            <h1>Phase 1 : Move</h1>
-          </Grid>
-        )}
-        {phase === 1 && (
-          <Grid item>
-            <h1 style={{ color: "#E97B33" }}>Phase 2 : Attack</h1>
-          </Grid>
-        )}
-        {phase === 2 && (
-          <Grid item>
-            <h1 style={{ color: "#8DC434" }}>Phase 3 : Rienforce</h1>
-          </Grid>
-        )}
-        <Grid item>
-          <Grid container justify="center">
-            <Button className="game_button" variant="outlined">
-              <h1 className="game">End Turn!</h1>
-            </Button>
-            {/* <Button
+            <Grid container justify="center">
+              <Button className="game_button" variant="outlined">
+                <h1 onClick={() => endTurn()} className="game">
+                  End Turn!
+                </h1>
+              </Button>
+              {/* <Button
               className="game_button_cancel"
               style={{ marginLeft: "10px" }}
               variant="outlined"
             >
               <h1 className="game">help!</h1>
             </Button> */}
+            </Grid>
           </Grid>
         </Grid>
       </Grid>

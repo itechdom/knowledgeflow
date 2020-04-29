@@ -55,6 +55,9 @@
     rgba(255, 255, 255, 0.5) 35px,
     rgba(255, 255, 255, 0.5) 70px
   );
+  padding: 0px !important;
+  margin-left: 2em !important;
+  border-radius: 50px !important;
 }
 .game_button_cancel {
   background-color: #e97b33 !important;

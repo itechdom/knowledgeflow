@@ -158,6 +158,22 @@ export const GameState = ({ children, knowledge }) => {
     let roll = getRandomInt(1, 6);
     return roll;
   };
+  const endTurn = () => {
+    const nextPhase = phase + 1;
+    //move
+    if (phase === 0) {
+    }
+    //attack
+    else if (phase === 1) {
+    }
+    //rienforce
+    else if (phase === 2) {
+      setCurrentPlayer(currentPlayer === 1 ? 0 : 1);
+      setPhase(0);
+      return;
+    }
+    return setPhase(nextPhase);
+  };
   React.useEffect(() => {
     initGrid();
     setPhase(0);
@@ -175,6 +191,7 @@ export const GameState = ({ children, knowledge }) => {
       RollADice: RollADice,
       phase,
       currentPlayer,
+      endTurn,
     });
   });
   return <>{childrenWithProps}</>;
