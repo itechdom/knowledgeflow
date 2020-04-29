@@ -4,7 +4,8 @@ import theme from "Theme";
 import Simulation from "./Simulation/Simulation";
 // import Math from "../Math/Math";
 import { withStyles, Button } from "@material-ui/core";
-import { Game, GameState } from "../BoardGame/BoardGame";
+import { Game } from "../BoardGame/BoardGame";
+import { GameState } from "../BoardGame/BoardGame.state";
 
 const Physics = ({
   knowledge,
