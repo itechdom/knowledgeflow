@@ -36,7 +36,7 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
       container
       style={{
         width: "100%",
-        minWidth: "1300px",
+        minWidth: "2000px",
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
@@ -91,9 +91,9 @@ export const Game = ({ grid, updateGrid, unSelectAll, selectGrid }) => {
                           left: "24px",
                           top: "48px",
                           display: "inline-block",
+                          zIndex: gr.type === "background" ? 100 : 300,
                           visibility:
                             !gr.display && gr.selected ? "" : "hidden",
-                          zIndex: 300,
                         }}
                         src={gr.environment}
                       />

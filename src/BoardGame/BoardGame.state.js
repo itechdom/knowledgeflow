@@ -111,7 +111,7 @@ export const GameState = ({ children, knowledge }) => {
   };
   const selectGrid = (i, j) => {
     if (grid[i][j].name === "Water") {
-      return;
+      return unSelectAll(grid);
     }
     return updateGrid(i, j, {
       ...grid[i][j],
