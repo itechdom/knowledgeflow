@@ -191,6 +191,7 @@ export const Game = ({
                       gr.environment.map((env, index) => (
                         <img
                           data-id={`${i}-${j}`}
+                          id={`${i}-${j}`}
                           className={
                             gr.type === "character" ? "game_character" : ""
                           }
@@ -211,6 +212,7 @@ export const Game = ({
                     {gr.type === "character" && (
                       <span
                         data-id={`${i}-${j}`}
+                        id={`${i}-${j}`}
                         style={{
                           padding: "2px",
                           color: "white",
@@ -228,6 +230,7 @@ export const Game = ({
                     )}
                     <img
                       data-id={`${i}-${j}`}
+                      id={`${i}-${j}`}
                       style={{
                         padding: "3px 5px",
                         position: "absolute",
@@ -236,7 +239,6 @@ export const Game = ({
                         borderRadius: gr.guide ? "50px" : "",
                         zIndex: gr.type === "background" ? 100 : 200,
                         opacity: gr.selected ? 1 : 0.25,
-                        cursor: gr.guide ? "pointer" : "inherit",
                       }}
                       src={gr.url}
                       onClick={(ev) => {}}
@@ -244,6 +246,7 @@ export const Game = ({
                     {gr.guide ? (
                       <span
                         data-id={`${i}-${j}`}
+                        id={`${i}-${j}`}
                         onClick={(ev) => {
                           handleClick(ev);
                         }}
@@ -254,6 +257,7 @@ export const Game = ({
                           zIndex: 9999,
                           color: "white",
                           textShadow: "black 0px 1px 1px",
+                          cursor: gr.guide ? "pointer" : "inherit",
                         }}
                       >
                         move here
