@@ -159,6 +159,25 @@ export const GameState = ({ children, knowledge }) => {
     //you can move to this tile because it has a guide on it
     //TODO: move this as a side effect
     let player = getCurrentPlayer();
+    let isOddRow = i % 2 !== 0 ? true : false;
+    if (grid[i][j].guide) {
+      //move player to that grid
+      let playerTile = grid[player.i][player.j];
+      let toTile = grid[i][j];
+      grid[i][j] = {
+        ...playerTile,
+        url: toTile.url,
+        selected: true,
+        guide: false,
+      };
+      grid[player.i][player.j] = {
+        ...toTile,
+        url: playerTile.url,
+        selected: true,
+        guide: false,
+      };
+      return unSelectAll([...grid]);
+    }
     if (grid[i][j].name === "Water") {
       return unSelectAll(grid);
     }
@@ -166,32 +185,23 @@ export const GameState = ({ children, knowledge }) => {
     if (phase === 0) {
       if (grid[i][j].type === "character") {
         if (grid[i][j].player === currentPlayer) {
-          selectSurrondingGrids(i, j - 1);
-          selectSurrondingGrids(i, j + 1);
-          selectSurrondingGrids(i - 1, j - 1);
-          selectSurrondingGrids(i - 1, j);
-          selectSurrondingGrids(i + 1, j - 1);
-          selectSurrondingGrids(i + 1, j);
+          if (isOddRow) {
+            selectSurrondingGrids(i, j + 1);
+            selectSurrondingGrids(i, j - 1);
+            selectSurrondingGrids(i + 1, j);
+            selectSurrondingGrids(i + 1, j + 1);
+            selectSurrondingGrids(i - 1, j);
+            selectSurrondingGrids(i - 1, j + 1);
+          } else {
+            selectSurrondingGrids(i, j - 1);
+            selectSurrondingGrids(i, j + 1);
+            selectSurrondingGrids(i - 1, j - 1);
+            selectSurrondingGrids(i - 1, j);
+            selectSurrondingGrids(i + 1, j - 1);
+            selectSurrondingGrids(i + 1, j);
+          }
         }
         return;
-      }
-      if (grid[i][j].guide) {
-        //move player to that grid
-        let playerTile = grid[player.i][player.j];
-        let toTile = grid[i][j];
-        grid[i][j] = {
-          ...playerTile,
-          url: toTile.url,
-          selected: true,
-          guide: false,
-        };
-        grid[player.i][player.j] = {
-          ...toTile,
-          url: playerTile.url,
-          selected: true,
-          guide: false,
-        };
-        return unSelectAll([...grid]);
       }
     }
     return updateGrid(i, j, {
