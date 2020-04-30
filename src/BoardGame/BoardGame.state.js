@@ -21,6 +21,23 @@ export const GameState = ({ children, knowledge }) => {
     const randomCharacter = options[getRandomInt(0, options.length - 1)];
     return `${assetLocation}game/hexagonTiles/Tiles/alien${randomCharacter}.png`;
   };
+  const getCurrentPlayer = () => {
+    let pos1, pos2;
+    let final = grid
+      .map((g, i) => {
+        let players = g.filter((gr, j) => {
+          if (gr.type === "character" && gr.player === currentPlayer) {
+            pos1 = i;
+            pos2 = j;
+            return true;
+          }
+          return false;
+        });
+        return players;
+      })
+      .filter((g) => g.length > 0);
+    return { ...final[0][0], i: pos1, j: pos2 };
+  };
   const getATile = (tile) => {
     let suffix = "";
     if (tile === "Water") {
@@ -95,6 +112,7 @@ export const GameState = ({ children, knowledge }) => {
           grid[i][j] = {
             name: `x90`,
             url: getTile(),
+            player: i === 0 ? 0 : 1,
             environment: [getRandomCharacter()],
             type: "character",
             selected: true,
@@ -126,28 +144,38 @@ export const GameState = ({ children, knowledge }) => {
   const updateAllGrids = (data) => {
     setGrid([...data]);
   };
-  const selectGrid = (i, j) => {
-    if (grid[i][j].name === "Water") {
-      return unSelectAll(grid);
-    }
-    //you can move to this tile because it has a guide on it
-    if (grid[i][j].guide) {
-      return;
-    }
-    //you want to move a character
-    if (phase === 0 && grid[i][j].type === "character") {
-      //show nearby tiles that the user can move to
-      let adj1 = grid[i][j + 1];
-      let adj2 = grid[i + 1][j];
-      grid[i][j + 1] = {
+  const selectSurrondingGrids = (i, j) => {
+    //show nearby tiles that the user can move to
+    let adj1 = grid[i] && grid[i][j] && grid[i][j];
+    if (adj1) {
+      grid[i][j] = {
         ...adj1,
         guide: !adj1.guide,
       };
-      grid[i + 1][j] = {
-        ...adj2,
-        guide: !adj2.guide,
-      };
-      return setGrid([...grid]);
+    }
+    setGrid([...grid]);
+  };
+  const selectGrid = (i, j) => {
+    //you can move to this tile because it has a guide on it
+    //TODO: move this as a side effect
+    let player = getCurrentPlayer();
+    if (grid[i][j].name === "Water") {
+      return unSelectAll(grid);
+    }
+    //you want to move a character
+    if (phase === 0) {
+      if (grid[i][j].type === "character") {
+        if (grid[i][j].player === currentPlayer) {
+          selectSurrondingGrids(i + 1, j);
+          selectSurrondingGrids(i, j + 1);
+          selectSurrondingGrids(i - 1, j);
+          return selectSurrondingGrids(i, j - 1);
+        }
+        return;
+      }
+      if (grid[i][j].guide) {
+        return console.log("HELLO");
+      }
     }
     return updateGrid(i, j, {
       ...grid[i][j],
