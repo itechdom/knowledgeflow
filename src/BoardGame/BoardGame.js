@@ -248,6 +248,7 @@ export const Game = ({
                         data-id={`${i}-${j}`}
                         id={`${i}-${j}`}
                         onClick={(ev) => {
+                          ev.stopPropagation();
                           handleClick(ev);
                         }}
                         style={{
