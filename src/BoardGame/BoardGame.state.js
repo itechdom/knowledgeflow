@@ -166,15 +166,32 @@ export const GameState = ({ children, knowledge }) => {
     if (phase === 0) {
       if (grid[i][j].type === "character") {
         if (grid[i][j].player === currentPlayer) {
-          selectSurrondingGrids(i + 1, j);
+          selectSurrondingGrids(i, j - 1);
           selectSurrondingGrids(i, j + 1);
+          selectSurrondingGrids(i - 1, j - 1);
           selectSurrondingGrids(i - 1, j);
-          return selectSurrondingGrids(i, j - 1);
+          selectSurrondingGrids(i + 1, j - 1);
+          selectSurrondingGrids(i + 1, j);
         }
         return;
       }
       if (grid[i][j].guide) {
-        return console.log("HELLO");
+        //move player to that grid
+        let playerTile = grid[player.i][player.j];
+        let toTile = grid[i][j];
+        grid[i][j] = {
+          ...playerTile,
+          url: toTile.url,
+          selected: true,
+          guide: false,
+        };
+        grid[player.i][player.j] = {
+          ...toTile,
+          url: playerTile.url,
+          selected: true,
+          guide: false,
+        };
+        return unSelectAll([...grid]);
       }
     }
     return updateGrid(i, j, {
@@ -196,7 +213,7 @@ export const GameState = ({ children, knowledge }) => {
         if (gr.name !== "Water" && gr.type !== "character") {
           return {
             ...gr,
-            selected: false,
+            // selected: false,
             guide: false,
             url: getTile(grid[i][j], false),
           };
