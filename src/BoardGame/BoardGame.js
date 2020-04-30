@@ -35,7 +35,7 @@ export const Game = ({
   endTurn,
 }) => {
   const [paused, setPaused] = React.useState(true);
-  const handleClick = (ev, data) => {
+  const handleClick = (ev) => {
     let pos = ev.target.dataset.id;
     if (pos) {
       let arr = pos.split("-");
@@ -61,7 +61,7 @@ export const Game = ({
         backgroundColor: "#8BE1EB",
       }}
       onClick={(ev) => {
-        handleClick(ev, "container");
+        handleClick(ev);
       }}
     >
       <Dialog className="game" open={paused} onClose={() => setPaused(false)}>
@@ -236,12 +236,17 @@ export const Game = ({
                         borderRadius: gr.guide ? "50px" : "",
                         zIndex: gr.type === "background" ? 100 : 200,
                         opacity: gr.selected ? 1 : 0.25,
+                        cursor: gr.guide ? "pointer" : "inherit",
                       }}
                       src={gr.url}
                       onClick={(ev) => {}}
                     />
                     {gr.guide ? (
                       <span
+                        data-id={`${i}-${j}`}
+                        onClick={(ev) => {
+                          handleClick(ev);
+                        }}
                         style={{
                           position: "absolute",
                           top: 24,

@@ -130,6 +130,10 @@ export const GameState = ({ children, knowledge }) => {
     if (grid[i][j].name === "Water") {
       return unSelectAll(grid);
     }
+    //you can move to this tile because it has a guide on it
+    if (grid[i][j].guide) {
+      return;
+    }
     //you want to move a character
     if (phase === 0 && grid[i][j].type === "character") {
       //show nearby tiles that the user can move to
