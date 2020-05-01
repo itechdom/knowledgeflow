@@ -139,22 +139,15 @@ export const Game = ({
               <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
             </Grid>
           )}
-          <Grid item>
+          {/* <Grid item>
             <Grid container justify="center">
               <Button className="game_button" variant="outlined">
                 <h1 onClick={() => endTurn()} className="game">
                   End Turn!
                 </h1>
               </Button>
-              {/* <Button
-              className="game_button_cancel"
-              style={{ marginLeft: "10px" }}
-              variant="outlined"
-            >
-              <h1 className="game">help!</h1>
-            </Button> */}
             </Grid>
-          </Grid>
+          </Grid> */}
         </Grid>
       </Grid>
       <Grid container justify="center" direction="row">

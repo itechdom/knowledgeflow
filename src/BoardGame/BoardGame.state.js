@@ -39,14 +39,14 @@ export const GameState = ({ children, knowledge }) => {
     return { ...final[0][0], i: pos1, j: pos2 };
   };
   const getATile = (tile) => {
-    let suffix = "";
+    let suffix = "_full";
     if (tile === "Water") {
       suffix = "_shadow";
     }
     return `${assetLocation}game/hexagonTiles/Tiles/tile${tile}${suffix}.png`;
   };
   const getTile = (tile, selected) => {
-    const suffix = "_full";
+    const suffix = "";
     if (tile) {
       if (selected) {
         return `${tile.url.replace(suffix, "")}`;
@@ -88,6 +88,12 @@ export const GameState = ({ children, knowledge }) => {
     };
     return tile;
   };
+
+  //this is just a fun test, using conway's game of life
+  const simulate = () => {
+    
+  };
+
   const initGrid = () => {
     for (let i = 0; i < 9; i++) {
       if (!grid[i]) grid[i] = [];
