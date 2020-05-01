@@ -128,7 +128,8 @@ export const GameState = ({ children, knowledge }) => {
         }
       });
     });
-    setGrid(grid);
+    setCurrentTile({ ...grid[0][0], i: 0, j: 0 });
+    return setGrid(grid);
   };
   const selectSurrondingGrids = (i, j) => {
     //show nearby tiles that the user can move to
@@ -144,20 +145,19 @@ export const GameState = ({ children, knowledge }) => {
   const selectGrid = (i, j, count) => {
     //you can move to this tile because it has a guide on it
     //TODO: move this as a side effect
-    let player = getCurrentPlayer();
-    setCurrentTile([i, j]);
     let isOddRow = i % 2 !== 0 ? true : false;
     if (grid[i][j].guide) {
       //move player to that grid
-      let playerTile = grid[player.i][player.j];
+      let playerTile = grid[currentTile.i][currentTile.j];
       let toTile = grid[i][j];
       let playerTileCount = playerTile.count - count;
       let toTileCount = toTile.count + count;
+      console.log(playerTileCount, toTileCount);
       if (toTileCount > 90) {
         console.log("90");
         toTileCount = playerTile.count;
       }
-      grid[player.i][player.j] = {
+      grid[currentTile.i][currentTile.j] = {
         ...toTile,
         environment:
           playerTile.environment.length === 0 ? [] : playerTile.environment,
@@ -178,10 +178,8 @@ export const GameState = ({ children, knowledge }) => {
         player: playerTile.player,
         selected: true,
       };
+      setCurrentTile({ ...grid[i][j], i, j });
       return unSelectAll([...grid]);
-    }
-    if (grid[i][j].name === "Water") {
-      return unSelectAll(grid);
     }
     //you want to move a character
     if (phase === 0) {
@@ -203,14 +201,9 @@ export const GameState = ({ children, knowledge }) => {
             selectSurrondingGrids(i + 1, j);
           }
         }
-        return;
       }
     }
-    return updateGrid(i, j, {
-      ...grid[i][j],
-      tile: getTile(grid[i][j], !grid[i][j].selected),
-      selected: !grid[i][j].selected,
-    });
+    return setCurrentTile({ ...grid[i][j], i, j });
   };
   const updateGrid = (position1, position2, data) => {
     setGrid(

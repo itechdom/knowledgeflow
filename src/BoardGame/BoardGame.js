@@ -11,6 +11,7 @@ import {
   Tooltip,
   Icon,
   Button,
+  Typography,
 } from "@material-ui/core";
 import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 let fpsInterval = 1000 / 60,
@@ -206,7 +207,9 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
               <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
             </Grid>
           )}
-          {/* {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))} */}
+          <Typography>
+            {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))}
+          </Typography>
           <div style={{ marginBottom: "3em" }}></div>
           {/* <Grid item>
             <Grid container justify="center">
@@ -338,7 +341,7 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
                           position: "absolute",
                           top: 24,
                           left: 12,
-                          zIndex: 9999,
+                          zIndex: 999,
                           color: "white",
                           textShadow: "black 0px 1px 1px",
                           cursor: gr.guide ? "pointer" : "inherit",
