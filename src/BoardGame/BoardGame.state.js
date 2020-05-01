@@ -90,9 +90,7 @@ export const GameState = ({ children, knowledge }) => {
   };
 
   //this is just a fun test, using conway's game of life
-  const simulate = () => {
-    
-  };
+  const simulate = () => {};
 
   const initGrid = () => {
     for (let i = 0; i < 9; i++) {
@@ -101,8 +99,7 @@ export const GameState = ({ children, knowledge }) => {
         grid[i][j] = {
           // name: `${i}x${j}`,
           url: getTile(),
-          environment: [getRandomTree()],
-          display: getRandomInt(1, 2) === 2 ? true : false,
+          environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           selected: false,
         };
       }
@@ -117,9 +114,11 @@ export const GameState = ({ children, knowledge }) => {
         ) {
           grid[i][j] = {
             name: `x90`,
+            count: 90,
             url: getTile(),
             player: i === 0 ? 0 : 1,
-            environment: [getRandomCharacter()],
+            environment: [],
+            characters: [getRandomCharacter()],
             type: "character",
             selected: true,
           };
@@ -170,18 +169,20 @@ export const GameState = ({ children, knowledge }) => {
       //move player to that grid
       let playerTile = grid[player.i][player.j];
       let toTile = grid[i][j];
-      grid[i][j] = {
-        ...playerTile,
-        url: toTile.url,
-        selected: true,
-        guide: false,
-      };
       grid[player.i][player.j] = {
         ...toTile,
+        environment:
+          playerTile.environment.length === 0 ? [] : playerTile.environment,
         url: playerTile.url,
         selected: true,
-        guide: false,
       };
+      grid[i][j] = {
+        ...playerTile,
+        environment: toTile.environment.length === 0 ? [] : toTile.environment,
+        url: toTile.url,
+        selected: true,
+      };
+      console.log(playerTile, toTile, player.i, player.j, i, j);
       return unSelectAll([...grid]);
     }
     if (grid[i][j].name === "Water") {
@@ -226,15 +227,10 @@ export const GameState = ({ children, knowledge }) => {
   const unSelectAll = (grid) => {
     const newGrid = grid.map((g, i) => {
       return g.map((gr, j) => {
-        if (gr.name !== "Water" && gr.type !== "character") {
-          return {
-            ...gr,
-            // selected: false,
-            guide: false,
-            url: getTile(grid[i][j], false),
-          };
-        }
-        return { ...gr };
+        return {
+          ...gr,
+          guide: false,
+        };
       });
     });
     setGrid([...newGrid]);

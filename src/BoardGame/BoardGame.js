@@ -155,6 +155,7 @@ export const Game = ({
           grid.map((g, i) => (
             <Grid
               container
+              key={`${i}-container`}
               style={{
                 position: "relative",
                 bottom: `${i + 1}px`,
@@ -164,6 +165,7 @@ export const Game = ({
             >
               {g.map((gr, j) => (
                 <Tooltip
+                  key={`${i}-${j}-tooltip`}
                   title={
                     gr.type === "character"
                       ? j === 0
@@ -184,15 +186,31 @@ export const Game = ({
                       gr.environment.map((env, index) => (
                         <img
                           data-id={`${i}-${j}`}
-                          id={`${i}-${j}`}
-                          className={
-                            gr.type === "character" ? "game_character" : ""
-                          }
+                          id={`${i}-${j}-environment`}
+                          key={`${i}-${j}-environment`}
                           style={{
                             position: "absolute",
-                            left: gr.type === "character" ? "0px" : `48px`,
-                            bottom:
-                              gr.type === "character" ? `${24}px` : "33px",
+                            left: `48px`,
+                            bottom: "33px",
+                            display: "inline",
+                            height: gr.type === "background" ? "auto" : "87px",
+                            zIndex: gr.type === "background" ? 150 : 300,
+                            opacity: gr.selected ? 1 : 0.25,
+                          }}
+                          src={env}
+                        />
+                      ))}
+                    {gr.characters &&
+                      gr.characters.map((env, index) => (
+                        <img
+                          data-id={`${i}-${j}`}
+                          id={`${i}-${j}-character`}
+                          key={`${i}-${j}-character`}
+                          className={"game_character"}
+                          style={{
+                            position: "absolute",
+                            left: "0px",
+                            bottom: `${24}px`,
                             display: "inline",
                             height: gr.type === "background" ? "auto" : "87px",
                             zIndex: gr.type === "background" ? 150 : 300,
@@ -205,7 +223,8 @@ export const Game = ({
                     {gr.type === "character" && (
                       <span
                         data-id={`${i}-${j}`}
-                        id={`${i}-${j}`}
+                        id={`${i}-${j}-count`}
+                        key={`${i}-${j}-count`}
                         style={{
                           padding: "2px",
                           color: "white",
@@ -218,12 +237,13 @@ export const Game = ({
                           zIndex: 400,
                         }}
                       >
-                        {gr.name}
+                        {gr.count}
                       </span>
                     )}
                     <img
                       data-id={`${i}-${j}`}
-                      id={`${i}-${j}`}
+                      id={`${i}-${j}-tile`}
+                      key={`${i}-${j}-tile`}
                       style={{
                         padding: "3px 5px",
                         position: "absolute",
@@ -239,7 +259,8 @@ export const Game = ({
                     {gr.guide ? (
                       <span
                         data-id={`${i}-${j}`}
-                        id={`${i}-${j}`}
+                        id={`${i}-${j}-guide`}
+                        key={`${i}-${j}-guide`}
                         onClick={(ev) => {
                           ev.stopPropagation();
                           handleClick(ev);
