@@ -64,6 +64,7 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
   const [paused, setPaused] = React.useState(true);
   const [numberDialog, setNumberDialog] = React.useState();
   const [currentNumber, setCurrentNumber] = React.useState(0);
+  const [currentLimit, setCurrentLimit] = React.useState(90);
   const renderNumberDialog = () => {
     let [i, j] = numberDialog;
     let tile = grid[i][j];
@@ -84,8 +85,8 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
             setCurrentNumber(value);
           }}
           value={currentNumber}
-          max={tile.count}
-          min={1}
+          max={currentLimit}
+          min={i}
           standAlone={true}
         />
       ),
@@ -205,7 +206,7 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
               <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
             </Grid>
           )}
-          {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))}
+          {/* {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))} */}
           <div style={{ marginBottom: "3em" }}></div>
           {/* <Grid item>
             <Grid container justify="center">

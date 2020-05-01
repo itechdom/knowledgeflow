@@ -128,29 +128,7 @@ export const GameState = ({ children, knowledge }) => {
         }
       });
     });
-
-    ///ADDING WATER TILES
-    //add water tiles to the beginning and end of each row
-    // grid.map((g, i) => {
-    //   for (let a = 0; a < 9; a++) {
-    //     g.unshift(getBackgroundTile());
-    //     g.push(getBackgroundTile());
-    //   }
-    // });
-    // for (let b = 0; b < 3; b++) {
-    //   let initialLength = grid.length;
-    //   for (let a = 0; a < 28; a++) {
-    //     if (!grid[initialLength]) {
-    //       grid[initialLength] = [];
-    //     }
-    //     grid[initialLength].push(getBackgroundTile());
-    //   }
-    // }
-    //generate random scene object
     setGrid(grid);
-  };
-  const updateAllGrids = (data) => {
-    setGrid([...data]);
   };
   const selectSurrondingGrids = (i, j) => {
     //show nearby tiles that the user can move to
@@ -175,6 +153,10 @@ export const GameState = ({ children, knowledge }) => {
       let toTile = grid[i][j];
       let playerTileCount = playerTile.count - count;
       let toTileCount = toTile.count + count;
+      if (toTileCount > 90) {
+        console.log("90");
+        toTileCount = playerTile.count;
+      }
       grid[player.i][player.j] = {
         ...toTile,
         environment:
@@ -183,6 +165,7 @@ export const GameState = ({ children, knowledge }) => {
         count: playerTileCount <= 0 ? 0 : playerTileCount,
         type: "character",
         characters: playerTileCount <= 0 ? [] : playerTile.characters,
+        player: playerTile.player,
         selected: true,
       };
       grid[i][j] = {
@@ -190,7 +173,9 @@ export const GameState = ({ children, knowledge }) => {
         environment: toTile.environment.length === 0 ? [] : toTile.environment,
         tile: toTile.tile,
         count: toTileCount <= 0 ? 0 : toTileCount,
+        type: "character",
         characters: toTileCount <= 0 ? [] : playerTile.characters,
+        player: playerTile.player,
         selected: true,
       };
       return unSelectAll([...grid]);
@@ -276,7 +261,6 @@ export const GameState = ({ children, knowledge }) => {
     return React.cloneElement(child, {
       grid: grid,
       updateGrid: updateGrid,
-      updateAllGrids: updateAllGrids,
       unSelectAll: unSelectAll,
       selectGrid: selectGrid,
       RollADice: RollADice,

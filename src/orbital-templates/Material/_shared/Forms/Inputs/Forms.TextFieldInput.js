@@ -19,14 +19,16 @@ const TextFieldInput = ({
         label={field.name}
         type={type}
         value={value}
-        onChange={event => {
+        onChange={(event) => {
+          event.stopPropagation();
           setFieldValue(field.name, event.target.value);
         }}
-        onBlur={e => {
+        onBlur={(e) => {
           setFieldTouched && setFieldTouched(field.name, true);
         }}
         required={field.required || false}
         fullWidth={true}
+        inputProps={rest}
         {...rest}
       />
     </>
@@ -40,10 +42,10 @@ const TextFieldInput = ({
               label={field.placeholder}
               type={type}
               value={value}
-              onChange={event => {
+              onChange={(event) => {
                 setFieldValue(field.name, event.target.value);
               }}
-              onBlur={e => {
+              onBlur={(e) => {
                 setFieldTouched && setFieldTouched(field.name, true);
               }}
               required={field.required || false}
