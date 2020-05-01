@@ -7,14 +7,15 @@ const tiles = [
   "Lava",
   "Magic",
   // "Dirt",
-  // "Sand",
-  // "Snow",
+  "Sand",
+  "Snow",
   // "Stone",
   // "Water",
 ];
 export const GameState = ({ children, knowledge }) => {
   const [grid, setGrid] = React.useState([]);
   const [phase, setPhase] = React.useState(0);
+  const [currentTile, setCurrentTile] = React.useState([0, 0]);
   const [currentPlayer, setCurrentPlayer] = React.useState(0);
   const getRandomCharacter = () => {
     const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
@@ -49,12 +50,12 @@ export const GameState = ({ children, knowledge }) => {
     const suffix = "";
     if (tile) {
       if (selected) {
-        return `${tile.url.replace(suffix, "")}`;
+        return `${tile.tile.replace(suffix, "")}`;
       }
-      if (tile.url.indexOf(suffix) === -1) {
-        return `${tile.url.replace(".png", "")}${suffix}.png`;
+      if (tile.tile.indexOf(suffix) === -1) {
+        return `${tile.tile.replace(".png", "")}${suffix}.png`;
       }
-      return tile.url;
+      return tile.tile;
     }
     return `${assetLocation}game/hexagonTiles/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
@@ -81,7 +82,7 @@ export const GameState = ({ children, knowledge }) => {
   const getBackgroundTile = () => {
     const tile = {
       name: `Water`,
-      url: getATile("Water"),
+      tile: getATile("Water"),
       selected: true,
       type: "background",
       environment: [getBackgroundEnvironment()],
@@ -98,9 +99,10 @@ export const GameState = ({ children, knowledge }) => {
       for (let j = 0; j < 10; j++) {
         grid[i][j] = {
           // name: `${i}x${j}`,
-          url: getTile(),
+          tile: getTile(),
           environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           selected: false,
+          count: 0,
         };
       }
     }
@@ -114,11 +116,12 @@ export const GameState = ({ children, knowledge }) => {
         ) {
           grid[i][j] = {
             name: `x90`,
-            count: 90,
-            url: getTile(),
+            tile: getTile(),
             player: i === 0 ? 0 : 1,
             environment: [],
             characters: [getRandomCharacter()],
+            moved: false,
+            count: 90,
             type: "character",
             selected: true,
           };
@@ -160,29 +163,36 @@ export const GameState = ({ children, knowledge }) => {
     }
     setGrid([...grid]);
   };
-  const selectGrid = (i, j) => {
+  const selectGrid = (i, j, count) => {
     //you can move to this tile because it has a guide on it
     //TODO: move this as a side effect
     let player = getCurrentPlayer();
+    setCurrentTile([i, j]);
     let isOddRow = i % 2 !== 0 ? true : false;
     if (grid[i][j].guide) {
       //move player to that grid
       let playerTile = grid[player.i][player.j];
       let toTile = grid[i][j];
+      let playerTileCount = playerTile.count - count;
+      let toTileCount = toTile.count + count;
       grid[player.i][player.j] = {
         ...toTile,
         environment:
           playerTile.environment.length === 0 ? [] : playerTile.environment,
-        url: playerTile.url,
+        tile: playerTile.tile,
+        count: playerTileCount <= 0 ? 0 : playerTileCount,
+        type: "character",
+        characters: playerTileCount <= 0 ? [] : playerTile.characters,
         selected: true,
       };
       grid[i][j] = {
         ...playerTile,
         environment: toTile.environment.length === 0 ? [] : toTile.environment,
-        url: toTile.url,
+        tile: toTile.tile,
+        count: toTileCount <= 0 ? 0 : toTileCount,
+        characters: toTileCount <= 0 ? [] : playerTile.characters,
         selected: true,
       };
-      console.log(playerTile, toTile, player.i, player.j, i, j);
       return unSelectAll([...grid]);
     }
     if (grid[i][j].name === "Water") {
@@ -213,7 +223,7 @@ export const GameState = ({ children, knowledge }) => {
     }
     return updateGrid(i, j, {
       ...grid[i][j],
-      url: getTile(grid[i][j], !grid[i][j].selected),
+      tile: getTile(grid[i][j], !grid[i][j].selected),
       selected: !grid[i][j].selected,
     });
   };
@@ -272,7 +282,6 @@ export const GameState = ({ children, knowledge }) => {
       RollADice: RollADice,
       phase,
       currentPlayer,
-      endTurn,
     });
   });
   return <>{childrenWithProps}</>;
