@@ -17,6 +17,7 @@ export const GameState = ({ children, knowledge }) => {
   const [phase, setPhase] = React.useState(0);
   const [currentTile, setCurrentTile] = React.useState([0, 0]);
   const [currentPlayer, setCurrentPlayer] = React.useState(0);
+  const [mode, setMode] = React.useState("free");
   const getRandomCharacter = () => {
     const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
     const randomCharacter = options[getRandomInt(0, options.length - 1)];
@@ -147,6 +148,7 @@ export const GameState = ({ children, knowledge }) => {
     //TODO: move this as a side effect
     let isOddRow = i % 2 !== 0 ? true : false;
     if (grid[i][j].guide) {
+      console.log("MODE", mode);
       //move player to that grid
       let playerTile = grid[currentTile.i][currentTile.j];
       let toTile = grid[i][j];
@@ -176,6 +178,7 @@ export const GameState = ({ children, knowledge }) => {
         player: playerTile.player,
         selected: true,
       };
+      setMode("free");
       setCurrentTile({ ...grid[i][j], i, j });
       return unSelectAll([...grid]);
     }
@@ -183,6 +186,11 @@ export const GameState = ({ children, knowledge }) => {
     if (phase === 0) {
       if (grid[i][j].type === "character") {
         if (grid[i][j].player === currentPlayer) {
+          if (mode === "guide") {
+            setMode("free");
+            return unSelectAll([...grid]);
+          }
+          setMode("guide");
           if (isOddRow) {
             selectSurrondingGrids(i, j + 1);
             selectSurrondingGrids(i, j - 1);
@@ -222,6 +230,7 @@ export const GameState = ({ children, knowledge }) => {
       });
     });
     setGrid([...newGrid]);
+    return newGrid;
   };
   const RollADice = () => {
     let roll = getRandomInt(1, 6);

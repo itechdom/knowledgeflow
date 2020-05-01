@@ -61,7 +61,13 @@ const renderDialog = ({ title, message, yes, no, onYes, onNo, extra }) => {
     </Dialog>
   );
 };
-export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
+export const Game = ({
+  grid,
+  selectGrid,
+  phase,
+  currentPlayer,
+  unSelectAll,
+}) => {
   const [paused, setPaused] = React.useState(true);
   const [numberDialog, setNumberDialog] = React.useState();
   const [currentNumber, setCurrentNumber] = React.useState(0);
@@ -95,7 +101,6 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
   };
   const handleClick = (ev) => {
     let pos = ev.target.dataset.id;
-    console.log("hello");
     if (pos) {
       let arr = pos.split("-");
       let [i, j] = arr;
@@ -106,7 +111,6 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
         : selectGrid(parseInt(arr[0]), parseInt(arr[1]));
       return;
     }
-    // return unSelectAll(grid);
   };
   React.useEffect(() => {
     // animate(() => {
