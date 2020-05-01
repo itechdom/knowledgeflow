@@ -152,9 +152,7 @@ export const GameState = ({ children, knowledge }) => {
       let toTile = grid[i][j];
       let playerTileCount = playerTile.count - count;
       let toTileCount = toTile.count + count;
-      console.log(playerTileCount, toTileCount);
-      if (toTileCount > 90) {
-        console.log("90");
+      if (toTileCount > playerTile.count) {
         toTileCount = playerTile.count;
       }
       grid[currentTile.i][currentTile.j] = {
@@ -202,7 +200,9 @@ export const GameState = ({ children, knowledge }) => {
           }
         }
       }
+      return setCurrentTile({ ...grid[i][j], i, j });
     }
+    unSelectAll([...grid]);
     return setCurrentTile({ ...grid[i][j], i, j });
   };
   const updateGrid = (position1, position2, data) => {

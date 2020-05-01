@@ -95,6 +95,7 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
   };
   const handleClick = (ev) => {
     let pos = ev.target.dataset.id;
+    console.log("hello");
     if (pos) {
       let arr = pos.split("-");
       let [i, j] = arr;
@@ -347,7 +348,7 @@ export const Game = ({ grid, selectGrid, phase, currentPlayer }) => {
                           cursor: gr.guide ? "pointer" : "inherit",
                         }}
                       >
-                        move here
+                        here
                       </span>
                     ) : (
                       <></>
