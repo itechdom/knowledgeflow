@@ -2,12 +2,12 @@ import React from "react";
 import { styles } from "./Physics.styles.js";
 import theme from "Theme";
 import Simulation from "./Simulation/Simulation";
-// import Math from "../Math/Math";
 import { withStyles, Button } from "@material-ui/core";
 import { Game } from "../GameBoard/GameBoard";
 import { GameState } from "../GameBoard/GameBoard.state";
 import { Game as FighterGame } from "../GameFighter/GameFighter";
 import { GameState as FighterGameState } from "../GameFighter/GameFighter.state";
+import { Grid } from "@material-ui/core";
 
 const Physics = ({
   knowledge,
@@ -41,7 +41,8 @@ const Physics = ({
   ...rest
 }) => {
   return (
-    <div
+    <Grid
+      container
       style={{
         marginTop: "5em",
         backgroundImage: `url("/assets/game/hexagonTiles/webb.png")`,
@@ -49,14 +50,17 @@ const Physics = ({
         height: "100vh",
       }}
     >
-      <GameState>
-        <Game></Game>
-      </GameState>
-      <div style={{ marginBottom: "10em" }}></div>
-      <FighterGameState>
-        <FighterGame></FighterGame>
-      </FighterGameState>
-    </div>
+      <Grid md={6} item>
+        <GameState>
+          <Game></Game>
+        </GameState>
+      </Grid>
+      <Grid style={{ height: "100vh" }} md={6} item>
+        <FighterGameState>
+          <FighterGame></FighterGame>
+        </FighterGameState>
+      </Grid>
+    </Grid>
   );
 };
 

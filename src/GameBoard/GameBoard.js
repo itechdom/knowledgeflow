@@ -212,9 +212,6 @@ export const Game = ({
               <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
             </Grid>
           )}
-          <Typography>
-            {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))}
-          </Typography>
           <div style={{ marginBottom: "3em" }}></div>
           {/* <Grid item>
             <Grid container justify="center">

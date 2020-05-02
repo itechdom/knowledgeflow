@@ -135,7 +135,6 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                     {gr.messages &&
                       gr.messages.map((msg, index) => (
                         <svg
-                          className={"move-right"}
                           style={{
                             position: "absolute",
                             left: "48px",
@@ -150,9 +149,9 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                             cx="10"
                             cy="10"
                             r="10"
-                            stroke="black"
+                            stroke={msg.color}
                             strokeWidth="3"
-                            fill="red"
+                            fill={msg.color}
                           />
                         </svg>
                       ))}

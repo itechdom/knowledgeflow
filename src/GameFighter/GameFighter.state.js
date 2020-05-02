@@ -41,7 +41,7 @@ export const GameState = ({ children, knowledge, health }) => {
       case "d":
         moveCharacter("right");
         break;
-      case "space":
+      case "f":
         send();
         break;
     }
@@ -86,7 +86,12 @@ export const GameState = ({ children, knowledge, health }) => {
       } else {
         grid[ci][cj + count] = {
           ...toTile,
-          messages: [{ type: "projectile" }],
+          messages: [
+            {
+              type: "projectile",
+              color: getRandomInt(0, 1) === 0 ? "green" : "blue",
+            },
+          ],
         };
       }
       grid[ci][cj + (count - 1)] = {
