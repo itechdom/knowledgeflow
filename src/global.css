@@ -69,6 +69,9 @@
     rgba(255, 255, 255, 0.5) 70px
   );
 }
+.move-right {
+  animation: 0.25s ease-out 0s 1 right;
+}
 .game_character {
   animation-name: character;
   animation-duration: 1.5s;
@@ -85,5 +88,13 @@
   }
   to {
     bottom: 48px;
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

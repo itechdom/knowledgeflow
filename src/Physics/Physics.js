@@ -4,8 +4,10 @@ import theme from "Theme";
 import Simulation from "./Simulation/Simulation";
 // import Math from "../Math/Math";
 import { withStyles, Button } from "@material-ui/core";
-import { Game } from "../BoardGame/BoardGame";
-import { GameState } from "../BoardGame/BoardGame.state";
+import { Game } from "../GameBoard/GameBoard";
+import { GameState } from "../GameBoard/GameBoard.state";
+import { Game as FighterGame } from "../GameFighter/GameFighter";
+import { GameState as FighterGameState } from "../GameFighter/GameFighter.state";
 
 const Physics = ({
   knowledge,
@@ -47,10 +49,13 @@ const Physics = ({
         height: "100vh",
       }}
     >
-      {/* <Simulation /> */}
       <GameState>
         <Game></Game>
       </GameState>
+      <div style={{ marginBottom: "10em" }}></div>
+      <FighterGameState>
+        <FighterGame></FighterGame>
+      </FighterGameState>
     </div>
   );
 };

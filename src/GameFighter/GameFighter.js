@@ -14,7 +14,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import KeyboardEventHandler from "react-keyboard-event-handler";
-import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 let fpsInterval = 1000 / 60,
   then = Date.now();
 const animate = (onDraw) => {
@@ -33,11 +32,11 @@ const animate = (onDraw) => {
   }
 };
 export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
-  const [paused, setPaused] = React.useState(true);
+  const [paused, setPaused] = React.useState(false);
   React.useEffect(() => {
-    animate(() => {
-      console.log("ANIMATE");
-    });
+    // animate(() => {
+    //   console.log("ANIMATE");
+    // });
     console.log("each group of players can move only once");
     console.log(
       "when a new phase is on, display a dialog that automatically disappears explaining what the phase is"
@@ -98,51 +97,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         container
       >
         <Grid item>
-          <h1>Knowledge Board !</h1>
-        </Grid>
-        <Grid container justify="center">
-          {currentPlayer === 0 && (
-            <Grid item>
-              <h1>
-                Player <b>1</b> -
-              </h1>
-            </Grid>
-          )}
-          {currentPlayer === 1 && (
-            <Grid item>
-              <h1>
-                Player <b>2</b> -
-              </h1>
-            </Grid>
-          )}
-          {phase === 0 && (
-            <Grid item>
-              <h1>Move</h1>
-            </Grid>
-          )}
-          {phase === 1 && (
-            <Grid item>
-              <h1 style={{ color: "#E97B33" }}>Attack</h1>
-            </Grid>
-          )}
-          {phase === 2 && (
-            <Grid item>
-              <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
-            </Grid>
-          )}
-          <Typography>
-            {JSON.stringify(grid.map((g) => g.map((gr) => `${gr.count}`)))}
-          </Typography>
-          <div style={{ marginBottom: "3em" }}></div>
-          {/* <Grid item>
-            <Grid container justify="center">
-              <Button className="game_button" variant="outlined">
-                <h1 onClick={() => endTurn()} className="game">
-                  End Turn!
-                </h1>
-              </Button>
-            </Grid>
-          </Grid> */}
+          <h1>Fight !</h1>
         </Grid>
       </Grid>
       <Grid container justify="center" direction="row">
@@ -153,7 +108,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
               key={`${i}-container`}
               style={{
                 position: "relative",
-                bottom: `${i + 1}px`,
+                bottom: `${30 * (i + 1)}px`,
                 left: (i + 1) % 2 === 0 ? "33px" : "0px",
               }}
               justify="center"
@@ -171,29 +126,35 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                 >
                   <Grid
                     style={{
-                      width: "70px",
+                      width: "65px",
                       height: "85px",
                       position: "relative",
                     }}
                     item
                   >
-                    {gr.environment &&
-                      gr.environment.map((env, index) => (
-                        <img
-                          data-id={`${i}-${j}-character`}
-                          id={`${i}-${j}-environment`}
-                          key={`${i}-${j}-environment`}
+                    {gr.messages &&
+                      gr.messages.map((msg, index) => (
+                        <svg
+                          className={"move-right"}
                           style={{
                             position: "absolute",
-                            left: `48px`,
-                            bottom: "33px",
-                            display: "inline",
-                            height: gr.type === "background" ? "auto" : "87px",
-                            zIndex: gr.type === "background" ? 150 : 300,
-                            opacity: gr.selected ? 1 : 0.25,
+                            left: "48px",
+                            bottom: "20px",
+                            display: "absolute",
+                            zIndex: 999,
                           }}
-                          src={env}
-                        />
+                          height="50"
+                          width="50"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="10"
+                            stroke="black"
+                            strokeWidth="3"
+                            fill="red"
+                          />
+                        </svg>
                       ))}
                     {gr.characters &&
                       gr.characters.map((env, index) => (
