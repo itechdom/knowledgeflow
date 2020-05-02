@@ -21,7 +21,7 @@ export const GameState = ({ children, knowledge }) => {
   const getRandomCharacter = () => {
     const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
     const randomCharacter = options[getRandomInt(0, options.length - 1)];
-    return `${assetLocation}game/hexagonTiles/Tiles/alien${randomCharacter}.png`;
+    return `${assetLocation}game/Tiles/alien${randomCharacter}.png`;
   };
   const getCurrentPlayer = () => {
     let pos1, pos2;
@@ -45,7 +45,7 @@ export const GameState = ({ children, knowledge }) => {
     if (tile === "Water") {
       suffix = "_shadow";
     }
-    return `${assetLocation}game/hexagonTiles/Tiles/tile${tile}${suffix}.png`;
+    return `${assetLocation}game/Tiles/tile${tile}${suffix}.png`;
   };
   const getTile = (tile, selected) => {
     const suffix = "";
@@ -58,26 +58,26 @@ export const GameState = ({ children, knowledge }) => {
       }
       return tile.tile;
     }
-    return `${assetLocation}game/hexagonTiles/Tiles/tile${
+    return `${assetLocation}game/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
     }${suffix}.png`;
   };
   const getRandomTree = (season) => {
     const trees = ["Blue", "Green"];
     const suffix = "_low";
-    const randomTree = `${assetLocation}game/hexagonTiles/Tiles/tree${
+    const randomTree = `${assetLocation}game/Tiles/tree${
       trees[getRandomInt(0, trees.length - 1)]
     }${suffix}.png`;
     return randomTree;
   };
   const getRandomRock = (season) => {
-    const randomTree = `${assetLocation}game/hexagonTiles/Tiles/smallRockGrass.png`;
+    const randomTree = `${assetLocation}game/Tiles/smallRockGrass.png`;
     console.log(randomTree);
     return randomTree;
   };
   const getBackgroundEnvironment = () => {
     return getRandomInt(0, 1) < 1
-      ? `${assetLocation}game/hexagonTiles/Tiles/waveWater.png`
+      ? `${assetLocation}game/Tiles/waveWater.png`
       : ``;
   };
   const getBackgroundTile = () => {
