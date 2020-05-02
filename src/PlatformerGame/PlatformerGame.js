@@ -32,42 +32,12 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const renderDialog = ({ title, message, yes, no, onYes, onNo, extra }) => {
-  return (
-    <Dialog open={true} onClose={onNo} aria-labelledby="form-dialog-title">
-      <Grid container alignItems={"flex-end"} justify={"flex-end"}>
-        <Grid item>
-          <Button onClick={onNo}>
-            <Icon>close</Icon>
-          </Button>
-        </Grid>
-      </Grid>
-      <DialogTitle id="form-dialog-title">{title}</DialogTitle>
-      <DialogContent>
-        <DialogContentText>{message}</DialogContentText>
-        {extra ? extra : <></>}
-      </DialogContent>
-      <DialogActions>
-        {yes && (
-          <Button onClick={onYes} variant="contained" color="secondary">
-            {yes}
-          </Button>
-        )}
-        {no && (
-          <Button onClick={onNo} variant="outlined" color="primary">
-            {no}
-          </Button>
-        )}
-      </DialogActions>
-    </Dialog>
-  );
-};
 export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
   const [paused, setPaused] = React.useState(true);
   React.useEffect(() => {
-    // animate(() => {
-    //   console.log("ANIMATE");
-    // });
+    animate(() => {
+      console.log("ANIMATE");
+    });
     console.log("each group of players can move only once");
     console.log(
       "when a new phase is on, display a dialog that automatically disappears explaining what the phase is"
@@ -85,11 +55,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         marginRight: "auto",
         backgroundColor: "#8BE1EB",
       }}
-      onClick={(ev) => {
-        handleClick(ev);
-      }}
     >
-      {numberDialog && renderNumberDialog()}
       <Dialog className="game" open={paused} onClose={() => setPaused(false)}>
         <Grid justify="center" container>
           <Grid item>
