@@ -16,7 +16,7 @@ export const GameState = ({ children, knowledge }) => {
   const [grid, setGrid] = React.useState([]);
   const [phase, setPhase] = React.useState(0);
   const [currentPlayer, setCurrentPlayer] = React.useState(0);
-  const onKeyPress = (key) => {
+  const onKeyPress = (i, j, key) => {
     switch (key) {
       case "w":
         this.isInverted()
@@ -135,11 +135,10 @@ export const GameState = ({ children, knowledge }) => {
 
   const initGrid = () => {
     //lay down all the tiles
-    for (let i = 0; i < 9; i++) {
+    for (let i = 0; i < 1; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 10; j++) {
         grid[i][j] = {
-          // name: `${i}x${j}`,
           tile: getTile(),
           environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           selected: false,
@@ -151,11 +150,11 @@ export const GameState = ({ children, knowledge }) => {
     //ADDING RANDOM CHRACTERS
     grid.map((g, i) => {
       g.map((gr, j) => {
-        if (i === 0 && j === 0) {
+        if ((i === 0 && j === 0) || j === 9) {
           grid[i][j] = {
             name: `x90`,
             tile: getTile(),
-            player: i === 0 ? 0 : 1,
+            player: j === 0 ? 0 : 1,
             environment: [],
             characters: [getRandomCharacter()],
             moved: false,
@@ -175,18 +174,6 @@ export const GameState = ({ children, knowledge }) => {
         i === position1 ? g.map((gr, j) => (j === position2 ? data : gr)) : g
       )
     );
-  };
-  const unSelectAll = (grid) => {
-    const newGrid = grid.map((g, i) => {
-      return g.map((gr, j) => {
-        return {
-          ...gr,
-          guide: false,
-        };
-      });
-    });
-    setGrid([...newGrid]);
-    return newGrid;
   };
   React.useEffect(() => {
     initGrid();
