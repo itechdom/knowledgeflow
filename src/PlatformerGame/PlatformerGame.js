@@ -13,6 +13,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
+import KeyboardEventHandler from "react-keyboard-event-handler";
 import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -61,57 +62,8 @@ const renderDialog = ({ title, message, yes, no, onYes, onNo, extra }) => {
     </Dialog>
   );
 };
-export const Game = ({
-  grid,
-  selectGrid,
-  phase,
-  currentPlayer,
-  unSelectAll,
-}) => {
+export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
   const [paused, setPaused] = React.useState(true);
-  const [numberDialog, setNumberDialog] = React.useState();
-  const [currentNumber, setCurrentNumber] = React.useState(0);
-  const [currentLimit, setCurrentLimit] = React.useState(90);
-  const renderNumberDialog = () => {
-    let [i, j] = numberDialog;
-    let tile = grid[i][j];
-    return renderDialog({
-      title: "How many aliens do you want to move",
-      onYes: () => {
-        setNumberDialog(null);
-        selectGrid(parseInt(i), parseInt(j), parseInt(currentNumber));
-      },
-      onNo: () => setNumberDialog(null),
-      yes: "Confirm",
-      no: "Cancel",
-      extra: (
-        <TextField
-          type="number"
-          field={{ name: "alien-count" }}
-          setFieldValue={(key, value) => {
-            setCurrentNumber(value);
-          }}
-          value={currentNumber}
-          max={currentLimit}
-          min={i}
-          standAlone={true}
-        />
-      ),
-    });
-  };
-  const handleClick = (ev) => {
-    let pos = ev.target.dataset.id;
-    if (pos) {
-      let arr = pos.split("-");
-      let [i, j] = arr;
-      let tile = grid[i][j];
-      //display dialog to get the number of aliens moved
-      tile.guide
-        ? setNumberDialog(arr)
-        : selectGrid(parseInt(arr[0]), parseInt(arr[1]));
-      return;
-    }
-  };
   React.useEffect(() => {
     // animate(() => {
     //   console.log("ANIMATE");
@@ -366,6 +318,10 @@ export const Game = ({
           <></>
         )}
       </Grid>
+      <KeyboardEventHandler
+        handleKeys={["all"]}
+        onKeyEvent={(key, e) => onKeyPress(key)}
+      />
     </Grid>
   );
 };

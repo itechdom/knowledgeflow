@@ -72,7 +72,6 @@ export const GameState = ({ children, knowledge }) => {
   };
   const getRandomRock = (season) => {
     const randomTree = `${assetLocation}game/Tiles/smallRockGrass.png`;
-    console.log(randomTree);
     return randomTree;
   };
   const getBackgroundEnvironment = () => {
