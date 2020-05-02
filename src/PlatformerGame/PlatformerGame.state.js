@@ -36,8 +36,6 @@ export const GameState = ({ children, knowledge }) => {
         break;
       case "e":
         this.camera.position.x += this.isInverted() ? 1 * 0.1 : -1 * 0.1;
-        // this.grid.rotation.y = this.grid.rotation.y + 1;
-        // this.grid.rotation.z = this.grid.rotation.z + 1;
         break;
       case "q":
         this.camera.position.x += this.isInverted() ? -1 * 0.1 : 1 * 0.1;
@@ -136,6 +134,7 @@ export const GameState = ({ children, knowledge }) => {
   const simulate = () => {};
 
   const initGrid = () => {
+    //lay down all the tiles
     for (let i = 0; i < 9; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 10; j++) {
@@ -152,10 +151,7 @@ export const GameState = ({ children, knowledge }) => {
     //ADDING RANDOM CHRACTERS
     grid.map((g, i) => {
       g.map((gr, j) => {
-        if (
-          (i === 0 && j === 0) ||
-          (i === grid.length - 1 && j === g.length - 1)
-        ) {
+        if (i === 0 && j === 0) {
           grid[i][j] = {
             name: `x90`,
             tile: getTile(),
@@ -170,6 +166,7 @@ export const GameState = ({ children, knowledge }) => {
         }
       });
     });
+
     return setGrid(grid);
   };
   const updateGrid = (position1, position2, data) => {
