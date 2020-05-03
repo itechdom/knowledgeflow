@@ -7,6 +7,8 @@ import { Game } from "../GameBoard/GameBoard";
 import { GameState } from "../GameBoard/GameBoard.state";
 import { Game as FighterGame } from "../GameFighter/GameFighter";
 import { GameState as FighterGameState } from "../GameFighter/GameFighter.state";
+import { Game as PuzzleGame } from "../GamePuzzles/GamePuzzles";
+import { GameState as PuzzleGameState } from "../GamePuzzles/GamePuzzles.state";
 import { Grid } from "@material-ui/core";
 
 const Physics = ({
@@ -55,10 +57,15 @@ const Physics = ({
           <Game></Game>
         </GameState>
       </Grid>
-      <Grid style={{ height: "100vh" }} md={6} item>
+      <Grid md={6} item>
         <FighterGameState>
           <FighterGame></FighterGame>
         </FighterGameState>
+      </Grid>
+      <Grid md={6} item>
+        <PuzzleGameState>
+          <PuzzleGame></PuzzleGame>
+        </PuzzleGameState>
       </Grid>
     </Grid>
   );

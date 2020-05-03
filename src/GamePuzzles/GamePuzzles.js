@@ -103,8 +103,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
           }}
           item
         >
-          <h1>Fight !</h1>
-          <h3>Use W,S,D,A keys to move and F to shoot projectiles</h3>
+          <h1>Solve !</h1>
+          <h3>Answer physics questions</h3>
         </Grid>
       </Grid>
       <Grid container justify="center" direction="row">
