@@ -179,49 +179,15 @@ export const Game = ({
         justify="center"
         container
       >
-        <Grid item>
-          <h1>Knowledge Board !</h1>
-        </Grid>
-        <Grid container justify="center">
-          {currentPlayer === 0 && (
-            <Grid item>
-              <h1>
-                Player <b>1</b> -
-              </h1>
-            </Grid>
-          )}
-          {currentPlayer === 1 && (
-            <Grid item>
-              <h1>
-                Player <b>2</b> -
-              </h1>
-            </Grid>
-          )}
-          {phase === 0 && (
-            <Grid item>
-              <h1>Move</h1>
-            </Grid>
-          )}
-          {phase === 1 && (
-            <Grid item>
-              <h1 style={{ color: "#E97B33" }}>Attack</h1>
-            </Grid>
-          )}
-          {phase === 2 && (
-            <Grid item>
-              <h1 style={{ color: "#8DC434" }}>Rienforce</h1>
-            </Grid>
-          )}
-          <div style={{ marginBottom: "3em" }}></div>
-          {/* <Grid item>
-            <Grid container justify="center">
-              <Button className="game_button" variant="outlined">
-                <h1 onClick={() => endTurn()} className="game">
-                  End Turn!
-                </h1>
-              </Button>
-            </Grid>
-          </Grid> */}
+        <Grid
+          style={{
+            marginBottom: "5em",
+            padding: "3em",
+          }}
+          item
+        >
+          <h1>Plan !</h1>
+          <h3>Select tiles to move characters</h3>
         </Grid>
       </Grid>
       <Grid container justify="center" direction="row">
