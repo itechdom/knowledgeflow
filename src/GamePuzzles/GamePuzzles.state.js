@@ -47,9 +47,7 @@ export const GameState = ({ children, knowledge, health }) => {
     }
   };
   const getRandomCharacter = () => {
-    const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
-    const randomCharacter = options[getRandomInt(0, options.length - 1)];
-    return `${assetLocation}game/Tiles/alien${randomCharacter}.png`;
+    return `${assetLocation}game/Tiles/treeBlue_low.png`;
   };
   const getTile = () => {
     const suffix = "";
@@ -96,12 +94,7 @@ export const GameState = ({ children, knowledge, health }) => {
       }
       grid[ci][cj + (count - 1)] = {
         ...fromTile,
-        messages: [
-          {
-            type: "projectile",
-            color: getRandomInt(0, 1) === 0 ? "green" : "blue",
-          },
-        ],
+        messages: [],
       };
       setGrid([...grid]);
       count++;
@@ -153,9 +146,10 @@ export const GameState = ({ children, knowledge, health }) => {
     //lay down all the tiles
     for (let i = 0; i < 3; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 10; j++) {
+      for (let j = 0; j < 3; j++) {
         grid[i][j] = {
           tile: getTile(),
+          count: 0,
           selected: true,
         };
       }
@@ -164,13 +158,13 @@ export const GameState = ({ children, knowledge, health }) => {
     //ADDING RANDOM CHRACTERS
     grid.map((g, i) => {
       g.map((gr, j) => {
-        if ((i === 0 && j === 0) || (i === 2 && j === 9)) {
+        if (i === 0 && j === 0) {
           grid[i][j] = {
             name: `x90`,
             tile: getTile(),
             player: j === 0 ? 0 : 1,
             characters: [getRandomCharacter()],
-            count: 90,
+            count: 0,
             moved: false,
             type: "character",
             selected: true,

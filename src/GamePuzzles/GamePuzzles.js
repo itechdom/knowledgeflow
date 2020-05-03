@@ -52,6 +52,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
+        paddingBottom: "2em",
         backgroundColor: "#8BE1EB",
       }}
     >
@@ -98,13 +99,12 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
       >
         <Grid
           style={{
-            marginBottom: "5em",
-            padding: "3em",
+            padding: "2em",
           }}
           item
         >
           <h1>Solve !</h1>
-          <h3>Answer physics questions</h3>
+          <h3>Answer basic math questions</h3>
         </Grid>
       </Grid>
       <Grid container justify="center" direction="row">
@@ -115,8 +115,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
               key={`${i}-container`}
               style={{
                 position: "relative",
-                bottom: `${30 * (i + 1)}px`,
-                left: (i + 1) % 2 === 0 ? "33px" : "0px",
+                bottom: `${i + 1}px`,
               }}
               justify="center"
             >
@@ -183,26 +182,24 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                           src={env}
                         />
                       ))}
-                    {gr.type === "character" && (
-                      <span
-                        data-id={`${i}-${j}-count`}
-                        id={`${i}-${j}-count`}
-                        key={`${i}-${j}-count`}
-                        style={{
-                          padding: "2px",
-                          color: "white",
-                          textShadow: "black 0px 1px 1px",
-                          fontSize: 18,
-                          position: "absolute",
-                          left: "48px",
-                          bottom: "84px",
-                          display: "inline-block",
-                          zIndex: 400,
-                        }}
-                      >
-                        {gr.count}
-                      </span>
-                    )}
+                    <span
+                      data-id={`${i}-${j}-count`}
+                      id={`${i}-${j}-count`}
+                      key={`${i}-${j}-count`}
+                      style={{
+                        padding: "2px",
+                        color: "white",
+                        textShadow: "black 0px 1px 1px",
+                        fontSize: 18,
+                        position: "absolute",
+                        left: "24px",
+                        bottom: "48px",
+                        display: "inline-block",
+                        zIndex: 400,
+                      }}
+                    >
+                      {gr.count}
+                    </span>
                     <img
                       data-id={`${i}-${j}-title`}
                       id={`${i}-${j}-tile`}
