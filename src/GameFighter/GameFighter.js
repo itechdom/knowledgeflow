@@ -37,10 +37,6 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
     // animate(() => {
     //   console.log("ANIMATE");
     // });
-    console.log("each group of players can move only once");
-    console.log(
-      "when a new phase is on, display a dialog that automatically disappears explaining what the phase is"
-    );
   }, [phase]);
   return (
     <Grid
@@ -137,11 +133,17 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                       height: "85px",
                       position: "relative",
                     }}
+                    data-id={`${i}-${j}-grid-item`}
+                    id={`${i}-${j}-grid-item`}
+                    key={`${i}-${j}-grid-item`}
                     item
                   >
                     {gr.messages &&
                       gr.messages.map((msg, index) => (
                         <svg
+                          data-id={`${i}-${j}-${index}-projectile`}
+                          id={`${i}-${j}-${index}-projectile`}
+                          key={`${i}-${j}-${index}-projectile`}
                           className="move-right"
                           style={{
                             position: "absolute",
@@ -172,11 +174,12 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
                           className={"game_character"}
                           style={{
                             position: "absolute",
-                            left: "0px",
+                            left: `${gr.x}px`,
+                            top: `${gr.y}px`,
                             bottom: `${24}px`,
                             display: "inline",
-                            height: gr.type === "background" ? "auto" : "87px",
-                            zIndex: gr.type === "background" ? 150 : 300,
+                            height: "87px",
+                            zIndex: 300,
                             visibility:
                               !gr.display && gr.selected ? "" : "hidden",
                           }}

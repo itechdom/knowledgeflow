@@ -42,7 +42,7 @@ export const GameState = ({ children, knowledge, health }) => {
         moveCharacter("right");
         break;
       case "f":
-        send();
+        // send();
         break;
     }
   };

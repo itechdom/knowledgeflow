@@ -16,6 +16,7 @@ export const GameState = ({ children, knowledge, health }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();
   const [otherPlayer, setOtherPlayer] = React.useState();
+  const [positions, setPositions] = React.useState({});
   const [weaponLock, setWeaponLock] = React.useState();
   let timeout;
   const onKeyPress = (key) => {
@@ -30,16 +31,16 @@ export const GameState = ({ children, knowledge, health }) => {
     // }
     switch (key) {
       case "w":
-        moveCharacter("up");
+        moveCharacterPosition("up");
         break;
       case "s":
-        moveCharacter("down");
+        moveCharacterPosition("down");
         break;
       case "a":
-        moveCharacter("left");
+        moveCharacterPosition("left");
         break;
       case "d":
-        moveCharacter("right");
+        moveCharacterPosition("right");
         break;
       case "f":
         send();
@@ -108,6 +109,46 @@ export const GameState = ({ children, knowledge, health }) => {
     }, 200);
   };
 
+  const detectCollision = (rect1, rect2) => {
+    const isInHoriztonalBounds =
+      rect1.x < rect2.x + rect2.width && rect1.x + rect1.width > rect2.x;
+    const isInVerticalBounds =
+      rect1.y < rect2.y + rect2.height && rect1.y + rect1.height > rect2.y;
+    const isOverlapping = isInHoriztonalBounds && isInVerticalBounds;
+    return isOverlapping;
+  };
+
+  const moveCharacterPosition = (direction) => {
+    let playerTile = grid[currentPlayer.i][currentPlayer.j];
+    let x, y;
+    let speed = 10;
+    if (direction === "up") {
+      x = playerTile.x;
+      y = playerTile.y - 1 * speed;
+    } else if (direction === "down") {
+      x = playerTile.x;
+      y = playerTile.y + 1 * speed;
+    } else if (direction === "left") {
+      x = playerTile.x - 1 * speed;
+      y = playerTile.y;
+    } else if (direction === "right") {
+      x = playerTile.x + 1 * speed;
+      y = playerTile.y;
+    }
+    let currentPlayerRect = document
+      .getElementById(`${0}-${0}-character`)
+      .getBoundingClientRect();
+    console.log(positions[currentPlayerRect.top]);
+    //get intersecting tile
+    grid[currentPlayer.i][currentPlayer.j] = {
+      ...playerTile,
+      x,
+      y,
+      selected: true,
+    };
+    return setGrid([...grid]);
+  };
+
   const moveCharacter = (direction) => {
     let playerTile = grid[currentPlayer.i][currentPlayer.j];
     let toTile, i, j;
@@ -149,6 +190,24 @@ export const GameState = ({ children, knowledge, health }) => {
   //this is just a fun test, using conway's game of life
   const simulate = () => {};
 
+  const storePositions = () => {
+    //store positoins of a tile
+    let pos = {};
+    grid.map((g, i) => {
+      g.map((gr, j) => {
+        let tilePosition = document
+          .getElementById(`${i}-${j}-tile`)
+          .getBoundingClientRect();
+        let tile = grid[i][j];
+        pos[tilePosition.top] = {
+          ...pos[tilePosition.top],
+          [tilePosition.left]: { ...tile, ...tilePosition },
+        };
+      });
+    });
+    setPositions({ ...pos });
+  };
+
   const initGrid = () => {
     //lay down all the tiles
     for (let i = 0; i < 3; i++) {
@@ -171,6 +230,8 @@ export const GameState = ({ children, knowledge, health }) => {
             player: j === 0 ? 0 : 1,
             characters: [getRandomCharacter()],
             count: 90,
+            x: 0,
+            y: 0,
             moved: false,
             type: "character",
             selected: true,
@@ -191,6 +252,10 @@ export const GameState = ({ children, knowledge, health }) => {
   };
   React.useEffect(() => {
     initGrid();
+    setTimeout(() => {
+      console.log(document.getElementById(`${0}-${0}-character`));
+      storePositions();
+    }, 1000);
   }, []);
   //knowledgeflow.markab.io
   const childrenWithProps = React.Children.map(children, (child) => {
