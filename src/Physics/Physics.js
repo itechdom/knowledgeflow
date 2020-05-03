@@ -52,21 +52,21 @@ const Physics = ({
         height: "100vh",
       }}
     >
-      {/* <Grid md={6} item>
+      <Grid md={6} item>
         <GameState>
           <Game></Game>
         </GameState>
-      </Grid> */}
+      </Grid>
       <Grid md={6} item>
         <FighterGameState>
           <FighterGame></FighterGame>
         </FighterGameState>
       </Grid>
-      {/* <Grid md={6} item>
+      <Grid md={6} item>
         <PuzzleGameState>
           <PuzzleGame></PuzzleGame>
         </PuzzleGameState>
-      </Grid> */}
+      </Grid>
     </Grid>
   );
 };
