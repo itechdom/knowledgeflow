@@ -1,5 +1,6 @@
 import React from "react";
 import { getRandomInt } from "../GameBoard/utils";
+import Matter from "matter-js";
 const assetLocation =
   "http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/";
 const tiles = [
@@ -20,15 +21,6 @@ export const GameState = ({ children, knowledge, health }) => {
   const [weaponLock, setWeaponLock] = React.useState();
   let timeout;
   const onKeyPress = (key) => {
-    // if (key === "space") {
-    //   if (weaponLock) {
-    //     return;
-    //   }
-    //   timeout = setTimeout(() => {
-    //     setWeaponLock(false);
-    //   }, 1000);
-    //   setWeaponLock(true);
-    // }
     switch (key) {
       case "w":
         moveCharacterPosition("up");
@@ -121,7 +113,7 @@ export const GameState = ({ children, knowledge, health }) => {
   const moveCharacterPosition = (direction) => {
     let playerTile = grid[currentPlayer.i][currentPlayer.j];
     let x, y;
-    let speed = 10;
+    let speed = 1;
     if (direction === "up") {
       x = playerTile.x;
       y = playerTile.y - 1 * speed;
@@ -135,77 +127,14 @@ export const GameState = ({ children, knowledge, health }) => {
       x = playerTile.x + 1 * speed;
       y = playerTile.y;
     }
-    let currentPlayerRect = document
-      .getElementById(`${0}-${0}-character`)
-      .getBoundingClientRect();
-    console.log(positions[currentPlayerRect.top]);
-    //get intersecting tile
     grid[currentPlayer.i][currentPlayer.j] = {
       ...playerTile,
       x,
       y,
+      direction,
       selected: true,
     };
     return setGrid([...grid]);
-  };
-
-  const moveCharacter = (direction) => {
-    let playerTile = grid[currentPlayer.i][currentPlayer.j];
-    let toTile, i, j;
-    if (direction === "up") {
-      i = currentPlayer.i - 1;
-      j = currentPlayer.j;
-    } else if (direction === "down") {
-      i = currentPlayer.i + 1;
-      j = currentPlayer.j;
-    } else if (direction === "left") {
-      i = currentPlayer.i;
-      j = currentPlayer.j - 1;
-    } else if (direction === "right") {
-      i = currentPlayer.i;
-      j = currentPlayer.j + 1;
-    }
-    if (grid[i] && grid[i][j]) {
-      toTile = grid[i][j];
-    } else {
-      return;
-    }
-    grid[currentPlayer.i][currentPlayer.j] = {
-      ...toTile,
-      tile: playerTile.tile,
-      player: playerTile.player,
-      selected: true,
-    };
-    grid[i][j] = {
-      ...playerTile,
-      tile: toTile.tile,
-      type: "character",
-      characters: playerTile.characters,
-      player: playerTile.player,
-      selected: true,
-    };
-    setCurrentPlayer({ ...grid[i][j], i, j });
-  };
-
-  //this is just a fun test, using conway's game of life
-  const simulate = () => {};
-
-  const storePositions = () => {
-    //store positoins of a tile
-    let pos = {};
-    grid.map((g, i) => {
-      g.map((gr, j) => {
-        let tilePosition = document
-          .getElementById(`${i}-${j}-tile`)
-          .getBoundingClientRect();
-        let tile = grid[i][j];
-        pos[tilePosition.top] = {
-          ...pos[tilePosition.top],
-          [tilePosition.left]: { ...tile, ...tilePosition },
-        };
-      });
-    });
-    setPositions({ ...pos });
   };
 
   const initGrid = () => {
@@ -252,10 +181,6 @@ export const GameState = ({ children, knowledge, health }) => {
   };
   React.useEffect(() => {
     initGrid();
-    setTimeout(() => {
-      console.log(document.getElementById(`${0}-${0}-character`));
-      storePositions();
-    }, 1000);
   }, []);
   //knowledgeflow.markab.io
   const childrenWithProps = React.Children.map(children, (child) => {

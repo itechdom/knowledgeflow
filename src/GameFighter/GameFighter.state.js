@@ -192,20 +192,20 @@ export const GameState = ({ children, knowledge, health }) => {
 
   const storePositions = () => {
     //store positoins of a tile
-    let pos = {};
-    grid.map((g, i) => {
-      g.map((gr, j) => {
-        let tilePosition = document
-          .getElementById(`${i}-${j}-tile`)
-          .getBoundingClientRect();
-        let tile = grid[i][j];
-        pos[tilePosition.top] = {
-          ...pos[tilePosition.top],
-          [tilePosition.left]: { ...tile, ...tilePosition },
-        };
-      });
-    });
-    setPositions({ ...pos });
+    // let pos = {};
+    // grid.map((g, i) => {
+    //   g.map((gr, j) => {
+    //     let tilePosition = document
+    //       .getElementById(`${i}-${j}-tile`)
+    //       .getBoundingClientRect();
+    //     let tile = grid[i][j];
+    //     pos[tilePosition.top] = {
+    //       ...pos[tilePosition.top],
+    //       [tilePosition.left]: { ...tile, ...tilePosition },
+    //     };
+    //   });
+    // });
+    // setPositions({ ...pos });
   };
 
   const initGrid = () => {

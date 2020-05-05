@@ -116,10 +116,6 @@ export const Game = ({
     // animate(() => {
     //   console.log("ANIMATE");
     // });
-    console.log("each group of players can move only once");
-    console.log(
-      "when a new phase is on, display a dialog that automatically disappears explaining what the phase is"
-    );
   }, [phase]);
   return (
     <Grid

@@ -48,6 +48,9 @@ const initMatter = () => {
     element: document.getElementById("canvas-container"),
     canvas,
     engine: engine,
+    options: {
+      wireframes: false, // disable Wireframe
+    },
   });
 
   // add all of the bodies to the world
@@ -58,18 +61,24 @@ const initMatter = () => {
 
   // run the renderer
   Render.run(render);
-  return { Engine, World, Render };
+
+  return { world: engine.world, engine };
 };
 export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
   const [paused, setPaused] = React.useState(false);
   const [matterProps, setMatterProps] = React.useState();
+  const [position, setPosition] = React.useState();
   React.useEffect(() => {
-    // animate(() => {
-    //   console.log("ANIMATE");
-    // });
-    const { Engine, World, Render } = initMatter();
-    setMatterProps({ Engine, World, Render });
+    const { engine, world } = initMatter();
+    setMatterProps({ engine, world });
   }, []);
+  React.useEffect(() => {
+    if (!grid[0] || !grid[0][0]) {
+      return;
+    }
+    const { x, y, direction } = grid[0][0];
+    setPosition({ x, y, direction });
+  }, [grid]);
   return (
     <Grid
       className="game"
@@ -89,7 +98,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
       <canvas id="my-canvas"></canvas>
-      <Pendulum {...matterProps} />
+      <Pendulum grid={grid} animate={animate} {...position} {...matterProps} />
     </Grid>
   );
 };
