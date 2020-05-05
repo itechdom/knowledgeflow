@@ -68,7 +68,7 @@ export const Game = ({
   currentPlayer,
   unSelectAll,
 }) => {
-  const [paused, setPaused] = React.useState(true);
+  const [paused, setPaused] = React.useState(false);
   const [numberDialog, setNumberDialog] = React.useState();
   const [currentNumber, setCurrentNumber] = React.useState(0);
   const [currentLimit, setCurrentLimit] = React.useState(90);

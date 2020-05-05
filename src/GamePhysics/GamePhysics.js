@@ -14,6 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Matter from "matter-js";
+import Pendulum from "./Simulations/Pendulum";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -33,45 +34,46 @@ const animate = (onDraw) => {
   }
 };
 const initMatter = () => {
+  const canvas = document.getElementById("my-canvas");
   // module aliases
-  var Engine = Matter.Engine,
+  const Engine = Matter.Engine,
     Render = Matter.Render,
-    World = Matter.World,
-    Bodies = Matter.Bodies;
+    World = Matter.World;
 
   // create an engine
-  var engine = Engine.create();
+  const engine = Engine.create();
 
   // create a renderer
-  var render = Render.create({
-    element: document.body,
+  const render = Render.create({
+    element: document.getElementById("canvas-container"),
+    canvas,
     engine: engine,
   });
 
-  // create two boxes and a ground
-  var boxA = Bodies.rectangle(400, 200, 80, 80);
-  var boxB = Bodies.rectangle(450, 50, 80, 80);
-  var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
-
   // add all of the bodies to the world
-  World.add(engine.world, [boxA, boxB, ground]);
+  World.add(engine.world, []);
 
   // run the engine
   Engine.run(engine);
 
   // run the renderer
   Render.run(render);
+  return { Engine, World, Render };
 };
 export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
   const [paused, setPaused] = React.useState(false);
+  const [matterProps, setMatterProps] = React.useState();
   React.useEffect(() => {
     // animate(() => {
     //   console.log("ANIMATE");
     // });
-  }, [phase]);
+    const { Engine, World, Render } = initMatter();
+    setMatterProps({ Engine, World, Render });
+  }, []);
   return (
     <Grid
       className="game"
+      id="canvas-container"
       container
       style={{
         width: "100%",
@@ -86,6 +88,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
+      <canvas id="my-canvas"></canvas>
+      <Pendulum {...matterProps} />
     </Grid>
   );
 };

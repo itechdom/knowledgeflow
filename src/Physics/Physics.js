@@ -9,6 +9,8 @@ import { Game as FighterGame } from "../GameFighter/GameFighter";
 import { GameState as FighterGameState } from "../GameFighter/GameFighter.state";
 import { Game as PuzzleGame } from "../GamePuzzles/GamePuzzles";
 import { GameState as PuzzleGameState } from "../GamePuzzles/GamePuzzles.state";
+import { Game as PhysicsGame } from "../GamePhysics/GamePhysics";
+import { GameState as PhysicsGameState } from "../GamePhysics/GamePhysics.state";
 import { Grid } from "@material-ui/core";
 
 const Physics = ({
@@ -66,6 +68,11 @@ const Physics = ({
         <PuzzleGameState>
           <PuzzleGame></PuzzleGame>
         </PuzzleGameState>
+      </Grid>
+      <Grid md={6} item>
+        <PhysicsGameState>
+          <PhysicsGame></PhysicsGame>
+        </PhysicsGameState>
       </Grid>
     </Grid>
   );
