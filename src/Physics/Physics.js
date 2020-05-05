@@ -54,7 +54,7 @@ const Physics = ({
         height: "100vh",
       }}
     >
-      <Grid md={6} item>
+      <Grid md={12} item>
         <GameState>
           <Game></Game>
         </GameState>

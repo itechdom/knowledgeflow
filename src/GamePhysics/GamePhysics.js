@@ -69,30 +69,30 @@ const initMatter = () => {
     Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
     Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
     Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
+    Bodies.circle(100, 100, 46, {
+      density: 0.0005,
+      frictionAir: 0.06,
+      restitution: 0.3,
+      friction: 0.01,
+      render: {
+        sprite: {
+          texture: "./assets/game/Tiles/alienBeige.png",
+        },
+      },
+    }),
   ]);
 
-  var stack = Composites.stack(20, 20, 10, 4, 0, 0, function (x, y) {
-    if (Common.random() > 0.35) {
-      return Bodies.rectangle(x, y, 64, 64, {
-        render: {
-          sprite: {
-            texture: "./assets/game/Tiles/tileDirt_full.png",
-          },
+  var stack = Composites.stack(40, 40, 10, 4, 0, 0, function (x, y) {
+    let body = Bodies.rectangle(x, y + 150, 50, 50, {
+      isStatic: true,
+      render: {
+        sprite: {
+          texture: "./assets/game/Tiles/tileDirt_full.png",
         },
-      });
-    } else {
-      return Bodies.circle(x, y, 46, {
-        density: 0.0005,
-        frictionAir: 0.06,
-        restitution: 0.3,
-        friction: 0.01,
-        render: {
-          sprite: {
-            texture: "./assets/game/Tiles/alienBeige.png",
-          },
-        },
-      });
-    }
+      },
+    });
+    Matter.Body.rotate(body, 90);
+    return body;
   });
 
   World.add(world, stack);
@@ -161,6 +161,33 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         backgroundColor: "#8BE1EB",
       }}
     >
+      <Grid
+        style={{
+          padding: "2px",
+          color: "white",
+          textShadow: "black 0px 1px 1px",
+          zIndex: 400,
+          textAlign: "center",
+        }}
+        direction="column"
+        justify="center"
+        container
+      >
+        <Grid
+          style={{
+            marginBottom: "5em",
+            padding: "3em",
+          }}
+          item
+        >
+          <h1>Physics</h1>
+          <h3>
+            Drag and Drop different objects in the scene using your mouse.
+            Discover concepts like Gravity, Newton laws of motion and many other
+            phyiscs concepts!
+          </h3>
+        </Grid>
+      </Grid>
       <KeyboardEventHandler
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
