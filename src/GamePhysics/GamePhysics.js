@@ -166,7 +166,13 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
       <canvas id="my-canvas"></canvas>
-      <Pendulum grid={grid} animate={animate} {...position} {...matterProps} />
+      <Pendulum
+        onInit={() => {}}
+        grid={grid}
+        animate={animate}
+        {...position}
+        {...matterProps}
+      />
       <img
         style={{ display: "none" }}
         id="tile-1"
