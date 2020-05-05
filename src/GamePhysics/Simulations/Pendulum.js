@@ -1,41 +1,27 @@
 import Matter from "matter-js";
 import React from "react";
-const loadImage = (url, onSuccess, onError) => {
-  const img = new Image();
-  img.onload = () => {
-    onSuccess(img.src);
-  };
-  img.onerror = onError();
-  img.src = url;
-};
-const loadTiles = (grid, world) => {
-  loadImage(
-    grid[0][0].tile,
-    (url) => {
-      Matter.World.add(world, [
-        ...world.bodies,
-        Matter.Bodies.rectangle(0, 0, 55, 50, {
-          isStatic: true,
-          sprite: {
-            texture: url,
-            xScale: 2,
-            yScale: 2,
-          },
-        }),
-      ]);
-    },
-    (err) => console.error(err)
-  );
-};
-const Pendulum = ({ engine, world, x, y, direction, grid }) => {
+
+const Pendulum = ({ engine, world, x, y, direction, grid, ctx }) => {
   React.useEffect(() => {
     if (world) {
-      loadTiles(grid, world);
-      Matter.World.add(world, [Matter.Bodies.circle(150, 150, 10)]);
+      // const canvas = document.getElementById("my-canvas");
+      // const ctx = canvas.getContext("2d");
+      // const image = document.getElementById("tile-1");
+      // image.addEventListener("load", (e) => {
+      //   ctx.drawImage(image, 100, 100);
+      //   Matter.World.add(world, [
+      //     Matter.Bodies.rectangle(0, 0, 200, 200, {
+      //       isStatic: true,
+      //       sprite: {
+      //         texture: "./assets/game/Tiles/tileDirt_full.png",
+      //       },
+      //     }),
+      //   ]);
+      // });
+      // Matter.World.add(world, [Matter.Bodies.circle(150, 150, 10)]);
     }
   }, [world]);
   React.useEffect(() => {
-    console.log("WORLD", world);
     if (world && engine) {
       if (direction === "right") {
         world.bodies[0].position.x += 2;
