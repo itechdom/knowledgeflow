@@ -37,12 +37,13 @@ const initMatter = () => {
 
   // create renderer
   var render = Render.create({
-    element: document.body,
+    element: document.getElementById("canvas-container"),
+    canvas: document.getElementById("my-canvas"),
     engine: engine,
     options: {
       width: 800,
       height: 600,
-      background: "#0f0f13",
+      background: "#8BE1EB",
       showAngleIndicator: false,
       wireframes: false,
     },
@@ -74,7 +75,6 @@ const initMatter = () => {
     if (Common.random() > 0.35) {
       return Bodies.rectangle(x, y, 64, 64, {
         render: {
-          strokeStyle: "#ffffff",
           sprite: {
             texture: "./assets/game/Tiles/tileDirt_full.png",
           },
