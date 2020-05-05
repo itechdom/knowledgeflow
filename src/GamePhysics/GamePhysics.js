@@ -87,7 +87,7 @@ const initMatter = () => {
       isStatic: true,
       render: {
         sprite: {
-          texture: "./assets/game/Tiles/tileDirt_full.png",
+          texture: "./assets/game/Tiles/tileGrass.png",
         },
       },
     });
