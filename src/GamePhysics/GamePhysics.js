@@ -25,11 +25,12 @@ const initMatter = () => {
     Render = Matter.Render,
     Runner = Matter.Runner,
     Composites = Matter.Composites,
-    Common = Matter.Common,
     MouseConstraint = Matter.MouseConstraint,
     Mouse = Matter.Mouse,
     World = Matter.World,
     Bodies = Matter.Bodies;
+
+  Matter.use("matter-attractors");
 
   // create engine
   var engine = Engine.create(),
