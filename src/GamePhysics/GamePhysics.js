@@ -44,8 +44,8 @@ const initMatter = () => {
       width: 800,
       height: 600,
       background: "#8BE1EB",
-      showAngleIndicator: false,
-      wireframes: false,
+      showAngleIndicator: true,
+      wireframes: true,
     },
   });
 
@@ -59,31 +59,28 @@ const initMatter = () => {
   var offset = 10,
     options = {
       isStatic: true,
+      render: {
+        // fillStyle: "#8BE1EB",
+      },
     };
 
   world.bodies = [];
 
-  // these static walls will not be rendered in this sprites example, see options
-  World.add(world, [
-    Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
-    Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
-    Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
-    Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
-    Bodies.circle(100, 100, 46, {
-      density: 0.0005,
-      frictionAir: 0.06,
-      restitution: 0.3,
-      friction: 0.01,
+  let s1 = Composites.stack(10, 0, 40, 1, 30, 10, function (x, y) {
+    let body = Bodies.rectangle(x, y + 150, 60, 60, {
+      isStatic: true,
+      isSensor: true,
       render: {
         sprite: {
-          texture: "./assets/game/Tiles/alienBeige.png",
+          texture: "./assets/game/Tiles/tileGrass.png",
         },
       },
-    }),
-  ]);
-
-  var stack = Composites.stack(40, 40, 10, 4, 0, 0, function (x, y) {
-    let body = Bodies.rectangle(x, y + 150, 50, 50, {
+    });
+    // Matter.Body.rotate(body, Math.PI);
+    return body;
+  });
+  let s2 = Composites.stack(10, 60, 40, 6, 30, 10, function (x, y) {
+    let body = Bodies.rectangle(x, y + 150, 60, 60, {
       isStatic: true,
       render: {
         sprite: {
@@ -91,11 +88,16 @@ const initMatter = () => {
         },
       },
     });
-    Matter.Body.rotate(body, 90);
+    Matter.Body.rotate(body, Math.PI / 2);
     return body;
   });
 
-  World.add(world, stack);
+  World.add(world, [
+    Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
+    Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
+    Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
+    Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
+  ]);
 
   // add mouse control
   var mouse = Mouse.create(render.canvas),

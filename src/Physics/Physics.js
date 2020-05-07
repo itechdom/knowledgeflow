@@ -1,7 +1,7 @@
 import React from "react";
 import { styles } from "./Physics.styles.js";
 import theme from "Theme";
-import Simulation from "./Simulation/Simulation";
+// import Simulation from "./Simulation/Simulation";
 import { withStyles, Button } from "@material-ui/core";
 import { Game } from "../GameBoard/GameBoard";
 import { GameState } from "../GameBoard/GameBoard.state";
