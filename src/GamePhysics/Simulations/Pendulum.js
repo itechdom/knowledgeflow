@@ -7,19 +7,18 @@ const Pendulum = ({ engine, x, y, direction }) => {
       return;
     }
     const { Composite, Bodies, Constraint, World } = Matter;
-    var newtonsCradle = Composite.create({ label: "Newtons Cradle" });
-    var separation = 1.9,
-      circle = Bodies.circle(100, 400, 50, {
-        inertia: Infinity,
-        restitution: 1,
-        friction: 0,
-        frictionAir: 0.0001,
-        slop: 1,
-      }),
-      constraint = Constraint.create({
-        pointA: { x: 300, y: 100 },
-        bodyB: circle,
-      });
+    let newtonsCradle = Composite.create({ label: "Newtons Cradle" });
+    let circle = Bodies.circle(100, 400, 50, {
+      inertia: Infinity,
+      restitution: 1,
+      friction: 0,
+      frictionAir: 0.0001,
+      slop: 1,
+    });
+    let constraint = Constraint.create({
+      pointA: { x: 300, y: 100 },
+      bodyB: circle,
+    });
     Composite.addBody(newtonsCradle, circle);
     Composite.addConstraint(newtonsCradle, constraint);
     World.add(engine.world, [newtonsCradle]);

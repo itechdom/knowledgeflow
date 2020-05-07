@@ -38,6 +38,7 @@
     "google-map-react": "^1.1.5",
     "history": "4.9.0",
     "immutable": "^3.8.2",
+    "matter-attractors": "^0.1.6",
     "matter-js": "^0.14.2",
     "mst-middlewares": "^3.16.0",
     "physijs-webpack": "^0.1.4",
