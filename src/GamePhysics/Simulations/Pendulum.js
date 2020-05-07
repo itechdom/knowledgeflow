@@ -20,7 +20,6 @@ const Pendulum = ({ engine, x, y, direction }) => {
         pointA: { x: 300, y: 100 },
         bodyB: circle,
       });
-
     Composite.addBody(newtonsCradle, circle);
     Composite.addConstraint(newtonsCradle, constraint);
     World.add(engine.world, [newtonsCradle]);
