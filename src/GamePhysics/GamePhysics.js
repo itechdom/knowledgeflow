@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@material-ui/core";
 import Matter from "matter-js";
 import Pendulum from "./Simulations/Pendulum";
+import Gravitation from "./Simulations/Gravitation";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -20,7 +21,7 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const initMatter = () => {
+const initMatter = (canvasId) => {
   var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
@@ -30,8 +31,6 @@ const initMatter = () => {
     World = Matter.World,
     Bodies = Matter.Bodies;
 
-  Matter.use("matter-attractors");
-
   // create engine
   var engine = Engine.create(),
     world = engine.world;
@@ -39,7 +38,7 @@ const initMatter = () => {
   // create renderer
   var render = Render.create({
     element: document.getElementById("canvas-container"),
-    canvas: document.getElementById("my-canvas"),
+    canvas: document.getElementById(canvasId),
     engine: engine,
     options: {
       width: 800,
@@ -137,12 +136,7 @@ const initMatter = () => {
 };
 export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
   const [paused, setPaused] = React.useState(false);
-  const [matterProps, setMatterProps] = React.useState();
   const [position, setPosition] = React.useState();
-  React.useEffect(() => {
-    const { engine, world, ctx } = initMatter();
-    setMatterProps({ engine, world, ctx });
-  }, []);
   React.useEffect(() => {
     if (!grid[0] || !grid[0][0]) {
       return;
@@ -195,11 +189,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
-      <Pendulum
-        grid={grid}
-        {...position}
-        {...matterProps}
-      />
+      <Pendulum initMatter={initMatter} grid={grid} {...position} />
+      <Gravitation initMatter={initMatter} grid={grid} {...position} />
     </Grid>
   );
 };
