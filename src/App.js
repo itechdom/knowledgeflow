@@ -1121,7 +1121,7 @@ class App extends React.Component {
                           props.knowledge_queryResult &&
                           props.knowledge_queryResult.data &&
                           props.knowledge_queryResult.data[0];
-                        if (!knowledge) {
+                        if (!knowledge || props.knowledge_loading) {
                           return <Loading></Loading>;
                         }
                         return (

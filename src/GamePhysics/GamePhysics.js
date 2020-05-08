@@ -195,20 +195,10 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
-      <canvas id="my-canvas"></canvas>
       <Pendulum
-        onInit={() => {}}
         grid={grid}
-        animate={animate}
         {...position}
         {...matterProps}
-      />
-      <img
-        style={{ display: "none" }}
-        id="tile-1"
-        src={grid && grid[0] && grid[0][0].tile}
-        width="300"
-        height="300"
       />
     </Grid>
   );

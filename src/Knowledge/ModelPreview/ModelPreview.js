@@ -15,6 +15,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import Autocomplete from "../../orbital-templates/Material/_shared/Autocomplete/Autocomplete";
+import Loading from "../../orbital-templates/Material/_shared/Loading/Loading";
 import Markdown from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.MarkdownInput";
 import ListTree from "./ListTree.js";
 import DeleteIcon from "@material-ui/icons/Delete";
@@ -113,6 +114,7 @@ const ModelPreview = (props) => {
     setLevel,
     knowledge_updateModel,
     knowledge_deleteModel,
+    knowledge_loading,
     viewOption,
     setViewOption,
     graphData,
@@ -134,6 +136,10 @@ const ModelPreview = (props) => {
     wikipedia,
     ...rest
   } = props;
+  console.log(knowledge_loading);
+  if (knowledge_loading) {
+    return <Loading></Loading>;
+  }
   React.useEffect(() => {
     setTimeout(() => {
       const container = document.getElementById("scrollContainer");
@@ -203,7 +209,6 @@ const ModelPreview = (props) => {
     lg: viewOption === 0 ? 5 : 1,
     xl: viewOption === 0 ? 5 : 1,
   };
-  console.log("rerendering");
   return (
     <>
       <header>

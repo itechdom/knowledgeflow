@@ -1,5 +1,5 @@
-import Matter from "matter-js";
 import React from "react";
+import Matter from "matter-js";
 
 const Pendulum = ({ engine, x, y, direction }) => {
   React.useEffect(() => {
