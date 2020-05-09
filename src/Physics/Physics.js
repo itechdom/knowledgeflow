@@ -3,6 +3,7 @@ import { styles } from "./Physics.styles.js";
 import theme from "Theme";
 // import Simulation from "./Simulation/Simulation";
 import { withStyles, Button } from "@material-ui/core";
+import ThreeSim from "./Simulation/Simulation";
 import { Game } from "../GameBoard/GameBoard";
 import { GameState } from "../GameBoard/GameBoard.state";
 import { Game as FighterGame } from "../GameFighter/GameFighter";
@@ -74,6 +75,9 @@ const Physics = ({
           <PhysicsGame></PhysicsGame>
         </PhysicsGameState>
       </Grid>
+      {/* <Grid md={12} item>
+        <ThreeSim></ThreeSim>
+      </Grid> */}
     </Grid>
   );
 };

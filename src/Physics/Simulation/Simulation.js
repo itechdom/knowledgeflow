@@ -164,7 +164,7 @@ export default class Simulation extends Component {
     this.scene.add(this.camera);
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.domElement.id = "my-canvas";
+    this.renderer.domElement.id = "three-canvas";
     // var controls = new THREE.DragControls(this.compass, camera, renderer.domElement);
     // // add event listener to highlight dragged objects
     // controls.addEventListener("dragstart", function (event) {
@@ -313,7 +313,7 @@ export default class Simulation extends Component {
   }
 
   componentWillUnmount() {
-    this.canvas = document.getElementById("my-canvas");
+    this.canvas = document.getElementById("three-canvas");
     this.canvas.remove();
     window.cancelAnimationFrame(this.requestId);
   }
@@ -328,6 +328,7 @@ export default class Simulation extends Component {
         <div style={{ position: "fixed", top: "5em" }}>
           {JSON.stringify(this.state.log)}
         </div>
+        <canvas id="three-canvas"></canvas>
       </div>
     );
   }
