@@ -54,6 +54,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         marginRight: "auto",
         paddingBottom: "2em",
         backgroundColor: "#8BE1EB",
+        height: "100%",
+        overflow: "hidden" /* Hide scrollbars */,
       }}
     >
       <Dialog className="game" open={paused} onClose={() => setPaused(false)}>

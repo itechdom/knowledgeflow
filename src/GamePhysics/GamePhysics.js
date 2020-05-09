@@ -21,7 +21,7 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const initMatter = (canvasId) => {
+const initMatter = (canvasId, containerId) => {
   var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
@@ -37,12 +37,10 @@ const initMatter = (canvasId) => {
 
   // create renderer
   var render = Render.create({
-    element: document.getElementById("canvas-container"),
+    element: document.getElementById(containerId),
     canvas: document.getElementById(canvasId),
     engine: engine,
     options: {
-      width: 800,
-      height: 600,
       background: "#8BE1EB",
       showAngleIndicator: true,
       wireframes: true,
@@ -156,6 +154,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         marginLeft: "auto",
         marginRight: "auto",
         backgroundColor: "#8BE1EB",
+        overflow: "hidden" /* Hide scrollbars */,
       }}
     >
       <Grid
@@ -189,8 +188,10 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
-      <Pendulum initMatter={initMatter} grid={grid} {...position} />
-      <Gravitation initMatter={initMatter} grid={grid} {...position} />
+      <Grid container justify="center">
+        <Pendulum initMatter={initMatter} grid={grid} {...position} />
+        <Gravitation initMatter={initMatter} grid={grid} {...position} />
+      </Grid>
     </Grid>
   );
 };

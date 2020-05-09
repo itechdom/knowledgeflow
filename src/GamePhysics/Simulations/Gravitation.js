@@ -1,11 +1,13 @@
 import React from "react";
 import Matter from "matter-js";
+import { Grid } from "@material-ui/core";
+
 function gravity(bodyA, bodyB) {
   // use Newton's law of gravitation
   var bToA = Matter.Vector.sub(bodyB.position, bodyA.position),
     distanceSq = Matter.Vector.magnitudeSquared(bToA) || 0.0001,
     normal = Matter.Vector.normalise(bToA),
-    magnitude = -1 * ((bodyA.mass * bodyB.mass) / distanceSq),
+    magnitude = -20 * ((bodyA.mass * bodyB.mass) / distanceSq),
     force = Matter.Vector.mult(normal, magnitude);
 
   // to apply forces to both bodies
@@ -15,13 +17,14 @@ function gravity(bodyA, bodyB) {
 const Pendulum = ({ engine, x, y, direction, initMatter, onUpdate }) => {
   const [myEngine, setMyEngine] = React.useState();
   React.useEffect(() => {
-    const { engine } = initMatter("gravitation");
+    const { engine } = initMatter("gravitation", "gravitation-container");
     engine.world.gravity.y = 0;
     let circle1 = Matter.Bodies.circle(100, 100, 100);
     let circle2 = Matter.Bodies.circle(200, 200, 50);
     let circle3 = Matter.Bodies.circle(200, 200, 25);
     let circle4 = Matter.Bodies.circle(200, 200, 12.5);
-    let circles = [circle1, circle2, circle3, circle4];
+    let circle5 = Matter.Bodies.circle(500, 500, 12.5);
+    let circles = [circle1, circle2, circle3, circle4, circle5];
     let [bodyA, ...rest] = circles;
     Matter.Events.on(engine, "beforeUpdate", () => {
       rest.map((r) => gravity(bodyA, r));
@@ -29,6 +32,10 @@ const Pendulum = ({ engine, x, y, direction, initMatter, onUpdate }) => {
     Matter.World.add(engine.world, circles);
     setMyEngine(engine);
   }, []);
-  return <canvas id="gravitation"></canvas>;
+  return (
+    <Grid id="gravitation-container" item>
+      <canvas id="gravitation"></canvas>
+    </Grid>
+  );
 };
 export default Pendulum;

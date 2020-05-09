@@ -69,7 +69,7 @@ const Physics = ({
           <PuzzleGame></PuzzleGame>
         </PuzzleGameState>
       </Grid>
-      <Grid md={6} item>
+      <Grid md={12} item>
         <PhysicsGameState>
           <PhysicsGame></PhysicsGame>
         </PhysicsGameState>

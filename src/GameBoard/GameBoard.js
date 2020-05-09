@@ -128,6 +128,7 @@ export const Game = ({
         marginLeft: "auto",
         marginRight: "auto",
         backgroundColor: "#8BE1EB",
+        overflow: "hidden" /* Hide scrollbars */,
       }}
       onClick={(ev) => {
         handleClick(ev);
