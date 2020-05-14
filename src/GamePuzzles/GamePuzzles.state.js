@@ -12,7 +12,7 @@ const tiles = [
   // "Stone",
   // "Water",
 ];
-export const GameState = ({ children, knowledge, health }) => {
+export const GameState = ({ children, knowledge, health, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();
   const [otherPlayer, setOtherPlayer] = React.useState();
@@ -47,13 +47,45 @@ export const GameState = ({ children, knowledge, health }) => {
     }
   };
   const getRandomCharacter = () => {
-    return `${assetLocation}game/Tiles/treeBlue_low.png`;
+    const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
+    const randomCharacter = options[getRandomInt(0, options.length - 1)];
+    return `${assetLocation}game/Tiles/alien${randomCharacter}.png`;
   };
-  const getTile = () => {
+  const getTile = (i, j, rowCount, columnCount) => {
+    const rowMidway = rowCount / 2;
+    const position = i + 1;
+    if (position > rowMidway) {
+      //copy the grid in tile one
+      const howFar = position - rowMidway;
+      const mirror = rowMidway - howFar - 1;
+      if (mirror < 0) {
+        return `${assetLocation}game/Tiles/tileWater_full.png`;
+      }
+      console.log(position, rowMidway);
+      console.log(mirror);
+      return grid[mirror][j].tile;
+    }
+    const midwayMin =
+      i % 2 === 0 ? columnCount / 2 - i : columnCount / 2 - i - 1;
+    const midwayMax =
+      i % 2 === 0 ? columnCount / 2 + i : columnCount / 2 + i + 1;
+    if (j < midwayMin || j > midwayMax) {
+      return `${assetLocation}game/Tiles/tileWater_full.png`;
+    }
     const suffix = "";
     return `${assetLocation}game/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
     }${suffix}.png`;
+    //water tiles
+  };
+
+  const getRandomTree = (season) => {
+    const trees = ["Blue", "Green"];
+    const suffix = "_low";
+    const randomTree = `${assetLocation}game/Tiles/tree${
+      trees[getRandomInt(0, trees.length - 1)]
+    }${suffix}.png`;
+    return randomTree;
   };
 
   const send = () => {
@@ -106,10 +138,10 @@ export const GameState = ({ children, knowledge, health }) => {
     let toTile, i, j;
     if (direction === "up") {
       i = currentPlayer.i - 1;
-      j = currentPlayer.j;
+      j = i % 2 === 0 ? currentPlayer.j : currentPlayer.j - 1;
     } else if (direction === "down") {
       i = currentPlayer.i + 1;
-      j = currentPlayer.j;
+      j = i % 2 === 0 ? currentPlayer.j + 1 : currentPlayer.j;
     } else if (direction === "left") {
       i = currentPlayer.i;
       j = currentPlayer.j - 1;
@@ -144,11 +176,12 @@ export const GameState = ({ children, knowledge, health }) => {
 
   const initGrid = () => {
     //lay down all the tiles
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 10; i++) {
       if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 3; j++) {
+      for (let j = 0; j < 28; j++) {
         grid[i][j] = {
-          tile: getTile(),
+          tile: getTile(i, j, 10, 28),
+          // environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           count: 0,
           selected: true,
         };
@@ -161,7 +194,7 @@ export const GameState = ({ children, knowledge, health }) => {
         if (i === 0 && j === 0) {
           grid[i][j] = {
             name: `x90`,
-            tile: getTile(),
+            tile: `${assetLocation}game/Tiles/tileWater_full.png`,
             player: j === 0 ? 0 : 1,
             characters: [getRandomCharacter()],
             count: 0,
@@ -192,6 +225,7 @@ export const GameState = ({ children, knowledge, health }) => {
       grid: grid,
       updateGrid: updateGrid,
       onKeyPress,
+      ...rest,
     });
   });
   return <>{childrenWithProps}</>;

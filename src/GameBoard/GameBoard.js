@@ -14,6 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
+import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
 const animate = (onDraw) => {
@@ -65,6 +66,7 @@ export const Game = ({
   grid,
   selectGrid,
   phase,
+  onKeyPress,
   currentPlayer,
   unSelectAll,
 }) => {
@@ -187,7 +189,7 @@ export const Game = ({
           <h3>Select tiles to move characters</h3>
         </Grid>
       </Grid>
-      <Grid container justify="center" direction="row">
+      <Grid container direction="row">
         {grid.length > 0 ? (
           grid.map((g, i) => (
             <Grid
@@ -195,10 +197,9 @@ export const Game = ({
               key={`${i}-container`}
               style={{
                 position: "relative",
-                bottom: `${i + 1}px`,
+                bottom: `${15 * (i + 1)}px`,
                 left: (i + 1) % 2 === 0 ? "33px" : "0px",
               }}
-              justify="center"
             >
               {g.map((gr, j) => (
                 <Tooltip
@@ -213,7 +214,7 @@ export const Game = ({
                 >
                   <Grid
                     style={{
-                      width: "70px",
+                      width: "65px",
                       height: "85px",
                       position: "relative",
                     }}
@@ -232,7 +233,7 @@ export const Game = ({
                             display: "inline",
                             height: gr.type === "background" ? "auto" : "87px",
                             zIndex: gr.type === "background" ? 150 : 300,
-                            opacity: gr.selected ? 1 : 0.25,
+                            // opacity: gr.selected ? 1 : 0.25,
                           }}
                           src={env}
                         />
@@ -282,13 +283,13 @@ export const Game = ({
                       id={`${i}-${j}-tile`}
                       key={`${i}-${j}-tile`}
                       style={{
-                        padding: "3px 5px",
+                        padding: "3px 0px",
                         position: "absolute",
                         left: 0,
                         boxShadow: gr.guide ? "green 0px 0px 15px" : "",
                         borderRadius: gr.guide ? "50px" : "",
                         zIndex: gr.type === "background" ? 100 : 200,
-                        opacity: gr.selected ? 1 : 0.25,
+                        // opacity: gr.selected ? 1 : 0.25,
                       }}
                       src={gr.tile}
                       onClick={(ev) => {}}
@@ -326,6 +327,10 @@ export const Game = ({
           <></>
         )}
       </Grid>
+      <KeyboardEventHandler
+        handleKeys={["all"]}
+        onKeyEvent={(key, e) => onKeyPress(key)}
+      />
     </Grid>
   );
 };

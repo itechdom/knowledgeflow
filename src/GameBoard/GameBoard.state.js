@@ -12,7 +12,7 @@ const tiles = [
   // "Stone",
   // "Water",
 ];
-export const GameState = ({ children, knowledge }) => {
+export const GameState = ({ children, knowledge, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
   const [phase, setPhase] = React.useState(0);
   const [currentTile, setCurrentTile] = React.useState([0, 0]);
@@ -90,47 +90,6 @@ export const GameState = ({ children, knowledge }) => {
     return tile;
   };
 
-  //this is just a fun test, using conway's game of life
-  const simulate = () => {};
-
-  const initGrid = () => {
-    for (let i = 0; i < 9; i++) {
-      if (!grid[i]) grid[i] = [];
-      for (let j = 0; j < 10; j++) {
-        grid[i][j] = {
-          // name: `${i}x${j}`,
-          tile: getTile(),
-          environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
-          selected: false,
-          count: 0,
-        };
-      }
-    }
-
-    //ADDING RANDOM CHRACTERS
-    grid.map((g, i) => {
-      g.map((gr, j) => {
-        if (
-          (i === 0 && j === 0) ||
-          (i === grid.length - 1 && j === g.length - 1)
-        ) {
-          grid[i][j] = {
-            name: `x90`,
-            tile: getTile(),
-            player: i === 0 ? 0 : 1,
-            environment: [],
-            characters: [getRandomCharacter()],
-            moved: false,
-            count: 90,
-            type: "character",
-            selected: true,
-          };
-        }
-      });
-    });
-    setCurrentTile({ ...grid[0][0], i: 0, j: 0 });
-    return setGrid(grid);
-  };
   const selectSurrondingGrids = (i, j) => {
     //show nearby tiles that the user can move to
     let adj1 = grid[i] && grid[i][j] && grid[i][j];
@@ -252,7 +211,6 @@ export const GameState = ({ children, knowledge }) => {
     return setPhase(nextPhase);
   };
   React.useEffect(() => {
-    initGrid();
     setPhase(0);
     setCurrentPlayer(0);
   }, []);
@@ -260,13 +218,13 @@ export const GameState = ({ children, knowledge }) => {
   //knowledgeflow.markab.io
   const childrenWithProps = React.Children.map(children, (child) => {
     return React.cloneElement(child, {
-      grid: grid,
       updateGrid: updateGrid,
       unSelectAll: unSelectAll,
       selectGrid: selectGrid,
       RollADice: RollADice,
       phase,
       currentPlayer,
+      ...rest,
     });
   });
   return <>{childrenWithProps}</>;

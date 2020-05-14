@@ -57,10 +57,12 @@ const Physics = ({
     >
       <Grid md={12} item>
         <GameState>
-          <Game></Game>
+          <PuzzleGameState>
+            <Game></Game>
+          </PuzzleGameState>
         </GameState>
       </Grid>
-      <Grid md={6} item>
+      {/* <Grid md={6} item>
         <FighterGameState>
           <FighterGame></FighterGame>
         </FighterGameState>
@@ -69,7 +71,7 @@ const Physics = ({
         <PuzzleGameState>
           <PuzzleGame></PuzzleGame>
         </PuzzleGameState>
-      </Grid>
+      </Grid> */}
       <Grid md={12} item>
         <PhysicsGameState>
           <PhysicsGame></PhysicsGame>
