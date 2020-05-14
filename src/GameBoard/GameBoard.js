@@ -124,13 +124,9 @@ export const Game = ({
       className="game"
       container
       style={{
-        width: "100%",
-        minWidth: "800px",
         overflow: "scroll",
-        marginLeft: "auto",
-        marginRight: "auto",
         backgroundColor: "#8BE1EB",
-        overflow: "hidden" /* Hide scrollbars */,
+        gridTemplateColumns: "repeat(auto-fill, 186px)",
       }}
       onClick={(ev) => {
         handleClick(ev);
@@ -231,7 +227,7 @@ export const Game = ({
                             left: `48px`,
                             bottom: "33px",
                             display: "inline",
-                            height: gr.type === "background" ? "auto" : "87px",
+                            // height: gr.type === "background" ? "auto" : "87px",
                             zIndex: gr.type === "background" ? 150 : 300,
                             // opacity: gr.selected ? 1 : 0.25,
                           }}

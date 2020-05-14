@@ -52,8 +52,10 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     return `${assetLocation}game/Tiles/alien${randomCharacter}.png`;
   };
   const getTile = (i, j, rowCount, columnCount) => {
-    const rowMidway = rowCount / 2;
+    //from each row we have to pick i number of tiles to place in the center
     const position = i + 1;
+    const isEven = position % 2 === 0;
+    const rowMidway = rowCount / 2;
     if (position > rowMidway) {
       //copy the grid in tile one
       const howFar = position - rowMidway;
@@ -61,16 +63,19 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
       if (mirror < 0) {
         return `${assetLocation}game/Tiles/tileWater_full.png`;
       }
-      console.log(position, rowMidway);
-      console.log(mirror);
       return grid[mirror][j].tile;
     }
-    const midwayMin =
-      i % 2 === 0 ? columnCount / 2 - i : columnCount / 2 - i - 1;
-    const midwayMax =
-      i % 2 === 0 ? columnCount / 2 + i : columnCount / 2 + i + 1;
-    if (j < midwayMin || j > midwayMax) {
-      return `${assetLocation}game/Tiles/tileWater_full.png`;
+    const midwayMin = columnCount / 2 - position / 2 + 1;
+    const midwayMax = columnCount / 2 + position / 2 - 1;
+    //bigger than count/2 and less than count/2 -1
+    if (isEven) {
+      if (j < midwayMin - 1 || j > midwayMax) {
+        return `${assetLocation}game/Tiles/tileWater_full.png`;
+      }
+    } else {
+      if (j <= midwayMin - 1 || j >= midwayMax + 1) {
+        return `${assetLocation}game/Tiles/tileWater_full.png`;
+      }
     }
     const suffix = "";
     return `${assetLocation}game/Tiles/tile${
@@ -80,6 +85,7 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
   };
 
   const getRandomTree = (season) => {
+    return `${assetLocation}game/Tiles/flowerRed.png`;
     const trees = ["Blue", "Green"];
     const suffix = "_low";
     const randomTree = `${assetLocation}game/Tiles/tree${
@@ -176,18 +182,17 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
 
   const initGrid = () => {
     //lay down all the tiles
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 28; j++) {
         grid[i][j] = {
-          tile: getTile(i, j, 10, 28),
-          // environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
+          tile: getTile(i, j, 20, 28),
+          environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           count: 0,
           selected: true,
         };
       }
     }
-
     //ADDING RANDOM CHRACTERS
     grid.map((g, i) => {
       g.map((gr, j) => {
