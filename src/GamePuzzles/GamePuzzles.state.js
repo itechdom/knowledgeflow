@@ -44,7 +44,7 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
   const getTile = (i, j, rowCount, columnCount) => {
     //from each row we have to pick i number of tiles to place in the center
     const position = i + 1;
-    const bound = 10;
+    const bound = 4;
     const isEven = position % 2 === 0;
     const rowMidway = rowCount / 2;
     if (position > rowMidway) {
@@ -178,11 +178,11 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
 
   const initGrid = (knowledge) => {
     //lay down all the tiles
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 10; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 28; j++) {
         grid[i][j] = {
-          tile: getTile(i, j, 20, 28),
+          tile: getTile(i, j, 10, 28),
           knowledge: getRandomKnowledge(knowledge),
           environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           count: 0,
