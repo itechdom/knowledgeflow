@@ -186,155 +186,187 @@ export const Game = ({
           <h3>Select tiles to move characters</h3>
         </Grid>
       </Grid>
-      <Grid
-        container
-        justify="center"
-        style={{
-          width: "1920px",
-        }}
-        direction="row"
-      >
-        {grid.length > 0 ? (
-          grid.map((g, i) => (
-            <Grid
-              container
-              key={`${i}-container`}
-              style={{
-                position: "relative",
-                bottom: `${15 * (i + 1)}px`,
-                left: (i + 1) % 2 === 0 ? "33px" : "0px",
-              }}
-            >
-              {g.map((gr, j) => (
+      <Grid container>
+        <Grid item xs="3">
+          <Paper
+            style={{
+              padding: "2px",
+              overflow:"scroll",
+              color: "white",
+              minWidth: "400px",
+              textShadow: "black 0px 1px 1px",
+              zIndex: 400,
+              textAlign: "center",
+              backgroundColor: "#A681B5",
+              backgroundImage:
+                "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px)",
+            }}
+          >
+            <h1>Paused!</h1>
+            <Divider></Divider>
+            <h2>Resume</h2>
+            <Divider></Divider>
+            <h2>Help</h2>
+            <Divider></Divider>
+            <h2>Restart</h2>
+            <Divider></Divider>
+            <h2>Quit</h2>
+          </Paper>
+        </Grid>
+        <Grid item xs="9">
+          <Grid
+            container
+            justify="center"
+            style={{
+              width: "1920px",
+            }}
+            direction="row"
+          >
+            {grid.length > 0 ? (
+              grid.map((g, i) => (
                 <Grid
+                  container
+                  key={`${i}-container`}
                   style={{
-                    width: "65px",
-                    height: "85px",
                     position: "relative",
+                    bottom: `${15 * (i + 1)}px`,
+                    left: (i + 1) % 2 === 0 ? "33px" : "0px",
                   }}
-                  item
                 >
-                  {gr.environment &&
-                    gr.environment.map((env, index) => (
+                  {g.map((gr, j) => (
+                    <Grid
+                      style={{
+                        width: "65px",
+                        height: "85px",
+                        position: "relative",
+                      }}
+                      item
+                    >
+                      {gr.environment &&
+                        gr.environment.map((env, index) => (
+                          <img
+                            data-id={`${i}-${j}-character`}
+                            id={`${i}-${j}-environment`}
+                            key={`${i}-${j}-environment`}
+                            style={{
+                              position: "absolute",
+                              left: `48px`,
+                              bottom: "33px",
+                              display: "inline",
+                              // height: gr.type === "background" ? "auto" : "87px",
+                              zIndex: gr.type === "background" ? 150 : 300,
+                              // opacity: gr.selected ? 1 : 0.25,
+                            }}
+                            src={env}
+                          />
+                        ))}
+                      {gr.knowledge && (
+                        <Tooltip
+                          data-id={`${i}-${j}-character`}
+                          id={`${i}-${j}-environment`}
+                          key={`${i}-${j}-environment`}
+                          style={{
+                            position: "absolute",
+                            left: `48px`,
+                            bottom: "33px",
+                            display: "inline",
+                            zIndex: gr.type === "background" ? 150 : 300,
+                          }}
+                          title={gr.knowledge.title}
+                        ></Tooltip>
+                      )}
+                      {gr.characters &&
+                        gr.characters.map((env, index) => (
+                          <img
+                            data-id={`${i}-${j}-character`}
+                            id={`${i}-${j}-character`}
+                            key={`${i}-${j}-character`}
+                            className={"game_character"}
+                            style={{
+                              position: "absolute",
+                              left: "0px",
+                              bottom: `${24}px`,
+                              display: "inline",
+                              height:
+                                gr.type === "background" ? "auto" : "87px",
+                              zIndex: gr.type === "background" ? 150 : 300,
+                              visibility:
+                                !gr.display && gr.selected ? "" : "hidden",
+                            }}
+                            src={env}
+                          />
+                        ))}
+                      {gr.type === "character" && (
+                        <span
+                          data-id={`${i}-${j}-count`}
+                          id={`${i}-${j}-count`}
+                          key={`${i}-${j}-count`}
+                          style={{
+                            padding: "2px",
+                            color: "white",
+                            textShadow: "black 0px 1px 1px",
+                            fontSize: 18,
+                            position: "absolute",
+                            left: "48px",
+                            bottom: "84px",
+                            display: "inline-block",
+                            zIndex: 400,
+                          }}
+                        >
+                          {gr.count}
+                        </span>
+                      )}
                       <img
-                        data-id={`${i}-${j}-character`}
-                        id={`${i}-${j}-environment`}
-                        key={`${i}-${j}-environment`}
+                        data-id={`${i}-${j}-title`}
+                        id={`${i}-${j}-tile`}
+                        key={`${i}-${j}-tile`}
                         style={{
+                          padding: "3px 0px",
                           position: "absolute",
-                          left: `48px`,
-                          bottom: "33px",
-                          display: "inline",
-                          // height: gr.type === "background" ? "auto" : "87px",
-                          zIndex: gr.type === "background" ? 150 : 300,
+                          left: 0,
+                          boxShadow: gr.guide ? "green 0px 0px 15px" : "",
+                          borderRadius: gr.guide ? "50px" : "",
+                          zIndex: gr.type === "background" ? 100 : 200,
                           // opacity: gr.selected ? 1 : 0.25,
                         }}
-                        src={env}
+                        src={gr.tile}
+                        onClick={(ev) => {}}
                       />
-                    ))}
-                  {gr.knowledge && (
-                    <Tooltip
-                      data-id={`${i}-${j}-character`}
-                      id={`${i}-${j}-environment`}
-                      key={`${i}-${j}-environment`}
-                      style={{
-                        position: "absolute",
-                        left: `48px`,
-                        bottom: "33px",
-                        display: "inline",
-                        zIndex: gr.type === "background" ? 150 : 300,
-                      }}
-                      title={gr.knowledge.title}
-                    ></Tooltip>
-                  )}
-                  {gr.characters &&
-                    gr.characters.map((env, index) => (
-                      <img
-                        data-id={`${i}-${j}-character`}
-                        id={`${i}-${j}-character`}
-                        key={`${i}-${j}-character`}
-                        className={"game_character"}
-                        style={{
-                          position: "absolute",
-                          left: "0px",
-                          bottom: `${24}px`,
-                          display: "inline",
-                          height: gr.type === "background" ? "auto" : "87px",
-                          zIndex: gr.type === "background" ? 150 : 300,
-                          visibility:
-                            !gr.display && gr.selected ? "" : "hidden",
-                        }}
-                        src={env}
-                      />
-                    ))}
-                  {gr.type === "character" && (
-                    <span
-                      data-id={`${i}-${j}-count`}
-                      id={`${i}-${j}-count`}
-                      key={`${i}-${j}-count`}
-                      style={{
-                        padding: "2px",
-                        color: "white",
-                        textShadow: "black 0px 1px 1px",
-                        fontSize: 18,
-                        position: "absolute",
-                        left: "48px",
-                        bottom: "84px",
-                        display: "inline-block",
-                        zIndex: 400,
-                      }}
-                    >
-                      {gr.count}
-                    </span>
-                  )}
-                  <img
-                    data-id={`${i}-${j}-title`}
-                    id={`${i}-${j}-tile`}
-                    key={`${i}-${j}-tile`}
-                    style={{
-                      padding: "3px 0px",
-                      position: "absolute",
-                      left: 0,
-                      boxShadow: gr.guide ? "green 0px 0px 15px" : "",
-                      borderRadius: gr.guide ? "50px" : "",
-                      zIndex: gr.type === "background" ? 100 : 200,
-                      // opacity: gr.selected ? 1 : 0.25,
-                    }}
-                    src={gr.tile}
-                    onClick={(ev) => {}}
-                  />
-                  {gr.guide ? (
-                    <span
-                      data-id={`${i}-${j}-guide`}
-                      id={`${i}-${j}-guide`}
-                      key={`${i}-${j}-guide`}
-                      onClick={(ev) => {
-                        ev.stopPropagation();
-                        handleClick(ev);
-                      }}
-                      style={{
-                        position: "absolute",
-                        top: 24,
-                        left: 12,
-                        zIndex: 999,
-                        color: "white",
-                        textShadow: "black 0px 1px 1px",
-                        cursor: gr.guide ? "pointer" : "inherit",
-                      }}
-                    >
-                      here
-                    </span>
-                  ) : (
-                    <></>
-                  )}
+                      {gr.guide ? (
+                        <span
+                          data-id={`${i}-${j}-guide`}
+                          id={`${i}-${j}-guide`}
+                          key={`${i}-${j}-guide`}
+                          onClick={(ev) => {
+                            ev.stopPropagation();
+                            handleClick(ev);
+                          }}
+                          style={{
+                            position: "absolute",
+                            top: 24,
+                            left: 12,
+                            zIndex: 999,
+                            color: "white",
+                            textShadow: "black 0px 1px 1px",
+                            cursor: gr.guide ? "pointer" : "inherit",
+                          }}
+                        >
+                          here
+                        </span>
+                      ) : (
+                        <></>
+                      )}
+                    </Grid>
+                  ))}
                 </Grid>
-              ))}
-            </Grid>
-          ))
-        ) : (
-          <></>
-        )}
+              ))
+            ) : (
+              <></>
+            )}
+          </Grid>
+        </Grid>
       </Grid>
+
       <KeyboardEventHandler
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
