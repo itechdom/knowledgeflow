@@ -83,6 +83,15 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     }${suffix}.png`;
     return randomTree;
   };
+  const getRandomKnowledge = (knowledge) => {
+    const randomEntry = knowledge[getRandomInt(0, knowledge.length - 1)];
+    const keys = Object.keys(randomEntry);
+    const randomKey = keys[getRandomInt(0, keys.length - 1)];
+    // knowledge_fetchModel(knowledge.id).then((know) => {
+    //   console.log("response");
+    // });
+    return knowledge[randomKey];
+  };
 
   const send = () => {
     //send a projectile towards another tile
@@ -167,13 +176,14 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     setCurrentPlayer({ ...grid[i][j], i, j });
   };
 
-  const initGrid = () => {
+  const initGrid = (knowledge) => {
     //lay down all the tiles
     for (let i = 0; i < 20; i++) {
       if (!grid[i]) grid[i] = [];
       for (let j = 0; j < 28; j++) {
         grid[i][j] = {
           tile: getTile(i, j, 20, 28),
+          knowledge: getRandomKnowledge(knowledge),
           environment: getRandomInt(1, 2) === 2 ? [getRandomTree()] : [],
           count: 0,
           selected: true,
@@ -209,8 +219,10 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     );
   };
   React.useEffect(() => {
-    initGrid();
-  }, []);
+    if (knowledge.data) {
+      initGrid(knowledge.data);
+    }
+  }, [knowledge]);
   //knowledgeflow.markab.io
   const childrenWithProps = React.Children.map(children, (child) => {
     return React.cloneElement(child, {

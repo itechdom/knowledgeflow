@@ -119,6 +119,7 @@ export const Game = ({
     //   console.log("ANIMATE");
     // });
   }, [phase]);
+  console.log(grid);
   return (
     <Grid
       className="game"
@@ -198,124 +199,128 @@ export const Game = ({
               }}
             >
               {g.map((gr, j) => (
-                <Tooltip
-                  key={`${i}-${j}-tooltip`}
-                  title={
-                    gr.type === "character"
-                      ? j === 0
-                        ? "This is you!"
-                        : "Player2"
-                      : ""
-                  }
+                <Grid
+                  style={{
+                    width: "65px",
+                    height: "85px",
+                    position: "relative",
+                  }}
+                  item
                 >
-                  <Grid
-                    style={{
-                      width: "65px",
-                      height: "85px",
-                      position: "relative",
-                    }}
-                    item
-                  >
-                    {gr.environment &&
-                      gr.environment.map((env, index) => (
-                        <img
-                          data-id={`${i}-${j}-character`}
-                          id={`${i}-${j}-environment`}
-                          key={`${i}-${j}-environment`}
-                          style={{
-                            position: "absolute",
-                            left: `48px`,
-                            bottom: "33px",
-                            display: "inline",
-                            // height: gr.type === "background" ? "auto" : "87px",
-                            zIndex: gr.type === "background" ? 150 : 300,
-                            // opacity: gr.selected ? 1 : 0.25,
-                          }}
-                          src={env}
-                        />
-                      ))}
-                    {gr.characters &&
-                      gr.characters.map((env, index) => (
-                        <img
-                          data-id={`${i}-${j}-character`}
-                          id={`${i}-${j}-character`}
-                          key={`${i}-${j}-character`}
-                          className={"game_character"}
-                          style={{
-                            position: "absolute",
-                            left: "0px",
-                            bottom: `${24}px`,
-                            display: "inline",
-                            height: gr.type === "background" ? "auto" : "87px",
-                            zIndex: gr.type === "background" ? 150 : 300,
-                            visibility:
-                              !gr.display && gr.selected ? "" : "hidden",
-                          }}
-                          src={env}
-                        />
-                      ))}
-                    {gr.type === "character" && (
-                      <span
-                        data-id={`${i}-${j}-count`}
-                        id={`${i}-${j}-count`}
-                        key={`${i}-${j}-count`}
+                  {gr.environment &&
+                    gr.environment.map((env, index) => (
+                      <img
+                        data-id={`${i}-${j}-character`}
+                        id={`${i}-${j}-environment`}
+                        key={`${i}-${j}-environment`}
                         style={{
-                          padding: "2px",
-                          color: "white",
-                          textShadow: "black 0px 1px 1px",
-                          fontSize: 18,
                           position: "absolute",
-                          left: "48px",
-                          bottom: "84px",
-                          display: "inline-block",
-                          zIndex: 400,
+                          left: `48px`,
+                          bottom: "33px",
+                          display: "inline",
+                          // height: gr.type === "background" ? "auto" : "87px",
+                          zIndex: gr.type === "background" ? 150 : 300,
+                          // opacity: gr.selected ? 1 : 0.25,
                         }}
-                      >
-                        {gr.count}
-                      </span>
-                    )}
-                    <img
-                      data-id={`${i}-${j}-title`}
-                      id={`${i}-${j}-tile`}
-                      key={`${i}-${j}-tile`}
+                        src={env}
+                      />
+                    ))}
+                  {gr.knowledge && (
+                    <Tooltip
+                      data-id={`${i}-${j}-character`}
+                      id={`${i}-${j}-environment`}
+                      key={`${i}-${j}-environment`}
                       style={{
-                        padding: "3px 0px",
                         position: "absolute",
-                        left: 0,
-                        boxShadow: gr.guide ? "green 0px 0px 15px" : "",
-                        borderRadius: gr.guide ? "50px" : "",
-                        zIndex: gr.type === "background" ? 100 : 200,
-                        // opacity: gr.selected ? 1 : 0.25,
+                        left: `48px`,
+                        bottom: "33px",
+                        display: "inline",
+                        zIndex: gr.type === "background" ? 150 : 300,
                       }}
-                      src={gr.tile}
-                      onClick={(ev) => {}}
-                    />
-                    {gr.guide ? (
-                      <span
-                        data-id={`${i}-${j}-guide`}
-                        id={`${i}-${j}-guide`}
-                        key={`${i}-${j}-guide`}
-                        onClick={(ev) => {
-                          ev.stopPropagation();
-                          handleClick(ev);
-                        }}
+                      title={gr.knowledge.title}
+                    ></Tooltip>
+                  )}
+                  {gr.characters &&
+                    gr.characters.map((env, index) => (
+                      <img
+                        data-id={`${i}-${j}-character`}
+                        id={`${i}-${j}-character`}
+                        key={`${i}-${j}-character`}
+                        className={"game_character"}
                         style={{
                           position: "absolute",
-                          top: 24,
-                          left: 12,
-                          zIndex: 999,
-                          color: "white",
-                          textShadow: "black 0px 1px 1px",
-                          cursor: gr.guide ? "pointer" : "inherit",
+                          left: "0px",
+                          bottom: `${24}px`,
+                          display: "inline",
+                          height: gr.type === "background" ? "auto" : "87px",
+                          zIndex: gr.type === "background" ? 150 : 300,
+                          visibility:
+                            !gr.display && gr.selected ? "" : "hidden",
                         }}
-                      >
-                        here
-                      </span>
-                    ) : (
-                      <></>
-                    )}
-                  </Grid>
-                </Tooltip>
+                        src={env}
+                      />
+                    ))}
+                  {gr.type === "character" && (
+                    <span
+                      data-id={`${i}-${j}-count`}
+                      id={`${i}-${j}-count`}
+                      key={`${i}-${j}-count`}
+                      style={{
+                        padding: "2px",
+                        color: "white",
+                        textShadow: "black 0px 1px 1px",
+                        fontSize: 18,
+                        position: "absolute",
+                        left: "48px",
+                        bottom: "84px",
+                        display: "inline-block",
+                        zIndex: 400,
+                      }}
+                    >
+                      {gr.count}
+                    </span>
+                  )}
+                  <img
+                    data-id={`${i}-${j}-title`}
+                    id={`${i}-${j}-tile`}
+                    key={`${i}-${j}-tile`}
+                    style={{
+                      padding: "3px 0px",
+                      position: "absolute",
+                      left: 0,
+                      boxShadow: gr.guide ? "green 0px 0px 15px" : "",
+                      borderRadius: gr.guide ? "50px" : "",
+                      zIndex: gr.type === "background" ? 100 : 200,
+                      // opacity: gr.selected ? 1 : 0.25,
+                    }}
+                    src={gr.tile}
+                    onClick={(ev) => {}}
+                  />
+                  {gr.guide ? (
+                    <span
+                      data-id={`${i}-${j}-guide`}
+                      id={`${i}-${j}-guide`}
+                      key={`${i}-${j}-guide`}
+                      onClick={(ev) => {
+                        ev.stopPropagation();
+                        handleClick(ev);
+                      }}
+                      style={{
+                        position: "absolute",
+                        top: 24,
+                        left: 12,
+                        zIndex: 999,
+                        color: "white",
+                        textShadow: "black 0px 1px 1px",
+                        cursor: gr.guide ? "pointer" : "inherit",
+                      }}
+                    >
+                      here
+                    </span>
+                  ) : (
+                    <></>
+                  )}
+                </Grid>
               ))}
             </Grid>
           ))
