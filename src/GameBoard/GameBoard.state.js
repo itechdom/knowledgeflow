@@ -6,11 +6,8 @@ const tiles = [
   "Grass",
   "Lava",
   "Magic",
-  // "Dirt",
   "Sand",
   "Snow",
-  // "Stone",
-  // "Water",
 ];
 export const GameState = ({ children, knowledge, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
@@ -18,78 +15,6 @@ export const GameState = ({ children, knowledge, ...rest }) => {
   const [currentTile, setCurrentTile] = React.useState([0, 0]);
   const [currentPlayer, setCurrentPlayer] = React.useState(0);
   const [mode, setMode] = React.useState("free");
-  const getRandomCharacter = () => {
-    const options = ["Beige", "Blue", "Green", "Pink", "Yellow"];
-    const randomCharacter = options[getRandomInt(0, options.length - 1)];
-    return `${assetLocation}game/Tiles/alien${randomCharacter}.png`;
-  };
-  const getCurrentPlayer = () => {
-    let pos1, pos2;
-    let final = grid
-      .map((g, i) => {
-        let players = g.filter((gr, j) => {
-          if (gr.type === "character" && gr.player === currentPlayer) {
-            pos1 = i;
-            pos2 = j;
-            return true;
-          }
-          return false;
-        });
-        return players;
-      })
-      .filter((g) => g.length > 0);
-    return { ...final[0][0], i: pos1, j: pos2 };
-  };
-  const getATile = (tile) => {
-    let suffix = "_full";
-    if (tile === "Water") {
-      suffix = "_shadow";
-    }
-    return `${assetLocation}game/Tiles/tile${tile}${suffix}.png`;
-  };
-  const getTile = (tile, selected) => {
-    const suffix = "";
-    if (tile) {
-      if (selected) {
-        return `${tile.tile.replace(suffix, "")}`;
-      }
-      if (tile.tile.indexOf(suffix) === -1) {
-        return `${tile.tile.replace(".png", "")}${suffix}.png`;
-      }
-      return tile.tile;
-    }
-    return `${assetLocation}game/Tiles/tile${
-      tiles[getRandomInt(0, tiles.length - 1)]
-    }${suffix}.png`;
-  };
-  const getRandomTree = (season) => {
-    const trees = ["Blue", "Green"];
-    const suffix = "_low";
-    const randomTree = `${assetLocation}game/Tiles/tree${
-      trees[getRandomInt(0, trees.length - 1)]
-    }${suffix}.png`;
-    return randomTree;
-  };
-  const getRandomRock = (season) => {
-    const randomTree = `${assetLocation}game/Tiles/smallRockGrass.png`;
-    return randomTree;
-  };
-  const getBackgroundEnvironment = () => {
-    return getRandomInt(0, 1) < 1
-      ? `${assetLocation}game/Tiles/waveWater.png`
-      : ``;
-  };
-  const getBackgroundTile = () => {
-    const tile = {
-      name: `Water`,
-      tile: getATile("Water"),
-      selected: true,
-      type: "background",
-      environment: [getBackgroundEnvironment()],
-    };
-    return tile;
-  };
-
   const selectSurrondingGrids = (i, j) => {
     //show nearby tiles that the user can move to
     let adj1 = grid[i] && grid[i][j] && grid[i][j];

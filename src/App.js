@@ -1065,7 +1065,6 @@ class App extends React.Component {
                                     rootStore.notificationDomainStore
                                   }
                                   crudDomainStore={rootStore.crudDomainStore}
-                                  query={{ _id: "5d594dbd48686ce24c0d2ff8" }}
                                   render={(props) => {
                                     return (
                                       <Physics

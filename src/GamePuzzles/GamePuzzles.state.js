@@ -2,22 +2,12 @@ import React from "react";
 import { getRandomInt } from "../GameBoard/utils";
 const assetLocation =
   "http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/";
-const tiles = [
-  "Grass",
-  "Lava",
-  "Magic",
-  // "Dirt",
-  "Sand",
-  "Snow",
-  // "Stone",
-  // "Water",
-];
+const tiles = ["Grass", "Lava", "Magic", "Dirt", "Sand", "Snow", "Stone"];
 export const GameState = ({ children, knowledge, health, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();
   const [otherPlayer, setOtherPlayer] = React.useState();
   const [weaponLock, setWeaponLock] = React.useState();
-  let timeout;
   const onKeyPress = (key) => {
     // if (key === "space") {
     //   if (weaponLock) {
@@ -54,6 +44,7 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
   const getTile = (i, j, rowCount, columnCount) => {
     //from each row we have to pick i number of tiles to place in the center
     const position = i + 1;
+    const bound = 10;
     const isEven = position % 2 === 0;
     const rowMidway = rowCount / 2;
     if (position > rowMidway) {
@@ -69,11 +60,11 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     const midwayMax = columnCount / 2 + position / 2 - 1;
     //bigger than count/2 and less than count/2 -1
     if (isEven) {
-      if (j < midwayMin - 1 || j > midwayMax) {
+      if (j < midwayMin - bound || j > midwayMax + bound - 1) {
         return `${assetLocation}game/Tiles/tileWater_full.png`;
       }
     } else {
-      if (j <= midwayMin - 1 || j >= midwayMax + 1) {
+      if (j <= midwayMin - bound || j >= midwayMax + bound) {
         return `${assetLocation}game/Tiles/tileWater_full.png`;
       }
     }
@@ -81,7 +72,6 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     return `${assetLocation}game/Tiles/tile${
       tiles[getRandomInt(0, tiles.length - 1)]
     }${suffix}.png`;
-    //water tiles
   };
 
   const getRandomTree = (season) => {
@@ -176,9 +166,6 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     };
     setCurrentPlayer({ ...grid[i][j], i, j });
   };
-
-  //this is just a fun test, using conway's game of life
-  const simulate = () => {};
 
   const initGrid = () => {
     //lay down all the tiles

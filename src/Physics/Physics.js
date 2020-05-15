@@ -57,7 +57,7 @@ const Physics = ({
     >
       <Grid md={12} item>
         <GameState>
-          <PuzzleGameState>
+          <PuzzleGameState knowledge={knowledge}>
             <Game></Game>
           </PuzzleGameState>
         </GameState>
