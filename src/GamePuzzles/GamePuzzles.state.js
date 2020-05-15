@@ -44,7 +44,7 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
   const getTile = (i, j, rowCount, columnCount) => {
     //from each row we have to pick i number of tiles to place in the center
     const position = i + 1;
-    const bound = 4;
+    const bound = 2;
     const isEven = position % 2 === 0;
     const rowMidway = rowCount / 2;
     if (position > rowMidway) {
