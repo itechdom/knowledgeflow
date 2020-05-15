@@ -6,9 +6,6 @@ import { withStyles, Button } from "@material-ui/core";
 import ThreeSim from "./Simulation/Simulation";
 import { Game } from "../GameBoard/GameBoard";
 import { GameState } from "../GameBoard/GameBoard.state";
-import { Game as FighterGame } from "../GameFighter/GameFighter";
-import { GameState as FighterGameState } from "../GameFighter/GameFighter.state";
-import { Game as PuzzleGame } from "../GamePuzzles/GamePuzzles";
 import { GameState as PuzzleGameState } from "../GamePuzzles/GamePuzzles.state";
 import { Game as PhysicsGame } from "../GamePhysics/GamePhysics";
 import { GameState as PhysicsGameState } from "../GamePhysics/GamePhysics.state";
@@ -77,9 +74,9 @@ const Physics = ({
           <PhysicsGame></PhysicsGame>
         </PhysicsGameState>
       </Grid>
-      {/* <Grid md={12} item>
+      <Grid md={12} item>
         <ThreeSim></ThreeSim>
-      </Grid> */}
+      </Grid>
     </Grid>
   );
 };
