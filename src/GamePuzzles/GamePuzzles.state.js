@@ -3,6 +3,8 @@ import { getRandomInt } from "../GameBoard/utils";
 const assetLocation =
   "http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/";
 const tiles = ["Grass", "Lava", "Magic", "Dirt", "Sand", "Snow", "Stone"];
+const locations = ["hill", "bridge"];
+const objects = [];
 export const GameState = ({ children, knowledge, health, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();

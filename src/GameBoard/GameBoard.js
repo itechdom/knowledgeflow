@@ -125,13 +125,13 @@ export const Game = ({
       className="game"
       container
       style={{
-        overflow: "scroll",
+        overflow: "hidden",
         backgroundColor: "#8BE1EB",
-        gridTemplateColumns: "repeat(auto-fill, 186px)",
       }}
       onClick={(ev) => {
         handleClick(ev);
       }}
+      justify="center"
     >
       {numberDialog && renderNumberDialog()}
       <Dialog className="game" open={paused} onClose={() => setPaused(false)}>
@@ -186,7 +186,14 @@ export const Game = ({
           <h3>Select tiles to move characters</h3>
         </Grid>
       </Grid>
-      <Grid container direction="row">
+      <Grid
+        container
+        justify="center"
+        style={{
+          width: "1920px",
+        }}
+        direction="row"
+      >
         {grid.length > 0 ? (
           grid.map((g, i) => (
             <Grid
