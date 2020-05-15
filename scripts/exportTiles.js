@@ -1,11 +1,7 @@
 const fs = require("fs");
-fs.readdirSync("./assets/game/Tiles", (err, files) => {
-  files.forEach((file) => {
-    console.log(file);
-  });
-});
-fs.readdirSync("./assets/game/Roads", (err, files) => {
-  files.forEach((file) => {
-    console.log(file);
-  });
-});
+let files = fs.readdirSync("./assets/game/Tiles/");
+const tiles = `
+const tiles = [${files.map((f) => `"${f}"`)}]
+export default tiles;
+`;
+fs.writeFileSync("./src/GameBoard/assets.js", tiles);

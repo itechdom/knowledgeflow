@@ -14,6 +14,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
+import assets from "./assets";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -67,6 +68,7 @@ export const Game = ({
   selectGrid,
   phase,
   onKeyPress,
+  updateGrid,
   currentPlayer,
   unSelectAll,
 }) => {
@@ -74,6 +76,7 @@ export const Game = ({
   const [numberDialog, setNumberDialog] = React.useState();
   const [currentNumber, setCurrentNumber] = React.useState(0);
   const [currentLimit, setCurrentLimit] = React.useState(90);
+  const [copied, setCopied] = React.useState();
   const renderNumberDialog = () => {
     let [i, j] = numberDialog;
     let tile = grid[i][j];
@@ -107,19 +110,16 @@ export const Game = ({
       let arr = pos.split("-");
       let [i, j] = arr;
       let tile = grid[i][j];
+      if (copied) {
+        updateGrid(i, j, { ...tile, tile: copied });
+      }
       //display dialog to get the number of aliens moved
-      tile.guide
-        ? setNumberDialog(arr)
-        : selectGrid(parseInt(arr[0]), parseInt(arr[1]));
+      // tile.guide
+      // ? setNumberDialog(arr)
+      // : selectGrid(parseInt(arr[0]), parseInt(arr[1]));
       return;
     }
   };
-  React.useEffect(() => {
-    // animate(() => {
-    //   console.log("ANIMATE");
-    // });
-  }, [phase]);
-  console.log(grid);
   return (
     <Grid
       className="game"
@@ -187,32 +187,36 @@ export const Game = ({
         </Grid>
       </Grid>
       <Grid container>
-        <Grid item xs="3">
-          <Paper
-            style={{
-              padding: "2px",
-              overflow:"scroll",
-              color: "white",
-              minWidth: "400px",
-              textShadow: "black 0px 1px 1px",
-              zIndex: 400,
-              textAlign: "center",
-              backgroundColor: "#A681B5",
-              backgroundImage:
-                "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px)",
-            }}
-          >
-            <h1>Paused!</h1>
-            <Divider></Divider>
-            <h2>Resume</h2>
-            <Divider></Divider>
-            <h2>Help</h2>
-            <Divider></Divider>
-            <h2>Restart</h2>
-            <Divider></Divider>
-            <h2>Quit</h2>
-          </Paper>
-        </Grid>
+        <Paper
+          style={{
+            padding: "2px",
+            maxHeight: "400px",
+            overflow: "scroll",
+            color: "white",
+            padding: "10px",
+            margin: "3em",
+            textShadow: "black 0px 1px 1px",
+            zIndex: 400,
+            textAlign: "center",
+            backgroundColor: "#8BE1EB",
+            backgroundImage:
+              "repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.5) 35px, rgba(255,255,255,.5) 70px)",
+          }}
+        >
+          {assets.map((a) => (
+            <Grid
+              onClick={() => {
+                setCopied(`./assets/game/Tiles/${a}`);
+              }}
+              item
+              xs="3"
+            >
+              <Tooltip title={a}>
+                <img src={`./assets/game/Tiles/${a}`} />
+              </Tooltip>
+            </Grid>
+          ))}
+        </Paper>
         <Grid item xs="9">
           <Grid
             container

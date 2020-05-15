@@ -3,8 +3,6 @@ import { getRandomInt } from "../GameBoard/utils";
 const assetLocation =
   "http://knowledgeflow.markab.io.s3-website-us-east-1.amazonaws.com/";
 const tiles = ["Grass", "Lava", "Magic", "Dirt", "Sand", "Snow", "Stone"];
-const locations = ["hill", "bridge"];
-const objects = [];
 export const GameState = ({ children, knowledge, health, ...rest }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();
@@ -63,7 +61,9 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     //bigger than count/2 and less than count/2 -1
     if (isEven) {
       if (j < midwayMin - bound || j > midwayMax + bound - 1) {
-        return `${assetLocation}game/Tiles/tileWater_full.png`;
+        return i === rowCount - 1
+          ? `${assetLocation}game/Tiles/tileWater.png`
+          : `${assetLocation}game/Tiles/tileWater_full.png`;
       }
     } else {
       if (j <= midwayMin - bound || j >= midwayMax + bound) {
@@ -214,11 +214,8 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
     return setGrid(grid);
   };
   const updateGrid = (position1, position2, data) => {
-    setGrid(
-      grid.map((g, i) =>
-        i === position1 ? g.map((gr, j) => (j === position2 ? data : gr)) : g
-      )
-    );
+    grid[position1][position2] = data;
+    setGrid([...grid]);
   };
   React.useEffect(() => {
     if (knowledge.data) {
