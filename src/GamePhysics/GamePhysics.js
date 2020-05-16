@@ -3,6 +3,7 @@ import { Grid } from "@material-ui/core";
 import Matter from "matter-js";
 import Pendulum from "./Simulations/Pendulum";
 import Gravitation from "./Simulations/Gravitation";
+import Math from "./Simulations/Math";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -21,7 +22,7 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const initMatter = (canvasId, containerId) => {
+const initMatter = (canvasId, containerId, options) => {
   var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
@@ -44,6 +45,7 @@ const initMatter = (canvasId, containerId) => {
       background: "#8BE1EB",
       showAngleIndicator: true,
       wireframes: true,
+      ...options,
     },
   });
 
@@ -191,6 +193,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
       <Grid container justify="center">
         <Pendulum initMatter={initMatter} grid={grid} {...position} />
         <Gravitation initMatter={initMatter} grid={grid} {...position} />
+        <Math initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );
