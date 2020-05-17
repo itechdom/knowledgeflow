@@ -2,10 +2,10 @@ import React from "react";
 import Matter from "matter-js";
 import { Grid } from "@material-ui/core";
 import { getRandomInt } from "../../GameBoard/utils";
-const Primes = ({ engine, x, y, direction, initMatter, onUpdate }) => {
+const Primes = ({ initMatter }) => {
   const [myEngine, setMyEngine] = React.useState();
   const init = (options) => {
-    const { engine, mouse } = initMatter("math", "math-container", options);
+    const { engine, mouse } = initMatter("primes", "primes-container", options);
     console.log("Mouse", mouse);
     //restitution is the ratio of end velocity to beginning velocity
     let circle1 = Matter.Bodies.circle(100, 100, 100, {
@@ -72,9 +72,14 @@ const Primes = ({ engine, x, y, direction, initMatter, onUpdate }) => {
   }, []);
   return (
     <Grid item style={{ marginTop: "10px" }}>
-      <Grid alignItems="center" justify="center" container id="math-container">
+      <Grid
+        alignItems="center"
+        justify="center"
+        container
+        id="primes-container"
+      >
         <Grid xs={12} item>
-          <canvas id="math"></canvas>
+          <canvas id="primes"></canvas>
         </Grid>
       </Grid>
     </Grid>

@@ -4,6 +4,7 @@ import Matter from "matter-js";
 import Pendulum from "./Simulations/Pendulum";
 import Gravitation from "./Simulations/Gravitation";
 import Math from "./Simulations/Math";
+import Primes from "./Simulations/Primes";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -195,6 +196,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         <Pendulum initMatter={initMatter} grid={grid} {...position} />
         <Gravitation initMatter={initMatter} grid={grid} {...position} />
         <Math initMatter={initMatter} grid={grid} {...position} />
+        <Primes initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );

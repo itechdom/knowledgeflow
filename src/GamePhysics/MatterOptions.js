@@ -5,7 +5,7 @@ import TextFieldInput from "../orbital-templates/Material/_shared/Forms/Inputs/F
 const MatterOptions = ({ init, myEngine }) => {
   const [options, setOptions] = React.useState({
     showAngleIndicator: false,
-    wireframes: true,
+    wireframes: false,
     showDebug: false,
     showPositions: false,
     showBounds: false,
@@ -31,7 +31,7 @@ const MatterOptions = ({ init, myEngine }) => {
     }
   }, [properties]);
   return (
-    <Grid style={{ marginLeft: "auto", marignRight: "auto" }} xs={12} item>
+    <>
       <Grid justify="center" container>
         {Object.keys(options).map((op) => {
           return (
@@ -66,7 +66,7 @@ const MatterOptions = ({ init, myEngine }) => {
           );
         })}
       </Grid>
-    </Grid>
+    </>
   );
 };
 
