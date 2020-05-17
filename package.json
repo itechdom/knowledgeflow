@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf www/*",
-    "assets": "cp -a ./assets/* ./www",
+    "assets": "cp -a ./assets ./www",
     "start": "npm run prepare && cordova run android",
     "deploy": "npm run assets && ./node_modules/.bin/webpack --env.production && ./node_modules/.bin/serverless client deploy --no-confirm",
     "prepare": "npm run assets && npm run build && cordova prepare android && cordova prepare browser",

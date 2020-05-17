@@ -127,6 +127,7 @@ const initMatter = (canvasId, containerId, options) => {
     engine: engine,
     runner: runner,
     render: render,
+    mouse: mouse,
     canvas: render.canvas,
     stop: function () {
       Matter.Render.stop(render);
