@@ -193,9 +193,9 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
       <Grid container justify="center">
-        <Pendulum initMatter={initMatter} grid={grid} {...position} />
-        <Gravitation initMatter={initMatter} grid={grid} {...position} />
-        <Math initMatter={initMatter} grid={grid} {...position} />
+        {/* <Pendulum initMatter={initMatter} grid={grid} {...position} /> */}
+        {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
+        {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
         <Primes initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
