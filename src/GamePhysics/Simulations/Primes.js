@@ -18,7 +18,7 @@ function primeFactors(n) {
 }
 const Primes = ({ initMatter }) => {
   const [myEngine, setMyEngine] = React.useState();
-  let currentNumber = false ? 10 : getRandomInt(2000, 10000);
+  let currentNumber = true ? 100001000 : getRandomInt(1, 1000000);
   let iterations = 0;
   let factors = [];
   const spawnCircle = (myEngine, body, factors) => {
@@ -71,7 +71,7 @@ const Primes = ({ initMatter }) => {
     setMyEngine(engine);
   };
   React.useEffect(() => {
-    init({ wireframes: false, background: "#FFF" });
+    init({ wireframes: false, background: "#FFF", showAngleIndicator: false });
   }, []);
   return (
     <Grid item style={{ marginTop: "10px" }}>
