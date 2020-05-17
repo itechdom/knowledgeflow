@@ -186,7 +186,7 @@ export const Game = ({
           <h3>Select tiles to move characters</h3>
         </Grid>
       </Grid>
-      <Grid container>
+      <Grid style={{ marginTop: "10em" }} container>
         <Paper
           style={{
             padding: "2px",
@@ -233,7 +233,7 @@ export const Game = ({
                   key={`${i}-container`}
                   style={{
                     position: "relative",
-                    bottom: `${15 * (i + 1)}px`,
+                    bottom: `${70 * (i + 1)}px`,
                     left: (i + 1) % 2 === 0 ? "33px" : "0px",
                   }}
                 >
@@ -332,6 +332,8 @@ export const Game = ({
                           borderRadius: gr.guide ? "50px" : "",
                           zIndex: gr.type === "background" ? 100 : 200,
                           // opacity: gr.selected ? 1 : 0.25,
+                          width: "65px",
+                          height: "auto",
                         }}
                         src={gr.tile}
                         onClick={(ev) => {}}

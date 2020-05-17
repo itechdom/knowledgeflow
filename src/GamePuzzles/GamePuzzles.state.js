@@ -77,7 +77,7 @@ export const GameState = ({ children, knowledge, health, ...rest }) => {
   };
 
   const getRandomTree = (season) => {
-    return `${assetLocation}game/Tiles/flowerRed.png`;
+    return `${assetLocation}game/Tiles/treeShort.png`;
     const trees = ["Blue", "Green"];
     const suffix = "_low";
     const randomTree = `${assetLocation}game/Tiles/tree${
