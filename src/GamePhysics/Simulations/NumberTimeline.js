@@ -9,29 +9,31 @@ const NumberTimeline = ({ initMatter }) => {
       "numbers-container",
       options
     );
-    let stack = Matter.Composites.stack(400, 250, 5, 1, 10, 0, () => {
-      //restitution is the ratio of end velocity to beginning velocity
-      let circle1 = Matter.Bodies.circle(400, 250, 10, {
-        restitution: 0,
-        mass: 0,
-      });
-      return circle1;
-    });
-    // let chain = Matter.Composites.chain(stack, 0.5, 0, -0.5, 0);
+    let stack = Matter.Composites.stack(
+      0,
+      250,
+      10,
+      1,
+      100,
+      0,
+      (x, y, column, row, lastBody, i) => {
+        //restitution is the ratio of end velocity to beginning velocity
+        let circle1 = Matter.Bodies.circle(x, y, 10, {
+          restitution: 0,
+          mass: 0,
+        });
+        // let chain = Matter.Composites.chain(stack, 0.5, 0, -0.5, 0);
+
+        return circle1;
+      }
+    );
     stack.bodies.map((bod, i) => {
       Matter.Composite.add(
         stack,
         Matter.Constraint.create({
           bodyA: bod,
-          pointB: { x: 0, y: 260 },
-          stiffness: 0,
-        })
-      );
-      Matter.Composite.add(
-        stack,
-        Matter.Constraint.create({
-          bodyA: bod,
-          pointB: { x: 800, y: 260 },
+          bodyB: stack.bodies[i - 1] ? stack.bodies[i - 1] : null,
+          pointB: stack.bodies[i - 1] ? null : 0,
           stiffness: 0,
         })
       );
