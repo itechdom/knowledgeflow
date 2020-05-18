@@ -1,10 +1,11 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
 import Matter from "matter-js";
-import Pendulum from "./Simulations/Pendulum";
-import Gravitation from "./Simulations/Gravitation";
-import Math from "./Simulations/Math";
-import Primes from "./Simulations/Primes";
+// import Pendulum from "./Simulations/Pendulum";
+// import Gravitation from "./Simulations/Gravitation";
+// import Math from "./Simulations/Math";
+// import Primes from "./Simulations/Primes";
+import NumberTimeline from "./Simulations/NumberTimeline";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -27,7 +28,6 @@ const initMatter = (canvasId, containerId, options) => {
   var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
-    Composites = Matter.Composites,
     MouseConstraint = Matter.MouseConstraint,
     Mouse = Matter.Mouse,
     World = Matter.World,
@@ -170,7 +170,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Pendulum initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
-        <Primes initMatter={initMatter} grid={grid} {...position} />
+        {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
+        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );
