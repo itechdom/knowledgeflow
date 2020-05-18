@@ -67,32 +67,6 @@ const initMatter = (canvasId, containerId, options) => {
 
   world.bodies = [];
 
-  let s1 = Composites.stack(10, 0, 40, 1, 30, 10, function (x, y) {
-    let body = Bodies.rectangle(x, y + 150, 60, 60, {
-      isStatic: true,
-      isSensor: true,
-      render: {
-        sprite: {
-          texture: "./assets/game/Tiles/tileGrass.png",
-        },
-      },
-    });
-    // Matter.Body.rotate(body, Math.PI);
-    return body;
-  });
-  let s2 = Composites.stack(10, 60, 40, 6, 30, 10, function (x, y) {
-    let body = Bodies.rectangle(x, y + 150, 60, 60, {
-      isStatic: true,
-      render: {
-        sprite: {
-          texture: "./assets/game/Tiles/tileGrass.png",
-        },
-      },
-    });
-    Matter.Body.rotate(body, Math.PI / 2);
-    return body;
-  });
-
   World.add(world, [
     Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
     Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
