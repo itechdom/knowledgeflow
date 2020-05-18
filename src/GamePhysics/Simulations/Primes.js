@@ -18,7 +18,7 @@ function primeFactors(n) {
 }
 const Primes = ({ initMatter }) => {
   const [myEngine, setMyEngine] = React.useState();
-  let currentNumber = true ? 100001000 : getRandomInt(1, 1000000);
+  let currentNumber = false ? 10000 : getRandomInt(1, 1000000);
   let iterations = 0;
   let factors = [];
   const spawnCircle = (myEngine, body, factors) => {
