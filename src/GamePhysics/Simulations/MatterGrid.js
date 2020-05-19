@@ -18,8 +18,8 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       0,
       20,
       20,
-      0,
-      0,
+      5,
+      5,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
         let circle1 = Matter.Bodies.rectangle(x, y, 50, 50, {
@@ -27,6 +27,9 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
           isStatic: true,
           isSensor: true,
           mass: 0,
+          render: {
+            fillStyle: "lightblue",
+          },
         });
         circle1.number = i;
         return circle1;
@@ -57,7 +60,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       // });
     });
     Matter.Events.on(engine, "afterUpdate", () => {});
-    Matter.World.add(engine.world, [stack, player]);
+    Matter.World.add(engine.world, [player, stack]);
     setPlayer(player);
     setMyEngine(engine);
   };
@@ -87,7 +90,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
   }, [direction, x]);
   React.useEffect(() => {
     init({
-      wireframes: true,
+      wireframes: false,
       background: "#FFF",
       showAngleIndicator: false,
       width: 1000,
