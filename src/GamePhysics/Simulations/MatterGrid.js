@@ -12,7 +12,15 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       true
     );
     let player = Matter.Bodies.circle(400, 100, 50, {
-      render: { zIndex: 100 },
+      render: {
+        zIndex: 100,
+        text: {
+          content: "Test",
+          size: 16,
+          color: "#FFF",
+          family: "Ariel",
+        },
+      },
     });
     player.isPlayer = true;
     let stack = Matter.Composites.stack(
@@ -30,28 +38,13 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
           isSensor: true,
           mass: 0,
           render: {
-            fillStyle: "lightblue",
-            zIndex: -1,
+            fillstyle: "lightblue",
+            zindex: -1,
           },
         });
-        circle1.number = i;
         return circle1;
       }
     );
-    // stack.bodies.map((bod, i) => {
-    //   stack.bodies[i - 1] &&
-    //     Matter.Composite.add(
-    //       stack,
-    //       Matter.Constraint.create({
-    //         bodyA: bod,
-    //         bodyB: stack.bodies[i - 1],
-    //         stiffness: 0,
-    //         render: {
-    //           strokeStyle: "#000",
-    //         },
-    //       })
-    //     );
-    // });
     Matter.Events.on(engine, "beforeUpdate", function (d) {
       // stack.bodies.map((bod, i) => {
       //   if (bod.number) {
