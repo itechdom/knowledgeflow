@@ -26,7 +26,13 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const initMatter = (canvasId, containerId, options, removeWalls) => {
+const initMatter = (
+  canvasId,
+  containerId,
+  options,
+  removeWalls,
+  wallOptions
+) => {
   var Engine = Matter.Engine,
     Runner = Matter.Runner,
     MouseConstraint = Matter.MouseConstraint,
@@ -61,17 +67,14 @@ const initMatter = (canvasId, containerId, options, removeWalls) => {
   var offset = 10,
     options = {
       isStatic: true,
-      render: {
-        // fillStyle: "#8BE1EB",
-      },
+      ...wallOptions,
     };
-
   world.bodies = [];
   if (!removeWalls) {
     World.add(world, [
       Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
       Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
-      Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
+      Bodies.rectangle(1000 + offset, 300, 50.5, 600.5 + 2 * offset, options),
       Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
     ]);
   }
@@ -105,6 +108,7 @@ const initMatter = (canvasId, containerId, options, removeWalls) => {
   return {
     engine: engine,
     runner: runner,
+    Render,
     render: render,
     mouse: mouse,
     canvas: render.canvas,

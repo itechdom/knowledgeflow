@@ -4,16 +4,48 @@ import { Grid } from "@material-ui/core";
 const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
   const [myEngine, setMyEngine] = React.useState();
   const [player, setPlayer] = React.useState();
+  const zoomOut = (Render, render) => {
+    let count = 0;
+    setInterval(() => {
+      count += 10;
+      Render.lookAt(render, {
+        min: { x: count / 3, y: count / 3 },
+        max: { x: count, y: count },
+      });
+    }, 100);
+  };
+  const zoomIn = (Render, render) => {
+    let count = 0;
+    setInterval(() => {
+      count -= 10;
+      Render.lookAt(render, {
+        min: { x: count / 3, y: count / 3 },
+        max: { x: count, y: count },
+      });
+    }, 100);
+  };
   const init = (options) => {
-    const { engine, mouse, render } = initMatter(
+    const { engine, mouse, render, Render } = initMatter(
       "numbers",
       "numbers-container",
       options,
-      true
+      false,
+      {
+        render: {
+          zIndex: 100,
+          fillStyle: "#8BE1EB",
+          sprite: {
+            texture: "./assets/game/Tiles/dirt.png",
+          },
+        },
+      }
     );
     let player = Matter.Bodies.circle(400, 100, 50, {
       render: {
         zIndex: 100,
+        sprite: {
+          texture: "./assets/game/Tiles/alienBeige.png",
+        },
         text: {
           content: "Test",
           size: 16,
@@ -32,30 +64,24 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       5,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
-        let circle1 = Matter.Bodies.rectangle(x, y, 50, 50, {
+        let circle1 = Matter.Bodies.rectangle(x, y, 60, 60, {
           restitution: 0,
           isStatic: true,
           isSensor: true,
           mass: 0,
           render: {
-            fillstyle: "lightblue",
+            fillStyle: "red",
+            sprite: {
+              texture: "./assets/game/Tiles/tileWater.png",
+            },
             zindex: -1,
           },
         });
         return circle1;
       }
     );
-    Matter.Events.on(engine, "beforeUpdate", function (d) {
-      // stack.bodies.map((bod, i) => {
-      //   if (bod.number) {
-      //     let { x, y } = bod.position;
-      //     render.context.fontSize = "20px";
-      //     render.context.fillStyle = "#FFF";
-      //     render.context.fillText(`${bod.number - 5}`, x, y);
-      //   }
-      // });
-    });
-    Matter.Events.on(engine, "afterUpdate", () => {});
+    // zoomOut(Render, render);
+    // zoomIn(Render, render);
     Matter.World.add(engine.world, [player, stack]);
     setPlayer(player);
     setMyEngine(engine);
