@@ -5,7 +5,8 @@ import Matter from "matter-js";
 // import Gravitation from "./Simulations/Gravitation";
 // import Math from "./Simulations/Math";
 // import Primes from "./Simulations/Primes";
-import NumberTimeline from "./Simulations/NumberTimeline";
+// import NumberTimeline from "./Simulations/NumberTimeline";
+import MatterGrid from "./Simulations/MatterGrid";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -92,10 +93,13 @@ const initMatter = (canvasId, containerId, options, removeWalls) => {
   render.mouse = mouse;
 
   // fit the render viewport to the scene
-  Render.lookAt(render, {
-    min: { x: 0, y: 0 },
-    max: { x: 800, y: 600 },
-  });
+  // Render.lookAt(render, {
+  //   min: { x: 0, y: 0 },
+  //   max: {
+  //     x: options && options.width ? options.width : 800,
+  //     y: options && options.height ? options.height : 600,
+  //   },
+  // });
 
   // context for MatterTools.Demo
   return {
@@ -171,7 +175,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
-        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
+        {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
+        <MatterGrid initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );
