@@ -24,6 +24,16 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       });
     }, 100);
   };
+  const moveCameraRight = (Render, render) => {
+    let count = 0;
+    setInterval(() => {
+      count += 10;
+      Render.lookAt(render, {
+        min: { x: count / 3, y: count / 3 },
+        max: { x: 1000, y: 1000 },
+      });
+    }, 100);
+  };
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
       "numbers",
@@ -60,19 +70,20 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       0,
       20,
       20,
-      5,
-      5,
+      0,
+      0,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
         let circle1 = Matter.Bodies.rectangle(x, y, 60, 60, {
           restitution: 0,
           isStatic: true,
           isSensor: true,
+          angle: 0,
           mass: 0,
           render: {
             fillStyle: "red",
             sprite: {
-              texture: "./assets/game/Tiles/tileWater.png",
+              texture: "./assets/game/Tiles/tileGrass.png",
             },
             zindex: -1,
           },
@@ -82,6 +93,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
     );
     // zoomOut(Render, render);
     // zoomIn(Render, render);
+    moveCameraRight(Render, render);
     Matter.World.add(engine.world, [player, stack]);
     setPlayer(player);
     setMyEngine(engine);

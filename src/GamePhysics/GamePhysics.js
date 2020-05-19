@@ -5,7 +5,7 @@ import Matter from "matter-js";
 // import Gravitation from "./Simulations/Gravitation";
 // import Math from "./Simulations/Math";
 import Primes from "./Simulations/Primes";
-// import NumberTimeline from "./Simulations/NumberTimeline";
+import NumberTimeline from "./Simulations/NumberTimeline";
 import MatterGrid from "./Simulations/MatterGrid";
 import Render from "./Matter/Render";
 import KeyboardEventHandler from "react-keyboard-event-handler";
@@ -178,8 +178,8 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Pendulum initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
-        {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
-        {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
+        <Primes initMatter={initMatter} grid={grid} {...position} />
+        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
         <MatterGrid initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
