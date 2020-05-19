@@ -174,7 +174,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Pendulum initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
-        <Primes initMatter={initMatter} grid={grid} {...position} />
+        {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
         <MatterGrid initMatter={initMatter} grid={grid} {...position} />
       </Grid>

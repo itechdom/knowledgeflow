@@ -11,7 +11,9 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       options,
       true
     );
-    let player = Matter.Bodies.circle(400, 100, 50);
+    let player = Matter.Bodies.circle(400, 100, 50, {
+      render: { zIndex: 100 },
+    });
     player.isPlayer = true;
     let stack = Matter.Composites.stack(
       0,
@@ -29,6 +31,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
           mass: 0,
           render: {
             fillStyle: "lightblue",
+            zIndex: -1,
           },
         });
         circle1.number = i;

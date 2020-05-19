@@ -324,7 +324,7 @@ Render.world = function (render) {
 
   Events.trigger(render, "beforeRender", event);
 
-  allBodies.sort((a, b) => {
+  allBodies = allBodies.sort((a, b) => {
     const zIndexA =
       a.render && typeof a.render.zIndex !== "undefined" ? a.render.zIndex : 0;
     const zIndexB =
