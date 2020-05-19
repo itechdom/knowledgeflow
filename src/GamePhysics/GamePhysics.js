@@ -7,6 +7,7 @@ import Matter from "matter-js";
 import Primes from "./Simulations/Primes";
 // import NumberTimeline from "./Simulations/NumberTimeline";
 import MatterGrid from "./Simulations/MatterGrid";
+import Render from "./Matter/Render";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
   then = Date.now();
@@ -27,7 +28,6 @@ const animate = (onDraw) => {
 };
 const initMatter = (canvasId, containerId, options, removeWalls) => {
   var Engine = Matter.Engine,
-    Render = Matter.Render,
     Runner = Matter.Runner,
     MouseConstraint = Matter.MouseConstraint,
     Mouse = Matter.Mouse,
