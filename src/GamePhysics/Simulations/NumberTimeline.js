@@ -11,6 +11,7 @@ const NumberTimeline = ({ initMatter, x, y, direction, ...rest }) => {
       options
     );
     let player = Matter.Bodies.circle(400, 100, 50);
+    player.isPlayer = true;
     let stack = Matter.Composites.stack(
       -45,
       250,
@@ -43,12 +44,13 @@ const NumberTimeline = ({ initMatter, x, y, direction, ...rest }) => {
           })
         );
     });
-    Matter.Events.on(engine, "beforeupdate", function () {
+    Matter.Events.on(engine, "beforeUpdate", function () {
       var x = player.position.x * -1;
       var y = player.position.y * -1;
+      let FoV = 1;
       Matter.Render.lookAt(render, {
-        min: { y: y - FoV / 2, x: x - FoV / 2 },
-        max: { y: y + FoV / 2, x: x + FoV / 2 },
+        min: { y: 0, x: 0 },
+        max: { y: 1000, x: 1000 },
       });
     });
     Matter.Events.on(engine, "afterUpdate", () => {
@@ -66,9 +68,10 @@ const NumberTimeline = ({ initMatter, x, y, direction, ...rest }) => {
     setMyEngine(engine);
   };
   React.useEffect(() => {
-    if (!player) {
+    if (!player || !myEngine) {
       return;
     }
+    console.log(x, "positoin");
     const { x, y } = player.position;
     const magnitude = 0.1;
     if (direction === "left") {
@@ -88,7 +91,7 @@ const NumberTimeline = ({ initMatter, x, y, direction, ...rest }) => {
         { x: 0, y: magnitude * 2 }
       );
     }
-  }, [direction, player, x]);
+  }, [direction, x]);
   React.useEffect(() => {
     init({ wireframes: true, background: "#FFF", showAngleIndicator: false });
   }, []);

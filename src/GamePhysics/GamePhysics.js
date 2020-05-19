@@ -24,7 +24,7 @@ const animate = (onDraw) => {
     onDraw();
   }
 };
-const initMatter = (canvasId, containerId, options) => {
+const initMatter = (canvasId, containerId, options, removeWalls) => {
   var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
@@ -66,14 +66,14 @@ const initMatter = (canvasId, containerId, options) => {
     };
 
   world.bodies = [];
-
-  World.add(world, [
-    Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
-    Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
-    Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
-    Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
-  ]);
-
+  if (!removeWalls) {
+    World.add(world, [
+      Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
+      Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
+      Bodies.rectangle(800 + offset, 300, 50.5, 600.5 + 2 * offset, options),
+      Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
+    ]);
+  }
   // add mouse control
   var mouse = Mouse.create(render.canvas),
     mouseConstraint = MouseConstraint.create(engine, {
