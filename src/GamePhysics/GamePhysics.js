@@ -53,6 +53,8 @@ const initMatter = (
       background: "#8BE1EB",
       showAngleIndicator: true,
       wireframes: true,
+      width: 1000,
+      height: 750,
       ...options,
     },
   });
@@ -72,8 +74,8 @@ const initMatter = (
   world.bodies = [];
   if (!removeWalls) {
     World.add(world, [
-      Bodies.rectangle(400, -offset, 800.5 + 2 * offset, 50.5, options),
-      Bodies.rectangle(400, 600 + offset, 800.5 + 2 * offset, 50.5, options),
+      Bodies.rectangle(400, -offset, 1000 + 2 * offset, 50.5, options),
+      Bodies.rectangle(400, 600 + offset, 1000 + 2 * offset, 50.5, options),
       Bodies.rectangle(1000 + offset, 300, 50.5, 600.5 + 2 * offset, options),
       Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
     ]);

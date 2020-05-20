@@ -128,7 +128,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       background: "#FFF",
       showAngleIndicator: false,
       width: 1000,
-      height: 1000,
+      height: 750,
     });
   }, []);
   return (
