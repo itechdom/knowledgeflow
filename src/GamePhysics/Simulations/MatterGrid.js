@@ -27,9 +27,9 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
   const moveCameraRight = (Render, render) => {
     let count = 0;
     setInterval(() => {
-      count += 10;
+      count += 20;
       Render.lookAt(render, {
-        min: { x: count / 3, y: count / 3 },
+        min: { x: count, y: 0 },
         max: { x: 1000, y: 1000 },
       });
     }, 100);
@@ -68,7 +68,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
     let stack = Matter.Composites.stack(
       0,
       0,
-      20,
+      100,
       20,
       0,
       0,
@@ -93,7 +93,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
     );
     // zoomOut(Render, render);
     // zoomIn(Render, render);
-    moveCameraRight(Render, render);
+    // moveCameraRight(Render, render);
     Matter.World.add(engine.world, [player, stack]);
     setPlayer(player);
     setMyEngine(engine);
