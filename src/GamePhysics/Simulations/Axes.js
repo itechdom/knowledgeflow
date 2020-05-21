@@ -1,43 +1,25 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid } from "@material-ui/core";
-const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
+import { zoom } from "./Camera";
+import Render from "../Matter/Render";
+const Axes = ({
+  initMatter,
+  x,
+  y,
+  direction,
+  showX,
+  showY,
+  width,
+  height,
+  ...rest
+}) => {
   const [myEngine, setMyEngine] = React.useState();
   const [player, setPlayer] = React.useState();
-  const zoomOut = (Render, render) => {
-    let count = 0;
-    setInterval(() => {
-      count += 10;
-      Render.lookAt(render, {
-        min: { x: count / 3, y: count / 3 },
-        max: { x: count, y: count },
-      });
-    }, 100);
-  };
-  const zoomIn = (Render, render) => {
-    let count = 0;
-    setInterval(() => {
-      count -= 10;
-      Render.lookAt(render, {
-        min: { x: count / 3, y: count / 3 },
-        max: { x: count, y: count },
-      });
-    }, 100);
-  };
-  const moveCameraRight = (Render, render) => {
-    let count = 0;
-    setInterval(() => {
-      count += 20;
-      Render.lookAt(render, {
-        min: { x: count, y: 0 },
-        max: { x: 1000, y: 1000 },
-      });
-    }, 100);
-  };
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
-      "numbers",
-      "numbers-container",
+      "axes",
+      "axes-container",
       options,
       true,
       {
@@ -51,6 +33,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       }
     );
     let player = Matter.Bodies.circle(400, 100, 50, {
+      restitution: 1,
       render: {
         zIndex: 100,
         sprite: {
@@ -66,15 +49,15 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
     });
     player.isPlayer = true;
     let stack = Matter.Composites.stack(
-      0,
-      0,
-      100,
-      20,
       5,
       5,
+      10,
+      10,
+      10,
+      10,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
-        let circle1 = Matter.Bodies.rectangle(x, y, 60, 60, {
+        let circle1 = Matter.Bodies.rectangle(x, y, 90, 90, {
           restitution: 0,
           isStatic: true,
           isSensor: true,
@@ -91,12 +74,23 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
         return circle1;
       }
     );
-    // zoomOut(Render, render);
-    // zoomIn(Render, render);
-    // moveCameraRight(Render, render);
-    Matter.World.add(engine.world, [player, stack]);
+    let xAxis = Matter.Bodies.rectangle(0, 100 * 4, 2000, 5, {
+      isStatic: true,
+      render: {
+        zIndex: 2000,
+        fillStyle: "black",
+      },
+    });
+    let yAxis = Matter.Bodies.rectangle(100 * 5, 0, 5, 2000, {
+      isStatic: true,
+      render: {
+        zIndex: 2000,
+        fillStyle: "black",
+      },
+    });
+    Matter.World.add(engine.world, [player, stack, xAxis, yAxis]);
     setPlayer(player);
-    setMyEngine(engine);
+    setMyEngine({ ...engine, render });
   };
   React.useEffect(() => {
     if (!player || !myEngine) {
@@ -109,6 +103,7 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
     } else if (direction === "right") {
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
+      zoom(Render, myEngine.render, -100, 1100);
       return Matter.Body.applyForce(
         player,
         { x, y },
@@ -128,22 +123,17 @@ const MatterGrid = ({ initMatter, x, y, direction, ...rest }) => {
       background: "#FFF",
       showAngleIndicator: false,
       width: 1000,
-      height: 750,
+      height: 1000,
     });
   }, []);
   return (
-    <Grid item style={{ marginTop: "10px" }}>
-      <Grid
-        alignItems="center"
-        justify="center"
-        container
-        id="numbers-container"
-      >
+    <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
+      <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
-          <canvas style={{ fontSize: "24px" }} id="numbers"></canvas>
+          <canvas style={{ fontSize: "24px" }} id="axes"></canvas>
         </Grid>
       </Grid>
     </Grid>
   );
 };
-export default MatterGrid;
+export default Axes;

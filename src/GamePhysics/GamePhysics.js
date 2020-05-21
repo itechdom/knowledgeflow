@@ -4,9 +4,10 @@ import Matter from "matter-js";
 // import Pendulum from "./Simulations/Pendulum";
 // import Gravitation from "./Simulations/Gravitation";
 // import Math from "./Simulations/Math";
-import Primes from "./Simulations/Primes";
-import NumberTimeline from "./Simulations/NumberTimeline";
-import MatterGrid from "./Simulations/MatterGrid";
+// import Primes from "./Simulations/Primes";
+// import NumberTimeline from "./Simulations/NumberTimeline";
+// import MatterGrid from "./Simulations/MatterGrid";
+import Axes from "./Simulations/Axes";
 import Render from "./Matter/Render";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
@@ -74,10 +75,10 @@ const initMatter = (
   world.bodies = [];
   if (!removeWalls) {
     World.add(world, [
-      Bodies.rectangle(400, -offset, 1000 + 2 * offset, 50.5, options),
-      Bodies.rectangle(400, 600 + offset, 1000 + 2 * offset, 50.5, options),
-      Bodies.rectangle(1000 + offset, 300, 50.5, 600.5 + 2 * offset, options),
-      Bodies.rectangle(-offset, 300, 50.5, 600.5 + 2 * offset, options),
+      Bodies.rectangle(500, -offset, 1000 + 2 * offset, 50, options),
+      Bodies.rectangle(500, 600 + offset, 1000 + 2 * offset, 50, options),
+      Bodies.rectangle(1000 + offset, 300, 50, 600 + 2 * offset, options),
+      Bodies.rectangle(-offset, 300, 50, 600 + 2 * offset, options),
     ]);
   }
   // add mouse control
@@ -180,9 +181,10 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Pendulum initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
-        <Primes initMatter={initMatter} grid={grid} {...position} />
-        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
-        <MatterGrid initMatter={initMatter} grid={grid} {...position} />
+        {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
+        {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
+        {/* <MatterGrid initMatter={initMatter} grid={grid} {...position} /> */}
+        <Axes initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );
