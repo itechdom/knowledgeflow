@@ -16,6 +16,7 @@ const Axes = ({
 }) => {
   const [myEngine, setMyEngine] = React.useState();
   const [player, setPlayer] = React.useState();
+  const [iter, setIter] = React.useState(0);
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
       "axes",
@@ -88,7 +89,14 @@ const Axes = ({
         fillStyle: "black",
       },
     });
-    Matter.World.add(engine.world, [player, stack, xAxis, yAxis]);
+    let point = Matter.Bodies.circle(5, 5, 5, {
+      isStatic: true,
+      render: {
+        zIndex: 2000,
+        fillStyle: "black",
+      },
+    });
+    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point]);
     setPlayer(player);
     setMyEngine({ ...engine, render });
   };
@@ -103,13 +111,16 @@ const Axes = ({
     } else if (direction === "right") {
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
-      zoom(Render, myEngine.render, -100, 1100);
+      //zoomOut
+      zoom(Render, myEngine.render, -iter * 100, iter * 100 + 1000);
+      setIter(iter + 1);
       return Matter.Body.applyForce(
         player,
         { x, y },
         { x: 0, y: -magnitude * 2 }
       );
     } else if (direction === "down") {
+      zoom(Render, myEngine.render, iter * 100, 1000 - 100);
       return Matter.Body.applyForce(
         player,
         { x, y },
