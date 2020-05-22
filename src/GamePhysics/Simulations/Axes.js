@@ -17,6 +17,7 @@ const Axes = ({
   const [myEngine, setMyEngine] = React.useState();
   const [player, setPlayer] = React.useState();
   const [iter, setIter] = React.useState(0);
+  const [bounds, setBounds] = React.useState({});
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
       "axes",
@@ -75,20 +76,42 @@ const Axes = ({
         return circle1;
       }
     );
-    let xAxis = Matter.Bodies.rectangle(0, 100 * 5, 2000, 5, {
-      isStatic: true,
-      render: {
-        zIndex: 2000,
-        fillStyle: "black",
-      },
-    });
-    let yAxis = Matter.Bodies.rectangle(100 * 5, 0, 5, 2000, {
-      isStatic: true,
-      render: {
-        zIndex: 2000,
-        fillStyle: "black",
-      },
-    });
+    let xAxis = Matter.Composites.stack(
+      0,
+      100 * 5,
+      10,
+      10,
+      10,
+      10,
+      (x, y, column, row, lastBody, i) => {
+        let xAxis = Matter.Bodies.rectangle(x, y, 90, 20, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "black",
+          },
+        });
+        return xAxis;
+      }
+    );
+    let yAxis = Matter.Composites.stack(
+      100 * 5,
+      0,
+      10,
+      10,
+      10,
+      10,
+      (x, y, column, row, lastBody, i) => {
+        let yAxis = Matter.Bodies.rectangle(x, y, 20, 90, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "black",
+          },
+        });
+        return yAxis;
+      }
+    );
     let point = Matter.Bodies.circle(5, 5, 5, {
       isStatic: true,
       render: {
@@ -96,12 +119,8 @@ const Axes = ({
         fillStyle: "black",
       },
     });
-    const rect = Matter.Bodies.rectangle({
-      isStatic: true,
-      isSensor: true,
-    });
-    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point, rect]);
-    Matter.Events.on(engine, "beforeUpdate", () => {});
+    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point]);
+    setBounds(render.bounds);
     setPlayer(player);
     setMyEngine({ ...engine, render });
   };
@@ -152,6 +171,7 @@ const Axes = ({
           return circle1;
         }
       );
+      Matter.World.remove(myEngine.world, myEngine.world.composites);
       Matter.World.add(myEngine.world, stack);
       return Matter.Body.applyForce(
         player,
@@ -166,7 +186,7 @@ const Axes = ({
         { x: 0, y: magnitude * 2 }
       );
     }
-  }, [direction, x]);
+  }, [direction, x, y]);
   React.useEffect(() => {
     init({
       wireframes: true,
