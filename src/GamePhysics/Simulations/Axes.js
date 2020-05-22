@@ -75,7 +75,7 @@ const Axes = ({
         return circle1;
       }
     );
-    let xAxis = Matter.Bodies.rectangle(0, 100 * 4, 2000, 5, {
+    let xAxis = Matter.Bodies.rectangle(0, 100 * 5, 2000, 5, {
       isStatic: true,
       render: {
         zIndex: 2000,
@@ -96,7 +96,12 @@ const Axes = ({
         fillStyle: "black",
       },
     });
-    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point]);
+    const rect = Matter.Bodies.rectangle({
+      isStatic: true,
+      isSensor: true,
+    });
+    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point, rect]);
+    Matter.Events.on(engine, "beforeUpdate", () => {});
     setPlayer(player);
     setMyEngine({ ...engine, render });
   };
@@ -114,6 +119,40 @@ const Axes = ({
       //zoomOut
       zoom(Render, myEngine.render, -iter * 100, iter * 100 + 1000);
       setIter(iter + 1);
+      const render = myEngine.render;
+      const x = render.bounds.min.x;
+      const y = render.bounds.min.y;
+      const width = render.bounds.max.x;
+      const height = render.bounds.max.y;
+      const rows = width / 10;
+      const columns = height / 10;
+      let stack = Matter.Composites.stack(
+        x + 5,
+        y + 5,
+        columns,
+        rows,
+        10,
+        10,
+        (x, y, column, row, lastBody, i) => {
+          //restitution is the ratio of end velocity to beginning velocity
+          let circle1 = Matter.Bodies.rectangle(x, y, 90, 90, {
+            restitution: 0,
+            isStatic: true,
+            isSensor: true,
+            angle: 0,
+            mass: 0,
+            render: {
+              fillStyle: "red",
+              sprite: {
+                // texture: "assets/game/Tiles/tileGrass.png",
+              },
+              zindex: -1,
+            },
+          });
+          return circle1;
+        }
+      );
+      Matter.World.add(myEngine.world, stack);
       return Matter.Body.applyForce(
         player,
         { x, y },
@@ -130,7 +169,7 @@ const Axes = ({
   }, [direction, x]);
   React.useEffect(() => {
     init({
-      wireframes: false,
+      wireframes: true,
       background: "#FFF",
       showAngleIndicator: false,
       width: 1000,
