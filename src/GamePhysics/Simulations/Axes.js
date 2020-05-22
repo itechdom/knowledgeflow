@@ -55,11 +55,11 @@ const Axes = ({
       5,
       10,
       10,
-      10,
-      10,
+      0,
+      0,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
-        let circle1 = Matter.Bodies.rectangle(x, y, 90, 90, {
+        let circle1 = Matter.Bodies.rectangle(x, y, 100, 100, {
           restitution: 0,
           isStatic: true,
           isSensor: true,
@@ -77,36 +77,47 @@ const Axes = ({
       }
     );
     let xAxis = Matter.Composites.stack(
-      0,
-      100 * 5,
-      10,
-      10,
+      -45,
+      99 * 5,
+      20,
+      1,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let xAxis = Matter.Bodies.rectangle(x, y, 90, 20, {
+        let xAxis = Matter.Bodies.rectangle(x, y, 90, 10, {
           isStatic: true,
           render: {
             zIndex: 2000,
             fillStyle: "black",
+            text: {
+              content: `${i - 5}`,
+              size: 16,
+              color: "#FFF",
+              family: "Ariel",
+            },
           },
         });
         return xAxis;
       }
     );
     let yAxis = Matter.Composites.stack(
-      100 * 5,
-      0,
-      10,
-      10,
+      99 * 5,
+      -45,
+      1,
+      20,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let yAxis = Matter.Bodies.rectangle(x, y, 20, 90, {
+        let yAxis = Matter.Bodies.rectangle(x, y, 10, 90, {
           isStatic: true,
           render: {
-            zIndex: 2000,
+            zIndex: 1000,
             fillStyle: "black",
+            text: {
+              content: `${5 - i}`,
+              size: 16,
+              color: "#FFF",
+            },
           },
         });
         return yAxis;
@@ -171,7 +182,7 @@ const Axes = ({
           return circle1;
         }
       );
-      Matter.World.remove(myEngine.world, myEngine.world.composites);
+      // Matter.World.remove(myEngine.world, myEngine.world.composites[0]);
       Matter.World.add(myEngine.world, stack);
       return Matter.Body.applyForce(
         player,
@@ -189,7 +200,7 @@ const Axes = ({
   }, [direction, x, y]);
   React.useEffect(() => {
     init({
-      wireframes: true,
+      wireframes: false,
       background: "#FFF",
       showAngleIndicator: false,
       width: 1000,
