@@ -5,9 +5,10 @@ import Matter from "matter-js";
 // import Gravitation from "./Simulations/Gravitation";
 // import Math from "./Simulations/Math";
 // import Primes from "./Simulations/Primes";
-import NumberTimeline from "./Simulations/NumberTimeline";
+// import NumberTimeline from "./Simulations/NumberTimeline";
 // import MatterGrid from "./Simulations/MatterGrid";
-import Axes from "./Simulations/Axes";
+// import Axes from "./Simulations/Axes";
+import FunctionGraph from "./Simulations/FunctionGraph";
 import Render from "./Matter/Render";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
@@ -182,9 +183,10 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
-        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
+        {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <MatterGrid initMatter={initMatter} grid={grid} {...position} /> */}
-        <Axes initMatter={initMatter} grid={grid} {...position} />
+        {/* <Axes initMatter={initMatter} grid={grid} {...position} /> */}
+        <FunctionGraph initMatter={initMatter} grid={grid} {...position} />
       </Grid>
     </Grid>
   );
