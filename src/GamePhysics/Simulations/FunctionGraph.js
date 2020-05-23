@@ -1,6 +1,8 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid } from "@material-ui/core";
+import { zoom } from "./Camera";
+import Render from "../Matter/Render";
 const FunctionGraph = ({
   initMatter,
   x,
@@ -146,6 +148,7 @@ const FunctionGraph = ({
     } else if (direction === "right") {
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
+      zoom(Render, myEngine.render, -1000, 2000);
       return Matter.Body.applyForce(
         player,
         { x, y },
@@ -176,7 +179,6 @@ const FunctionGraph = ({
           return clearInterval(interval);
         }
         //render new point
-        console.log(fn(count));
         let point1 = Matter.Bodies.circle(0, count * factor, 5, {
           isStatic: true,
           render: {
@@ -199,7 +201,7 @@ const FunctionGraph = ({
           },
         });
         return Matter.World.add(myEngine.world, [point1, point2, point3]);
-      }, 500);
+      }, 1000 / 60);
     }
   }, [bounds]);
   React.useEffect(() => {
