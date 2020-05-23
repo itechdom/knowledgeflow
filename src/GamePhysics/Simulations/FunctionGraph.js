@@ -34,7 +34,7 @@ const FunctionGraph = ({
       }
     );
     let player = Matter.Bodies.circle(400, 100, 50, {
-      restitution: 1.5,
+      restitution: 1,
       render: {
         zIndex: 9000,
         // sprite: {
@@ -49,7 +49,7 @@ const FunctionGraph = ({
       },
     });
     player.isPlayer = true;
-    let stack = Matter.Composites.stack(
+    let grid = Matter.Composites.stack(
       5,
       5,
       10,
@@ -65,7 +65,8 @@ const FunctionGraph = ({
           angle: 0,
           mass: 0,
           render: {
-            fillStyle: "black",
+            fillStyle: "white",
+            strokeStyle: "black",
             sprite: {
               // texture: "assets/game/Tiles/tileGrass.png",
             },
@@ -129,7 +130,7 @@ const FunctionGraph = ({
         fillStyle: "black",
       },
     });
-    Matter.World.add(engine.world, [player, stack, xAxis, yAxis, point]);
+    Matter.World.add(engine.world, [player, grid, xAxis, yAxis, point]);
     setBounds(render.bounds);
     setPlayer(player);
     setMyEngine({ ...engine, render });
@@ -158,6 +159,39 @@ const FunctionGraph = ({
       );
     }
   }, [direction, x, y]);
+  React.useEffect(() => {
+    //range
+    if (bounds.min) {
+      let { min, max } = bounds;
+      const position = { x: min.x, y: min.y };
+      const dim = { width: max.x, height: max.y };
+      const rectNumber = dim.width / 100;
+      //animate the graph now
+      let count = 0;
+      let interval = setInterval(() => {
+        count++;
+        if (count > rectNumber) {
+          return clearInterval(interval);
+        }
+        //render new point
+        let point1 = Matter.Bodies.circle(0, count * 100, 5, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "black",
+          },
+        });
+        let point2 = Matter.Bodies.circle(count * 100, 0, 5, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "black",
+          },
+        });
+        return Matter.World.add(myEngine.world, [point1, point2]);
+      }, 500);
+    }
+  }, [bounds]);
   React.useEffect(() => {
     init({
       wireframes: false,
