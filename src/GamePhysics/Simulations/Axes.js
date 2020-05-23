@@ -23,7 +23,7 @@ const Axes = ({
       "axes",
       "axes-container",
       options,
-      true,
+      false,
       {
         render: {
           zIndex: 100,
@@ -37,16 +37,16 @@ const Axes = ({
     let player = Matter.Bodies.circle(400, 100, 50, {
       restitution: 1,
       render: {
-        zIndex: 100,
-        sprite: {
-          // texture: "./assets/game/Tiles/alienBeige.png",
-        },
-        text: {
-          content: "Test",
-          size: 16,
-          color: "#FFF",
-          family: "Ariel",
-        },
+        zIndex: 9000,
+        // sprite: {
+        //   // texture: "./assets/game/Tiles/alienBeige.png",
+        // },
+        // text: {
+        //   content: "Test",
+        //   size: 16,
+        //   color: "#FFF",
+        //   family: "Ariel",
+        // },
       },
     });
     player.isPlayer = true;
@@ -55,18 +55,18 @@ const Axes = ({
       5,
       10,
       10,
-      0,
-      0,
+      5,
+      5,
       (x, y, column, row, lastBody, i) => {
         //restitution is the ratio of end velocity to beginning velocity
-        let circle1 = Matter.Bodies.rectangle(x, y, 100, 100, {
+        let circle1 = Matter.Bodies.rectangle(x, y, 95, 95, {
           restitution: 0,
           isStatic: true,
           isSensor: true,
           angle: 0,
           mass: 0,
           render: {
-            fillStyle: "red",
+            fillStyle: "black",
             sprite: {
               // texture: "assets/game/Tiles/tileGrass.png",
             },
@@ -190,7 +190,7 @@ const Axes = ({
         { x: 0, y: -magnitude * 2 }
       );
     } else if (direction === "down") {
-      zoom(Render, myEngine.render, iter * 100, 1000 - 100);
+      // zoom(Render, myEngine.render, iter * 100, 1000 - 100);
       return Matter.Body.applyForce(
         player,
         { x, y },

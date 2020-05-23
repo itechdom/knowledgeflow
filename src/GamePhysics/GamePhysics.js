@@ -5,7 +5,7 @@ import Matter from "matter-js";
 // import Gravitation from "./Simulations/Gravitation";
 // import Math from "./Simulations/Math";
 // import Primes from "./Simulations/Primes";
-// import NumberTimeline from "./Simulations/NumberTimeline";
+import NumberTimeline from "./Simulations/NumberTimeline";
 // import MatterGrid from "./Simulations/MatterGrid";
 import Axes from "./Simulations/Axes";
 import Render from "./Matter/Render";
@@ -88,7 +88,7 @@ const initMatter = (
       constraint: {
         stiffness: 0.2,
         render: {
-          visible: false,
+          visible: true,
         },
       },
     });
@@ -182,7 +182,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <Gravitation initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Math initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Primes initMatter={initMatter} grid={grid} {...position} /> */}
-        {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
+        <NumberTimeline initMatter={initMatter} grid={grid} {...position} />
         {/* <MatterGrid initMatter={initMatter} grid={grid} {...position} /> */}
         <Axes initMatter={initMatter} grid={grid} {...position} />
       </Grid>
