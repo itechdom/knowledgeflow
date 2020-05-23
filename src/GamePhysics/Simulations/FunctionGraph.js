@@ -217,7 +217,7 @@ const FunctionGraph = ({
           point3,
           point4,
         ]);
-      }, 1000 / 60);
+      }, 250);
     }
   }, [bounds]);
   React.useEffect(() => {
