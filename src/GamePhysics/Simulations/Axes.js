@@ -147,43 +147,43 @@ const Axes = ({
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
       //zoomOut
-      zoom(Render, myEngine.render, -iter * 100, iter * 100 + 1000);
-      setIter(iter + 1);
-      const render = myEngine.render;
-      const x = render.bounds.min.x;
-      const y = render.bounds.min.y;
-      const width = render.bounds.max.x;
-      const height = render.bounds.max.y;
-      const rows = width / 10;
-      const columns = height / 10;
-      let stack = Matter.Composites.stack(
-        x + 5,
-        y + 5,
-        columns,
-        rows,
-        10,
-        10,
-        (x, y, column, row, lastBody, i) => {
-          //restitution is the ratio of end velocity to beginning velocity
-          let circle1 = Matter.Bodies.rectangle(x, y, 90, 90, {
-            restitution: 0,
-            isStatic: true,
-            isSensor: true,
-            angle: 0,
-            mass: 0,
-            render: {
-              fillStyle: "red",
-              sprite: {
-                // texture: "assets/game/Tiles/tileGrass.png",
-              },
-              zindex: -1,
-            },
-          });
-          return circle1;
-        }
-      );
-      // Matter.World.remove(myEngine.world, myEngine.world.composites[0]);
-      Matter.World.add(myEngine.world, stack);
+      // zoom(Render, myEngine.render, -iter * 100, iter * 100 + 1000);
+      // setIter(iter + 1);
+      // const render = myEngine.render;
+      // const x = render.bounds.min.x;
+      // const y = render.bounds.min.y;
+      // const width = render.bounds.max.x;
+      // const height = render.bounds.max.y;
+      // const rows = width / 10;
+      // const columns = height / 10;
+      // let stack = Matter.Composites.stack(
+      //   x + 5,
+      //   y + 5,
+      //   columns,
+      //   rows,
+      //   10,
+      //   10,
+      //   (x, y, column, row, lastBody, i) => {
+      //     //restitution is the ratio of end velocity to beginning velocity
+      //     let circle1 = Matter.Bodies.rectangle(x, y, 90, 90, {
+      //       restitution: 0,
+      //       isStatic: true,
+      //       isSensor: true,
+      //       angle: 0,
+      //       mass: 0,
+      //       render: {
+      //         fillStyle: "red",
+      //         sprite: {
+      //           // texture: "assets/game/Tiles/tileGrass.png",
+      //         },
+      //         zindex: -1,
+      //       },
+      //     });
+      //     return circle1;
+      //   }
+      // );
+      // // Matter.World.remove(myEngine.world, myEngine.world.composites[0]);
+      // Matter.World.add(myEngine.world, stack);
       return Matter.Body.applyForce(
         player,
         { x, y },
