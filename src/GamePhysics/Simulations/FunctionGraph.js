@@ -163,9 +163,10 @@ const FunctionGraph = ({
     //range
     if (bounds.min) {
       let { min, max } = bounds;
+      const factor = 10;
       const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
-      const rectNumber = dim.width / 100;
+      const rectNumber = dim.width / factor;
       //animate the graph now
       let count = 0;
       let interval = setInterval(() => {
@@ -175,21 +176,21 @@ const FunctionGraph = ({
           return clearInterval(interval);
         }
         //render new point
-        let point1 = Matter.Bodies.circle(0, count * 100, 5, {
+        let point1 = Matter.Bodies.circle(0, count * factor, 5, {
           isStatic: true,
           render: {
             zIndex: 2000,
             fillStyle: "black",
           },
         });
-        let point2 = Matter.Bodies.circle(count * 100, 0, 5, {
+        let point2 = Matter.Bodies.circle(count * factor, 0, 5, {
           isStatic: true,
           render: {
             zIndex: 2000,
             fillStyle: "black",
           },
         });
-        let point3 = Matter.Bodies.circle(count * 100, count * 100, 5, {
+        let point3 = Matter.Bodies.circle(count * factor, count * factor, 5, {
           isStatic: true,
           render: {
             zIndex: 2000,
