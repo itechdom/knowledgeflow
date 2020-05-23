@@ -186,7 +186,12 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         {/* <NumberTimeline initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <MatterGrid initMatter={initMatter} grid={grid} {...position} /> */}
         {/* <Axes initMatter={initMatter} grid={grid} {...position} /> */}
-        <FunctionGraph initMatter={initMatter} grid={grid} {...position} />
+        <FunctionGraph
+          fn={(count) => count + 1}
+          initMatter={initMatter}
+          grid={grid}
+          {...position}
+        />
       </Grid>
     </Grid>
   );

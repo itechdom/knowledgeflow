@@ -176,6 +176,7 @@ const FunctionGraph = ({
           return clearInterval(interval);
         }
         //render new point
+        console.log(fn(count));
         let point1 = Matter.Bodies.circle(0, count * factor, 5, {
           isStatic: true,
           render: {
