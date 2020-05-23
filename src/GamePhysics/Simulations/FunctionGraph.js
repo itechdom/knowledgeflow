@@ -77,14 +77,14 @@ const FunctionGraph = ({
       }
     );
     let xAxis = Matter.Composites.stack(
-      -45,
+      -40,
       99 * 5,
       20,
       1,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let xAxis = Matter.Bodies.rectangle(x, y, 90, 10, {
+        let xAxis = Matter.Bodies.rectangle(x, y, 90, 30, {
           isStatic: true,
           render: {
             zIndex: 2000,
@@ -102,13 +102,13 @@ const FunctionGraph = ({
     );
     let yAxis = Matter.Composites.stack(
       99 * 5,
-      -45,
+      -40,
       1,
       20,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let yAxis = Matter.Bodies.rectangle(x, y, 10, 90, {
+        let yAxis = Matter.Bodies.rectangle(x, y, 30, 90, {
           isStatic: true,
           render: {
             zIndex: 1000,
@@ -170,6 +170,7 @@ const FunctionGraph = ({
       let count = 0;
       let interval = setInterval(() => {
         count++;
+        console.log(count);
         if (count > rectNumber) {
           return clearInterval(interval);
         }
@@ -188,7 +189,14 @@ const FunctionGraph = ({
             fillStyle: "black",
           },
         });
-        return Matter.World.add(myEngine.world, [point1, point2]);
+        let point3 = Matter.Bodies.circle(count * 100, count * 100, 5, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "black",
+          },
+        });
+        return Matter.World.add(myEngine.world, [point1, point2, point3]);
       }, 500);
     }
   }, [bounds]);
