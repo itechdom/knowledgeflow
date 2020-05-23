@@ -200,8 +200,8 @@ const FunctionGraph = ({
           },
         });
         let point4 = Matter.Bodies.circle(
-          Math.cos(count) * factor + factor * 2,
           Math.sin(count) * factor + factor * 2,
+          Math.cos(count) * factor + factor * 2,
           5,
           {
             isStatic: true,
