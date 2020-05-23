@@ -166,7 +166,7 @@ const FunctionGraph = ({
     //range
     if (bounds.min) {
       let { min, max } = bounds;
-      const factor = 10;
+      const factor = 100;
       const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
       const rectNumber = dim.width / factor;
@@ -200,7 +200,24 @@ const FunctionGraph = ({
             fillStyle: "black",
           },
         });
-        return Matter.World.add(myEngine.world, [point1, point2, point3]);
+        let point4 = Matter.Bodies.circle(
+          Math.cos(Math.PI / count) * factor + 10,
+          Math.sin(Math.PI / count) * factor + 10,
+          5,
+          {
+            isStatic: true,
+            render: {
+              zIndex: 2000,
+              fillStyle: "black",
+            },
+          }
+        );
+        return Matter.World.add(myEngine.world, [
+          // point1,
+          // point2,
+          // point3,
+          point4,
+        ]);
       }, 1000 / 60);
     }
   }, [bounds]);
