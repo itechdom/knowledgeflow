@@ -22,7 +22,7 @@ const FunctionGraph = ({
       "axes",
       "axes-container",
       options,
-      false,
+      true,
       {
         render: {
           zIndex: 100,
