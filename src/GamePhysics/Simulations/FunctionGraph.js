@@ -1,8 +1,24 @@
 import React from "react";
 import Matter from "matter-js";
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { zoom } from "./Camera";
 import Render from "../Matter/Render";
+import { onGridResize } from "./Axes";
+const snapshot = () => {
+  let canvas = document.getElementById("axes");
+  let image = canvas
+    .toDataURL("image/png")
+    .replace("image/png", "image/octet-stream"); // here is the most important part because if you dont replace you will get a DOM 18 exception.
+  window.location.href = image; // it will save locally
+};
+const setBackground = (currentZoom) => {
+  let canvas = document.getElementById("axes");
+  canvas.style.background = `${
+    currentZoom < 0 || currentZoom > 3
+      ? "url('/asssets/game/background-1x.png')"
+      : `url('/assets/game/background-${currentZoom}x.png')`
+  }`;
+};
 const FunctionGraph = ({
   initMatter,
   x,
@@ -18,6 +34,7 @@ const FunctionGraph = ({
   const [myEngine, setMyEngine] = React.useState();
   const [player, setPlayer] = React.useState();
   const [iter, setIter] = React.useState(0);
+  const [currentZoom, setCurrentZoom] = React.useState(1);
   const [bounds, setBounds] = React.useState({});
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
@@ -52,8 +69,8 @@ const FunctionGraph = ({
     });
     player.isPlayer = true;
     let grid = Matter.Composites.stack(
-      5,
-      5,
+      2.5,
+      2.5,
       10,
       10,
       5,
@@ -67,8 +84,8 @@ const FunctionGraph = ({
           angle: 0,
           mass: 0,
           render: {
-            fillStyle: "white",
-            strokeStyle: "black",
+            fillStyle: "black",
+            strokeStyle: "white",
             sprite: {
               // texture: "assets/game/Tiles/tileGrass.png",
             },
@@ -78,6 +95,7 @@ const FunctionGraph = ({
         return circle1;
       }
     );
+    grid.label = "grid";
     let xAxis = Matter.Composites.stack(
       -40,
       99 * 5,
@@ -132,7 +150,8 @@ const FunctionGraph = ({
         fillStyle: "black",
       },
     });
-    Matter.World.add(engine.world, [player, grid, xAxis, yAxis, point]);
+    // setBackground();
+    Matter.World.add(engine.world, []);
     setBounds(render.bounds);
     setPlayer(player);
     setMyEngine({ ...engine, render });
@@ -148,13 +167,35 @@ const FunctionGraph = ({
     } else if (direction === "right") {
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
-      zoom(Render, myEngine.render, -1000, 2000);
+      if (currentZoom < 3) {
+        zoom(
+          Render,
+          myEngine.render,
+          (-currentZoom + 1) * 500,
+          (currentZoom + 1 + 1000) * 500
+        );
+        setCurrentZoom(currentZoom + 1);
+        setBackground(currentZoom + 1);
+      }
+      // let newGrid = onGridResize({ myEngine });
+      // Matter.World.add(myEngine.world, newGrid);
       return Matter.Body.applyForce(
         player,
         { x, y },
         { x: 0, y: -magnitude * 2 }
       );
     } else if (direction === "down") {
+      if (currentZoom > 0) {
+        zoom(
+          Render,
+          myEngine.render,
+          -1 * (currentZoom - 1) * 500,
+          (currentZoom - 1) * 500 + 1000
+        );
+        document.body.style.backgroundImage = "url('img_tree.png')";
+        setCurrentZoom(currentZoom - 1);
+        setBackground(currentZoom - 1);
+      }
       return Matter.Body.applyForce(
         player,
         { x, y },
@@ -166,10 +207,10 @@ const FunctionGraph = ({
     //range
     if (bounds.min) {
       let { min, max } = bounds;
-      const factor = 100;
+      const factor = 10;
       const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
-      const rectNumber = factor;
+      const rectNumber = dim.width / factor;
       //animate the graph now
       let count = 0;
       let interval = setInterval(() => {
@@ -207,14 +248,14 @@ const FunctionGraph = ({
             isStatic: true,
             render: {
               zIndex: 2000,
-              fillStyle: "black",
+              fillStyle: "white",
             },
           }
         );
         return Matter.World.add(myEngine.world, [
-          point1,
-          point2,
-          point3,
+          // point1,
+          // point2,
+          // point3,
           point4,
         ]);
       }, 250);
@@ -223,7 +264,7 @@ const FunctionGraph = ({
   React.useEffect(() => {
     init({
       wireframes: false,
-      background: "#FFF",
+      background: "url('/assets/game/background-1x.png')",
       showAngleIndicator: false,
       width: 1000,
       height: 1000,
@@ -233,7 +274,8 @@ const FunctionGraph = ({
     <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
       <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
-          <canvas style={{ fontSize: "24px" }} id="axes"></canvas>
+          <canvas id="axes"></canvas>
+          <Button onClick={() => snapshot()}>snapshot</Button>
         </Grid>
       </Grid>
     </Grid>
