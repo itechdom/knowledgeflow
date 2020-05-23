@@ -13,9 +13,10 @@ const snapshot = () => {
 };
 const setBackground = (currentZoom) => {
   let canvas = document.getElementById("axes");
+  console.log(currentZoom);
   canvas.style.background = `${
-    currentZoom < 0 || currentZoom > 3
-      ? "url('/asssets/game/background-1x.png')"
+    currentZoom <= 0 || currentZoom > 3
+      ? "url('/assets/game/background-1x.png')"
       : `url('/assets/game/background-${currentZoom}x.png')`
   }`;
 };
@@ -151,7 +152,7 @@ const FunctionGraph = ({
       },
     });
     // setBackground();
-    Matter.World.add(engine.world, []);
+    Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds(render.bounds);
     setPlayer(player);
     setMyEngine({ ...engine, render });
@@ -171,8 +172,8 @@ const FunctionGraph = ({
         zoom(
           Render,
           myEngine.render,
-          (-currentZoom + 1) * 500,
-          (currentZoom + 1 + 1000) * 500
+          -currentZoom * 1000,
+          currentZoom * 1000 + 1000
         );
         setCurrentZoom(currentZoom + 1);
         setBackground(currentZoom + 1);
@@ -189,8 +190,8 @@ const FunctionGraph = ({
         zoom(
           Render,
           myEngine.render,
-          -1 * (currentZoom - 1) * 500,
-          (currentZoom - 1) * 500 + 1000
+          -1 * (currentZoom - 1) * 1000,
+          (currentZoom - 1) * 1000 + 1000
         );
         document.body.style.backgroundImage = "url('img_tree.png')";
         setCurrentZoom(currentZoom - 1);
