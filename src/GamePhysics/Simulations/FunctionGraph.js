@@ -169,12 +169,11 @@ const FunctionGraph = ({
       const factor = 100;
       const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
-      const rectNumber = dim.width / factor;
+      const rectNumber = factor;
       //animate the graph now
       let count = 0;
       let interval = setInterval(() => {
         count++;
-        console.log(count);
         if (count > rectNumber) {
           return clearInterval(interval);
         }
@@ -201,8 +200,8 @@ const FunctionGraph = ({
           },
         });
         let point4 = Matter.Bodies.circle(
-          Math.cos(Math.PI / count) * factor + 10,
-          Math.sin(Math.PI / count) * factor + 10,
+          Math.cos(count) * factor + factor * 2,
+          Math.sin(count) * factor + factor * 2,
           5,
           {
             isStatic: true,
@@ -213,9 +212,9 @@ const FunctionGraph = ({
           }
         );
         return Matter.World.add(myEngine.world, [
-          // point1,
-          // point2,
-          // point3,
+          point1,
+          point2,
+          point3,
           point4,
         ]);
       }, 1000 / 60);
