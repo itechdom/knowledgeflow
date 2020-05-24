@@ -58,7 +58,7 @@ const FunctionGraph = ({
       }
     );
     let player = Matter.Bodies.circle(400, 100, 50, {
-      restitution: 1,
+      restitution: 0.9,
       render: {
         zIndex: 9000,
         // sprite: {
@@ -190,7 +190,7 @@ const FunctionGraph = ({
       return;
     }
     const { x, y } = player.position;
-    const magnitude = 0.1;
+    const magnitude = 0.09;
     if (direction === "left") {
       return Matter.Body.applyForce(player, { x, y }, { x: -magnitude, y: 0 });
     } else if (direction === "right") {
