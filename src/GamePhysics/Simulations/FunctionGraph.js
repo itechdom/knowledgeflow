@@ -160,9 +160,10 @@ const FunctionGraph = ({
     });
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${player.position.x.toFixed(2)},${player.position.y.toFixed(
-          2
-        )}`,
+        content: `${((player.position.x - origin) / 100).toFixed(2)},${(
+          (-1 * (player.position.y - origin)) /
+          100
+        ).toFixed(2)}`,
       };
       // if (
       //   render.bounds.min.x > player.position.x ||
@@ -203,7 +204,7 @@ const FunctionGraph = ({
         //   currentZoom * 1000 + 1000
         // );
         setCurrentZoom(currentZoom + 1);
-        setBackground(currentZoom + 1);
+        // setBackground(currentZoom + 1);
         setBounds({ ...myEngine.render.bounds });
       }
       // let newGrid = onGridResize({ myEngine });
@@ -222,7 +223,7 @@ const FunctionGraph = ({
         //   (currentZoom - 1) * 1000 + 1000
         // );
         setCurrentZoom(currentZoom - 1);
-        setBackground(currentZoom - 1);
+        // setBackground(currentZoom - 1);
         setBounds({ ...myEngine.render.bounds });
       }
       return Matter.Body.applyForce(
@@ -236,10 +237,6 @@ const FunctionGraph = ({
     //range
     if (bounds.min) {
       let { min, max } = bounds;
-      console.log(
-        myEngine.world.composites.find((comp) => comp.label === "xAxis")
-      );
-      const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
       const rectNumber = dim.width / factor;
       //animate the graph now
@@ -252,7 +249,7 @@ const FunctionGraph = ({
         let point4 = Matter.Bodies.circle(
           getCartesianCoords(count),
           getCartesianCoords(-1 * Math.sin(count)),
-          15,
+          20,
           {
             isStatic: true,
             render: {
@@ -269,7 +266,7 @@ const FunctionGraph = ({
         let point5 = Matter.Bodies.circle(
           getCartesianCoords(count),
           getCartesianCoords(-1 * Math.cos(count)),
-          5,
+          20,
           {
             isStatic: true,
             render: {
@@ -290,10 +287,11 @@ const FunctionGraph = ({
   React.useEffect(() => {
     init({
       wireframes: false,
-      background: "url('/assets/game/background-1x.png')",
+      // background: "url('/assets/game/background-1x.png')",
+      background: "#000000",
       showAngleIndicator: false,
-      width: 1000,
-      height: 1000,
+      width: 2000,
+      height: 2000,
     });
   }, []);
   return (

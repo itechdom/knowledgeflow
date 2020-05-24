@@ -772,7 +772,6 @@ Render.bodies = function (render, bodies, context) {
         c.font = fontsize + "px " + fontfamily;
         c.fillText(content, part.position.x, part.position.y);
       }
-
       c.globalAlpha = 1;
     }
   }
