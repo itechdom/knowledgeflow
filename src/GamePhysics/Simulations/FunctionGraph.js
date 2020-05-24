@@ -4,7 +4,7 @@ import { Grid, Button } from "@material-ui/core";
 import { zoom } from "./Camera";
 import Render from "../Matter/Render";
 import { onGridResize } from "./Axes";
-const origin = 99 * 5;
+const origin = 100 * 5;
 const snapshot = () => {
   let canvas = document.getElementById("axes");
   let image = canvas
@@ -99,14 +99,14 @@ const FunctionGraph = ({
     );
     grid.label = "grid";
     let xAxis = Matter.Composites.stack(
-      -40,
+      -45,
       origin,
       20,
       1,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let xAxis = Matter.Bodies.rectangle(x, y, 90, 30, {
+        let xAxis = Matter.Bodies.rectangle(x, y, 90, 20, {
           isStatic: true,
           render: {
             zIndex: 2000,
@@ -125,13 +125,13 @@ const FunctionGraph = ({
     xAxis.label = "xAxis";
     let yAxis = Matter.Composites.stack(
       origin,
-      -40,
+      -45,
       1,
       20,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let yAxis = Matter.Bodies.rectangle(x, y, 30, 90, {
+        let yAxis = Matter.Bodies.rectangle(x, y, 20, 90, {
           isStatic: true,
           render: {
             zIndex: 1000,
@@ -229,7 +229,7 @@ const FunctionGraph = ({
         let point4 = Matter.Bodies.circle(
           count * factor + origin,
           -1 * Math.sin(count) * factor + origin,
-          25,
+          15,
           {
             isStatic: true,
             render: {
@@ -243,7 +243,6 @@ const FunctionGraph = ({
             },
           }
         );
-        console.log(point4.position);
         let point5 = Matter.Bodies.circle(
           count * factor + origin,
           Math.cos(count) * factor + origin,
