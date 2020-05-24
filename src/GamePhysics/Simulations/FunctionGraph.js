@@ -220,7 +220,7 @@ const FunctionGraph = ({
       const dim = { width: max.x, height: max.y };
       const rectNumber = dim.width / factor;
       //animate the graph now
-      let count = 0;
+      let count = -6;
       let interval = setInterval(() => {
         count++;
         if (count > rectNumber) {
@@ -228,7 +228,7 @@ const FunctionGraph = ({
         }
         let point4 = Matter.Bodies.circle(
           count * factor + origin,
-          Math.sin(count) * factor + origin,
+          -1 * Math.sin(count) * factor + origin,
           25,
           {
             isStatic: true,
@@ -243,6 +243,7 @@ const FunctionGraph = ({
             },
           }
         );
+        console.log(point4.position);
         let point5 = Matter.Bodies.circle(
           count * factor + origin,
           Math.cos(count) * factor + origin,
