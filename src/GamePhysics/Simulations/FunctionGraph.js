@@ -69,6 +69,7 @@ const FunctionGraph = ({
       },
     });
     player.isPlayer = true;
+    //reference frame
     let grid = Matter.Composites.stack(
       2.5,
       2.5,
