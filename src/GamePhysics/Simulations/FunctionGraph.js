@@ -154,7 +154,6 @@ const FunctionGraph = ({
         fillStyle: "black",
       },
     });
-    // setBackground();
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });
     setPlayer(player);
@@ -260,7 +259,7 @@ const FunctionGraph = ({
             },
           }
         );
-        return Matter.World.add(myEngine.world, [point4]);
+        return Matter.World.add(myEngine.world, [point4, point5]);
       }, 250);
     }
   }, [bounds]);
