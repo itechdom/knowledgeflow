@@ -5,6 +5,7 @@ import { zoom } from "./Camera";
 import Render from "../Matter/Render";
 import { onGridResize } from "./Axes";
 const origin = 100 * 5;
+const factor = 100;
 const snapshot = () => {
   let canvas = document.getElementById("axes");
   let image = canvas
@@ -19,6 +20,9 @@ const setBackground = (currentZoom) => {
       ? "url('/assets/game/background-1x.png')"
       : `url('/assets/game/background-${currentZoom}x.png')`
   }`;
+};
+const getCartesianCoords = (val) => {
+  return val * factor + origin;
 };
 const FunctionGraph = ({
   initMatter,
@@ -106,14 +110,14 @@ const FunctionGraph = ({
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let xAxis = Matter.Bodies.rectangle(x, y, 90, 20, {
+        let xAxis = Matter.Bodies.rectangle(x, y, 90, 10, {
           isStatic: true,
           render: {
             zIndex: 2000,
             fillStyle: "red",
             text: {
               content: `${i - 5}`,
-              size: 22,
+              size: 18,
               color: "#FFF",
               family: "Ariel",
             },
@@ -131,14 +135,14 @@ const FunctionGraph = ({
       10,
       10,
       (x, y, column, row, lastBody, i) => {
-        let yAxis = Matter.Bodies.rectangle(x, y, 20, 90, {
+        let yAxis = Matter.Bodies.rectangle(x, y, 10, 90, {
           isStatic: true,
           render: {
             zIndex: 1000,
             fillStyle: "red",
             text: {
               content: `${5 - i}`,
-              size: 22,
+              size: 18,
               color: "#FFF",
             },
           },
@@ -153,6 +157,27 @@ const FunctionGraph = ({
         zIndex: 2000,
         fillStyle: "black",
       },
+    });
+    Matter.Events.on(engine, "beforeUpdate", () => {
+      player.render.text = {
+        content: `${player.position.x.toFixed(2)},${player.position.y.toFixed(
+          2
+        )}`,
+      };
+      // if (
+      //   render.bounds.min.x > player.position.x ||
+      //   render.bounds.min.y > player.position.y ||
+      //   player.position.x > render.bounds.max.x ||
+      //   player.position.y > render.bounds.max.y
+      // ) {
+      Render.lookAt(render, {
+        min: { x: player.position.x - 500, y: player.position.y - 500 },
+        max: {
+          x: player.position.x + 500,
+          y: player.position.y + 500,
+        },
+      });
+      // }
     });
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });
@@ -171,12 +196,12 @@ const FunctionGraph = ({
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
       if (currentZoom < 3) {
-        zoom(
-          Render,
-          myEngine.render,
-          -currentZoom * 1000,
-          currentZoom * 1000 + 1000
-        );
+        // zoom(
+        //   Render,
+        //   myEngine.render,
+        //   -currentZoom * 1000,
+        //   currentZoom * 1000 + 1000
+        // );
         setCurrentZoom(currentZoom + 1);
         setBackground(currentZoom + 1);
         setBounds({ ...myEngine.render.bounds });
@@ -190,12 +215,12 @@ const FunctionGraph = ({
       );
     } else if (direction === "down") {
       if (currentZoom > 0) {
-        zoom(
-          Render,
-          myEngine.render,
-          -1 * (currentZoom - 1) * 1000,
-          (currentZoom - 1) * 1000 + 1000
-        );
+        // zoom(
+        //   Render,
+        //   myEngine.render,
+        //   -1 * (currentZoom - 1) * 1000,
+        //   (currentZoom - 1) * 1000 + 1000
+        // );
         setCurrentZoom(currentZoom - 1);
         setBackground(currentZoom - 1);
         setBounds({ ...myEngine.render.bounds });
@@ -214,7 +239,6 @@ const FunctionGraph = ({
       console.log(
         myEngine.world.composites.find((comp) => comp.label === "xAxis")
       );
-      const factor = 100;
       const position = { x: min.x, y: min.y };
       const dim = { width: max.x, height: max.y };
       const rectNumber = dim.width / factor;
@@ -226,8 +250,8 @@ const FunctionGraph = ({
           return clearInterval(interval);
         }
         let point4 = Matter.Bodies.circle(
-          count * factor + origin,
-          -1 * Math.sin(count) * factor + origin,
+          getCartesianCoords(count),
+          getCartesianCoords(-1 * Math.sin(count)),
           15,
           {
             isStatic: true,
@@ -243,8 +267,8 @@ const FunctionGraph = ({
           }
         );
         let point5 = Matter.Bodies.circle(
-          count * factor + origin,
-          Math.cos(count) * factor + origin,
+          getCartesianCoords(count),
+          getCartesianCoords(-1 * Math.cos(count)),
           5,
           {
             isStatic: true,
@@ -276,7 +300,7 @@ const FunctionGraph = ({
     <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
       <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
-          <canvas onMouseMove={(e) => console.log(e)} id="axes"></canvas>
+          <canvas id="axes"></canvas>
           <Button onClick={() => snapshot()}>snapshot</Button>
         </Grid>
       </Grid>
