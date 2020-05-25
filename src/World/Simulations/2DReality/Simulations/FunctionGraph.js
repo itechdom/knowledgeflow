@@ -102,9 +102,9 @@ const FunctionGraph = ({
     );
     grid.label = "grid";
     let xAxis = Matter.Composites.stack(
-      -45,
+      -100 * 10 + 50,
       origin,
-      20,
+      28,
       1,
       10,
       10,
@@ -115,10 +115,9 @@ const FunctionGraph = ({
             zIndex: 2000,
             fillStyle: "red",
             text: {
-              content: `${i - 5}`,
+              content: `${i - 14}`,
               size: 18,
               color: "#FFF",
-              family: "Ariel",
             },
           },
         });
@@ -128,9 +127,9 @@ const FunctionGraph = ({
     xAxis.label = "xAxis";
     let yAxis = Matter.Composites.stack(
       origin,
-      -45,
+      -100 * 10 + 50,
       1,
-      20,
+      28,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
@@ -140,7 +139,7 @@ const FunctionGraph = ({
             zIndex: 1000,
             fillStyle: "red",
             text: {
-              content: `${5 - i}`,
+              content: `${14 - i}`,
               size: 18,
               color: "#FFF",
             },
