@@ -4,6 +4,7 @@ import { Grid, Button } from "@material-ui/core";
 import { zoom } from "./Camera";
 import Render from "../Matter/Render";
 import { onGridResize } from "./Axes";
+// import Gravitation from "./Gravitation";
 const origin = 100 * 5;
 const factor = 100;
 const snapshot = () => {
@@ -282,6 +283,17 @@ const FunctionGraph = ({
       <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
           <canvas id="axes"></canvas>
+          {/* {myEngine && (
+            <Gravitation
+              initMatter={() => {
+                return {
+                  engine: myEngine,
+                  Render: Render,
+                  render: myEngine.render,
+                };
+              }}
+            />
+          )} */}
           <Button onClick={() => snapshot()}>snapshot</Button>
         </Grid>
       </Grid>
