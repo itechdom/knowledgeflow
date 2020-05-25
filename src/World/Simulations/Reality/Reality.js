@@ -163,10 +163,12 @@ export default class Simulation extends Component {
     // this.scene.fog = new THREE.Fog(0xe0e0e0, 20, 100);
     this.scene.add(this.camera);
     const can = document.getElementById(canvasId || "three-canvas");
+    console.log(can, "can");
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
+      canvas: can,
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
+    this.renderer.setSize(800, 500);
     // var controls = new THREE.DragControls(this.compass, camera, renderer.domElement);
     // // add event listener to highlight dragged objects
     // controls.addEventListener("dragstart", function (event) {
@@ -176,7 +178,6 @@ export default class Simulation extends Component {
     //   event.object.material.emissive.set(0x000000);
     // });
     // this.synth = new Tone.FMSynth().toMaster();
-    can.appendChild(this.renderer.domElement);
   }
 
   drawSkybox = (ax, ay, bx, by, increase) => {};
@@ -324,11 +325,21 @@ export default class Simulation extends Component {
 
   render() {
     return (
-      <div id="three-canvas">
+      <div
+        id={
+          this.props.canvasId
+            ? this.props.canvasId + "-container"
+            : "three-canvas-container"
+        }
+      >
         <KeyboardEventHandler
           handleKeys={["all"]}
           onKeyEvent={(key, e) => this.onKeyPress(key)}
         />
+        <canvas
+          style={{ position: "relative", bottom: "2000px" }}
+          id={this.props.canvasId || "three-canvas"}
+        ></canvas>
       </div>
     );
   }
