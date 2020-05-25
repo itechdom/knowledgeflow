@@ -135,6 +135,7 @@ const FunctionGraph = ({
       (x, y, column, row, lastBody, i) => {
         let yAxis = Matter.Bodies.rectangle(x, y, 10, 90, {
           isStatic: true,
+          isSensor: true,
           render: {
             zIndex: 1000,
             fillStyle: "red",
