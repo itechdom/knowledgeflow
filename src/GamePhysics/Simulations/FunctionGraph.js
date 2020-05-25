@@ -29,11 +29,9 @@ const FunctionGraph = ({
   x,
   y,
   direction,
-  showX,
-  showY,
   width,
   height,
-  fn,
+  funcs,
   ...rest
 }) => {
   const [myEngine, setMyEngine] = React.useState();
@@ -160,10 +158,10 @@ const FunctionGraph = ({
     });
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${((player.position.x - origin) / 100).toFixed(2)},${(
+        content: `${((player.position.x - origin) / 100).toFixed(0)},${(
           (-1 * (player.position.y - origin)) /
           100
-        ).toFixed(2)}`,
+        ).toFixed(0)}`,
       };
       // if (
       //   render.bounds.min.x > player.position.x ||
@@ -246,41 +244,26 @@ const FunctionGraph = ({
         if (count > rectNumber) {
           return clearInterval(interval);
         }
-        let point4 = Matter.Bodies.circle(
-          getCartesianCoords(count),
-          getCartesianCoords(-1 * Math.sin(count)),
-          20,
-          {
-            isStatic: true,
-            render: {
-              zIndex: 3000,
-              fillStyle: "black",
-              text: {
-                content: `${count} , ${Math.sin(count).toFixed(2)}`,
-                size: 12,
-                color: "#FFF",
+        funcs.map((func) => {
+          let point = Matter.Bodies.circle(
+            getCartesianCoords(count),
+            getCartesianCoords(-1 * func(count)),
+            20,
+            {
+              isStatic: true,
+              render: {
+                zIndex: 3000,
+                fillStyle: "yellow",
+                text: {
+                  content: `${Math.cos(count).toFixed(2)}`,
+                  size: 12,
+                  color: "#FFF",
+                },
               },
-            },
-          }
-        );
-        let point5 = Matter.Bodies.circle(
-          getCartesianCoords(count),
-          getCartesianCoords(-1 * Math.cos(count)),
-          20,
-          {
-            isStatic: true,
-            render: {
-              zIndex: 3000,
-              fillStyle: "yellow",
-              text: {
-                content: `${Math.cos(count).toFixed(2)}`,
-                size: 12,
-                color: "#FFF",
-              },
-            },
-          }
-        );
-        return Matter.World.add(myEngine.world, [point4, point5]);
+            }
+          );
+          return Matter.World.add(myEngine.world, point);
+        });
       }, 250);
     }
   }, [bounds]);
