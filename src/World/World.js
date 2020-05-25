@@ -2,8 +2,8 @@ import React from "react";
 import { styles } from "./World.styles.js";
 import theme from "Theme";
 import { withStyles, Button } from "@material-ui/core";
-import { Game as PhysicsGame } from "./Games/GamePhysics/GamePhysics";
-import { GameState as PhysicsGameState } from "./Games/GamePhysics/GamePhysics.state";
+import { Game as PhysicsGame } from "./Simulations/2DReality/GamePhysics";
+import { GameState as PhysicsGameState } from "./Simulations/2DReality/GamePhysics.state";
 import { Grid } from "@material-ui/core";
 const World = ({
   knowledge,

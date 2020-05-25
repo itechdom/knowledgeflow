@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import * as THREE from "three";
 import * as Tone from "tone";
 import KeyboardEventHandler from "react-keyboard-event-handler";
-import ModelLoader from "../ModelLoader/ModelLoader";
+import ModelLoader from "./ModelLoader/ModelLoader";
 import Physijs from "physijs-webpack";
 
 export default class Simulation extends Component {
@@ -136,7 +136,7 @@ export default class Simulation extends Component {
     }
   }
 
-  init() {
+  init(canvasId) {
     Element.prototype.remove = function () {
       this.parentElement.removeChild(this);
     };
@@ -162,7 +162,7 @@ export default class Simulation extends Component {
     this.scene.background = new THREE.Color(0xe0e0e0);
     // this.scene.fog = new THREE.Fog(0xe0e0e0, 20, 100);
     this.scene.add(this.camera);
-    const can = document.getElementById("three-canvas");
+    const can = document.getElementById(canvasId || "three-canvas");
     this.renderer = new THREE.WebGLRenderer({
       antialias: true,
     });
@@ -283,7 +283,7 @@ export default class Simulation extends Component {
   }
 
   componentDidMount() {
-    this.init();
+    this.init(this.props.canvasId);
     this.then = Date.now();
     const fps = 60;
     this.fpsInterval = 1000 / fps;
@@ -315,7 +315,9 @@ export default class Simulation extends Component {
   }
 
   componentWillUnmount() {
-    this.canvas = document.getElementById("three-canvas");
+    this.canvas = document.getElementById(
+      this.props.canvasId || "three-canvas"
+    );
     this.canvas.remove();
     window.cancelAnimationFrame(this.requestId);
   }
