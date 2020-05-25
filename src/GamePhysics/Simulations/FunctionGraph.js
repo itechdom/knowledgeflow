@@ -171,10 +171,13 @@ const FunctionGraph = ({
       //   player.position.y > render.bounds.max.y
       // ) {
       Render.lookAt(render, {
-        min: { x: player.position.x - 500, y: player.position.y - 500 },
+        min: {
+          x: player.position.x - 1000 * currentZoom,
+          y: player.position.y - 1000 * currentZoom,
+        },
         max: {
-          x: player.position.x + 500,
-          y: player.position.y + 500,
+          x: player.position.x + 1000 * currentZoom,
+          y: player.position.y + 1000 * currentZoom,
         },
       });
       // }
@@ -196,12 +199,6 @@ const FunctionGraph = ({
       return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
     } else if (direction === "up") {
       if (currentZoom < 3) {
-        // zoom(
-        //   Render,
-        //   myEngine.render,
-        //   -currentZoom * 1000,
-        //   currentZoom * 1000 + 1000
-        // );
         setCurrentZoom(currentZoom + 1);
         // setBackground(currentZoom + 1);
         setBounds({ ...myEngine.render.bounds });
@@ -215,12 +212,6 @@ const FunctionGraph = ({
       );
     } else if (direction === "down") {
       if (currentZoom > 0) {
-        // zoom(
-        //   Render,
-        //   myEngine.render,
-        //   -1 * (currentZoom - 1) * 1000,
-        //   (currentZoom - 1) * 1000 + 1000
-        // );
         setCurrentZoom(currentZoom - 1);
         // setBackground(currentZoom - 1);
         setBounds({ ...myEngine.render.bounds });
