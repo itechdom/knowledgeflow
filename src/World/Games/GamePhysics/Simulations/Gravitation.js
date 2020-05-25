@@ -18,7 +18,7 @@ const Pendulum = ({ engine, x, y, direction, initMatter, onUpdate }) => {
   const [myEngine, setMyEngine] = React.useState();
   React.useEffect(() => {
     const { engine } = initMatter("gravitation", "gravitation-container");
-    engine.world.gravity.y = 0;
+    // engine.world.gravity.y = 0;
     let circle1 = Matter.Bodies.circle(100, 100, 100);
     let circle2 = Matter.Bodies.circle(200, 200, 50);
     let circle3 = Matter.Bodies.circle(200, 200, 25);

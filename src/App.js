@@ -42,7 +42,7 @@ import Register from "./Register/Register";
 import Login from "./Login/Login";
 import Profile from "./Profile/Profile";
 import Admin from "./Admin/Admin";
-import Physics from "./Physics/Physics";
+import World from "./World/World";
 import theme from "./theme";
 import { styles } from "Styles";
 import { withStyles, ThemeProvider } from "@material-ui/core/styles";
@@ -1067,7 +1067,7 @@ class App extends React.Component {
                                   crudDomainStore={rootStore.crudDomainStore}
                                   render={(props) => {
                                     return (
-                                      <Physics
+                                      <World
                                         location={this.props.location}
                                         currentTags={this.state.tags}
                                         selected={this.state.selected}

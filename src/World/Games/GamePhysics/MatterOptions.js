@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@material-ui/core";
-import CheckboxInput from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.CheckboxInput";
-import TextFieldInput from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
+import CheckboxInput from "../../../orbital-templates/Material/_shared/Forms/Inputs/Forms.CheckboxInput";
+import TextFieldInput from "../../../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 const MatterOptions = ({ init, myEngine }) => {
   const [options, setOptions] = React.useState({
     showAngleIndicator: false,

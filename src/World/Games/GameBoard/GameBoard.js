@@ -13,7 +13,7 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import TextField from "../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
+import TextField from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 import assets from "./assets";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,

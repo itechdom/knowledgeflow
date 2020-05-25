@@ -1,8 +1,8 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid } from "@material-ui/core";
-import CheckboxInput from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.CheckboxInput";
-import TextFieldInput from "../../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
+import CheckboxInput from "../../../../orbital-templates/Material/_shared/Forms/Inputs/Forms.CheckboxInput";
+import TextFieldInput from "../../../../orbital-templates/Material/_shared/Forms/Inputs/Forms.TextFieldInput";
 
 const Math = ({ engine, x, y, direction, initMatter, onUpdate }) => {
   const [myEngine, setMyEngine] = React.useState();
