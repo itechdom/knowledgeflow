@@ -279,23 +279,20 @@ const FunctionGraph = ({
           return clearInterval(interval);
         }
         funcs.map((func) => {
-          let point = Matter.Bodies.circle(
-            getCartesianCoords(count),
-            getCartesianCoords(-1 * func(count)),
-            20,
-            {
-              isStatic: true,
-              render: {
-                zIndex: 3000,
-                fillStyle: "yellow",
-                text: {
-                  content: `${Math.cos(count).toFixed(2)}`,
-                  size: 12,
-                  color: "#FFF",
-                },
+          let x = getCartesianCoords(count);
+          let y = getCartesianCoords(-1 * func(count));
+          let point = Matter.Bodies.circle(x, y, 20, {
+            isStatic: true,
+            render: {
+              zIndex: 3000,
+              fillStyle: "black",
+              text: {
+                content: `${func(count).toFixed(1)}`,
+                size: 12,
+                color: "#FFF",
               },
-            }
-          );
+            },
+          });
           return Matter.World.add(myEngine.world, point);
         });
       }, 100);
