@@ -7,6 +7,9 @@ import { onGridResize } from "./Axes";
 import Gravitation from "./Gravitation";
 const origin = 100 * 5;
 const factor = 100;
+let playerRef;
+let rangeX;
+let rangeY;
 const snapshot = () => {
   let canvas = document.getElementById("axes");
   let image = canvas
@@ -24,6 +27,36 @@ const setBackground = (currentZoom) => {
 };
 const getCartesianCoords = (val) => {
   return val * factor + origin;
+};
+const checkBoundsX = (render) => {
+  let rangeMin = (rangeX && rangeX[0]) || -13;
+  let rangeMax = (rangeX && rangeX[1]) || 13;
+  let boundMin = render.bounds.min.x;
+  let boundMax = render.bounds.max.x;
+  let newBoundMin = Math.ceil(boundMin / factor);
+  let newBoundMax = Math.ceil(boundMax / factor);
+  if (newBoundMin < rangeMin) {
+    rangeX = [newBoundMin, rangeMax];
+  }
+  if (newBoundMax > rangeMax) {
+    rangeX = [rangeMin, newBoundMax];
+  }
+};
+const checkBoundsY = (render) => {
+  let rangeMin = (rangeY && rangeY[0]) || -14;
+  let rangeMax = (rangeY && rangeY[1]) || 14;
+  let boundMin = render.bounds.min.y;
+  let boundMax = render.bounds.max.y;
+  let newBoundMin = Math.ceil(boundMin / factor);
+  let newBoundMax = Math.ceil(boundMax / factor);
+  if (newBoundMin < rangeMin) {
+    console.log("maxY");
+    rangeY = [newBoundMin, rangeMax];
+  }
+  if (newBoundMax > rangeMax) {
+    console.log("maxY");
+    rangeY = [rangeMin, newBoundMax];
+  }
 };
 const FunctionGraph = ({
   initMatter,
@@ -71,6 +104,7 @@ const FunctionGraph = ({
         // },
       },
     });
+    playerRef = player;
     player.isPlayer = true;
     //reference frame
     let grid = Matter.Composites.stack(
@@ -159,28 +193,23 @@ const FunctionGraph = ({
     });
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${((player.position.x - origin) / 100).toFixed(0)},${(
+        content: `${((player.position.x - origin) / 100).toFixed(1)},${(
           (-1 * (player.position.y - origin)) /
           100
-        ).toFixed(0)}`,
+        ).toFixed(1)}`,
       };
-      // if (
-      //   render.bounds.min.x > player.position.x ||
-      //   render.bounds.min.y > player.position.y ||
-      //   player.position.x > render.bounds.max.x ||
-      //   player.position.y > render.bounds.max.y
-      // ) {
       Render.lookAt(render, {
         min: {
-          x: player.position.x - 1000 * currentZoom,
-          y: player.position.y - 1000 * currentZoom,
+          x: player.position.x - 500 * currentZoom,
+          y: player.position.y - 500 * currentZoom,
         },
         max: {
-          x: player.position.x + 1000 * currentZoom,
-          y: player.position.y + 1000 * currentZoom,
+          x: player.position.x + 500 * currentZoom,
+          y: player.position.y + 500 * currentZoom,
         },
       });
-      // }
+      checkBoundsX(render);
+      checkBoundsY(render);
     });
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });

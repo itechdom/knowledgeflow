@@ -50,7 +50,7 @@ const World = ({
       <Grid md={12} item>
         <PhysicsGameState>
           <PhysicsGame></PhysicsGame>
-          <Reality canvasId="3d" />
+          {/* <Reality canvasId="3d" /> */}
         </PhysicsGameState>
       </Grid>
     </Grid>
