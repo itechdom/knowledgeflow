@@ -28,7 +28,7 @@ const setBackground = (currentZoom) => {
 const getCartesianCoords = (val) => {
   return val * factor + origin;
 };
-const checkBoundsX = (render) => {
+const checkBoundsX = (render, onExpansion) => {
   let rangeMin = (rangeX && rangeX[0]) || -13;
   let rangeMax = (rangeX && rangeX[1]) || 13;
   let boundMin = render.bounds.min.x;
@@ -37,12 +37,14 @@ const checkBoundsX = (render) => {
   let newBoundMax = Math.ceil(boundMax / factor);
   if (newBoundMin < rangeMin) {
     rangeX = [newBoundMin, rangeMax];
+    onExpansion(rangeX);
   }
   if (newBoundMax > rangeMax) {
     rangeX = [rangeMin, newBoundMax];
+    onExpansion(rangeX);
   }
 };
-const checkBoundsY = (render) => {
+const checkBoundsY = (render, onExpansion) => {
   let rangeMin = (rangeY && rangeY[0]) || -14;
   let rangeMax = (rangeY && rangeY[1]) || 14;
   let boundMin = render.bounds.min.y;
@@ -50,12 +52,12 @@ const checkBoundsY = (render) => {
   let newBoundMin = Math.ceil(boundMin / factor);
   let newBoundMax = Math.ceil(boundMax / factor);
   if (newBoundMin < rangeMin) {
-    console.log("maxY");
     rangeY = [newBoundMin, rangeMax];
+    onExpansion(rangeX);
   }
   if (newBoundMax > rangeMax) {
-    console.log("maxY");
     rangeY = [rangeMin, newBoundMax];
+    onExpansion(rangeX);
   }
 };
 const FunctionGraph = ({
@@ -208,8 +210,18 @@ const FunctionGraph = ({
           y: player.position.y + 500 * currentZoom,
         },
       });
-      checkBoundsX(render);
-      checkBoundsY(render);
+      checkBoundsX(render, (newBounds) => {
+        setBounds({
+          min: { x: getCartesianCoords(newBounds[0]), y: render.bounds.min.y },
+          max: { x: getCartesianCoords(newBounds[1]), y: render.bounds.max.y },
+        });
+      });
+      checkBoundsY(render, () => {
+        setBounds({
+          min: { y: getCartesianCoords(newBounds[0]), x: render.bounds.min.x },
+          max: { y: getCartesianCoords(newBounds[1]), x: render.bounds.max.x },
+        });
+      });
     });
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });
@@ -252,6 +264,7 @@ const FunctionGraph = ({
       );
     }
   }, [direction, x, y]);
+  //this effect will draw only when the boundries change
   React.useEffect(() => {
     //range
     if (bounds.min) {
@@ -285,7 +298,7 @@ const FunctionGraph = ({
           );
           return Matter.World.add(myEngine.world, point);
         });
-      }, 250);
+      }, 100);
     }
   }, [bounds]);
   React.useEffect(() => {
