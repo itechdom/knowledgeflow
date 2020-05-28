@@ -7,9 +7,17 @@ import { onGridResize } from "./Axes";
 import Gravitation from "./Gravitation";
 const origin = 100 * 5;
 const factor = 100;
+let interval;
 let playerRef;
 let rangeX;
 let rangeY;
+function usePrevious(value) {
+  const ref = React.useRef();
+  React.useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
 const snapshot = () => {
   let canvas = document.getElementById("axes");
   let image = canvas
@@ -25,7 +33,7 @@ const setBackground = (currentZoom) => {
       : `url('/assets/game/background-${currentZoom}x.png')`
   }`;
 };
-const getCartesianCoords = (val) => {
+const cartesian = (val) => {
   return val * factor + origin;
 };
 const checkBoundsX = (render, onExpansion) => {
@@ -53,11 +61,11 @@ const checkBoundsY = (render, onExpansion) => {
   let newBoundMax = Math.ceil(boundMax / factor);
   if (newBoundMin < rangeMin) {
     rangeY = [newBoundMin, rangeMax];
-    onExpansion(rangeX);
+    onExpansion(rangeY);
   }
   if (newBoundMax > rangeMax) {
     rangeY = [rangeMin, newBoundMax];
-    onExpansion(rangeX);
+    onExpansion(rangeY);
   }
 };
 const FunctionGraph = ({
@@ -75,6 +83,7 @@ const FunctionGraph = ({
   const [iter, setIter] = React.useState(0);
   const [currentZoom, setCurrentZoom] = React.useState(1);
   const [bounds, setBounds] = React.useState({});
+  const prevBounds = usePrevious(bounds);
   const init = (options) => {
     const { engine, mouse, render, Render } = initMatter(
       "axes",
@@ -210,16 +219,17 @@ const FunctionGraph = ({
           y: player.position.y + 500 * currentZoom,
         },
       });
+      //check if we exceed the x axis
       checkBoundsX(render, (newBounds) => {
         setBounds({
-          min: { x: getCartesianCoords(newBounds[0]), y: render.bounds.min.y },
-          max: { x: getCartesianCoords(newBounds[1]), y: render.bounds.max.y },
+          min: { x: cartesian(newBounds[0]), y: render.bounds.min.y },
+          max: { x: cartesian(newBounds[1]), y: render.bounds.max.y },
         });
       });
       checkBoundsY(render, () => {
         setBounds({
-          min: { y: getCartesianCoords(newBounds[0]), x: render.bounds.min.x },
-          max: { y: getCartesianCoords(newBounds[1]), x: render.bounds.max.x },
+          min: { y: cartesian(newBounds[0]), x: render.bounds.min.x },
+          max: { y: cartesian(newBounds[1]), x: render.bounds.max.x },
         });
       });
     });
@@ -266,36 +276,31 @@ const FunctionGraph = ({
   }, [direction, x, y]);
   //this effect will draw only when the boundries change
   React.useEffect(() => {
+    if (interval) {
+      clearInterval(interval);
+    }
     //range
     if (bounds.min) {
+      let { min: minPrev, max: maxPrev } = prevBounds;
       let { min, max } = bounds;
-      const dim = { width: max.x, height: max.y };
-      const rectNumber = dim.width / factor;
-      //animate the graph now
-      let count = -6;
-      let interval = setInterval(() => {
-        count++;
-        if (count > rectNumber) {
-          return clearInterval(interval);
-        }
-        funcs.map((func) => {
-          let x = getCartesianCoords(count);
-          let y = getCartesianCoords(-1 * func(count));
-          let point = Matter.Bodies.circle(x, y, 20, {
-            isStatic: true,
-            render: {
-              zIndex: 3000,
-              fillStyle: "black",
-              text: {
-                content: `${func(count).toFixed(1)}`,
-                size: 12,
-                color: "#FFF",
-              },
+      let playerPosition = player.position;
+      funcs.map((func) => {
+        let x = Math.ceil(playerPosition.x / factor - origin / factor);
+        let y = func(x);
+        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 20, {
+          isStatic: true,
+          render: {
+            zIndex: 3000,
+            fillStyle: "black",
+            text: {
+              content: `${x},${func(x).toFixed(1)}`,
+              size: 12,
+              color: "#FFF",
             },
-          });
-          return Matter.World.add(myEngine.world, point);
+          },
         });
-      }, 100);
+        return Matter.World.add(myEngine.world, point);
+      });
     }
   }, [bounds]);
   React.useEffect(() => {
