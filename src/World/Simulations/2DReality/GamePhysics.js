@@ -180,7 +180,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
       />
       <Grid container justify="center">
         <FunctionGraph
-          funcs={[(val) => Math.sin(val), (val) => Math.cos(val)]}
+          funcs={[(val) => Math.sin(val)]}
           initMatter={initMatter}
           grid={grid}
           {...position}
