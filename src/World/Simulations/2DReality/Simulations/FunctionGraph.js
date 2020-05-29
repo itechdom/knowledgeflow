@@ -64,7 +64,6 @@ const checkBoundsY = (render, onExpansion) => {
   }
 };
 const FunctionGraph = ({
-  initMatter,
   x,
   y,
   direction,

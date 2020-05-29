@@ -49,6 +49,9 @@ const Waves = ({ initMatter }) => {
   }, []);
   return (
     <Story
+      engine={myEngine}
+      Render={Render}
+      render={myEngine.render}
       currentPhase={currentPhase}
       storyCondition={() => {
         if (phases[0]()) {
