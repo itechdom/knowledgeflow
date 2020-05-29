@@ -17,8 +17,6 @@ export const GameState = ({ children, knowledge, health }) => {
   const [grid, setGrid] = React.useState([]);
   const [currentPlayer, setCurrentPlayer] = React.useState();
   const [otherPlayer, setOtherPlayer] = React.useState();
-  const [positions, setPositions] = React.useState({});
-  const [weaponLock, setWeaponLock] = React.useState();
   let timeout;
   const onKeyPress = (key) => {
     switch (key) {

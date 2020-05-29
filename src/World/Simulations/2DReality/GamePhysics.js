@@ -8,7 +8,7 @@ import Matter from "matter-js";
 // import NumberTimeline from "./Simulations/NumberTimeline";
 // import MatterGrid from "./Simulations/MatterGrid";
 // import Axes from "./Simulations/Axes";
-import FunctionGraph from "./Simulations/FunctionGraph";
+import Waves from "./Stories/Waves";
 import Render from "./Matter/Render";
 import KeyboardEventHandler from "react-keyboard-event-handler";
 let fpsInterval = 1000 / 60,
@@ -179,7 +179,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         onKeyEvent={(key, e) => onKeyPress(key)}
       />
       <Grid container justify="center">
-        <FunctionGraph
+        <Waves
           funcs={[(val) => Math.sin(val)]}
           initMatter={initMatter}
           grid={grid}

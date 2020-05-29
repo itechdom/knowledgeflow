@@ -1,7 +1,6 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid, Button } from "@material-ui/core";
-import Render from "../Matter/Render";
 const origin = 100 * 5;
 const factor = 100;
 let interval;
@@ -74,29 +73,16 @@ const FunctionGraph = ({
   funcs,
   player,
   onUpdateBounds,
+  engine,
+  render,
+  Render,
   ...rest
 }) => {
-  const [myEngine, setMyEngine] = React.useState();
   const [iter, setIter] = React.useState(0);
   const [currentZoom, setCurrentZoom] = React.useState(1);
   const [bounds, setBounds] = React.useState({});
   const prevBounds = usePrevious(bounds);
   const init = (options) => {
-    const { engine, mouse, render, Render } = initMatter(
-      "axes",
-      "axes-container",
-      options,
-      true,
-      {
-        render: {
-          zIndex: 100,
-          fillStyle: "red",
-          sprite: {
-            // texture: "./assets/game/Tiles/dirt.png",
-          },
-        },
-      }
-    );
     //reference frame
     let grid = Matter.Composites.stack(
       2.5,
@@ -175,13 +161,6 @@ const FunctionGraph = ({
       }
     );
     yAxis.label = "yAxis";
-    let point = Matter.Bodies.circle(5, 5, 5, {
-      isStatic: true,
-      render: {
-        zIndex: 2000,
-        fillStyle: "black",
-      },
-    });
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
         content: `${((player.position.x - origin) / 100).toFixed(1)},${(
@@ -215,7 +194,6 @@ const FunctionGraph = ({
     });
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });
-    setMyEngine({ ...engine, render });
   };
   React.useEffect(() => {
     if (!player || !myEngine) {
