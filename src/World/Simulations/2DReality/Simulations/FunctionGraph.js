@@ -81,7 +81,7 @@ const FunctionGraph = ({
   const [currentZoom, setCurrentZoom] = React.useState(1);
   const [bounds, setBounds] = React.useState({});
   const prevBounds = usePrevious(bounds);
-  const init = (options) => {
+  const init = () => {
     //reference frame
     let grid = Matter.Composites.stack(
       2.5,
@@ -191,45 +191,9 @@ const FunctionGraph = ({
         });
       });
     });
-    Matter.World.add(engine.world, [xAxis, yAxis, player]);
+    Matter.World.add(engine.world, [xAxis, yAxis]);
     setBounds({ ...render.bounds });
   };
-  React.useEffect(() => {
-    if (!player || !myEngine) {
-      return;
-    }
-    const { x, y } = player.position;
-    const magnitude = 0.09;
-    if (direction === "left") {
-      return Matter.Body.applyForce(player, { x, y }, { x: -magnitude, y: 0 });
-    } else if (direction === "right") {
-      return Matter.Body.applyForce(player, { x, y }, { x: magnitude, y: 0 });
-    } else if (direction === "up") {
-      if (currentZoom < 3) {
-        setCurrentZoom(currentZoom + 1);
-        // setBackground(currentZoom + 1);
-        setBounds({ ...myEngine.render.bounds });
-      }
-      // let newGrid = onGridResize({ myEngine });
-      // Matter.World.add(myEngine.world, newGrid);
-      return Matter.Body.applyForce(
-        player,
-        { x, y },
-        { x: 0, y: -magnitude * 2 }
-      );
-    } else if (direction === "down") {
-      if (currentZoom > 0) {
-        setCurrentZoom(currentZoom - 1);
-        // setBackground(currentZoom - 1);
-        setBounds({ ...myEngine.render.bounds });
-      }
-      return Matter.Body.applyForce(
-        player,
-        { x, y },
-        { x: 0, y: magnitude * 2 }
-      );
-    }
-  }, [direction, x, y]);
   //this effect will draw only when the boundries change
   React.useEffect(() => {
     if (interval) {
@@ -255,20 +219,15 @@ const FunctionGraph = ({
             },
           },
         });
-        return Matter.World.add(myEngine.world, point);
+        return Matter.World.add(engine.world, point);
       });
       onUpdateBounds && onUpdateBounds();
     }
   }, [bounds]);
   React.useEffect(() => {
-    init({
-      wireframes: false,
-      // background: "url('/assets/game/background-1x.png')",
-      background: "#000000",
-      showAngleIndicator: false,
-      width: 2000,
-      height: 2000,
-    });
+    if (engine) {
+      init();
+    }
   }, []);
   return (
     <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
