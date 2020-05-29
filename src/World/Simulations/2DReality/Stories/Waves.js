@@ -2,6 +2,7 @@ import React from "react";
 import Story from "./Story";
 import Matter from "matter-js";
 import Render from "../Matter/Render";
+import Tone from "tone";
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
@@ -23,7 +24,6 @@ const Waves = ({ initMatter, ...rest }) => {
         },
       }
     );
-    console.log("engine", engine, options);
     let phases = [
       "Waves are everywhere and Math is no exception. Let's explore waves together. Use keys WASD or arrow keys to move the circle around.",
       (x) => {
@@ -76,6 +76,23 @@ const Waves = ({ initMatter, ...rest }) => {
         engine={engine && engine.engine}
         Render={Render}
         render={engine && engine.render}
+        onUpdateBounds={(bounds) => {
+          let synth = new Tone.Synth({
+            oscillator: {
+              type: "triangle8",
+            },
+            envelope: {
+              attack: 2,
+              decay: 1,
+              sustain: 0.4,
+              release: 4,
+            },
+          }).toMaster();
+          synth.triggerAttack("B1");
+          setTimeout(() => {
+            synth.triggerRelease();
+          }, 250);
+        }}
         {...rest}
       ></Story>
       <div id={`waves-container`}>

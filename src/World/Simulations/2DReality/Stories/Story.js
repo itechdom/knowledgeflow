@@ -20,11 +20,6 @@ const Story = ({
       return;
     }
     const magnitude = 0.09;
-    console.log(
-      ((player.position.x - 500) / 100).toFixed(2),
-      ((player.position.y - 500) / 100).toFixed(2)
-    );
-    console.log(engine.world.bodies);
     if (direction === "left") {
       return Matter.Body.applyForce(
         player,
@@ -63,6 +58,9 @@ const Story = ({
       );
     }
   }, [direction, x, y]);
+  React.useEffect(() => {
+    onUpdateBounds();
+  }, [bounds]);
   if (!player || !engine) {
     return <></>;
   }
