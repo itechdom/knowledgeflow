@@ -1,14 +1,10 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid, Button } from "@material-ui/core";
-import { zoom } from "./Camera";
 import Render from "../Matter/Render";
-import { onGridResize } from "./Axes";
-import Gravitation from "./Gravitation";
 const origin = 100 * 5;
 const factor = 100;
 let interval;
-let playerRef;
 let rangeX;
 let rangeY;
 function usePrevious(value) {
@@ -76,10 +72,11 @@ const FunctionGraph = ({
   width,
   height,
   funcs,
+  player,
+  onUpdateBounds,
   ...rest
 }) => {
   const [myEngine, setMyEngine] = React.useState();
-  const [player, setPlayer] = React.useState();
   const [iter, setIter] = React.useState(0);
   const [currentZoom, setCurrentZoom] = React.useState(1);
   const [bounds, setBounds] = React.useState({});
@@ -100,23 +97,6 @@ const FunctionGraph = ({
         },
       }
     );
-    let player = Matter.Bodies.circle(400, 100, 50, {
-      restitution: 0.9,
-      render: {
-        zIndex: 9000,
-        // sprite: {
-        //   // texture: "./assets/game/Tiles/alienBeige.png",
-        // },
-        // text: {
-        //   content: "Test",
-        //   size: 16,
-        //   color: "#FFF",
-        //   family: "Ariel",
-        // },
-      },
-    });
-    playerRef = player;
-    player.isPlayer = true;
     //reference frame
     let grid = Matter.Composites.stack(
       2.5,
@@ -235,7 +215,6 @@ const FunctionGraph = ({
     });
     Matter.World.add(engine.world, [xAxis, yAxis, player]);
     setBounds({ ...render.bounds });
-    setPlayer(player);
     setMyEngine({ ...engine, render });
   };
   React.useEffect(() => {
@@ -301,6 +280,7 @@ const FunctionGraph = ({
         });
         return Matter.World.add(myEngine.world, point);
       });
+      onUpdateBounds && onUpdateBounds();
     }
   }, [bounds]);
   React.useEffect(() => {
@@ -318,18 +298,7 @@ const FunctionGraph = ({
       <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
           <canvas id="axes"></canvas>
-          {myEngine && (
-            <Gravitation
-              initMatter={() => {
-                return {
-                  engine: myEngine,
-                  Render: Render,
-                  render: myEngine.render,
-                };
-              }}
-            />
-          )}
-          <Button onClick={() => snapshot()}>snapshot</Button>
+          {/* <Button onClick={() => snapshot()}>snapshot</Button> */}
         </Grid>
       </Grid>
     </Grid>
