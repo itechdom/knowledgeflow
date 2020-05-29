@@ -3,11 +3,13 @@ import Story from "./Story";
 import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
+const notes = ["B1", "F3", "B3", "C4", "F3", "C4", "B3", "C4"];
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
   const [engine, setEngine] = React.useState();
   const [player, setPlayer] = React.useState();
+  const [currentNote, setCurrentNote] = React.useState(0);
   const init = (options) => {
     const { engine, render } = initMatter(
       "waves",
@@ -88,10 +90,12 @@ const Waves = ({ initMatter, ...rest }) => {
               release: 4,
             },
           }).toMaster();
-          synth.triggerAttack("B1");
+          console.log(notes[currentNote % notes.length]);
+          synth.triggerAttack(`${notes[currentNote % notes.length]}`);
           setTimeout(() => {
             synth.triggerRelease();
-          }, 250);
+          }, 200);
+          setCurrentNote(currentNote + 1);
         }}
         {...rest}
       ></Story>
