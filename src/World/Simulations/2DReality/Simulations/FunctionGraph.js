@@ -180,13 +180,13 @@ const FunctionGraph = ({
         let box = Matter.Bodies.rectangle(
           x + i * cartesian(boundry[1]),
           y - boundry[1] * 100,
-          1,
+          10,
           boundry[1] * 100,
           {
             isStatic: true,
             isSensor: i === 0,
             render: {
-              zIndex: 2000,
+              zIndex: 100,
               fillStyle: colors[0],
               text: {
                 content: `${i === 0 ? "Begin!" : "End!"}`,
@@ -212,11 +212,11 @@ const FunctionGraph = ({
           x,
           y - i * boundry[1] * 100,
           width,
-          1,
+          10,
           {
             isStatic: true,
             render: {
-              zIndex: 2000,
+              zIndex: 200,
               fillStyle: colors[0],
               text: {
                 content: `${i === 0 ? "" : ""}`,
