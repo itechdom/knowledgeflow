@@ -8,9 +8,9 @@ let rangeX;
 let rangeY;
 // const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
 // const colors = ["#F7EFE2", "#EA4235", "#EC5D33", "#F5A62A"];
-// const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
+const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
 // const colors = ["#EAE2D6", "#E1B81B", "#867666", "#D5C3AA"];
-const colors = ["#B6452C", "#301B28", "#523634", "#DDC5A1"];
+// const colors = ["#B6452C", "#301B28", "#523634", "#DDC5A1"];
 // const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
 // const colors = ["#EEB83E", "#010C29", "#D83D30", "#F9F5F2"];
 function usePrevious(value) {
@@ -237,6 +237,18 @@ const FunctionGraph = ({
           100
         ).toFixed(1)}`,
       };
+      if (player.velocity.x > 10) {
+        Matter.Body.setVelocity(player, {
+          x: 10,
+          y: player.velocity.y,
+        });
+      }
+      if (player.velocity.y > 10) {
+        Matter.Body.setVelocity(player, {
+          x: player.velocity.x,
+          y: 10,
+        });
+      }
       Render.lookAt(render, {
         min: {
           x: player.position.x - (width / 2) * currentZoom,
