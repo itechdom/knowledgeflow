@@ -44,6 +44,7 @@ const Waves = ({ initMatter, ...rest }) => {
       label: "player",
       restitution: 0.9,
       render: {
+        fillStyle: "#000000",
         zIndex: 9000,
       },
     });
@@ -73,7 +74,7 @@ const Waves = ({ initMatter, ...rest }) => {
           }
         }}
         funcs={[(x) => Math.sin(x)]}
-        boundry={[0, 100]}
+        boundry={[0, 10]}
         player={player}
         engine={engine && engine.engine}
         Render={Render}
@@ -91,10 +92,10 @@ const Waves = ({ initMatter, ...rest }) => {
             },
           }).toMaster();
           console.log(notes[currentNote % notes.length]);
-          synth.triggerAttack(`${notes[currentNote % notes.length]}`);
-          setTimeout(() => {
-            synth.triggerRelease();
-          }, 200);
+          // synth.triggerAttack(`${notes[currentNote % notes.length]}`);
+          // setTimeout(() => {
+          //   synth.triggerRelease();
+          // }, 200);
           setCurrentNote(currentNote + 1);
         }}
         {...rest}

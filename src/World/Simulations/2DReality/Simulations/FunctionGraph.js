@@ -6,6 +6,7 @@ const factor = 100;
 let interval;
 let rangeX;
 let rangeY;
+const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
 function usePrevious(value) {
   const ref = React.useRef();
   React.useEffect(() => {
@@ -76,6 +77,7 @@ const FunctionGraph = ({
   engine,
   render,
   Render,
+  boundry,
   ...rest
 }) => {
   const [iter, setIter] = React.useState(0);
@@ -100,8 +102,7 @@ const FunctionGraph = ({
           angle: 0,
           mass: 0,
           render: {
-            fillStyle: "black",
-            strokeStyle: "white",
+            fillStyle: colors[0],
             sprite: {
               // texture: "assets/game/Tiles/tileGrass.png",
             },
@@ -124,7 +125,7 @@ const FunctionGraph = ({
           isStatic: true,
           render: {
             zIndex: 2000,
-            fillStyle: "red",
+            fillStyle: colors[1],
             text: {
               content: `${i - 14}`,
               size: 18,
@@ -149,7 +150,7 @@ const FunctionGraph = ({
           isSensor: true,
           render: {
             zIndex: 1000,
-            fillStyle: "red",
+            fillStyle: colors[2],
             text: {
               content: `${14 - i}`,
               size: 18,
@@ -157,10 +158,42 @@ const FunctionGraph = ({
             },
           },
         });
+        yAxis.strokeStyle = "#FFF";
         return yAxis;
       }
     );
     yAxis.label = "yAxis";
+    let boundryBox = Matter.Composites.stack(
+      cartesian(boundry[0]),
+      origin,
+      2,
+      1,
+      1,
+      1,
+      (x, y, column, row, lastBody, i) => {
+        let box = Matter.Bodies.rectangle(
+          x + i * cartesian(boundry[1]),
+          y - height,
+          1,
+          height,
+          {
+            isStatic: true,
+            isSensor: i === 0,
+            render: {
+              zIndex: 2000,
+              fillStyle: colors[3],
+              text: {
+                content: `${i === 0 ? "Begin!" : "End!"}`,
+                size: 18,
+                color: "#FFF",
+              },
+            },
+          }
+        );
+        box.label = i;
+        return box;
+      }
+    );
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
         content: `${((player.position.x - origin) / 100).toFixed(1)},${(
@@ -192,7 +225,7 @@ const FunctionGraph = ({
         });
       });
     });
-    Matter.World.add(engine.world, [xAxis, yAxis]);
+    Matter.World.add(engine.world, [xAxis, yAxis, boundryBox, grid]);
     setBounds({ ...render.bounds });
   };
   //this effect will draw only when the boundries change
