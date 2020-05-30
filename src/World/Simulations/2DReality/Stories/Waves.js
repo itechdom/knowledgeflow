@@ -74,7 +74,7 @@ const Waves = ({ initMatter, ...rest }) => {
           }
         }}
         funcs={[(x) => Math.sin(x)]}
-        boundry={[0, 10]}
+        boundry={[0, 20]}
         player={player}
         engine={engine && engine.engine}
         Render={Render}

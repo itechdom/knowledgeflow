@@ -6,7 +6,13 @@ const factor = 100;
 let interval;
 let rangeX;
 let rangeY;
-const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
+// const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
+// const colors = ["#F7EFE2", "#EA4235", "#EC5D33", "#F5A62A"];
+// const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
+// const colors = ["#EAE2D6", "#E1B81B", "#867666", "#D5C3AA"];
+const colors = ["#B6452C", "#301B28", "#523634", "#DDC5A1"];
+// const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
+// const colors = ["#EEB83E", "#010C29", "#D83D30", "#F9F5F2"];
 function usePrevious(value) {
   const ref = React.useRef();
   React.useEffect(() => {
@@ -114,9 +120,9 @@ const FunctionGraph = ({
     );
     grid.label = "grid";
     let xAxis = Matter.Composites.stack(
-      -100 * 10 + 50,
+      (-100 * boundry[1]) / 4 - 50,
       origin,
-      28,
+      boundry[1],
       1,
       10,
       10,
@@ -127,7 +133,7 @@ const FunctionGraph = ({
             zIndex: 2000,
             fillStyle: colors[1],
             text: {
-              content: `${i - 14}`,
+              content: `${i - boundry[1] / 2}`,
               size: 18,
               color: "#FFF",
             },
@@ -139,9 +145,9 @@ const FunctionGraph = ({
     xAxis.label = "xAxis";
     let yAxis = Matter.Composites.stack(
       origin,
-      -100 * 10 + 50,
+      (-100 * boundry[1]) / 4 - 50,
       1,
-      28,
+      boundry[1],
       10,
       10,
       (x, y, column, row, lastBody, i) => {
@@ -152,7 +158,7 @@ const FunctionGraph = ({
             zIndex: 1000,
             fillStyle: colors[2],
             text: {
-              content: `${14 - i}`,
+              content: `${boundry[1] / 2 - i}`,
               size: 18,
               color: "#FFF",
             },
@@ -173,17 +179,47 @@ const FunctionGraph = ({
       (x, y, column, row, lastBody, i) => {
         let box = Matter.Bodies.rectangle(
           x + i * cartesian(boundry[1]),
-          y - height,
+          y - boundry[1] * 100,
           1,
-          height,
+          boundry[1] * 100,
           {
             isStatic: true,
             isSensor: i === 0,
             render: {
               zIndex: 2000,
-              fillStyle: colors[3],
+              fillStyle: colors[0],
               text: {
                 content: `${i === 0 ? "Begin!" : "End!"}`,
+                size: 18,
+                color: "#FFF",
+              },
+            },
+          }
+        );
+        box.label = i;
+        return box;
+      }
+    );
+    let boundryBoxTop = Matter.Composites.stack(
+      origin,
+      cartesian(boundry[0]),
+      1,
+      2,
+      1,
+      1,
+      (x, y, column, row, lastBody, i) => {
+        let box = Matter.Bodies.rectangle(
+          x,
+          y - i * boundry[1] * 100,
+          width,
+          1,
+          {
+            isStatic: true,
+            render: {
+              zIndex: 2000,
+              fillStyle: colors[0],
+              text: {
+                content: `${i === 0 ? "" : ""}`,
                 size: 18,
                 color: "#FFF",
               },
@@ -225,7 +261,13 @@ const FunctionGraph = ({
         });
       });
     });
-    Matter.World.add(engine.world, [xAxis, yAxis, boundryBox, grid]);
+    Matter.World.add(engine.world, [
+      xAxis,
+      yAxis,
+      boundryBox,
+      boundryBoxTop,
+      grid,
+    ]);
     setBounds({ ...render.bounds });
   };
   //this effect will draw only when the boundries change
