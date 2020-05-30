@@ -78,6 +78,8 @@ const Story = ({
         direction={direction}
         x={x}
         y={y}
+        width={window.innerWidth}
+        height={window.innerHeight}
       />
     </>
   );

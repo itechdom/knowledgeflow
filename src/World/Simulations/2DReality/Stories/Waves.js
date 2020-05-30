@@ -3,7 +3,7 @@ import Story from "./Story";
 import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
-const notes = ["B1", "F3", "B3", "C4", "F3", "C4", "B3", "C4"];
+const notes = ["B1", "F3", "B3", "C4", "F3", "C4", "B3", "C4", "C2"];
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
@@ -57,8 +57,8 @@ const Waves = ({ initMatter, ...rest }) => {
       // background: "url('/assets/game/background-1x.png')",
       background: "#000000",
       showAngleIndicator: false,
-      width: 2000,
-      height: 2000,
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
   }, []);
 

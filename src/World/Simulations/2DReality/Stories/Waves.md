@@ -4,8 +4,6 @@
 
 # Knot
 
-
-
 # End
 
 you have reached the end
@@ -19,3 +17,19 @@ Can we pose this problem as a equation
 - x === 50
 - x === 100
 - objects[2].x === 100
+
+sheets of music:
+the center of the piano is middle C4
+space is every set of notes (Face, EGBDF, ACEG ... etc)
+trebleclef
+to the right of the keyboard
+ledgerLines:
+spaces: are what is in between the lines of the sheet of music
+from bottom to top space:
+F A C E
+from bottom to top line:
+Every good boy deserves fries
+E G B D F
+to the left of the keyboard:
+All cows eat grass
+A C E G

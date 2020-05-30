@@ -28,8 +28,9 @@ const setBackground = (currentZoom) => {
       : `url('/assets/game/background-${currentZoom}x.png')`
   }`;
 };
-const cartesian = (val) => {
-  return val * factor + origin;
+//convert cartesian coord to our world's coordinates
+const cartesian = (cartesianCoordinate) => {
+  return cartesianCoordinate * factor + origin;
 };
 const checkBoundsX = (render, onExpansion) => {
   let rangeMin = (rangeX && rangeX[0]) || -13;
@@ -169,12 +170,12 @@ const FunctionGraph = ({
       };
       Render.lookAt(render, {
         min: {
-          x: player.position.x - 500 * currentZoom,
-          y: player.position.y - 500 * currentZoom,
+          x: player.position.x - (width / 2) * currentZoom,
+          y: player.position.y - (height / 2) * currentZoom,
         },
         max: {
-          x: player.position.x + 500 * currentZoom,
-          y: player.position.y + 500 * currentZoom,
+          x: player.position.x + (width / 2) * currentZoom,
+          y: player.position.y + (height / 2) * currentZoom,
         },
       });
       //check if we exceed the x axis
@@ -184,7 +185,7 @@ const FunctionGraph = ({
           max: { x: cartesian(newBounds[1]), y: render.bounds.max.y },
         });
       });
-      checkBoundsY(render, () => {
+      checkBoundsY(render, (newBounds) => {
         setBounds({
           min: { y: cartesian(newBounds[0]), x: render.bounds.min.x },
           max: { y: cartesian(newBounds[1]), x: render.bounds.max.x },
@@ -207,7 +208,7 @@ const FunctionGraph = ({
       funcs.map((func) => {
         let x = Math.ceil(playerPosition.x / factor - origin / factor);
         let y = func(x);
-        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 20, {
+        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
           isStatic: true,
           render: {
             zIndex: 3000,
@@ -219,9 +220,9 @@ const FunctionGraph = ({
             },
           },
         });
-        return Matter.World.add(engine.world, point);
+        Matter.World.add(engine.world, point);
+        onUpdateBounds && onUpdateBounds();
       });
-      onUpdateBounds && onUpdateBounds();
     }
   }, [bounds]);
   React.useEffect(() => {
