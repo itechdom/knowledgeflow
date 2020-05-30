@@ -237,16 +237,16 @@ const FunctionGraph = ({
           100
         ).toFixed(1)}`,
       };
-      if (player.velocity.x > 10) {
+      if (player.velocity.x > 5) {
         Matter.Body.setVelocity(player, {
-          x: 10,
+          x: 5,
           y: player.velocity.y,
         });
       }
-      if (player.velocity.y > 10) {
+      if (player.velocity.y > 5) {
         Matter.Body.setVelocity(player, {
           x: player.velocity.x,
-          y: 10,
+          y: 5,
         });
       }
       Render.lookAt(render, {
