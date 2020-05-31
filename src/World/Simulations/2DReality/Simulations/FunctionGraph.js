@@ -8,10 +8,10 @@ let rangeX;
 let rangeY;
 // const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
 // const colors = ["#F7EFE2", "#EA4235", "#EC5D33", "#F5A62A"];
-const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
+// const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
 // const colors = ["#EAE2D6", "#E1B81B", "#867666", "#D5C3AA"];
 // const colors = ["#B6452C", "#301B28", "#523634", "#DDC5A1"];
-// const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
+const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
 // const colors = ["#EEB83E", "#010C29", "#D83D30", "#F9F5F2"];
 function usePrevious(value) {
   const ref = React.useRef();
@@ -123,9 +123,9 @@ const FunctionGraph = ({
     );
     grid.label = "grid";
     let xAxis = Matter.Composites.stack(
-      (-100 * boundry[1]) / 4 - 50,
+      cartesian(-1 * boundry[1] - 0.5),
       origin,
-      boundry[1],
+      boundry[1] * 2,
       1,
       10,
       10,
@@ -136,7 +136,7 @@ const FunctionGraph = ({
             zIndex: 2000,
             fillStyle: colors[1],
             text: {
-              content: `${i - boundry[1] / 2}`,
+              content: `${i - boundry[1]}`,
               size: 18,
               color: "#FFF",
             },
@@ -148,9 +148,9 @@ const FunctionGraph = ({
     xAxis.label = "xAxis";
     let yAxis = Matter.Composites.stack(
       origin,
-      (-100 * boundry[1]) / 4 - 50,
+      cartesian(-1 * boundry[1] - 0.5),
       1,
-      boundry[1],
+      boundry[1] * 2,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
@@ -161,7 +161,7 @@ const FunctionGraph = ({
             zIndex: 1000,
             fillStyle: colors[2],
             text: {
-              content: `${boundry[1] / 2 - i}`,
+              content: `${-1 * (i - boundry[1])}`,
               size: 18,
               color: "#FFF",
             },
@@ -254,8 +254,8 @@ const FunctionGraph = ({
       if (
         Math.floor(toCartesian(player.position.x)) === -1 * (boundry[1] + 5) ||
         Math.floor(toCartesian(player.position.x)) === boundry[1] + 5 ||
-        Math.floor(-1 * toCartesian(player.position.y)) === 14 ||
-        Math.floor(-1 * toCartesian(player.position.y)) === -14
+        Math.floor(-1 * toCartesian(player.position.y)) === -1 * boundry[1] ||
+        Math.floor(-1 * toCartesian(player.position.y)) === boundry[1]
       ) {
         Matter.Body.setPosition(player, {
           x: cartesian(0),
