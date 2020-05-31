@@ -39,6 +39,9 @@ const setBackground = (currentZoom) => {
 const cartesian = (cartesianCoordinate) => {
   return cartesianCoordinate * factor + origin;
 };
+const toCartesian = (coordinate) => {
+  return (coordinate - origin) / factor;
+};
 const checkBoundsX = (render, onExpansion) => {
   let rangeMin = (rangeX && rangeX[0]) || -13;
   let rangeMax = (rangeX && rangeX[1]) || 13;
@@ -232,21 +235,31 @@ const FunctionGraph = ({
     );
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${((player.position.x - origin) / 100).toFixed(1)},${(
-          (-1 * (player.position.y - origin)) /
-          100
+        content: `${toCartesian(player.position.x).toFixed(1)},${(
+          -1 * toCartesian(player.position.y)
         ).toFixed(1)}`,
       };
-      if (player.velocity.x > 5) {
-        Matter.Body.setVelocity(player, {
-          x: 5,
-          y: player.velocity.y,
-        });
-      }
-      if (player.velocity.y > 5) {
-        Matter.Body.setVelocity(player, {
-          x: player.velocity.x,
-          y: 5,
+      // if (player.velocity.x > 5) {
+      //   Matter.Body.setVelocity(player, {
+      //     x: 5,
+      //     y: player.velocity.y,
+      //   });
+      // }
+      // if (player.velocity.y > 5) {
+      //   Matter.Body.setVelocity(player, {
+      //     x: player.velocity.x,
+      //     y: 5,
+      //   });
+      // }
+      if (
+        Math.floor(toCartesian(player.position.x)) === -1 * (boundry[1] + 5) ||
+        Math.floor(toCartesian(player.position.x)) === boundry[1] + 5 ||
+        Math.floor(-1 * toCartesian(player.position.y)) === 14 ||
+        Math.floor(-1 * toCartesian(player.position.y)) === -14
+      ) {
+        Matter.Body.setPosition(player, {
+          x: cartesian(0),
+          y: -1 * cartesian(4),
         });
       }
       Render.lookAt(render, {
