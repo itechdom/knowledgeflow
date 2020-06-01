@@ -33,24 +33,14 @@ const Story = ({
         { x: magnitude, y: 0 }
       );
     } else if (direction === "up") {
-      if (currentZoom < 3) {
-        setCurrentZoom(currentZoom + 1);
-        // setBackground(currentZoom + 1);
-        setBounds({ ...render.bounds });
-      }
-      // let newGrid = onGridResize({ engine });
-      // Matter.World.add(engine.world, newGrid);
+      setBounds({ ...render.bounds });
       return Matter.Body.applyForce(
         player,
         { x: player.position.x, y: player.position.y },
         { x: 0, y: -magnitude * 2 }
       );
     } else if (direction === "down") {
-      if (currentZoom > 0) {
-        setCurrentZoom(currentZoom - 1);
-        // setBackground(currentZoom - 1);
-        setBounds({ ...render.bounds });
-      }
+      setBounds({ ...render.bounds });
       return Matter.Body.applyForce(
         player,
         { x: player.position.x, y: player.position.y },

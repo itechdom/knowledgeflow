@@ -4,7 +4,7 @@ import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
 let notes = ["B", "F", "B", "C", "F", "C", "B", "C", "C"];
-notes = ["C", "B", "F", "A"];
+// notes = ["C", "B"];
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
@@ -86,16 +86,16 @@ const Waves = ({ initMatter, ...rest }) => {
               type: "sine",
             },
           }).toMaster();
-          // let synth = new Tone.MembraneSynth().toMaster();
           let note =
             Math.floor(currentNote / notes.length) > 4
               ? 2
               : Math.floor(currentNote / notes.length) + 1;
           note = 3;
-          synth.triggerAttack(`${notes[currentNote % notes.length]}${note}`);
-          setTimeout(() => {
-            synth.triggerRelease();
-          }, 200);
+          synth.triggerAttack(
+            `${notes[currentNote % notes.length]}${note}`,
+            "3n"
+          );
+          synth.triggerRelease();
           setCurrentNote(currentNote + 1);
         }}
         {...rest}
