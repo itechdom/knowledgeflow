@@ -3,7 +3,8 @@ import Story from "./Story";
 import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
-const notes = ["B1", "F3", "B3", "C4", "F3", "C4", "B3", "C4", "C2"];
+let notes = ["B", "F", "B", "C", "F", "C", "B", "C", "C"];
+notes = ["C", "B", "F", "A"];
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
@@ -74,7 +75,7 @@ const Waves = ({ initMatter, ...rest }) => {
           }
         }}
         funcs={[(x) => Math.sin(x)]}
-        boundry={[0, 30]}
+        boundry={[0, 50]}
         player={player}
         engine={engine && engine.engine}
         Render={Render}
@@ -82,20 +83,19 @@ const Waves = ({ initMatter, ...rest }) => {
         onUpdateBounds={(bounds) => {
           let synth = new Tone.Synth({
             oscillator: {
-              type: "triangle8",
-            },
-            envelope: {
-              attack: 2,
-              decay: 1,
-              sustain: 0.4,
-              release: 4,
+              type: "sine",
             },
           }).toMaster();
-          console.log(notes[currentNote % notes.length]);
-          // synth.triggerAttack(`${notes[currentNote % notes.length]}`);
-          // setTimeout(() => {
-          //   synth.triggerRelease();
-          // }, 200);
+          // let synth = new Tone.MembraneSynth().toMaster();
+          let note =
+            Math.floor(currentNote / notes.length) > 4
+              ? 2
+              : Math.floor(currentNote / notes.length) + 1;
+          note = 3;
+          synth.triggerAttack(`${notes[currentNote % notes.length]}${note}`);
+          setTimeout(() => {
+            synth.triggerRelease();
+          }, 200);
           setCurrentNote(currentNote + 1);
         }}
         {...rest}
