@@ -3,6 +3,7 @@ import Story from "./Story";
 import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
+import Splatter from "../Effects/Splatter";
 let notes = ["B", "F", "B", "C", "F", "C", "B", "C", "C"];
 notes = ["C", "B"];
 notes = ["C1", "C2"];
@@ -46,7 +47,7 @@ const Waves = ({ initMatter, ...rest }) => {
     ];
     let player = Matter.Bodies.circle(400, 100, 50, {
       label: "player",
-      restitution: 0.9,
+      restitution: 0.4,
       render: {
         fillStyle: "#000000",
         zIndex: 9000,
@@ -77,7 +78,8 @@ const Waves = ({ initMatter, ...rest }) => {
             setCurrentPhase(currentPhase + 1);
           }
         }}
-        funcs={[(x) => Math.sin(x)]}
+        playerTitle={"Sin(x)"}
+        funcs={[{ label: "Sin(x)", fn: (x) => Math.sin(x) }]}
         boundry={[0, 50]}
         player={player}
         engine={engine && engine.engine}
@@ -85,6 +87,10 @@ const Waves = ({ initMatter, ...rest }) => {
         render={engine && engine.render}
         onUpdateBounds={(bounds) => {
           let note = Math.floor(currentNote & notes.length) + 1;
+          // if (player && engine) {
+            // let { launch } = Splatter({ engine: engine.engine });
+            // launch(player.position.x, player.position.y, 3);
+          // }
           if (!sampler) {
             sampler = new Tone.Sampler(
               {
@@ -94,12 +100,22 @@ const Waves = ({ initMatter, ...rest }) => {
                 C4: "/assets/game/audio/loop/snare.mp3",
               },
               function () {
-                sampler.triggerAttack("C1");
-                sampler.triggerAttack("C2");
-                sampler.triggerAttack("C3");
-                sampler.triggerAttack("C4");
+                setTimeout(function () {
+                  // sampler.triggerAttack("C1");
+                  // sampler.triggerAttack("C2");
+                  Tone.Transport.scheduleRepeat(function (time) {
+                    // sampler.triggerAttack("C3");
+                    // sampler.triggerRelease("C3");
+                  }, "8n");
+                  Tone.Transport.scheduleRepeat(function (time) {
+                    console.log("hello");
+                    // sampler.triggerAttack("C4");
+                    // sampler.triggerRelease("C4");
+                  }, "4n");
+                }, 6000);
               }
             ).toMaster();
+            Tone.Transport.start(); //the transport must be started
           }
           setCurrentNote(currentNote + 1);
         }}

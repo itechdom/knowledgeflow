@@ -1,8 +1,9 @@
 import React from "react";
 import Matter from "matter-js";
 import { Grid, Button } from "@material-ui/core";
-const origin = 100 * 5;
 const factor = 100;
+const gap = 10;
+const origin = factor * 5;
 let interval;
 let rangeX;
 let rangeY;
@@ -75,6 +76,7 @@ const FunctionGraph = ({
   height,
   funcs,
   player,
+  playerTitle,
   onUpdateBounds,
   engine,
   render,
@@ -120,10 +122,10 @@ const FunctionGraph = ({
       origin,
       boundry[1] * 2,
       1,
-      10,
+      gap,
       10,
       (x, y, column, row, lastBody, i) => {
-        let xAxis = Matter.Bodies.rectangle(x, y, 90, 10, {
+        let xAxis = Matter.Bodies.rectangle(x, y, factor - gap, factor / 2, {
           isStatic: true,
           render: {
             zIndex: 2000,
@@ -146,9 +148,9 @@ const FunctionGraph = ({
       1,
       boundry[1] * 2,
       10,
-      10,
+      gap,
       (x, y, column, row, lastBody, i) => {
-        let yAxis = Matter.Bodies.rectangle(x, y, 10, 90, {
+        let yAxis = Matter.Bodies.rectangle(x, y, 10, factor - gap, {
           isStatic: true,
           isSensor: true,
           render: {
@@ -229,8 +231,8 @@ const FunctionGraph = ({
     );
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${(-1 * toCartesian(player.position.y)).toFixed(1)}`,
-        color: "#90EE90",
+        content: `${playerTitle}`,
+        color: "#FFF",
       };
       // if (player.velocity.x > 5) {
       //   Matter.Body.setVelocity(player, {
@@ -282,45 +284,70 @@ const FunctionGraph = ({
     Matter.World.add(engine.world, [xAxis, yAxis]);
     setBounds({ ...render.bounds });
   };
+  const executeFn = () => {
+    let playerPosition = player.position;
+    funcs.map((f) => {
+      let func = f;
+      let x = Math.ceil(playerPosition.x / factor - origin / factor);
+      let y = func(x);
+      let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
+        isStatic: true,
+        isSensor: true,
+        render: {
+          zIndex: 3000,
+          fillStyle: "black",
+          text: {
+            content: `y = ${func(x).toFixed(2)}`,
+            size: 20,
+            color: "#FFF",
+          },
+        },
+      });
+      Matter.World.add(engine.world, point);
+      onUpdateBounds && onUpdateBounds();
+    });
+  };
   //this effect will draw only when the boundries change
-  Matter.Events.on(engine, "collisionStart", (ev) => {
+  // Matter.Events.on(engine, "collisionStart", (ev) => {
+  //   ev.pairs.map((pairs) => {
+  //     if (Number.isInteger(pairs.bodyB.label)) {
+  //       if (executed[pairs.bodyB.label]) {
+  //         return;
+  //       }
+  //       executeFn();
+  //       executed[pairs.bodyB.label] = true;
+  //     }
+  //   });
+  // });
+  Matter.Events.on(engine, "collisionEnd", (ev) => {
     ev.pairs.map((pairs) => {
       if (Number.isInteger(pairs.bodyB.label)) {
-        if (Number.isInteger(pairs.bodyA.label)) {
-          console.log("hello");
-        }
         if (executed[pairs.bodyB.label]) {
           return;
         }
-        let playerPosition = player.position;
-        funcs.map((func) => {
-          let x = Math.ceil(playerPosition.x / factor - origin / factor);
-          let y = func(x);
-          let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
-            isStatic: true,
-            render: {
-              zIndex: 3000,
-              fillStyle: "black",
-              text: {
-                content: `y = ${func(x).toFixed(1)}`,
-                size: 20,
-                color: "#90EE90",
-              },
-            },
-          });
-          Matter.World.add(engine.world, point);
-          onUpdateBounds && onUpdateBounds();
-        });
+        executeFn();
         executed[pairs.bodyB.label] = true;
       }
     });
   });
+  // Matter.Events.on(engine, "collisionActive", (ev) => {
+  //   ev.pairs.map((pairs) => {
+  //     if (Number.isInteger(pairs.bodyB.label)) {
+  //       if (executed[pairs.bodyB.label]) {
+  //         return;
+  //       }
+  //       executeFn();
+  //       executed[pairs.bodyB.label] = true;
+  //     }
+  //   });
+  // });
   React.useEffect(() => {
     if (interval) {
       clearInterval(interval);
     }
     //range
     if (bounds.min) {
+      executeFn();
     }
   }, [bounds]);
   React.useEffect(() => {

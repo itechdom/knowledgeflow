@@ -5,6 +5,7 @@ const Story = ({
   boundry,
   funcs,
   player,
+  playerTitle,
   onUpdateBounds,
   engine,
   render,
@@ -59,6 +60,7 @@ const Story = ({
       <FunctionGraph
         funcs={funcs}
         player={player}
+        playerTitle={playerTitle}
         boundry={boundry}
         onUpdateBounds={onUpdateBounds}
         engine={engine}
