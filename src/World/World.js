@@ -5,7 +5,7 @@ import { withStyles, Button } from "@material-ui/core";
 import { Game as PhysicsGame } from "./Simulations/2DReality/GamePhysics";
 import { GameState as PhysicsGameState } from "./Simulations/2DReality/GamePhysics.state";
 import { Grid } from "@material-ui/core";
-import Reality from "./Simulations/Reality/Reality";
+// import Reality from "./Simulations/Reality/Reality";
 const World = ({
   knowledge,
   knowledge_createModel,

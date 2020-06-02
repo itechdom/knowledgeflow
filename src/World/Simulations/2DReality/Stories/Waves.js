@@ -89,7 +89,7 @@ const Waves = ({ initMatter, ...rest }) => {
             sampler = new Tone.Sampler(
               {
                 C1: "/assets/game/audio/loop/bass.mp3",
-                C2: "/assets/game/audio/loop/chords.mp3",
+                // C2: "/assets/game/audio/loop/chords.mp3",
                 C3: "/assets/game/audio/loop/kick.mp3",
                 C4: "/assets/game/audio/loop/snare.mp3",
               },

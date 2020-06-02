@@ -6,6 +6,7 @@ const factor = 100;
 let interval;
 let rangeX;
 let rangeY;
+let executed = {};
 // const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
 // const colors = ["#F7EFE2", "#EA4235", "#EC5D33", "#F5A62A"];
 // const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
@@ -134,6 +135,7 @@ const FunctionGraph = ({
             },
           },
         });
+        xAxis.label = i - boundry[1];
         return xAxis;
       }
     );
@@ -227,13 +229,12 @@ const FunctionGraph = ({
     );
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
-        content: `${toCartesian(player.position.x).toFixed(1)},${(
-          -1 * toCartesian(player.position.y)
-        ).toFixed(1)}`,
+        content: `${(-1 * toCartesian(player.position.y)).toFixed(1)}`,
+        color: "#90EE90",
       };
       // if (player.velocity.x > 5) {
       //   Matter.Body.setVelocity(player, {
-      //     x: 5,
+      //     x: ,
       //     y: player.velocity.y,
       //   });
       // }
@@ -278,43 +279,48 @@ const FunctionGraph = ({
         });
       });
     });
-    Matter.World.add(engine.world, [
-      xAxis,
-      yAxis,
-      boundryBox,
-      boundryBoxTop,
-      grid,
-    ]);
+    Matter.World.add(engine.world, [xAxis, yAxis]);
     setBounds({ ...render.bounds });
   };
   //this effect will draw only when the boundries change
+  Matter.Events.on(engine, "collisionStart", (ev) => {
+    ev.pairs.map((pairs) => {
+      if (Number.isInteger(pairs.bodyB.label)) {
+        if (Number.isInteger(pairs.bodyA.label)) {
+          console.log("hello");
+        }
+        if (executed[pairs.bodyB.label]) {
+          return;
+        }
+        let playerPosition = player.position;
+        funcs.map((func) => {
+          let x = Math.ceil(playerPosition.x / factor - origin / factor);
+          let y = func(x);
+          let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
+            isStatic: true,
+            render: {
+              zIndex: 3000,
+              fillStyle: "black",
+              text: {
+                content: `y = ${func(x).toFixed(1)}`,
+                size: 20,
+                color: "#90EE90",
+              },
+            },
+          });
+          Matter.World.add(engine.world, point);
+          onUpdateBounds && onUpdateBounds();
+        });
+        executed[pairs.bodyB.label] = true;
+      }
+    });
+  });
   React.useEffect(() => {
     if (interval) {
       clearInterval(interval);
     }
     //range
     if (bounds.min) {
-      let { min: minPrev, max: maxPrev } = prevBounds;
-      let { min, max } = bounds;
-      let playerPosition = player.position;
-      funcs.map((func) => {
-        let x = Math.ceil(playerPosition.x / factor - origin / factor);
-        let y = func(x);
-        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
-          isStatic: true,
-          render: {
-            zIndex: 3000,
-            fillStyle: "black",
-            text: {
-              content: `${x},${func(x).toFixed(1)}`,
-              size: 12,
-              color: "#FFF",
-            },
-          },
-        });
-        Matter.World.add(engine.world, point);
-        onUpdateBounds && onUpdateBounds();
-      });
     }
   }, [bounds]);
   React.useEffect(() => {
