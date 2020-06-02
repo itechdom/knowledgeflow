@@ -4,7 +4,10 @@ import Matter from "matter-js";
 import Render from "../Matter/Render";
 import Tone from "tone";
 let notes = ["B", "F", "B", "C", "F", "C", "B", "C", "C"];
-// notes = ["C", "B"];
+notes = ["C", "B"];
+notes = ["C1", "C2"];
+let sampler;
+let timeout;
 //https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
@@ -56,8 +59,8 @@ const Waves = ({ initMatter, ...rest }) => {
   React.useEffect(() => {
     init({
       wireframes: false,
-      // background: "url('/assets/game/background-1x.png')",
-      background: "#000000",
+      background: "url('/assets/game/starry-background.jpg')",
+      // background: "#000000",
       showAngleIndicator: false,
       width: window.innerWidth,
       height: window.innerHeight,
@@ -81,21 +84,23 @@ const Waves = ({ initMatter, ...rest }) => {
         Render={Render}
         render={engine && engine.render}
         onUpdateBounds={(bounds) => {
-          let synth = new Tone.Synth({
-            oscillator: {
-              type: "sine",
-            },
-          }).toMaster();
-          let note =
-            Math.floor(currentNote / notes.length) > 4
-              ? 2
-              : Math.floor(currentNote / notes.length) + 1;
-          note = 3;
-          synth.triggerAttack(
-            `${notes[currentNote % notes.length]}${note}`,
-            "3n"
-          );
-          synth.triggerRelease();
+          let note = Math.floor(currentNote & notes.length) + 1;
+          if (!sampler) {
+            sampler = new Tone.Sampler(
+              {
+                C1: "/assets/game/audio/loop/bass.mp3",
+                C2: "/assets/game/audio/loop/chords.mp3",
+                C3: "/assets/game/audio/loop/kick.mp3",
+                C4: "/assets/game/audio/loop/snare.mp3",
+              },
+              function () {
+                sampler.triggerAttack("C1");
+                sampler.triggerAttack("C2");
+                sampler.triggerAttack("C3");
+                sampler.triggerAttack("C4");
+              }
+            ).toMaster();
+          }
           setCurrentNote(currentNote + 1);
         }}
         {...rest}

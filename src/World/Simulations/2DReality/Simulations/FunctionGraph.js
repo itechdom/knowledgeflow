@@ -27,14 +27,6 @@ const snapshot = () => {
     .replace("image/png", "image/octet-stream"); // here is the most important part because if you dont replace you will get a DOM 18 exception.
   window.location.href = image; // it will save locally
 };
-const setBackground = (currentZoom) => {
-  let canvas = document.getElementById("axes");
-  canvas.style.background = `${
-    currentZoom <= 0 || currentZoom > 3
-      ? "url('/assets/game/background-1x.png')"
-      : `url('/assets/game/background-${currentZoom}x.png')`
-  }`;
-};
 //convert cartesian coord to our world's coordinates
 const cartesian = (cartesianCoordinate) => {
   return cartesianCoordinate * factor + origin;
