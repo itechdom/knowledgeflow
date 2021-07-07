@@ -221,7 +221,7 @@ const Axes = ({
     });
   }, []);
   return (
-    <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
+    <Grid item>
       <Grid alignItems="center" justify="center" container id="axes-container">
         <Grid xs={12} item>
           <canvas style={{ fontSize: "24px" }} id="axes"></canvas>

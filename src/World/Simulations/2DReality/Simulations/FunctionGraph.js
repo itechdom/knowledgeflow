@@ -323,13 +323,8 @@ const FunctionGraph = ({
     }
   }, []);
   return (
-    <Grid item style={{ marginTop: "10px", marginBottom: "10em" }}>
-      <Grid alignItems="center" justify="center" container id="axes-container">
-        <Grid xs={12} item>
-          <canvas id="axes"></canvas>
-          {/* <Button onClick={() => snapshot()}>snapshot</Button> */}
-        </Grid>
-      </Grid>
+    <Grid item>
+      <></>
     </Grid>
   );
 };

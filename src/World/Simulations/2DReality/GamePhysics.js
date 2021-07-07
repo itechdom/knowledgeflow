@@ -143,11 +143,11 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
         overflow: "scroll",
         marginLeft: "auto",
         marginRight: "auto",
-        backgroundColor: "#8BE1EB",
+        // backgroundColor: "#8BE1EB",
         overflow: "hidden" /* Hide scrollbars */,
       }}
     >
-      <Grid
+      {/* <Grid
         style={{
           padding: "2px",
           color: "white",
@@ -173,7 +173,7 @@ export const Game = ({ grid, phase, currentPlayer, onKeyPress }) => {
             phyiscs concepts!
           </h3>
         </Grid>
-      </Grid>
+      </Grid> */}
       <KeyboardEventHandler
         handleKeys={["all"]}
         onKeyEvent={(key, e) => onKeyPress(key)}
