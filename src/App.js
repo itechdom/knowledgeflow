@@ -551,7 +551,7 @@ class App extends React.Component {
                 }}
               />
               <Route
-                path={`${this.props.match.path}`}
+                path={`${this.props.match.path}knowledge`}
                 render={({ location, history, match }) => {
                   return (
                     <LoginWrapper
@@ -1019,7 +1019,7 @@ class App extends React.Component {
                 }}
               ></Route>
               <Route
-                path={`${this.props.match.path}simulations`}
+                path={`${this.props.match.path}`}
                 render={(routeProps) => {
                   return (
                     <MainWrapper

@@ -7,9 +7,7 @@ export const dateFilterRouteList = [
 export const mainFilterRouteList = [{ url: "all", name: "All", icon: "" }];
 
 export const mainRouteList = [
-  { url: "/", name: "My Knowledge", icon: "memory" },
-  { url: "/simulations", name: "Simulations", icon: "router" },
-  { url: "/record", name: "Record", icon: "radio_button_checked" },
+  { url: "/", name: "Knowledge Stories", icon: "memory" },
 ];
 
 export const adminRoute = {
