@@ -1,14 +1,9 @@
 import React from "react";
-import Story from "./Story";
 import Matter from "matter-js";
-import Render from "../Matter/Render";
 import Tone from "tone";
-let notes = ["B", "F", "B", "C", "F", "C", "B", "C", "C"];
-notes = ["C", "B"];
-notes = ["C1", "C2"];
+import Render from "../Matter/Render";
+import Story from "./Story";
 let sampler;
-let timeout;
-//https://en.wikipedia.org/wiki/Sine_wave
 const Waves = ({ initMatter, ...rest }) => {
   const [currentPhase, setCurrentPhase] = React.useState(0);
   const [engine, setEngine] = React.useState();
@@ -60,7 +55,6 @@ const Waves = ({ initMatter, ...rest }) => {
     init({
       wireframes: false,
       background: "url('/assets/game/starry-background.jpg')",
-      // background: "#000000",
       showAngleIndicator: false,
       width: window.innerWidth,
       height: window.innerHeight,
@@ -84,7 +78,6 @@ const Waves = ({ initMatter, ...rest }) => {
         Render={Render}
         render={engine && engine.render}
         onUpdateBounds={(bounds) => {
-          let note = Math.floor(currentNote & notes.length) + 1;
           if (!sampler) {
             sampler = new Tone.Sampler(
               {

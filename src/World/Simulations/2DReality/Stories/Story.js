@@ -13,7 +13,6 @@ const Story = ({
   x,
   y,
 }) => {
-  const [currentZoom, setCurrentZoom] = React.useState(0);
   const [bounds, setBounds] = React.useState();
   React.useEffect(() => {
     if (!player || !engine) {

@@ -1,33 +1,11 @@
 import React from "react";
 import Matter from "matter-js";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 const origin = 100 * 5;
 const factor = 100;
-let interval;
 let rangeX;
 let rangeY;
-// const colors = ["#1D1F26", "#283655", "#4D648D", "#D0E1F9"];
-// const colors = ["#F7EFE2", "#EA4235", "#EC5D33", "#F5A62A"];
-// const colors = ["#4896D8", "#FEDB5B", "#ED6B56", "#F39F54"];
-// const colors = ["#EAE2D6", "#E1B81B", "#867666", "#D5C3AA"];
-// const colors = ["#B6452C", "#301B28", "#523634", "#DDC5A1"];
 const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
-// const colors = ["#EEB83E", "#010C29", "#D83D30", "#F9F5F2"];
-function usePrevious(value) {
-  const ref = React.useRef();
-  React.useEffect(() => {
-    ref.current = value;
-  });
-  return ref.current;
-}
-const snapshot = () => {
-  let canvas = document.getElementById("axes");
-  let image = canvas
-    .toDataURL("image/png")
-    .replace("image/png", "image/octet-stream"); // here is the most important part because if you dont replace you will get a DOM 18 exception.
-  window.location.href = image; // it will save locally
-};
-//convert cartesian coord to our world's coordinates
 const cartesian = (cartesianCoordinate) => {
   return cartesianCoordinate * factor + origin;
 };
@@ -35,8 +13,8 @@ const toCartesian = (coordinate) => {
   return (coordinate - origin) / factor;
 };
 const checkBoundsX = (render, onExpansion) => {
-  let rangeMin = (rangeX && rangeX[0]) || -13;
-  let rangeMax = (rangeX && rangeX[1]) || 13;
+  let rangeMin = (rangeX && rangeX[0]) || -1;
+  let rangeMax = (rangeX && rangeX[1]) || 1;
   let boundMin = render.bounds.min.x;
   let boundMax = render.bounds.max.x;
   let newBoundMin = Math.ceil(boundMin / factor);
@@ -51,8 +29,8 @@ const checkBoundsX = (render, onExpansion) => {
   }
 };
 const checkBoundsY = (render, onExpansion) => {
-  let rangeMin = (rangeY && rangeY[0]) || -14;
-  let rangeMax = (rangeY && rangeY[1]) || 14;
+  let rangeMin = (rangeY && rangeY[0]) || -1;
+  let rangeMax = (rangeY && rangeY[1]) || 1;
   let boundMin = render.bounds.min.y;
   let boundMax = render.bounds.max.y;
   let newBoundMin = Math.ceil(boundMin / factor);
@@ -81,10 +59,8 @@ const FunctionGraph = ({
   boundry,
   ...rest
 }) => {
-  const [iter, setIter] = React.useState(0);
-  const [currentZoom, setCurrentZoom] = React.useState(1);
+  const [currentZoom, setCurrentZoom] = React.useState(2);
   const [bounds, setBounds] = React.useState({});
-  const prevBounds = usePrevious(bounds);
   const init = () => {
     //reference frame
     let grid = Matter.Composites.stack(
@@ -231,18 +207,6 @@ const FunctionGraph = ({
           -1 * toCartesian(player.position.y)
         ).toFixed(1)}`,
       };
-      // if (player.velocity.x > 5) {
-      //   Matter.Body.setVelocity(player, {
-      //     x: 5,
-      //     y: player.velocity.y,
-      //   });
-      // }
-      // if (player.velocity.y > 5) {
-      //   Matter.Body.setVelocity(player, {
-      //     x: player.velocity.x,
-      //     y: 5,
-      //   });
-      // }
       if (
         Math.floor(toCartesian(player.position.x)) === -1 * (boundry[1] + 5) ||
         Math.floor(toCartesian(player.position.x)) === boundry[1] + 5 ||
@@ -287,15 +251,8 @@ const FunctionGraph = ({
     ]);
     setBounds({ ...render.bounds });
   };
-  //this effect will draw only when the boundries change
   React.useEffect(() => {
-    if (interval) {
-      clearInterval(interval);
-    }
-    //range
     if (bounds.min) {
-      let { min: minPrev, max: maxPrev } = prevBounds;
-      let { min, max } = bounds;
       let playerPosition = player.position;
       funcs.map((func) => {
         let x = Math.ceil(playerPosition.x / factor - origin / factor);
