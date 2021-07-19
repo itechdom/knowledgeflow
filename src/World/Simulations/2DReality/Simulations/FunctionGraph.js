@@ -92,14 +92,15 @@ const FunctionGraph = ({
     grid.label = "grid";
     let xAxis = Matter.Composites.stack(
       cartesian(-1 * boundry[1] - 0.5),
-      origin,
-      boundry[1] * 2,
+      cartesian(0),
+      boundry[1] * 2 + 1,
       1,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
         let xAxis = Matter.Bodies.rectangle(x, y, 90, 10, {
           isStatic: true,
+          isSensor: true,
           render: {
             zIndex: 2000,
             fillStyle: colors[1],
@@ -114,11 +115,59 @@ const FunctionGraph = ({
       }
     );
     xAxis.label = "xAxis";
+    let yAxisBoundry = Matter.Composites.stack(
+      cartesian(-1 * boundry[1] - 0.5),
+      cartesian(-1 * boundry[1]),
+      boundry[1] * 2 + 1,
+      1,
+      10,
+      10,
+      (x, y, column, row, lastBody, i) => {
+        let yAxisBoundry = Matter.Bodies.rectangle(x, y, 90, 10, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "rgba(255, 255, 255, 0.1)",
+            text: {
+              // content: `${i - boundry[1]}`,
+              size: 18,
+              color: "#FFF",
+            },
+          },
+        });
+        return yAxisBoundry;
+      }
+    );
+    yAxisBoundry.label = "yAxisBoundry";
+    let yAxisBoundryBottom = Matter.Composites.stack(
+      cartesian(-1 * boundry[1] - 0.5),
+      cartesian(boundry[1] + 0.5),
+      boundry[1] * 2 + 1,
+      1,
+      10,
+      10,
+      (x, y, column, row, lastBody, i) => {
+        let yAxisBoundryBottom = Matter.Bodies.rectangle(x, y, 90, 10, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "rgba(255, 255, 255, 0.1)",
+            text: {
+              // content: `${i - boundry[1]}`,
+              size: 18,
+              color: "#FFF",
+            },
+          },
+        });
+        return yAxisBoundryBottom;
+      }
+    );
+    yAxisBoundryBottom.label = "yAxisBoundryBottom";
     let yAxis = Matter.Composites.stack(
-      origin,
+      cartesian(0),
       cartesian(-1 * boundry[1] - 0.5),
       1,
-      boundry[1] * 2,
+      boundry[1] * 2 + 1,
       10,
       10,
       (x, y, column, row, lastBody, i) => {
@@ -140,84 +189,71 @@ const FunctionGraph = ({
       }
     );
     yAxis.label = "yAxis";
-    let boundryBox = Matter.Composites.stack(
-      cartesian(boundry[0]),
-      origin,
-      2,
+    let xAxisBoundry = Matter.Composites.stack(
+      cartesian(-1 * boundry[1] - 0.5),
+      cartesian(-1 * boundry[1] - 0.5),
       1,
-      1,
-      1,
+      boundry[1] * 2 + 1,
+      10,
+      10,
       (x, y, column, row, lastBody, i) => {
-        let box = Matter.Bodies.rectangle(
-          x + i * cartesian(boundry[1]),
-          y - boundry[1] * 100,
-          10,
-          boundry[1] * 100,
-          {
-            isStatic: true,
-            isSensor: i === 0,
-            render: {
-              zIndex: 100,
-              fillStyle: colors[0],
-              text: {
-                content: `${i === 0 ? "Begin!" : "End!"}`,
-                size: 18,
-                color: "#FFF",
-              },
+        let xAxisBoundry = Matter.Bodies.rectangle(x, y, 10, 90, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "rgba(255, 255, 255, 0.1)",
+            text: {
+              // content: `${i - boundry[1]}`,
+              size: 18,
+              color: "#FFF",
             },
-          }
-        );
-        box.label = i;
-        return box;
+          },
+        });
+        return xAxisBoundry;
       }
     );
-    let boundryBoxTop = Matter.Composites.stack(
-      origin,
-      cartesian(boundry[0]),
+    xAxisBoundry.label = "xAxisBoundry";
+    let xAxisBoundryRight = Matter.Composites.stack(
+      cartesian(boundry[1] + 0.5),
+      cartesian(-1 * boundry[1] - 0.125),
       1,
-      2,
-      1,
-      1,
+      boundry[1] * 2 + 1,
+      10,
+      10,
       (x, y, column, row, lastBody, i) => {
-        let box = Matter.Bodies.rectangle(
-          x,
-          y - i * boundry[1] * 100,
-          width,
-          10,
-          {
-            isStatic: true,
-            render: {
-              zIndex: 200,
-              fillStyle: colors[0],
-              text: {
-                content: `${i === 0 ? "" : ""}`,
-                size: 18,
-                color: "#FFF",
-              },
+        let xAxisBoundry = Matter.Bodies.rectangle(x, y, 10, 90, {
+          isStatic: true,
+          render: {
+            zIndex: 2000,
+            fillStyle: "rgba(255, 255, 255, 0.1)",
+            text: {
+              // content: `${i - boundry[1]}`,
+              size: 18,
+              color: "#FFF",
             },
-          }
-        );
-        box.label = i;
-        return box;
+          },
+        });
+        return xAxisBoundry;
       }
     );
+    xAxisBoundryRight.label = "xAxisBoundryRight";
     Matter.Events.on(engine, "beforeUpdate", () => {
       player.render.text = {
         content: `${toCartesian(player.position.x).toFixed(1)},${(
           -1 * toCartesian(player.position.y)
         ).toFixed(1)}`,
       };
-      if (
-        Math.floor(toCartesian(player.position.x)) === -1 * (boundry[1] + 5) ||
-        Math.floor(toCartesian(player.position.x)) === boundry[1] + 5 ||
-        Math.floor(-1 * toCartesian(player.position.y)) === -1 * boundry[1] ||
-        Math.floor(-1 * toCartesian(player.position.y)) === boundry[1]
-      ) {
-        Matter.Body.setPosition(player, {
-          x: cartesian(0),
-          y: -1 * cartesian(4),
-        });
-      }
+      // if (
+      //   Math.floor(toCartesian(player.position.x)) === -1 * (boundry[1] + 5) ||
+      //   Math.floor(toCartesian(player.position.x)) === boundry[1] + 5 ||
+      //   Math.floor(-1 * toCartesian(player.position.y)) === -1 * boundry[1] ||
+      //   Math.floor(-1 * toCartesian(player.position.y)) === boundry[1]
+      // ) {
+      //   Matter.Body.setPosition(player, {
+      //     x: cartesian(0),
+      //     y: cartesian(0),
+      //   });
+      // }
       Render.lookAt(render, {
         min: {
           x: player.position.x - (width / 2) * currentZoom,
@@ -245,26 +281,27 @@ const FunctionGraph = ({
     Matter.World.add(engine.world, [
       xAxis,
       yAxis,
-      boundryBox,
-      boundryBoxTop,
-      grid,
+      yAxisBoundry,
+      yAxisBoundryBottom,
+      xAxisBoundry,
+      xAxisBoundryRight,
     ]);
     setBounds({ ...render.bounds });
   };
   React.useEffect(() => {
     if (bounds.min) {
       let playerPosition = player.position;
-      funcs.map((func) => {
+      funcs.map((func, i) => {
         let x = Math.ceil(playerPosition.x / factor - origin / factor);
         let y = func(x);
-        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 2, {
+        let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 25, {
           isStatic: true,
           render: {
             zIndex: 3000,
-            fillStyle: "black",
+            fillStyle: colors[2],
             text: {
               content: `${x},${func(x).toFixed(1)}`,
-              size: 12,
+              size: 18,
               color: "#FFF",
             },
           },

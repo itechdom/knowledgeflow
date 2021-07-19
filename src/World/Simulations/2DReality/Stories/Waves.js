@@ -41,7 +41,7 @@ const Waves = ({ initMatter, ...rest }) => {
     ];
     let player = Matter.Bodies.circle(400, 100, 50, {
       label: "player",
-      restitution: 0.9,
+      restitution: 0.5,
       render: {
         fillStyle: "#000000",
         zIndex: 9000,
@@ -64,6 +64,7 @@ const Waves = ({ initMatter, ...rest }) => {
   return (
     <>
       <Story
+        {...rest}
         title={"Waves"}
         currentPhase={currentPhase}
         storyCondition={() => {
@@ -71,32 +72,31 @@ const Waves = ({ initMatter, ...rest }) => {
             setCurrentPhase(currentPhase + 1);
           }
         }}
-        funcs={[(x) => Math.sin(x)]}
-        boundry={[0, 50]}
+        funcs={[(x) => x]}
+        boundry={[0, 10]}
         player={player}
         engine={engine && engine.engine}
         Render={Render}
         render={engine && engine.render}
         onUpdateBounds={(bounds) => {
           if (!sampler) {
-            sampler = new Tone.Sampler(
-              {
-                C1: "/assets/game/audio/loop/bass.mp3",
-                C2: "/assets/game/audio/loop/chords.mp3",
-                C3: "/assets/game/audio/loop/kick.mp3",
-                C4: "/assets/game/audio/loop/snare.mp3",
-              },
-              function () {
-                sampler.triggerAttack("C1");
-                sampler.triggerAttack("C2");
-                sampler.triggerAttack("C3");
-                sampler.triggerAttack("C4");
-              }
-            ).toMaster();
+            // sampler = new Tone.Sampler(
+            //   {
+            //     C1: "/assets/game/audio/loop/bass.mp3",
+            //     C2: "/assets/game/audio/loop/chords.mp3",
+            //     C3: "/assets/game/audio/loop/kick.mp3",
+            //     C4: "/assets/game/audio/loop/snare.mp3",
+            //   },
+            //   function () {
+            //     sampler.triggerAttack("C1");
+            //     sampler.triggerAttack("C2");
+            //     sampler.triggerAttack("C3");
+            //     sampler.triggerAttack("C4");
+            //   }
+            // ).toMaster();
           }
           setCurrentNote(currentNote + 1);
         }}
-        {...rest}
       ></Story>
       <div id={`waves-container`}>
         <canvas id={`waves`}></canvas>
