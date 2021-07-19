@@ -18,7 +18,7 @@ const Story = ({
     if (!player || !engine) {
       return;
     }
-    const magnitude = 0.09;
+    const magnitude = 0.025;
     if (direction === "left") {
       return Matter.Body.applyForce(
         player,

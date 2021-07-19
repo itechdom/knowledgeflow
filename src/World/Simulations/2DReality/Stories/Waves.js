@@ -72,7 +72,9 @@ const Waves = ({ initMatter, ...rest }) => {
             setCurrentPhase(currentPhase + 1);
           }
         }}
-        funcs={[(x) => x]}
+        funcs={[
+          [(x) => 1, (x) => x],
+        ]}
         boundry={[0, 10]}
         player={player}
         engine={engine && engine.engine}

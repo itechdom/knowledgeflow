@@ -5,7 +5,7 @@ const origin = 100 * 5;
 const factor = 100;
 let rangeX;
 let rangeY;
-const colors = ["#2E89BC", "#2F496D", "#EE8B73", "#F4EADE"];
+const colors = ["#EE8B73", "#2E89BC", "#2F496D", "#F4EADE"];
 const cartesian = (cartesianCoordinate) => {
   return cartesianCoordinate * factor + origin;
 };
@@ -176,7 +176,7 @@ const FunctionGraph = ({
           isSensor: true,
           render: {
             zIndex: 1000,
-            fillStyle: colors[2],
+            fillStyle: colors[0],
             text: {
               content: `${-1 * (i - boundry[1])}`,
               size: 18,
@@ -292,16 +292,24 @@ const FunctionGraph = ({
     if (bounds.min) {
       let playerPosition = player.position;
       funcs.map((func, i) => {
-        let x = Math.ceil(playerPosition.x / factor - origin / factor);
-        let y = func(x);
+        let x, y;
+        let number = Math.ceil(playerPosition.x / factor - origin / factor);
+        if (Array.isArray(func)) {
+          x = func[0](number);
+          y = func[1](number);
+          console.log(x, y);
+        } else {
+          x = number;
+          y = func(number);
+        }
         let point = Matter.Bodies.circle(cartesian(x), cartesian(-1 * y), 25, {
           isStatic: true,
           render: {
             zIndex: 3000,
-            fillStyle: colors[2],
+            fillStyle: colors[i],
             text: {
-              content: `${x},${func(x).toFixed(1)}`,
-              size: 18,
+              content: `${x},${y.toFixed(1)}`,
+              size: 36,
               color: "#FFF",
             },
           },
