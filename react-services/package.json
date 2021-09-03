@@ -20,7 +20,7 @@
   "homepage": "https://github.com/markab-io/react-services#readme",
   "dependencies": {
     "apollo-boost": "^0.1.17",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "mobx": "^5.1.1",
