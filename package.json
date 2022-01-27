@@ -71,7 +71,7 @@
     "recharts": "^1.6.2",
     "recompose": "^0.30.0",
     "showdown": "^1.9.0",
-    "three": "^0.112.1",
+    "three": "^0.137.0",
     "tone": "^13.8.25"
   },
   "devDependencies": {
