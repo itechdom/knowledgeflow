@@ -806,8 +806,6 @@ class App extends React.Component {
                         }
                         return history.push(`${route}`);
                       }}
-                      // isTabMenu={true}
-                      classes={classes}
                       routeList={
                         this.state.currentUser && this.state.currentUser.isAdmin
                           ? [...mainRouteList, adminRoute]
