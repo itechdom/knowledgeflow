@@ -1,1 +1,0 @@
-./node_modules/.bin/babel-node ./services/lambda-service/index.js

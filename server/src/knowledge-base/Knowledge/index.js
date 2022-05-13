@@ -1,18 +1,18 @@
 //the crud service creates [create, read, update, del] endpoints for a mongoose model
-const crudService = require("@markab.io/node/crud-service/crud-service.js");
-const mediaService = require("@markab.io/node/media-service/media-service.js");
-const vizService = require("@markab.io/node/viz-service/viz-service.js");
+const crudService = require("@markab.io/node/crud-service/crud-service");
+const mediaService = require("@markab.io/node/media-service/media-service");
+const vizService = require("@markab.io/node/viz-service/viz-service");
 const {
   formsService,
   registerForms,
-} = require("@markab.io/node/forms-service/forms-service.js");
+} = require("@markab.io/node/forms-service/forms-service");
 const {
   registerAction,
   isPermitted,
-} = require("@markab.io/node/acl-service/acl-service.js");
+} = require("@markab.io/node/acl-service/acl-service");
 const {
   registerLambdaFunction,
-} = require("@markab.io/node/lambda-service/lambda-service.js");
+} = require("@markab.io/node/lambda-service/lambda-service");
 const Knowledge = ({
   config,
   knowledgeModel,
