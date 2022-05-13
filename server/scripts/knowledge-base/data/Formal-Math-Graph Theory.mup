@@ -1,0 +1,589 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Graph Theory",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.6a13ca3115d0c1a5",
+          "ideas": {
+            "2": {
+              "title": "Definition",
+              "id": "32.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "Two sets",
+                  "id": "33.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "Vertices",
+                      "id": "34.63c9800f66c4545c"
+                    },
+                    "2": {
+                      "title": "Edges",
+                      "id": "35.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "One of the primary studies of discrete mathematics",
+                  "id": "5.6a13ca3115d0c1a5",
+                  "attr": {}
+                },
+                "3": {
+                  "title": "Applications in Computer Science",
+                  "id": "36.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "Computer Science − Graph theory is used for the study of algorithms. For example,Kruskal's AlgorithmPrim's AlgorithmDijkstra's Algorithm",
+                      "id": "37.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "33": {
+              "title": "Edges ",
+              "id": "12.6a13ca3115d0c1a5",
+              "ideas": {
+                "1": {
+                  "title": "Parallel Edge",
+                  "id": "60.63c9800f66c4545c",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "if there are two vertices connected by more than one edge",
+                      "id": "61.63c9800f66c4545c"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Adjacent Edges",
+                  "id": "57.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "if there is a vertex shared",
+                      "id": "59.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "39": {
+              "title": "Graph",
+              "id": "84.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "Circumference",
+                  "id": "96.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "number of edges in the longest cycle of ‘G’",
+                      "id": "98.63c9800f66c4545c"
+                    },
+                    "2": {
+                      "title": "For Example",
+                      "id": "102.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "Example − In the example graph, the circumference is 6, which we derived from the longest cycle a-c-f-g-e-b-a or a-c-f-d-e-b-a.",
+                          "id": "103.63c9800f66c4545c"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "106.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.tutorialspoint.com/graph_theory/graph_theory_basic_properties.htm",
+                          "id": "107.63c9800f66c4545c"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Girth",
+                  "id": "100.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "The number of edges in the shortest cycle of ‘G’ is called its Girth.",
+                      "id": "101.63c9800f66c4545c"
+                    },
+                    "2": {
+                      "title": "For Example",
+                      "id": "109.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "Example − In the example graph, the Girth of the graph is 4, which we derived from the shortest cycle a-c-f-d-a or d-f-g-e-d or a-b-e-d-a.",
+                          "id": "110.63c9800f66c4545c"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Diameter",
+                  "id": "83.63c9800f66c4545c",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Radius",
+                  "id": "77.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "Minimum number of Eccentricity out of all the other eccentricities",
+                      "id": "78.63c9800f66c4545c"
+                    },
+                    "2": {
+                      "title": "r(G)",
+                      "id": "79.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "types",
+                  "ideas": {
+                    "1": {
+                      "title": "directed",
+                      "ideas": {
+                        "1": {
+                          "title": "indegree",
+                          "ideas": {
+                            "1": {
+                              "title": "edges coming into the vertex",
+                              "id": "114.63c9800f66c4545c"
+                            }
+                          },
+                          "id": "113.63c9800f66c4545c"
+                        },
+                        "2": {
+                          "title": "outdegree",
+                          "ideas": {
+                            "1": {
+                              "title": "edges coming out of the vertex",
+                              "id": "116.63c9800f66c4545c"
+                            }
+                          },
+                          "id": "115.63c9800f66c4545c"
+                        }
+                      },
+                      "id": "112.63c9800f66c4545c",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "undirected",
+                      "ideas": {
+                        "1": {
+                          "title": "number of edges connected to the vertex",
+                          "ideas": {
+                            "1": {
+                              "title": "if it's",
+                              "ideas": {
+                                "1": {
+                                  "title": "1",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "pendent vertex",
+                                      "id": "121.63c9800f66c4545c"
+                                    }
+                                  },
+                                  "id": "120.63c9800f66c4545c"
+                                },
+                                "2": {
+                                  "title": "0",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "isolated vertex",
+                                      "id": "123.63c9800f66c4545c"
+                                    }
+                                  },
+                                  "id": "122.63c9800f66c4545c"
+                                }
+                              },
+                              "id": "119.63c9800f66c4545c"
+                            }
+                          },
+                          "id": "118.63c9800f66c4545c"
+                        },
+                        "2": {
+                          "title": "No direction with Edges",
+                          "id": "134.63c9800f66c4545c"
+                        }
+                      },
+                      "id": "117.63c9800f66c4545c",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Null",
+                      "id": "138.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "no edges",
+                          "id": "140.63c9800f66c4545c"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Simple",
+                      "id": "142.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "no loops and no parallel edges",
+                          "id": "143.63c9800f66c4545c"
+                        },
+                        "2": {
+                          "title": "Maximum number of edges with N vertices",
+                          "id": "144.63c9800f66c4545c",
+                          "ideas": {
+                            "1": {
+                              "title": "N * (N-1) / 2",
+                              "id": "145.63c9800f66c4545c"
+                            },
+                            "2": {
+                              "title": "A nice way to understand this is",
+                              "id": "153.63c9800f66c4545c",
+                              "attr": {
+                                "note": {
+                                  "index": 57,
+                                  "text": "Another way to view this problem is to use the \"Handshaking Lemma\". Viewing the vertices as people and the edges as handshakes, we could ask how many handshakes are possible among nn people if every pair of people shakes hands exactly once. Every person can shake hands with the other n−1n−1 people in the room. There are not, however, n(n−1)n(n−1) handshakes, since we are counting every handshake exactly twice in this way (this counts Alice shaking Bob's hand as a different handshake than Bob shaking Alice's hand). thus 1/2 n(n-1) gives us the correct count."
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Maximum number of simple graphs with N Vertices",
+                          "id": "146.63c9800f66c4545c",
+                          "ideas": {
+                            "1": {
+                              "title": "2 ^ (n*(n-1)/2)",
+                              "id": "147.63c9800f66c4545c"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Connected",
+                      "id": "148.63c9800f66c4545c",
+                      "attr": {
+                        "style": {
+                          "background": "#008080"
+                        }
+                      }
+                    },
+                    "16": {
+                      "title": "Resources",
+                      "id": "135.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "More types",
+                          "id": "136.63c9800f66c4545c",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.tutorialspoint.com/graph_theory/types_of_graphs.htm",
+                              "id": "137.63c9800f66c4545c"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "id": "111.63c9800f66c4545c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "size",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "number of edges",
+                      "id": "126.63c9800f66c4545c"
+                    }
+                  },
+                  "id": "125.63c9800f66c4545c"
+                },
+                "7": {
+                  "title": "order",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "number of vertices",
+                      "id": "128.63c9800f66c4545c"
+                    }
+                  },
+                  "id": "127.63c9800f66c4545c"
+                },
+                "8": {
+                  "title": "Central Point",
+                  "id": "95.63c9800f66c4545c",
+                  "attr": {}
+                },
+                "9": {
+                  "title": "Degree Sequence",
+                  "id": "62.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "if all degrees are arranged in asc or desc order",
+                      "id": "63.63c9800f66c4545c",
+                      "ideas": {
+                        "1": {
+                          "title": "for example",
+                          "id": "65.63c9800f66c4545c",
+                          "ideas": {
+                            "1": {
+                              "title": "In the above graph, for the vertices {a, b, c, d, e, f}, the degree sequence is {2, 2, 2, 2, 2, 0}.",
+                              "id": "66.63c9800f66c4545c"
+                            },
+                            "2": {
+                              "title": "that means that it's a (معين) with f being in the center not connected to anything",
+                              "id": "67.63c9800f66c4545c"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "49": {
+              "title": "Questions",
+              "id": "80.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "Connected graph",
+                  "id": "81.63c9800f66c4545c"
+                },
+                "2": {
+                  "title": "What does |E|",
+                  "id": "132.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "this means the length of the set",
+                      "id": "151.63c9800f66c4545c"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "50": {
+              "title": "Scratch pad",
+              "id": "149.63c9800f66c4545c",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 76,
+                  "text": "I have 3 vertices, What is the maximum number of edges I can have in a simple graph?\n\nvertices are: a,b,c\n\nlet's start with a, it has (3-1) edges with other vertices\nwith b, it has 2-1 edges with other vertices excluding vertices a and b\nwith c, it has 1-1 edges with other vertices excluding vertices a,b,c\n\nif I sum them up 2 + 1 + 0 = 3 maximum number of edges\n\nto write a program that does it, we should do the following\n\nlet vertices = [a,b,c];\nlet edgeNumber = 0;\nfor(var i=1 ;i<=vertices.length;i++){\nedgeNumber += vertices.length - i;\n}\nconsole.log(edgeNumber);"
+                }
+              }
+            },
+            "30.5": {
+              "title": "Vertex",
+              "id": "124.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "Adjacent",
+                  "id": "129.63c9800f66c4545c"
+                },
+                "2": {
+                  "title": "Distance between two vertices",
+                  "id": "68.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "there can be more than one path to a sepcific vertex",
+                      "id": "69.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Loop",
+                  "id": "38.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "Vertex in which an edge is connected to the graph itself",
+                      "id": "39.63c9800f66c4545c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Sum of Degrees of Vertices Theorem",
+                  "id": "133.63c9800f66c4545c",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "Wikipedia",
+          "id": "4.6a13ca3115d0c1a5",
+          "ideas": {
+            "4": {
+              "title": "Applications",
+              "id": "20.6a13ca3115d0c1a5",
+              "ideas": {
+                "1": {
+                  "title": "Biology",
+                  "id": "21.6a13ca3115d0c1a5"
+                },
+                "2": {
+                  "title": "Social",
+                  "id": "22.6a13ca3115d0c1a5"
+                },
+                "3": {
+                  "title": "Computer Networks",
+                  "id": "23.6a13ca3115d0c1a5"
+                },
+                "4": {
+                  "title": "Linguistics",
+                  "id": "24.6a13ca3115d0c1a5",
+                  "ideas": {
+                    "1": {
+                      "title": "lexical analysis",
+                      "id": "25.6a13ca3115d0c1a5"
+                    },
+                    "2": {
+                      "title": "semantic structure",
+                      "id": "26.6a13ca3115d0c1a5"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Resources",
+              "id": "27.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Graph_theory#Definitions",
+                  "id": "19.6a13ca3115d0c1a5",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              98,
+              50,
+              1
+            ],
+            "collapsed": true
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.6a13ca3115d0c1a5",
+          "ideas": {
+            "1": {
+              "title": "Tutorials",
+              "id": "28.63c9800f66c4545c",
+              "ideas": {
+                "1": {
+                  "title": "http://primes.utm.edu/graph/",
+                  "id": "29.63c9800f66c4545c"
+                },
+                "2": {
+                  "title": "Tutorials Point",
+                  "id": "30.63c9800f66c4545c",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.tutorialspoint.com/graph_theory/",
+                      "id": "31.63c9800f66c4545c"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "title": "Graph Theory",
+  "links": []
+}

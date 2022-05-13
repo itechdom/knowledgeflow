@@ -1,0 +1,1146 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Biology",
+      "attr": {
+        "position": [
+          -28,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.3c75fa6b10c564ff",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "6.3de831540f0bbe82",
+              "attr": {
+                "note": {
+                  "index": 5,
+                  "text": "Biology is a natural science concerned with the study of life and living organisms, including their structure, function, growth, evolution, distribution, identification and taxonomy."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "areas of study",
+                  "id": "7.3de831540f0bbe82",
+                  "attr": {
+                    "note": {
+                      "index": 6,
+                      "text": "structure, function, growth, evolution, distribution, identification and taxonomy."
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Homeostasis ",
+              "id": "5.3c75fa6b10c564ff",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Homeostasis#Biological",
+                  "id": "4.3c75fa6b10c564ff",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "2": {
+                  "title": "You are in balance, you have a blood heat of 98 degrees",
+                  "id": "104.490910ac6d7831f1"
+                },
+                "3": {
+                  "title": "just in equilibrium in general ",
+                  "id": "105.490910ac6d7831f1",
+                  "ideas": {
+                    "1": {
+                      "title": "fluids",
+                      "id": "106.490910ac6d7831f1"
+                    },
+                    "2": {
+                      "title": "other",
+                      "id": "107.490910ac6d7831f1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 3,
+                  "text": "It is also understood today that all the organisms survive by consuming and transforming energy and by regulating their internal environment to maintain a stable and vital condition known as homeostasis."
+                },
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Pillars of biology",
+              "id": "8.3de831540f0bbe82",
+              "ideas": {
+                "1": {
+                  "title": "Cell is the basic unit of life",
+                  "id": "11.3de831540f0bbe82"
+                },
+                "2": {
+                  "title": "Genes as the basic unit of heredity",
+                  "id": "12.3de831540f0bbe82"
+                },
+                "3": {
+                  "title": "Evolution is the engine that propels the synthesis and creation of new species",
+                  "id": "13.3de831540f0bbe82",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 7,
+                  "text": "biology recognizes the cell as the basic unit of life, genes as the basic unit of heredity, and evolution as the engine that propels the synthesis and creation of new species."
+                },
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "How are sub-disciplines of biology defined? ",
+              "id": "15.3de831540f0bbe82",
+              "ideas": {
+                "1": {
+                  "title": "sub-disciplines",
+                  "id": "17.3de831540f0bbe82",
+                  "attr": {
+                    "note": {
+                      "index": 12,
+                      "text": "biochemistry examines the rudimentary chemistry of life; molecular biology studies the complex interactions among biological molecules; botany studies the biology of plants; cellular biology examines the basic building-block of all life, the cell; physiology examines the physical and chemical functions of tissues, organs, and organ systems of an organism; evolutionary biology examines the processes that produced the diversity of life; and ecology examines how organisms interact in their environment.[2]"
+                    }
+                  },
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 11,
+                  "text": "the scale at which organisms are studied, the kinds of organisms studied, and the methods used to study them"
+                },
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "History",
+              "id": "21.3de831540f0bbe82",
+              "ideas": {
+                "1": {
+                  "title": "the term biology was around 1736 ",
+                  "id": "22.3c75fa6b10c564ff",
+                  "ideas": {
+                    "1": {
+                      "title": "Carl Linnaeus",
+                      "id": "23.3c75fa6b10c564ff",
+                      "ideas": {
+                        "1": {
+                          "title": "Bibliotheca botanica",
+                          "id": "24.3c75fa6b10c564ff"
+                        },
+                        "2": {
+                          "title": "https://en.wikipedia.org/wiki/Binomial_nomenclature",
+                          "id": "25.3c75fa6b10c564ff",
+                          "ideas": {
+                            "1": {
+                              "title": "figured out a way to categorize species",
+                              "id": "26.3c75fa6b10c564ff",
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "Bionomial  nomencluture",
+                              "id": "28.35e2b394aabca66f",
+                              "ideas": {
+                                "1": {
+                                  "title": "two part name",
+                                  "id": "29.35e2b394aabca66f"
+                                },
+                                "2": {
+                                  "title": "first part is genus",
+                                  "id": "30.35e2b394aabca66f",
+                                  "ideas": {}
+                                },
+                                "3": {
+                                  "title": "second is specie",
+                                  "id": "31.35e2b394aabca66f"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Biology grew significantly after the discovery of the microscope",
+                  "id": "49.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek",
+                      "id": "50.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "https://en.wikipedia.org/wiki/Jan_Swammerdam",
+                  "id": "51.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "jan swammerdam",
+                      "id": "52.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "first to use microscope to dissect",
+                          "id": "53.35e2b394aabca66f"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Advances in microscope led to",
+                  "id": "59.35e2b394aabca66f",
+                  "attr": {
+                    "note": {
+                      "index": 28,
+                      "text": "Advances in microscopy also had a profound impact on biological thinking. In the early 19th century, a number of biologists pointed to the central importance of the cell. Then, in 1838, Schleiden and Schwann began promoting the now universal ideas that (1) the basic unit of organisms is the cell and (2) that individual cells have all the characteristics of life, although they opposed the idea that (3) all cells come from the division of other cells. Thanks to the work of Robert Remak and Rudolf Virchow, however, by the 1860s most biologists accepted all three tenets of what came to be known as cell theory.[11][12]"
+                    }
+                  },
+                  "ideas": {}
+                },
+                "5": {
+                  "title": "Evolution",
+                  "id": "62.35e2b394aabca66f",
+                  "ideas": {
+                    "2": {
+                      "title": "Buffon influenced lamarck and Darwin",
+                      "id": "64.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": " key figure in the history of evolutionary thought; his work influenced the evolutionary theories of both Lamarck and Darwin.[14]",
+                          "id": "63.35e2b394aabca66f",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Lamarck started the evolutionary thinking",
+                          "id": "65.35e2b394aabca66f",
+                          "ideas": {
+                            "1": {
+                              "title": "Jean Baptist Lamarck",
+                              "id": "66.35e2b394aabca66f",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Jean-Baptiste_Lamarck",
+                                  "id": "67.35e2b394aabca66f"
+                                }
+                              },
+                              "attr": {
+                                "note": {
+                                  "index": 33,
+                                  "text": "He posited that evolution was the result of environmental stress on properties of animals, meaning that the more frequently and rigorously an organ was used, the more complex and efficient it would become, thus adapting the animal to its environment"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Darwin",
+                      "id": "74.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "On the Origin of Species by Means of Natural Selection, or the Preservation of Favoured Races in the Struggle for Life,",
+                          "id": "76.35e2b394aabca66f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Taxonomy",
+              "id": "32.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Biological_classification_L_Pengo_vflip.svg",
+                  "id": "33.35e2b394aabca66f",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "Start from the bottom up",
+                  "id": "38.35e2b394aabca66f"
+                },
+                "3": {
+                  "title": "it includes",
+                  "id": "39.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "Specie",
+                      "id": "40.35e2b394aabca66f"
+                    },
+                    "2": {
+                      "title": "Genus",
+                      "id": "41.35e2b394aabca66f"
+                    },
+                    "3": {
+                      "title": "Family",
+                      "id": "42.35e2b394aabca66f"
+                    },
+                    "4": {
+                      "title": "Order",
+                      "id": "43.35e2b394aabca66f"
+                    },
+                    "5": {
+                      "title": "Class",
+                      "id": "44.35e2b394aabca66f"
+                    },
+                    "6": {
+                      "title": "Phylum",
+                      "id": "45.35e2b394aabca66f"
+                    },
+                    "7": {
+                      "title": "Kingdom",
+                      "id": "46.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "Plants, Animals, Protists, Fungi, Archaebacteria, Eubacteria",
+                          "id": "108.2eb1188630f4ae8d"
+                        },
+                        "2": {
+                          "title": "Archabacteria",
+                          "id": "114.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "They exist in extreme condition",
+                              "id": "115.2eb1188630f4ae8d",
+                              "ideas": {
+                                "1": {
+                                  "title": "such as hot boiling water",
+                                  "id": "120.2eb1188630f4ae8d"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "single celled",
+                              "id": "119.2eb1188630f4ae8d"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Eubacteria",
+                          "id": "116.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "Most bacteria are here",
+                              "id": "131.2eb1188630f4ae8d"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Resources",
+                          "id": "121.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.ric.edu/faculty/ptiskus/six_kingdoms/",
+                              "id": "122.2eb1188630f4ae8d"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3.5": {
+                          "title": "Fungi",
+                          "id": "123.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "they don't acquire their own food",
+                              "id": "124.2eb1188630f4ae8d"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3.75": {
+                          "title": "Protists",
+                          "id": "129.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "Complex cells, that's why they aren't classified under bacteria",
+                              "id": "132.2eb1188630f4ae8d"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3.875": {
+                          "title": "How are they categorized?",
+                          "id": "125.2eb1188630f4ae8d",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 62,
+                              "text": "·       Cell type, complex or simple\n·       Their ability to make food\n·       The number of cells in their body"
+                            }
+                          }
+                        },
+                        "3.8125": {
+                          "title": "Animalia",
+                          "id": "161.4d36eb5f06997f9a"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "8": {
+                      "title": "Domain",
+                      "id": "47.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "Archaea",
+                          "id": "139.2eb1188630f4ae8d"
+                        }
+                      }
+                    },
+                    "9": {
+                      "title": "Life",
+                      "id": "48.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Every animal is categorized using all of them",
+                  "id": "109.2eb1188630f4ae8d",
+                  "ideas": {
+                    "1": {
+                      "title": "for example",
+                      "id": "110.2eb1188630f4ae8d",
+                      "ideas": {
+                        "1": {
+                          "title": "Tiger",
+                          "id": "111.2eb1188630f4ae8d",
+                          "ideas": {
+                            "1": {
+                              "title": "Sumatran Tiger  -    Kingdom: Animalia, Phylum:Chordata, Class Mammalia, Order Carnivora, Family Felidae, Genus Pathera, Species tigris",
+                              "id": "113.2eb1188630f4ae8d"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 23,
+                  "text": "The application of binomial nomenclature is now governed by various internationally agreed codes of rules, of which the two most important are the International Code of Zoological Nomenclature (ICZN) for animals and the International Code of Nomenclature for algae, fungi, and plants (ICN). Although the general principles underlying binomial nomenclature are common to these two codes, there are some differences, both in the terminology they use and in their precise rules."
+                },
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Techniques",
+              "id": "54.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "Dissection",
+                  "id": "55.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Dissection",
+                      "id": "57.35e2b394aabca66f"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Staining",
+                  "id": "56.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Staining",
+                      "id": "58.35e2b394aabca66f"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Cell theory",
+              "id": "60.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "(1) the basic unit of organisms is the cell and (2) that individual cells have all the characteristics of life, (3) all cells come from the division of other cells.",
+                  "id": "61.35e2b394aabca66f",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "DNA",
+                  "id": "99.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "contains information for protein synthesis",
+                      "id": "100.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "immune system",
+                  "id": "101.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "Antibodies",
+                      "id": "102.35e2b394aabca66f"
+                    },
+                    "2": {
+                      "title": "white cells",
+                      "id": "103.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 55,
+                  "text": "Cell theory states that the cell is the fundamental unit of life, and that all living things are composed of one or more cells or the secreted products of those cells (e.g. shells, hairs and nails etc.). All cells arise from other cells through cell division. In multicellular organisms, every cell in the organism's body derives ultimately from a single cell in a fertilized egg. The cell is also considered to be the basic unit in many pathological processes.[20] In addition, the phenomenon of energy flow occurs in cells in processes that are part of the function known as metabolism. Finally, cells contain hereditary information (DNA), which is passed from cell to cell during cell division."
+                },
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Evolution",
+              "id": "68.35e2b394aabca66f",
+              "ideas": {
+                "2": {
+                  "title": "We all come from a common origin ",
+                  "id": "82.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "Believed to have appeared 3.5 Billion years ago",
+                      "id": "83.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "The driving force of evolution is",
+                  "id": "84.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "Natural Selection",
+                      "id": "69.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Natural_selection",
+                          "id": "70.35e2b394aabca66f",
+                          "ideas": {
+                            "1": {
+                              "title": "Wikipedia link",
+                              "id": "77.35e2b394aabca66f"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "How does it occur?",
+                          "id": "71.35e2b394aabca66f",
+                          "attr": {
+                            "note": {
+                              "index": 58,
+                              "text": "Variation exists within all populations of organisms. This occurs partly because random mutations arise in the genome of an individual organism, and offspring can inherit such mutations. Throughout the lives of the individuals, their genomes interact with their environments to cause variations in traits. The environment of a genome includes the molecular biology in the cell, other cells, other individuals, populations, species, as well as the abiotic environment. Individuals with certain variants of the trait may survive and reproduce more than individuals with other, less successful, variants. Therefore, the population evolves. Factors that affect reproductive success are also important, an issue that Darwin developed in his ideas on sexual selection (now often included in natural selection) and fecundity selection."
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "There is also artificial selection",
+                          "id": "72.35e2b394aabca66f",
+                          "ideas": {
+                            "1": {
+                              "title": "when humans select certain breads or cross bread to produce better breads",
+                              "id": "73.35e2b394aabca66f"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 56,
+                          "text": "Natural selection is the differential survival and reproduction of individuals due to differences in phenotype. It is a key mechanism of evolution, the change in heritable traits of a population over time. Charles Darwin popularised the term \"natural selection\", and compared it with artificial selection."
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Genetic Drift",
+                      "id": "85.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "Genetic drift was embraced as an additional mechanism of evolutionary development in the modern synthesis of the theory.[29]",
+                          "id": "86.35e2b394aabca66f"
+                        },
+                        "2": {
+                          "title": "https://en.wikipedia.org/wiki/Genetic_drift",
+                          "id": "87.35e2b394aabca66f"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Evolutionary History",
+                  "id": "89.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "How do we generate information about phylogeny?",
+                      "id": "91.35e2b394aabca66f",
+                      "ideas": {
+                        "1": {
+                          "title": "comparisons of DNA sequences conducted within molecular biology or genomics, and comparisons of fossils or other records of ancient organisms in paleontology.",
+                          "id": "92.35e2b394aabca66f"
+                        },
+                        "2": {
+                          "title": "Biologists organize and analyze evolutionary relationships through various methods, including phylogenetics, phenetics, and cladistics. (For a summary of major events in the evolution of life as currently understood by biologists, see evolutionary timeline.)",
+                          "id": "93.35e2b394aabca66f",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Timeline_of_the_evolutionary_history_of_life",
+                              "id": "94.35e2b394aabca66f"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Great Oxydation event",
+                      "id": "162.4d36eb5f06997f9a",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Great_Oxygenation_Event",
+                          "id": "163.4d36eb5f06997f9a"
+                        },
+                        "2": {
+                          "title": "increased levels of oxygen in the atmosphere due to photosynthesis",
+                          "id": "164.4d36eb5f06997f9a"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 70,
+                      "text": "The evolutionary history of the species—which describes the characteristics of the various species from which it descended—together with its genealogical relationship to every other species is known as its phylogeny."
+                    },
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "https://en.wikipedia.org/wiki/Evolution",
+                  "id": "95.35e2b394aabca66f",
+                  "ideas": {
+                    "1": {
+                      "title": "Wikipedia link",
+                      "id": "96.35e2b394aabca66f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 57,
+                  "text": "A central organizing concept in biology is that life changes and develops through evolution, and that all life-forms known have a common origin. The theory of evolution postulates that all organisms on the Earth, both living and extinct, have descended from a common ancestor or an ancestral gene pool. This last universal common ancestor of all organisms is believed to have appeared about 3.5 billion years ago.[21] Biologists generally regard the universality and ubiquity of the genetic code as definitive evidence in favor of the theory of universal common descent for all bacteria, archaea, and eukaryotes (see: origin of life).[22]f"
+                },
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Genetics",
+              "id": "78.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "The physical representation of heredity",
+                  "id": "79.35e2b394aabca66f",
+                  "ideas": {},
+                  "attr": {
+                    "note": {
+                      "index": 65,
+                      "text": "it came along with evolutionary principles and population genetics. In the 1940s and early 1950s, experiments pointed to DNA as the component of chromosomes that held the trait-carrying units that had become known as genes. A focus on new kinds of model organisms such as viruses and bacteria, along with the discovery of the double helical structure of DNA in 1953, marked the transition to the era of molecular genetics. From the 1950s to present times, biology has been vastly extended in the molecular domain. The genetic code was cracked by Har Gobind Khorana, Robert W. Holley and Marshall Warren Nirenberg after DNA was understood to contain codons. Finally, the Human Genome Project was launched in 1990 with the goal of mapping the general human genome. This project was essentially completed in 2003,[19] with further analysis still being published. The Human Genome Project was the first step in a globalized effort to incorporate accumulated knowledge of biology into a functional, molecular definition of the human body and the bodies of other organisms."
+                    }
+                  }
+                },
+                "2": {
+                  "title": "DNA",
+                  "id": "165.95bc.2637e34c-71a1.77ab553e6",
+                  "ideas": {
+                    "1": {
+                      "title": "every cell has it",
+                      "id": "166.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "gene",
+                      "id": "169.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "1": {
+                          "title": "is a section of the dna",
+                          "id": "170.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "2": {
+                          "title": "each gene can be long or short depending on how big or small the gene is",
+                          "id": "171.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "3": {
+                          "title": "every gene encodes a protien",
+                          "id": "172.95bc.2637e34c-71a1.77ab553e6",
+                          "ideas": {
+                            "1": {
+                              "title": "protiens then go on and form a human",
+                              "id": "173.95bc.2637e34c-71a1.77ab553e6"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "chromosomes",
+                      "id": "174.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "2": {
+                          "title": "they carry dna",
+                          "id": "186.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "3": {
+                          "title": "chromsome number 1 for example",
+                          "id": "187.95bc.2637e34c-71a1.77ab553e6",
+                          "ideas": {
+                            "1": {
+                              "title": "can contain millions of molecule",
+                              "id": "188.95bc.2637e34c-71a1.77ab553e6"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Resources",
+                      "id": "176.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/DNA",
+                          "id": "178.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "2": {
+                          "title": "this is what the order is",
+                          "id": "192.95bc.2637e34c-71a1.77ab553e6",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/DNA#/media/File:Eukaryote_DNA-en.svg",
+                              "id": "193.95bc.2637e34c-71a1.77ab553e6"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3.5": {
+                      "title": "nucleic acid",
+                      "id": "179.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "1": {
+                          "title": "nucelobase",
+                          "id": "190.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "2": {
+                          "title": "has something to do with the suger binding vs .... ",
+                          "id": "191.95bc.2637e34c-71a1.77ab553e6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3.75": {
+                      "title": "types",
+                      "id": "180.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "1": {
+                          "title": "encoidng",
+                          "id": "181.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "2": {
+                          "title": "non-encoding",
+                          "id": "182.95bc.2637e34c-71a1.77ab553e6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3.875": {
+                      "title": "RNA",
+                      "id": "183.95bc.2637e34c-71a1.77ab553e6",
+                      "ideas": {
+                        "1": {
+                          "title": "used to copy dna",
+                          "id": "184.95bc.2637e34c-71a1.77ab553e6"
+                        },
+                        "2": {
+                          "title": "Transcription video of RNA",
+                          "id": "203.f736.979c45b37-f14e.c8d1ffe5b",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=TSv-Rq5C3K8",
+                              "id": "204.f736.979c45b37-f14e.c8d1ffe5b"
+                            },
+                            "2": {
+                              "title": "https://www.youtube.com/watch?v=X_tYrnv_o6A",
+                              "id": "206.f736.979c45b37-f14e.c8d1ffe5b"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "0.5": {
+                      "title": "in most living organisms, it exists as a two helix shape",
+                      "id": "185.95bc.2637e34c-71a1.77ab553e6",
+                      "attr": {}
+                    },
+                    "3.25": {
+                      "title": "bound together by hydrogen atoms",
+                      "id": "189.95bc.2637e34c-71a1.77ab553e6",
+                      "attr": {}
+                    },
+                    "3.125": {
+                      "title": "the human genome has approximately 3 billion base pairs of DNA arranged into 46 chromosomes.",
+                      "id": "194.95bc.2637e34c-71a1.77ab553e6",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Hair",
+              "id": "140.a3f70eeeaafd7ce",
+              "ideas": {
+                "1": {
+                  "title": "Hair is just keratin, which is a protien",
+                  "id": "141.a3f70eeeaafd7ce",
+                  "ideas": {
+                    "1": {
+                      "title": "What is a protein?",
+                      "id": "142.a3f70eeeaafd7ce",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.livescience.com/53044-protein.html",
+                          "id": "143.a3f70eeeaafd7ce"
+                        },
+                        "2": {
+                          "title": "long chain of amino acids produced by a section of our dna responsible for that protein ",
+                          "id": "144.a3f70eeeaafd7ce"
+                        },
+                        "3": {
+                          "title": "20 amino acids",
+                          "id": "145.a3f70eeeaafd7ce"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Blood",
+              "id": "146.3659191eb0c503ed",
+              "ideas": {
+                "1": {
+                  "title": "Delivers oxygen and nutrients to the cells and take away their waste",
+                  "id": "147.3659191eb0c503ed"
+                },
+                "4": {
+                  "title": "Resources",
+                  "id": "152.cd685b0416b7581",
+                  "ideas": {
+                    "1": {
+                      "title": "Youtube crash course",
+                      "id": "150.cd685b0416b7581",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=HQWlcSp9Sls",
+                          "id": "151.cd685b0416b7581"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "https://en.wikipedia.org/wiki/Blood",
+                      "id": "148.3659191eb0c503ed",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "Blood is bright red when it's oxygenated and dark when it's not",
+                  "id": "149.3659191eb0c503ed",
+                  "attr": {}
+                },
+                "0.5": {
+                  "title": "Red blood cells",
+                  "id": "154.476912f86a4f708e",
+                  "ideas": {
+                    "1": {
+                      "title": "they don't have a nucelues or dna",
+                      "id": "155.476912f86a4f708e",
+                      "ideas": {
+                        "1": {
+                          "title": "they lose them as they develop to make more room for substances to swim through it",
+                          "id": "156.476912f86a4f708e"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Bacteria",
+              "id": "153.cd685b0416b7581",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Bacteria",
+                  "id": "157.476912f86a4f708e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "physiology",
+              "id": "158.1e46aff98f0de5d5",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.mindmup.com/map/1zy5Z_FATRwxhXeYAjNp0XOtNAQbMc1nx",
+                  "id": "160.1e46aff98f0de5d5"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {}
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.3c75fa6b10c564ff",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia article",
+              "id": "19.3de831540f0bbe82",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Biology#Basic_unresolved_problems_in_biology",
+                  "id": "20.3de831540f0bbe82"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Taxonomy Database",
+              "id": "35.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.ncbi.nlm.nih.gov/taxonomy",
+                  "id": "36.35e2b394aabca66f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "The body VR",
+              "id": "97.35e2b394aabca66f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=rrl5YZblQF0",
+                  "id": "98.35e2b394aabca66f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Simulations",
+              "id": "195.f37f.d90dec86a-01cc.656c546b5",
+              "ideas": {
+                "1": {
+                  "title": "https://phet.colorado.edu/en/simulations/category/biology",
+                  "id": "196.f37f.d90dec86a-01cc.656c546b5"
+                },
+                "2": {
+                  "title": "https://i-biology.net/ict-in-ib-biology/modeling-simulation/",
+                  "id": "197.f37f.d90dec86a-01cc.656c546b5"
+                },
+                "3": {
+                  "title": "https://www.labster.com/try-now/",
+                  "id": "198.f37f.d90dec86a-01cc.656c546b5",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Course about how to program simulations",
+                  "id": "199.f37f.d90dec86a-01cc.656c546b5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.cc.gatech.edu/~turk/bio_sim/index.html",
+                      "id": "200.f37f.d90dec86a-01cc.656c546b5"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Folding protein simulation",
+                  "id": "201.f37f.d90dec86a-01cc.656c546b5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://fold.it/portal/index.php?q=",
+                      "id": "202.f37f.d90dec86a-01cc.656c546b5"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Biology",
+  "links": []
+}

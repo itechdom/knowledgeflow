@@ -1,0 +1,27 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "English",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.119e5e250d57d677",
+          "ideas": {
+            "1": {
+              "title": "Writing",
+              "id": "3.119e5e250d57d677"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "5.119e5e250d57d677"
+        }
+      }
+    }
+  },
+  "title": "English"
+}

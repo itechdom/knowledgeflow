@@ -1,0 +1,2665 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Education",
+      "attr": {
+        "style": {},
+        "position": [
+          -36,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "11": {
+          "title": "Concepts",
+          "ideas": {
+            "21": {
+              "title": "Evaluation and implementation of educational technology",
+              "id": "309.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "previous courses",
+                  "id": "449.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "design and development of educational technology",
+                      "id": "450.2a8a70c808229c6d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "history",
+                  "id": "451.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "paper",
+                      "id": "452.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "news paper",
+                      "id": "453.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "logo",
+                      "id": "459.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "a programming language",
+                          "id": "460.2a8a70c808229c6d"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "we usually have two main components in education",
+                  "id": "454.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "content",
+                      "id": "455.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "book",
+                          "id": "457.2a8a70c808229c6d"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "procedure",
+                      "id": "456.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "blackboard",
+                          "id": "458.2a8a70c808229c6d"
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "educational games",
+                  "id": "462.2a8a70c808229c6d"
+                },
+                "5": {
+                  "title": "titles for people in this field",
+                  "id": "463.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "instructional technologist",
+                      "id": "464.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "Digital learning consultant",
+                      "id": "495.2a8a70c808229c6d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Challenges",
+                  "id": "482.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "hard to know its effectiveness",
+                      "id": "483.2a8a70c808229c6d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "advantages",
+                  "id": "486.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "Collaboration",
+                      "id": "487.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "Creativity",
+                      "id": "488.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "Communication",
+                      "id": "489.2a8a70c808229c6d"
+                    },
+                    "4": {
+                      "title": "Breadth and depth",
+                      "id": "490.2a8a70c808229c6d"
+                    },
+                    "5": {
+                      "title": "Flexibility",
+                      "id": "491.2a8a70c808229c6d"
+                    },
+                    "6": {
+                      "title": "Differentiation and presonalization",
+                      "id": "492.2a8a70c808229c6d"
+                    },
+                    "7": {
+                      "title": "Assessment and Evaluation",
+                      "id": "493.2a8a70c808229c6d"
+                    },
+                    "8": {
+                      "title": "Effeciency",
+                      "id": "494.2a8a70c808229c6d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Courses",
+                  "id": "496.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "Connected teaching for the digital agew",
+                      "id": "497.2a8a70c808229c6d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "People",
+                  "id": "499.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "common wealth virtual school act",
+                      "id": "502.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "virtual schools",
+                          "id": "503.2a8a70c808229c6d"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "implementation",
+                  "id": "504.2a8a70c808229c6d"
+                },
+                "12": {
+                  "title": "Evaluation",
+                  "id": "505.2a8a70c808229c6d"
+                },
+                "22": {
+                  "title": "selecting",
+                  "id": "465.2a8a70c808229c6d",
+                  "ideas": {
+                    "1": {
+                      "title": "logistical",
+                      "id": "466.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "cost",
+                          "id": "468.2a8a70c808229c6d"
+                        },
+                        "2": {
+                          "title": "runs on a chromebook",
+                          "id": "469.2a8a70c808229c6d"
+                        },
+                        "3": {
+                          "title": "smartphone is important",
+                          "id": "470.2a8a70c808229c6d"
+                        },
+                        "4": {
+                          "title": "usability",
+                          "id": "471.2a8a70c808229c6d",
+                          "ideas": {
+                            "1": {
+                              "title": "students already know how to use it",
+                              "id": "473.2a8a70c808229c6d"
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "access",
+                          "id": "472.2a8a70c808229c6d",
+                          "ideas": {
+                            "1": {
+                              "title": "touchpress",
+                              "id": "474.2a8a70c808229c6d",
+                              "ideas": {
+                                "1": {
+                                  "title": "great interactive periodic table",
+                                  "id": "475.2a8a70c808229c6d"
+                                },
+                                "2": {
+                                  "title": "they only teach you one thing",
+                                  "id": "476.2a8a70c808229c6d"
+                                }
+                              },
+                              "attr": {}
+                            },
+                            "2": {
+                              "title": "spreadsheets",
+                              "id": "477.2a8a70c808229c6d",
+                              "ideas": {
+                                "1": {
+                                  "title": "you can use it for many things",
+                                  "id": "478.2a8a70c808229c6d"
+                                }
+                              },
+                              "attr": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "instructional",
+                      "id": "467.2a8a70c808229c6d",
+                      "ideas": {
+                        "1": {
+                          "title": "colateral skill development",
+                          "id": "479.2a8a70c808229c6d"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      172,
+                      326,
+                      1
+                    ]
+                  }
+                },
+                "23": {
+                  "title": "connect different schools together",
+                  "id": "507.2a8a70c808229c6d",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "22": {
+              "title": "Theories",
+              "id": "310.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "Adaptive Learning",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Adaptive_learning",
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "The main models are",
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<h2 style=\"color: black; font-weight: normal; margin-top: 1em; margin-bottom: 0.25em; overflow: hidden; padding: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 1.5em; font-family: 'Linux Libertine', Georgia, Times, serif; line-height: 1.3; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Technology_and_methodology\">Technology and methodology</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0px; color: rgb(85, 85, 85); margin-left: 0px;\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Adaptive_learning&amp;action=edit&amp;section=2\" title=\"Edit section: Technology and methodology\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0px; color: rgb(85, 85, 85); margin-right: 0px;\">]</span></span></h2><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">Adaptive learning systems have traditionally been divided into separate components or 'models'. While different model groups have been presented, most systems include some or all of the following models (occasionally with different names):<sup id=\"cite_ref-5\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-5\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\" target=\"_blank\">[5]</a></sup><sup id=\"cite_ref-6\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-6\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\" target=\"_blank\">[6]</a></sup></p><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"><li style=\"margin-bottom: 0.1em;\">Expert model - The model with the information which is to be taught</li><li style=\"margin-bottom: 0.1em;\">Student model - The model which tracks and learns about the student</li><li style=\"margin-bottom: 0.1em;\">Instructional model - The model which actually conveys the information</li></ul>"
+                            },
+                            "style": {}
+                          },
+                          "ideas": {},
+                          "id": "313.2a8a70c808229c6d"
+                        },
+                        "2": {
+                          "title": "Relies on Baye's law for calculating probablities",
+                          "ideas": {},
+                          "id": "314.2a8a70c808229c6d"
+                        },
+                        "3": {
+                          "title": "if implemented in classroom environment, it's called intellegent tutoring systems",
+                          "attr": {
+                            "style": {}
+                          },
+                          "ideas": {},
+                          "id": "315.2a8a70c808229c6d"
+                        },
+                        "4": {
+                          "title": "Game Design Implementation",
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<h3 style=\"color: black; margin-top: 0.3em; margin-bottom: 0px; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; font-size: 1.2em; line-height: 1.6; font-family: sans-serif; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Game_Design_Implementation\">Game Design Implementation</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: -webkit-isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0px; color: rgb(85, 85, 85); margin-left: 0px;\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Adaptive_learning&amp;action=edit&amp;section=9\" title=\"Edit section: Game Design Implementation\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0px; color: rgb(85, 85, 85); margin-right: 0px;\">]</span></span></h3><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">In 2014, an educational researcher concluded a multi-year study of adaptive learning for educational game design. The research developed and validated the ALGAE (Adaptive Learning GAme dEsign) model, a comprehensive adaptive learning model based on game design theories and practices, instructional strategies, and adaptive models. The research extended previous researching in game design, instructional strategies, and adaptive learning, combining those three components into a single complex model.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">The study resulted in the development of an adaptive educational game design model to serve as a guide for game designers, instructional designers, and educators with the goal of increasing learning outcomes. Survey participants validated the value of the ALGAE model and provided specific insights on the model's construction, use, benefits, and challenges. The current ALGAE model is based on these insights. The model now serves as a guideline for the design and development of educational computer games.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">The model's applicability is assessed as being cross-industry including government and military agencies/units, game industry, and academia. The model's actual value and the appropriate implementation approach (focused or unfocused) will be fully realized as the ALGAE model's adoption becomes more widespread.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\"><sup id=\"cite_ref-12\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-12\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[12]</a></sup></p>"
+                            },
+                            "style": {}
+                          },
+                          "ideas": {},
+                          "id": "316.2a8a70c808229c6d"
+                        },
+                        "5": {
+                          "title": "An incorrect answer will provide insight into what concepts the student is failing to understand",
+                          "attr": {
+                            "style": {},
+                            "position": [
+                              185,
+                              107.5,
+                              1
+                            ]
+                          },
+                          "id": "317.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "312.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "distance learning",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Distance_education",
+                          "id": "319.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "318.2a8a70c808229c6d",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "methods",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Instructional_scaffolding",
+                          "id": "321.2a8a70c808229c6d"
+                        },
+                        "2": {
+                          "title": "Instructional scaffolding",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Instructional_scaffolding",
+                              "id": "323.2a8a70c808229c6d"
+                            },
+                            "2": {
+                              "title": "We provide support to the learner then weane them off",
+                              "attr": {
+                                "note": {
+                                  "index": 18,
+                                  "text": "Essential features[edit]\nThere are three essential features of scaffolding that facilitate learning.[1][2] The first feature has to do with the interaction between the learner and the expert. This interaction should be collaborative for it to be effective. The second, learning should take place in the learner's zone of proximal development. To do that the expert needs to be aware of the learner's current level of knowledge and then work to a certain extent beyond that level. The third feature of scaffolding is that the scaffold, the support and guidance provided by the expert, is gradually removed as the learner becomes more proficient. The support and guidance provided to the learner is compared to the scaffolds in building construction where the scaffolds provide both \"adjustable and temporal\" support to the building under construction.[3] The support and guidance provided to learners facilitate internalization of the knowledge needed to complete the task. This support is weaned gradually until the learner is independent.[3]"
+                                }
+                              },
+                              "ideas": {},
+                              "id": "324.2a8a70c808229c6d"
+                            }
+                          },
+                          "id": "322.2a8a70c808229c6d",
+                          "attr": {
+                            "style": {
+                              "background": "#008000"
+                            }
+                          }
+                        }
+                      },
+                      "id": "320.2a8a70c808229c6d",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Models",
+                      "ideas": {
+                        "1": {
+                          "title": "Student",
+                          "id": "326.2a8a70c808229c6d"
+                        },
+                        "2": {
+                          "title": "Expert",
+                          "id": "327.2a8a70c808229c6d"
+                        },
+                        "3": {
+                          "title": "Instructional",
+                          "ideas": {
+                            "1": {
+                              "title": "Connects Experts and Students to Convey the information to the student",
+                              "id": "329.2a8a70c808229c6d"
+                            }
+                          },
+                          "id": "328.2a8a70c808229c6d"
+                        },
+                        "4": {
+                          "title": "Interaction",
+                          "ideas": {
+                            "1": {
+                              "title": "How we interact with the material as students",
+                              "ideas": {
+                                "1": {
+                                  "title": "Example",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Mindmaps",
+                                      "id": "333.2a8a70c808229c6d"
+                                    }
+                                  },
+                                  "id": "332.2a8a70c808229c6d"
+                                }
+                              },
+                              "id": "331.2a8a70c808229c6d"
+                            }
+                          },
+                          "id": "330.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "325.2a8a70c808229c6d",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Reciprocal Teaching",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Reciprocal_teaching",
+                          "id": "335.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "334.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "311.2a8a70c808229c6d"
+                },
+                "2": {
+                  "title": "One on One",
+                  "attr": {
+                    "style": {}
+                  },
+                  "id": "336.2a8a70c808229c6d"
+                },
+                "3": {
+                  "title": "Blended Learning",
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "index": 80,
+                      "text": "a combination of face to face instruction with some elements of working remotely. They have to connect between them."
+                    }
+                  },
+                  "id": "337.2a8a70c808229c6d",
+                  "ideas": {}
+                },
+                "4": {
+                  "title": "Englebart's Law",
+                  "id": "181.6b947acf10ca1445",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Engelbart%27s_Law",
+                      "id": "182.6b947acf10ca1445"
+                    },
+                    "2": {
+                      "title": "Bootstrap measurement",
+                      "id": "183.6b947acf10ca1445"
+                    },
+                    "4": {
+                      "title": "Improving how we improve is important",
+                      "id": "185.6b947acf10ca1445",
+                      "ideas": {
+                        "1": {
+                          "title": "ABC Model",
+                          "id": "184.6b947acf10ca1445",
+                          "attr": {},
+                          "ideas": {
+                            "1": {
+                              "title": "A list of activities that we do to achieve a great product",
+                              "id": "186.6b947acf10ca1445",
+                              "attr": {
+                                "note": {
+                                  "index": 103,
+                                  "text": "A Activity: 'Business as Usual'. The organization's day to day core business activity, such as customer engagement and support, product development, R&D, marketing, sales, accounting, legal, manufacturing (if any), etc. Examples: Aerospace - all the activities involved in producing a plane; Congress - passing legislation; Medicine - researching a cure for disease; Education - teaching and mentoring students; Professional Societies - advancing a field or discipline; Initiatives or Nonprofits - advancing a cause.\n\nB Activity: Improving how we do that. Improving how A work is done, asking 'How can we do this better?' Examples: adopting a new tool(s) or technique(s) for how we go about working together, pursuing leads, conducting research, designing, planning, understanding the customer, coordinating efforts, tracking issues, managing budgets, delivering internal services. Could be an individual introducing a new technique gleaned from reading, conferences, or networking with peers, or an internal initiative tasked with improving core capability within or across various A Activities.\n\nC Activity: Improving how we improve. Improving how B work is done, asking 'How can we improve the way we improve?' Examples: improving effectiveness of B Activity teams in how they foster relations with their A Activity customers, collaborate to identify needs and opportunities, research, innovate, and implement available solutions, incorporate input, feedback, and lessons learned, run pilot projects, etc. Could be a B Activity individual learning about new techniques for innovation teams (reading, conferences, networking), or an initiative, innovation team or improvement community engaging with B Activity and other key stakeholders to implement new/improved capability for one or more B activities."
+                                }
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "it seems to pertain to enterprise here",
+                                  "id": "187.6b947acf10ca1445"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "A",
+                              "id": "188.6b947acf10ca1445",
+                              "ideas": {
+                                "1": {
+                                  "title": "Business as usual",
+                                  "id": "189.6b947acf10ca1445"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "B ",
+                              "id": "190.6b947acf10ca1445",
+                              "ideas": {
+                                "1": {
+                                  "title": "Improving A",
+                                  "id": "191.6b947acf10ca1445",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "for example, how we manage the relaitonship between b and A",
+                                      "id": "193.6b947acf10ca1445"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "C",
+                              "id": "194.6b947acf10ca1445",
+                              "ideas": {
+                                "1": {
+                                  "title": "Improving B",
+                                  "id": "195.6b947acf10ca1445",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Improving how we improve",
+                                      "id": "196.6b947acf10ca1445"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "We are looking for exponential growth",
+                                  "id": "197.6b947acf10ca1445"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "5": {
+                              "title": "Resources",
+                              "id": "198.6b947acf10ca1445",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://www.dougengelbart.org/about/abc-model.html",
+                                  "id": "199.6b947acf10ca1445"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Englebart implemented the mouse",
+                      "id": "200.6b947acf10ca1445",
+                      "ideas": {
+                        "1": {
+                          "title": "He also implemented augmentation",
+                          "id": "203.6b947acf10ca1445"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Collective Intellegence",
+                      "id": "270.633e90435a87d2ae",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Folding@home",
+                          "id": "271.633e90435a87d2ae",
+                          "ideas": {
+                            "1": {
+                              "title": "A project to help in folding a protien",
+                              "id": "272.633e90435a87d2ae"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "23": {
+              "title": "Tools/techniqeus",
+              "id": "338.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "Virtual learning environment",
+                  "id": "297.83fab49a535d65d",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Virtual_learning_environment",
+                      "id": "298.83fab49a535d65d"
+                    },
+                    "2": {
+                      "title": "When VR meets education",
+                      "id": "299.83fab49a535d65d",
+                      "ideas": {
+                        "1": {
+                          "title": "https://techcrunch.com/2016/01/23/when-virtual-reality-meets-education/",
+                          "id": "300.83fab49a535d65d"
+                        },
+                        "2": {
+                          "title": "https://appreal-vr.com/blog/vr-education-and-training/",
+                          "id": "301.83fab49a535d65d"
+                        },
+                        "3": {
+                          "title": "The body VR",
+                          "id": "302.83fab49a535d65d",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=rrl5YZblQF0",
+                              "id": "303.83fab49a535d65d"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Mixing up video, audio and reading can be effective",
+                  "id": "261.33de746de05cecd8",
+                  "attr": {}
+                },
+                "3": {
+                  "title": "How to learn better",
+                  "id": "154.45814350af4d31b9",
+                  "ideas": {
+                    "1": {
+                      "title": "We have two modes",
+                      "id": "155.45814350af4d31b9",
+                      "ideas": {
+                        "1": {
+                          "title": "Focused",
+                          "id": "157.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "You are using most of your working memory here",
+                              "id": "160.45814350af4d31b9"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Diffused",
+                          "id": "158.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "When you are not paying attention but your mind is still working",
+                              "id": "175.45814350af4d31b9"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Switching between the two causes a better understanding of the subject",
+                          "id": "165.45814350af4d31b9"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Techniques",
+                      "id": "161.45814350af4d31b9",
+                      "ideas": {
+                        "1": {
+                          "title": "Spaced Repitition",
+                          "id": "162.45814350af4d31b9"
+                        },
+                        "2": {
+                          "title": "Chunking",
+                          "id": "163.45814350af4d31b9"
+                        },
+                        "3": {
+                          "title": "Continuous improvement",
+                          "id": "176.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "Continue challenging yourself more everyday",
+                              "id": "177.45814350af4d31b9"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Pomodoro",
+                          "id": "211.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "25 mins then a reward",
+                              "id": "212.5fdd9eb97765f5ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Mindmaps",
+                          "id": "266.633e90435a87d2ae",
+                          "ideas": {
+                            "1": {
+                              "title": "use it to store references so you can remember them",
+                              "id": "267.633e90435a87d2ae"
+                            },
+                            "2": {
+                              "title": "iterate on concepts that you don't know by looking up multiple resources",
+                              "id": "268.633e90435a87d2ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Types of learners",
+                      "id": "166.45814350af4d31b9",
+                      "ideas": {
+                        "1": {
+                          "title": "Watchers",
+                          "id": "167.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "Imitates other people",
+                              "id": "174.45814350af4d31b9"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Analyzer",
+                          "id": "168.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "Wants to know everything before jumping in",
+                              "id": "173.45814350af4d31b9"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Doer",
+                          "id": "171.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "Dives right in without knowing all the information",
+                              "id": "172.45814350af4d31b9"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "15": {
+                      "title": "Resources",
+                      "id": "178.45814350af4d31b9",
+                      "ideas": {
+                        "1": {
+                          "title": "Learning how to learn",
+                          "id": "179.45814350af4d31b9",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.coursera.org/learn/learning-how-to-learn",
+                              "id": "180.45814350af4d31b9"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "help translate this course",
+                          "id": "208.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.coursera.org/learn/learning-how-to-learn/resources/ODfST",
+                              "id": "209.5fdd9eb97765f5ae"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Futher reading",
+                          "id": "230.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Focused vs Diffused",
+                              "id": "231.5fdd9eb97765f5ae",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://www.coursera.org/learn/learning-how-to-learn/supplement/uWQyM/reading-focused-versus-diffuse-thinking",
+                                  "id": "232.5fdd9eb97765f5ae"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {
+                          "background": "#008000"
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "16": {
+                      "title": "Types of memory",
+                      "id": "214.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "Working",
+                          "id": "215.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Has a smaller size ",
+                              "id": "220.5fdd9eb97765f5ae",
+                              "ideas": {
+                                "1": {
+                                  "title": "Contains 4 chunks",
+                                  "id": "221.5fdd9eb97765f5ae"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Long term memory",
+                          "id": "216.5fdd9eb97765f5ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "19": {
+                      "title": "Two modes",
+                      "id": "205.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "Diffuse",
+                          "id": "206.5fdd9eb97765f5ae"
+                        },
+                        "2": {
+                          "title": "Focused",
+                          "id": "207.5fdd9eb97765f5ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "20": {
+                      "title": "Learning by doing",
+                      "id": "218.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "It's the process of osmosis from other people",
+                          "id": "219.5fdd9eb97765f5ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "23": {
+                      "title": "Things work in a parallel track",
+                      "id": "226.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "So can we say start as many threads in the back of your mind as possible",
+                          "id": "228.5fdd9eb97765f5ae"
+                        },
+                        "2": {
+                          "title": "How can a computing model relate to this?",
+                          "id": "229.5fdd9eb97765f5ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "29": {
+                      "title": "Brain",
+                      "id": "256.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "There's always a level of discomfort that you have to experience before you actually make a change",
+                          "id": "234.5fdd9eb97765f5ae",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "We tend to store information as a connection between neurons. I should encode information in a way that makes it easy to access, but at the same time I have to work a little to get there",
+                          "id": "244.5fdd9eb97765f5ae",
+                          "ideas": {},
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "The brain isn't aware of other parts of itself?",
+                          "id": "249.5fdd9eb97765f5ae",
+                          "attr": {},
+                          "ideas": {}
+                        },
+                        "4": {
+                          "title": "Ways to kick in diffuse mode",
+                          "id": "255.5fdd9eb97765f5ae",
+                          "attr": {}
+                        },
+                        "5": {
+                          "title": "We can only think of one thought at a time",
+                          "id": "222.5fdd9eb97765f5ae",
+                          "attr": {},
+                          "ideas": {}
+                        },
+                        "6": {
+                          "title": "Work a little everyday to build up those neurons",
+                          "id": "210.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Neurons try to connect to each other to help understand a subject",
+                              "id": "213.5fdd9eb97765f5ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "Exercise",
+                          "id": "225.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Your brain will repair itself",
+                              "id": "227.5fdd9eb97765f5ae"
+                            },
+                            "2": {
+                              "title": "the power of 10s",
+                              "id": "248.5fdd9eb97765f5ae",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://www.youtube.com/watch?v=0fKBhvDjuy0",
+                                  "id": "294.83fab49a535d65d"
+                                },
+                                "2": {
+                                  "title": "better power of 10s",
+                                  "id": "295.83fab49a535d65d",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=qxXf7AJZ73A",
+                                      "id": "296.83fab49a535d65d"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "Intensive study period",
+                          "id": "233.5fdd9eb97765f5ae",
+                          "attr": {},
+                          "ideas": {
+                            "1": {
+                              "title": "What does it do to the brain?",
+                              "id": "259.5fdd9eb97765f5ae"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "30": {
+                      "title": "Best learning Techniques",
+                      "id": 55,
+                      "ideas": {
+                        "2": {
+                          "title": "Resources",
+                          "id": 56,
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html#.WEyyluArLnA",
+                              "id": 57,
+                              "ideas": {
+                                "1": {
+                                  "title": "bad learning techniques",
+                                  "id": 58
+                                },
+                                "2": {
+                                  "title": "good learning techniques",
+                                  "id": 59
+                                },
+                                "3": {
+                                  "title": "Summary",
+                                  "id": 60,
+                                  "attr": {
+                                    "style": {},
+                                    "attachment": {
+                                      "contentType": "text/html",
+                                      "content": "<p style=\"margin-top: 16px; margin-bottom: 22px; font-family: Georgia, serif;\">The remainder of the techniques evaluated by Dunlosky and his colleagues fell into the middle ground — not useless, but not especially effective either. These include mental imagery, or coming up with pictures that help you remember text (which is time-consuming and only works with text that lends itself to images); elaborative interrogation, or asking yourself “why” as you read (which is kind of annoying, like having a 4-year-old tugging at your sleeve); self-explanation, or forcing yourself to explain the text in detail instead of passively reading it over (its effectiveness depends on how complete and accurate your explanations are); interleaved practice, or mixing up different types of problems (there is not much evidence to show that this is helpful, outside of learning motor tasks); and lastly the keyword mnemonic, or associating new vocabulary words, usually in a foreign language, with an English word that sounds similar — so, for example, learning the French word for key,&nbsp;<em>la clef</em>, by imagining a key on top of a cliff (which is a lot of work to remember a single word).</p><p style=\"margin-top: 16px; margin-bottom: 22px; font-family: Georgia, serif;\">All these techniques were rated of “moderate” to “low” utility by Dunlosky et al because either there isn’t enough evidence yet to be able to recommend them or they’re just not a very good use of your time. Much better, say the authors, to spread out your learning, ditch your highlighter and get busy with your flash cards.</p>"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Refrain from giving too much instruction early on",
+                          "id": 63,
+                          "ideas": {
+                            "1": {
+                              "title": "let students find their way",
+                              "id": 72
+                            },
+                            "2": {
+                              "title": "by making too many mistakes, you discover the inherent structure of the problem",
+                              "id": 73
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Bad learning techniques",
+                          "id": 64,
+                          "ideas": {
+                            "1": {
+                              "title": "Underlining or highlighting ",
+                              "id": 65
+                            },
+                            "2": {
+                              "title": "Mnemonic devices",
+                              "id": 66
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Good learning techniques",
+                          "id": 67,
+                          "ideas": {
+                            "1": {
+                              "title": "Practicing",
+                              "id": 68
+                            },
+                            "2": {
+                              "title": "spreading out learning sessions",
+                              "id": 69
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "31": {
+                      "title": "What about age? does it influence learning",
+                      "id": "273.633e90435a87d2ae",
+                      "ideas": {
+                        "1": {
+                          "title": "Developmental psychology",
+                          "id": "274.633e90435a87d2ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "32": {
+                      "title": "How do I (osamah) learn?",
+                      "id": "275.633e90435a87d2ae",
+                      "ideas": {
+                        "1": {
+                          "title": "Open a mindmap",
+                          "id": "281.633e90435a87d2ae",
+                          "ideas": {
+                            "1": {
+                              "title": "add concepts and resources",
+                              "id": "282.633e90435a87d2ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "look up wikipedia if it's a new field",
+                          "id": "283.633e90435a87d2ae",
+                          "ideas": {
+                            "1": {
+                              "title": "this will help generate the scaffold",
+                              "id": "285.633e90435a87d2ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Give my brain time to absorb everything",
+                          "id": "289.633e90435a87d2ae"
+                        },
+                        "4": {
+                          "title": "Come back and have re-organization activities ",
+                          "id": "290.633e90435a87d2ae",
+                          "ideas": {
+                            "1": {
+                              "title": "this help surface the important information after my diffuse mode kicked in a bunch of times",
+                              "id": "291.633e90435a87d2ae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Remember, you need a self mindmap to keep your brain in check",
+                          "id": "292.633e90435a87d2ae"
+                        },
+                        "6": {
+                          "title": "Let your brain roam and lead you to wherever you desire to go. This will reduce your pain from learning",
+                          "id": "293.633e90435a87d2ae"
+                        },
+                        "1.5": {
+                          "title": "If I already know the concept, then maybe write what I know about it",
+                          "id": "288.633e90435a87d2ae"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "33": {
+                      "title": "Personality",
+                      "id": "236.5fdd9eb97765f5ae",
+                      "ideas": {
+                        "1": {
+                          "title": "Consciouancesness ",
+                          "id": "237.5fdd9eb97765f5ae"
+                        },
+                        "2": {
+                          "title": "Extraversion",
+                          "id": "238.5fdd9eb97765f5ae"
+                        },
+                        "3": {
+                          "title": "Aggrebleaness",
+                          "id": "239.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Less Agreeableness is better",
+                              "id": "246.5fdd9eb97765f5ae"
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "Neuroticism ",
+                          "id": "241.5fdd9eb97765f5ae"
+                        },
+                        "6": {
+                          "title": "Openness to new experiences",
+                          "id": "242.5fdd9eb97765f5ae",
+                          "ideas": {
+                            "1": {
+                              "title": "Positive correlation with achievment",
+                              "id": "243.5fdd9eb97765f5ae"
+                            }
+                          }
+                        },
+                        "16": {
+                          "title": "they all form the word \"OCEAN\"",
+                          "id": "240.5fdd9eb97765f5ae",
+                          "attr": {
+                            "position": [
+                              87,
+                              152,
+                              1
+                            ]
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "34": {
+                      "title": "sleep is more important than studying",
+                      "id": "508.41741337ba00f2c2",
+                      "ideas": {
+                        "1": {
+                          "title": "https://ww2.kqed.org/mindshift/2013/01/11/why-sleeping-may-be-more-important-than-studying/",
+                          "id": "509.41741337ba00f2c2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "35": {
+                      "title": "Measure",
+                      "id": "549.600964a8010cfdc0",
+                      "ideas": {
+                        "1": {
+                          "title": "define what you want to do?",
+                          "id": "550.600964a8010cfdc0"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "36": {
+                      "title": "scaffold first to allow yourself to self correct",
+                      "id": "551.600964a8010cfdc0"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "How to Teach Better",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Review the concepts you have taught before",
+                      "attr": {
+                        "position": [
+                          124,
+                          -218,
+                          1
+                        ],
+                        "style": {}
+                      },
+                      "id": "342.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "Give short doses of information",
+                      "id": "343.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "Quiz and ask questions to keep students alert",
+                      "id": "344.2a8a70c808229c6d"
+                    },
+                    "4": {
+                      "title": "Know your students",
+                      "ideas": {
+                        "1": {
+                          "title": "Cater to the psychology of the student ",
+                          "attr": {
+                            "style": {}
+                          },
+                          "ideas": {},
+                          "id": "346.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "345.2a8a70c808229c6d"
+                    },
+                    "5": {
+                      "title": "You have to make the student find their way to learn",
+                      "attr": {
+                        "style": {}
+                      },
+                      "id": "347.2a8a70c808229c6d"
+                    },
+                    "6": {
+                      "title": "Train the tutor as much the student ",
+                      "id": "348.2a8a70c808229c6d"
+                    },
+                    "7": {
+                      "title": "Allow for mistakes",
+                      "id": "510.41741337ba00f2c2"
+                    },
+                    "8": {
+                      "title": "how can we avoid giving a student a question, their answer wrong to it might affect how they learn that concept",
+                      "id": "511.41741337ba00f2c2",
+                      "ideas": {
+                        "1": {
+                          "title": "explain why an incorrect answer is so",
+                          "id": "512.41741337ba00f2c2"
+                        }
+                      }
+                    }
+                  },
+                  "id": "341.2a8a70c808229c6d"
+                },
+                "5": {
+                  "title": "Mindfulness",
+                  "id": "104.67cc112a612ec138",
+                  "ideas": {
+                    "1": {
+                      "title": "Search inside yourself",
+                      "id": "105.67cc112a612ec138"
+                    },
+                    "2": {
+                      "title": "Mindfulness based stress reduction programs",
+                      "id": "106.67cc112a612ec138",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Mindfulness-based_stress_reduction",
+                          "id": "108.67cc112a612ec138"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "importance of meditation in schools",
+                      "id": "109.67cc112a612ec138",
+                      "attr": {
+                        "note": {
+                          "index": 48,
+                          "text": "Effects of meditation in the classroom[edit]\nStudies related to meditation in education were evaluated by [164] to determine how it affects middle school, high school, and college students regarding academic achievement and well-being.[164] also compared the effectiveness of different forms of meditative programs on student outcomes. Research indicates that meditation programs have significant effects on well-being and social competence.[164] To further explore questions related to the effectiveness of meditation in education, a sample of studies were evaluated to examine how graduation rates, academic achievement, stress reduction, and cognitive enhancement were influenced by meditation.\n\nTranscendental meditation (TM), a form of meditation that focuses on stress reduction, was implemented to study its’ impact on graduation rates, college acceptance, and dropout rates in a study on high school seniors.[165] Volunteers practiced twice a day for 15 minutes and were taught by certified TM teachers who gave introductory hour-long lessons. Students who did not volunteer for the training were the control group, and the dependent variable was graduation. Most notably, in a comparison of 78 meditating students with high grade point average (GPA) and 78 non-meditating students with low GPA, graduation of meditating students was 82.1% compared to 66.7% for non-meditating students.[165] This suggests that TM or GPA can positively influence the academic achievement of students.\n\nIn a similar study involving TM,[166] identified 189 racial and ethnic minority middle school students who performed below the proficiency level on the California Standards Test (CST) in math and English at baseline. One hundred and twenty five students participated in a three-month TM program twice a day, while 64 acted as the control group and received no meditation training. For those that participated in TM, 40.7% achieved an increase of at least one level on CTS in math compared to on 15% of the control group. There was a difference in the English sections as well with 36.8% increasing a level versus 17.2% of the control group. This suggests that students who practice TM are more likely to increase test scores than those who do not.\n\nTo evaluate how meditation affects university students’ cognitive abilities,[167] incorporated meditation training in a sociology class. Students were encouraged to practice at least five to ten minutes a day and asked to record their activity in a journal. They were given pretests in two executive function measures. Although no statistical significance was found, the data did show that higher reported meditation practice was associated with a more significant change in executive function abilities when pre and post-test were compared. This study highlights that there are research limitations and that more research is necessary to provide a better understanding about how meditation impacts cognitive functions.\n\nStress is often associated with lower academic achievement and overall well-being of students. Importantly, a study of ethnic minority high school students with exposure to high levels of violence and pressure to acculturate finds that TM is an effective way to reduce psychological distress and anxiety.[168] The study focused on 106 students from four public high schools throughout the US and was composed of 87% minority students. Students were given pre/post test to measure psychological distress, stress, and mental health, Researchers adjusted the 7-Step TM program to cut the time spent meditating to 10–15 minutes instead of the prescribed 20 minutes recommended for adults. In reviewing the available research, there appears to be a need to explore the design of developmentally appropriate meditation practice programs for children and young adults. As suggested by,[164] additional research may lead to a proven form of meditation that works best on young minds who are learning and would benefit from its stress reducing stressful benefits.[164] point to a lack of available research as a major hurdle to evaluating studies effectively. Nonetheless, research does suggest many positive academic and personal/social benefits to those who practice medication. That, combined with its’ relative ease of use make a strong argument to incorporate meditation into the school curriculum."
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "That's what I am looking at",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=etn2zCa7n40",
+                      "id": "351.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "VR in education",
+                      "id": "352.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "350.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "10,000 hour rule",
+                  "id": "541.600964a8010cfdc0",
+                  "ideas": {
+                    "1": {
+                      "title": "in the book outliers",
+                      "id": "543.600964a8010cfdc0"
+                    },
+                    "2": {
+                      "title": "to reach the top of top competitive easily ranked ",
+                      "id": "544.600964a8010cfdc0"
+                    },
+                    "3": {
+                      "title": "what's false became 10,000 hours to master something",
+                      "id": "545.600964a8010cfdc0",
+                      "ideas": {
+                        "1": {
+                          "title": "or become",
+                          "id": "546.600964a8010cfdc0"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "20 hours",
+                  "id": "547.600964a8010cfdc0",
+                  "ideas": {
+                    "1": {
+                      "title": "40 minutes a day for a month",
+                      "id": "548.600964a8010cfdc0"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "There's no motivational tool for people",
+                  "id": "552.600964a8010cfdc0",
+                  "ideas": {
+                    "1": {
+                      "title": "your rate of skill acquisition in the beginning is massive",
+                      "id": "553.600964a8010cfdc0"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "15": {
+                  "title": "Imporve your intellegence",
+                  "id": "565.600964a8010cfdc0",
+                  "ideas": {
+                    "1": {
+                      "title": "Brain Workshop",
+                      "id": "561.600964a8010cfdc0",
+                      "ideas": {
+                        "1": {
+                          "title": "http://brainworkshop.sourceforge.net/",
+                          "id": "560.600964a8010cfdc0",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Soak your head.com",
+                      "id": "562.600964a8010cfdc0",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "lumosity",
+                      "id": "563.600964a8010cfdc0",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "Shock your brain",
+                      "id": "564.600964a8010cfdc0"
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      131,
+                      258,
+                      1
+                    ],
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "25": {
+              "title": "Sub disciplines",
+              "id": "340.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "Cognitive Psychology",
+                  "id": 50,
+                  "ideas": {
+                    "1": {
+                      "title": "Developmental Psychology",
+                      "id": 61,
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "Cognitive Tutors",
+                      "id": "149.265150649c8d1ea3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Cognitive_tutor#Introduction",
+                          "id": "150.265150649c8d1ea3"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Educational Psychology",
+                      "id": "151.265150649c8d1ea3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Educational_psychology",
+                          "id": "153.265150649c8d1ea3"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Philosophy of education",
+                  "id": "132.67cc112a612ec138",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Constructivism_(philosophy_of_education)",
+                      "id": "133.67cc112a612ec138"
+                    },
+                    "2": {
+                      "title": "it's important to acknowledge the learner's background and culture",
+                      "id": "134.67cc112a612ec138"
+                    },
+                    "3": {
+                      "title": "Learner should find their own truth influenced by their background and culture",
+                      "id": "135.67cc112a612ec138"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "26": {
+              "title": "My take on learning",
+              "ideas": {
+                "1": {
+                  "title": "Maybe learn from your close friends?",
+                  "id": "402.2a8a70c808229c6d"
+                },
+                "2": {
+                  "title": "I think a person as an entity that carries different sleves",
+                  "ideas": {
+                    "1": {
+                      "title": "Sometimes you are in an emotional state that could contribute to you having a good idea, or you would be more interested in looking at that area",
+                      "id": "404.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "Again, it's the accumalation of all your moods and tendencies",
+                      "ideas": {
+                        "1": {
+                          "title": "And that could help you arrive to a good conclusion",
+                          "id": "406.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "405.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "403.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "I think of a person as a fluid knowledge carrier",
+                  "ideas": {
+                    "1": {
+                      "title": "they have certain strengths and weaknesses",
+                      "ideas": {
+                        "1": {
+                          "title": "but you have to acknowledge both and work on both",
+                          "id": "409.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "408.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "This is represented in a mindmap",
+                      "ideas": {
+                        "1": {
+                          "title": "It shows all your interests",
+                          "ideas": {
+                            "1": {
+                              "title": "For example, I would like to learn more about Economics",
+                              "ideas": {},
+                              "id": "412.2a8a70c808229c6d"
+                            }
+                          },
+                          "id": "411.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "410.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "407.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "My inspiration is finding a meaning to the things we learn",
+                  "ideas": {
+                    "1": {
+                      "title": "why do we divide or multiply",
+                      "id": "414.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "why do we add or subtract",
+                      "id": "415.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "why ...",
+                      "id": "416.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "413.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "We learn in a very disparate way, we collect information separately, then we assemble them later",
+                  "ideas": {
+                    "1": {
+                      "title": "we don't follow  a procedural way of learning",
+                      "id": "418.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "417.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Triple EEE",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Explanation",
+                      "id": "420.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "Example",
+                      "id": "421.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "Exercise",
+                      "id": "422.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "419.2a8a70c808229c6d"
+                },
+                "7": {
+                  "title": "I am , as Osama, at the intersection between formal science and social science",
+                  "ideas": {
+                    "1": {
+                      "title": "math ",
+                      "id": "424.2a8a70c808229c6d"
+                    },
+                    "2": {
+                      "title": "computer science",
+                      "id": "425.2a8a70c808229c6d"
+                    },
+                    "3": {
+                      "title": "psychology",
+                      "id": "426.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "423.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "We should give as much incentive as we can",
+                  "ideas": {
+                    "1": {
+                      "title": "and also prevent students from getting discouraged if they make too many mistakes",
+                      "ideas": {
+                        "1": {
+                          "title": "maybe break up the problem into little parts and show them how much they completed? ",
+                          "ideas": {
+                            "1": {
+                              "title": "and just leave out the little things they left out",
+                              "id": "430.2a8a70c808229c6d"
+                            },
+                            "2": {
+                              "title": "like games",
+                              "ideas": {
+                                "1": {
+                                  "title": "you are always closer to the solution and you are aware of it",
+                                  "id": "432.2a8a70c808229c6d"
+                                }
+                              },
+                              "id": "431.2a8a70c808229c6d"
+                            }
+                          },
+                          "id": "429.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "428.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "427.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "We have to sometimes exercise our brains to expand beyond what we are currently learning",
+                  "ideas": {
+                    "1": {
+                      "title": "For example, watching a very complex video might spark your interest and expand your knowledge",
+                      "id": "434.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "433.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "Codependence of machines and humans are essential to the development of both",
+                  "ideas": {
+                    "1": {
+                      "title": "Robots shouldn't and won't replace humans",
+                      "id": "436.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "435.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Google to me is the worst way to learn since I can't find the right information some of the times. I should just consult the network",
+                  "ideas": {
+                    "1": {
+                      "title": "When I open multiple tabs, it's very hard for me to find the information that I found or easily navigate through multiple layers of pages. It's too time consuming.",
+                      "id": "438.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "437.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "There are ways to represent language as a  mindmap for fast access",
+                  "ideas": {
+                    "1": {
+                      "title": "Warning letters",
+                      "ideas": {
+                        "1": {
+                          "title": "Remember",
+                          "id": "441.2a8a70c808229c6d"
+                        },
+                        "2": {
+                          "title": "Be careful",
+                          "id": "442.2a8a70c808229c6d"
+                        },
+                        "3": {
+                          "title": "Mind this ...",
+                          "id": "443.2a8a70c808229c6d"
+                        },
+                        "4": {
+                          "title": "Etc ...",
+                          "id": "444.2a8a70c808229c6d"
+                        },
+                        "5": {
+                          "title": "We can show these as different colors I guess",
+                          "id": "445.2a8a70c808229c6d"
+                        }
+                      },
+                      "id": "440.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "439.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "My ultimate dream is to augment as much of the different layers as possible to contribute to science. It would preferably be in one system",
+                  "ideas": {
+                    "1": {
+                      "title": "maybe we can make a system where you can access our API?",
+                      "id": "447.2a8a70c808229c6d"
+                    }
+                  },
+                  "id": "446.2a8a70c808229c6d",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "14": {
+                  "title": "Leave sometime for your brain to disconnect from a concept, then come back and revise it more",
+                  "id": "448.2a8a70c808229c6d"
+                }
+              },
+              "id": "401.2a8a70c808229c6d",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "27": {
+              "title": "Influential People",
+              "id": "554.600964a8010cfdc0",
+              "ideas": {
+                "1": {
+                  "title": "Costa",
+                  "id": "555.600964a8010cfdc0",
+                  "ideas": {
+                    "1": {
+                      "title": "his daughter was a down syndrome",
+                      "id": "556.600964a8010cfdc0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "28": {
+              "title": "Can you make yourself smarter?",
+              "id": "558.600964a8010cfdc0",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=x10Toa4cGT8",
+                  "id": "559.600964a8010cfdc0"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "29": {
+              "title": "Successful education Countries",
+              "id": "575.28ae8d1494f2335f",
+              "ideas": {
+                "1": {
+                  "title": "Finland",
+                  "id": "576.28ae8d1494f2335f",
+                  "ideas": {
+                    "2": {
+                      "title": "Resources",
+                      "id": "578.28ae8d1494f2335f",
+                      "ideas": {
+                        "1": {
+                          "title": "Nice blog about how Finland approaches this problem",
+                          "id": "577.28ae8d1494f2335f",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.mindmeister.com/blog/8-lesson-plans-promote-lifelong-learning/",
+                              "id": "579.28ae8d1494f2335f"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Wikipedia",
+                          "id": "580.28ae8d1494f2335f",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Education_in_Finland",
+                              "id": "581.28ae8d1494f2335f"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "39": {
+              "title": "Questions",
+              "id": "339.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "We teach people till they reach a certain point, the point at which we stop showing them up to date knowledge",
+                  "id": "262.33de746de05cecd8",
+                  "ideas": {
+                    "1": {
+                      "title": "We should instead allow them to reach the edges of science",
+                      "id": "263.33de746de05cecd8"
+                    },
+                    "2": {
+                      "title": "Everybody has the right to know where we are as a human race in terms of scientific and technological advancement",
+                      "id": "264.33de746de05cecd8"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "How can we account for the psychological aspects of a person in education",
+                  "id": "349.2a8a70c808229c6d",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "https://blog.commlabindia.com/elearning-design/personality-types-learners",
+                      "id": "582.32f1.b71da405e-9216.9a7af47f2"
+                    },
+                    "2": {
+                      "title": "Myres Briggs",
+                      "id": "583.32f1.b71da405e-9216.9a7af47f2",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.google.com/search?q=personality+types+myers+briggs&rlz=1CAASUD_enUS728US748&oq=personality+types+my&aqs=chrome.0.0j69i57j0l4.4977j0j7&sourceid=chrome&ie=UTF-8",
+                          "id": "584.32f1.b71da405e-9216.9a7af47f2"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "id": 9,
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 26,
+          "ideas": {
+            "1": {
+              "title": "Companies using Adaptive learning",
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<h2 style=\"color: black; font-weight: normal; margin-top: 1em; margin-bottom: 0.25em; overflow: hidden; padding: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 1.5em; font-family: 'Linux Libertine', Georgia, Times, serif; line-height: 1.3; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Companies_currently_using_adaptive_learning_technology\">Companies currently using adaptive learning technology</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: -webkit-isolate; font-family: sans-serif;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0px; color: rgb(85, 85, 85); margin-left: 0px;\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Adaptive_learning&amp;action=edit&amp;section=10\" title=\"Edit section: Companies currently using adaptive learning technology\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0px; color: rgb(85, 85, 85); margin-right: 0px;\">]</span></span></h2><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">A 2013 report commissioned by the Gates Foundation provides a list of almost forty companies currently active in adaptive learning technology.<sup id=\"cite_ref-13\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-13\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[13]</a></sup></p><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"><li style=\"margin-bottom: 0.1em;\">ALEKS Corporation(<a href=\"https://en.wikipedia.org/wiki/McGraw-Hill_Education\" title=\"McGraw-Hill Education\" style=\"color: rgb(11, 0, 128); background: none;\">McGraw-Hill Education</a>),<sup id=\"cite_ref-14\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-14\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[14]</a></sup>&nbsp;an online assessment and learning company, uses the theory of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Knowledge_space\" title=\"Knowledge space\" style=\"color: rgb(11, 0, 128); background: none;\">knowledge spaces</a>&nbsp;in its product (known as&nbsp;<a href=\"https://en.wikipedia.org/wiki/ALEKS\" title=\"ALEKS\" style=\"color: rgb(11, 0, 128); background: none;\">ALEKS</a><sup id=\"cite_ref-15\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-15\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[15]</a></sup>) to quickly and accurately determine what a student knows and doesn't know in a course.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Carnegie_Learning\" title=\"Carnegie Learning\" style=\"color: rgb(11, 0, 128); background: none;\">Carnegie Learning</a>, a publisher of math curricula, offers adaptive math software (known as the Cognitive Tutor) to high school students, along with traditional textbook offerings.</li><li style=\"margin-bottom: 0.1em;\">CCKF, developer of Realize<sup style=\"line-height: 1; font-size: 11.1999998092651px;\">it</sup>, a content agnostic adaptive learning platform for educational institutions, publishers and professional associations.<sup id=\"cite_ref-16\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-16\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[16]</a></sup><sup id=\"cite_ref-17\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-17\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[17]</a></sup>&nbsp;Also provides a full API to connect to third-party products.<sup id=\"cite_ref-18\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-18\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[18]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Cengage_Learning\" title=\"Cengage Learning\" style=\"color: rgb(11, 0, 128); background: none;\">Cengage Learning</a>, a publishing company whose Aplia product provides adaptive learning technology for Developmental English.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/DreamBox_(company)\" title=\"DreamBox (company)\" style=\"color: rgb(11, 0, 128); background: none;\">DreamBox</a>, an adaptive learning platform with individualized paths for personalized learning.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/ESpindle_Learning\" title=\"ESpindle Learning\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\">eSpindle Learning</a>, a nonprofit maintaining an online vocabulary and spelling coaching program based on the adaptive learning concept.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Grockit\" title=\"Grockit\" style=\"color: rgb(11, 0, 128); background: none;\">Grockit</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Knewton\" title=\"Knewton\" style=\"color: rgb(11, 0, 128); background: none;\">Knewton</a>, whose adaptive learning API connects to third-party products to help teachers identify and predict knowledge gaps and personalize content for each student<sup id=\"cite_ref-19\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-19\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[19]</a></sup>\"through sophisticated, real-time analysis of reams of student performance data.\"<sup id=\"cite_ref-20\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-20\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[20]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Knowre\" title=\"Knowre\" style=\"color: rgb(11, 0, 128); background: none;\">KnowRe</a>, an engaging adaptive mathematics curriculum, provides granular assessments and an engaging and personalized learning environment.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Desire2Learn\" title=\"Desire2Learn\" style=\"color: rgb(11, 0, 128); background: none;\">Desire2Learn</a>, a provider of integrated learning platform, offers Knowillage LeaP<sup id=\"cite_ref-21\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-21\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[21]</a></sup>&nbsp;which creates personalized learning paths for any learner, using any repository of learning objectives, content, assessments and questions, which are automatically mapped.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/McGraw-Hill_Education\" title=\"McGraw-Hill Education\" style=\"color: rgb(11, 0, 128); background: none;\">McGraw-Hill Education</a>, a content, software and services-based education company. In 2013, the company acquired the ALEKS Corporation<sup id=\"cite_ref-22\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-22\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[22]</a></sup>&nbsp;and a 20 percent equity stake in Area9 Aps.<sup id=\"cite_ref-23\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-23\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[23]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Pearson_Education\" title=\"Pearson Education\" style=\"color: rgb(11, 0, 128); background: none;\">Pearson</a>, an education company whose adaptive SuccessMaker software provides elementary and middle school reading and math instruction.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/PrepMe\" title=\"PrepMe\" style=\"color: rgb(11, 0, 128); background: none;\">PrepMe</a>, an online learning company, currently uses adaptive learning technology for test preparation, K-12 education, and professional development.<sup id=\"cite_ref-24\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-24\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[24]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Sherston_Software\" title=\"Sherston Software\" style=\"color: rgb(11, 0, 128); background: none;\">Sherston Software</a>, a UK education software company, offers PlanetSherston, an adaptive learning platform.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Smart.fm\" title=\"Smart.fm\" style=\"color: rgb(11, 0, 128); background: none;\">Smart.fm</a>, a social learning and community website, uses adaptive learning technology with the goal of increasing learning speed and retention.<sup id=\"cite_ref-25\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-25\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[25]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Smart_Sparrow\" title=\"Smart Sparrow\" style=\"color: rgb(11, 0, 128); background: none;\">Smart Sparrow</a>, has an adaptive learning platform that offers instructional designers and teachers integrated tools to create, publish and analyse their own adaptive content.<sup id=\"cite_ref-26\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: embed;\"><a href=\"https://en.wikipedia.org/wiki/Adaptive_learning#cite_note-26\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[26</a></sup></li></ul><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"></ul>"
+                },
+                "style": {}
+              },
+              "id": 27
+            },
+            "2": {
+              "title": "https://en.wikipedia.org/wiki/Education?wprov=sfla1",
+              "id": 28
+            },
+            "3": {
+              "title": "https://en.m.wikipedia.org/wiki/Alternative_education",
+              "id": 29,
+              "ideas": {
+                "1": {
+                  "title": "Alternative education",
+                  "id": 30
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "4": {
+              "title": "https://en.wikipedia.org/wiki/Waldorf_education?wprov=sfla1",
+              "id": 31,
+              "ideas": {
+                "1": {
+                  "title": "Waldorf",
+                  "id": 32,
+                  "ideas": {
+                    "1": {
+                      "title": "Personality types",
+                      "id": 33,
+                      "ideas": {
+                        "1": {
+                          "title": "Risk taker",
+                          "id": 34
+                        },
+                        "2": {
+                          "title": "Introverted",
+                          "id": 35
+                        },
+                        "3": {
+                          "title": "Take things lightly ",
+                          "id": 36
+                        },
+                        "4": {
+                          "title": "Take things calmly",
+                          "id": 37
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Child stages of development",
+                      "id": 39
+                    },
+                    "3": {
+                      "title": "Early education should start at the child not the subject matter",
+                      "id": 41
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "People I follow",
+              "id": 51,
+              "ideas": {
+                "2": {
+                  "title": "Annie Murphy Paul",
+                  "id": 53,
+                  "ideas": {
+                    "1": {
+                      "title": "http://time.com/author/annie-murphy-paul/",
+                      "id": 52,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "John R Anderson",
+                  "id": "145.265150649c8d1ea3",
+                  "ideas": {
+                    "1": {
+                      "title": "Professor of psychology and computer science at CMU",
+                      "id": "146.265150649c8d1ea3"
+                    },
+                    "2": {
+                      "title": "Worked on the ACT-R",
+                      "id": "147.265150649c8d1ea3",
+                      "ideas": {
+                        "1": {
+                          "title": "Models human cognition",
+                          "id": "148.265150649c8d1ea3"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "http://www.psychologicalscience.org/publications/journals/pspi/learning-techniques.html#.WEyyluArLnA",
+              "id": 54
+            },
+            "7": {
+              "title": "Journal of learning sciences",
+              "id": 70,
+              "ideas": {
+                "1": {
+                  "title": "http://www.tandfonline.com/doi/abs/10.1080/10508406.2011.591717",
+                  "id": 71
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Promoting long learning",
+              "id": 74,
+              "ideas": {
+                "1": {
+                  "title": "http://www.mindmeister.com/blog/2016/10/24/8-lesson-ideas-to-promote-lifelong-learning/",
+                  "id": 75
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Concepts in Learning",
+              "attr": {
+                "style": {
+                  "background": "#008000"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Blended learning",
+                  "ideas": {
+                    "1": {
+                      "title": "https://blended.online.ucf.edu/about/what-is-blended-learning/",
+                      "id": "78.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "77.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Concept Mapping",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.google.com/search?q=concept+mapping&oq=concept+mapping&aqs=chrome..69i57j0j5j0.8366j0j4&client=ms-android-tmobile-us&sourceid=chrome-mobile&espvd=1&ie=UTF-8",
+                      "id": "80.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "79.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Social Network Analysis",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.kstoolkit.org/Social+Network+Analysis",
+                      "id": "82.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "81.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Digital Knowledge Mapping",
+                  "ideas": {
+                    "1": {
+                      "title": "https://books.google.com/books?id=d2-8BAAAQBAJ&pg=PA381&lpg=PA381&dq=how+to+map+my+knowledge?&source=bl&ots=k0cszKSHDL&sig=iol_WqJ2jpadWJqoqhvfDATviaQ&hl=en&sa=X&ved=0CDcQ6AEwCTgUahUKEwjj9sSXy93GAhWLOYgKHcezAJ4#v=onepage&q=how%20to%20map%20my%20knowledge%3F&f=false",
+                      "id": "84.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "83.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Turn your presentation into interactive",
+                  "ideas": {
+                    "1": {
+                      "title": "http://elearningindustry.com/turn-your-presentation-into-an-interactive-elearning-course",
+                      "id": "86.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "85.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Teaching analogies",
+                  "ideas": {
+                    "1": {
+                      "title": "JavaScript",
+                      "ideas": {
+                        "1": {
+                          "title": "http://cs-blog.khanacademy.org/2013/09/teaching-variables-analogies-and.html",
+                          "id": "89.7f0b14827289a19c"
+                        }
+                      },
+                      "id": "88.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "87.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Personalize Learning",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.personalizelearning.com/2012/05/stages-of-personalized-learning.html?m=1",
+                      "id": "91.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "90.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Problem Based Learning",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.m.wikipedia.org/wiki/Problem-based_learning",
+                      "id": "93.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "92.7f0b14827289a19c",
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "76.7f0b14827289a19c"
+            },
+            "10": {
+              "title": "Scholarly articles",
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "DESIGN AND DEVELOPMENT OF A SELF‐ASSESSMENT TOOL AND\nINVESTIGATING ITS EFFECTIVENESS FOR  \nE‐LEARNING",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.eurodl.org/materials/contrib/2014/Domun_Bahadur.pdf",
+                      "id": "96.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "95.7f0b14827289a19c"
+                }
+              },
+              "id": "94.7f0b14827289a19c"
+            },
+            "11": {
+              "title": "Learning",
+              "ideas": {
+                "1": {
+                  "title": "Modern schools",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.archdaily.com/406513/saunalahti-school-verstas-architects",
+                      "id": "99.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "98.7f0b14827289a19c"
+                },
+                "2": {
+                  "title": "Teaching math through programming",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.bootstrapworld.org/",
+                      "id": "101.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "100.7f0b14827289a19c"
+                },
+                "3": {
+                  "title": "teaching programming to kids",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.feynlabs.com/",
+                      "id": "103.7f0b14827289a19c"
+                    }
+                  },
+                  "id": "102.7f0b14827289a19c"
+                }
+              },
+              "id": "97.7f0b14827289a19c",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Degrees in education",
+              "id": "136.67cc112a612ec138",
+              "ideas": {
+                "1": {
+                  "title": "https://uni.edu/majors/edtraining",
+                  "id": "138.67cc112a612ec138"
+                },
+                "2": {
+                  "title": "Early Childhood",
+                  "id": "139.67cc112a612ec138"
+                },
+                "3": {
+                  "title": "Elementary Education",
+                  "id": "140.67cc112a612ec138"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Non-profits",
+              "id": "143.67cc112a612ec138",
+              "ideas": {
+                "1": {
+                  "title": "Teach for America",
+                  "id": "142.67cc112a612ec138",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "https://www.volunteermatch.org/search/index.jsp?r=msa&l=80640",
+                  "id": "144.67cc112a612ec138"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Salk institute",
+              "id": "223.5fdd9eb97765f5ae",
+              "ideas": {
+                "1": {
+                  "title": "http://www.salk.edu/",
+                  "id": "224.5fdd9eb97765f5ae"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Apps that help you learn quicker",
+              "id": "251.5fdd9eb97765f5ae",
+              "ideas": {
+                "1": {
+                  "title": "Pomodoro ",
+                  "id": "253.5fdd9eb97765f5ae",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.forestapp.cc/",
+                      "id": "254.5fdd9eb97765f5ae"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Kick in diffuse mode",
+                  "id": "260.5fdd9eb97765f5ae"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Technologies",
+              "id": "304.83fab49a535d65d",
+              "ideas": {
+                "1": {
+                  "title": "Interactive white board",
+                  "id": "305.83fab49a535d65d"
+                },
+                "2": {
+                  "title": "padlet",
+                  "id": "306.83fab49a535d65d"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Courses",
+              "id": "307.2a8a70c808229c6d",
+              "ideas": {
+                "1": {
+                  "title": "https://www.edx.org/course/implementation-evaluation-educational-mitx-11-133x-0",
+                  "id": "308.2a8a70c808229c6d"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "General Resources",
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Outline_of_education",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Outline of Education",
+                      "id": "515.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "514.711ec7bd1753bb74"
+                },
+                "2": {
+                  "title": "My Education Road",
+                  "id": "516.711ec7bd1753bb74"
+                },
+                "3": {
+                  "title": "Programming",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.tynker.com/#/",
+                      "id": "518.711ec7bd1753bb74"
+                    },
+                    "2": {
+                      "title": "https://www.gethopscotch.com/",
+                      "ideas": {
+                        "1": {
+                          "title": "App store",
+                          "ideas": {
+                            "1": {
+                              "title": "Create your own game",
+                              "id": "521.711ec7bd1753bb74"
+                            }
+                          },
+                          "id": "520.711ec7bd1753bb74"
+                        }
+                      },
+                      "id": "519.711ec7bd1753bb74"
+                    },
+                    "3": {
+                      "title": "https://www.codeschool.com/",
+                      "ideas": {},
+                      "id": "522.711ec7bd1753bb74"
+                    },
+                    "4": {
+                      "title": "https://coderdojo.com/",
+                      "ideas": {
+                        "1": {
+                          "title": "Create a dojo",
+                          "ideas": {},
+                          "id": "524.711ec7bd1753bb74"
+                        }
+                      },
+                      "id": "523.711ec7bd1753bb74"
+                    },
+                    "5": {
+                      "title": "http://www.alice.org/index.php",
+                      "id": "525.711ec7bd1753bb74"
+                    },
+                    "6": {
+                      "title": "Denver",
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.pluralsight.com/",
+                          "id": "527.711ec7bd1753bb74"
+                        },
+                        "2": {
+                          "title": "Pivotal",
+                          "id": "528.711ec7bd1753bb74"
+                        }
+                      },
+                      "id": "526.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "517.711ec7bd1753bb74"
+                },
+                "4": {
+                  "title": "Gamification",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.yukaichou.com/gamification-examples/octalysis-complete-gamification-framework/#.VcmJcIw9uNB.twitter.cptsource=twitter.cptid=222531184143926130569436650241",
+                      "id": "530.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "529.711ec7bd1753bb74"
+                },
+                "5": {
+                  "title": "Mathematics",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.dreambox.com/",
+                      "id": "532.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "531.711ec7bd1753bb74"
+                },
+                "6": {
+                  "title": "How to use a mindmap",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://lifehacker.com/how-to-use-mind-maps-to-unleash-your-brains-creativity-1348869811",
+                      "id": "534.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "533.711ec7bd1753bb74"
+                },
+                "7": {
+                  "title": "http://info.apperson.com/l/69132/2015-05-27/6kfn5?creative=63609529934&keyword=social%20learning&matchtype=b&network=g&device=m&gclid=CjwKEAjw3PGtBRCWgajpu_uY9hYSJAAICRalrImznL9gt54ZHP70J4tfvZSOy1XW0E5DDXyZHtCgsRoCRVnw_wcB",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Emotional Learning\n\n",
+                      "id": "536.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "535.711ec7bd1753bb74"
+                },
+                "8": {
+                  "title": "Test Preps",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://grockit.com/",
+                      "id": "538.711ec7bd1753bb74"
+                    }
+                  },
+                  "id": "537.711ec7bd1753bb74"
+                }
+              },
+              "id": "513.711ec7bd1753bb74"
+            },
+            "20": {
+              "title": "Online Groups",
+              "id": "566.68e30e4bec8d6f4b",
+              "ideas": {
+                "1": {
+                  "title": "Diigo",
+                  "id": "567.68e30e4bec8d6f4b",
+                  "ideas": {
+                    "1": {
+                      "title": "elearning group",
+                      "id": "569.68e30e4bec8d6f4b"
+                    },
+                    "2": {
+                      "title": "education research",
+                      "id": "570.68e30e4bec8d6f4b"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "21": {
+              "title": "Meta Resources",
+              "id": "571.51851f5049d5b88f",
+              "ideas": {
+                "1": {
+                  "title": "Zzish",
+                  "id": "573.51851f5049d5b88f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://live.zzish.com/",
+                      "id": "574.51851f5049d5b88f"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Education"
+}

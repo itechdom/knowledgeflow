@@ -1,0 +1,67 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Communications service providers",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.4ee72f119ccd1761",
+          "ideas": {
+            "5": {
+              "title": "Types",
+              "id": "10.4ee72f119ccd1761",
+              "ideas": {
+                "1": {
+                  "title": "TSP",
+                  "id": "5.4ee72f119ccd1761",
+                  "ideas": {
+                    "1": {
+                      "title": "telecommunications",
+                      "id": "6.4ee72f119ccd1761",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Telecommunications_service_provider",
+                          "id": "9.4ee72f119ccd1761"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {}
+                },
+                "2": {
+                  "title": "ISP",
+                  "id": "4.4ee72f119ccd1761",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Entertainment and media",
+                  "id": "12.4ee72f119ccd1761",
+                  "ideas": {}
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.4ee72f119ccd1761",
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Communications_service_provider",
+              "id": "11.4ee72f119ccd1761",
+              "ideas": {},
+              "attr": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Communications service providers",
+  "links": []
+}

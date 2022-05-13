@@ -1,0 +1,420 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Economy",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 28,
+          "ideas": {
+            "4": {
+              "title": "Types",
+              "id": "36.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "Macro-economics",
+                  "id": 34,
+                  "attr": {
+                    "note": {
+                      "index": 5,
+                      "text": "Macroeconomics looks at the total output of a nation and the way the nation allocates its limited resources of land, labor and capital in an attempt to maximize production levels and promote trade and growth for future generations. After observing the society as a whole, Adam Smith noted that there was an \"invisible hand\" turning the wheels of the economy: a market force that keeps the economy functioning.\n\nRead more: Economics Basics: What Is Economics? | Investopedia http://www.investopedia.com/university/economics/economics1.asp#ixzz4SZIgsuEF \nFollow us: Investopedia on Facebook"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "PPF",
+                      "id": "43.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "Production Possibility Frontier",
+                          "id": "44.4e495aa04d750b5f",
+                          "ideas": {
+                            "1": {
+                              "title": "A measure of how much goods and services we are producing based on the resources we are allocating",
+                              "id": "45.4e495aa04d750b5f"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "46.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "economics basics",
+                          "id": 30,
+                          "attr": {
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.investopedia.com/university/economics/",
+                              "id": 29,
+                              "ideas": {},
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Looks at the economy as a whole",
+                      "id": "51.4e495aa04d750b5f"
+                    },
+                    "5": {
+                      "title": "Oppurtunity Cost",
+                      "id": "49.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": " a value that's forgone to gain a new thing",
+                          "id": "50.4e495aa04d750b5f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Micro-economics",
+                  "id": 32,
+                  "attr": {
+                    "note": {
+                      "index": 6,
+                      "text": "Microeconomics looks into similar issues, but on the level of the individual people and firms within the economy. It tends to be more scientific in its approach, and studies the parts that make up the whole economy. Analyzing certain aspects of human behavior, microeconomics shows us how individuals and firms respond to changes in price and why they demand what they do at particular price levels.\n\nRead more: Economics Basics: What Is Economics? | Investopedia http://www.investopedia.com/university/economics/economics1.asp#ixzz4SZInL1OZ \nFollow us: Investopedia on Facebook"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Observes individual behavior",
+                      "id": "52.4e495aa04d750b5f"
+                    }
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "Stocks",
+              "id": "54.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "Companies sell a share to raise money",
+                  "id": "57.4e495aa04d750b5f"
+                },
+                "4": {
+                  "title": "How can I make money from Stocks?",
+                  "id": "64.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "Some companies pay out dividents, but many others don't",
+                      "id": "63.4e495aa04d750b5f",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Your stock's value usually increases and that's how you make money",
+                      "id": "65.4e495aa04d750b5f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Two types of stocks",
+                  "id": "67.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "Common",
+                      "id": "68.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "Majority of stocks are that",
+                          "id": "70.4e495aa04d750b5f"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Preferred",
+                      "id": "69.4e495aa04d750b5f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Markets",
+                  "id": "71.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "Primary ",
+                      "id": "72.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "Where IPO is issued",
+                          "id": "74.4e495aa04d750b5f"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Secondary",
+                      "id": "73.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "a place for buyers and sellers to trade previosuly issued securities",
+                          "id": "75.4e495aa04d750b5f"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Famous Exchanges by size",
+                      "id": "78.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "NYSE",
+                          "id": "79.4e495aa04d750b5f"
+                        },
+                        "2": {
+                          "title": "NASDAQ",
+                          "id": "80.4e495aa04d750b5f"
+                        },
+                        "3": {
+                          "title": "AMEX",
+                          "id": "82.4e495aa04d750b5f"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "How can we determine the changes in a stock value?",
+                  "id": "83.4e495aa04d750b5f",
+                  "attr": {
+                    "note": {
+                      "index": 38,
+                      "text": "That being said, the principal theory is that the price movement of a stock indicates what investors feel a company is worth. Don't equate a company's value with the stock price. The value of a company is its market capitalization, which is the stock price multiplied by the number of shares outstanding. For example, a company that trades at $100 per share and has 1 million shares outstanding has a lesser value than a company that trades at $50 that has 5 million shares outstanding ($100 x 1 million = $100 million while $50 x 5 million = $250 million). To further complicate things, the price of a stock doesn't only reflect a company's current value, it also reflects the growth that investors expect in the future.\n\nRead more: Stocks Basics: What Causes Stock Prices To Change? | Investopedia http://www.investopedia.com/university/stocks/stocks4.asp#ixzz4SZeCZX8a \nFollow us: Investopedia on Facebook"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Bottom line is",
+                      "id": "86.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "investors' sentiments, attitudes and expectations that ultimately affect stock prices.",
+                          "id": "87.4e495aa04d750b5f"
+                        }
+                      }
+                    }
+                  }
+                },
+                "8": {
+                  "title": "Companies are required to report their earnings every quarter",
+                  "id": "84.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "Examples",
+                      "id": "85.4e495aa04d750b5f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "How to read stocks?",
+                  "id": "88.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.investopedia.com/university/stocks/stocks6.asp",
+                      "id": "89.4e495aa04d750b5f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "DOW",
+                  "id": "92.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "It's a price weighted average of some 30 companies",
+                      "id": "93.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "An indicator of how the economy is doing",
+                          "id": "94.4e495aa04d750b5f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Bulls and Bears",
+                  "id": "95.4e495aa04d750b5f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Investments",
+              "id": "58.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "Bonds",
+                  "id": "59.4e495aa04d750b5f",
+                  "attr": {
+                    "note": {
+                      "index": 23,
+                      "text": "When you buy a debt investment such as a bond, you are guaranteed the return of your money (the principal) along with promised interest payments.\n\nRead more: Stocks Basics: What Are Stocks? | Investopedia http://www.investopedia.com/university/stocks/stocks1.asp#ixzz4SZb3dOib \nFollow us: Investopedia on Facebook"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Equity",
+                  "id": "60.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "if the company goes bankrupt, you have to wait until they pay all their debts",
+                      "id": "61.4e495aa04d750b5f",
+                      "ideas": {
+                        "1": {
+                          "title": "this is called absolute priority",
+                          "id": "62.4e495aa04d750b5f"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "this is stocks",
+                      "id": "66.4e495aa04d750b5f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "9": {
+              "title": "Taxes",
+              "id": "96.4e495aa04d750b5f"
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-6": {
+          "title": "Resouces",
+          "id": 27,
+          "ideas": {
+            "3": {
+              "title": "https://en.wikipedia.org/wiki/Economics",
+              "id": 31
+            },
+            "4": {
+              "title": "economics basics",
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "http://www.investopedia.com/university/economics/",
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {},
+                  "id": "48.4e495aa04d750b5f"
+                }
+              },
+              "id": "47.4e495aa04d750b5f"
+            },
+            "5": {
+              "title": "Meta Resource",
+              "id": "55.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "http://www.investopedia.com/university/",
+                  "id": "56.4e495aa04d750b5f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Looking at the stock market",
+              "id": "90.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "http://finance.yahoo.com/",
+                  "id": "91.4e495aa04d750b5f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "External Mindmaps",
+              "id": "97.4e495aa04d750b5f",
+              "ideas": {
+                "1": {
+                  "title": "Personal Finance",
+                  "id": "98.4e495aa04d750b5f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrNWNncHh5SzhjdW8/view?usp=sharing",
+                      "id": "99.4e495aa04d750b5f"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": "66.4e495aa04d750b5f",
+      "ideaIdTo": "54.4e495aa04d750b5f",
+      "attr": {
+        "style": {
+          "color": "#707070",
+          "lineStyle": "solid",
+          "arrow": "to"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Economy"
+}

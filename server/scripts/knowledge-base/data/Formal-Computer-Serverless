@@ -1,0 +1,180 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-Computer-Serverless",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.148a.0c965e138-89e5.5133d91f9",
+          "ideas": {
+            "1": {
+              "title": "Frameworks",
+              "id": "3.148a.0c965e138-89e5.5133d91f9",
+              "ideas": {
+                "1": {
+                  "title": "Serverless Framework",
+                  "id": "4.148a.0c965e138-89e5.5133d91f9",
+                  "ideas": {
+                    "1": {
+                      "title": "Events",
+                      "id": "9.148a.0c965e138-89e5.5133d91f9",
+                      "ideas": {
+                        "1": {
+                          "title": "AWS",
+                          "id": "10.148a.0c965e138-89e5.5133d91f9",
+                          "ideas": {
+                            "1": {
+                              "title": "basically",
+                              "id": "11.148a.0c965e138-89e5.5133d91f9"
+                            },
+                            "2": {
+                              "title": "Apigateway",
+                              "id": "21.148a.0c965e138-89e5.5133d91f9",
+                              "ideas": {
+                                "2": {
+                                  "title": "Resources",
+                                  "id": "23.148a.0c965e138-89e5.5133d91f9",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "how to add multiple services to one Domain",
+                                      "id": "24.148a.0c965e138-89e5.5133d91f9",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "https://serverless.com/blog/api-gateway-multiple-services/",
+                                          "id": "25.148a.0c965e138-89e5.5133d91f9"
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "benefits of api gateway",
+                                      "id": "26.148a.0c965e138-89e5.5133d91f9",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-control-access-to-api.html",
+                                          "id": "27.148a.0c965e138-89e5.5133d91f9"
+                                        }
+                                      },
+                                      "attr": {}
+                                    },
+                                    "3": {
+                                      "title": "using apigatway with serverless",
+                                      "id": "28.148a.0c965e138-89e5.5133d91f9",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "https://serverless.com/blog/serverless-api-gateway-domain/",
+                                          "id": "29.148a.0c965e138-89e5.5133d91f9"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "SAM",
+                  "id": "5.148a.0c965e138-89e5.5133d91f9",
+                  "ideas": {
+                    "2": {
+                      "title": "Resources",
+                      "id": "13.148a.0c965e138-89e5.5133d91f9",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/awslabs/serverless-application-model",
+                          "id": "12.148a.0c965e138-89e5.5133d91f9",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "SAM template specs",
+                          "id": "14.148a.0c965e138-89e5.5133d91f9",
+                          "ideas": {
+                            "1": {
+                              "title": "https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md",
+                              "id": "15.148a.0c965e138-89e5.5133d91f9"
+                            },
+                            "2": {
+                              "title": "it's essentially cloud formation templates",
+                              "id": "16.148a.0c965e138-89e5.5133d91f9",
+                              "ideas": {}
+                            },
+                            "3": {
+                              "title": "Sections ",
+                              "id": "18.148a.0c965e138-89e5.5133d91f9",
+                              "ideas": {
+                                "1": {
+                                  "title": "globals",
+                                  "id": "19.148a.0c965e138-89e5.5133d91f9",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst",
+                                      "id": "20.148a.0c965e138-89e5.5133d91f9"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "6.148a.0c965e138-89e5.5133d91f9",
+          "ideas": {
+            "1": {
+              "title": "Serverless Framework",
+              "id": "7.148a.0c965e138-89e5.5133d91f9",
+              "ideas": {
+                "1": {
+                  "title": "https://serverless.com/",
+                  "id": "8.148a.0c965e138-89e5.5133d91f9"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "",
+  "links": []
+}

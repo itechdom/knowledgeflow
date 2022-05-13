@@ -1,0 +1,62 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Entertainment",
+      "id": 1,
+      "attr": {
+        "position": [
+          -50,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.b963.2ba6ef695-cfc3.0523c5bad",
+          "ideas": {
+            "1": {
+              "title": "Manga",
+              "id": "6.b963.2ba6ef695-cfc3.0523c5bad",
+              "ideas": {
+                "1": {
+                  "title": "Gantz",
+                  "id": "7.b963.2ba6ef695-cfc3.0523c5bad"
+                },
+                "2": {
+                  "title": "Gunnm",
+                  "id": "8.b963.2ba6ef695-cfc3.0523c5bad",
+                  "ideas": {
+                    "2": {
+                      "title": "https://mangarock.com/manga/mrs-serie-24827/chapter/mrs-chapter-24829",
+                      "id": "12.b963.2ba6ef695-cfc3.0523c5bad"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "right to left reading",
+                  "id": "10.b963.2ba6ef695-cfc3.0523c5bad",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "start from top right",
+                      "id": "11.b963.2ba6ef695-cfc3.0523c5bad"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.b963.2ba6ef695-cfc3.0523c5bad"
+        }
+      }
+    }
+  },
+  "title": "",
+  "links": []
+}

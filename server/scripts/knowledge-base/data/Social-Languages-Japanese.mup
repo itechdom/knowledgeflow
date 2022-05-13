@@ -1,0 +1,259 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Japanese",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Sentences",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "Ha ji me ma Shi te",
+              "id": 3,
+              "ideas": {
+                "1": {
+                  "title": "Nice to meet you",
+                  "id": 5,
+                  "attr": {
+                    "position": [
+                      200,
+                      -3,
+                      1
+                    ],
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Literal",
+                  "id": 6,
+                  "ideas": {
+                    "1": {
+                      "title": "For the first time",
+                      "id": 7
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Wa ta shi wa",
+              "id": 8,
+              "ideas": {
+                "1": {
+                  "title": "Name",
+                  "id": 12,
+                  "ideas": {
+                    "1": {
+                      "title": "De su",
+                      "id": 13
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Alternative",
+                  "id": 18,
+                  "ideas": {
+                    "2": {
+                      "title": "name",
+                      "id": 20,
+                      "ideas": {
+                        "1": {
+                          "title": "With only De su",
+                          "id": 19,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "yo ro shi ku",
+              "id": 14,
+              "ideas": {
+                "1": {
+                  "title": "o ne ga i",
+                  "id": 15,
+                  "ideas": {
+                    "1": {
+                      "title": "shi ma su",
+                      "id": 16,
+                      "ideas": {
+                        "1": {
+                          "title": "it's a pleasure to meet you",
+                          "id": 17
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Dozu",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "After you",
+                  "id": 31
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              89.5,
+              -74,
+              2
+            ],
+            "collapsed": true
+          }
+        },
+        "12": {
+          "title": "Basic Words",
+          "id": 25,
+          "attr": {
+            "position": [
+              95,
+              93,
+              6
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Uun",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "No",
+                  "id": 27
+                }
+              }
+            },
+            "2": {
+              "title": "Hai",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "yes",
+                  "id": 29
+                }
+              }
+            }
+          }
+        },
+        "-2": {
+          "title": "Resources",
+          "id": 21,
+          "ideas": {
+            "1": {
+              "title": "https://www.youtube.com/watch?v=n6ciMT6KhVo",
+              "id": 23,
+              "ideas": {
+                "1": {
+                  "title": "top 25 most common phrases",
+                  "id": 24
+                }
+              }
+            },
+            "2": {
+              "title": "History of the japanese Language",
+              "id": "32.616938e62db935c8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=x9-e_3GHrzw",
+                  "id": "33.616938e62db935c8"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              102.5,
+              84,
+              5
+            ]
+          }
+        },
+        "6.5": {
+          "title": "Concepts",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Verb comes at the end",
+              "id": 10
+            },
+            "2": {
+              "title": "Writing systems",
+              "id": "34.1abac6797afeab7",
+              "ideas": {
+                "1": {
+                  "title": "Hiragana",
+                  "id": "35.1abac6797afeab7",
+                  "ideas": {
+                    "1": {
+                      "title": "Symbols",
+                      "id": "39.1abac6797afeab7"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Katakana",
+                  "id": "36.1abac6797afeab7",
+                  "ideas": {
+                    "1": {
+                      "title": "Sounds?",
+                      "id": "41.1abac6797afeab7"
+                    },
+                    "2": {
+                      "title": "used as a word divider",
+                      "id": "43.1abac6797afeab7"
+                    },
+                    "3": {
+                      "title": "like harakat?",
+                      "id": "44.1abac6797afeab7"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Kanji",
+                  "id": "38.1abac6797afeab7"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Japanese"
+}

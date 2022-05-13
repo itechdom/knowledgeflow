@@ -1,0 +1,17 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "R",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {}
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "R"
+}

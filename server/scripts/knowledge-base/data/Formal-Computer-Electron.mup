@@ -1,0 +1,361 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Electron",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "25": {
+          "title": "Concepts",
+          "id": 192,
+          "ideas": {
+            "3": {
+              "title": "processes",
+              "id": 367,
+              "ideas": {
+                "1": {
+                  "title": "renderer",
+                  "id": 369,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">Since Electron uses Chromium for displaying web pages, Chromium’s multi-process architecture is also used. Each web page in Electron runs in its own process, which is called&nbsp;</span><strong style=\"box-sizing: border-box; color: rgb(32, 81, 91); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">the renderer process</strong><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">.</span>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "main",
+                  "id": 370,
+                  "ideas": {
+                    "2": {
+                      "title": "creates Browser WIndows",
+                      "id": 374,
+                      "ideas": {
+                        "1": {
+                          "title": "runs the renderer process",
+                          "id": 373,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">The main process creates web pages by creating&nbsp;</span><code class=\"highlighter-rouge\" style=\"box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0px; margin: 0px; color: rgb(13, 74, 89); white-space: normal; background-color: rgb(241, 243, 244);\">BrowserWindow</code><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;instances. Each&nbsp;</span><code class=\"highlighter-rouge\" style=\"box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0px; margin: 0px; color: rgb(13, 74, 89); white-space: normal; background-color: rgb(241, 243, 244);\">BrowserWindow</code><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;instance runs the web page in its own renderer process. When a&nbsp;</span><code class=\"highlighter-rouge\" style=\"box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0px; margin: 0px; color: rgb(13, 74, 89); white-space: normal; background-color: rgb(241, 243, 244);\">BrowserWindow</code><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;instance is destroyed, the corresponding renderer process is also terminated.</span>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Remember to add \"main\" in package.json to signify the main process",
+                      "id": 378,
+                      "ideas": {
+                        "1": {
+                          "title": "by default index.js",
+                          "id": 379
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "seperation between main and render",
+              "id": 375,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">In web pages, calling native GUI related APIs is not allowed because managing native GUI resources in web pages is very dangerous and it is easy to leak resources. If you want to perform GUI operations in a web page, the renderer process of the web page must communicate with the main process to request that the main process perform those operations.</span>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "How do they communicate?",
+                  "id": 376,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">In Electron, we have several ways to communicate between the main process and renderer processes. Like</span><a href=\"http://electron.atom.io/docs/api/ipc-renderer\" style=\"box-sizing: border-box; color: rgb(86, 103, 189); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\"><code class=\"highlighter-rouge\" style=\"box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0px; margin: 0px; color: rgb(13, 74, 89); background-color: rgb(241, 243, 244);\">ipcRenderer</code></a><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;and&nbsp;</span><a href=\"http://electron.atom.io/docs/api/ipc-main\" style=\"box-sizing: border-box; color: rgb(86, 103, 189); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\"><code class=\"highlighter-rouge\" style=\"box-sizing: border-box; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 13.6px; padding: 0.2em 0px; margin: 0px; color: rgb(13, 74, 89); background-color: rgb(241, 243, 244);\">ipcMain</code></a><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;modules for sending messages, and the&nbsp;</span><a href=\"http://electron.atom.io/docs/api/remote\" style=\"box-sizing: border-box; color: rgb(86, 103, 189); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">remote</a><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">&nbsp;module for RPC style communication. There is also an FAQ entry on&nbsp;</span><a href=\"http://electron.atom.io/docs/faq#how-to-share-data-between-web-pages\" style=\"box-sizing: border-box; color: rgb(86, 103, 189); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">how to share data between web pages</a><span style=\"color: rgb(58, 88, 95); font-family: Roboto, -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Segoe UI&quot;, Oxygen, Ubuntu, Cantarell, &quot;Open Sans&quot;, sans-serif; font-size: 16px; line-height: 24px;\">.</span>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "5": {
+              "title": "Creating a distribution",
+              "id": 380,
+              "ideas": {
+                "1": {
+                  "title": "resources",
+                  "id": 381,
+                  "ideas": {
+                    "1": {
+                      "title": "http://electron.atom.io/docs/tutorial/application-distribution/",
+                      "id": 382
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "How to use native modules",
+              "id": 383,
+              "ideas": {
+                "1": {
+                  "title": "resources",
+                  "id": 384,
+                  "ideas": {
+                    "1": {
+                      "title": "http://electron.atom.io/docs/tutorial/using-native-node-modules/",
+                      "id": 385
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "side projects",
+              "id": 386,
+              "ideas": {
+                "1": {
+                  "title": "file system viewer",
+                  "id": 387,
+                  "ideas": {
+                    "1": {
+                      "title": "resources",
+                      "id": 388,
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/immutable-js/",
+                          "id": 389,
+                          "ideas": {
+                            "1": {
+                              "title": "immutablejs",
+                              "id": 390
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "http://electron.atom.io/docs/api/ipc-main/",
+                          "id": 393,
+                          "ideas": {
+                            "1": {
+                              "title": "listen for messages from the main process",
+                              "id": 394
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "2": {
+              "title": "https://github.com/electron/electron/tree/master/docs",
+              "id": 350,
+              "ideas": {
+                "1": {
+                  "title": "github docs",
+                  "id": 351
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Tutorials",
+              "id": 361
+            },
+            "8": {
+              "title": "Apps",
+              "id": 362,
+              "ideas": {
+                "1": {
+                  "title": "Yoeman gui",
+                  "id": 359,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/yeoman/yeoman-app",
+                      "id": 360
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "https://github.com/shockone/black-screen/",
+                  "id": 352,
+                  "ideas": {
+                    "1": {
+                      "title": "emulator for nodejs",
+                      "id": 353
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Meta",
+              "id": 363,
+              "ideas": {
+                "1": {
+                  "title": "Electron general list",
+                  "id": 357,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/sindresorhus/awesome-electron/blob/master/readme.md",
+                      "id": 358,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "Boilerplate",
+              "id": 364,
+              "ideas": {
+                "1": {
+                  "title": "Nueron template for Electron",
+                  "id": 354,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/JamesTheHacker/Neuron",
+                      "id": 355,
+                      "ideas": {
+                        "1": {
+                          "title": "React Redux ...",
+                          "id": 356
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "Electron API",
+              "id": 395,
+              "ideas": {
+                "1": {
+                  "title": "http://electron.atom.io/docs/api/",
+                  "id": 396
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "External Mindmap",
+              "id": "397.36e01fbe48585a2a",
+              "ideas": {
+                "1": {
+                  "title": "resources",
+                  "id": 366,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrVnFXTUtPNzNVVzA",
+                      "id": 348,
+                      "ideas": {
+                        "1": {
+                          "title": "Node mindmap",
+                          "id": 349,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Electron"
+}

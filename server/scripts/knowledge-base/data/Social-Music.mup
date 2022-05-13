@@ -1,0 +1,246 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Music",
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.dea0e0eed802c98",
+          "ideas": {
+            "1": {
+              "title": "Elements of music",
+              "id": "4.dea0e0eed802c98",
+              "attr": {
+                "note": {
+                  "index": 3,
+                  "text": "The common elements of music are pitch (which governs melody and harmony), rhythm (and its associated concepts tempo, meter, and articulation), dynamics (loudness and softness), and the sonic qualities of timbre and texture (which are sometimes termed the \"color\" of a musical sound). Different styles or types of music may emphasize, de-emphasize or omit some of these elements."
+                }
+              }
+            },
+            "2": {
+              "title": "Music Theory",
+              "id": "5.dea0e0eed802c98",
+              "attr": {
+                "note": {
+                  "index": 4,
+                  "text": "Theory\nMain article: Music theory\nMusic theory encompasses the nature and mechanics of music. It often involves identifying patterns that govern composers' techniques and examining the language and notation of music. In a grand sense, music theory distills and analyzes the parameters or elements of music – rhythm, harmony (harmonic function), melody, structure, form, and texture. Broadly, music theory may include any statement, belief, or conception of or about music.[8] People who study these properties are known as music theorists. Some have applied acoustics, human physiology, and psychology to the explanation of how and why music is perceived."
+                }
+              },
+              "ideas": {}
+            },
+            "3": {
+              "title": "History",
+              "id": "9.dea0e0eed802c98",
+              "ideas": {
+                "1": {
+                  "title": "Western",
+                  "id": "10.dea0e0eed802c98",
+                  "ideas": {
+                    "1": {
+                      "title": "Started with a choir, had the pipe pianon in the middle and ended with classical music 1700 - 1820",
+                      "id": "11.dea0e0eed802c98"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Notes",
+              "id": "12.dea0e0eed802c98"
+            },
+            "5": {
+              "title": "Psychology",
+              "id": "16.dea0e0eed802c98",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Music_psychology",
+                  "id": "17.dea0e0eed802c98"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Guitar",
+              "id": "18.6cbc684121e17bfe",
+              "ideas": {
+                "1": {
+                  "title": "Notes",
+                  "id": "19.6cbc684121e17bfe",
+                  "ideas": {
+                    "1": {
+                      "title": "E",
+                      "id": "30.6cbc684121e17bfe"
+                    },
+                    "2": {
+                      "title": "A",
+                      "id": "31.6cbc684121e17bfe"
+                    },
+                    "3": {
+                      "title": "D",
+                      "id": "32.6cbc684121e17bfe"
+                    },
+                    "4": {
+                      "title": "B",
+                      "id": "33.6cbc684121e17bfe",
+                      "ideas": {
+                        "1": {
+                          "title": "B is Low",
+                          "id": "48.6cbc684121e17bfe"
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "E",
+                      "id": "36.6cbc684121e17bfe"
+                    },
+                    "3.5": {
+                      "title": "G",
+                      "id": "34.6cbc684121e17bfe"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Chords",
+                  "id": "20.6cbc684121e17bfe",
+                  "ideas": {
+                    "1": {
+                      "title": "EM",
+                      "id": "21.6cbc684121e17bfe"
+                    },
+                    "2": {
+                      "title": "E",
+                      "id": "22.6cbc684121e17bfe"
+                    },
+                    "3": {
+                      "title": "A",
+                      "id": "23.6cbc684121e17bfe"
+                    },
+                    "4": {
+                      "title": "G",
+                      "id": "24.6cbc684121e17bfe"
+                    },
+                    "5": {
+                      "title": "C",
+                      "id": "25.6cbc684121e17bfe"
+                    },
+                    "6": {
+                      "title": "D",
+                      "id": "26.6cbc684121e17bfe"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Struggles",
+                  "id": "37.6cbc684121e17bfe",
+                  "ideas": {
+                    "1": {
+                      "title": "I don't know where the strings are",
+                      "id": "38.6cbc684121e17bfe"
+                    },
+                    "2": {
+                      "title": "I have a hard time memorizing what the session is",
+                      "id": "39.6cbc684121e17bfe",
+                      "ideas": {
+                        "1": {
+                          "title": "I need to loosen up and enjoy the journey",
+                          "id": "40.6cbc684121e17bfe"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Intuition",
+                  "id": "41.6cbc684121e17bfe",
+                  "ideas": {
+                    "1": {
+                      "title": "Relax",
+                      "id": "42.6cbc684121e17bfe"
+                    },
+                    "2": {
+                      "title": "Focus on the Guitar strings and how they feel",
+                      "id": "43.6cbc684121e17bfe"
+                    },
+                    "3": {
+                      "title": "Enjoy the sound",
+                      "id": "44.6cbc684121e17bfe"
+                    },
+                    "4": {
+                      "title": "Practice both strict and free play",
+                      "id": "45.6cbc684121e17bfe"
+                    },
+                    "5": {
+                      "title": "Build Patience through my guitar practice",
+                      "id": "47.6cbc684121e17bfe"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.dea0e0eed802c98",
+          "ideas": {
+            "1": {
+              "title": "How to read music sheet",
+              "id": "7.dea0e0eed802c98",
+              "ideas": {
+                "1": {
+                  "title": "http://www.musicnotes.com/blog/2014/04/11/how-to-read-sheet-music/",
+                  "id": "8.dea0e0eed802c98"
+                }
+              }
+            },
+            "2": {
+              "title": "My Favorite OST",
+              "id": "13.dea0e0eed802c98",
+              "ideas": {
+                "1": {
+                  "title": "Dragon Quest",
+                  "id": "14.dea0e0eed802c98",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=6YgD4oldM04",
+                      "id": "15.dea0e0eed802c98"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Music",
+  "links": []
+}

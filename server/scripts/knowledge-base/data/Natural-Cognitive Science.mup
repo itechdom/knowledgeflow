@@ -1,0 +1,247 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Cognitive Science",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.36aedb332a6172a9",
+          "ideas": {
+            "1": {
+              "title": "Cognitive Nueroscience",
+              "id": "4.36aedb332a6172a9",
+              "ideas": {
+                "2": {
+                  "title": "Branch of both psychology and neuroscience ",
+                  "id": "6.36aedb332a6172a9"
+                },
+                "3": {
+                  "title": "Cerebral Cortex",
+                  "id": "18.36aedb332a6172a9"
+                },
+                "4": {
+                  "title": "We are but moist robots",
+                  "id": "38.5d8519f558b6c78f"
+                },
+                "5": {
+                  "title": "Working memory",
+                  "id": "36.5d8519f558b6c78f",
+                  "attr": {}
+                },
+                "6": {
+                  "title": "Long term memory",
+                  "id": "37.5d8519f558b6c78f",
+                  "attr": {}
+                },
+                "7": {
+                  "title": "Is free will an illusion",
+                  "id": "39.25f303128aac55ef",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "Resources",
+                      "id": "40.25f303128aac55ef",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=wGPIzSe5cAU",
+                          "id": "41.25f303128aac55ef"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  83,
+                  -53,
+                  1
+                ],
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Prominent people",
+              "id": "19.5d8519f558b6c78f",
+              "ideas": {
+                "1": {
+                  "title": "Daniel Dennett",
+                  "id": "34.5d8519f558b6c78f"
+                },
+                "2": {
+                  "title": "Dr. Terrence Sejnowski",
+                  "id": "44.431e7b15bc1d66a0",
+                  "ideas": {
+                    "1": {
+                      "title": "neural networks",
+                      "id": "45.431e7b15bc1d66a0"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Santiago Ramon y Cajal",
+                  "id": "46.431e7b15bc1d66a0"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "22": {
+              "title": "Neuorscience",
+              "id": "7.36aedb332a6172a9",
+              "ideas": {
+                "1": {
+                  "title": "The nervous system",
+                  "id": "8.36aedb332a6172a9",
+                  "ideas": {
+                    "1": {
+                      "title": "Central ",
+                      "id": "9.36aedb332a6172a9"
+                    },
+                    "2": {
+                      "title": "Peripheral",
+                      "id": "10.36aedb332a6172a9"
+                    },
+                    "3": {
+                      "title": "The brain contains one hundred billion neurons and one hundred trillion synapses; ",
+                      "id": "11.36aedb332a6172a9"
+                    },
+                    "4": {
+                      "title": "Complexity studying the brain",
+                      "id": "12.36aedb332a6172a9",
+                      "attr": {
+                        "note": {
+                          "index": 11,
+                          "text": "Due to the plasticity of the human brain, the structure of its synapses and their resulting functions change throughout life.[16] Thus the challenge of making sense of all this complexity is formidable.."
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Study of the nervous system can be at different levels",
+                      "id": "13.36aedb332a6172a9",
+                      "attr": {
+                        "note": {
+                          "index": 12,
+                          "text": "ranging from the molecular and cellular levels to the systems and cognitive levels."
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "Picture of a neuron in a chicken",
+                      "id": "16.36aedb332a6172a9",
+                      "ideas": {
+                        "1": {
+                          "title": "",
+                          "id": "14.36aedb332a6172a9",
+                          "attr": {
+                            "icon": {
+                              "url": "data:image/png;base64,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",
+                              "width": 437,
+                              "height": 512,
+                              "position": "left",
+                              "metaData": {
+                                "remoteUrl": "https://lh3.googleusercontent.com/-o-YXjguml2w/WF9gdasAFZI/AAAAAAAAB94/kAbFsUbzPGYO_USyRpEJ3cXhndaAHcVvACLcB/Neuron_colored.jpg",
+                                "original": "https://picasaweb.google.com/116762370873183133176/6366440538900267345?authkey=Gv1sRgCN3tkPul1pKMBw#6367914456621520274",
+                                "parentId": "6366440538900267345",
+                                "id": "6367914456621520274",
+                                "service": "googlePhotos"
+                              }
+                            }
+                          },
+                          "ideas": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "8": {
+                      "title": "Biological Structure",
+                      "id": "53.431e7b15bc1d66a0",
+                      "ideas": {
+                        "1": {
+                          "title": "Synapse",
+                          "id": "49.431e7b15bc1d66a0",
+                          "ideas": {
+                            "1": {
+                              "title": "Synapse A barrier to transmission exists at the site of contact between two neurons that may permit transmission.",
+                              "id": "50.431e7b15bc1d66a0",
+                              "ideas": {}
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Theories",
+                  "id": "54.431e7b15bc1d66a0",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "Neuron doctorine",
+                      "id": "47.431e7b15bc1d66a0",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Neuron_doctrine",
+                          "id": "48.431e7b15bc1d66a0"
+                        }
+                      },
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  90,
+                  66,
+                  2
+                ],
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.36aedb332a6172a9",
+          "ideas": {
+            "2": {
+              "title": "Cognitive Neuroscience",
+              "id": "17.36aedb332a6172a9",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Cognitive_neuroscience",
+                  "id": "5.36aedb332a6172a9",
+                  "attr": {}
+                }
+              }
+            },
+            "4": {
+              "title": "Great website about the brain",
+              "id": "42.431e7b15bc1d66a0",
+              "ideas": {
+                "1": {
+                  "title": "http://www.brainfacts.org/",
+                  "id": "43.431e7b15bc1d66a0"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Cognitive Science",
+  "links": []
+}

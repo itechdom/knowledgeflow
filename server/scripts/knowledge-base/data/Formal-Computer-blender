@@ -1,0 +1,109 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-computer-blender",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.ec6b.43700546-6b9d.cd496a192",
+          "ideas": {
+            "1": {
+              "title": "how to",
+              "id": "5.ec6b.43700546-6b9d.cd496a192",
+              "ideas": {
+                "1": {
+                  "title": "add an image to a plane?",
+                  "id": "6.ec6b.43700546-6b9d.cd496a192",
+                  "ideas": {
+                    "1": {
+                      "title": "https://blender.stackexchange.com/questions/81042/how-to-map-an-image-on-a-plane-manually",
+                      "id": "7.ec6b.43700546-6b9d.cd496a192"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Cg fast track tutorial",
+                  "id": "8.ec6b.43700546-6b9d.cd496a192",
+                  "ideas": {},
+                  "attr": {
+                    "note": {
+                      "index": 6,
+                      "text": "CHAPTER SHORT CUTS AND FOLLOW ALONG SCREEN SHOTS\n- Cinematic: 0:12\n- Overview: 1:08\n- Intro: 2:25\nChapter 1: How to Learn CG Faster: 2:41\nChapter 2: User Interface: - 6:55\n- Screen Shots: http://bit.ly/2Kqa3Nn\nChapter 3: Navigation: 11:06 \n- Screen Shots: http://bit.ly/2KoUFRm\nChapter 4: Viewport Tools: 13:07\n- Screen Shots: http://bit.ly/2yQCIEO\nChapter 5:. Rendering: 16:40\n- Screen Shots: http://bit.ly/2ONRkPQ\nChapter 6:. Textures: 27:14\n- Screen Shots: http://bit.ly/2KnIO5X\nChapter 7: Duplication: 33:22\n- Screen Shots: http://bit.ly/33qOnIb\nChapter 8: Tear It Down: 42:06\n- Screen Shots: http://bit.ly/2M9Frln\nNext Steps: 45:03"
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "match photo reference",
+                  "id": "14.9e5e.4e331f7fa-1acf.56e6f1371",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=CRUDeiuWnoM",
+                      "id": "16.9e5e.4e331f7fa-1acf.56e6f1371"
+                    },
+                    "2": {
+                      "title": "how to model using a picture reference",
+                      "id": "17.9e5e.4e331f7fa-1acf.56e6f1371",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=22FdkJXCaxk",
+                          "id": "18.9e5e.4e331f7fa-1acf.56e6f1371"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "https://www.youtube.com/watch?v=aAO4C_8y0w8",
+                      "id": "19.9e5e.4e331f7fa-1acf.56e6f1371"
+                    }
+                  },
+                  "attr": {}
+                }
+              }
+            },
+            "2": {
+              "title": "Uv unwrap",
+              "id": "11.9e5e.4e331f7fa-1acf.56e6f1371"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.ec6b.43700546-6b9d.cd496a192",
+          "ideas": {
+            "1": {
+              "title": "tips and tricks",
+              "id": "9.9e5e.4e331f7fa-1acf.56e6f1371",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=_9dEqM3H31g",
+                  "id": "10.9e5e.4e331f7fa-1acf.56e6f1371"
+                }
+              }
+            },
+            "2": {
+              "title": "books",
+              "id": "12.9e5e.4e331f7fa-1acf.56e6f1371",
+              "ideas": {
+                "1": {
+                  "title": "steal like an artist",
+                  "id": "13.9e5e.4e331f7fa-1acf.56e6f1371"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "",
+  "links": []
+}

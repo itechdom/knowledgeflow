@@ -1,0 +1,96 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-Computer-Elastic-Search",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.33c9.903aa6749-f018.800156b8f",
+          "ideas": {
+            "1": {
+              "title": "queries",
+              "id": "5.33c9.903aa6749-f018.800156b8f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html",
+                  "id": "10.98b5.cf12831da-66a3.c73367108"
+                }
+              }
+            },
+            "2": {
+              "title": "aggregations",
+              "id": "6.33c9.903aa6749-f018.800156b8f",
+              "ideas": {
+                "2": {
+                  "title": "bucketing",
+                  "id": "12.98b5.cf12831da-66a3.c73367108",
+                  "attr": {}
+                },
+                "3": {
+                  "title": "you can also use the keyword \"aggs\"",
+                  "id": "13.98b5.cf12831da-66a3.c73367108"
+                },
+                "4": {
+                  "title": "Resources",
+                  "id": "14.98b5.cf12831da-66a3.c73367108",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations.html",
+                      "id": "11.98b5.cf12831da-66a3.c73367108",
+                      "attr": {}
+                    }
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "automatic indexing",
+              "id": "7.33c9.903aa6749-f018.800156b8f"
+            },
+            "4": {
+              "title": "kibana",
+              "id": "15.98b5.cf12831da-66a3.c73367108",
+              "ideas": {
+                "1": {
+                  "title": "https://www.elastic.co/webinars/getting-started-kibana?baymax=rtp&elektra=docs&storm=top-video&iesrc=ctr",
+                  "id": "16.98b5.cf12831da-66a3.c73367108"
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.33c9.903aa6749-f018.800156b8f",
+          "ideas": {
+            "1": {
+              "title": "https://www.elastic.co/",
+              "id": "4.33c9.903aa6749-f018.800156b8f"
+            },
+            "2": {
+              "title": "github repo",
+              "id": "8.33c9.903aa6749-f018.800156b8f",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/elastic/elasticsearch",
+                  "id": "9.33c9.903aa6749-f018.800156b8f"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": ""
+}

@@ -1,0 +1,261 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Three.js",
+      "attr": {
+        "style": {},
+        "position": [
+          -30,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 6,
+          "ideas": {
+            "1": {
+              "title": "Mesh",
+              "id": "44.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "3": {
+                  "title": "Takes in",
+                  "id": "62.5fa7.9484dffa9-64de.01c16ee66",
+                  "ideas": {
+                    "1": {
+                      "title": "Takes in material",
+                      "id": "60.5fa7.9484dffa9-64de.01c16ee66",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Geometry",
+                      "id": "61.5fa7.9484dffa9-64de.01c16ee66",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Scene",
+              "id": "45.5fa7.9484dffa9-64de.01c16ee66"
+            },
+            "3": {
+              "title": "Camera",
+              "id": "46.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "1": {
+                  "title": "Perspective Camera",
+                  "id": "56.5fa7.9484dffa9-64de.01c16ee66",
+                  "ideas": {
+                    "1": {
+                      "title": "near and far clipping plane`",
+                      "id": "57.5fa7.9484dffa9-64de.01c16ee66",
+                      "ideas": {
+                        "1": {
+                          "title": "where the scene is cut off so you don't render a lot of things",
+                          "id": "58.5fa7.9484dffa9-64de.01c16ee66"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Geometry",
+              "id": "47.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "1": {
+                  "title": "Box Geomatry",
+                  "id": "59.5fa7.9484dffa9-64de.01c16ee66"
+                },
+                "2": {
+                  "title": "Vertices",
+                  "id": "65.5fa7.9484dffa9-64de.01c16ee66",
+                  "ideas": {
+                    "1": {
+                      "title": "you have to specify three points? to draw a line",
+                      "id": "66.5fa7.9484dffa9-64de.01c16ee66"
+                    },
+                    "2": {
+                      "title": "not sure how to draw a line",
+                      "id": "67.5fa7.9484dffa9-64de.01c16ee66"
+                    },
+                    "3": {
+                      "title": "the line is drawn only between two lines",
+                      "id": "68.5fa7.9484dffa9-64de.01c16ee66"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Skybox",
+              "id": "50.5fa7.9484dffa9-64de.01c16ee66"
+            },
+            "6": {
+              "title": "Lighting",
+              "id": "51.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "70.3add.a41b856f4-64cd.56bda727b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://threejs.org/docs/#api/en/lights/PointLight",
+                      "id": "71.3add.a41b856f4-64cd.56bda727b"
+                    }
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "Texture",
+              "id": "52.5fa7.9484dffa9-64de.01c16ee66"
+            },
+            "8": {
+              "title": "Animation",
+              "id": "53.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "1": {
+                  "title": "Request animation frame",
+                  "id": "54.5fa7.9484dffa9-64de.01c16ee66"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Text",
+              "id": "63.5fa7.9484dffa9-64de.01c16ee66",
+              "ideas": {
+                "1": {
+                  "title": "https://threejs.org/docs/index.html#manual/en/introduction/Creating-text",
+                  "id": "64.5fa7.9484dffa9-64de.01c16ee66"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2.5": {
+              "title": "Shaders",
+              "id": "69.5fa7.9484dffa9-64de.01c16ee66",
+              "attr": {}
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-0.5": {
+          "title": "Resources",
+          "ideas": {
+            "1": {
+              "title": "main website",
+              "id": 35,
+              "ideas": {
+                "1": {
+                  "title": "http://threejs.org/",
+                  "id": 36
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<a href=\"http://threejs.org/docs/index.html#Manual/Introduction/Creating_a_scene\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">documentation</a><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><a href=\"http://threejs.org/examples/\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">examples</a><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><a href=\"https://github.com/mrdoob/three.js/archive/master.zip\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">download</a><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><a href=\"http://github.com/mrdoob/three.js/\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">github</a><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><a href=\"http://stackoverflow.com/questions/tagged/three.js\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">stackoverflow</a><br style=\"box-sizing: border-box; color: rgb(85, 85, 85); font-family: inconsolata; font-size: 15px; line-height: 18px;\"><a href=\"irc://irc.freenode.net/three.js\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">irc<br style=\"box-sizing: border-box;\"><br style=\"box-sizing: border-box;\"></a><a href=\"http://threejs.org/editor/\" style=\"box-sizing: border-box; color: rgb(33, 148, 206); font-family: inconsolata; font-size: 15px; line-height: 18px;\">editor</a>"
+                },
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "docs",
+              "id": 37,
+              "ideas": {
+                "1": {
+                  "title": "http://threejs.org/docs/index.html#Manual/Introduction/Creating_a_scene",
+                  "id": 38
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "MVC with Three.js",
+              "id": 39,
+              "ideas": {
+                "1": {
+                  "title": "http://hecodes.com/2016/07/using-mvc-pattern-for-building-complex-three-js-applications/",
+                  "id": 40
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Links to External Mindmaps",
+              "id": "41.579e6e173a56d291",
+              "ideas": {
+                "1": {
+                  "title": "Three.js Mindmap",
+                  "id": "42.579e6e173a56d291",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.processon.com/view/5731a65fe4b084917a37f8ad",
+                      "id": "43.579e6e173a56d291"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "id": 3,
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": "61.5fa7.9484dffa9-64de.01c16ee66",
+      "ideaIdTo": "47.5fa7.9484dffa9-64de.01c16ee66",
+      "attr": {
+        "style": {
+          "color": "#707070",
+          "lineStyle": "solid",
+          "arrow": "to"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Three.js"
+}

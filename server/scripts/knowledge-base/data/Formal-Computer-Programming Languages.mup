@@ -1,0 +1,821 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Programming Languages",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.74ae39682246a6f5",
+          "ideas": {
+            "15": {
+              "title": "History",
+              "id": "16.74ae39682246a6f5",
+              "ideas": {
+                "4": {
+                  "title": "Generations",
+                  "id": "26.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "1GL",
+                      "id": "17.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "punch cards and magnetic tapes",
+                          "id": "18.74ae39682246a6f5"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "2GL",
+                      "id": "19.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "Assembly",
+                          "id": "20.74ae39682246a6f5"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "3GL",
+                      "id": "21.74ae39682246a6f5",
+                      "attr": {
+                        "note": {
+                          "index": 17,
+                          "text": "The first high-level programming languages, or third-generation programming languages (3GL), were written in the 1950s. An early high-level programming language to be designed for a computer was Plankalkül, developed for the German Z3 by Konrad Zuse between 1943 and 1945. However, it was not implemented until 1998 and 2000.[26]"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "First compiled computer was created at the university of manchaster",
+                          "id": "22.74ae39682246a6f5",
+                          "attr": {
+                            "note": {
+                              "index": 18,
+                              "text": "At the University of Manchester, Alick Glennie developed Autocode in the early 1950s. A programming language, it used a compiler to automatically convert the language into machine code. The first code and compiler was developed in 1952 for the Mark 1 computer at the University of Manchester and is considered to be the first compiled high-level programming language.[28][29]"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "FORTRAN",
+                          "id": "23.74ae39682246a6f5",
+                          "attr": {
+                            "note": {
+                              "index": 19,
+                              "text": "In 1954, FORTRAN was invented at IBM by John Backus. It was the first widely used high level general purpose programming language to have a functional implementation, as opposed to just a design on paper.[30][31] It is still popular language for high-performance computing[32] and is used for programs that benchmark and rank the world's fastest supercomputers.[33]"
+                            }
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "John Backus",
+                              "id": "24.74ae39682246a6f5"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Grace Hopper",
+                          "id": "25.74ae39682246a6f5",
+                          "attr": {
+                            "note": {
+                              "index": 21,
+                              "text": "Another early programming language was devised by Grace Hopper in the US, called FLOW-MATIC. It was developed for the UNIVAC I at Remington Rand during the period from 1955 until 1959. Hopper found that business data processing customers were uncomfortable with mathematical notation, and in early 1955, she and her team wrote a specification for an English programming language and implemented a prototype.[34] The FLOW-MATIC compiler became publicly available in early 1958 and was substantially complete in 1959.[35] Flow-Matic was a major influence in the design of COBOL, since only it and its direct descendant AIMACO were in actual use at the time.[36]"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "5": {
+                  "title": "The advent of high level programming languages prompted people to invent system programming languages",
+                  "id": "27.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 23,
+                      "text": "The increased use of high-level languages introduced a requirement for low-level programming languages or system programming languages. These languages, to varying degrees, provide facilities between assembly languages and high-level languages, and can be used to perform tasks which require direct access to hardware facilities but still provide higher-level control structures and error-checking."
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Between 1960s - 1970s",
+                  "id": "28.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 24,
+                      "text": "The period from the 1960s to the late 1970s brought the development of the major language paradigms now in use:\n\nAPL introduced array programming and influenced functional programming.[37]\nALGOL refined both structured procedural programming and the discipline of language specification; the \"Revised Report on the Algorithmic Language ALGOL 60\" became a model for how later language specifications were written.\nLisp, implemented in 1958, was the first dynamically typed functional programming language\nIn the 1960s, Simula was the first language designed to support object-oriented programming; in the mid-1970s, Smalltalk followed with the first \"purely\" object-oriented language.\nC was developed between 1969 and 1973 as a system programming language for the Unix operating system, and remains popular.[38]\nProlog, designed in 1972, was the first logic programming language.\nIn 1978, ML built a polymorphic type system on top of Lisp, pioneering statically typed functional programming languages.\nEach of these languages spawned descendants, and most modern programming languages count at least one of them in their ancestry.\n\nThe 1960s and 1970s also saw considerable debate over the merits of structured programming, and whether programming languages should be designed to support it.[39] Edsger Dijkstra, in a famous 1968 letter published in the Communications of the ACM, argued that GOTO statements should be eliminated from all \"higher level\" programming languages.[40]"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Lisp",
+                      "id": "29.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "ML",
+                          "id": "30.74ae39682246a6f5",
+                          "ideas": {
+                            "1": {
+                              "title": "Pioneered polymorphic type system",
+                              "id": "31.74ae39682246a6f5"
+                            },
+                            "2": {
+                              "title": "Which introduced static types to functional programming languages",
+                              "id": "32.74ae39682246a6f5"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "7": {
+                  "title": "1980s",
+                  "id": "35.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 29,
+                      "text": "The 1980s were years of relative consolidation. C++ combined object-oriented and systems programming. The United States government standardized Ada, a systems programming language derived from Pascal and intended for use by defense contractors. In Japan and elsewhere, vast sums were spent investigating so-called \"fifth generation\" languages that incorporated logic programming constructs.[41] The functional languages community moved to standardize ML and Lisp. Rather than inventing new paradigms, all of these movements elaborated upon the ideas invented in the previous decades.\n\nOne important trend in language design for programming large-scale systems during the 1980s was an increased focus on the use of modules, or large-scale organizational units of code. Modula-2, Ada, and ML all developed notable module systems in the 1980s, which were often wedded to generic programming constructs.[42]\n\nThe rapid growth of the Internet in the mid-1990s created opportunities for new languages. Perl, originally a Unix scripting tool first released in 1987, became common in dynamic websites. Java came to be used for server-side programming, and bytecode virtual machines became popular again in commercial settings with their promise of \"Write once, run anywhere\" (UCSD Pascal had been popular for a time in the early 1980s). These developments were not fundamentally novel, rather they were refinements of many existing languages and paradigms (although their syntax was often based on the C family of programming languages).\n\nProgramming language evolution continues, in both industry and research. Current directions include security and reliability verification, new kinds of modularity (mixins, delegates, aspects), and database integration such as Microsoft's LINQ.\n\nFourth-generation programming languages (4GL) are a computer programming languages which aim to provide a higher level of abstraction of the internal computer hardware details than 3GLs. Fifth generation programming languages (5GL) are programming languages based on solving problems using constraints given to the program, rather than using an algorithm written by a programmer."
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Increased usage of modules",
+                      "id": "36.74ae39682246a6f5"
+                    }
+                  }
+                },
+                "8": {
+                  "title": "1990s",
+                  "id": "37.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "Perl",
+                      "id": "38.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "Originally a scripting language",
+                          "id": "39.74ae39682246a6f5"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "position": [
+                  83,
+                  -170,
+                  1
+                ]
+              }
+            },
+            "16": {
+              "title": "Syntax",
+              "id": "6.74ae39682246a6f5",
+              "ideas": {
+                "3": {
+                  "title": "some are visual",
+                  "id": "42.74ae39682246a6f5"
+                },
+                "4": {
+                  "title": "How do we design syntax",
+                  "id": "43.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 28,
+                      "text": "Programming language syntax is usually defined using a combination of regular expressions (for lexical structure) and Backus–Naur form (for grammatical structure). Below is a simple grammar, based on Lisp:"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Backus-Naur Form",
+                  "id": "44.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Backus%E2%80%93Naur_form",
+                      "id": "45.74ae39682246a6f5"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Regular Expression",
+                  "id": "46.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Regular_expression",
+                      "id": "47.74ae39682246a6f5"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 26,
+                  "text": "The syntax of a language describes the possible combinations of symbols that form a syntactically correct program. The meaning given to a combination of symbols is handled by semantics (either formal or hard-coded in a reference implementation). Since most languages are textual, this article discusses textual syntax."
+                },
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Programming Language Types",
+              "id": "10.74ae39682246a6f5",
+              "ideas": {
+                "1": {
+                  "title": "Imperative",
+                  "id": "11.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 33,
+                      "text": "Traditionally, programming languages have been regarded as describing computation in terms of imperative sentences, i.e. issuing commands. These are generally called imperative programming languages."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Describe a computation in terms of imperative sentences",
+                      "id": "108.71089e6bdf02c644"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Declarative",
+                  "id": "12.74ae39682246a6f5"
+                },
+                "3": {
+                  "title": "Markup languages",
+                  "id": "14.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 10,
+                      "text": "Markup languages like XML, HTML or troff, which define structured data, are not usually considered programming languages.[13][14][15] Programming languages may, however, share the syntax with markup languages if a computational semantics is defined. XSLT, for example, is a Turing complete XML dialect.[16][17][18] Moreover, LaTeX, which is mostly used for structuring documents, also contains a Turing complete subset.[19][20]"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Latex",
+                      "id": "15.74ae39682246a6f5"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Stack Based",
+                  "id": "60.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Stack-oriented_programming_language",
+                      "id": "61.74ae39682246a6f5"
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 31,
+                      "text": "is one that relies on a stack machine model for passing parameters. Several programming languages fit this description, notably Forth, RPL, PostScript, BibTeX style design language[1] and also many assembly languages (but on a much lower level)."
+                    },
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Natural",
+                  "id": "75.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Structured English",
+                      "id": "76.71089e6bdf02c644",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Structured_English",
+                          "id": "77.71089e6bdf02c644"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "By Purpose",
+                  "id": "99.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "General Purpose",
+                      "id": "100.71089e6bdf02c644"
+                    },
+                    "2": {
+                      "title": "Domain Specific",
+                      "id": "101.71089e6bdf02c644"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "By Compilation",
+                  "id": "105.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Compiled",
+                      "id": "103.71089e6bdf02c644",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Interpreted",
+                      "id": "102.71089e6bdf02c644",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "25": {
+                  "title": "By Paradigm",
+                  "id": "110.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Procedural",
+                      "id": "109.71089e6bdf02c644",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Object Oriented",
+                      "id": "106.71089e6bdf02c644",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Functional",
+                      "id": "107.71089e6bdf02c644",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "Logic Programming",
+                      "id": "33.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Logic_programming",
+                          "id": "113.71089e6bdf02c644"
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "5": {
+                      "title": "Resources",
+                      "id": "117.13191f8414b36a0d",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Programming_paradigm",
+                          "id": "118.13191f8414b36a0d"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "26": {
+                  "title": "Esoteric",
+                  "id": "111.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Just test the boundries",
+                      "id": "112.71089e6bdf02c644"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "27": {
+                  "title": "Visual Programming Languages",
+                  "id": "114.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Visual_programming_language",
+                      "id": "115.71089e6bdf02c644"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Standard Library and the runtime system",
+              "id": "74.71089e6bdf02c644",
+              "attr": {}
+            },
+            "19": {
+              "title": "Programming language Implementation",
+              "id": "78.71089e6bdf02c644",
+              "attr": {
+                "note": {
+                  "index": 48,
+                  "text": "Specification[edit]\nMain article: Programming language specification\nThe specification of a programming language is an artifact that the language users and the implementors can use to agree upon whether a piece of source code is a valid program in that language, and if so what its behavior shall be.\n\nA programming language specification can take several forms, including the following:\n\nAn explicit definition of the syntax, static semantics, and execution semantics of the language. While syntax is commonly specified using a formal grammar, semantic definitions may be written in natural language (e.g., as in the C language), or a formal semantics (e.g., as in Standard ML[58] and Scheme[59] specifications).\nA description of the behavior of a translator for the language (e.g., the C++ and Fortran specifications). The syntax and semantics of the language have to be inferred from this description, which may be written in natural or a formal language.\nA reference or model implementation, sometimes written in the language being specified (e.g., Prolog or ANSI REXX[60]). The syntax and semantics of the language are explicit in the behavior of the reference implementation."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Programming_language_implementation",
+                  "id": "79.71089e6bdf02c644"
+                },
+                "2": {
+                  "title": "Interpretation",
+                  "id": "80.71089e6bdf02c644",
+                  "attr": {
+                    "note": {
+                      "index": 50,
+                      "text": "Interpretation: An interpreter takes as input a program in some language, and performs the actions written in that language on some machine."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Take an input language and Exectutes it on a machine",
+                      "id": "82.71089e6bdf02c644"
+                    },
+                    "2": {
+                      "title": "When a language can run its commands through an interpreter (such as a Unix shell or other command-line interface), without compiling, it is called a scripting language.[64]",
+                      "id": "89.71089e6bdf02c644",
+                      "ideas": {
+                        "1": {
+                          "title": "that's why people say JavaScript is a scripting language, but because of JIT on V8, does it mean it's a real programming language",
+                          "id": "90.71089e6bdf02c644"
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Compilation",
+                  "id": "81.71089e6bdf02c644",
+                  "attr": {
+                    "note": {
+                      "index": 51,
+                      "text": "Compilation: A compiler takes as input a program in some language, and translates that program into some other language, which may serve as input to another interpreter or another compiler."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Turns one language into another to be either run an interpreter (a machine is also included here)",
+                      "id": "83.71089e6bdf02c644"
+                    },
+                    "2": {
+                      "title": "JIT",
+                      "id": "86.71089e6bdf02c644",
+                      "ideas": {
+                        "1": {
+                          "title": "just in time compilation",
+                          "id": "87.71089e6bdf02c644",
+                          "ideas": {
+                            "1": {
+                              "title": "compile codes at runtime",
+                              "id": "88.71089e6bdf02c644"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Translator",
+                  "id": "84.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Convert between two high level languages",
+                      "id": "85.71089e6bdf02c644"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "20": {
+              "title": "Programming Language Usage",
+              "id": "91.71089e6bdf02c644",
+              "attr": {
+                "note": {
+                  "index": 57,
+                  "text": "For example, COBOL is still strong in the corporate data center, often on large mainframes;[65][66] Fortran in scientific and engineering applications; Ada in aerospace, transportation, military, real-time and embedded applications; and C in embedded applications and operating systems. Other languages are regularly used to write many different kinds of applications."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "COBOL in large data centers",
+                  "id": "93.71089e6bdf02c644"
+                },
+                "2": {
+                  "title": "Fortran",
+                  "id": "94.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "scientific and engineering",
+                      "id": "95.71089e6bdf02c644"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "C",
+                  "id": "96.71089e6bdf02c644",
+                  "ideas": {
+                    "1": {
+                      "title": "Embedded",
+                      "id": "97.71089e6bdf02c644"
+                    }
+                  }
+                }
+              }
+            },
+            "21": {
+              "title": "Semantics",
+              "id": "7.74ae39682246a6f5",
+              "ideas": {
+                "1": {
+                  "title": "meaning",
+                  "id": "9.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "how we structure the language and what rules we have that prevent us from doing certain things",
+                      "id": "50.74ae39682246a6f5"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Type Systems",
+                  "id": "48.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 14,
+                      "text": "A type system defines how a programming language classifies values and expressions into types, how it can manipulate those types and how they interact. The goal of a type system is to verify and usually enforce a certain level of correctness in programs written in that language by detecting certain incorrect operations. Any decidable type system involves a trade-off: while it rejects many incorrect programs, it can also prohibit some correct, albeit unusual programs. In order to bypass this downside, a number of languages have type loopholes, usually unchecked casts that may be used by the programmer to explicitly allow a normally disallowed operation between different types. In most typed languages, the type system is used only to type check programs, but a number of languages, usually functional ones, infer types, relieving the programmer from the need to write type annotations. The formal design and study of type systems is known as type theory."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Strictly",
+                      "id": "49.74ae39682246a6f5"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Static Symantics",
+                  "id": "51.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 16,
+                      "text": "Static semantics[edit]\nThe static semantics defines restrictions on the structure of valid texts that are hard or impossible to express in standard syntactic formalisms.[3] For compiled languages, static semantics essentially include those semantic rules that can be checked at compile time. Examples include checking that every identifier is declared before it is used (in languages that require such declarations) or that the labels on the arms of a case statement are distinct.[46] Many important restrictions of this type, like checking that identifiers are used in the appropriate context (e.g. not adding an integer to a function name), or that subroutine calls have the appropriate number and type of arguments, can be enforced by defining them as rules in a logic called a type system. Other forms of static analyses like data flow analysis may also be part of static semantics. Newer programming languages like Java and C# have definite assignment analysis, a form of data flow analysis, as part of their static semantics."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "example",
+                      "id": "55.74ae39682246a6f5",
+                      "ideas": {
+                        "1": {
+                          "title": "Examples include checking that every identifier is declared before it is used (in languages that require such declarations) or that the labels on the arms of a case statement are distinct.",
+                          "id": "56.74ae39682246a6f5"
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Dynamic Symantics",
+                  "id": "52.74ae39682246a6f5",
+                  "attr": {
+                    "note": {
+                      "index": 17,
+                      "text": "Dynamic semantics[edit]\nMain article: Semantics of programming languages\nOnce data has been specified, the machine must be instructed to perform operations on the data. For example, the semantics may define the strategy by which expressions are evaluated to values, or the manner in which control structures conditionally execute statements. The dynamic semantics (also known as execution semantics) of a language defines how and when the various constructs of a language should produce a program behavior. There are many ways of defining execution semantics. Natural language is often used to specify the execution semantics of languages commonly used in practice. A significant amount of academic research went into formal semantics of programming languages, which allow execution semantics to be specified in a formal manner. Results from this field of research have seen limited application to programming language design and implementation outside academia."
+                    }
+                  }
+                },
+                "5": {
+                  "title": "There is a whole field dedicated to this",
+                  "id": "53.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Semantics_(computer_science)",
+                      "id": "54.74ae39682246a6f5"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Erros",
+                  "id": "57.74ae39682246a6f5",
+                  "ideas": {
+                    "1": {
+                      "title": "Runtime",
+                      "id": "58.74ae39682246a6f5"
+                    },
+                    "2": {
+                      "title": "Compiletime",
+                      "id": "59.74ae39682246a6f5"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Typing",
+                  "id": "62.74ae39682246a6f5",
+                  "ideas": {
+                    "3": {
+                      "title": "Static vs. Dynamic",
+                      "id": "66.71089e6bdf02c644",
+                      "ideas": {
+                        "1": {
+                          "title": "Dynamic",
+                          "id": "64.74ae39682246a6f5",
+                          "ideas": {
+                            "1": {
+                              "title": "Checks types at runtime",
+                              "id": "65.74ae39682246a6f5"
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Static",
+                          "id": "63.74ae39682246a6f5",
+                          "ideas": {}
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Weak vs Strong",
+                      "id": "68.71089e6bdf02c644",
+                      "ideas": {
+                        "1": {
+                          "title": "Weak",
+                          "id": "69.71089e6bdf02c644",
+                          "ideas": {
+                            "1": {
+                              "title": "Allow one type to be interpreted as another",
+                              "id": "70.71089e6bdf02c644",
+                              "ideas": {
+                                "1": {
+                                  "title": "string as number",
+                                  "id": "71.71089e6bdf02c644"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Strong",
+                          "id": "72.71089e6bdf02c644",
+                          "ideas": {
+                            "1": {
+                              "title": "Can't do this",
+                              "id": "73.71089e6bdf02c644"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 12,
+                  "text": "Semantics[edit]\nThe term semantics refers to the meaning of languages, as opposed to their form (syntax).\n\nStatic semantics[edit]\nThe static semantics defines restrictions on the structure of valid texts that are hard or impossible to express in standard syntactic formalisms.[3] For compiled languages, static semantics essentially include those semantic rules that can be checked at compile time. Examples include checking that every identifier is declared before it is used (in languages that require such declarations) or that the labels on the arms of a case statement are distinct.[46] Many important restrictions of this type, like checking that identifiers are used in the appropriate context (e.g. not adding an integer to a function name), or that subroutine calls have the appropriate number and type of arguments, can be enforced by defining them as rules in a logic called a type system. Other forms of static analyses like data flow analysis may also be part of static semantics. Newer programming languages like Java and C# have definite assignment analysis, a form of data flow analysis, as part of their static semantics.\n\nDynamic semantics[edit]\nMain article: Semantics of programming languages\nOnce data has been specified, the machine must be instructed to perform operations on the data. For example, the semantics may define the strategy by which expressions are evaluated to values, or the manner in which control structures conditionally execute statements. The dynamic semantics (also known as execution semantics) of a language defines how and when the various constructs of a language should produce a program behavior. There are many ways of defining execution semantics. Natural language is often used to specify the execution semantics of languages commonly used in practice. A significant amount of academic research went into formal semantics of programming languages, which allow execution semantics to be specified in a formal manner. Results from this field of research have seen limited application to programming language design and implementation outside academia."
+                },
+                "collapsed": true
+              }
+            },
+            "22": {
+              "title": "Arabic Programming language",
+              "id": "119.749ea678dde62fd6",
+              "ideas": {
+                "1": {
+                  "title": "Functional ",
+                  "id": "120.749ea678dde62fd6",
+                  "ideas": {
+                    "1": {
+                      "title": "QALB",
+                      "id": "123.749ea678dde62fd6",
+                      "ideas": {
+                        "1": {
+                          "title": "http://nas.sr/%D9%82%D9%84%D8%A8/",
+                          "id": "124.749ea678dde62fd6"
+                        },
+                        "2": {
+                          "title": "github",
+                          "id": "125.749ea678dde62fd6",
+                          "ideas": {
+                            "1": {
+                              "title": "https://github.com/nasser/---",
+                              "id": "126.749ea678dde62fd6"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "others",
+                      "id": "127.749ea678dde62fd6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://ar.wikipedia.org/wiki/%D9%84%D8%BA%D8%A7%D8%AA_%D8%A8%D8%B1%D9%85%D8%AC%D8%A9_%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9",
+                          "id": "128.749ea678dde62fd6"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "عمورية",
+                      "id": "129.749ea678dde62fd6",
+                      "ideas": {
+                        "1": {
+                          "title": "http://ammoria.sourceforge.net/ar/ar_index.html",
+                          "id": "130.749ea678dde62fd6"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Imperative",
+                  "id": "121.749ea678dde62fd6"
+                },
+                "3": {
+                  "title": "OOP",
+                  "id": "122.749ea678dde62fd6"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.74ae39682246a6f5",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "4.74ae39682246a6f5",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Programming_language",
+                  "id": "5.74ae39682246a6f5"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Programming Languages",
+  "links": []
+}

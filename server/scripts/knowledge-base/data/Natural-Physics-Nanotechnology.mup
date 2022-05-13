@@ -1,0 +1,76 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Nanotechnology",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.51a4dae87e453817",
+          "ideas": {
+            "1": {
+              "title": "the manipulation of atoms ",
+              "id": "5.51a4dae87e453817"
+            },
+            "2": {
+              "title": "was seeded by Richard Feynman",
+              "id": "6.51a4dae87e453817"
+            },
+            "3": {
+              "title": "you engineer devices using atoms and molecules",
+              "id": "8.51a4dae87e453817"
+            },
+            "4": {
+              "title": "Explanation of size",
+              "id": "9.51a4dae87e453817",
+              "attr": {
+                "note": {
+                  "index": 6,
+                  "text": "To put that scale in another context, the comparative size of a nanometer to a meter is the same as that of a marble to the size of the earth.[22] Or another way of putting it: a nanometer is the amount an average man's beard grows in the time it takes him to raise the razor to his face"
+                }
+              }
+            },
+            "5": {
+              "title": "Quantum Realm",
+              "id": "10.51a4dae87e453817",
+              "ideas": {
+                "1": {
+                  "title": "100 nm or less",
+                  "id": "11.51a4dae87e453817"
+                },
+                "2": {
+                  "title": "materials exhibit weird properties",
+                  "id": "13.51a4dae87e453817"
+                }
+              }
+            },
+            "6": {
+              "title": "Interesting properties",
+              "id": "12.51a4dae87e453817",
+              "attr": {
+                "note": {
+                  "index": 9,
+                  "text": "Materials reduced to the nanoscale can show different properties compared to what they exhibit on a macroscale, enabling unique applications. For instance, opaque substances can become transparent (copper); stable materials can turn combustible (aluminium); insoluble materials may become soluble (gold). A material such as gold, which is chemically inert at normal scales, can serve as a potent chemical catalyst at nanoscales. Much of the fascination with nanotechnology stems from these quantum and surface phenomena that matter exhibits at the nanoscale.[25]"
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.51a4dae87e453817",
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Nanotechnology#Origins",
+              "id": "4.51a4dae87e453817"
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "Nanotechnology",
+  "links": []
+}

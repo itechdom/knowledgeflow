@@ -1,0 +1,327 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Bash",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 593,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "shebang",
+              "id": "603.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "classic",
+                  "id": "604.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "#!/bin/bash",
+                      "id": "605.7ed872b9248205fb"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "env-style",
+              "id": "606.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "#!/usr/bin/env bash",
+                  "id": "607.7ed872b9248205fb"
+                },
+                "2": {
+                  "title": "looks for the bin in more places",
+                  "id": "609.7ed872b9248205fb"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Variables",
+              "id": "610.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "Constants",
+                  "id": "611.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "readonly ",
+                      "id": "612.7ed872b9248205fb"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "normal assignment for variabled",
+                  "id": "613.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "a = 1",
+                      "id": "614.7ed872b9248205fb"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "function",
+              "id": "615.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "return 0",
+                  "id": "616.7ed872b9248205fb",
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "local",
+                  "id": "618.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "to scope the variable",
+                      "id": "619.7ed872b9248205fb"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "implicit",
+                  "id": "623.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "go(){  }",
+                      "id": "625.7ed872b9248205fb"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Explicit",
+                  "id": "624.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "funciton go(){ }",
+                      "id": "626.7ed872b9248205fb"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "control flow",
+              "id": "620.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "if",
+                  "id": "621.7ed872b9248205fb",
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "fi",
+                  "id": "628.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "just like end or close curly brace }",
+                      "id": "629.7ed872b9248205fb"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "else",
+                  "id": "630.7ed872b9248205fb"
+                },
+                "4": {
+                  "title": "loops",
+                  "id": "653.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "while",
+                      "id": "654.7ed872b9248205fb"
+                    },
+                    "2": {
+                      "title": "for",
+                      "id": "655.7ed872b9248205fb"
+                    },
+                    "3": {
+                      "title": "- ge",
+                      "id": "651.7ed872b9248205fb",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Exit codes",
+              "id": "631.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "0",
+                  "id": "632.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "ok",
+                      "id": "633.7ed872b9248205fb"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "else",
+                  "id": "635.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "not ok",
+                      "id": "636.7ed872b9248205fb"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "best practice is to return exist code",
+                  "id": "637.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "to let users of other functions decide how to exit",
+                      "id": "638.7ed872b9248205fb"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "sourcing",
+              "id": "646.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "when you want to load variables from other programs",
+                  "id": "647.7ed872b9248205fb"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "$?",
+              "id": "643.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "what is this?",
+                  "id": "645.7ed872b9248205fb"
+                },
+                "2": {
+                  "title": "expands to the exit status of the most recently executed foreground pipeline.",
+                  "id": "648.7ed872b9248205fb"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Parsing arguments",
+              "id": "650.7ed872b9248205fb"
+            },
+            "11": {
+              "title": "getopt",
+              "id": "652.7ed872b9248205fb"
+            },
+            "12": {
+              "title": "-ne",
+              "id": "656.2fd3bd5b1303d234",
+              "ideas": {
+                "1": {
+                  "title": "and other dash commands",
+                  "id": "658.2fd3bd5b1303d234"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 594,
+          "ideas": {
+            "1": {
+              "title": "Bash Scripting tutorial",
+              "id": 595,
+              "ideas": {
+                "1": {
+                  "title": "https://bluepenguinlist.com/2016/11/04/bash-scripting-tutorial/",
+                  "id": 596
+                }
+              }
+            },
+            "2": {
+              "title": "Third Party",
+              "id": "599.7ed872b9248205fb",
+              "ideas": {
+                "1": {
+                  "title": "jq",
+                  "id": "600.7ed872b9248205fb",
+                  "ideas": {
+                    "1": {
+                      "title": "json command line parser",
+                      "id": "601.7ed872b9248205fb"
+                    },
+                    "2": {
+                      "title": "https://stedolan.github.io/jq/",
+                      "id": "602.7ed872b9248205fb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Bash"
+}

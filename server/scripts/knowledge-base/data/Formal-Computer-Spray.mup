@@ -1,0 +1,158 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Spray",
+      "attr": {
+        "style": {},
+        "position": [
+          -23,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 176,
+          "ideas": {
+            "5": {
+              "title": "built on top of Akka",
+              "id": 275
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-23": {
+          "title": "Pain Point",
+          "id": 279,
+          "attr": {
+            "position": [
+              33.5,
+              216,
+              4
+            ],
+            "style": {
+              "background": "#800000"
+            },
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "What's WEB_INF folder",
+              "id": 281
+            }
+          }
+        },
+        "-11.5": {
+          "title": "Resources",
+          "id": 234,
+          "ideas": {
+            "1": {
+              "title": "https://github.com/spray/spray",
+              "id": 262,
+              "ideas": {
+                "1": {
+                  "title": "Rest framework",
+                  "id": 263
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "akka",
+              "id": 254,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Build powerful concurrent &amp; distributed applications</div><div>more easily. Akka is a toolkit and runtime</div><div>for building highly concurrent,</div><div>distributed, and resilient</div><div>message-driven applications</div><div>on the JVM.</div>"
+                },
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "http://akka.io/",
+                  "id": 276
+                }
+              }
+            },
+            "3": {
+              "title": "http://doc.akka.io/docs/akka/2.4.1/AkkaScala.pdf?_ga=1.26298109.1307030342.1450652163",
+              "id": 277,
+              "ideas": {
+                "1": {
+                  "title": "akka docs in PDF",
+                  "id": 278
+                }
+              }
+            },
+            "4": {
+              "title": "https://github.com/lihaoyi/scala.rx#basic-usage",
+              "id": 282,
+              "ideas": {
+                "1": {
+                  "title": "scala rx, potential use?",
+                  "id": 283
+                }
+              }
+            },
+            "5": {
+              "title": "Third Party",
+              "id": 248,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "8": {
+                  "title": "https://github.com/squeryl/squeryl",
+                  "id": 270,
+                  "ideas": {
+                    "1": {
+                      "title": "Sqeyrel, sql wrapper",
+                      "id": 271
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "https://github.com/adamw/macwire",
+                  "id": 272,
+                  "ideas": {
+                    "1": {
+                      "title": "Di in Scala",
+                      "id": 273
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              113,
+              -1,
+              10
+            ]
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Spray"
+}

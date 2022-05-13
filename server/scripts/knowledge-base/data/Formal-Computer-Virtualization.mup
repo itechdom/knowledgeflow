@@ -1,0 +1,38 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Virtualization",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "Hypervisor",
+              "id": 3,
+              "ideas": {
+                "1": {
+                  "title": "Runs multiple VMs",
+                  "id": 4
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 5
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Virtualization"
+}

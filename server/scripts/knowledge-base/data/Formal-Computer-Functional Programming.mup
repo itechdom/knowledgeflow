@@ -1,0 +1,596 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Functional Programming",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "0.5": {
+          "title": "Concepts",
+          "id": 144,
+          "ideas": {
+            "1": {
+              "title": "Monads",
+              "id": 411,
+              "ideas": {
+                "1": {
+                  "title": "http://stackoverflow.com/questions/44965/what-is-a-monad",
+                  "id": 413,
+                  "ideas": {
+                    "1": {
+                      "title": "Good explanation of monads ",
+                      "id": 414
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Chaining operators, iterator pattern",
+                  "id": 415
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Pattern Matching",
+              "id": 459,
+              "ideas": {
+                "2": {
+                  "title": "Resources",
+                  "id": 461,
+                  "ideas": {
+                    "1": {
+                      "title": "http://stackoverflow.com/questions/2502354/what-is-pattern-matching-in-functional-languages",
+                      "id": 460,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "good answer from stackoverflow comparing it to JS",
+                      "id": 462,
+                      "ideas": {},
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Pattern matching is sort of like overloaded methods on steroids. The simplest case would be the same roughly the same as what you seen in java, arguments are a list of types with names. The correct method to call is based on the arguments passed in, and it doubles as an assignment of those arguments to the parameter name.</p><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Patterns just go a step further, and can destructure the arguments passed in even further. It can also potentially use guards to actually match based on the value of the argument. To demonstrate, I'll pretend like JavaScript had pattern matching.</p><pre style=\"margin-bottom: 1em; padding: 5px; border-width: 0px; border-style: initial; border-color: initial; width: auto; max-height: 600px; overflow: auto; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); word-wrap: normal; color: rgb(36, 39, 41);\"><code style=\"margin: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); white-space: inherit;\">function foo(a,b,c){} //no pattern matching, just a list of arguments\n\nfunction foo2([a],{prop1:d,prop2:e}, 35){} //invented pattern matching in JavaScript\n</code></pre><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">In foo2, it expects a to be an array, it breaks apart the second argument, expecting an object with two props (prop1,prop2) and assigns the values of those properties to variables d and e, and then expects the third argument to be 35.</p><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Unlike in JavaScript, languages with pattern matching usually allow multiple functions with the same name, but different patterns. In this way it is like method overloading. I'll give an example in erlang:</p><pre style=\"margin-bottom: 1em; padding: 5px; border-width: 0px; border-style: initial; border-color: initial; width: auto; max-height: 600px; overflow: auto; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); word-wrap: normal; color: rgb(36, 39, 41);\"><code style=\"margin: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); white-space: inherit;\">fibo(0) -&gt; 0 ;\nfibo(1) -&gt; 1 ;\nfibo(N) when N &gt; 0 -&gt; fibo(N-1) + fibo(N-2) .\n</code></pre><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Blur your eyes a little and you can imagine this in javascript. Something like this maybe:</p><pre style=\"margin-bottom: 1em; padding: 5px; border-width: 0px; border-style: initial; border-color: initial; width: auto; max-height: 600px; overflow: auto; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); word-wrap: normal; color: rgb(36, 39, 41);\"><code style=\"margin: 0px; font-size: 13px; font-family: Consolas, Menlo, Monaco, &quot;Lucida Console&quot;, &quot;Liberation Mono&quot;, &quot;DejaVu Sans Mono&quot;, &quot;Bitstream Vera Sans Mono&quot;, &quot;Courier New&quot;, monospace, sans-serif; background-color: rgb(239, 240, 241); white-space: inherit;\">function fibo(0){return 0;}\nfunction fibo(1){return 1;}\nfunction fibo(N) when N &gt; 0 {return fibo(N-1) + fibo(N-2);}\n</code></pre><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Point being that when you call fibo, the implementation it uses is based on the arguments, but where Java is limited to types as the only means of overloading, pattern matching can do more.</p><p style=\"margin-bottom: 1em; padding: 0px; border: 0px; font-size: 15px; clear: both; color: rgb(36, 39, 41); font-family: Arial, &quot;Helvetica Neue&quot;, Helvetica, sans-serif;\">Beyond function overloading as shown here, the same principle can be applied other places, such as case statements or destructuring assingments.&nbsp;<a href=\"https://developer.mozilla.org/en/New_in_JavaScript_1.7#Destructuring_assignment\" rel=\"nofollow noreferrer\" style=\"margin: 0px; padding: 0px; border: 0px; color: rgb(0, 89, 153); cursor: pointer;\">JavaScript even has this in 1.7</a>.</p>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "You evaluate a function a certain way based on type",
+                  "id": 474
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Reduction",
+              "id": 465,
+              "ideas": {
+                "1": {
+                  "title": "we have to reduce all expressions until we reach a canonical form",
+                  "id": 466,
+                  "ideas": {
+                    "1": {
+                      "title": "or normal form",
+                      "id": 470,
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "when you can't further evaluate it",
+                      "id": 473
+                    }
+                  }
+                },
+                "2": {
+                  "title": "there are things that can't be reduced to their simple form",
+                  "id": 468,
+                  "ideas": {
+                    "1": {
+                      "title": "Such as 1/0",
+                      "id": 469
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Currying",
+              "id": "481.32aa5dc181046886",
+              "attr": {
+                "note": {
+                  "index": 24,
+                  "text": "const sum = (a, b) => a + b\n\nconst curriedSum = (a) => (b) => a + b\n\ncurriedSum(40)(2) // 42.\n\nconst add2 = curriedSum(2) // (b) => 2 + b\n\nadd2(10) // 12"
+                }
+              }
+            },
+            "9": {
+              "title": "Composition",
+              "id": "482.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 25,
+                  "text": "const compose = (f, g) => (a) => f(g(a)) // Definition\nconst floorAndToString = compose((val) => val.toString(), Math.floor) // Usage\nfloorAndToString(121.212121) // '121'"
+                }
+              }
+            },
+            "10": {
+              "title": "Continuation",
+              "id": "483.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 26,
+                  "text": "Continuation\n\nAt any given point in a program, the part of the code that's yet to be executed is known as a continuation.\n\nconst printAsString = (num) => console.log(`Given ${num}`)\n\nconst addOneAndContinue = (num, cc) => {\n  const result = num + 1\n  cc(result)\n}\n\naddOneAndContinue(2, printAsString) // 'Given 3'"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "kinda like middleware",
+                  "id": "484.5392f07292031f65"
+                }
+              }
+            },
+            "11": {
+              "title": "Idempotent",
+              "id": "486.5392f07292031f65",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 28,
+                  "text": "A function is idempotent if reapplying it to its result does not produce a different result.\n\nf(f(x)) ≍ f(x)\nMath.abs(Math.abs(10))\nsort(sort(sort([2, 1])))"
+                }
+              }
+            },
+            "12": {
+              "title": "Point Free Style",
+              "id": "488.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 29,
+                  "text": "Writing functions where the definition does not explicitly identify the arguments used. This style usually requires currying or other Higher-Order functions. A.K.A Tacit programming.\n\n// Given\nconst map = (fn) => (list) => list.map(fn)\nconst add = (a) => (b) => a + b\n\n// Then\n\n// Not points-free - `numbers` is an explicit argument\nconst incrementAll = (numbers) => map(add(1))(numbers)\n\n// Points-free - The list is an implicit argument\nconst incrementAll2 = map(add(1))\nincrementAll identifies and uses the parameter numbers, so it is not points-free. incrementAll2 is written just by combining functions and values, making no mention of its arguments. It is points-free.\n\nPoints-free function definitions look just like normal assignments without function or =>."
+                }
+              }
+            },
+            "13": {
+              "title": "Predicate",
+              "id": "489.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 30,
+                  "text": "A predicate is a function that returns true or false for a given value. A common use of a predicate is as the callback for array filter.\n\nconst predicate = (a) => a > 2\n\n;[1, 2, 3, 4].filter(predicate) // [3, 4]"
+                }
+              }
+            },
+            "14": {
+              "title": "Contracts",
+              "id": "490.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 31,
+                  "text": "A contract specifies the obligations and guarantees of the behavior from a function or expression at runtime. This acts as a set of rules that are expected from the input and output of a function or expression, and errors are generally reported whenever a contract is violated.\n\n// Define our contract : int -> int\nconst contract = (input) => {\n  if (typeof input === 'number') return true\n  throw new Error('Contract violated: expected int -> int')\n}\n\nconst addOne = (num) => contract(num) && num + 1\n\naddOne(2) // 3\naddOne('some string') // Contract violated: expected int -> int"
+                }
+              }
+            },
+            "15": {
+              "title": "Categories",
+              "id": "491.5392f07292031f65",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 32,
+                  "text": "Objects with associated functions that adhere to certain rules. E.g. Monoid"
+                }
+              }
+            },
+            "16": {
+              "title": "Functor",
+              "id": "493.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 33,
+                  "text": "An object that implements a map function which, while running over each value in the object to produce a new object, adheres to two rules:\n\nPreserves identity\n\nobject.map(x => x) ≍ object\nComposable\n\nobject.map(compose(f, g)) ≍ object.map(g).map(f)\n(f, g be arbitrary functions)\n\nA common functor in JavaScript is Array since it abides to the two functor rules:\n\n[1, 2, 3].map(x => x) // = [1, 2, 3]\nand\n\nconst f = x => x + 1\nconst g = x => x * 2\n\n;[1, 2, 3].map(x => f(g(x))) // = [3, 5, 7]\n;[1, 2, 3].map(g).map(f)     // = [3, 5, 7]"
+                }
+              }
+            },
+            "17": {
+              "title": "Pointed Functor",
+              "id": "494.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 34,
+                  "text": "An object with an of function that puts any single value into it.\n\nES2015 adds Array.of making arrays a pointed functor.\n\nArray.of(1) // [1]"
+                }
+              }
+            },
+            "18": {
+              "title": "Lift",
+              "id": "495.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 35,
+                  "text": "Lifting is when you take a value and put it into an object like a functor. If you lift a function into an Applicative Functor then you can make it work on values that are also in that functor.\n\nSome implementations have a function called lift, or liftA2 to make it easier to run functions on functors.\n\nconst liftA2 = (f) => (a, b) => a.map(f).ap(b) // note it's `ap` and not `map`.\n\nconst mult = a => b => a * b\n\nconst liftedMult = liftA2(mult) // this function now works on functors like array\n\nliftedMult([1, 2], [3]) // [3, 6]\nliftA2((a, b) => a + b)([1, 2], [3, 4]) // [4, 5, 5, 6]\nLifting a one-argument function and applying it does the same thing as map.\n\nconst increment = (x) => x + 1\n\nlift(increment)([2]) // [3]\n;[2].map(increment) // [3]"
+                }
+              }
+            },
+            "19": {
+              "title": "Referential Transparancy",
+              "id": "496.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 36,
+                  "text": "An expression that can be replaced with its value without changing the behavior of the program is said to be referentially transparent.\n\nSay we have function greet:\n\nconst greet = () => 'Hello World!'\nAny invocation of greet() can be replaced with Hello World! hence greet is referentially transparent."
+                }
+              }
+            },
+            "20": {
+              "title": "Equational Reasoning",
+              "id": "497.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 37,
+                  "text": "Equational Reasoning\n\nWhen an application is composed of expressions and devoid of side effects, truths about the system can be derived from the parts."
+                }
+              }
+            },
+            "21": {
+              "title": "Lambda Calculus",
+              "id": "498.5392f07292031f65",
+              "ideas": {
+                "1": {
+                  "title": "Lambda CalculusA branch of mathematics that uses functions to create a universal model of computation.",
+                  "id": "499.5392f07292031f65"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "22": {
+              "title": "Lazy Evaluation",
+              "id": "500.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 37,
+                  "text": "Lazy evaluation is a call-by-need evaluation mechanism that delays the evaluation of an expression until its value is needed. In functional languages, this allows for structures like infinite lists, which would not normally be available in an imperative language where the sequencing of commands is significant.\n\nconst rand = function*() {\n  while (1 < 2) {\n    yield Math.random()\n  }\n}\nconst randIter = rand()\nrandIter.next() // Each execution gives a random value, expression is evaluated on need."
+                }
+              }
+            },
+            "23": {
+              "title": "Monoid",
+              "id": "501.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 38,
+                  "text": "An object with a function that \"combines\" that object with another of the same type.\n\nOne simple monoid is the addition of numbers:\n\n1 + 1 // 2\nIn this case number is the object and + is the function.\n\nAn \"identity\" value must also exist that when combined with a value doesn't change it.\n\nThe identity value for addition is 0.\n\n1 + 0 // 1\nIt's also required that the grouping of operations will not affect the result (associativity):\n\n1 + (2 + 3) === (1 + 2) + 3 // true\nArray concatenation also forms a monoid:\n\n;[1, 2].concat([3, 4]) // [1, 2, 3, 4]\nThe identity value is empty array []\n\n;[1, 2].concat([]) // [1, 2]\nIf identity and compose functions are provided, functions themselves form a monoid:\n\nconst identity = (a) => a\nconst compose = (f, g) => (x) => f(g(x))\nfoo is any function that takes one argument.\n\ncompose(foo, identity) ≍ compose(identity, foo) ≍ foo"
+                }
+              }
+            },
+            "24": {
+              "title": "Monad",
+              "id": "502.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 39,
+                  "text": "A monad is an object with of and chain functions. chain is like map except it un-nests the resulting nested object.\n\n// Implementation\nArray.prototype.chain = function (f) {\n  return this.reduce((acc, it) => acc.concat(f(it)), [])\n}\n\n// Usage\n;Array.of('cat,dog', 'fish,bird').chain((a) => a.split(',')) // ['cat', 'dog', 'fish', 'bird']\n\n// Contrast to map\n;Array.of('cat,dog', 'fish,bird').map((a) => a.split(',')) // [['cat', 'dog'], ['fish', 'bird']]\n//notice how 'cat,dog' are attached to each other, chain is unnesting them\nof is also known as return in other functional languages. chain is also known as flatmap and bind in other languages."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "called flatmap",
+                  "id": "503.5392f07292031f65"
+                }
+              }
+            },
+            "25": {
+              "title": "Comond",
+              "id": "504.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 41,
+                  "text": "An object that has extract and extend functions.\n\nconst CoIdentity = (v) => ({\n  val: v,\n  extract () {\n    return this.val\n  },\n  extend (f) {\n    return CoIdentity(f(this))\n  }\n})\nExtract takes a value out of a functor.\n\nCoIdentity(1).extract() // 1\nExtend runs a function on the comonad. The function should return the same type as the comonad.\n\nCoIdentity(1).extend((co) => co.extract() + 1) // CoIdentity(2)"
+                }
+              }
+            },
+            "26": {
+              "title": "Applicative Functor",
+              "id": "505.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 42,
+                  "text": "An applicative functor is an object with an ap function. ap applies a function in the object to a value in another object of the same type.\n\n// Implementation\nArray.prototype.ap = function (xs) {\n  return this.reduce((acc, f) => acc.concat(xs.map(f)), [])\n}\n\n// Example usage\n;[(a) => a + 1].ap([1]) // [2]\nThis is useful if you have two objects and you want to apply a binary function to their contents.\n\n// Arrays that you want to combine\nconst arg1 = [1, 3]\nconst arg2 = [4, 5]\n\n// combining function - must be curried for this to work\nconst add = (x) => (y) => x + y\n\nconst partiallyAppliedAdds = [add].ap(arg1) // [(y) => 1 + y, (y) => 3 + y]\nThis gives you an array of functions that you can call ap on to get the result:\n\npartiallyAppliedAdds.ap(arg2) // [5, 6, 7, 8]"
+                }
+              }
+            },
+            "27": {
+              "title": "Morphism",
+              "id": "506.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 43,
+                  "text": "A transformation function.\n\nEndomorphism\n\nA function where the input type is the same as the output.\n\n// uppercase :: String -> String\nconst uppercase = (str) => str.toUpperCase()\n\n// decrement :: Number -> Number\nconst decrement = (x) => x - 1\nIsomorphism\n\nA pair of transformations between 2 types of objects that is structural in nature and no data is lost.\n\nFor example, 2D coordinates could be stored as an array [2,3] or object {x: 2, y: 3}.\n\n// Providing functions to convert in both directions makes them isomorphic.\nconst pairToCoords = (pair) => ({x: pair[0], y: pair[1]})\n\nconst coordsToPair = (coords) => [coords.x, coords.y]\n\ncoordsToPair(pairToCoords([1, 2])) // [1, 2]\n\npairToCoords(coordsToPair({x: 1, y: 2})) // {x: 1, y: 2}"
+                }
+              }
+            },
+            "28": {
+              "title": "Setiod",
+              "id": "507.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 44,
+                  "text": "An object that has an equals function which can be used to compare other objects of the same type.\n\nMake array a setoid:\n\nArray.prototype.equals = (arr) => {\n  const len = this.length\n  if (len !== arr.length) {\n    return false\n  }\n  for (let i = 0; i < len; i++) {\n    if (this[i] !== arr[i]) {\n      return false\n    }\n  }\n  return true\n}\n\n;[1, 2].equals([1, 2]) // true\n;[1, 2].equals([0]) // false"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "An Object that has an equals function which can be used to compare other objects of the same type",
+                  "id": "509.5392f07292031f65"
+                }
+              }
+            },
+            "29": {
+              "title": "Semi Group",
+              "id": "510.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 46,
+                  "text": "An object that has a concat function that combines it with another object of the same type.\n\n;[1].concat([2]) // [1, 2]"
+                }
+              }
+            },
+            "30": {
+              "title": "Foldable",
+              "id": "511.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 47,
+                  "text": "An object that has a reduce function that can transform that object into some other type.\n\nconst sum = (list) => list.reduce((acc, val) => acc + val, 0)\nsum([1, 2, 3]) // 6"
+                }
+              }
+            },
+            "31": {
+              "title": "Traversable",
+              "id": "512.5392f07292031f65"
+            },
+            "32": {
+              "title": "Type Signature",
+              "id": "513.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 49,
+                  "text": "Often functions in JavaScript will include comments that indicate the types of their arguments and return values.\n\nThere's quite a bit of variance across the community but they often follow the following patterns:\n\n// functionName :: firstArgType -> secondArgType -> returnType\n\n// add :: Number -> Number -> Number\nconst add = (x) => (y) => x + y\n\n// increment :: Number -> Number\nconst increment = (x) => x + 1\nIf a function accepts another function as an argument it is wrapped in parentheses.\n\n// call :: (a -> b) -> a -> b\nconst call = (f) => (x) => f(x)\nThe letters a, b, c, d are used to signify that the argument can be of any type. The following version of map takes a function that transforms a value of some type a into another type b, an array of values of type a, and returns an array of values of type b.\n\n// map :: (a -> b) -> [a] -> [b]\nconst map = (f) => (list) => list.map(f)"
+                }
+              }
+            },
+            "33": {
+              "title": "Union Type",
+              "id": "514.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 50,
+                  "text": "A union type is the combination of two types together into another one.\n\nJS doesn't have static types but let's say we invent a type NumOrString which is a sum of String and Number.\n\nThe + operator in JS works on strings and numbers so we can use this new type to describe its inputs and outputs:\n\n// add :: (NumOrString, NumOrString) -> NumOrString\nconst add = (a, b) => a + b\n\nadd(1, 2) // Returns number 3\nadd('Foo', 2) // Returns string \"Foo2\"\nadd('Foo', 'Bar') // Returns string \"FooBar\"\nUnion types are also known as algebraic types, tagged unions, or sum types.\n\nThere's a couple libraries in JS which help with defining and using union types."
+                }
+              }
+            },
+            "34": {
+              "title": "Product Type",
+              "id": "515.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 51,
+                  "text": "A product type combines types together in a way you're probably more familiar with:\n\n// point :: (Number, Number) -> {x: Number, y: Number}\nconst point = (x, y) => ({x: x, y: y})\nIt's called a product because the total possible values of the data structure is the product of the different values.\n\nSee also Set theory."
+                }
+              }
+            },
+            "35": {
+              "title": "Option",
+              "id": "516.5392f07292031f65",
+              "attr": {
+                "note": {
+                  "index": 52,
+                  "text": "Option is a union type with two cases often called Some and None.\n\nOption is useful for composing functions that might not return a value.\n\n// Naive definition\n\nconst Some = (v) => ({\n  val: v,\n  map (f) {\n    return Some(f(this.val))\n  },\n  chain (f) {\n    return f(this.val)\n  }\n})\n\nconst None = () => ({\n  map (f) {\n    return this\n  },\n  chain (f) {\n    return this\n  }\n})\n\n// maybeProp :: (String, {a}) -> Option a\nconst maybeProp = (key, obj) => typeof obj[key] === 'undefined' ? None() : Some(obj[key])\nUse chain to sequence functions that return Options\n\n// getItem :: Cart -> Option CartItem\nconst getItem = (cart) => maybeProp('item', cart)\n\n// getPrice :: Item -> Option Number\nconst getPrice = (item) => maybeProp('price', item)\n\n// getNestedPrice :: cart -> Option a\nconst getNestedPrice = (cart) => getItem(obj).chain(getPrice)\n\ngetNestedPrice({}) // None()\ngetNestedPrice({item: {foo: 1}}) // None()\ngetNestedPrice({item: {price: 9.99}}) // Some(9.99)\nOption is also known as Maybe. Some is sometimes called Just. None is sometimes called Nothing."
+                }
+              }
+            },
+            "36": {
+              "title": "Higher Order Functions",
+              "id": "517.44e4aa88e4e2f245",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "518.44e4aa88e4e2f245",
+                  "ideas": {
+                    "1": {
+                      "title": "Higher order functions in all languages",
+                      "id": "519.44e4aa88e4e2f245",
+                      "ideas": {
+                        "1": {
+                          "title": "http://rosettacode.org/wiki/Higher-order_functions#JavaScript",
+                          "id": "520.44e4aa88e4e2f245"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "37": {
+              "title": "Data Types",
+              "id": "521.44e4aa88e4e2f245",
+              "ideas": {
+                "1": {
+                  "title": "Tuple",
+                  "id": "522.44e4aa88e4e2f245"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              223,
+              7,
+              3
+            ],
+            "collapsed": true
+          }
+        },
+        "-5.5": {
+          "title": "Resources",
+          "id": 407,
+          "ideas": {
+            "1": {
+              "title": "Functional Programming Jargon",
+              "id": 419,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/hemanth/functional-programming-jargon/blob/master/readme.md#point-free-style",
+                  "id": 420
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Learn functional programming through a game",
+              "id": 421,
+              "ideas": {
+                "1": {
+                  "title": "http://david-peter.de/cube-composer/",
+                  "id": 422
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "FP jargon",
+              "id": 423,
+              "ideas": {
+                "2": {
+                  "title": "https://github.com/hemanth/functional-programming-jargon/blob/master/readme.md",
+                  "id": 453,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Algebric types",
+              "id": 454,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/fantasyland/fantasy-land#monoid",
+                  "id": 455
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Functional programming in other languages",
+              "id": 456,
+              "ideas": {
+                "1": {
+                  "title": "JS",
+                  "id": 457,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrTW1YeHdCOXpkOGc",
+                      "id": 458
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Introduction to functional programming",
+              "id": 463,
+              "ideas": {
+                "1": {
+                  "title": "https://usi-pl.github.io/lc/sp-2015/doc/Bird_Wadler.%20Introduction%20to%20Functional%20Programming.1ed.pdf",
+                  "id": 464
+                },
+                "2": {
+                  "title": "stopped at page 11",
+                  "id": 475
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "List of functional programming languages",
+              "id": 361,
+              "ideas": {
+                "2": {
+                  "title": "https://en.wikipedia.org/wiki/Category:Functional_languages",
+                  "id": 416
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Functional Programming"
+}

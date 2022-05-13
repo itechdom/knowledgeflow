@@ -1,0 +1,58 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Lisp",
+      "attr": {
+        "style": {},
+        "position": [
+          -18,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 176,
+          "ideas": {
+            "1": {
+              "title": "(Function args)",
+              "id": "239.18d8.14289e57e-b158.8f0ae563a"
+            },
+            "2": {
+              "title": "Locally scoped variables ",
+              "id": "240.18d8.14289e57e-b158.8f0ae563a",
+              "ideas": {
+                "1": {
+                  "title": "(let (a 6) (b7))",
+                  "id": "241.18d8.14289e57e-b158.8f0ae563a"
+                },
+                "2": {
+                  "title": "a and b are locally scoped",
+                  "id": "242.18d8.14289e57e-b158.8f0ae563a"
+                }
+              }
+            }
+          }
+        },
+        "-12": {
+          "title": "Resources",
+          "id": 237,
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Common_Lisp",
+              "id": "238.18d8.14289e57e-b158.8f0ae563a"
+            }
+          },
+          "attr": {}
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Lisp"
+}

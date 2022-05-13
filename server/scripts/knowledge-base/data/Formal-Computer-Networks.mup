@@ -1,0 +1,1151 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Computer Networks",
+      "attr": {
+        "style": {},
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">A&nbsp;<b>computer network</b>&nbsp;or&nbsp;<b>data network</b>&nbsp;is a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Telecommunications_network\" title=\"Telecommunications network\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">telecommunications network</a>&nbsp;which allows&nbsp;<a href=\"https://en.wikipedia.org/wiki/Computer\" title=\"Computer\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">computers</a>&nbsp;to exchange&nbsp;<a href=\"https://en.wikipedia.org/wiki/Data_(computing)\" title=\"Data (computing)\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">data</a>. In computer networks, networked computing devices exchange data with each other along&nbsp;<a href=\"https://en.wikipedia.org/wiki/Data_link\" title=\"Data link\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">network links</a>&nbsp;(data connections). The connections between nodes are established using either&nbsp;<a href=\"https://en.wikipedia.org/wiki/Transmission_line\" title=\"Transmission line\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">cable media</a>&nbsp;or&nbsp;<a href=\"https://en.wikipedia.org/wiki/Wireless_network\" title=\"Wireless network\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">wireless media</a>. The best-known computer network is the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Internet\" title=\"Internet\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Internet</a>.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">Network computer devices that originate, route and terminate the data are called&nbsp;<a href=\"https://en.wikipedia.org/wiki/Node_(networking)\" title=\"Node (networking)\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">network nodes</a>.<sup id=\"cite_ref-1\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/Computer_network#cite_note-1\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\" target=\"_blank\">[1]</a></sup>&nbsp;Nodes can include&nbsp;<a href=\"https://en.wikipedia.org/wiki/Host_(network)\" title=\"Host (network)\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">hosts</a>&nbsp;such as&nbsp;<a href=\"https://en.wikipedia.org/wiki/Personal_computer\" title=\"Personal computer\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">personal computers</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Phone\" title=\"Phone\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">phones</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Server_(computing)\" title=\"Server (computing)\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">servers</a>&nbsp;as well as&nbsp;<a href=\"https://en.wikipedia.org/wiki/Networking_hardware\" title=\"Networking hardware\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">networking hardware</a>. Two such devices can be said to be networked together when one device is able to exchange information with the other device, whether or not they have a direct connection to each other.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">Computer networks differ in the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Transmission_media\" title=\"Transmission media\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">transmission media</a>&nbsp;used to carry their signals, the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Communications_protocol\" title=\"Communications protocol\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">communications protocols</a>&nbsp;to organize network traffic, the network's size,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Network_topology\" title=\"Network topology\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">topology</a>&nbsp;and organizational intent. In most cases, communications protocols are&nbsp;<a href=\"https://en.wikipedia.org/wiki/Communications_protocol#Layering\" title=\"Communications protocol\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">layered</a>&nbsp;on (i.e. work using) other more specific or more general communications protocols, except for the&nbsp;<i>physical layer</i>&nbsp;that directly deals with the transmission media.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">Computer networks support&nbsp;<a href=\"https://en.wikipedia.org/wiki/Application_software\" title=\"Application software\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">applications</a>&nbsp;such as access to the&nbsp;<a href=\"https://en.wikipedia.org/wiki/World_Wide_Web\" title=\"World Wide Web\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">World Wide Web</a>, shared use of&nbsp;<a href=\"https://en.wikipedia.org/wiki/File_server\" title=\"File server\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">application and storage servers</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Printing\" title=\"Printing\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">printers</a>, and fax machines, and use of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Email\" title=\"Email\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">email</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Instant_messaging\" title=\"Instant messaging\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">instant messaging</a>&nbsp;applications.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\"><br></p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\"><br></p>"
+        },
+        "position": [
+          -67,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "2": {
+          "title": "Concepts",
+          "id": "99.51a6b71e38edad08",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "100.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "A type of a telecommunication network",
+                  "id": "101.51a6b71e38edad08"
+                },
+                "2": {
+                  "title": "Devices are connected via \"Data Links\"",
+                  "id": "102.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "the medium can be cable or wireless",
+                      "id": "103.51a6b71e38edad08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Two devices are connected if they can exchange data with each other",
+                  "id": "113.51a6b71e38edad08"
+                },
+                "5": {
+                  "title": "Computer networks Vary according to ",
+                  "id": "114.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": " the transmission medium used to carry their signals,",
+                      "id": "115.51a6b71e38edad08"
+                    },
+                    "2": {
+                      "title": "communications protocols to organize network traffic",
+                      "id": "116.51a6b71e38edad08"
+                    },
+                    "3": {
+                      "title": "the network's size",
+                      "id": "117.51a6b71e38edad08"
+                    },
+                    "4": {
+                      "title": "topology",
+                      "id": "118.51a6b71e38edad08"
+                    },
+                    "5": {
+                      "title": "organizational intent.",
+                      "id": "119.51a6b71e38edad08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Related Fields",
+                  "id": "134.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "Electrical Engineering",
+                      "id": "135.51a6b71e38edad08"
+                    },
+                    "2": {
+                      "title": "Computer Engineering",
+                      "id": "136.51a6b71e38edad08"
+                    },
+                    "3": {
+                      "title": "Information Technology",
+                      "id": "137.51a6b71e38edad08"
+                    },
+                    "4": {
+                      "title": "Telecommunications",
+                      "id": "138.51a6b71e38edad08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Communication Protocols",
+              "id": "120.51a6b71e38edad08",
+              "ideas": {},
+              "attr": {}
+            },
+            "3": {
+              "title": "History",
+              "id": "122.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "1964",
+                  "id": "124.51a6b71e38edad08",
+                  "attr": {
+                    "note": {
+                      "index": 103,
+                      "text": "The same year, at Massachusetts Institute of Technology, a research group supported by General Electric and Bell Labs used a computer to route and manage telephone connections."
+                    }
+                  }
+                },
+                "2": {
+                  "title": "1960s",
+                  "id": "125.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "they discovered how to send signals using packets",
+                      "id": "126.51a6b71e38edad08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Network Packets",
+              "id": "127.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Network_packet",
+                  "id": "128.51a6b71e38edad08"
+                },
+                "2": {
+                  "title": "Instead of data transimtted as a continuous bit stream",
+                  "id": "141.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "we send data in chunks",
+                      "id": "142.51a6b71e38edad08"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Once all the packets arrive at a destination, they are assembled",
+                  "id": "143.51a6b71e38edad08"
+                },
+                "4": {
+                  "title": "Consists of",
+                  "id": "144.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "User Data",
+                      "id": "145.51a6b71e38edad08"
+                    },
+                    "2": {
+                      "title": "Control Information",
+                      "id": "146.51a6b71e38edad08",
+                      "attr": {
+                        "note": {
+                          "index": 116,
+                          "text": "The control information provides data the network needs to deliver the user data, for example: source and destination network addresses, error detection codes, and sequencing information. Typically, control information is found in packet headers and trailers, with payload data in between."
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Advantage of Packets networks",
+                  "id": "147.51a6b71e38edad08",
+                  "attr": {
+                    "note": {
+                      "index": 117,
+                      "text": "In packet networks, the data is formatted into packets that are sent through the network to their destination. Once the packets arrive they are reassembled into their original message. With packets, the bandwidth of the transmission medium can be better shared among users than if the network were circuit switched. When one user is not sending packets, the link can be filled with packets from other users, and so the cost can be shared, with relatively little interference, provided the link isn't overused."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "You share the same links for multiple packets, which gives you the advantage if one user isn't sending any data, you can still use their links",
+                      "id": "148.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "sort of like a shared economy",
+                          "id": "149.51a6b71e38edad08"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "there is a disadvantage which is you could overwhelm the link itself",
+                      "id": "150.51a6b71e38edad08"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 106,
+                  "text": "A network packet is a formatted unit of data carried by a packet-switched network. Computer communications links that do not support packets, such as traditional point-to-point telecommunications links, simply transmit data as a bit stream. When data is formatted into packets, packet switching is possible and the bandwidth of the communication medium can be better shared among users than with circuit switching.\n\nA packet consists of control information and user data, which is also known as the payload. Control information provides data for delivering the payload, for example: source and destination network addresses, error detection codes, and sequencing information. Typically, control information is found in packet headers and trailers."
+                },
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Ethernet",
+              "id": "132.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Ethernet",
+                  "id": "133.51a6b71e38edad08"
+                },
+                "2": {
+                  "title": "includes LAN, MAN and WAN",
+                  "id": "289.40b2.e4bb7d27d-baf8.6c84632ca"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Packet Switched Network",
+              "id": "139.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Packet_switching",
+                  "id": "140.51a6b71e38edad08"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Network Nodes",
+              "id": "104.51a6b71e38edad08",
+              "ideas": {
+                "4": {
+                  "title": "Tasks",
+                  "id": "108.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "Origintates",
+                      "id": "105.51a6b71e38edad08",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Routes",
+                      "id": "106.51a6b71e38edad08",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Terminates",
+                      "id": "107.51a6b71e38edad08",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Nodes can include hosts such as",
+                  "id": "110.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "Computers",
+                      "id": "111.51a6b71e38edad08"
+                    },
+                    "2": {
+                      "title": "Specific networking hardware",
+                      "id": "112.51a6b71e38edad08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Basic Building Blocks/ OSI",
+                  "id": "152.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "Network Interfaces",
+                      "id": "154.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "NIC",
+                          "id": "155.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "can access low level data coming in from the network",
+                              "id": "156.51a6b71e38edad08"
+                            },
+                            "2": {
+                              "title": "it responds to network traffic addressed to the \"computer as a whole or the NIC itself?\" ",
+                              "id": "157.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "in Ethernet networks you have a MAC address which uniqly identifies your computer plus the NIC manufacturer",
+                          "id": "158.51a6b71e38edad08"
+                        }
+                      },
+                      "attr": {
+                        "position": [
+                          163,
+                          -161,
+                          1
+                        ],
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Operating at layer 2 of the OSI model",
+                      "id": "172.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "Repeaters and Hubs",
+                          "id": "159.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "regenerates the signal with more strength ",
+                              "id": "160.51a6b71e38edad08"
+                            },
+                            "2": {
+                              "title": "Almost extinct with switches",
+                              "id": "161.51a6b71e38edad08",
+                              "ideas": {
+                                "1": {
+                                  "title": "but still used with long distance networking",
+                                  "id": "162.51a6b71e38edad08",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "such as undersea",
+                                      "id": "163.51a6b71e38edad08"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "A repeater with multiple ports is known as a hub",
+                              "id": "164.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Bridges",
+                          "id": "165.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "just like the name, it connects two different network segments together",
+                              "id": "166.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Switches",
+                          "id": "168.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "amazing definition",
+                              "id": "169.51a6b71e38edad08",
+                              "attr": {
+                                "note": {
+                                  "index": 145,
+                                  "text": "A network switch is a device that forwards and filters OSI layer 2 datagrams (frames) between ports based on the destination MAC address in each frame"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "so it examines the data coming to it and sends it only to the destination",
+                              "id": "170.51a6b71e38edad08",
+                              "ideas": {
+                                "1": {
+                                  "title": "instead of repeating traffic always like a hub",
+                                  "id": "171.51a6b71e38edad08"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "Packet Switched networks are names because of Switches + Packets",
+                              "id": "244.37e794e0a21ded33"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "position": [
+                          157,
+                          -89,
+                          2
+                        ],
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Operating at layer 3 of the OSI model",
+                      "id": "173.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "Routers",
+                          "id": "174.51a6b71e38edad08",
+                          "attr": {
+                            "note": {
+                              "index": 150,
+                              "text": "A router is an internetworking device that forwards packets between networks by processing the routing information included in the packet or datagram (Internet protocol information from layer 3)."
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "forwards packets based on the internet protocol information from layer 3",
+                              "id": "175.51a6b71e38edad08"
+                            },
+                            "2": {
+                              "title": "the routing is processed using a routing table",
+                              "id": "176.51a6b71e38edad08"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Modems",
+                      "id": "177.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "Modulator/Demodulator",
+                          "id": "178.51a6b71e38edad08"
+                        },
+                        "2": {
+                          "title": "used to connect network nodes not designed to run on a digital traffic ",
+                          "id": "180.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "like the telephone lines",
+                              "id": "181.51a6b71e38edad08"
+                            },
+                            "2": {
+                              "title": "Used heavily in DSLs",
+                              "id": "182.51a6b71e38edad08",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Digital_subscriber_line",
+                                  "id": "183.51a6b71e38edad08",
+                                  "ideas": {}
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "8": {
+                      "title": "Firewalls",
+                      "id": "185.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "secutiry machanism",
+                          "id": "186.51a6b71e38edad08"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "9": {
+                      "title": "Layer 5",
+                      "id": "254.37e794e0a21ded33",
+                      "ideas": {
+                        "1": {
+                          "title": "Session Layer",
+                          "id": "255.37e794e0a21ded33"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "10": {
+                      "title": "Layer 6",
+                      "id": "256.37e794e0a21ded33",
+                      "ideas": {
+                        "1": {
+                          "title": "Presentation Layer",
+                          "id": "257.37e794e0a21ded33"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "11": {
+                      "title": "Layer 7",
+                      "id": "258.37e794e0a21ded33",
+                      "ideas": {
+                        "1": {
+                          "title": "Application Layer",
+                          "id": "259.37e794e0a21ded33"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6.5": {
+                      "title": "Layer 4",
+                      "id": "245.37e794e0a21ded33",
+                      "ideas": {
+                        "1": {
+                          "title": "Transport Layer",
+                          "id": "246.37e794e0a21ded33",
+                          "ideas": {
+                            "1": {
+                              "title": "TCP/IP",
+                              "id": "247.37e794e0a21ded33",
+                              "ideas": {
+                                "1": {
+                                  "title": "Usually Built on top of IP",
+                                  "id": "248.37e794e0a21ded33"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "Responsible for",
+                              "id": "249.37e794e0a21ded33",
+                              "ideas": {
+                                "1": {
+                                  "title": "Segmentation/Desegmentation",
+                                  "id": "250.37e794e0a21ded33"
+                                },
+                                "2": {
+                                  "title": "Provides Acknowledgment to the sender",
+                                  "id": "251.37e794e0a21ded33"
+                                },
+                                "3": {
+                                  "title": "Error Control",
+                                  "id": "252.37e794e0a21ded33"
+                                },
+                                "4": {
+                                  "title": "Packetizing",
+                                  "id": "253.37e794e0a21ded33"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 130,
+                      "text": "Apart from any physical transmission medium there may be, networks comprise additional basic system building blocks, such as network interface controller (NICs), repeaters, hubs, bridges, switches, routers, modems, and firewalls."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Network Segment",
+              "id": "167.51a6b71e38edad08"
+            },
+            "10": {
+              "title": "Network Structure",
+              "id": "187.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "Toplogies",
+                  "id": "188.51a6b71e38edad08",
+                  "ideas": {
+                    "2": {
+                      "title": "Types",
+                      "id": "191.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "Bus",
+                          "id": "193.51a6b71e38edad08"
+                        },
+                        "2": {
+                          "title": "Star",
+                          "id": "194.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "all nodes are connected to a special central node",
+                              "id": "200.51a6b71e38edad08"
+                            },
+                            "2": {
+                              "title": "Typical in a wireless LAN",
+                              "id": "201.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Ring",
+                          "id": "196.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "Each node is connected to its right and left so that you can connect to any node by going either way",
+                              "id": "202.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Mesh",
+                          "id": "197.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "Each node is connected to an arbitrary number of nodes such as there is there will always exist a traversal from one node to the next",
+                              "id": "203.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Fully Connected",
+                          "id": "198.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "All Nodes are connected to each other",
+                              "id": "204.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "Tree",
+                          "id": "199.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "Nodes are arranged hirarichaly ",
+                              "id": "205.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "Overlay Networks",
+                          "id": "206.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "Building a network on top of another in a way that hides the underlying physical topology",
+                              "id": "207.51a6b71e38edad08",
+                              "ideas": {
+                                "1": {
+                                  "title": "examples ",
+                                  "id": "208.51a6b71e38edad08",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "the internet initially was built on top of telephone",
+                                      "id": "209.51a6b71e38edad08"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "Akami technologies",
+                              "id": "210.51a6b71e38edad08",
+                              "attr": {
+                                "note": {
+                                  "index": 181,
+                                  "text": "For example, Akamai Technologies manages an overlay network that provides reliable, efficient content delivery (a kind of multicast). Academic research includes end system multicast,[12] resilient routing and quality of service studies, among others."
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "192.51a6b71e38edad08",
+                      "ideas": {
+                        "1": {
+                          "title": "an image of different network topologies ",
+                          "id": "189.51a6b71e38edad08",
+                          "ideas": {
+                            "1": {
+                              "title": "https://commons.wikimedia.org/wiki/File:NetworkTopologies.svg#/media/File:NetworkTopologies.svg",
+                              "id": "190.51a6b71e38edad08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Routing",
+              "id": "236.51a6b71e38edad08",
+              "attr": {
+                "note": {
+                  "index": 206,
+                  "text": "Routing is the process of selecting network paths to carry network traffic. Routing is performed for many kinds of networks, including circuit switching networks and packet switched networks.\n\nIn packet switched networks, routing directs packet forwarding (the transit of logically addressed network packets from their source toward their ultimate destination) through intermediate nodes. Intermediate nodes are typically network hardware devices such as routers, bridges, gateways, firewalls, or switches. General-purpose computers can also forward packets and perform routing, though they are not specialized hardware and may suffer from limited performance. The routing process usually directs forwarding on the basis of routing tables, which maintain a record of the routes to various network destinations. Thus, constructing routing tables, which are held in the router's memory, is very important for efficient routing.\n\nThere are usually multiple routes that can be taken, and to choose between them, different elements can be considered to decide which routes get installed into the routing table, such as (sorted by priority):\n\nPrefix-Length: where longer subnet masks are preferred (independent if it is within a routing protocol or over different routing protocol)\nMetric: where a lower metric/cost is preferred (only valid within one and the same routing protocol)\nAdministrative distance: where a lower distance is preferred (only valid between different routing protocols)\nMost routing algorithms use only one network path at a time. Multipath routing techniques enable the use of multiple alternative paths.\n\nRouting, in a more narrow sense of the term, is often contrasted with bridging in its assumption that network addresses are structured and that similar addresses imply proximity within the network. Structured addresses allow a single routing table entry to represent the route to a group of devices. In large networks, structured addressing (routing, in the narrow sense) outperforms unstructured addressing (bridging). Routing has become the dominant form of addressing on the Internet. Bridging is still widely used within localized environments."
+                }
+              }
+            },
+            "12": {
+              "title": "Network Services",
+              "id": "237.51a6b71e38edad08",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 207,
+                  "text": "Network service[edit]\nNetwork services are applications hosted by servers on a computer network, to provide some functionality for members or users of the network, or to help the network itself to operate.\n\nThe World Wide Web, E-mail,[23] printing and network file sharing are examples of well-known network services. Network services such as DNS (Domain Name System) give names for IP and MAC addresses (people remember names like “nm.lan” better than numbers like “210.121.67.18”),[24] and DHCP to ensure that the equipment on the network has a valid IP address.[25]\n\nServices are usually based on a service protocol that defines the format and sequencing of messages between clients and servers of that network service."
+                }
+              }
+            },
+            "14": {
+              "title": "Sockets",
+              "id": "262.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "Implementation",
+                  "id": "260.21046f593e780ed",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "3": {
+                  "title": "You make a call to the socket() system routine. It returns the socket descriptor, and you communicate through it using the specialized send() and recv()",
+                  "id": "264.21046f593e780ed"
+                },
+                "4": {
+                  "title": "Types",
+                  "id": "268.21046f593e780ed",
+                  "ideas": {
+                    "1": {
+                      "title": "Internet Sockets",
+                      "id": "269.21046f593e780ed",
+                      "ideas": {
+                        "1": {
+                          "title": "Stream Sockets",
+                          "id": "270.21046f593e780ed",
+                          "ideas": {
+                            "1": {
+                              "title": "Telnet",
+                              "id": "272.21046f593e780ed"
+                            },
+                            "2": {
+                              "title": "Data Arrives in Order",
+                              "id": "273.21046f593e780ed"
+                            },
+                            "3": {
+                              "title": "They Use TCP",
+                              "id": "274.21046f593e780ed"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Datagram Sockets",
+                          "id": "271.21046f593e780ed",
+                          "ideas": {
+                            "1": {
+                              "title": "UDP",
+                              "id": "275.21046f593e780ed",
+                              "ideas": {
+                                "1": {
+                                  "title": "Multiplayer Games",
+                                  "id": "276.21046f593e780ed"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 121,
+                  "text": "a way to speak to other programs using standard Unix file descriptors."
+                },
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Loop Back Address",
+              "id": "277.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "IPV6",
+                  "id": "278.21046f593e780ed",
+                  "ideas": {
+                    "1": {
+                      "title": "::1",
+                      "id": "279.21046f593e780ed"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "IPV4",
+                  "id": "281.21046f593e780ed",
+                  "ideas": {
+                    "1": {
+                      "title": "127.0.0.1",
+                      "id": "282.21046f593e780ed"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "netmask",
+              "id": "283.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "The network portion of the IP address is described by something called the netmask, which you bitwise-AND with the IP address to get the network number out of it. The netmask usually looks something like 255.255.255.0. (E.g. with that netmask, if your IP is 192.0.2.12, then your network is 192.0.2.12 AND 255.255.255.0 which gives 192.0.2.0.)",
+                  "id": "284.21046f593e780ed"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Figuring out the host and network portion of an IP address",
+              "id": "285.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "https://stackoverflow.com/questions/8651246/determine-the-network-and-host-id-portion-of-an-ip-address",
+                  "id": "286.21046f593e780ed"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Default Gateway",
+              "id": "287.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "Each computer knows only one router which is the default gateway",
+                  "id": "288.21046f593e780ed"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "Things I don't know",
+              "id": "290.40b2.e4bb7d27d-baf8.6c84632ca",
+              "ideas": {
+                "1": {
+                  "title": "subnet mask",
+                  "id": "291.40b2.e4bb7d27d-baf8.6c84632ca",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Subnetwork",
+                      "id": "295.40b2.e4bb7d27d-baf8.6c84632ca"
+                    },
+                    "2": {
+                      "title": "the task of subdividing a network is called subnetting",
+                      "id": "296.40b2.e4bb7d27d-baf8.6c84632ca"
+                    },
+                    "3": {
+                      "title": "it seems to be for IPV4 networks only",
+                      "id": "297.40b2.e4bb7d27d-baf8.6c84632ca",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "so we have two different parts to any ip address",
+                      "id": "298.40b2.e4bb7d27d-baf8.6c84632ca",
+                      "ideas": {
+                        "1": {
+                          "title": "let's say 192.52.1.0",
+                          "id": "299.40b2.e4bb7d27d-baf8.6c84632ca",
+                          "ideas": {
+                            "1": {
+                              "title": "from 192 to the end of number 52",
+                              "id": "300.40b2.e4bb7d27d-baf8.6c84632ca",
+                              "ideas": {
+                                "1": {
+                                  "title": "is the routing prefix",
+                                  "id": "301.40b2.e4bb7d27d-baf8.6c84632ca"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "the rest seems to be related to the network you are in",
+                              "id": "302.40b2.e4bb7d27d-baf8.6c84632ca"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "nice conversion table between hex, binary and decimal",
+                      "id": "305.40b2.e4bb7d27d-baf8.6c84632ca",
+                      "ideas": {
+                        "1": {
+                          "title": "https://ascii.cl/conversion.htm",
+                          "id": "306.40b2.e4bb7d27d-baf8.6c84632ca"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "think of a mask showing you where the network prefix is",
+                      "id": "307.40b2.e4bb7d27d-baf8.6c84632ca",
+                      "ideas": {
+                        "1": {
+                          "title": "so if my address is 192.1.156.0",
+                          "id": "308.40b2.e4bb7d27d-baf8.6c84632ca",
+                          "ideas": {
+                            "1": {
+                              "title": "then 192.1 is the network prefix",
+                              "id": "309.40b2.e4bb7d27d-baf8.6c84632ca"
+                            },
+                            "2": {
+                              "title": "and the subnet mask would be 255.255.255.0",
+                              "id": "310.40b2.e4bb7d27d-baf8.6c84632ca",
+                              "ideas": {
+                                "1": {
+                                  "title": "the ending zero here is just where the subnet is",
+                                  "id": "312.40b2.e4bb7d27d-baf8.6c84632ca"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Mac address",
+                  "id": "292.40b2.e4bb7d27d-baf8.6c84632ca",
+                  "ideas": {
+                    "1": {
+                      "title": "indentifies your computer within a network",
+                      "id": "293.40b2.e4bb7d27d-baf8.6c84632ca"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "DHCP",
+                  "id": "303.40b2.e4bb7d27d-baf8.6c84632ca",
+                  "ideas": {
+                    "1": {
+                      "title": "dynamic host configuration protocol",
+                      "id": "304.40b2.e4bb7d27d-baf8.6c84632ca"
+                    },
+                    "2": {
+                      "title": "a server connected to the ISP that manages the assignment of IPs",
+                      "id": "313.40b2.e4bb7d27d-baf8.6c84632ca"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Computer_network",
+              "id": 6,
+              "ideas": {},
+              "attr": {}
+            },
+            "3": {
+              "title": "http://beej.us/guide/bgnet/output/html/multipage/index.html",
+              "id": 97,
+              "ideas": {
+                "1": {
+                  "title": "beej's guide to network programming : using sockets",
+                  "id": 98
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Programs",
+              "id": "241.51a6b71e38edad08",
+              "ideas": {
+                "1": {
+                  "title": "Wireshark",
+                  "id": "242.51a6b71e38edad08",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.wireshark.org/",
+                      "id": "243.51a6b71e38edad08"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Link to external Mindmaps",
+              "id": "265.21046f593e780ed",
+              "ideas": {
+                "1": {
+                  "title": "C",
+                  "id": "266.21046f593e780ed",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIreEtZZGtCbFpyelE/view?usp=sharing",
+                      "id": "267.21046f593e780ed"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Computer Networks"
+}

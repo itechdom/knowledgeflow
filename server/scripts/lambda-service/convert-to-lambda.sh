@@ -1,0 +1,1 @@
+node ./scripts/lambda-service/convert-to-lambda.js 

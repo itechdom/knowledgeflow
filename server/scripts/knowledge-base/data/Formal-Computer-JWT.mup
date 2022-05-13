@@ -1,0 +1,204 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "JWT",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.9000c273b658a6a",
+          "ideas": {
+            "1": {
+              "title": "Industry Standard",
+              "id": "3.9000c273b658a6a"
+            },
+            "2": {
+              "title": "JSON Web Token",
+              "id": "6.9000c273b658a6a"
+            },
+            "3": {
+              "title": "It asserts a number of claims",
+              "id": "7.9000c273b658a6a",
+              "ideas": {
+                "1": {
+                  "title": "which is actually sent by the server",
+                  "id": "8.9000c273b658a6a"
+                },
+                "2": {
+                  "title": "the client can verify it",
+                  "id": "9.9000c273b658a6a"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Three components",
+              "id": "10.9000c273b658a6a",
+              "ideas": {
+                "1": {
+                  "title": "Header",
+                  "id": "11.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "identifies which algorithm is used to generate the signature",
+                      "id": "14.9000c273b658a6a"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Payload",
+                  "id": "12.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "contains the claims that we wish to make:",
+                      "id": "15.9000c273b658a6a"
+                    },
+                    "2": {
+                      "title": "iat",
+                      "id": "16.9000c273b658a6a",
+                      "ideas": {
+                        "1": {
+                          "title": "issued at",
+                          "id": "17.9000c273b658a6a"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Does this mean that we can specify the username and password",
+                      "id": "24.9000c273b658a6a"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Signature",
+                  "id": "13.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "this is how signature is generated",
+                      "id": "18.9000c273b658a6a",
+                      "attr": {
+                        "note": {
+                          "index": 16,
+                          "text": "key           = 'secretkey'\nunsignedToken = encodeBase64(header) + '.' + encodeBase64(payload)\nsignature     = HMAC-SHA256(key, unsignedToken)"
+                        }
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "it encodes the header and payload and concats them by a preriod",
+                          "id": "19.9000c273b658a6a"
+                        },
+                        "2": {
+                          "title": "signature is encoded using the algorithm specified in the header",
+                          "id": "20.9000c273b658a6a"
+                        },
+                        "3": {
+                          "title": "lastly, we join them all together in a form of a token",
+                          "id": "21.9000c273b658a6a",
+                          "attr": {
+                            "note": {
+                              "index": 19,
+                              "text": "token = encodeBase64(header) + '.' + encodeBase64(payload) + '.' + encodeBase64(signature) # token is now: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Token Based Authentication",
+              "id": "29.9000c273b658a6a"
+            },
+            "6": {
+              "title": "How does it work",
+              "id": "30.9000c273b658a6a",
+              "ideas": {
+                "1": {
+                  "title": "A user send in the username and password",
+                  "id": "31.9000c273b658a6a"
+                },
+                "2": {
+                  "title": "You log them in",
+                  "id": "32.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "and return a token",
+                      "id": "34.9000c273b658a6a"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "4.9000c273b658a6a",
+          "ideas": {
+            "1": {
+              "title": "https://jwt.io/",
+              "id": "5.9000c273b658a6a"
+            },
+            "2": {
+              "title": "Wikipedia",
+              "id": "22.9000c273b658a6a"
+            },
+            "3": {
+              "title": "Third party",
+              "id": "23.9000c273b658a6a",
+              "ideas": {
+                "2": {
+                  "title": "node-jsonwebtoken",
+                  "id": "26.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/auth0/node-jsonwebtoken",
+                      "id": "25.9000c273b658a6a",
+                      "attr": {}
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "Tutorials",
+              "id": "27.9000c273b658a6a",
+              "ideas": {
+                "1": {
+                  "title": "https://scotch.io/tutorials/authenticate-a-node-js-api-with-json-web-tokens",
+                  "id": "28.9000c273b658a6a"
+                },
+                "2": {
+                  "title": "Nice example of using json web token",
+                  "id": "35.9000c273b658a6a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/scotch-io/node-token-authentication",
+                      "id": "36.9000c273b658a6a"
+                    },
+                    "2": {
+                      "title": "I need to encrypt username and password in the db",
+                      "id": "37.9000c273b658a6a"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "JWT"
+}

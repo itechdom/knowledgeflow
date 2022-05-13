@@ -1,0 +1,177 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Philosophy",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.895631f43d10e35",
+          "ideas": {
+            "1": {
+              "title": "Explains the human condition",
+              "id": "4.895631f43d10e35"
+            },
+            "2": {
+              "title": "Branches",
+              "id": "5.895631f43d10e35",
+              "ideas": {
+                "1": {
+                  "title": "Epistomology",
+                  "id": "6.895631f43d10e35",
+                  "ideas": {
+                    "1": {
+                      "title": "The study of knowledge",
+                      "id": "7.895631f43d10e35"
+                    }
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "Value Theory",
+              "id": "8.895631f43d10e35",
+              "ideas": {
+                "1": {
+                  "title": "Asthetics",
+                  "id": "9.895631f43d10e35"
+                },
+                "2": {
+                  "title": "Ethics",
+                  "id": "10.895631f43d10e35"
+                }
+              }
+            },
+            "4": {
+              "title": "Logic",
+              "id": "11.895631f43d10e35",
+              "ideas": {
+                "1": {
+                  "title": "Inductive Argument",
+                  "id": "14.895631f43d10e35",
+                  "ideas": {
+                    "1": {
+                      "title": "you have premises and a conclusion",
+                      "id": "15.895631f43d10e35"
+                    },
+                    "2": {
+                      "title": "not certain",
+                      "id": "16.895631f43d10e35",
+                      "ideas": {
+                        "1": {
+                          "title": "probability",
+                          "id": "17.895631f43d10e35"
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Deductive",
+                  "id": "18.895631f43d10e35"
+                },
+                "3": {
+                  "title": "Abduction",
+                  "id": "19.895631f43d10e35",
+                  "ideas": {
+                    "1": {
+                      "title": "Inference to the best explanation",
+                      "id": "20.895631f43d10e35"
+                    },
+                    "2": {
+                      "title": "No premise or conclusion",
+                      "id": "21.895631f43d10e35"
+                    }
+                  }
+                }
+              }
+            },
+            "5": {
+              "title": "Famous Philosophers",
+              "id": "22.895631f43d10e35",
+              "ideas": {
+                "1": {
+                  "title": "Plato",
+                  "id": "24.895631f43d10e35"
+                },
+                "2": {
+                  "title": "Aristotle",
+                  "id": "25.895631f43d10e35"
+                },
+                "3": {
+                  "title": "Aquinas",
+                  "id": "26.5928b0e00a0c6e41",
+                  "ideas": {
+                    "1": {
+                      "title": "Arguments for god",
+                      "id": "27.5928b0e00a0c6e41",
+                      "ideas": {
+                        "1": {
+                          "title": "Causation",
+                          "id": "28.5928b0e00a0c6e41",
+                          "ideas": {
+                            "1": {
+                              "title": "The original causer is god",
+                              "id": "29.5928b0e00a0c6e41"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Being",
+                          "id": "30.5928b0e00a0c6e41",
+                          "ideas": {
+                            "1": {
+                              "title": "Contingent",
+                              "id": "31.5928b0e00a0c6e41",
+                              "ideas": {
+                                "1": {
+                                  "title": "Us",
+                                  "id": "34.5928b0e00a0c6e41"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "Non-Contingent",
+                              "id": "32.5928b0e00a0c6e41",
+                              "ideas": {
+                                "1": {
+                                  "title": "God",
+                                  "id": "35.5928b0e00a0c6e41"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.895631f43d10e35",
+          "ideas": {
+            "1": {
+              "title": "Youtube course",
+              "id": "12.895631f43d10e35",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=1A_CAkYt3GY&list=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR&index=1",
+                  "id": "13.895631f43d10e35"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Philosophy"
+}

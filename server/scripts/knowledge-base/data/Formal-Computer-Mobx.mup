@@ -1,0 +1,349 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Mobx",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.4bde4f20d12abbc8",
+          "ideas": {
+            "1": {
+              "title": "Decorators",
+              "id": "9.69e4cf01261b3ee1",
+              "ideas": {
+                "1": {
+                  "title": "@computed",
+                  "id": "10.69e4cf01261b3ee1",
+                  "ideas": {
+                    "1": {
+                      "title": "derive new state",
+                      "id": "11.69e4cf01261b3ee1"
+                    },
+                    "2": {
+                      "title": "Setters ",
+                      "id": "14.69e4cf01261b3ee1",
+                      "ideas": {
+                        "1": {
+                          "title": "use them to inverse a derivation",
+                          "id": "15.69e4cf01261b3ee1"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "there is a function version that you can use",
+                      "id": "16.69e4cf01261b3ee1"
+                    },
+                    "4": {
+                      "title": "https://mobx.js.org/refguide/computed-decorator.html",
+                      "id": "17.69e4cf01261b3ee1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "@autorun",
+                  "id": "12.69e4cf01261b3ee1",
+                  "ideas": {
+                    "1": {
+                      "title": "to achieve side effects",
+                      "id": "13.69e4cf01261b3ee1"
+                    },
+                    "2": {
+                      "title": "when to use them",
+                      "id": "18.69e4cf01261b3ee1",
+                      "attr": {
+                        "note": {
+                          "index": 12,
+                          "text": "use autorun if you have a function that should run automatically but that doesn't result in a new value"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "@action",
+                  "id": "19.69e4cf01261b3ee1",
+                  "ideas": {
+                    "2": {
+                      "title": "Example",
+                      "id": "21.69e4cf01261b3ee1",
+                      "attr": {
+                        "note": {
+                          "index": 15,
+                          "text": "@action    createRandomContact() {\n        this.pendingRequestCount++;\n        superagent\n            .get('https://randomuser.me/api/')\n            .set('Accept', 'application/json')\n            .end(action(\"createRandomContact-callback\", (error, results) => {\n                if (error)\n                    console.error(error);\n                else {\n                    const data = JSON.parse(results.text).results[0];\n                    const contact = new Contact(this, data.dob, data.name, data.login.username, data.picture)\n                    contact.addTag('random-user');\n                    this.contacts.push(contact);\n                    this.pendingRequestCount--;\n                }\n            }));\n    }"
+                        }
+                      },
+                      "ideas": {}
+                    },
+                    "3": {
+                      "title": "use runinAction",
+                      "id": "23.69e4cf01261b3ee1",
+                      "ideas": {
+                        "1": {
+                          "title": "when using await",
+                          "id": "24.69e4cf01261b3ee1"
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Resources",
+                      "id": "26.69e4cf01261b3ee1",
+                      "ideas": {
+                        "1": {
+                          "title": "https://mobx.js.org/refguide/action.html",
+                          "id": "20.69e4cf01261b3ee1",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "babel plugin for deep actions",
+                          "id": "25.69e4cf01261b3ee1",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "How does it work internally",
+              "id": "27.3af06c075aea27ec",
+              "ideas": {
+                "1": {
+                  "title": "https://mobx.js.org/best/react.html",
+                  "id": "28.3af06c075aea27ec"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Best Practices",
+              "id": "33.1facea160753d72e",
+              "ideas": {
+                "1": {
+                  "title": "Seperate your Stores",
+                  "id": "34.1facea160753d72e",
+                  "ideas": {
+                    "1": {
+                      "title": "UI Store",
+                      "id": "35.1facea160753d72e",
+                      "ideas": {
+                        "1": {
+                          "title": "Anything that affects the UI",
+                          "id": "37.1facea160753d72e",
+                          "ideas": {
+                            "1": {
+                              "title": "Session Info",
+                              "id": "38.1facea160753d72e"
+                            },
+                            "2": {
+                              "title": "Visibility of certain UI elements",
+                              "id": "39.1facea160753d72e"
+                            },
+                            "3": {
+                              "title": "Language",
+                              "id": "40.1facea160753d72e"
+                            },
+                            "4": {
+                              "title": "Current theme",
+                              "id": "41.1facea160753d72e"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Domain Store",
+                      "id": "36.1facea160753d72e",
+                      "ideas": {
+                        "1": {
+                          "title": "Contains application logic",
+                          "id": "42.1facea160753d72e"
+                        },
+                        "2": {
+                          "title": "also communicates with the Server",
+                          "id": "43.1facea160753d72e"
+                        },
+                        "3": {
+                          "title": "According to Mobx website, you should have a transportLayer (communicates with the server) which is shared across multiple domain objects",
+                          "id": "44.1facea160753d72e"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Performance tips",
+              "ideas": {
+                "1": {
+                  "title": "Use Small Components as much as possible",
+                  "ideas": {
+                    "1": {
+                      "title": "Observer components will re-render everything",
+                      "id": "47.6fed2389db553abc"
+                    },
+                    "2": {
+                      "title": "Questions",
+                      "ideas": {
+                        "1": {
+                          "title": "Does this include nesting components",
+                          "id": "49.6fed2389db553abc"
+                        }
+                      },
+                      "id": "48.6fed2389db553abc"
+                    }
+                  },
+                  "id": "46.6fed2389db553abc",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "ideas": {
+                    "1": {
+                      "title": "https://mobx.js.org/best/react-performance.html",
+                      "ideas": {
+                        "1": {
+                          "title": "from Mobx",
+                          "id": "52.6fed2389db553abc"
+                        }
+                      },
+                      "id": "51.6fed2389db553abc"
+                    }
+                  },
+                  "id": "50.6fed2389db553abc",
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "45.6fed2389db553abc",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Inject and Provider",
+              "id": "53.5e4e40bd9b38d488",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "54.5e4e40bd9b38d488",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/mobxjs/mobx-react",
+                      "id": "55.5e4e40bd9b38d488"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Source Code",
+              "id": "56.173e0f0b71759a74",
+              "ideas": {
+                "1": {
+                  "title": "Invariant",
+                  "id": "57.173e0f0b71759a74",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Invariant_(computer_science)",
+                      "id": "58.173e0f0b71759a74"
+                    },
+                    "2": {
+                      "title": "Insures correctness of an object throughout its execution",
+                      "id": "59.173e0f0b71759a74"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.4bde4f20d12abbc8",
+          "ideas": {
+            "1": {
+              "title": "Mobx FiddleJS",
+              "id": "4.4bde4f20d12abbc8",
+              "ideas": {
+                "1": {
+                  "title": "https://jsfiddle.net/mweststrate/wv3yopo0/",
+                  "id": "5.4bde4f20d12abbc8"
+                }
+              }
+            },
+            "2": {
+              "title": "Main website",
+              "id": "7.69e4cf01261b3ee1",
+              "ideas": {
+                "1": {
+                  "title": "https://mobx.js.org/",
+                  "id": "8.69e4cf01261b3ee1"
+                }
+              }
+            },
+            "3": {
+              "title": "Todo Example!!!!",
+              "id": "30.3af06c075aea27ec",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/mobxjs/mobx-react-todomvc",
+                  "id": "31.3af06c075aea27ec"
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Mobx",
+  "links": []
+}

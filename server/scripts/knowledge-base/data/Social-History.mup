@@ -1,0 +1,1555 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "History",
+      "attr": {
+        "position": [
+          -28,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.6194644848461e4d",
+          "ideas": {
+            "1": {
+              "title": "13.7 billion years is the big bang",
+              "id": "14.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "first element is hydrogen",
+                  "id": "16.6194644848461e4d"
+                },
+                "2": {
+                  "title": "We got iron from stars",
+                  "id": "18.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "it's generated from a death of a star",
+                      "id": "19.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "having oxygen allowed bacteria and simple forms to form",
+                  "id": "23.6194644848461e4d"
+                },
+                "4": {
+                  "title": "they then mutliplie",
+                  "id": "24.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "forming the first reptiles that can leave the ocean",
+                      "id": "25.6194644848461e4d"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "then came the dinosaurs ",
+                  "id": "27.6194644848461e4d",
+                  "ideas": {}
+                },
+                "6": {
+                  "title": "they became extinct due to a meteor",
+                  "id": "29.6194644848461e4d"
+                },
+                "7": {
+                  "title": "this allowed mammals (because dinosaurs are reptiles) to have room to evolve",
+                  "id": "30.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "which then brought humans",
+                      "id": "31.6194644848461e4d"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  91,
+                  -155,
+                  1
+                ],
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Human Evolution",
+              "id": "32.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "we saw fire",
+                  "id": "33.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "which we used to cook",
+                      "id": "34.6194644848461e4d"
+                    },
+                    "2": {
+                      "title": "making it easy for us to consume food and gain more energy to grow our brain",
+                      "id": "35.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "discovery of horses",
+                  "id": "37.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "which originated in north america",
+                      "id": "38.6194644848461e4d",
+                      "ideas": {
+                        "1": {
+                          "title": "they actually died off",
+                          "id": "39.6194644848461e4d"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "mesopotamia",
+                  "id": "40.6194644848461e4d"
+                },
+                "4": {
+                  "title": "Discovery of seeds",
+                  "id": "41.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Wheat ",
+                      "id": "42.6194644848461e4d"
+                    },
+                    "2": {
+                      "title": "Barley",
+                      "id": "43.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "government",
+                  "id": "44.6194644848461e4d"
+                },
+                "6": {
+                  "title": "Civilizations",
+                  "id": "45.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Sumerian",
+                      "id": "46.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Human History",
+              "id": "62.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "600 BC",
+                  "id": "47.6194644848461e4d",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "2": {
+                  "title": "500 BC",
+                  "id": "49.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Persian Empire",
+                      "id": "52.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "323 BC",
+                  "id": "50.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Alexandria",
+                      "id": "55.6194644848461e4d",
+                      "ideas": {
+                        "1": {
+                          "title": "built by Alexander the great",
+                          "id": "89.49c0c056a7348db0"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Alexander the great",
+                      "id": "87.49c0c056a7348db0",
+                      "ideas": {
+                        "1": {
+                          "title": "Empire of Macedon",
+                          "id": "88.49c0c056a7348db0"
+                        },
+                        "2": {
+                          "title": "he took over greece",
+                          "id": "91.49c0c056a7348db0"
+                        },
+                        "3": {
+                          "title": "Spread around conquered till indian",
+                          "id": "92.49c0c056a7348db0"
+                        },
+                        "4": {
+                          "title": "Defeated persian empire",
+                          "id": "93.49c0c056a7348db0"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 35,
+                          "text": "Alexander III of Macedon (20/21 July 356 BC – 10/11 June 323 BC), commonly known as Alexander the Great (Greek: Ἀλέξανδρος ὁ Μέγας, Aléxandros ho Mégas Koine Greek: [a.lék.san.dros ho mé.gas]), was a king (basileus) of the Ancient Greek kingdom of Macedon[a] and a member of the Argead dynasty. He was born in Pella in 356 BC and succeeded his father Philip II to the throne at the age of twenty. He spent most of his ruling years on an unprecedented military campaign through Asia and northeast Africa, and he created one of the largest empires of the ancient world by the age of thirty, stretching from Greece to northwestern India.[1][2] He was undefeated in battle and is widely considered one of history's most successful military commanders.[3]\n\nDuring his youth, Alexander was tutored by Aristotle until age 16. After Philip's assassination in 336 BC, he succeeded his father to the throne and inherited a strong kingdom and an experienced army. Alexander was awarded the generalship of Greece and used this authority to launch his father's Panhellenic project to lead the Greeks in the conquest of Persia.[4][5] In 334 BC, he invaded the Achaemenid Empire (Persian Empire) and began a series of campaigns that lasted ten years. Following the conquest of Anatolia, Alexander broke the power of Persia in a series of decisive battles, most notably the battles of Issus and Gaugamela. He subsequently overthrew Persian King Darius III and conquered the Achaemenid Empire in its entirety.[b] At that point, his empire stretched from the Adriatic Sea to the Indus River.\n\nHe endeavored to reach the \"ends of the world and the Great Outer Sea\" and invaded India in 326 BC, winning an important victory over the Pauravas at the Battle of the Hydaspes. He eventually turned back at the demand of his homesick troops. Alexander died in Babylon in 323 BC, the city that he planned to establish as his capital, without executing a series of planned campaigns that would have begun with an invasion of Arabia. In the years following his death, a series of civil wars tore his empire apart, resulting in the establishment of several states ruled by the Diadochi, Alexander's surviving generals and heirs.\n\nAlexander's legacy includes the cultural diffusion and syncretism which his conquests engendered, such as Greco-Buddhism. He founded some twenty cities that bore his name, most notably Alexandria in Egypt. Alexander's settlement of Greek colonists and the resulting spread of Greek culture in the east resulted in a new Hellenistic civilization, aspects of which were still evident in the traditions of the Byzantine Empire in the mid-15th century AD and the presence of Greek speakers in central and far eastern Anatolia until the 1920s. Alexander became legendary as a classical hero in the mold of Achilles, and he features prominently in the history and mythic traditions of both Greek and non-Greek cultures. He became the measure against which military leaders compared themselves, and military academies throughout the world still teach his tactics.[6][c] He is often ranked among the most influential people in history.[7]"
+                        },
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "50 BC",
+                  "id": "51.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Han Empire",
+                      "id": "56.6194644848461e4d",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "Silk Road",
+                      "id": "59.6194644848461e4d",
+                      "ideas": {
+                        "1": {
+                          "title": "between 100 BC and 100 AD?",
+                          "id": "60.6194644848461e4d"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "117 AD",
+                  "id": "53.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "Roman Empire",
+                      "id": "54.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "492 AD",
+                  "id": "63.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "400 Million People",
+                      "id": "64.6194644848461e4d"
+                    },
+                    "2": {
+                      "title": "Aztecs",
+                      "id": "66.6194644848461e4d"
+                    },
+                    "3": {
+                      "title": "Mayan",
+                      "id": "67.6194644848461e4d"
+                    },
+                    "4": {
+                      "title": "Incas",
+                      "id": "68.6194644848461e4d"
+                    },
+                    "5": {
+                      "title": "Fall of Rome",
+                      "id": "69.6194644848461e4d",
+                      "ideas": {
+                        "1": {
+                          "title": "Europe is divided",
+                          "id": "70.6194644848461e4d"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Christopher Columbus ",
+                      "id": "71.6194644848461e4d",
+                      "ideas": {
+                        "1": {
+                          "title": "to guide him",
+                          "id": "72.6194644848461e4d"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "500 - 600 ad",
+                  "id": "94.49c0c056a7348db0",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/500ad.html",
+                      "id": "95.49c0c056a7348db0"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "600 - 700",
+                  "id": "97.49c0c056a7348db0",
+                  "ideas": {
+                    "1": {
+                      "title": "https://web.cn.edu/kwheeler/timeline_600.html",
+                      "id": "96.49c0c056a7348db0",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "700 - 800",
+                  "id": "98.49c0c056a7348db0",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/700ad.html",
+                      "id": "99.49c0c056a7348db0",
+                      "ideas": {}
+                    },
+                    "3": {
+                      "title": "a type of rule where you control the cost only?",
+                      "id": "102.49c0c056a7348db0",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Thalassocracy",
+                          "id": "101.49c0c056a7348db0",
+                          "ideas": {},
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "800 - 900",
+                  "id": "103.49c0c056a7348db0",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/800ad.html",
+                      "id": "113.6170576c189e629f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "900 - 1000",
+                  "id": "114.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/900ad.html",
+                      "id": "115.6170576c189e629f"
+                    },
+                    "3": {
+                      "title": "Buyed Dynasty",
+                      "id": "117.6170576c189e629f",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Buyid_dynasty",
+                          "id": "116.6170576c189e629f",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "1000 - 1100",
+                  "id": "118.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/1000ad.html",
+                      "id": "119.6170576c189e629f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "14": {
+                  "title": "1100 - 1200",
+                  "id": "120.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/1100ad.html",
+                      "id": "121.6170576c189e629f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "15": {
+                  "title": "1200 - 1300",
+                  "id": "122.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "1232, first known use of rockets",
+                      "id": "123.6170576c189e629f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "16": {
+                  "title": "1300 - 1400",
+                  "id": "124.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.historycentral.com/dates/1300ad.html",
+                      "id": "125.6170576c189e629f"
+                    },
+                    "2": {
+                      "title": "1352, the black plague",
+                      "id": "126.6170576c189e629f"
+                    },
+                    "3": {
+                      "title": "Portugal independence ",
+                      "id": "128.6170576c189e629f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "17": {
+                  "title": "1400 - 1500",
+                  "id": "127.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "1400 - 1500",
+                      "id": "132.6170576c189e629f",
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.historycentral.com/dates/1400ad.html",
+                          "id": "129.6170576c189e629f",
+                          "attr": {}
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "1450 - 1500",
+                      "id": "130.6170576c189e629f",
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.historycentral.com/dates/1450ad.html",
+                          "id": "131.6170576c189e629f"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "18": {
+                  "title": "1500 - 1600",
+                  "id": "133.6170576c189e629f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.fsmitha.com/time/ce16.htm",
+                      "id": "134.6170576c189e629f"
+                    },
+                    "2": {
+                      "title": "https://en.wikipedia.org/wiki/Akbar",
+                      "id": "135.6170576c189e629f"
+                    },
+                    "3": {
+                      "title": "Jalalu'din muhammad akbar",
+                      "id": "136.6170576c189e629f",
+                      "ideas": {},
+                      "attr": {
+                        "note": {
+                          "index": 87,
+                          "text": "1568  Akbar is expanding his empire in India, and it will be reported that he has killed more than 30,000 Hindu peasants following his conquest of Chitod. Akbar is keeping as subordinates some local rulers, who are allowed to keep their own armies. At his palace, Akbar begins his day with prayer, and at dawn he steps onto his balcony and shows himself to his subjects who gather below, awed by his success and power. Akbar describes himself as father to his subjects. Drawing from Sufi philosophy he is described as having the attributes of the perfect, or universal, man and a microcosm of the universe. At court his kingship is described as a special emanation from God."
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Lord Nabounaga",
+                      "id": "137.6170576c189e629f",
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.fsmitha.com/time/ce16-7.htm",
+                          "id": "138.6170576c189e629f"
+                        },
+                        "2": {
+                          "title": "Toyotomi Hideyoshi ",
+                          "id": "145.380f.5db1e5c7c-b34b.63f7ce634",
+                          "ideas": {
+                            "1": {
+                              "title": "Succeeds Him",
+                              "id": "146.380f.5db1e5c7c-b34b.63f7ce634"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Tokugawa Ieyasu.",
+                          "id": "151.380f.5db1e5c7c-b34b.63f7ce634"
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "1600 \n Queen Elizabeth of England charters the British East India Company to compete with the Dutch, who control the trade in nutmeg from the Banda Islands.",
+                      "id": "139.6170576c189e629f"
+                    },
+                    "6": {
+                      "title": "Draught Animals?",
+                      "id": "143.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "7": {
+                      "title": "Eighty Year war in Netherlands",
+                      "id": "144.380f.5db1e5c7c-b34b.63f7ce634"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "19": {
+                  "title": "1600 - 1700",
+                  "id": "147.380f.5db1e5c7c-b34b.63f7ce634",
+                  "ideas": {
+                    "1": {
+                      "title": "Shah Abbas of Iran drives the Portuguese from Bahrain.",
+                      "id": "148.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "2": {
+                      "title": "1605  A plot by extremist Catholics to blow up the Britain's Parliament fails. The perpetrators are hanged.",
+                      "id": "149.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "4": {
+                      "title": "Thirty Year's war",
+                      "id": "152.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "5": {
+                      "title": "Manchus in China",
+                      "id": "153.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "6": {
+                      "title": "Queen Nzinga is at war with the Portuguese. Thousands of slave soldiers have deserted to her, but she suffers military setbacks.",
+                      "id": "154.380f.5db1e5c7c-b34b.63f7ce634"
+                    },
+                    "16": {
+                      "title": "http://www.fsmitha.com/time/ce17-2.htm",
+                      "id": "150.380f.5db1e5c7c-b34b.63f7ce634",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "20": {
+                  "title": "1700 - 1800",
+                  "id": "155.8939.6a683ab11-e736.f2df9c925",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.fsmitha.com/time/ce18.htm",
+                      "id": "156.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "2": {
+                      "title": "Quakers",
+                      "id": "157.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "3": {
+                      "title": "Queen Anne's War",
+                      "id": "158.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "4": {
+                      "title": "Habsbugh Holy Roman Empire",
+                      "id": "159.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "5": {
+                      "title": "Mohammad Nader",
+                      "id": "160.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "6": {
+                      "title": "Roman Empire",
+                      "id": "161.d70a.59ddef855-750e.1841c33c6",
+                      "ideas": {
+                        "1": {
+                          "title": "Habsburgh",
+                          "id": "162.d70a.59ddef855-750e.1841c33c6",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/House_of_Habsburg",
+                              "id": "164.d70a.59ddef855-750e.1841c33c6"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Prussia",
+                      "id": "165.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "8": {
+                      "title": "Peru",
+                      "id": "166.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 113,
+                          "text": "1742  In Peru, a mestizo wanted for murder has fled to a forested area on the eastern slope of the Andes Mountains, and there he persuades local people he is descended from Inca chiefs. He takes the title Atahualpa Apu-Inca and claims he has been sent by Gods to drive the Spaniards from South America. He creates an Indian army from several tribes and in coming years is successful in repelling incursions by colonial authorities."
+                        }
+                      }
+                    },
+                    "9": {
+                      "title": " Jean Jacques Rousseau",
+                      "id": "167.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "10": {
+                      "title": "The seven year war",
+                      "id": "168.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 115,
+                          "text": "1763  The Seven Years' War ends. Britain, Spain and France sign the Treaty of Paris and Austria and Prussia sign the Peace of Hubertusburg in February. Austria gains nothing. France loses possessions in the Americas and cedes to Spain the huge territory of Louisiana, including New Orleans. France agrees to pull out of India, and it cedes its colony by the Senegal River to the British. Spain acquires Cuba and the Philippines and gives up Florida, which goes to Britain."
+                        }
+                      }
+                    },
+                    "11": {
+                      "title": "Fort Pitt",
+                      "id": "169.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 116,
+                          "text": "1763  With the Seven Years' War, Britain has acquired territory from the French in North America's Great Lakes region. By April many tribes in the area are fed up with the policies of Britain's General Jeffrey Amherst begin to attack British forts and the settlements of colonists, to be called Pontiac's War. (Chief Pontiac of the Ottawa tribe is but one player.) At Fort Pitt, British officers attempt to infect the Indians with smallpox using blankets that had been exposed to the virus. In October, a royal proclamation by King George III attempts to stabilize the region by it forbidding settlers from moving beyond the Appalachian Mountains. This will anger colonial land speculators."
+                        }
+                      }
+                    },
+                    "12": {
+                      "title": "Saint Louis",
+                      "id": "170.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 117,
+                          "text": "1764  A French trading company establishes a trading post on the Mississippi River, to be known as St. Louis."
+                        }
+                      }
+                    },
+                    "13": {
+                      "title": "Boston Tea Party",
+                      "id": "171.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 118,
+                          "text": "1773  Tea selling businessmen in Boston are upset because the British East India Company has been given the right to sell tea directly to the colonists and at a cheaper price. The business men have begun a boycott of the East India Company's tea along the Atlantic coast. They disguise themselves as Indians and throw 342 chests of tea into Boston harbor – to be known as the Boston Tea Party."
+                        }
+                      }
+                    },
+                    "14": {
+                      "title": "Oxygen",
+                      "id": "172.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 119,
+                          "text": "1774  An English chemist, Joseph Priestly, independently discovers oxygen."
+                        }
+                      }
+                    },
+                    "15": {
+                      "title": "Famine in Japan",
+                      "id": "173.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 120,
+                          "text": "1782  In Japan unusually bad weather damages crops. In many areas high taxes have left farmers without reserves of rice. There is famine. People forage for roots, eat cats and dogs and cannibalism occurs."
+                        }
+                      }
+                    },
+                    "16": {
+                      "title": "1785 \n Napoleon Bonaparte becomes a lieutenant in the French artillery.",
+                      "id": "174.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "17": {
+                      "title": "constitutional monarch",
+                      "id": "175.d70a.59ddef855-750e.1841c33c6"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "21": {
+                  "title": "1800 - 1900",
+                  "id": "176.d70a.59ddef855-750e.1841c33c6",
+                  "ideas": {
+                    "2": {
+                      "title": "Anglican Church ",
+                      "id": "178.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "3": {
+                      "title": "Austria and Holy Roman Empire Claim",
+                      "id": "179.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "4": {
+                      "title": "1802  The Ottoman Turks, trying to maintain empire, are fighting the Saud family and its Sunni Wahhabi allies. In Mesopotamia the Wahhabis capture the Shiite holy city of Karbala. In Arabia they capture Mecca.",
+                      "id": "180.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "5": {
+                      "title": "1803  President Jefferson and others support an investment of $15 million for the Louisiana Territory, which Napoleon is willing to sell for cash for his war efforts.",
+                      "id": "181.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "6": {
+                      "title": "1803  The Wahhabis do not view the Shia as Muslims. A Shia assassinates the conqueror Abdul Aziz of the House of Saud.",
+                      "id": "182.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "7": {
+                      "title": "Maratha Empire",
+                      "id": "184.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "8": {
+                      "title": "1807  With help from the French, Muhammad Ali Pasha drives the British out of Egypt (a part of the Ottoman Empire).",
+                      "id": "185.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "9": {
+                      "title": "1808 \n Spain's authority in its American colonies declines. Armed uprisings occurred from Mexico to Argentina. Without Spain in control, the British are able to do more business in Latin America, rescuing Britain from Napoleon's economic boycott.",
+                      "id": "186.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "10": {
+                      "title": "1809 \n Russia defeats Sweden. Sweden loses Finland, which becomes an autonomous Grand Duchy within Russia's empire. Returning to the Hawaiian Islands from California and hoping for trade, Russians build a fort at Honolulu and try to establish themselves on the island of Kauai. They ignore Hawaiian customs and are driven out.",
+                      "id": "187.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "11": {
+                      "title": "1810  The ruler of Kauai cedes his island to Kamehameha. Kamehameha is now ruler of all of the Hawaiian Islands. In accordance with Hawaiian tradition he is considered divine and commoners prostrate themselves before him. ",
+                      "id": "188.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "12": {
+                      "title": "1811",
+                      "id": "189.8939.6a683ab11-e736.f2df9c925",
+                      "ideas": {
+                        "1": {
+                          "title": "Beginning of independence of Latin American Countries",
+                          "id": "190.8939.6a683ab11-e736.f2df9c925"
+                        },
+                        "2": {
+                          "title": "In Egypt, Viceroy Muhammad Ali Pasha exterminates Mamluk warlords. He invites them to a banquet and has them slaughtered.",
+                          "id": "194.8939.6a683ab11-e736.f2df9c925",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "14": {
+                      "title": "1816 \n The British return to the Dutch their empire in Indonesia.",
+                      "id": "192.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "15": {
+                      "title": "Third Angle Martha War",
+                      "id": "193.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "17": {
+                      "title": "1821",
+                      "id": "196.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 140,
+                          "text": "Michael Faraday, son of a blacksmith, has overcome the conceit of aristocrats and, as a scientist, has been promoted in Britain's Royal Institution. His interest in a unified force in nature and work in electro-magnetism produces the foundation for electric motors and contributes to what will be \"field theory\" in modern physics, which includes its most basic formula: E=MC2."
+                        }
+                      }
+                    },
+                    "18": {
+                      "title": "1825",
+                      "id": "197.8939.6a683ab11-e736.f2df9c925",
+                      "ideas": {},
+                      "attr": {
+                        "note": {
+                          "index": 141,
+                          "text": "1825  Russian military officers, who had been exposed to the Enlightenment during Russia's occupation of France, attempt to replace authoritarian rule with a representative democracy. Their coup, called the Decembrist Rising, fails and they are crushed."
+                        }
+                      }
+                    },
+                    "19": {
+                      "title": "1830",
+                      "id": "199.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 142,
+                          "text": "830  France has reneged in paying its bill for wheat bought from Algeria. A new era of European imperialism begins with Charles X sending an invasion force of 36,000 troops to Algeria, claiming that he was responding to the insult to his ambassador. The invasion is described as a civilizing mission and a mission to abolish slavery and piracy – a response to Algeria's reputation in France for having attacked the ships of Christian nations during past centuries and for an estimated 25,000 European slaves in Algeria, including women in the harems."
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Simon Bolivar",
+                          "id": "200.8939.6a683ab11-e736.f2df9c925",
+                          "attr": {
+                            "note": {
+                              "index": 143,
+                              "text": "1830  Simón Bolivar dies disappointed and regretting that Spain did not allow people in its American colonies to develop self-government within a framework of institutions as had Britain with its colonists."
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "20": {
+                      "title": "1832",
+                      "id": "201.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 144,
+                          "text": "1832  Egypt takes advantage of Russia's defeat of the Ottoman Turks and declares independence."
+                        }
+                      }
+                    },
+                    "21": {
+                      "title": "1837",
+                      "id": "202.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 145,
+                          "text": "1837  The United States officially recognizes Texas as independent. Mexico does not."
+                        }
+                      }
+                    },
+                    "22": {
+                      "title": "1838",
+                      "id": "203.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 146,
+                          "text": "1838  Cherokee Indians are forced off their farms and out of the homes and sent on what will become known as the \"Trail of Tears\" to Oklahoma.\n\n1838  Building on a theory about geology by Charles Lyell, Charles Darwin develops a theory of evolutionary selection and specialization."
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "1838  Building on a theory about geology by Charles Lyell, Charles Darwin develops a theory of evolutionary selection and specialization.",
+                          "id": "204.8939.6a683ab11-e736.f2df9c925",
+                          "attr": {}
+                        }
+                      }
+                    },
+                    "23": {
+                      "title": "1839",
+                      "id": "205.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 148,
+                          "text": "1839  The British fear Russian influence in Afghanistan and want \"a trustworthy ally\" there – on India's western frontier. There they have sent a force of 12,000 British and Indian troops, with elephants, 38,000 camels and a horde of followers, including families, prostitutes, and sellers of opium, rum and tobacco.\n\n1839  After a decade of anti-opium campaigns, China's government creates tougher laws and seizes 20,000 chests of British opium. The party in power in London, the Whigs, did not want to  be accused of failing to protect Britain's commercial interests. It sends a punitive expedition, starting the first Anglo-Chinese war."
+                        }
+                      },
+                      "ideas": {}
+                    },
+                    "24": {
+                      "title": "1841",
+                      "id": "207.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 149,
+                          "text": "1841  The President of the Republic of Texas sends an army into New Mexico, hoping to annex it and other territory, including California. A Mexican force drives the invaders back to Texas."
+                        }
+                      }
+                    },
+                    "25": {
+                      "title": "1848",
+                      "id": "208.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 150,
+                          "text": "1848  (Feb 21) With Friedrich Engels, Karl Marx writes a theory of political development contrary to those who claim that everyone within a society have no fundamental conflicting interests. Marx sides with the proletariat, which he believes is exploited by capitalists. The first sentence of his little book reads: \"The history of all hitherto existing society is the history of class struggles.\" His little book is The Communist Manifesto."
+                        }
+                      }
+                    },
+                    "26": {
+                      "title": "1851",
+                      "id": "209.8939.6a683ab11-e736.f2df9c925",
+                      "ideas": {
+                        "1": {
+                          "title": "Moby Dick",
+                          "id": "210.8939.6a683ab11-e736.f2df9c925"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "27": {
+                      "title": "1857",
+                      "id": "211.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 153,
+                          "text": "1857  Elisha Graves Otis installs the first passenger-safe elevator in a department store in New York City."
+                        }
+                      }
+                    },
+                    "28": {
+                      "title": "1859",
+                      "id": "212.8939.6a683ab11-e736.f2df9c925",
+                      "ideas": {
+                        "1": {
+                          "title": "French take over vietnam",
+                          "id": "213.8939.6a683ab11-e736.f2df9c925",
+                          "attr": {
+                            "note": {
+                              "index": 155,
+                              "text": "1859  In Vietnam, the French take over Saigon (today Ho Chi Minh City.)"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "29": {
+                      "title": "1861",
+                      "id": "214.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 156,
+                          "text": "1861  Abraham Lincoln takes office as the President of the United States. He tries to reassure southern states, announcing that he does not intend to interfere, directly or indirectly, with the institution of slavery. But southern politicians have allowed themselves exaggerations and panic. Some southern states proclaim secession. Shooting erupts in the South over who will possess federal forts."
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Telephony",
+                          "id": "216.8939.6a683ab11-e736.f2df9c925",
+                          "attr": {
+                            "note": {
+                              "index": 158,
+                              "text": "1861  (Oct 24) Telegraphy connects the west coast of United States to the east coast. Telegraphy is detaching communication from its dependency on transportation. A communications revolution has been underway. It brings an end to the Pony Express."
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "30": {
+                      "title": "1862",
+                      "id": "217.8939.6a683ab11-e736.f2df9c925",
+                      "attr": {
+                        "note": {
+                          "index": 158,
+                          "text": "1862  The Frenchman Victor Hugo has his historical novel Les Misérables published. It's about the rebellion in Paris that began in 1830 against King Charles X. The book is serialized in ten installments and a best seller across Europe and North America. Police are called in to control impatient crowds at bookstores. Conservatives see it as a dangerous work. Some see it as a manual for insurgency. Hugo favors revolution, but contrary to Karl Marx he was trying to unite revolution and religion. And unlike Marx (now in exile in London) who wants and end to the ruling class (as a class), Hugo wants to inspire them to humanitarianism and wants freedom and justice for all."
+                        }
+                      }
+                    },
+                    "31": {
+                      "title": "http://www.fsmitha.com/time/ce19-7.htm",
+                      "id": "218.8939.6a683ab11-e736.f2df9c925"
+                    },
+                    "32": {
+                      "title": "1865",
+                      "id": "219.d70a.59ddef855-750e.1841c33c6",
+                      "ideas": {
+                        "1": {
+                          "title": "Russians enter Uzbakistan",
+                          "id": "220.d70a.59ddef855-750e.1841c33c6",
+                          "attr": {
+                            "note": {
+                              "index": 160,
+                              "text": "1865  In what today is Uzbekistan, Russians capture the city of Tashkent, which is to become a Russian administrative center."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "33": {
+                      "title": "1867",
+                      "id": "221.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 161,
+                          "text": "1867  In Sweden, Alfred Nobel finds that when nitroglycerin is combined with an absorbent substance it becomes safer and more convenient to manipulate. His mixture is patented as dynamite."
+                        }
+                      }
+                    },
+                    "34": {
+                      "title": "1872",
+                      "id": "222.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 162,
+                          "text": "1872  In Pittsburgh, Pennsylvania, Charles Taze Russell begins what will become the Jehovah's Witnesses."
+                        }
+                      }
+                    },
+                    "35": {
+                      "title": "1875",
+                      "id": "223.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 163,
+                          "text": "1875  In Canada the light bulb is invented. Thomas Edison buys the patent."
+                        }
+                      }
+                    },
+                    "36": {
+                      "title": "1876",
+                      "id": "224.d70a.59ddef855-750e.1841c33c6",
+                      "ideas": {
+                        "1": {
+                          "title": "the phone",
+                          "id": "225.d70a.59ddef855-750e.1841c33c6",
+                          "attr": {
+                            "note": {
+                              "index": 165,
+                              "text": "1876  Alexander Graham Bell invents the telephone."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "37": {
+                      "title": "1877",
+                      "id": "226.d70a.59ddef855-750e.1841c33c6",
+                      "ideas": {
+                        "1": {
+                          "title": "the chinese must go",
+                          "id": "227.d70a.59ddef855-750e.1841c33c6",
+                          "attr": {
+                            "note": {
+                              "index": 167,
+                              "text": "1877  The US economy has been on a down swing, and labor unrest has spread across the country. Three million men, roughly 27 percent of the working population are unemployed. In San Francisco there is bitterness over wealthy people hiring Chinese. A popular orator, Denis Kearney, is haranguing the crowds with his slogan, \"The Chinese must go.\""
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "38": {
+                      "title": "Boer Republic",
+                      "id": "228.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "39": {
+                      "title": "Bismark",
+                      "id": "229.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "40": {
+                      "title": "Mehdi in Sudan",
+                      "id": "230.d70a.59ddef855-750e.1841c33c6",
+                      "attr": {
+                        "note": {
+                          "index": 170,
+                          "text": "https://en.wikipedia.org/wiki/Muhammad_Ahmad"
+                        }
+                      }
+                    },
+                    "41": {
+                      "title": "1882",
+                      "id": "231.d70a.59ddef855-750e.1841c33c6",
+                      "ideas": {
+                        "1": {
+                          "title": "Alexander's aggression against jews, most of them flee",
+                          "id": "232.d70a.59ddef855-750e.1841c33c6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "42": {
+                      "title": "Robert Koch, german Physician",
+                      "id": "233.d70a.59ddef855-750e.1841c33c6"
+                    },
+                    "43": {
+                      "title": "Liliuokalane",
+                      "id": "234.e0e0.becd37d6f-5397.06f4885fc",
+                      "ideas": {
+                        "1": {
+                          "title": "Queen of Hawaii",
+                          "id": "235.e0e0.becd37d6f-5397.06f4885fc"
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "44": {
+                      "title": "1896",
+                      "id": "236.e0e0.becd37d6f-5397.06f4885fc",
+                      "ideas": {
+                        "1": {
+                          "title": "Separate but equal",
+                          "id": "237.e0e0.becd37d6f-5397.06f4885fc"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "45": {
+                      "title": "1897",
+                      "id": "238.e0e0.becd37d6f-5397.06f4885fc",
+                      "ideas": {
+                        "1": {
+                          "title": "Cuba Internment camps",
+                          "id": "240.e0e0.becd37d6f-5397.06f4885fc",
+                          "attr": {
+                            "note": {
+                              "index": 179,
+                              "text": "1897  In Cuba, Spain has a \"Reconstruction Policy,\" trying to separate the rural population and the guerrillas.  Hundreds of thousands of Cubans have been herded into camps, which are disease-ridden and where malnourishment spreads. A total of 321,934 people will be counted as having perished under the Reconstruction Policy. Hostility by newspapers and the public in the United States against Spain rises sharply."
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Battle of San Juan Hill between the US and Spain",
+                          "id": "241.e0e0.becd37d6f-5397.06f4885fc",
+                          "attr": {
+                            "note": {
+                              "index": 180,
+                              "text": "1898  Spain fails militarily and grants limited autonomy to Cuba. The battleship USS. Maine is sent on a \"courtesy\" visit to Havana with words of friendship to Spain, which sends a naval ship to New York in exchange. The Maine blows up in Cuba's Havana harbor, killing 266. Spain's government is blamed. Spain denies the charge. President McKinley gives into passions, goes before Congress, asks and receives authority to send troops to Cuba. Spain refuses an ultimatum and the US declares war. On May 1, the US Navy, at the Battle of Manila Bay, defeats a Spanish squadron. On June 10, US Marines land at Guantanamo. On July 1 the Battle of San Juan Hill takes place, with 1,200 US and 593 Spanish casualties."
+                            }
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "In Turn Spain Loses its colonies to the US",
+                              "id": "243.e0e0.becd37d6f-5397.06f4885fc",
+                              "attr": {
+                                "note": {
+                                  "index": 181,
+                                  "text": "1898  Spain sues for peace. A formal peace treaty is signed in Paris in December. The United States acquires all of Spain's colonies, including the Philippines, Guam and Puerto Rico. Cuba is recognized as independent."
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 178,
+                          "text": "1897  Theodor Herzl, a Jewish journalist from Hungary, has been disturbed by the anti-Semitism connected with the Dreyfus Affair. He organizes and holds the first Zionist Congress."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "46": {
+                      "title": "1899",
+                      "id": "244.e0e0.becd37d6f-5397.06f4885fc",
+                      "ideas": {
+                        "1": {
+                          "title": "Boer war with the british",
+                          "id": "245.e0e0.becd37d6f-5397.06f4885fc",
+                          "ideas": {
+                            "1": {
+                              "title": "South African State",
+                              "id": "246.e0e0.becd37d6f-5397.06f4885fc"
+                            },
+                            "2": {
+                              "title": "Boer Republic",
+                              "id": "247.e0e0.becd37d6f-5397.06f4885fc"
+                            },
+                            "3": {
+                              "title": "because the British wanted Gold",
+                              "id": "248.e0e0.becd37d6f-5397.06f4885fc"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "22": {
+                  "title": "1900 - 2000",
+                  "id": "249.e0e0.becd37d6f-5397.06f4885fc",
+                  "ideas": {
+                    "1": {
+                      "title": "The boxer rebellion",
+                      "id": "250.e0e0.becd37d6f-5397.06f4885fc",
+                      "ideas": {
+                        "1": {
+                          "title": "Chinese don't like Christians, so they conduct attacks on them",
+                          "id": "251.e0e0.becd37d6f-5397.06f4885fc"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "1902",
+                      "id": "252.8f38.d5c537195-3d57.5ef99c2af",
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.fsmitha.com/time/1902.htm",
+                          "id": "253.8f38.d5c537195-3d57.5ef99c2af"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "blosheviks",
+                      "id": "256.984a.6e20feb8-fc11.7a734ab88",
+                      "ideas": {
+                        "1": {
+                          "title": "and some other russian group that were fighting for control over russia",
+                          "id": "257.984a.6e20feb8-fc11.7a734ab88"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "1904",
+                      "id": "258.984a.6e20feb8-fc11.7a734ab88",
+                      "ideas": {
+                        "1": {
+                          "title": "War between Russia and Japan",
+                          "id": "259.984a.6e20feb8-fc11.7a734ab88"
+                        },
+                        "2": {
+                          "title": "Dalai Lama Signs and Anglo Tibetan Treaty",
+                          "id": "260.984a.6e20feb8-fc11.7a734ab88",
+                          "attr": {
+                            "note": {
+                              "index": 198,
+                              "text": "Sep 7  The Dalai Lama signs the Anglo-Tibetan Treaty. Tibet is obliged to open its border with British India, to allow British and Indian traders to travel freely, not to impose customs duties and not to enter into relations with any foreign power without British approval."
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Latin American Countries under the protection of the US",
+                          "id": "261.984a.6e20feb8-fc11.7a734ab88",
+                          "attr": {
+                            "note": {
+                              "index": 199,
+                              "text": "Dec 6  Theodore Roosevelt announces his \"corollary\" to the Monroe Doctrine. It states that rather than have European powers act on legitimate claims against Latin American countries directly, the United States will intervene for them."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "1905",
+                      "id": "262.984a.6e20feb8-fc11.7a734ab88",
+                      "ideas": {
+                        "1": {
+                          "title": "Bloody Sunday",
+                          "id": "263.984a.6e20feb8-fc11.7a734ab88",
+                          "attr": {
+                            "note": {
+                              "index": 201,
+                              "text": "Jan 22  For Russia war is the creator of misery and the mother of revolution.  Russian sailors have rebelled and their rebellion has spread to major cities. At the tsar's Winter Palace in Saint Petersburg a huge demonstration is fired upon. Between 200 and 1,000 are killed, the event to be known as Bloody Sunday."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "11": {
+                      "title": "Pentocostal Movement",
+                      "id": "266.ff1a.7e39e0d56-5c2e.8fd1413f4",
+                      "attr": {}
+                    },
+                    "16": {
+                      "title": "Stopped Here",
+                      "id": "254.8f38.d5c537195-3d57.5ef99c2af",
+                      "ideas": {
+                        "3": {
+                          "title": "1907",
+                          "id": "267.ff1a.7e39e0d56-5c2e.8fd1413f4",
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.fsmitha.com/time/1907.htm",
+                              "id": "268.ff1a.7e39e0d56-5c2e.8fd1413f4"
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      120,
+                      551,
+                      1
+                    ]
+                  }
+                }
+              }
+            },
+            "10": {
+              "title": "Abbreviations",
+              "id": "76.1f6934f62778792c",
+              "ideas": {
+                "1": {
+                  "title": "BCE",
+                  "id": "77.1f6934f62778792c",
+                  "ideas": {
+                    "1": {
+                      "title": "Before Common Era",
+                      "id": "81.1f6934f62778792c"
+                    },
+                    "2": {
+                      "title": "Same as BC",
+                      "id": "78.1f6934f62778792c",
+                      "ideas": {
+                        "1": {
+                          "title": "Before Christ",
+                          "id": "82.1f6934f62778792c"
+                        }
+                      },
+                      "attr": {}
+                    }
+                  }
+                },
+                "4": {
+                  "title": "AD",
+                  "id": "80.1f6934f62778792c",
+                  "ideas": {
+                    "1": {
+                      "title": "Anno Domino",
+                      "id": "83.1f6934f62778792c",
+                      "ideas": {
+                        "1": {
+                          "title": "the year of the lord",
+                          "id": "84.1f6934f62778792c"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Same as CE",
+                      "id": "85.1f6934f62778792c",
+                      "ideas": {
+                        "1": {
+                          "title": "Common Erra",
+                          "id": "86.1f6934f62778792c"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Khazar empire",
+              "id": "106.49c0c056a7348db0",
+              "ideas": {
+                "1": {
+                  "title": "860 ADKhazar Kings Convert to Judaism- The Khazar kings convert to Judaism. A Jewish dynasty of kings presides over the Khazar kingdom until the 960s.\n\n",
+                  "id": "105.49c0c056a7348db0",
+                  "attr": {},
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Bulan is the person who converted them",
+                  "id": "108.49c0c056a7348db0",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Bulan_(Khazar)",
+                      "id": "109.49c0c056a7348db0"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "https://www.youtube.com/watch?v=WrwIdi6DYY0",
+                  "id": "110.6170576c189e629f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Diaspora",
+              "id": "111.6170576c189e629f",
+              "ideas": {
+                "1": {
+                  "title": "jewish dispersion",
+                  "id": "112.6170576c189e629f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {}
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "4.6194644848461e4d",
+          "ideas": {
+            "3": {
+              "title": "Wikipedia",
+              "id": "10.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "Recorded History",
+                  "id": "6.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Recorded_history",
+                      "id": "7.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "History of the world",
+                  "id": "8.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/History_of_the_world",
+                      "id": "9.6194644848461e4d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Applications",
+              "id": "73.6194644848461e4d"
+            },
+            "5": {
+              "title": "Human History Timeline",
+              "id": "74.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "http://humanhistorytimeline.com/",
+                  "id": "75.6194644848461e4d"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Videos",
+              "id": "11.6194644848461e4d",
+              "ideas": {
+                "1": {
+                  "title": "History of the world",
+                  "id": "12.6194644848461e4d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=-6Wu0Q7x5D0",
+                      "id": "13.6194644848461e4d"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "width": 75
+                },
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Countries",
+              "id": "140.f100393f077311e",
+              "ideas": {
+                "1": {
+                  "title": "Mindmap",
+                  "id": "141.f100393f077311e"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "History",
+  "links": []
+}

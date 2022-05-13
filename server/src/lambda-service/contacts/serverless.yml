@@ -1,0 +1,23 @@
+org: samalghanmi2
+app: orbital-backend-contacts-app
+service: orbital-backend-contacts
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+provider:
+  name: aws
+  runtime: nodejs12.10
+
+  # you can overwrite defaults here
+  stage: dev
+  region: us-east-1
+
+functions:
+  app:
+    handler: handler.handler
+    events:
+      - http: ANY /
+      - http: "ANY {proxy+}"
+
+plugins:
+  - serverless-offline

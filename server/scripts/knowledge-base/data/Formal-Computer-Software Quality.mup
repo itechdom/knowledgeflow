@@ -1,0 +1,200 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Software Quality",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.439ad70f7b2cc95",
+          "ideas": {
+            "2": {
+              "title": "Unit test",
+              "id": "6.7920b6e98141e804"
+            },
+            "3": {
+              "title": "Integration test",
+              "id": "7.7920b6e98141e804"
+            },
+            "4": {
+              "title": "E2E",
+              "id": "14.7920b6e98141e804"
+            }
+          },
+          "attr": {
+            "position": [
+              168,
+              -1,
+              1
+            ]
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.439ad70f7b2cc95",
+          "ideas": {
+            "1": {
+              "title": "Xunit patterns",
+              "id": "4.439ad70f7b2cc95",
+              "ideas": {
+                "1": {
+                  "title": "http://xunitpatterns.com/",
+                  "id": "16.7920b6e98141e804"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Third Party",
+              "id": "13.7920b6e98141e804",
+              "ideas": {
+                "1": {
+                  "title": "JS",
+                  "id": "8.7920b6e98141e804",
+                  "ideas": {
+                    "1": {
+                      "title": "Mocha",
+                      "id": "9.7920b6e98141e804",
+                      "ideas": {
+                        "1": {
+                          "title": "test framework for asynchronous testing (coupled with a selected assertion library)",
+                          "id": "22.7920b6e98141e804"
+                        },
+                        "2": {
+                          "title": "Describe",
+                          "id": "23.7920b6e98141e804"
+                        },
+                        "3": {
+                          "title": "it",
+                          "id": "24.7920b6e98141e804"
+                        },
+                        "4": {
+                          "title": "xit",
+                          "id": "25.7920b6e98141e804"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Assertion Library",
+                      "id": "15.7920b6e98141e804",
+                      "ideas": {
+                        "1": {
+                          "title": "Chai",
+                          "id": "11.7920b6e98141e804",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "HTTP Assertion",
+                          "id": "20.7920b6e98141e804",
+                          "ideas": {
+                            "1": {
+                              "title": "Supertest",
+                              "id": "21.7920b6e98141e804"
+                            },
+                            "2": {
+                              "title": "Test websocket",
+                              "id": "32.7920b6e98141e804",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://liamkaufman.com/blog/2012/01/28/testing-socketio-with-mocha-should-and-socketio-client/",
+                                  "id": "33.7920b6e98141e804"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Stubs and Mocks",
+                      "id": "17.7920b6e98141e804",
+                      "ideas": {
+                        "2": {
+                          "title": "Sinon",
+                          "id": "19.7920b6e98141e804",
+                          "ideas": {
+                            "1": {
+                              "title": "http://sinonjs.org/",
+                              "id": "18.7920b6e98141e804",
+                              "attr": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "mock-socket",
+                          "id": "29.7920b6e98141e804",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.npmjs.com/package/mock-socket#native-websocket-example",
+                              "id": "30.7920b6e98141e804"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "15": {
+                      "title": "Karma",
+                      "id": "12.7920b6e98141e804",
+                      "ideas": {
+                        "1": {
+                          "title": "Test runner",
+                          "id": "26.7920b6e98141e804",
+                          "ideas": {
+                            "1": {
+                              "title": "test on multiple devices",
+                              "id": "28.7920b6e98141e804"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "seems to exist only on the front-end",
+                          "id": "31.7920b6e98141e804"
+                        }
+                      },
+                      "attr": {
+                        "position": [
+                          49,
+                          86,
+                          1
+                        ],
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Software Quality",
+  "links": []
+}

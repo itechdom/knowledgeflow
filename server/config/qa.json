@@ -1,0 +1,20 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "0.0.0.0",
+    "media": "https://api.markab.io"
+  },
+  "cors": { "whitelist": [".worthmanifesto.com", ".markab.io", ".markab.io.s3-website-us-east-1.amazonaws.com", "http://sam-thinkpad-t470-w10dg:8085", "http://localhost:8000", "markab-io.s3-website-us-east-1.amazonaws.com"] },
+  "db": {
+    "host": "mongodb+srv://javasop:osamah1989@orbitalcluster0.a3c8j.mongodb.net/",
+    "remote": "mongodb://localhost",
+    "port": 27017
+  },
+  "redirectUrl": "https://markab.io",
+  "secret": "ijwtooo",
+  "auth": {
+    "google": {
+      "callbackURL": "orbital-site.s3-website-us-east-1.amazonaws.com"
+    }
+  }
+}

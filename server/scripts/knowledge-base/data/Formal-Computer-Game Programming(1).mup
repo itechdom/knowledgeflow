@@ -1,0 +1,391 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Game Programming",
+      "attr": {
+        "style": {},
+        "position": [
+          -67,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1.5": {
+          "title": "Concepts",
+          "id": 4,
+          "ideas": {
+            "1": {
+              "title": "Game Theory",
+              "id": 5
+            },
+            "2": {
+              "title": "Mesh",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "http://gamedev.stackexchange.com/questions/38412/whats-the-difference-between-mesh-and-a-model",
+                  "id": 29
+                }
+              }
+            },
+            "3": {
+              "title": "Shaders",
+              "id": "57.feaa.6d2b05277-12af.f93d625b",
+              "ideas": {
+                "1": {
+                  "title": "OpenGL",
+                  "id": "58.feaa.6d2b05277-12af.f93d625b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://learnopengl.com/Getting-started/Shaders",
+                      "id": "59.feaa.6d2b05277-12af.f93d625b"
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "Textures",
+              "id": "60.feaa.6d2b05277-12af.f93d625b",
+              "ideas": {
+                "2": {
+                  "title": "OpenGl",
+                  "id": "67.feaa.6d2b05277-12af.f93d625b",
+                  "ideas": {
+                    "1": {
+                      "title": "Images on top of a 3d model",
+                      "id": "61.feaa.6d2b05277-12af.f93d625b",
+                      "ideas": {
+                        "1": {
+                          "title": "https://learnopengl.com/Getting-started/Textures",
+                          "id": "62.feaa.6d2b05277-12af.f93d625b"
+                        }
+                      },
+                      "attr": {}
+                    }
+                  }
+                }
+              }
+            },
+            "5": {
+              "title": "Transformations",
+              "id": "63.feaa.6d2b05277-12af.f93d625b",
+              "ideas": {
+                "1": {
+                  "title": "openGl",
+                  "id": "64.feaa.6d2b05277-12af.f93d625b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://learnopengl.com/Getting-started/Transformations",
+                      "id": "65.feaa.6d2b05277-12af.f93d625b"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 2,
+          "ideas": {
+            "2": {
+              "title": "Jobs in Colorado",
+              "id": 22,
+              "ideas": {
+                "1": {
+                  "title": "http://www.gamedevmap.com/index.php?location=Denver",
+                  "id": 23
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Meta Resource",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/ellisonleao/magictools",
+                  "id": 27
+                },
+                "2": {
+                  "title": "http://opengameart.org/",
+                  "id": 24,
+                  "ideas": {
+                    "1": {
+                      "title": "Assets Website",
+                      "id": 25
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "http://gamedev.stackexchange.com",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "Game dev stack exchange",
+                  "id": 31
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "From concept to 3d art",
+              "id": 33,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=flFEVOMUJ5A",
+                  "id": 38
+                },
+                "2": {
+                  "title": "https://www.youtube.com/watch?v=jVYzsbBxaQw",
+                  "id": 32,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "https://www.youtube.com/watch?v=uDVShnEjrYw",
+                  "id": 39
+                }
+              }
+            },
+            "8": {
+              "title": "Projects",
+              "id": 40,
+              "ideas": {
+                "1": {
+                  "title": "Sky Diver",
+                  "id": 41
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Third Party",
+              "id": 6,
+              "ideas": {
+                "2": {
+                  "title": "Engines",
+                  "id": 12,
+                  "ideas": {
+                    "1": {
+                      "title": "https://html5gameengine.com/",
+                      "id": 13
+                    },
+                    "3": {
+                      "title": "threejs",
+                      "id": 17,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "http://threejs.org/",
+                          "id": 16,
+                          "ideas": {},
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Quintus",
+                      "id": 18,
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/cykod/Quintus",
+                          "id": 19
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "Impact",
+                      "id": 8,
+                      "ideas": {
+                        "1": {
+                          "title": "Side Scroller",
+                          "id": 9
+                        },
+                        "2": {
+                          "title": "http://impactjs.com/",
+                          "id": 10
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "6": {
+                      "title": "Unreal",
+                      "id": 20,
+                      "ideas": {
+                        "1": {
+                          "title": "https://docs.unrealengine.com/latest/INT/Engine/Blueprints/index.html",
+                          "id": 21
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Phaser",
+                      "id": 42,
+                      "ideas": {
+                        "2": {
+                          "title": "http://phaser.io/tutorials/making-your-first-phaser-game",
+                          "id": 47
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "index": 22,
+                      "text": "Blender Game Engine, (Graphical logic editor)\nConstruct 2 is an HTML5-based 2D game editor, developed by Scirra Ltd.\nConstruct Classic is the previous, DirectX-based open-sourced version of Construct.[5][6]\nGameMaker: Studio, has a drag and drop game creation system developed by YoYo Games.\nGameSalad is a visual game creation tool developed by GameSalad, Inc.\nGodot, in-house open source MIT Licensed game development software made by OKAM Studio.\nHuman Resource Machine is a visual programming-based puzzle game developed by Tomorrow Corporation.\nKodu, a software designed to program games with a 3D Interface developed by Microsoft Research.\nStencyl, a video game creation tool.\nUnreal Engine 4 has a node-based visual programming language called Blueprints."
+                    },
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Rendering",
+                  "id": 44,
+                  "ideas": {
+                    "1": {
+                      "title": "Pixi.js",
+                      "id": 45,
+                      "ideas": {
+                        "1": {
+                          "title": "Web gl with canvas fallback",
+                          "id": 46
+                        },
+                        "2": {
+                          "title": "Examples",
+                          "id": 48,
+                          "ideas": {
+                            "1": {
+                              "title": "http://pixijs.github.io/examples/index.html?s=basics&f=spritesheet.js&title=SpriteSheet%20Animation",
+                              "id": 49
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Free sounds",
+              "id": "50.57c8fe383bb5fe6e",
+              "ideas": {
+                "1": {
+                  "title": "http://www.freesound.org/search/?q=game&page=3#sound",
+                  "id": "51.57c8fe383bb5fe6e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Tutorials",
+              "id": "52.2f15a376e82e6a19",
+              "ideas": {
+                "1": {
+                  "title": "Path",
+                  "id": "53.2f15a376e82e6a19",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/miloyip/game-programmer",
+                      "id": "54.2f15a376e82e6a19"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "OpenGL",
+              "id": "55.5d61fd7f36422827",
+              "ideas": {
+                "1": {
+                  "title": "https://learnopengl.com/",
+                  "id": "56.5d61fd7f36422827"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              166,
+              0,
+              6
+            ]
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Game Programming"
+}

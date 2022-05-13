@@ -1,0 +1,163 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Theology",
+      "attr": {
+        "position": [
+          -33,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.c7f8.bb62623dd-36fe.f80d8c3de",
+          "ideas": {
+            "1": {
+              "title": "Monotheism",
+              "id": "4.c7f8.bb62623dd-36fe.f80d8c3de",
+              "ideas": {
+                "1": {
+                  "title": "Judiasm",
+                  "id": "5.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "Tribal stories",
+                      "id": "27.c7f8.bb62623dd-36fe.f80d8c3de"
+                    },
+                    "2": {
+                      "title": "Refined over centuries due to the strong nature of the culture",
+                      "id": "28.c7f8.bb62623dd-36fe.f80d8c3de"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Islam",
+                  "id": "6.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "Guilt",
+                      "id": "26.c7f8.bb62623dd-36fe.f80d8c3de"
+                    },
+                    "2": {
+                      "title": "Extension of judiasm",
+                      "id": "31.c7f8.bb62623dd-36fe.f80d8c3de"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Christianity",
+                  "id": "7.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "Guilt",
+                      "id": "24.c7f8.bb62623dd-36fe.f80d8c3de"
+                    },
+                    "2": {
+                      "title": "A mixture of Roman and Greek Mythology",
+                      "id": "34.c7f8.bb62623dd-36fe.f80d8c3de"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Zurasturnism",
+                  "id": "8.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "Arrived at the belief of one god",
+                      "id": "32.c7f8.bb62623dd-36fe.f80d8c3de"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Buddhism",
+                  "id": "9.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "no strict rules",
+                      "id": "19.c7f8.bb62623dd-36fe.f80d8c3de"
+                    },
+                    "2": {
+                      "title": "Reincarnation",
+                      "id": "20.c7f8.bb62623dd-36fe.f80d8c3de",
+                      "ideas": {
+                        "1": {
+                          "title": "Thought of as a continuation of different lives",
+                          "id": "21.c7f8.bb62623dd-36fe.f80d8c3de"
+                        },
+                        "2": {
+                          "title": "We are all the same",
+                          "id": "22.c7f8.bb62623dd-36fe.f80d8c3de"
+                        },
+                        "3": {
+                          "title": "hence our spirits go through many lives and many states",
+                          "id": "23.c7f8.bb62623dd-36fe.f80d8c3de"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Hinduism",
+              "id": "10.c7f8.bb62623dd-36fe.f80d8c3de",
+              "ideas": {
+                "1": {
+                  "title": "Used to be multiple gods, but with the major influences from Judiasm, the calim is now that there is one god",
+                  "id": "11.c7f8.bb62623dd-36fe.f80d8c3de"
+                }
+              }
+            },
+            "3": {
+              "title": "Layers of belief",
+              "id": "12.c7f8.bb62623dd-36fe.f80d8c3de",
+              "ideas": {
+                "1": {
+                  "title": "Inanimate Objects",
+                  "id": "13.c7f8.bb62623dd-36fe.f80d8c3de"
+                },
+                "2": {
+                  "title": "Useful celestial objects",
+                  "id": "14.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "Eg: the Sun",
+                      "id": "15.c7f8.bb62623dd-36fe.f80d8c3de"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "The final Layer",
+                  "id": "17.c7f8.bb62623dd-36fe.f80d8c3de",
+                  "ideas": {
+                    "1": {
+                      "title": "God",
+                      "id": "16.c7f8.bb62623dd-36fe.f80d8c3de",
+                      "attr": {}
+                    }
+                  }
+                },
+                "5": {
+                  "title": "No God",
+                  "id": "36.c7f8.bb62623dd-36fe.f80d8c3de"
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.c7f8.bb62623dd-36fe.f80d8c3de"
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Theology",
+  "links": []
+}

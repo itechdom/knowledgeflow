@@ -1,0 +1,77 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Express",
+      "attr": {
+        "position": [
+          -31,
+          -17,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "concepts",
+          "id": "8.55440c4809ed0acc",
+          "ideas": {
+            "1": {
+              "title": "middlewares",
+              "id": "9.55440c4809ed0acc"
+            },
+            "2": {
+              "title": "Router",
+              "id": "10.4ac1e524c935d632",
+              "ideas": {
+                "1": {
+                  "title": "https://expressjs.com/en/guide/routing.html",
+                  "id": "11.4ac1e524c935d632"
+                },
+                "2": {
+                  "title": "when you defined express.Router",
+                  "id": "12.4ac1e524c935d632",
+                  "ideas": {
+                    "1": {
+                      "title": "you enable a module to be mounted onto yours",
+                      "id": "13.4ac1e524c935d632"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "id": "2.55440c4809ed0acc",
+          "ideas": {
+            "1": {
+              "title": "Node mindmap",
+              "id": "3.55440c4809ed0acc",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrZHFnWWxPUG1KRDg",
+                  "id": "5.55440c4809ed0acc"
+                }
+              }
+            },
+            "2": {
+              "title": "express site",
+              "id": "6.55440c4809ed0acc",
+              "ideas": {
+                "1": {
+                  "title": "http://expressjs.com/en/4x/api.html",
+                  "id": "7.55440c4809ed0acc"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Express"
+}

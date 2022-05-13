@@ -1,0 +1,158 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-Computer-Blockchain",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.5052.3bd1b30e1-cb67.0fd3fb4e2",
+          "attr": {},
+          "ideas": {
+            "1": {
+              "title": "blockchain",
+              "ideas": {
+                "1": {
+                  "title": "building a blockchain nodejs",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://dev.to/sadarshannaiynar/blockchain-using-nodejs-and-socketio-5gbe",
+                      "id": "6.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                    }
+                  },
+                  "id": "5.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                },
+                "2": {
+                  "title": "https://github.com/bcoin-org/bcoin",
+                  "id": "7.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                },
+                "3": {
+                  "title": "creating a private blockchain network",
+                  "ideas": {
+                    "1": {
+                      "title": "https://hackernoon.com/heres-how-i-built-a-private-blockchain-network-and-you-can-too-62ca7db556c0",
+                      "id": "9.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                    }
+                  },
+                  "id": "8.5052.3bd1b30e1-cb67.0fd3fb4e2",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "ethereum network",
+                  "id": "10.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                },
+                "5": {
+                  "title": "https://ethereum.org/javascript/#getting-started-with-smart-contracts-and-solidity",
+                  "id": "12.5052.3bd1b30e1-cb67.0fd3fb4e2"
+                },
+                "6": {
+                  "title": "IPFS",
+                  "id": "13.eaad.c4e2aeb9f-6753.eef07b40f"
+                }
+              },
+              "id": "4.5052.3bd1b30e1-cb67.0fd3fb4e2",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "p2p",
+              "id": "14.eaad.c4e2aeb9f-6753.eef07b40f"
+            },
+            "3": {
+              "title": "ethereum",
+              "id": "15.eaad.c4e2aeb9f-6753.eef07b40f",
+              "ideas": {
+                "1": {
+                  "title": "smart contracts",
+                  "id": "16.eaad.c4e2aeb9f-6753.eef07b40f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://ethereum.org/build/",
+                      "id": "17.eaad.c4e2aeb9f-6753.eef07b40f",
+                      "attr": {}
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "20.eaad.c4e2aeb9f-6753.eef07b40f",
+                  "ideas": {
+                    "1": {
+                      "title": "Building on top of ethereum",
+                      "id": "21.eaad.c4e2aeb9f-6753.eef07b40f",
+                      "ideas": {
+                        "1": {
+                          "title": "https://hackernoon.com/ethereum-blockchain-in-a-real-project-with-500k-users-f85ee4821b12",
+                          "id": "22.eaad.c4e2aeb9f-6753.eef07b40f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "web3.js",
+                      "id": "23.eaad.c4e2aeb9f-6753.eef07b40f",
+                      "ideas": {
+                        "1": {
+                          "title": "https://web3js.readthedocs.io/en/v1.2.4/",
+                          "id": "24.eaad.c4e2aeb9f-6753.eef07b40f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "filecoin",
+              "id": "18.eaad.c4e2aeb9f-6753.eef07b40f",
+              "ideas": {
+                "1": {
+                  "title": "distributed file system network",
+                  "id": "19.eaad.c4e2aeb9f-6753.eef07b40f"
+                }
+              }
+            },
+            "5": {
+              "title": "how to convert a webapp into a dtapp",
+              "id": "25.eaad.c4e2aeb9f-6753.eef07b40f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.devteam.space/blog/how-to-convert-web-app-into-a-dapp/",
+                  "id": "26.eaad.c4e2aeb9f-6753.eef07b40f"
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "11.5052.3bd1b30e1-cb67.0fd3fb4e2"
+        }
+      }
+    }
+  },
+  "title": ""
+}

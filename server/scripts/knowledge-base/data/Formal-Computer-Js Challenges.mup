@@ -1,0 +1,980 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Js Challenges",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Problems",
+          "id": 602
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "2": {
+              "title": "You don't Know JS",
+              "id": 184,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch1.md",
+                  "id": 185
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "Javascript the good parts",
+              "id": 408,
+              "ideas": {
+                "1": {
+                  "title": "https://read.amazon.com/?asin=B0026OR2ZY",
+                  "id": 409
+                },
+                "2": {
+                  "title": "Lessons Learned",
+                  "id": 410,
+                  "ideas": {
+                    "1": {
+                      "title": "language Designers make mistakes sometimes",
+                      "id": 411
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Javascript is",
+                  "id": 412,
+                  "ideas": {
+                    "1": {
+                      "title": "First lambda language to go mainstream",
+                      "id": 413
+                    },
+                    "2": {
+                      "title": "Functions are first class object",
+                      "id": 414
+                    },
+                    "3": {
+                      "title": "prototypal inheritance from self",
+                      "id": 557
+                    },
+                    "4": {
+                      "title": "functions from scheme",
+                      "id": 558
+                    },
+                    "5": {
+                      "title": "regex from perl",
+                      "id": 559
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "The bad parts",
+                  "id": 416,
+                  "ideas": {
+                    "1": {
+                      "title": "All global variable are all tossed in a global object",
+                      "id": 415,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "NAN is a result of an operation that can't return a number",
+                      "id": 434,
+                      "ideas": {
+                        "1": {
+                          "title": "it's not equal to anything, including itself",
+                          "id": 435
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Infinity is any value above a particular number",
+                      "id": 436
+                    },
+                    "4": {
+                      "title": "Of course there's no linker in javascript",
+                      "id": 448,
+                      "ideas": {
+                        "1": {
+                          "title": "every script tag represent a compilation unit",
+                          "id": 449
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "when var is declared inside of a function",
+                      "id": 450,
+                      "ideas": {
+                        "1": {
+                          "title": "it declares its private variables",
+                          "id": 451
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "blocks don't create a new scope",
+                      "id": 452,
+                      "ideas": {
+                        "1": {
+                          "title": "Except ES6?",
+                          "id": 453
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "typeof",
+                      "id": 458,
+                      "ideas": {
+                        "1": {
+                          "title": "returns object",
+                          "id": 459,
+                          "ideas": {
+                            "1": {
+                              "title": "when it's null",
+                              "id": 460
+                            },
+                            "2": {
+                              "title": "or array",
+                              "id": 461
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Good parts",
+                  "id": 417,
+                  "ideas": {
+                    "2": {
+                      "title": "One number type",
+                      "id": 421,
+                      "ideas": {
+                        "1": {
+                          "title": "64 bit floating point",
+                          "id": 422,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">In&nbsp;<a href=\"https://en.wikipedia.org/wiki/Computing\" title=\"Computing\" style=\"color: rgb(11, 0, 128); background: none;\">computing</a>,&nbsp;<b>floating point</b>&nbsp;is the formulaic representation that approximates a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Real_number\" title=\"Real number\" style=\"color: rgb(11, 0, 128); background: none;\">real number</a>&nbsp;so as to support a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Trade-off\" title=\"Trade-off\" style=\"color: rgb(11, 0, 128); background: none;\">trade-off</a>&nbsp;between range and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Accuracy_and_precision\" title=\"Accuracy and precision\" style=\"color: rgb(11, 0, 128); background: none;\">precision</a>. A number is, in general, represented approximately to a fixed number of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Significant_figures\" title=\"Significant figures\" style=\"color: rgb(11, 0, 128); background: none;\">significant digits</a>&nbsp;(the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Significand\" title=\"Significand\" style=\"color: rgb(11, 0, 128); background: none;\">significand</a>) and scaled using an&nbsp;<a href=\"https://en.wikipedia.org/wiki/Exponentiation\" title=\"Exponentiation\" style=\"color: rgb(11, 0, 128); background: none;\">exponent</a>; the base for the scaling is normally two, ten, or sixteen. A number that can be represented exactly is of the following form:</p><dl style=\"margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\"><dd style=\"margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;\"><img class=\"mwe-math-fallback-image-inline tex\" alt=\"\\text{significand} \\times \\text{base}^\\text{exponent},\" src=\"https://upload.wikimedia.org/math/3/6/5/36552dfc74d3e1dbf191093a9f646d16.png\" style=\"border-style: none; border-width: initial; display: inline-block;\"></dd></dl><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">where significand ∈&nbsp;<b><a href=\"https://en.wikipedia.org/wiki/Integer\" title=\"Integer\" style=\"color: rgb(11, 0, 128); background: none;\">Z</a></b>, base ∈&nbsp;<b><a href=\"https://en.wikipedia.org/wiki/Natural_number\" title=\"Natural number\" style=\"color: rgb(11, 0, 128); background: none;\">N</a></b>, and exponent ∈&nbsp;<b>Z</b>.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">For example:</p><dl style=\"margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\"><dd style=\"margin-left: 1.6em; margin-bottom: 0.1em; margin-right: 0px;\"><img class=\"mwe-math-fallback-image-inline tex\" alt=\"1.2345 = \\underbrace{12345}_\\text{significand} \\times \\underbrace{10}_\\text{base}\\!\\!\\!\\!\\!\\!^{\\overbrace{-4}^\\text{exponent}}\" src=\"https://upload.wikimedia.org/math/a/a/e/aae450e17208a35ad0363c9b82b5240f.png\" style=\"border-style: none; border-width: initial; display: inline-block;\"></dd></dl><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">The term&nbsp;<i>floating point</i>&nbsp;refers to the fact that a number's&nbsp;<a href=\"https://en.wikipedia.org/wiki/Radix_point\" title=\"Radix point\" style=\"color: rgb(11, 0, 128); background: none;\">radix point</a>&nbsp;(<i>decimal point</i>, or, more commonly in computers,&nbsp;<i>binary point</i>) can \"float\"; that is, it can be placed anywhere relative to the significant digits of the number. This position is indicated as the exponent component, and thus the floating-point representation can be thought of as a kind of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Scientific_notation\" title=\"Scientific notation\" style=\"color: rgb(11, 0, 128); background: none;\">scientific notation</a>.</p>"
+                            },
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Floating_point",
+                              "id": 427
+                            },
+                            "2": {
+                              "title": "how to represent floating points",
+                              "id": 428,
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "3": {
+                              "title": "is equal to",
+                              "id": 429,
+                              "ideas": {
+                                "1": {
+                                  "title": "8 bytes",
+                                  "id": 430,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "each byte represents something in the number",
+                                      "id": 433,
+                                      "attr": {
+                                        "style": {
+                                          "background": "#993300"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {},
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "that means",
+                          "id": 423,
+                          "ideas": {
+                            "1": {
+                              "title": "1",
+                              "id": 424
+                            },
+                            "2": {
+                              "title": "1.0",
+                              "id": 425
+                            },
+                            "3": {
+                              "title": "is the same",
+                              "id": 426
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          123.5,
+                          -111.4375,
+                          2
+                        ],
+                        "collapsed": true
+                      }
+                    },
+                    "14": {
+                      "title": "Strings",
+                      "id": 439,
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          144.5,
+                          -44.875,
+                          1
+                        ],
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Javascript came out when unicode was 16 bit character",
+                          "id": 440,
+                          "ideas": {
+                            "1": {
+                              "title": "so all characters are 16 bit wide",
+                              "id": 441
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "no char in javascript",
+                          "id": 442,
+                          "ideas": {
+                            "1": {
+                              "title": "make a string with one character",
+                              "id": 443,
+                              "ideas": {
+                                "1": {
+                                  "title": "http://unicode-table.com/en/",
+                                  "id": 444,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "unicode character table",
+                                      "id": 445
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "https://en.wikipedia.org/wiki/Unicode",
+                                  "id": 446,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "unicode standard",
+                                      "id": 447,
+                                      "attr": {
+                                        "attachment": {
+                                          "contentType": "text/html",
+                                          "content": "<a href=\"https://en.wikipedia.org/wiki/Comparison_of_Unicode_encodings\" title=\"Comparison of Unicode encodings\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">Unicode can be implemented</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">&nbsp;by different&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Character_encoding\" title=\"Character encoding\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">character encodings</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">. The most commonly used encodings are&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/UTF-8\" title=\"UTF-8\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">UTF-8</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">,&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/UTF-16\" title=\"UTF-16\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">UTF-16</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">&nbsp;and the now-obsolete&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/UCS-2\" title=\"UCS-2\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">UCS-2</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">. UTF-8 uses one&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Byte\" title=\"Byte\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">byte</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">&nbsp;for any&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/ASCII\" title=\"ASCII\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">ASCII</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">&nbsp;character, all of which have the same code values in both UTF-8 and ASCII encoding, and up to four bytes for other characters. UCS-2 uses a 16-bit&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Code_unit\" title=\"Code unit\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">code unit</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">&nbsp;(two&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Octet_(computing)\" title=\"Octet (computing)\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.4px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">8-bit bytes</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">) for each character but cannot encode every character in the current Unicode standard. UTF-16 extends UCS-2, using one 16-bit unit for the characters that were representable in UCS-2 and two 16-bit units (4&nbsp;×&nbsp;8&nbsp;bit) to handle each of the additional characters.</span>"
+                                        },
+                                        "style": {}
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "19": {
+                      "title": "chain && to avoid type error exception",
+                      "id": 473,
+                      "ideas": {},
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "if(flight.equiment &amp;&amp; flight.equipment.mode)"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "20": {
+                      "title": "objects",
+                      "id": 475,
+                      "ideas": {
+                        "2": {
+                          "title": "get passed by reference",
+                          "id": 476
+                        },
+                        "4": {
+                          "title": "number , strings, booleans",
+                          "id": 464,
+                          "ideas": {
+                            "1": {
+                              "title": "are immutable objects",
+                              "id": 466
+                            },
+                            "2": {
+                              "title": "other objects are mutable",
+                              "id": 467
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "prototype",
+                          "id": 484,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<div>var animal = { eats: true }<br></div><div>var rabbit = { jumps: true }</div><div>rabbit.__proto__ = animal &nbsp;// inherit</div><div>alert(rabbit.eats) // true</div><div><br></div><div>var wild_rabbit = {attack:true};</div><div><br></div><div>wild_rabbit.__proto__ = rabbit;</div><div><br></div><div>that means wild_rabbit here will inherit animal, rabbit properties.</div><div><br></div><div>If you inspect the object, you will see __proto__ chained all the way to animal</div>"
+                            },
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "http://javascript.info/tutorial/inheritance",
+                              "id": 485
+                            },
+                            "3": {
+                              "title": "objects are linked with",
+                              "id": 477,
+                              "ideas": {
+                                "1": {
+                                  "title": "to object.prototype",
+                                  "id": 479
+                                }
+                              },
+                              "attr": {
+                                "style": {},
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "delegation",
+                              "id": 480,
+                              "ideas": {
+                                "1": {
+                                  "title": "looks for property in the whole prototype chain",
+                                  "id": 481,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "if not found",
+                                      "id": 482,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "returns undefined",
+                                          "id": 483
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {},
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        },
+                        "7": {
+                          "title": "reflection",
+                          "id": 486,
+                          "ideas": {
+                            "1": {
+                              "title": "Do object.hasOwnProperty",
+                              "id": 454,
+                              "ideas": {
+                                "1": {
+                                  "title": "to test if an object has that key",
+                                  "id": 455,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "instead of on the portotypal chain",
+                                      "id": 457
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "or typeof",
+                              "id": 487,
+                              "ideas": {}
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "delete",
+                          "id": 491,
+                          "ideas": {
+                            "1": {
+                              "title": "can be used to delete a property from an object",
+                              "id": 492,
+                              "ideas": {
+                                "1": {
+                                  "title": "which sometimes will reveal the prototypally inherited function",
+                                  "id": 493
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "9": {
+                          "title": "scope",
+                          "id": 517,
+                          "ideas": {
+                            "1": {
+                              "title": "controls the visibility and lifetime of a variable",
+                              "id": 518,
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "provide automatic memory management",
+                              "id": 520
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "10": {
+                          "title": "factory pattern is favored over new keyword",
+                          "id": 521,
+                          "ideas": {
+                            "1": {
+                              "title": "because the returned object literal has access to the outer scope",
+                              "id": 522
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "11": {
+                          "title": "functional pattern",
+                          "id": 541,
+                          "attr": {
+                            "style": {
+                              "background": "#008000"
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "creates a spec object that maps in the constructor function ",
+                              "id": 542
+                            },
+                            "2": {
+                              "title": "if we need to inherit, we just call the parent class inside the function",
+                              "id": 543,
+                              "ideas": {
+                                "1": {
+                                  "title": "and then add to that the previliged methods you want",
+                                  "id": 544
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "important: read 1078 in js the good parts",
+                              "id": 545,
+                              "attr": {
+                                "style": {
+                                  "background": "#800000"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "12": {
+                          "title": "Copying",
+                          "id": 576,
+                          "ideas": {
+                            "1": {
+                              "title": "shallow",
+                              "id": 577,
+                              "ideas": {
+                                "1": {
+                                  "title": "new array references the old array's elements",
+                                  "id": 579
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "deep",
+                              "id": 578,
+                              "ideas": {
+                                "1": {
+                                  "title": "copy each element and create a new array",
+                                  "id": 580
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "21": {
+                      "title": "functions inherit from Function.prototype",
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          120.5,
+                          180.09375,
+                          3
+                        ],
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "which is linked to object.prototype",
+                          "id": 507
+                        },
+                        "2": {
+                          "title": "functions have this and argument passed to it",
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "arguments isn't an array",
+                              "ideas": {
+                                "1": {
+                                  "title": "it's an array like object with length key",
+                                  "id": 510
+                                }
+                              },
+                              "id": 509
+                            }
+                          },
+                          "id": 508
+                        },
+                        "3": {
+                          "title": "methods",
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "that get their this from the object context",
+                              "ideas": {
+                                "1": {
+                                  "title": "are called public methods",
+                                  "id": 513
+                                }
+                              },
+                              "id": 512
+                            }
+                          },
+                          "id": 511
+                        },
+                        "4": {
+                          "title": "a closure doesn't have access to the outer this",
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "to circumvent that we use that",
+                              "id": 515
+                            }
+                          },
+                          "id": 514
+                        },
+                        "5": {
+                          "title": "using constructor functions isn't recomended",
+                          "attr": {
+                            "style": {}
+                          },
+                          "id": 516,
+                          "ideas": {
+                            "1": {
+                              "title": "because if you forgot 'new'",
+                              "id": 539,
+                              "ideas": {
+                                "1": {
+                                  "title": "the context of the object will be bound to global",
+                                  "id": 540
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "6": {
+                          "title": "avoid creating functions in loops",
+                          "id": 523
+                        },
+                        "7": {
+                          "title": "module pattern",
+                          "id": 524,
+                          "ideas": {
+                            "1": {
+                              "title": "we create a priviliged function or (object) that has access to outer scope but gets returned instead",
+                              "id": 525,
+                              "ideas": {}
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "if you want to enable cascade (composable) functions",
+                          "id": 528,
+                          "ideas": {
+                            "1": {
+                              "title": "make methods that return this",
+                              "id": 529
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "9": {
+                          "title": "Curry",
+                          "id": 530,
+                          "ideas": {
+                            "1": {
+                              "title": "produce a new function by combining a function and an argument",
+                              "id": 532,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "var add1 = add.curry(1);<div>console.log(add1(6));</div>"
+                                },
+                                "style": {}
+                              }
+                            },
+                            "2": {
+                              "title": "we need to use array.slice",
+                              "id": 533,
+                              "ideas": {
+                                "1": {
+                                  "title": "to make arguments into an array",
+                                  "id": 534
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "10": {
+                          "title": "memoization",
+                          "id": 535,
+                          "ideas": {
+                            "1": {
+                              "title": "storing a function to optamize recursion",
+                              "id": 537
+                            },
+                            "2": {
+                              "title": "in the fibonaci example",
+                              "id": 538
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "id": 506
+                    },
+                    "22": {
+                      "title": "Arrays",
+                      "id": 546,
+                      "ideas": {
+                        "1": {
+                          "title": "Inherit from Array.prototype",
+                          "id": 547,
+                          "ideas": {
+                            "1": {
+                              "title": "it provides usefull functions",
+                              "id": 549,
+                              "attr": {
+                                "style": {}
+                              },
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "at the end of the day it's still an object",
+                              "id": 551
+                            },
+                            "5": {
+                              "title": "length property is the uniqeness to the array",
+                              "id": 555,
+                              "ideas": {
+                                "1": {
+                                  "title": "increasing length doesn't allocate more space",
+                                  "id": 553,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                },
+                                "2": {
+                                  "title": "Shrinking length will delete the higher indexed elements",
+                                  "id": 552,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            },
+                            "0.5": {
+                              "title": "because it's an object",
+                              "id": 554,
+                              "attr": {
+                                "position": [
+                                  209.5,
+                                  -196.5234375,
+                                  1
+                                ],
+                                "style": {}
+                              }
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "not a traditional array",
+                          "id": 548
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "23": {
+                      "title": "regex",
+                      "id": 560,
+                      "ideas": {
+                        "1": {
+                          "title": "capturing groups",
+                          "id": 561,
+                          "ideas": {
+                            "1": {
+                              "title": "stores a value found in an array (given how many matches are found)",
+                              "id": 562
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "flags",
+                          "id": 563,
+                          "ideas": {
+                            "1": {
+                              "title": "g",
+                              "id": 564,
+                              "ideas": {
+                                "1": {
+                                  "title": "match globally",
+                                  "id": 569,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "match multiple times",
+                                      "id": 570
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "i",
+                              "id": 567,
+                              "ideas": {
+                                "1": {
+                                  "title": "case insensitve",
+                                  "id": 573
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "m",
+                              "id": 568,
+                              "ideas": {
+                                "1": {
+                                  "title": "multiline",
+                                  "id": 574
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Examples",
+                  "id": 419,
+                  "ideas": {
+                    "1": {
+                      "title": "Defining function method",
+                      "id": 420
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      189.5,
+                      520,
+                      1
+                    ],
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "pain point",
+                  "id": 462,
+                  "ideas": {
+                    "1": {
+                      "title": "What do you mean when you say literal",
+                      "id": 463,
+                      "ideas": {
+                        "1": {
+                          "title": "a notation that provides a value",
+                          "id": 472
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#800000"
+                    },
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+              "id": 599,
+              "ideas": {
+                "1": {
+                  "title": "Mozilla classes in JS\n\n",
+                  "id": 600
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "9": {
+              "title": "Intro to OOP in JS",
+              "id": 601
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 554,
+      "ideaIdTo": 475,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Js Challenges"
+}

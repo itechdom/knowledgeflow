@@ -1,0 +1,31 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Artificial Intellegence",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "-1": {
+          "title": "http://ai.stanford.edu/~nilsson/QAI/qai.pdf",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "THE QUEST FOR ARTIFICIAL INTELLIGENCE\nA HISTORY OF IDEAS AND ACHIEVEMENTS",
+              "id": 2,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Artificial Intellegence"
+}

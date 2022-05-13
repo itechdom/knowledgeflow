@@ -1,0 +1,49 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Logic Programming",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.70aefa07d6374893",
+          "ideas": {
+            "1": {
+              "title": "Declare variables (logic vars) and develop relationships between them",
+              "id": "4.70aefa07d6374893"
+            }
+          }
+        },
+        "-0.5": {
+          "title": "Resources",
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Logic_programming",
+              "ideas": {},
+              "id": "6.70aefa07d6374893"
+            },
+            "2": {
+              "title": "Video Talk about it",
+              "id": "7.70aefa07d6374893",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=7CWEPRKOwgI",
+                  "id": "8.70aefa07d6374893"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "id": "5.70aefa07d6374893",
+          "attr": {}
+        }
+      }
+    }
+  },
+  "title": "Logic Programming",
+  "links": []
+}

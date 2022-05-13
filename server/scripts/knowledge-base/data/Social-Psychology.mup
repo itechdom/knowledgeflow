@@ -1,0 +1,575 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Psychology",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.24ab03522b8449c7",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "4.24ab03522b8449c7",
+              "attr": {
+                "note": {
+                  "index": 3,
+                  "text": "Psychology is the study of behavior and mind, embracing all aspects of conscious and unconscious experience as well as thought"
+                }
+              }
+            },
+            "2": {
+              "title": "It's the \"hub\" science",
+              "id": "7.24ab03522b8449c7",
+              "attr": {
+                "note": {
+                  "index": 4,
+                  "text": "Psychology has been described as a \"hub science\",[4] with psychological findings linking to research and perspectives from the social sciences, natural sciences, medicine, humanities, and philosophy."
+                }
+              }
+            },
+            "3": {
+              "title": "Ying-yang principle",
+              "id": "8.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Yin_and_yang",
+                  "id": "9.24ab03522b8449c7"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Extensions",
+              "id": "14.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "Nueroscience",
+                  "id": "10.24ab03522b8449c7",
+                  "ideas": {
+                    "2": {
+                      "title": "Laterazation of the brain function",
+                      "id": "12.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Lateralization_of_brain_function",
+                          "id": "11.24ab03522b8449c7",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#993366"
+                },
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Major schools of thought",
+              "id": "15.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "Biological",
+                  "id": "16.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "Psychiatrists",
+                      "id": "17.24ab03522b8449c7"
+                    },
+                    "2": {
+                      "title": "Interface of the body and mind",
+                      "id": "18.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "Body being the brain?",
+                          "id": "19.24ab03522b8449c7"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Study animals and relate them to humans",
+                      "id": "20.24ab03522b8449c7"
+                    },
+                    "4": {
+                      "title": "Evolutionary psychology",
+                      "id": "21.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "How did we adapt or evolve to behave a certain way?",
+                          "id": "22.24ab03522b8449c7"
+                        },
+                        "2": {
+                          "title": "Behavioral genetics",
+                          "id": "23.24ab03522b8449c7",
+                          "attr": {
+                            "note": {
+                              "index": 19,
+                              "text": "behavioral genetics research, which aims to understand how genes and environment impact behavior.[72]"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Race and Psychology",
+                      "id": "26.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 20,
+                          "text": "The search for biological origins of psychological phenomena has long involved debates about the importance of race, and especially the relationship between race and intelligence. The idea of white supremacy and indeed the modern concept of race itself arose during the process of world conquest by Europeans.[73] Carl von Linnaeus's four-fold classification of humans classifies Europeans as intelligent and severe, Americans as contented and free, Asians as ritualistic, and Africans as lazy and capricious. Race was also used to justify the construction of socially specific mental disorders such as drapetomania and dysaesthesia aethiopica—the behavior of uncooperative African slaves.[74] After the creation of experimental psychology, \"ethnical psychology\" emerged as a subdiscipline, based on the assumption that studying primitive races would provide an important link between animal behavior and the psychology of more evolved humans.[75]"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {
+                      "background": "#993366"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Behavioral",
+                  "id": "27.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "Classical Conditioning",
+                      "id": "28.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "Pavlov dog",
+                          "id": "29.24ab03522b8449c7"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Cognitive behavioral model in predicting rats guessing the location of the food",
+                      "id": "30.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 24,
+                          "text": "Edward C. Tolman advanced a hybrid \"cognitive behaviorial\" model, most notably with his 1948 publication discussing the cognitive maps used by rats to guess at the location of food at the end of a modified maze.[87]"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Cognitive",
+                  "id": "31.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "Cognitive science An intersection of many fields",
+                      "id": "32.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 26,
+                          "text": "On a broader level, cognitive science is an interdisciplinary enterprise of cognitive psychologists, cognitive neuroscientists, researchers in artificial intelligence, linguists, human–computer interaction, computational neuroscience, logicians and social scientists"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "There's a sort of cognitive revolution, behavioralism has gone away",
+                      "id": "33.24ab03522b8449c7"
+                    },
+                    "3": {
+                      "title": "Cognitive behavioral therapy",
+                      "id": "34.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "Behaviorlism and cognitive at the same time!",
+                          "id": "35.24ab03522b8449c7"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Social",
+                      "id": "36.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "What humans think of each other and how they interact with each other",
+                          "id": "37.24ab03522b8449c7"
+                        },
+                        "2": {
+                          "title": "Sigmund freud",
+                          "id": "38.24ab03522b8449c7"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {
+                      "background": "#800080"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Existential-humanistic theories",
+                  "id": "39.24ab03522b8449c7",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Maslow pyramid",
+                      "id": "40.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Psychology#/media/File:Maslow%27s_Hierarchy_of_Needs.svg",
+                          "id": "41.24ab03522b8449c7"
+                        },
+                        "2": {
+                          "title": "https://upload.wikimedia.org/wikipedia/commons/6/60/Maslow%27s_Hierarchy_of_Needs.svg",
+                          "id": "42.24ab03522b8449c7",
+                          "ideas": {
+                            "1": {
+                              "title": "direct image",
+                              "id": "43.24ab03522b8449c7"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Humanistic psychology",
+                      "id": "44.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 38,
+                          "text": "Humanistic psychology is primarily an orientation toward the whole of psychology rather than a distinct area or school. It stands for respect for the worth of persons, respect for differences of approach, open-mindedness as to acceptable methods, and interest in exploration of new aspects of human behavior. As a \"third force\" in contemporary psychology, it is concerned with topics having little place in existing theories and systems: e.g., love, creativity, self, growth, organism, basic need-gratification, self-actualization, higher values, being, becoming, spontaneity, play, humor, affection, naturalness, warmth, ego-transcendence, objectivity, autonomy, responsibility, meaning, fair-play, transcendental experience, peak experience, courage, and related concepts.[101]"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Exsistential Psychologists",
+                      "id": "45.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 39,
+                          "text": "In the 1950s and 1960s, influenced by philosophers Søren Kierkegaard and Martin Heidegger and, psychoanalytically trained American psychologist Rollo May pioneered an existential branch of psychology, which included existential psychotherapy: a method based on the belief that inner conflict within a person is due to that individual's confrontation with the givens of existence. Swiss psychoanalyst Ludwig Binswanger and American psychologist George Kelly may also be said to belong to the existential school.[102] Existential psychologists differed from more \"humanistic\" psychologists in their relatively neutral view of human nature and their relatively positive assessment of anxiety.[103] Existential psychologists emphasized the humanistic themes of death, free will, and meaning, suggesting that meaning can be shaped by myths, or narrative patterns,[104] and that it can be encouraged by an acceptance of the free will requisite to an authentic, albeit often anxious, regard for death and other future prospects.\n\nAustrian existential psychiatrist and Holocaust survivor Viktor Frankl drew evidence of meaning's therapeutic power from reflections garnered from his own internment.[105] He created a variation of existential psychotherapy called logotherapy, a type of existentialist analysis that focuses on a will to meaning (in one's life), as opposed to Adler's Nietzschean doctrine of will to power or Freud's will to pleasure.[106]"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Existential Therapy",
+                          "id": "46.24ab03522b8449c7",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Existential_therapy",
+                              "id": "47.24ab03522b8449c7"
+                            },
+                            "2": {
+                              "title": "Two views",
+                              "id": "48.24ab03522b8449c7",
+                              "ideas": {
+                                "1": {
+                                  "title": " Meaninglessness then is meaning not yet discovered",
+                                  "id": "49.24ab03522b8449c7",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "there is meaning even when there is pain",
+                                      "id": "50.24ab03522b8449c7"
+                                    },
+                                    "2": {
+                                      "title": "Viktor Frankl's logotherapy",
+                                      "id": "51.24ab03522b8449c7",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "He is a holocaust survivor",
+                                          "id": "52.24ab03522b8449c7"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Themes",
+              "id": "60.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "Personality",
+                  "id": "54.24ab03522b8449c7",
+                  "attr": {
+                    "note": {
+                      "index": 47,
+                      "text": "Personality\nPersonality psychology is concerned with enduring patterns of behavior, thought, and emotion—commonly referred to as personality—in individuals. Theories of personality vary across different psychological schools and orientations. They carry different assumptions about such issues as the role of the unconscious and the importance of childhood experience. According to Freud, personality is based on the dynamic interactions of the id, ego, and super-ego.[107] Trait theorists, in contrast, attempt to analyze personality in terms of a discrete number of key traits by the statistical method of factor analysis. The number of proposed traits has varied widely. An early model, proposed by Hans Eysenck, suggested that there are three traits which comprise human personality: extraversion–introversion, neuroticism, and psychoticism. Raymond Cattell proposed a theory of 16 personality factors. Dimensional models of personality are receiving increasing support, and some version of dimensional assessment will be included in the forthcoming DSM-V.\n\nMyriad approach to systematically assess different personality types, with the Woodworth Personal Data Sheet, developed during World War I, an early example of the modern technique. The Myers–Briggs Type Indicator sought to assess people according to the personality theories of Carl Jung. Behaviorist resistance to introspection led to the development of the Strong Vocational Interest Blank and Minnesota Multiphasic Personality Inventory, tests which ask more empirical questions and focus less on the psychodynamics of the respondent.[108]"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Raymond Cattell",
+                      "id": "55.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "Proposed a theory of 16 personality factors",
+                          "id": "56.24ab03522b8449c7",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/16PF_Questionnaire",
+                              "id": "57.24ab03522b8449c7"
+                            },
+                            "2": {
+                              "title": "Link to the test",
+                              "id": "58.24ab03522b8449c7",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://personality-testing.info/tests/16PF.php",
+                                  "id": "59.24ab03522b8449c7"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Unconscious mind",
+                  "id": "61.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "Free will as an illusion",
+                      "id": "62.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 55,
+                          "text": "The automaticity model, which became widespread following exposition by John Bargh and others in the 1980s, describes sophisticated processes for executing goals which can be selected and performed over an extended duration without conscious awareness.[112][113] Some experimental data suggests that the brain begins to consider taking actions before the mind becomes aware of them.[111][114] This influence of unconscious forces on people's choices naturally bears on philosophical questions free will. John Bargh, Daniel Wegner, and Ellen Langer are some prominent contemporary psychologists who describe free will as an illusion.[112][113][115]"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Automaticity model",
+                      "id": "63.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "Doing things without occupying the mind with low level details, like walking ...",
+                          "id": "64.24ab03522b8449c7"
+                        },
+                        "2": {
+                          "title": "Unconscious competence",
+                          "id": "65.24ab03522b8449c7",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Four_stages_of_competence",
+                              "id": "66.24ab03522b8449c7"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Motivation",
+                  "id": "68.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "Intention",
+                      "id": "69.24ab03522b8449c7"
+                    },
+                    "2": {
+                      "title": "Fundemantal Motivation",
+                      "id": "70.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 62,
+                          "text": "Hunger, thirst, fear, sexual desire, and thermoregulation all seem to constitute fundamental motivations for animals.[118] Humans also seem to exhibit a more complex set of motivations—though theoretically these could be explained as resulting from primordial instincts—including desires for belonging, self-image, self-consistency, truth, love, and control.[120][121]"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Development",
+                  "id": "71.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "How we develop as children",
+                      "id": "72.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Developmental_psychology",
+                          "id": "73.24ab03522b8449c7"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Facets of development",
+                      "id": "74.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 66,
+                          "text": "This may focus on cognitive, affective, moral, social, or neural development."
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Genes and Environment",
+                  "id": "75.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "the phenotype",
+                      "id": "76.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 68,
+                          "text": "the appearance of an organism resulting from the interaction of the genotype and the environment."
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Applications",
+              "id": "78.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "Education",
+                  "id": "79.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "School Psychology",
+                      "id": "82.24ab03522b8449c7",
+                      "attr": {
+                        "note": {
+                          "index": 71,
+                          "text": "School psychology combines principles from educational psychology and clinical psychology to understand and treat students with learning disabilities; to foster the intellectual growth of gifted students; to facilitate prosocial behaviors in adolescents; and otherwise to promote safe, supportive, and effective learning environments. School psychologists are trained in educational and behavioral assessment, intervention, prevention, and consultation, and many have extensive training in research.[154]"
+                        }
+                      },
+                      "ideas": {}
+                    },
+                    "3": {
+                      "title": "Educational Psychology",
+                      "id": "88.24ab03522b8449c7",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Educational_psychology",
+                          "id": "81.24ab03522b8449c7",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 70,
+                      "text": "Educational psychology is the study of how humans learn in educational settings, the effectiveness of educational interventions, the psychology of teaching, and the social psychology of schools as organizations. The work of child psychologists such as Lev Vygotsky, Jean Piaget, Bernard Luskin, and Jerome Bruner has been influential in creating teaching methods and educational practices. Educational psychology is often included in teacher education programs in places such as North America, Australia, and New Zealand.\n\nSchool psychology combines principles from educational psychology and clinical psychology to understand and treat students with learning disabilities; to foster the intellectual growth of gifted students; to facilitate prosocial behaviors in adolescents; and otherwise to promote safe, supportive, and effective learning environments. School psychologists are trained in educational and behavioral assessment, intervention, prevention, and consultation, and many have extensive training in research.[154]"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Wikipedia Article",
+                  "id": "84.24ab03522b8449c7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Psychology#Applications",
+                      "id": "85.24ab03522b8449c7"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Research Methods",
+              "id": "86.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Psychology#Research_methods",
+                  "id": "87.24ab03522b8449c7"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.24ab03522b8449c7",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "5.24ab03522b8449c7",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Psychology",
+                  "id": "6.24ab03522b8449c7"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Psychology",
+  "links": []
+}

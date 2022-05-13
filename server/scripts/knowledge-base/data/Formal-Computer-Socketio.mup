@@ -1,0 +1,103 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Socketio",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "25": {
+          "title": "Concepts",
+          "id": 192,
+          "ideas": {
+            "1": {
+              "title": "push notification",
+              "id": 196,
+              "ideas": {
+                "1": {
+                  "title": "to multiple clients",
+                  "id": 197
+                }
+              }
+            },
+            "2": {
+              "title": "Questions",
+              "id": 198,
+              "ideas": {
+                "1": {
+                  "title": "How do I know who's connected?",
+                  "id": 199
+                },
+                "2": {
+                  "title": "How do I know the user is typing?",
+                  "id": 200,
+                  "ideas": {
+                    "1": {
+                      "title": "emit each character from the client",
+                      "id": "201.5a6ad4855f7075a"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  77,
+                  172,
+                  1
+                ]
+              }
+            },
+            "1.5": {
+              "title": "Isolate sockets into rooms",
+              "id": "202.5a6ad4855f7075a",
+              "ideas": {
+                "1": {
+                  "title": "resources",
+                  "id": "203.5a6ad4855f7075a",
+                  "ideas": {
+                    "1": {
+                      "title": "http://socket.io/docs/rooms-and-namespaces/",
+                      "id": "204.5a6ad4855f7075a"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "1": {
+              "title": "http://socket.io/",
+              "id": 193
+            },
+            "2": {
+              "title": "docs",
+              "id": 194,
+              "ideas": {
+                "1": {
+                  "title": "http://socket.io/docs/",
+                  "id": 195
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Socketio"
+}

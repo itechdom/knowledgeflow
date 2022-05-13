@@ -1,7 +1,7 @@
 import { remote, local } from "./hosts";
 const config = {
   SERVER: {
-    host: remote,
+    host: local,
     port: "",
     origin: "http://localhost:8085",
     wikipedia: {

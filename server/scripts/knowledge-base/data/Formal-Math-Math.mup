@@ -1,0 +1,1871 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Math",
+      "attr": {
+        "style": {},
+        "note": {
+          "text": "[Mathematics](https://en.m.wikipedia.org/wiki/Outline_of_mathematics)&nbsp;– search for fundamental truths in pattern, quantity, and change."
+        },
+        "position": [
+          -22,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "9": {
+          "title": "Concepts",
+          "id": "37.672397fb65f36af8",
+          "ideas": {
+            "12": {
+              "title": "Things I don't know",
+              "id": "204.72a22789bb69f435",
+              "ideas": {
+                "2": {
+                  "title": "Tangent",
+                  "id": "207.72a22789bb69f435"
+                },
+                "3": {
+                  "title": "Geometry",
+                  "id": "208.72a22789bb69f435"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Logarithms",
+              "id": "283.78424a3958263d0e",
+              "ideas": {
+                "1": {
+                  "title": "What power is this number based on base 2",
+                  "id": "284.78424a3958263d0e",
+                  "ideas": {
+                    "1": {
+                      "title": "log 2 (8)",
+                      "id": "285.78424a3958263d0e",
+                      "ideas": {
+                        "1": {
+                          "title": "3",
+                          "id": "286.78424a3958263d0e"
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "is the default 10?",
+                  "id": "405.0c32.2549672d2-4455.bfa6d616e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "power of half is the same as square root of a said number",
+              "id": "288.c893.0d726eea-4cfe.b6c8eef44",
+              "ideas": {
+                "1": {
+                  "title": "game",
+                  "id": "289.c893.0d726eea-4cfe.b6c8eef44"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Topology",
+              "id": "290.0fc1.bdf56fcff-e7cf.02fb4dc92",
+              "ideas": {
+                "1": {
+                  "title": "things in 3d space",
+                  "id": "291.0fc1.bdf56fcff-e7cf.02fb4dc92"
+                },
+                "2": {
+                  "title": "Mobius strip",
+                  "id": "292.0fc1.bdf56fcff-e7cf.02fb4dc92",
+                  "ideas": {
+                    "1": {
+                      "title": "loop twisted clockwise or counter clockwise",
+                      "id": "293.0fc1.bdf56fcff-e7cf.02fb4dc92"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Homeomorphism",
+                  "id": "294.0fc1.bdf56fcff-e7cf.02fb4dc92",
+                  "ideas": {
+                    "1": {
+                      "title": "Shapes that can be shifted into another",
+                      "id": "295.0fc1.bdf56fcff-e7cf.02fb4dc92"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Fourier transform",
+              "id": "296.0fc1.bdf56fcff-e7cf.02fb4dc92",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=spUNpyF58BY",
+                  "id": "297.0fc1.bdf56fcff-e7cf.02fb4dc92"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Calculus",
+              "id": "298.56d5.dfd6c11f4-9007.d38efeeae",
+              "ideas": {
+                "3": {
+                  "title": "Derivitaves",
+                  "id": "301.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Compute rate of change of a function at a certain point?",
+                      "id": "302.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "by calculating the tangent line",
+                          "id": "303.56d5.dfd6c11f4-9007.d38efeeae"
+                        },
+                        "2": {
+                          "title": "But I am confused",
+                          "id": "304.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "How is this used in real life?",
+                              "id": "306.56d5.dfd6c11f4-9007.d38efeeae"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Derivatives video",
+                      "id": "378.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "2": {
+                          "title": "Rate of change for distance and velocity",
+                          "id": "379.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "they are two separate graphs",
+                              "id": "380.56d5.dfd6c11f4-9007.d38efeeae"
+                            },
+                            "2": {
+                              "title": "we can derive velocity from just getting a graph of the distance by measuring the small changes to distance over time",
+                              "id": "381.56d5.dfd6c11f4-9007.d38efeeae"
+                            },
+                            "3": {
+                              "title": "we can try to answer the question what is the speed at a particular point in time",
+                              "id": "406.0c32.2549672d2-4455.bfa6d616e"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "it's the slope of the line as d(t) approaches zero",
+                          "id": "382.56d5.dfd6c11f4-9007.d38efeeae"
+                        },
+                        "4": {
+                          "title": "Resources",
+                          "id": "425.6c6e.865d26e95-e482.1e3bd6c8e",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=9vKqVkMQHKk",
+                              "id": "377.56d5.dfd6c11f4-9007.d38efeeae",
+                              "attr": {}
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "so we derive a new function that calculates the change given a specific time",
+                      "id": "426.6c6e.865d26e95-e482.1e3bd6c8e",
+                      "ideas": {}
+                    },
+                    "5": {
+                      "title": "d(s)/d(t)",
+                      "id": "428.6c6e.865d26e95-e482.1e3bd6c8e",
+                      "ideas": {
+                        "1": {
+                          "title": "minor change in distance over a tiny change in time",
+                          "id": "429.6c6e.865d26e95-e482.1e3bd6c8e"
+                        },
+                        "2": {
+                          "title": "and then we come up with a function that describe that",
+                          "id": "430.6c6e.865d26e95-e482.1e3bd6c8e"
+                        },
+                        "3": {
+                          "title": "so we are deriving a function that describes the distance traveled when given a time",
+                          "id": "432.6c6e.865d26e95-e482.1e3bd6c8e"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Thinking of derivatives in a geometrical fashion",
+                      "id": "441.6c6e.865d26e95-e482.1e3bd6c8e",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=S0_qX4VJhMQ",
+                          "id": "442.6c6e.865d26e95-e482.1e3bd6c8e"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Chain Rule",
+                      "id": "443.6c6e.865d26e95-e482.1e3bd6c8e"
+                    },
+                    "8": {
+                      "title": "Product Rule",
+                      "id": "444.6c6e.865d26e95-e482.1e3bd6c8e"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Integrals",
+                  "id": "309.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Calculate an area under a Graph",
+                      "id": "310.56d5.dfd6c11f4-9007.d38efeeae"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "19": {
+                  "title": "Resources",
+                  "id": "376.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Summary of calculus",
+                      "id": "314.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=w3GV9pumczQ",
+                          "id": "315.56d5.dfd6c11f4-9007.d38efeeae",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Wikipedia",
+                      "id": "316.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Calculus",
+                          "id": "317.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Series",
+                      "id": "375.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Essence of calculus",
+                          "id": "311.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=WUvTyaaNkzM",
+                              "id": "313.56d5.dfd6c11f4-9007.d38efeeae"
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "19": {
+              "title": "Geometry",
+              "id": "318.56d5.dfd6c11f4-9007.d38efeeae",
+              "ideas": {
+                "3": {
+                  "title": "Cos",
+                  "id": "330.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Cah",
+                      "id": "340.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Adjacent/Hypotenuse",
+                          "id": "344.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Secant",
+                      "id": "350.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "is the flip",
+                          "id": "351.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Tan",
+                  "id": "332.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Infinite Series",
+                      "id": "333.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "to get to 1/4 Pi",
+                      "id": "336.56d5.dfd6c11f4-9007.d38efeeae"
+                    },
+                    "3": {
+                      "title": "Cotan",
+                      "id": "352.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "flip the tangent",
+                          "id": "354.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    },
+                    "0.5": {
+                      "title": "Toa",
+                      "id": "341.56d5.dfd6c11f4-9007.d38efeeae",
+                      "attr": {},
+                      "ideas": {
+                        "1": {
+                          "title": "Opposite/Adjacent",
+                          "id": "345.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Circle",
+                  "id": "335.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Area of a cricle",
+                      "id": "319.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "pi * Radius ^ 2",
+                          "id": "320.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Pi",
+                      "id": "321.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Is the ratio of the cricle's circumference to its diameter",
+                          "id": "323.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "Circumference",
+                              "id": "324.56d5.dfd6c11f4-9007.d38efeeae"
+                            },
+                            "2": {
+                              "title": "Circumference / Diameter ",
+                              "id": "328.56d5.dfd6c11f4-9007.d38efeeae",
+                              "ideas": {
+                                "1": {
+                                  "title": "3.14",
+                                  "id": "329.56d5.dfd6c11f4-9007.d38efeeae"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "Unit Circle",
+                      "id": "367.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "2": {
+                          "title": "Sin(Theta)",
+                          "id": "368.56d5.dfd6c11f4-9007.d38efeeae",
+                          "attr": {},
+                          "ideas": {
+                            "1": {
+                              "title": "is X",
+                              "id": "373.56d5.dfd6c11f4-9007.d38efeeae"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Cos(theta)",
+                          "id": "371.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "is Y",
+                              "id": "372.56d5.dfd6c11f4-9007.d38efeeae"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Radian",
+                  "id": "337.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "How many Pi have you traveled around the circle",
+                      "id": "355.56d5.dfd6c11f4-9007.d38efeeae"
+                    },
+                    "2": {
+                      "title": "a unit of angle, equal to an angle at the center of a circle whose arc is equal in length to the radius.\n\n",
+                      "id": "417.2627.a9dbbcf16-638b.92b1518c6"
+                    },
+                    "3": {
+                      "title": "1 radian is 180 / pi",
+                      "id": "418.2627.a9dbbcf16-638b.92b1518c6"
+                    },
+                    "4": {
+                      "title": "Radians",
+                      "id": "383.56d5.dfd6c11f4-9007.d38efeeae",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "https://stackoverflow.com/questions/9875964/python-converting-radians-to-degrees",
+                          "id": "415.cadc.a1e7c1637-fbcf.317a33c04"
+                        },
+                        "2": {
+                          "title": "pi radians is equal to 180 degrees",
+                          "id": "416.cadc.a1e7c1637-fbcf.317a33c04"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Hypotenuse",
+                  "id": "346.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Is the longest side",
+                      "id": "347.56d5.dfd6c11f4-9007.d38efeeae"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Resources",
+                  "id": "356.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Understanding Cosine, Sine and Tangent",
+                      "id": "357.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=ovLbCvq7FNA",
+                          "id": "358.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "SOCHATOA",
+                  "id": "419.2627.a9dbbcf16-638b.92b1518c6"
+                },
+                "11": {
+                  "title": "My thoughts",
+                  "id": "438.6c6e.865d26e95-e482.1e3bd6c8e",
+                  "ideas": {
+                    "1": {
+                      "title": "Geometrical shapes can store formulas",
+                      "id": "439.6c6e.865d26e95-e482.1e3bd6c8e"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "Sin",
+                  "id": "331.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Soh",
+                      "id": "338.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Opposite/Hypotenuse",
+                          "id": "342.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Cosecant",
+                      "id": "348.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Is the flip",
+                          "id": "349.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Inverse sin",
+                      "id": "359.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "will give us the degrees",
+                          "id": "360.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7.5": {
+                  "title": "Triangles",
+                  "id": "361.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "For any tringle",
+                      "id": "362.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "A^2 * B^2 = C^2 - ABCos(Theta)",
+                          "id": "363.56d5.dfd6c11f4-9007.d38efeeae"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8.5": {
+                  "title": "Any function can be made by adding up sin and cos of different amplitudes together",
+                  "id": "364.56d5.dfd6c11f4-9007.d38efeeae",
+                  "attr": {}
+                },
+                "8.75": {
+                  "title": "https://www.youtube.com/watch?v=cqIZue-plBI",
+                  "id": "365.56d5.dfd6c11f4-9007.d38efeeae",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "Algebra",
+              "id": "384.56d5.dfd6c11f4-9007.d38efeeae",
+              "ideas": {
+                "3": {
+                  "title": "Linear Algebra",
+                  "id": "387.56d5.dfd6c11f4-9007.d38efeeae",
+                  "ideas": {
+                    "1": {
+                      "title": "Vectors",
+                      "id": "386.56d5.dfd6c11f4-9007.d38efeeae",
+                      "ideas": {
+                        "1": {
+                          "title": "Addition",
+                          "id": "388.56d5.dfd6c11f4-9007.d38efeeae"
+                        },
+                        "2": {
+                          "title": "Multiplication",
+                          "id": "389.56d5.dfd6c11f4-9007.d38efeeae",
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "All Vectors are scaling the unit verctor i and j on both the x and y axis",
+                          "id": "390.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {}
+                        },
+                        "5": {
+                          "title": "You can change I and J",
+                          "id": "393.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=k7RM-ot2NWY&index=2&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+                              "id": "391.56d5.dfd6c11f4-9007.d38efeeae",
+                              "attr": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "Span",
+                          "id": "394.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "If the vectors aren't lining up then their \"span\" is just a line going from -Infinity to Infinity",
+                              "id": "395.56d5.dfd6c11f4-9007.d38efeeae",
+                              "ideas": {
+                                "1": {
+                                  "title": "otherwise the span is the collection of points that the tip of the arrow sits on",
+                                  "id": "396.56d5.dfd6c11f4-9007.d38efeeae"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "Dot product",
+                          "id": "420.2627.a9dbbcf16-638b.92b1518c6",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=0iNrGpwZwog",
+                              "id": "422.2627.a9dbbcf16-638b.92b1518c6"
+                            },
+                            "2": {
+                              "title": "https://www.youtube.com/watch?v=eu6i7WJeinw",
+                              "id": "423.2627.a9dbbcf16-638b.92b1518c6"
+                            },
+                            "3": {
+                              "title": "3 blue one brown",
+                              "id": "424.2627.a9dbbcf16-638b.92b1518c6"
+                            }
+                          }
+                        },
+                        "8": {
+                          "title": "Cross Product",
+                          "id": "421.2627.a9dbbcf16-638b.92b1518c6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Matrices",
+                      "id": "385.56d5.dfd6c11f4-9007.d38efeeae",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Linear Transformation",
+                          "id": "397.56d5.dfd6c11f4-9007.d38efeeae",
+                          "ideas": {
+                            "1": {
+                              "title": "You can't move the origin",
+                              "id": "399.56d5.dfd6c11f4-9007.d38efeeae"
+                            },
+                            "2": {
+                              "title": "you change i and j to get the resulting changes",
+                              "id": "400.56d5.dfd6c11f4-9007.d38efeeae"
+                            },
+                            "3": {
+                              "title": "https://www.youtube.com/watch?v=kYB8IZa5AuE&index=3&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab",
+                              "id": "401.56d5.dfd6c11f4-9007.d38efeeae"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Transforming Space",
+                          "id": "398.56d5.dfd6c11f4-9007.d38efeeae"
+                        },
+                        "3": {
+                          "title": "The goal of matrices is to manipulate vectors",
+                          "id": "403.d384.52d9baeb6-5bf1.5fc7b9638",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=vQ60rFwh2ig&t=406s",
+                              "id": "404.d384.52d9baeb6-5bf1.5fc7b9638",
+                              "attr": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "30": {
+              "title": "Questions",
+              "id": "215.f96733069271f2",
+              "ideas": {
+                "1": {
+                  "title": "How do I solve mathematical problems?",
+                  "id": "216.f96733069271f2"
+                },
+                "2": {
+                  "title": "How can I understand multiplication from different prospectives",
+                  "id": "221.f96733069271f2"
+                }
+              },
+              "attr": {
+                "position": [
+                  85,
+                  286,
+                  1
+                ],
+                "collapsed": true
+              }
+            },
+            "6.5": {
+              "title": "Multiplication and Division",
+              "id": "226.f96733069271f2",
+              "ideas": {
+                "1": {
+                  "title": "Combinations",
+                  "id": "231.f96733069271f2",
+                  "ideas": {
+                    "1": {
+                      "title": "3 * 3",
+                      "id": "232.f96733069271f2",
+                      "ideas": {
+                        "1": {
+                          "title": "1 * 3 + 1 * 3 + 1 * 3",
+                          "id": "233.f96733069271f2",
+                          "ideas": {
+                            "1": {
+                              "title": "all possible combinations",
+                              "id": "235.f96733069271f2"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "228.f96733069271f2",
+                  "ideas": {
+                    "1": {
+                      "title": "Practical Applications",
+                      "id": "227.f96733069271f2",
+                      "attr": {},
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.eduplace.com/math/mthexp/g5/mathbkg/pdf/mb_g5_u1.pdf",
+                          "id": "229.f96733069271f2"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      167,
+                      72,
+                      1
+                    ],
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "Wikipedia",
+              "id": "78.2465b247ba7ce69",
+              "ideas": {
+                "1": {
+                  "title": "History",
+                  "id": "79.2465b247ba7ce69",
+                  "ideas": {
+                    "1": {
+                      "title": "Euclid's Elements",
+                      "id": "80.2465b247ba7ce69",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Galileo Galilei (1564–1642) ",
+                      "id": "83.2465b247ba7ce69",
+                      "attr": {
+                        "note": {
+                          "index": 61,
+                          "text": "said, \"The universe cannot be read until we have learned the language and become familiar with the characters in which it is written. It is written in mathematical language, and the letters are triangles, circles and other geometrical figures, without which means it is humanly impossible to comprehend a single word. Without these, one is wandering about in a dark labyrinth."
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Refuted the idea that fallen objects fall depending on weight",
+                          "id": "174.3aeff80a6e28f9d7"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Famous mathematicians ",
+                      "id": "91.2465b247ba7ce69",
+                      "ideas": {
+                        "2": {
+                          "title": "Haskell Curry",
+                          "id": "97.2465b247ba7ce69",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Haskell_Curry",
+                              "id": "92.2465b247ba7ce69",
+                              "attr": {}
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Math By application",
+                  "id": "88.2465b247ba7ce69",
+                  "ideas": {
+                    "1": {
+                      "title": "Applied math",
+                      "id": "84.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "Statistics",
+                          "id": "85.2465b247ba7ce69",
+                          "attr": {
+                            "style": {
+                              "background": "#008080"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Game theory",
+                          "id": "86.2465b247ba7ce69",
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "Operations research",
+                          "id": "94.2465b247ba7ce69",
+                          "ideas": {
+                            "1": {
+                              "title": "in British usage, is a discipline that deals with the application of advanced analytical methods to help make better decisions",
+                              "id": "95.2465b247ba7ce69"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 63,
+                          "text": "Applied mathematics\nApplied mathematics concerns itself with mathematical methods that are typically used in science, engineering, business, and industry. Thus, \"applied mathematics\" is a mathematical science with specialized knowledge. The term applied mathematics also describes the professional specialty in which mathematicians work on practical problems; as a profession focused on practical problems, applied mathematics focuses on the \"formulation, study, and use of mathematical models\" in science, engineering, and other areas of mathematical practice.\n\nIn the past, practical applications have motivated the development of mathematical theories, which then became the subject of study in pure mathematics, where mathematics is developed primarily for its own sake. Thus, the activity of applied mathematics is vitally connected with research in pure mathematics.\n\nStatistics and other decision sciences\nApplied mathematics has significant overlap with the discipline of statistics, whose theory is formulated mathematically, especially with probability theory. Statisticians (working as part of a research project) \"create data that makes sense\" with random sampling and with randomized experiments;[52] the design of a statistical sample or experiment specifies the analysis of the data (before the data be available). When reconsidering data from experiments and samples or when analyzing data from observational studies, statisticians \"make sense of the data\" using the art of modelling and the theory of inference – with model selection and estimation; the estimated models and consequential predictions should be tested on new data.[53]\n\nStatistical theory studies decision problems such as minimizing the risk (expected loss) of a statistical action, such as using a procedure in, for example, parameter estimation, hypothesis testing, and selecting the best. In these traditional areas of mathematical statistics, a statistical-decision problem is formulated by minimizing an objective function, like expected loss or cost, under specific constraints: For example, designing a survey often involves minimizing the cost of estimating a population mean with a given level of confidence.[54] Because of its use of optimization, the mathematical theory of statistics shares concerns with other decision sciences, such as operations research, control theory, and mathematical economics.[55]\n\nComputational mathematics\nComputational mathematics proposes and studies methods for solving mathematical problems that are typically too large for human numerical capacity. Numerical analysis studies methods for problems in analysis using functional analysis and approximation theory; numerical analysis includes the study of approximation and discretization broadly with special concern for rounding errors. Numerical analysis and, more broadly, scientific computing also study non-analytic topics of mathematical science, especially algorithmic matrix and graph theory. Other areas of computational mathematics include computer algebra and symbolic computation."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Pure math",
+                      "id": "87.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "even pure has some practical applications",
+                          "id": "93.2465b247ba7ce69"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Divisions",
+                  "id": "102.2465b247ba7ce69",
+                  "ideas": {
+                    "1": {
+                      "title": "Quantity",
+                      "id": "103.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "Arithmitic",
+                          "id": "108.2465b247ba7ce69"
+                        },
+                        "2": {
+                          "title": "Number theory",
+                          "id": "138.693c6d3527aebef0",
+                          "ideas": {
+                            "1": {
+                              "title": "Binary numbers",
+                              "id": "139.693c6d3527aebef0",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Binary_number",
+                                  "id": "142.693c6d3527aebef0"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "Decimal",
+                              "id": "140.693c6d3527aebef0"
+                            },
+                            "3": {
+                              "title": "Hexadecimal",
+                              "id": "141.693c6d3527aebef0",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Hexadecimal",
+                                  "id": "143.693c6d3527aebef0"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "style": {
+                              "background": "#008080"
+                            },
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 77,
+                          "text": "Quantity\nThe study of quantity starts with numbers, first the familiar natural numbers and integers (\"whole numbers\") and arithmetical operations on them, which are characterized in arithmetic. The deeper properties of integers are studied in number theory, from which come such popular results as Fermat's Last Theorem. The twin prime conjecture and Goldbach's conjecture are two unsolved problems in number theory.\n\nAs the number system is further developed, the integers are recognized as a subset of the rational numbers (\"fractions\"). These, in turn, are contained within the real numbers, which are used to represent continuous quantities. Real numbers are generalized to complex numbers. These are the first steps of a hierarchy of numbers that goes on to include quaternions and octonions. Consideration of the natural numbers also leads to the transfinite numbers, which formalize the concept of \"infinity\". According to the fundamental theorem of algebra all solutions of equations in one unknown with complex coefficients are complex numbers, regardless of degree. Another area of study is the size of sets, which is described with the cardinal numbers. These include the aleph numbers, which allow meaningful comparison of the size of infinitely large sets."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Structure",
+                      "id": "104.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "Algebra",
+                          "id": "109.2465b247ba7ce69",
+                          "ideas": {
+                            "1": {
+                              "title": "Linear",
+                              "id": "144.693c6d3527aebef0",
+                              "attr": {
+                                "style": {
+                                  "background": "#008080"
+                                },
+                                "collapsed": true
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "vectors",
+                                  "id": "149.17f55853f6672169",
+                                  "attr": {
+                                    "style": {
+                                      "background": "#008080"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "represents a relationship between two variables",
+                                  "id": "178.3aeff80a6e28f9d7"
+                                },
+                                "3": {
+                                  "title": "System of equations",
+                                  "id": "179.3aeff80a6e28f9d7",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "when we want to get the intersection between two equations represented in an x and y axis",
+                                      "id": "180.3aeff80a6e28f9d7"
+                                    },
+                                    "2": {
+                                      "title": "Gauss Jordan Elimination",
+                                      "id": "181.3aeff80a6e28f9d7",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "to solve a two system of equations",
+                                          "id": "182.3aeff80a6e28f9d7"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "Matrix",
+                              "id": "145.693c6d3527aebef0",
+                              "attr": {
+                                "style": {
+                                  "background": "#008080"
+                                },
+                                "collapsed": true
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "Inverse",
+                                  "id": "183.3aeff80a6e28f9d7"
+                                },
+                                "2": {
+                                  "title": "Identity",
+                                  "id": "184.3aeff80a6e28f9d7"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "Polynomials",
+                              "id": "177.3aeff80a6e28f9d7"
+                            }
+                          },
+                          "attr": {
+                            "style": {
+                              "background": "#008080"
+                            },
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "theories",
+                          "id": "132.54381229b7015f89",
+                          "ideas": {
+                            "2": {
+                              "title": "Combinatorics",
+                              "id": "186.3aeff80a6e28f9d7"
+                            },
+                            "3": {
+                              "title": "Group",
+                              "id": "187.3aeff80a6e28f9d7"
+                            },
+                            "4": {
+                              "title": "Graph",
+                              "id": "188.3aeff80a6e28f9d7"
+                            },
+                            "5": {
+                              "title": "Order",
+                              "id": "189.3aeff80a6e28f9d7"
+                            },
+                            "6": {
+                              "title": "Algebra",
+                              "id": "190.3aeff80a6e28f9d7"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Abstract Algebra",
+                          "id": "176.3aeff80a6e28f9d7",
+                          "attr": {
+                            "note": {
+                              "index": 111,
+                              "text": "The design of mathematics encompasses a number of other principles that are also present in software engineering. Take abstract algebra, for instance. Abstract algebra is essentially an exercise in object hierarchy design, where the goal is to use as few ingredients as possible, adding one more ingredient at a time, to see what kinds of interesting and useful constructs we can get. A group is defined as a set of elements together with an operation (which has to satisfy a few conditions to ensure that its behavior isn’t too weird). A ring is a special type of group endowed with two operations that can be considered as generalizations of addition and multiplication. A field is a specialized ring with four operations (generalizations of addition, subtraction, multiplication, and division). This should immediately start to sound familiar to a software engineer: it’s a hierarchy of objects, where a Field inherits from a Ring which inherits from a Group!"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 79,
+                          "text": "Structure\nMany mathematical objects, such as sets of numbers and functions, exhibit internal structure as a consequence of operations or relations that are defined on the set. Mathematics then studies properties of those sets that can be expressed in terms of that structure; for instance number theory studies properties of the set of integers that can be expressed in terms of arithmetic operations. Moreover, it frequently happens that different such structured sets (or structures) exhibit similar properties, which makes it possible, by a further step of abstraction, to state axioms for a class of structures, and then study at once the whole class of structures satisfying these axioms. Thus one can study groups, rings, fields and other abstract systems; together such studies (for structures defined by algebraic operations) constitute the domain of abstract algebra.\n\nBy its great generality, abstract algebra can often be applied to seemingly unrelated problems; for instance a number of ancient problems concerning compass and straightedge constructions were finally solved using Galois theory, which involves field theory and group theory. Another example of an algebraic theory is linear algebra, which is the general study of vector spaces, whose elements called vectors have both quantity and direction, and can be used to model (relations between) points in space. This is one example of the phenomenon that the originally unrelated areas of geometry and algebra have very strong interactions in modern mathematics. Combinatorics studies ways of enumerating the number of objects that fit a given structure."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Space ",
+                      "id": "105.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "Geometry",
+                          "id": "110.2465b247ba7ce69",
+                          "attr": {
+                            "style": {
+                              "background": "#008080"
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "2": {
+                              "title": "Plane Geometry",
+                              "id": "246.35f8b38ed5095144",
+                              "ideas": {
+                                "1": {
+                                  "title": "Triangles",
+                                  "id": "248.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.mathsisfun.com/triangle.html",
+                                      "id": "249.35f8b38ed5095144"
+                                    },
+                                    "2": {
+                                      "title": "Area",
+                                      "id": "250.35f8b38ed5095144",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Half of the base * Height",
+                                          "id": "251.35f8b38ed5095144"
+                                        },
+                                        "2": {
+                                          "title": "you can calculate the height using heron's formula",
+                                          "id": "252.35f8b38ed5095144",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "https://www.mathsisfun.com/geometry/herons-formula.html",
+                                              "id": "253.35f8b38ed5095144"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "3": {
+                                          "title": "Another area of calculating it",
+                                          "id": "254.35f8b38ed5095144",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "is double the triangle, then move a piece of it over to make a square",
+                                              "id": "255.35f8b38ed5095144",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "the area would be base * height",
+                                                  "id": "256.35f8b38ed5095144"
+                                                },
+                                                "2": {
+                                                  "title": "but it's only one triangle, so it becomes 1/2 B * H",
+                                                  "id": "257.35f8b38ed5095144"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "3": {
+                                      "title": "Sub Types",
+                                      "id": "258.35f8b38ed5095144",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Right Angled Triangle",
+                                          "id": "259.35f8b38ed5095144",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "One of the most useful shaopes, used to calcualted sine, cosine and tan ",
+                                              "id": "260.35f8b38ed5095144"
+                                            },
+                                            "2": {
+                                              "title": "Also in Pythogores theorem",
+                                              "id": "261.35f8b38ed5095144"
+                                            },
+                                            "3": {
+                                              "title": "Two Types",
+                                              "id": "262.35f8b38ed5095144",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "Isosceles",
+                                                  "id": "263.35f8b38ed5095144",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "Two equal angles and two equal sides",
+                                                      "id": "266.35f8b38ed5095144"
+                                                    }
+                                                  }
+                                                },
+                                                "2": {
+                                                  "title": "Scalene",
+                                                  "id": "265.35f8b38ed5095144",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "no equal angles or sides",
+                                                      "id": "267.35f8b38ed5095144"
+                                                    },
+                                                    "2": {
+                                                      "title": "the 3,4,5 triangle",
+                                                      "id": "268.35f8b38ed5095144"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "4": {
+                                      "title": "All sides of the triangle add to 180",
+                                      "id": "269.35f8b38ed5095144",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "how?",
+                                          "id": "270.35f8b38ed5095144",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "https://www.mathsisfun.com/proof180deg.html",
+                                              "id": "271.35f8b38ed5095144"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "3": {
+                                  "title": "Trigonometry",
+                                  "id": "273.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Resources",
+                                      "id": "274.35f8b38ed5095144",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "https://www.mathsisfun.com/algebra/trigonometry-index.html",
+                                          "id": "272.35f8b38ed5095144",
+                                          "attr": {}
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "4": {
+                                  "title": "Quadrilaterals",
+                                  "id": "276.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Four Sides shapes",
+                                      "id": "277.35f8b38ed5095144"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "5": {
+                                  "title": "Circles",
+                                  "id": "407.7aeb.8cea892f-7f76.6386f65ca",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Area of a circle inutition",
+                                      "id": "408.7aeb.8cea892f-7f76.6386f65ca",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "https://www.quora.com/Geometry-What-is-an-intuitive-explanation-of-the-formula-for-the-area-of-a-circle",
+                                          "id": "410.7aeb.8cea892f-7f76.6386f65ca"
+                                        },
+                                        "2": {
+                                          "title": "Pi * R ^ 2",
+                                          "id": "411.7aeb.8cea892f-7f76.6386f65ca"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "Pi is",
+                                      "id": "412.7aeb.8cea892f-7f76.6386f65ca",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Circumference / Diameter",
+                                          "id": "413.7aeb.8cea892f-7f76.6386f65ca"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "Solid Geometry",
+                              "id": "247.35f8b38ed5095144",
+                              "attr": {}
+                            },
+                            "4": {
+                              "title": "Applications of Geometry in Graphics Applications",
+                              "id": "275.35f8b38ed5095144"
+                            },
+                            "5": {
+                              "title": "My Thoughts",
+                              "id": "278.35f8b38ed5095144",
+                              "ideas": {
+                                "1": {
+                                  "title": "Shapes and properties",
+                                  "id": "280.35f8b38ed5095144"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "15": {
+                              "title": "Resources",
+                              "id": "237.35f8b38ed5095144",
+                              "ideas": {
+                                "1": {
+                                  "title": "Basic Intro to Geometry",
+                                  "id": "238.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.mathsisfun.com/geometry/",
+                                      "id": "239.35f8b38ed5095144"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "Wikipedia",
+                                  "id": "240.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://en.wikipedia.org/wiki/Geometry",
+                                      "id": "241.35f8b38ed5095144"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "3": {
+                                  "title": "Expii Course on Geometry",
+                                  "id": "244.35f8b38ed5095144",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.expii.com/map/752",
+                                      "id": "245.35f8b38ed5095144"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "0.5": {
+                              "title": "Main Concepts in Geometry",
+                              "id": "242.35f8b38ed5095144",
+                              "attr": {
+                                "note": {
+                                  "index": 52,
+                                  "text": "While geometry has evolved significantly throughout the years, there are some general concepts that are more or less fundamental to geometry. These include the concepts of points, lines, planes, surfaces, angles, and curves, as well as the more advanced notions of manifolds and topology or metric.[6]"
+                                }
+                              }
+                            },
+                            "0.75": {
+                              "title": "Main Subfields",
+                              "id": "243.35f8b38ed5095144",
+                              "attr": {
+                                "note": {
+                                  "index": 53,
+                                  "text": "Euclidean geometry is geometry in its classical sense. The mandatory educational curriculum of the majority of nations includes the study of points, lines, planes, angles, triangles, congruence, similarity, solid figures, circles, and analytic geometry.[7] Euclidean geometry also has applications in computer science, crystallography, and various branches of modern mathematics.\nDifferential geometry uses techniques of calculus and linear algebra to study problems in geometry. It has applications in physics, including in general relativity.\n\nTopology is the field concerned with the properties of geometric objects that are unchanged by continuous mappings. In practice, this often means dealing with large-scale properties of spaces, such as connectedness and compactness.\nConvex geometry investigates convex shapes in the Euclidean space and its more abstract analogues, often using techniques of real analysis. It has close connections to convex analysis, optimization and functional analysis and important applications in number theory.\n\nAlgebraic geometry studies geometry through the use of multivariate polynomials and other algebraic techniques. It has applications in many areas, including cryptography and string theory.\nDiscrete geometry is concerned mainly with questions of relative position of simple geometric objects, such as points, lines and circles. It shares many methods and principles with combinatorics."
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Euclidian Geometry",
+                          "id": "134.54381229b7015f89"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 83,
+                          "text": "Space\nThe study of space originates with geometry – in particular, Euclidean geometry, which combines space and numbers, and encompasses the well-known Pythagorean theorem. Trigonometry is the branch of mathematics that deals with relationships between the sides and the angles of triangles and with the trigonometric functions. The modern study of space generalizes these ideas to include higher-dimensional geometry, non-Euclidean geometries (which play a central role in general relativity) and topology. Quantity and space both play a role in analytic geometry, differential geometry, and algebraic geometry. Convex and discrete geometry were developed to solve problems in number theory and functional analysis but now are pursued with an eye on applications in optimization and computer science. Within differential geometry are the concepts of fiber bundles and calculus on manifolds, in particular, vector and tensor calculus. Within algebraic geometry is the description of geometric objects as solution sets of polynomial equations, combining the concepts of quantity and space, and also the study of topological groups, which combine structure and space. Lie groups are used to study space, structure, and change. Topology in all its many ramifications may have been the greatest growth area in 20th-century mathematics; it includes point-set topology, set-theoretic topology, algebraic topology and differential topology. In particular, instances of modern-day topology are metrizability theory, axiomatic set theory, homotopy theory, and Morse theory. Topology also includes the now solved Poincaré conjecture, and the still unsolved areas of the Hodge conjecture. Other results in geometry and topology, including the four color theorem and Kepler conjecture, have been proved only with the help of computers."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Change",
+                      "id": "106.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "analysis",
+                          "id": "112.2465b247ba7ce69"
+                        },
+                        "2": {
+                          "title": "chaos theory",
+                          "id": "137.54381229b7015f89"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 86,
+                          "text": "Change\nUnderstanding and describing change is a common theme in the natural sciences, and calculus was developed as a powerful tool to investigate it. Functions arise here, as a central concept describing a changing quantity. The rigorous study of real numbers and functions of a real variable is known as real analysis, with complex analysis the equivalent field for the complex numbers. Functional analysis focuses attention on (typically infinite-dimensional) spaces of functions. One of many applications of functional analysis is quantum mechanics. Many problems lead naturally to relationships between a quantity and its rate of change, and these are studied as differential equations. Many phenomena in nature can be described by dynamical systems; chaos theory makes precise the ways in which many of these systems exhibit unpredictable yet still deterministic behavior."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "There also subdivisions from math to other fields",
+                      "id": "113.2465b247ba7ce69",
+                      "ideas": {
+                        "1": {
+                          "title": "Logic",
+                          "id": "115.2465b247ba7ce69"
+                        },
+                        "2": {
+                          "title": "Set Theory",
+                          "id": "116.2465b247ba7ce69",
+                          "ideas": {
+                            "1": {
+                              "title": "sets and collections of objects",
+                              "id": "117.2465b247ba7ce69"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Mathematical logic",
+                          "id": "120.54381229b7015f89",
+                          "attr": {
+                            "note": {
+                              "index": 91,
+                              "text": "Mathematical logic is concerned with setting mathematics within a rigorous axiomatic framework, and studying the implications of such a framework. As such, it is home to Gödel's incompleteness theorems which (informally) imply that any effective formal system that contains basic arithmetic, if sound (meaning that all theorems that can be proved are true), is necessarily incomplete (meaning that there are true theorems which cannot be proved in that system). Whatever finite collection of number-theoretical axioms is taken as a foundation, Gödel showed how to construct a formal statement that is a true number-theoretical fact, but which does not follow from those axioms. Therefore, no formal system is a complete axiomatization of full number theory. Modern logic is divided into recursion theory, model theory, and proof theory, and is closely linked to theoretical computer science,[citation needed] as well as to category theory. In the context of recursion theory, the impossibility of a full axiomatization of number theory can also be formally demonstrated as a consequence of the MRDP theorem."
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Mathematical_logic",
+                              "id": "127.54381229b7015f89"
+                            },
+                            "2": {
+                              "title": "Axiom",
+                              "id": "98.2465b247ba7ce69",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Axiom",
+                                  "id": "99.2465b247ba7ce69"
+                                },
+                                "2": {
+                                  "title": "A statement, if true will carry you to other statements",
+                                  "id": "100.2465b247ba7ce69"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "Set theory",
+                          "id": "128.54381229b7015f89",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Set_theory",
+                              "id": "129.54381229b7015f89"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#008080"
+                    },
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Theoratical computer science",
+                  "id": "121.54381229b7015f89",
+                  "attr": {
+                    "note": {
+                      "index": 92,
+                      "text": "Theoretical computer science includes computability theory, computational complexity theory, and information theory.  .[51] Finally,"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Computability theory",
+                      "id": "122.54381229b7015f89",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Theory_of_computation",
+                          "id": "131.54381229b7015f89"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 93,
+                          "text": "Computability theory examines the limitations of various theoretical models of the computer, including the most well-known model – the Turing machine."
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Complexity theory",
+                      "id": "124.54381229b7015f89",
+                      "ideas": {},
+                      "attr": {
+                        "note": {
+                          "index": 95,
+                          "text": "Complexity theory is the study of tractability by computer; some problems, although theoretically solvable by computer, are so expensive in terms of time or space that solving them is likely to remain practically unfeasible, even with the rapid advancement of computer hardware. A famous problem is the \"P = NP?\" problem, one of the Millennium Prize Problems"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Information theory",
+                      "id": "126.54381229b7015f89",
+                      "attr": {
+                        "note": {
+                          "index": 97,
+                          "text": "information theory is concerned with the amount of data that can be stored on a given medium, and hence deals with concepts such as compression and entropy."
+                        }
+                      }
+                    }
+                  }
+                },
+                "12": {
+                  "title": "Category theory",
+                  "id": "119.54381229b7015f89",
+                  "attr": {
+                    "note": {
+                      "index": 90,
+                      "text": "Category theory, which deals in an abstract way with mathematical structures and relationships between them, is still in development."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Category_theory",
+                      "id": "130.54381229b7015f89"
+                    }
+                  }
+                },
+                "13": {
+                  "title": "Discrete mathematics",
+                  "id": "146.3b46163360ca396a",
+                  "ideas": {
+                    "1": {
+                      "title": "Graph theory",
+                      "id": "147.3b46163360ca396a",
+                      "attr": {
+                        "style": {
+                          "background": "#008080"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "Definition",
+                  "id": "96.2465b247ba7ce69",
+                  "ideas": {
+                    "1": {
+                      "title": " it has become customary to view mathematical research as establishing truth by rigorous deduction from appropriately chosen axioms and definitions",
+                      "id": "82.2465b247ba7ce69",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      86,
+                      -127,
+                      1
+                    ],
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {}
+        },
+        "-6": {
+          "title": "Resouces",
+          "id": 27,
+          "ideas": {
+            "2": {
+              "title": "Stanford",
+              "id": 32,
+              "ideas": {
+                "1": {
+                  "title": "https://lagunita.stanford.edu/courses/Education/EDUC115-S/Spring2014/courseware/47b428db4c334d46a5a54dcaaefe8960/b46dd45ae5074886aec23587330b8cb1/",
+                  "id": 33
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Khan",
+              "id": 34,
+              "ideas": {
+                "1": {
+                  "title": "https://www.khanacademy.org/",
+                  "id": 29,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Parallels between math and computer science",
+              "id": "35.672397fb65f36af8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.oreilly.com/ideas/striking-parallels-between-mathematics-and-software-engineering",
+                  "id": "36.672397fb65f36af8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Math Exercises",
+              "id": "40.672397fb65f36af8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.ixl.com/math/",
+                  "id": "41.672397fb65f36af8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Nice way to draw graphs",
+              "id": "59.2b3536b5c3592d5a",
+              "ideas": {
+                "1": {
+                  "title": "https://www.desmos.com/calculator",
+                  "id": "60.2b3536b5c3592d5a"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Numberphile youtube channel",
+              "id": "67.4b582463c09540d4",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A",
+                  "id": "68.4b582463c09540d4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Math brain teasers",
+              "id": "162.7f919441ca4b6dc8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.khanacademy.org/math/math-for-fun-and-glory/puzzles/brain-teasers/v/liar-truthteller-brain-teaser",
+                  "id": "163.7f919441ca4b6dc8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "GRE exercises",
+              "id": "191.3aeff80a6e28f9d7"
+            },
+            "10": {
+              "title": "Expii",
+              "id": "211.2777f1154443448e",
+              "ideas": {
+                "1": {
+                  "title": "https://www.expii.com/",
+                  "id": "212.2777f1154443448e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Learning Math without fear",
+              "id": "223.f96733069271f2",
+              "ideas": {
+                "1": {
+                  "title": "https://ed.stanford.edu/news/learning-math-without-fear",
+                  "id": "224.f96733069271f2"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Mathmatica",
+              "id": "307.56d5.dfd6c11f4-9007.d38efeeae",
+              "ideas": {
+                "1": {
+                  "title": "http://www.wolfram.com/?source=nav",
+                  "id": "308.56d5.dfd6c11f4-9007.d38efeeae"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "The art of problem solving",
+              "id": "434.6c6e.865d26e95-e482.1e3bd6c8e",
+              "ideas": {
+                "1": {
+                  "title": "https://artofproblemsolving.com/",
+                  "id": "435.6c6e.865d26e95-e482.1e3bd6c8e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Brilliant",
+              "id": "440.6c6e.865d26e95-e482.1e3bd6c8e"
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Math"
+}

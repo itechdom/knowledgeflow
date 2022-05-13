@@ -1,0 +1,1735 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Graphics Programming",
+      "attr": {
+        "position": [
+          -75,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.48f5eda5f81265cc",
+          "ideas": {
+            "1": {
+              "title": "GPU",
+              "id": "6.48f5eda5f81265cc",
+              "ideas": {
+                "1": {
+                  "title": "the screen is drawn top left to bottom right",
+                  "id": "7.48f5eda5f81265cc"
+                },
+                "2": {
+                  "title": "then sends a vblank signal",
+                  "id": "8.48f5eda5f81265cc"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Rendering",
+              "id": "14.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "Hidden line algorithms",
+                  "id": "51.2e09b6facfa40a26"
+                },
+                "2": {
+                  "title": "Hidden surface algorithms",
+                  "id": "52.2e09b6facfa40a26"
+                },
+                "3": {
+                  "title": "Diffuse lighting",
+                  "id": "53.2e09b6facfa40a26"
+                },
+                "4": {
+                  "title": "Specular Lighting",
+                  "id": "54.2e09b6facfa40a26"
+                },
+                "5": {
+                  "title": "Curved Surfaces Texture",
+                  "id": "55.2e09b6facfa40a26",
+                  "ideas": {}
+                },
+                "6": {
+                  "title": "Z-Buffer Hidden Surface",
+                  "id": "56.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "it's used currently in the graphics card",
+                      "id": "58.2e09b6facfa40a26"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Phong",
+                  "id": "57.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Lighting",
+                      "id": "349.92ab.f64e356c5-e1e6.992d84da7"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Global Illumination",
+                  "id": "59.2e09b6facfa40a26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Realtime",
+              "id": "15.2e09b6facfa40a26"
+            },
+            "4": {
+              "title": "Theory",
+              "id": "17.2e09b6facfa40a26"
+            },
+            "5": {
+              "title": "Libraries",
+              "id": "18.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "OpenGL",
+                  "id": "19.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "GLSL",
+                      "id": "20.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "shaders",
+                          "id": "37.2e09b6facfa40a26"
+                        }
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "WebGL",
+                  "id": "24.2e09b6facfa40a26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Graphics Pipeline",
+              "id": "26.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "Modeling",
+                  "id": "28.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Spline",
+                      "id": "49.2e09b6facfa40a26"
+                    },
+                    "2": {
+                      "title": "triangle meshes",
+                      "id": "50.2e09b6facfa40a26"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Animation",
+                  "id": "29.2e09b6facfa40a26",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "3": {
+                  "title": "Rendering",
+                  "id": "30.2e09b6facfa40a26",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Ways to create scenes",
+              "id": "35.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "Rasterize",
+                  "id": "32.2e09b6facfa40a26",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "2": {
+                  "title": "Retracing",
+                  "id": "33.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "slow but better images",
+                      "id": "36.2e09b6facfa40a26"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "History",
+              "id": "40.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "USA force",
+                  "id": "41.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "started the computer graphics",
+                      "id": "42.2e09b6facfa40a26"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Sketchpad system was the first interactive graphics system",
+                  "id": "45.2e09b6facfa40a26"
+                },
+                "3": {
+                  "title": "Superpaint was a painting software",
+                  "id": "46.2e09b6facfa40a26"
+                },
+                "4": {
+                  "title": "Adobe was the first startup in that field",
+                  "id": "47.2e09b6facfa40a26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Vectors",
+              "ideas": {
+                "2": {
+                  "title": "multiplying two vectors",
+                  "ideas": {
+                    "1": {
+                      "title": "Dot Products",
+                      "id": "65.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "gives scalar value",
+                          "id": "83.2e09b6facfa40a26"
+                        },
+                        "2": {
+                          "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length",
+                          "id": "230.708f717902f199ba"
+                        },
+                        "3": {
+                          "title": "a . b",
+                          "id": "231.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "[a1\na2\na3]",
+                              "id": "232.708f717902f199ba",
+                              "ideas": {
+                                "1": {
+                                  "title": ".",
+                                  "id": "233.708f717902f199ba",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "[b1\nb2\nb3}",
+                                      "id": "234.708f717902f199ba",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "a1 * b1 + a2 * b2 ....",
+                                          "id": "235.708f717902f199ba",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "this value is a scalar value",
+                                              "id": "236.708f717902f199ba"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "length of a vector",
+                          "id": "240.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "[a1\na2]",
+                              "id": "241.708f717902f199ba",
+                              "ideas": {
+                                "1": {
+                                  "title": "SquareRoot(a1 ^ 2 + a2 ^ 2)",
+                                  "id": "242.708f717902f199ba",
+                                  "attr": {
+                                    "style": {
+                                      "width": 210
+                                    }
+                                  },
+                                  "ideas": {
+                                    "1": {
+                                      "title": "which corresponds to the Pythagorean theorem",
+                                      "id": "243.708f717902f199ba"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "we donate length of a vector as ||a1||",
+                              "id": "245.708f717902f199ba"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "properties",
+                          "id": "250.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "it's commutative",
+                              "id": "248.708f717902f199ba",
+                              "attr": {}
+                            },
+                            "2": {
+                              "title": "distrbiutive",
+                              "id": "251.708f717902f199ba"
+                            },
+                            "3": {
+                              "title": "proof",
+                              "id": "252.708f717902f199ba",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/proving-vector-dot-product-properties",
+                                  "id": "253.708f717902f199ba"
+                                },
+                                "2": {
+                                  "title": "cauchy schwarz",
+                                  "id": "254.708f717902f199ba",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/proof-of-the-cauchy-schwarz-inequality",
+                                      "id": "255.708f717902f199ba"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "triangle inequality",
+                          "id": "256.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/linear-algebra-vector-triangle-inequality",
+                              "id": "257.708f717902f199ba"
+                            },
+                            "2": {
+                              "title": "||x|| + ||y||  < =  ||x|| + ||y||",
+                              "id": "258.708f717902f199ba"
+                            },
+                            "3": {
+                              "title": "the hypotenuse ( ||x|| + ||y|| is always less than or equal to the length of both sides (||x|| and ||y||)\n",
+                              "id": "259.708f717902f199ba",
+                              "ideas": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "read top to bottom like Chinese or Japanese",
+                          "id": "333.2e22.be8d6b5dd-54df.f779efe3f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Cross Products",
+                      "id": "66.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "area of the parallelogram spanned by a and b for example",
+                          "id": "84.2e09b6facfa40a26",
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "Cartesian Formula",
+                          "id": "87.2e09b6facfa40a26"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "I stopped here",
+                      "id": "246.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length",
+                          "id": "247.708f717902f199ba"
+                        }
+                      },
+                      "attr": {
+                        "style": {
+                          "background": "#008080"
+                        },
+                        "position": [
+                          170,
+                          48,
+                          1
+                        ]
+                      }
+                    }
+                  },
+                  "id": "64.2e09b6facfa40a26",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Parallelogram rule",
+                  "ideas": {
+                    "1": {
+                      "title": "connect both vectors",
+                      "id": "70.2e09b6facfa40a26"
+                    },
+                    "2": {
+                      "title": "a+b",
+                      "id": "71.2e09b6facfa40a26"
+                    }
+                  },
+                  "id": "69.2e09b6facfa40a26",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Where do we use them?",
+                  "id": "78.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Find angle between two vectors",
+                      "id": "79.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "Cosine of angle between light source and surface for shading",
+                          "id": "80.2e09b6facfa40a26"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "finding projection of one vector on another (eg. coordinates of point in arbitrary coordinate system)",
+                      "id": "81.2e09b6facfa40a26"
+                    },
+                    "3": {
+                      "title": "Advantage: can be computed easily in cartesian coordinate system)",
+                      "id": "82.2e09b6facfa40a26"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Norm",
+                  "id": "95.2e09b6facfa40a26"
+                },
+                "10": {
+                  "title": "Orthogonal",
+                  "id": "96.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "if two vector's products are equal to 0",
+                      "id": "269.708f717902f199ba"
+                    },
+                    "2": {
+                      "title": "perpendicular",
+                      "id": "271.708f717902f199ba"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Orthonormal",
+                  "id": "146.2e09b6facfa40a26"
+                },
+                "17": {
+                  "title": "Examples",
+                  "id": "198.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "[5\n0]",
+                      "id": "195.708f717902f199ba",
+                      "attr": {},
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "how much we are moving in the x and y",
+                      "id": "200.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "5 -> x 0 -> y",
+                          "id": "201.708f717902f199ba"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "18": {
+                  "title": "operations",
+                  "id": "207.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "summation",
+                      "id": "208.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "a + b",
+                          "id": "209.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "add each dimension",
+                              "id": "210.708f717902f199ba"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "commutative",
+                          "id": "211.708f717902f199ba"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "multiplying",
+                      "id": "212.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "by scalar",
+                          "id": "213.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "3 * [2\n1]",
+                              "id": "214.708f717902f199ba",
+                              "ideas": {
+                                "1": {
+                                  "title": "[6\n3]",
+                                  "id": "215.708f717902f199ba"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/adding-vectors",
+                          "id": "217.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "has a nice visualization of it",
+                              "id": "218.708f717902f199ba"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "remember they don't have to start at the origin",
+                          "id": "219.708f717902f199ba"
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "multiplication",
+                      "id": "263.708f717902f199ba"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "19": {
+                  "title": "Unit Vectors",
+                  "id": "220.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "magnitude is exactly one",
+                      "id": "221.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "[1\n0]",
+                          "id": "222.708f717902f199ba"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "we can break up a vector into multiple units",
+                      "id": "224.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "[2\n3]",
+                          "id": "225.708f717902f199ba"
+                        },
+                        "2": {
+                          "title": "we can also represent it as",
+                          "id": "226.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "2i + 3j",
+                              "id": "227.708f717902f199ba"
+                            },
+                            "2": {
+                              "title": "i is horizontal",
+                              "id": "228.708f717902f199ba"
+                            },
+                            "3": {
+                              "title": "j is vertical",
+                              "id": "229.708f717902f199ba"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "20": {
+                  "title": "Angles between two vectors",
+                  "id": "262.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "(a . b) = ||a|| . ||b|| cos(theta)",
+                      "id": "264.708f717902f199ba",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "angle between vectors",
+                      "id": "265.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "a = cb when c > 0 ===> theta = 0",
+                          "id": "266.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "that means that a and scalar multiple of b (cb) have an angle of 0 when c is bigger than 0, otherwise b theta is 180",
+                              "id": "267.708f717902f199ba"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "21": {
+                  "title": "in R^3",
+                  "id": "272.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "equation of a plane",
+                      "id": "273.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "Ax + By + Cz = D",
+                          "id": "274.708f717902f199ba"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "I stopped here",
+                      "id": "275.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/defining-a-plane-in-r3-with-a-point-and-normal-vector",
+                          "id": "276.708f717902f199ba"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "31": {
+                  "title": "Resources",
+                  "id": "193.708f717902f199ba",
+                  "ideas": {
+                    "2": {
+                      "title": "https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/vectors/v/vector-introduction-linear-algebra",
+                      "id": "206.708f717902f199ba"
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "131.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Vector_space",
+                          "id": "132.2e09b6facfa40a26"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#008080"
+                    },
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "Definition",
+                  "id": "143.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Has a Direction",
+                      "id": "144.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Used to store offsets displacements and locations",
+                      "id": "63.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Positions should be vectors",
+                      "id": "68.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "A one column martix",
+                      "id": "145.2e09b6facfa40a26"
+                    },
+                    "5": {
+                      "title": "for example",
+                      "id": "283.47b6381ab11d9c61",
+                      "ideas": {
+                        "1": {
+                          "title": "[1\n1]",
+                          "id": "284.47b6381ab11d9c61",
+                          "ideas": {
+                            "1": {
+                              "title": "means start from (0,0) and then move 1 towards x and 1 towards y",
+                              "id": "285.47b6381ab11d9c61"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      70,
+                      -179,
+                      1
+                    ],
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "62.2e09b6facfa40a26",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Coordinate systems",
+              "ideas": {
+                "1": {
+                  "title": "we use right handed coordinates",
+                  "id": "75.2e09b6facfa40a26"
+                },
+                "2": {
+                  "title": "you use your right hand to move from vector a to vector b",
+                  "id": "148.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "you use the same principle but inverse your hand to move from b to a",
+                      "id": "149.708f717902f199ba"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "many coordinate systems in graphics: in relation to world, model, body, arms",
+                  "id": "150.708f717902f199ba"
+                },
+                "4": {
+                  "title": "polar coordinates",
+                  "id": "173.708f717902f199ba"
+                },
+                "5": {
+                  "title": "cartesian coordinates",
+                  "id": "174.708f717902f199ba"
+                },
+                "6": {
+                  "title": "Coordinate Systems",
+                  "id": "88.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Global",
+                      "id": "89.2e09b6facfa40a26"
+                    },
+                    "2": {
+                      "title": "Local",
+                      "id": "90.2e09b6facfa40a26"
+                    },
+                    "3": {
+                      "title": "World",
+                      "id": "91.2e09b6facfa40a26"
+                    },
+                    "4": {
+                      "title": "Model",
+                      "id": "92.2e09b6facfa40a26",
+                      "ideas": {}
+                    },
+                    "5": {
+                      "title": "Parts of a model",
+                      "id": "94.2e09b6facfa40a26",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "R^2",
+                  "id": "147.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "Real Coordinate Space",
+                      "id": "202.708f717902f199ba"
+                    },
+                    "2": {
+                      "title": "all possible real valued 2-tuples",
+                      "id": "203.708f717902f199ba"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "R^3",
+                  "id": "204.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "all possible real valued 3-tuples",
+                      "id": "205.708f717902f199ba"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "74.2e09b6facfa40a26",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "Matrix",
+              "id": "97.2e09b6facfa40a26",
+              "ideas": {
+                "4": {
+                  "title": "to do Transformations",
+                  "id": "104.2e09b6facfa40a26",
+                  "ideas": {
+                    "2": {
+                      "title": "Rotation",
+                      "id": "101.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Scale",
+                      "id": "103.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "Shear",
+                      "id": "102.2e09b6facfa40a26",
+                      "attr": {}
+                    },
+                    "5": {
+                      "title": "Reflection",
+                      "id": "125.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "in 2d access about y-axis",
+                          "id": "126.2e09b6facfa40a26",
+                          "ideas": {
+                            "1": {
+                              "title": "[-1 0\n0 1]",
+                              "id": "127.2e09b6facfa40a26",
+                              "ideas": {
+                                "1": {
+                                  "title": "*",
+                                  "id": "128.2e09b6facfa40a26",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "[x\ny]",
+                                      "id": "129.2e09b6facfa40a26",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "[-x\ny]",
+                                          "id": "130.2e09b6facfa40a26"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Array of numbers",
+                  "id": "105.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "MxN",
+                      "id": "106.2e09b6facfa40a26"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Vectors are special cases of matrix",
+                  "id": "108.2e09b6facfa40a26",
+                  "ideas": {},
+                  "attr": {}
+                },
+                "7": {
+                  "title": "Multiplication",
+                  "id": "110.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "number of columns have to be the number of rows in second",
+                      "id": "111.2e09b6facfa40a26"
+                    },
+                    "2": {
+                      "title": "if we have two matrices ar*ac and br*bc",
+                      "id": "112.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "if we multiply them we will get ar * bc",
+                          "id": "113.2e09b6facfa40a26"
+                        },
+                        "2": {
+                          "title": "the way we multiply is",
+                          "id": "114.2e09b6facfa40a26",
+                          "ideas": {
+                            "1": {
+                              "title": "take ar1 and multiply it by bc1-a and bc1-b and combine them",
+                              "id": "115.2e09b6facfa40a26",
+                              "ideas": {}
+                            },
+                            "3": {
+                              "title": "take ar2 and multiply it by bc2-a and bc2-b and combine them",
+                              "id": "117.2e09b6facfa40a26",
+                              "attr": {}
+                            },
+                            "4": {
+                              "title": "and so on",
+                              "id": "120.2e09b6facfa40a26",
+                              "ideas": {
+                                "1": {
+                                  "title": "just increase ar by one and bc by 1",
+                                  "id": "121.2e09b6facfa40a26"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Non-Commutative",
+                      "id": "122.2e09b6facfa40a26"
+                    },
+                    "4": {
+                      "title": "Associative",
+                      "id": "123.2e09b6facfa40a26"
+                    },
+                    "5": {
+                      "title": "Distributive",
+                      "id": "124.2e09b6facfa40a26"
+                    },
+                    "6": {
+                      "title": "break down a matrix into vectors and think of multiplying by a matrix as a \"transformation\"",
+                      "id": "332.035c.03eea4fb3-d735.95426016e"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Identity Matrix",
+                  "id": "133.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "A*A^-1",
+                      "id": "135.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "=",
+                          "id": "136.2e09b6facfa40a26",
+                          "ideas": {
+                            "1": {
+                              "title": "A^-1*A",
+                              "id": "137.2e09b6facfa40a26",
+                              "ideas": {
+                                "1": {
+                                  "title": "Commutative",
+                                  "id": "138.2e09b6facfa40a26"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Inverse",
+                  "id": "134.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "(AB)^-1",
+                      "id": "139.2e09b6facfa40a26",
+                      "ideas": {
+                        "1": {
+                          "title": "=",
+                          "id": "140.2e09b6facfa40a26",
+                          "ideas": {
+                            "1": {
+                              "title": "B^-1*A^-1",
+                              "id": "141.2e09b6facfa40a26"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "you reverse the order",
+                          "id": "142.2e09b6facfa40a26"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "Orthoganal",
+                  "id": "187.708f717902f199ba"
+                },
+                "11": {
+                  "title": "Resources",
+                  "id": "321.035c.03eea4fb3-d735.95426016e",
+                  "ideas": {
+                    "1": {
+                      "title": "https://matrixcalc.org/en/",
+                      "id": "322.035c.03eea4fb3-d735.95426016e"
+                    },
+                    "2": {
+                      "title": "https://betterexplained.com/articles/matrix-multiplication/",
+                      "id": "323.035c.03eea4fb3-d735.95426016e",
+                      "ideas": {
+                        "1": {
+                          "title": "really good intuition",
+                          "id": "324.035c.03eea4fb3-d735.95426016e",
+                          "ideas": {
+                            "1": {
+                              "title": "data is code and code is data",
+                              "id": "325.035c.03eea4fb3-d735.95426016e"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "intuition",
+                      "id": "329.035c.03eea4fb3-d735.95426016e",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=XkY2DOUCWMU&t=1s",
+                          "id": "330.035c.03eea4fb3-d735.95426016e"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "code as data and data as code",
+                      "id": "331.035c.03eea4fb3-d735.95426016e"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "Transformations",
+              "id": "151.708f717902f199ba",
+              "ideas": {
+                "1": {
+                  "title": "2d",
+                  "id": "152.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "rotation",
+                      "id": "158.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "simple",
+                          "id": "169.708f717902f199ba"
+                        },
+                        "2": {
+                          "title": "the order doesn't matter",
+                          "id": "172.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "it's communtative",
+                              "id": "191.708f717902f199ba"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "scale",
+                      "id": "159.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "scale matrix",
+                          "id": "161.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "[sx 0\n0 sy]",
+                              "id": "162.708f717902f199ba"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "shear",
+                      "id": "160.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "take a shape and turn it into a parallelogram ",
+                          "id": "164.708f717902f199ba"
+                        },
+                        "3": {
+                          "title": "martix",
+                          "id": "166.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "[1 a\n0 1 ]",
+                              "id": "165.708f717902f199ba",
+                              "attr": {}
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "s^-1",
+                          "id": "167.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "[1 -a\n0 1]",
+                              "id": "168.708f717902f199ba"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "3d",
+                  "id": "153.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "Rotations",
+                      "id": "171.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "complicated",
+                          "id": "170.708f717902f199ba",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "composing transforms",
+                  "id": "176.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "order matters",
+                      "id": "177.708f717902f199ba",
+                      "ideas": {},
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "since we multiply them",
+                      "id": "180.708f717902f199ba"
+                    },
+                    "3": {
+                      "title": "inverting",
+                      "id": "182.708f717902f199ba",
+                      "ideas": {
+                        "1": {
+                          "title": "find the composite matrix and then inverse that matrix",
+                          "id": "183.708f717902f199ba",
+                          "ideas": {
+                            "1": {
+                              "title": "M = M1*M2*M3",
+                              "id": "184.708f717902f199ba"
+                            },
+                            "2": {
+                              "title": "M^-1",
+                              "id": "185.708f717902f199ba",
+                              "ideas": {
+                                "1": {
+                                  "title": "M3^-1*M2^-1*M3^-1",
+                                  "id": "186.708f717902f199ba"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "rotation then scale is equal to shear",
+                  "id": "181.708f717902f199ba",
+                  "attr": {}
+                },
+                "5": {
+                  "title": "Resources",
+                  "id": "343.e451.f4c0a2531-4148.e1fda35ca",
+                  "ideas": {
+                    "2": {
+                      "title": "Matrix transformation",
+                      "id": "345.e451.f4c0a2531-4148.e1fda35ca",
+                      "ideas": {
+                        "1": {
+                          "title": "https://threejs.org/docs/#manual/en/introduction/Matrix-transformations",
+                          "id": "346.e451.f4c0a2531-4148.e1fda35ca"
+                        },
+                        "2": {
+                          "title": "Threejs doc for matrix with a follow up tutorial on transformation matrixes",
+                          "id": "344.e451.f4c0a2531-4148.e1fda35ca",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "21": {
+              "title": "Game Programming",
+              "id": "280.e16f9f833e949d9",
+              "attr": {}
+            },
+            "22": {
+              "title": "Animation",
+              "id": "281.e16f9f833e949d9",
+              "ideas": {
+                "1": {
+                  "title": "Tweening",
+                  "id": "282.e16f9f833e949d9",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "23": {
+              "title": "Terms I don't know",
+              "id": "287.47b6381ab11d9c61",
+              "ideas": {
+                "3": {
+                  "title": "Transpose",
+                  "id": "290.47b6381ab11d9c61"
+                },
+                "4": {
+                  "title": "orthogonal",
+                  "id": "291.47b6381ab11d9c61"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "25": {
+              "title": "Polygons",
+              "id": "314.4d9d.b9c69a731-fe06.6592c48dd",
+              "ideas": {
+                "1": {
+                  "title": "Why use traingles",
+                  "id": "315.4d9d.b9c69a731-fe06.6592c48dd",
+                  "ideas": {
+                    "1": {
+                      "title": "Because you can translate them in 3d space without distorting the shape",
+                      "id": "316.4d9d.b9c69a731-fe06.6592c48dd"
+                    },
+                    "2": {
+                      "title": "they have 3 vertices",
+                      "id": "317.4d9d.b9c69a731-fe06.6592c48dd"
+                    },
+                    "3": {
+                      "title": "Any shape can be approximated using triangles",
+                      "id": "318.4d9d.b9c69a731-fe06.6592c48dd",
+                      "ideas": {
+                        "1": {
+                          "title": "Specially a lot of them",
+                          "id": "319.4d9d.b9c69a731-fe06.6592c48dd"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "26": {
+              "title": "World Space and Local Space",
+              "id": "320.4d9d.b9c69a731-fe06.6592c48dd",
+              "attr": {}
+            },
+            "31": {
+              "title": "Quaternion",
+              "id": "347.e451.f4c0a2531-4148.e1fda35ca",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Quaternion",
+                  "id": "348.e451.f4c0a2531-4148.e1fda35ca"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "36": {
+              "title": "Third Party",
+              "id": "292.47b6381ab11d9c61",
+              "ideas": {
+                "1": {
+                  "title": "OpenGL",
+                  "id": "293.47b6381ab11d9c61",
+                  "ideas": {
+                    "3": {
+                      "title": "It's a standard",
+                      "id": "297.47b6381ab11d9c61",
+                      "ideas": {
+                        "1": {
+                          "title": "others are",
+                          "id": "298.47b6381ab11d9c61",
+                          "ideas": {
+                            "1": {
+                              "title": "Direct X",
+                              "id": "299.47b6381ab11d9c61"
+                            },
+                            "2": {
+                              "title": "Webgl",
+                              "id": "305.47b6381ab11d9c61"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "but they are related",
+                          "id": "301.47b6381ab11d9c61"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Features",
+                      "id": "302.47b6381ab11d9c61",
+                      "ideas": {
+                        "1": {
+                          "title": "it can fit in any places",
+                          "id": "303.47b6381ab11d9c61"
+                        },
+                        "2": {
+                          "title": "it's an abstraction layer with what happens to the graphics card",
+                          "id": "304.47b6381ab11d9c61"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "14": {
+                      "title": "Resources",
+                      "id": "295.47b6381ab11d9c61",
+                      "ideas": {
+                        "1": {
+                          "title": "EDX Course",
+                          "id": "296.47b6381ab11d9c61",
+                          "ideas": {
+                            "1": {
+                              "title": "https://courses.edx.org/courses/course-v1:UCSDx+CSE167x+2T2016/courseware/Unit_2/L6/",
+                              "id": "294.47b6381ab11d9c61",
+                              "attr": {}
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "WebGL",
+                  "id": "307.47b6381ab11d9c61",
+                  "ideas": {
+                    "1": {
+                      "title": "Threejs",
+                      "id": "310.69b5.8ee2872f4-1892.534d5ef7a"
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": "311.69b5.8ee2872f4-1892.534d5ef7a",
+                      "ideas": {
+                        "1": {
+                          "title": "Threejs Mindmap",
+                          "id": "312.69b5.8ee2872f4-1892.534d5ef7a",
+                          "ideas": {
+                            "1": {
+                              "title": "https://drive.google.com/file/d/1j7ma9y_zKOULwR87lWYbESuud2V0GDkO/view?usp=sharing",
+                              "id": "313.69b5.8ee2872f4-1892.534d5ef7a"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Blender",
+                  "id": "334.19ae.ce2c088eb-1b27.10707959d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/playlist?list=PLa1F2ddGya_-UvuAqHAksYnB0qL9yWDO6",
+                      "id": "335.19ae.ce2c088eb-1b27.10707959d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              194,
+              0,
+              1
+            ]
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.48f5eda5f81265cc",
+          "ideas": {
+            "1": {
+              "title": "Tutorials",
+              "id": "4.48f5eda5f81265cc",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=t5qSplM9XRo",
+                  "id": "5.48f5eda5f81265cc"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Game programming",
+              "id": "9.48f5eda5f81265cc",
+              "ideas": {
+                "1": {
+                  "title": "p5.js",
+                  "id": "10.48f5eda5f81265cc",
+                  "ideas": {
+                    "1": {
+                      "title": "https://p5js.org/",
+                      "id": "11.48f5eda5f81265cc"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Edx Course",
+              "id": "12.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "https://courses.edx.org/dashboard",
+                  "id": "13.2e09b6facfa40a26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Link to external mindmaps",
+              "id": "25.2e09b6facfa40a26",
+              "ideas": {
+                "1": {
+                  "title": "VR",
+                  "id": "21.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrSlNfUjZNTEpfMjA",
+                      "id": "23.2e09b6facfa40a26"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Geometry",
+                  "id": "38.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrTmJtY3NULWFYaWc/view?usp=sharing",
+                      "id": "39.2e09b6facfa40a26"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Physics",
+                  "id": "60.2e09b6facfa40a26",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrMWZ6dHNMckY4WDA/view?usp=sharing",
+                      "id": "61.2e09b6facfa40a26"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "math",
+                  "id": "192.708f717902f199ba",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrdjFNLWd3R0Fpa3M/view?usp=sharing",
+                      "id": "286.47b6381ab11d9c61"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "webgl",
+                  "id": "308.47b6381ab11d9c61",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrMkZtNDJvTFZMT3c/view?usp=sharing",
+                      "id": "309.47b6381ab11d9c61"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#008080"
+                },
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Nice videos on creating games with unity",
+              "id": "277.e16f9f833e949d9",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA",
+                  "id": "278.e16f9f833e949d9",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Khronos",
+              "id": "336.256a.5a33193a5-2327.9de44c119",
+              "ideas": {
+                "1": {
+                  "title": "https://www.khronos.org/gltf/",
+                  "id": "337.256a.5a33193a5-2327.9de44c119"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Crash Course",
+              "id": "338.e153.37f3e7d03-c686.24f3f4faf",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=TEAtmCYYKZA",
+                  "id": "339.e153.37f3e7d03-c686.24f3f4faf"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Basic concepts in transformation",
+              "id": "341.e153.37f3e7d03-c686.24f3f4faf",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=vQ60rFwh2ig&t=5s",
+                  "id": "342.e153.37f3e7d03-c686.24f3f4faf"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Graphics Programming",
+  "links": []
+}

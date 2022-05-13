@@ -1,0 +1,23 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Spanish",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.6a920fca0383c5a2"
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.6a920fca0383c5a2"
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Spanish"
+}

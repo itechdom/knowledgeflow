@@ -1,0 +1,1086 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Geography",
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.3692f3ffba8149d8",
+          "ideas": {
+            "1": {
+              "title": "Continents",
+              "id": "4.3692f3ffba8149d8",
+              "ideas": {
+                "7": {
+                  "title": "Includes",
+                  "id": "14.3692f3ffba8149d8",
+                  "ideas": {
+                    "1": {
+                      "title": "Asia",
+                      "id": "7.3692f3ffba8149d8",
+                      "ideas": {
+                        "7": {
+                          "title": "Iran",
+                          "id": "91.21bf61ee609c2895",
+                          "ideas": {
+                            "4": {
+                              "title": "Borders",
+                              "id": "150.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "Turkmenistan",
+                                  "id": "93.21bf61ee609c2895",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Uzbekistan",
+                                      "id": "112.21bf61ee609c2895",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Tajikstan",
+                                          "id": "113.21bf61ee609c2895"
+                                        },
+                                        "2": {
+                                          "title": "Kyrgyztan",
+                                          "id": "115.21bf61ee609c2895"
+                                        },
+                                        "3": {
+                                          "title": "Kazakhstan",
+                                          "id": "117.21bf61ee609c2895",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Russia",
+                                              "id": "118.21bf61ee609c2895"
+                                            },
+                                            "2": {
+                                              "title": "Mangolia",
+                                              "id": "119.21bf61ee609c2895"
+                                            },
+                                            "3": {
+                                              "title": "China",
+                                              "id": "120.21bf61ee609c2895",
+                                              "ideas": {
+                                                "4": {
+                                                  "title": "Borders",
+                                                  "id": "128.21bf61ee609c2895",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "North Korea",
+                                                      "id": "121.21bf61ee609c2895",
+                                                      "attr": {},
+                                                      "ideas": {
+                                                        "1": {
+                                                          "title": "South Korea",
+                                                          "id": "122.21bf61ee609c2895",
+                                                          "ideas": {
+                                                            "1": {
+                                                              "title": "Japan",
+                                                              "id": "123.21bf61ee609c2895"
+                                                            }
+                                                          },
+                                                          "attr": {}
+                                                        }
+                                                      }
+                                                    },
+                                                    "2": {
+                                                      "title": "Taiwan",
+                                                      "id": "124.21bf61ee609c2895",
+                                                      "attr": {}
+                                                    }
+                                                  }
+                                                },
+                                                "6": {
+                                                  "title": "Resources",
+                                                  "id": "130.21bf61ee609c2895",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "Evolution of china",
+                                                      "id": "131.21bf61ee609c2895",
+                                                      "ideas": {
+                                                        "1": {
+                                                          "title": "https://en.wikipedia.org/wiki/File:Territories_of_Dynasties_in_China.gif",
+                                                          "id": "132.21bf61ee609c2895"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "5.5": {
+                                                  "title": "Confucius",
+                                                  "id": "133.21bf61ee609c2895",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "https://en.wikipedia.org/wiki/Confucius",
+                                                      "id": "134.21bf61ee609c2895"
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "Afghanistan",
+                                  "id": "94.21bf61ee609c2895",
+                                  "attr": {}
+                                },
+                                "3": {
+                                  "title": "Pakistan",
+                                  "id": "95.21bf61ee609c2895",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "India",
+                                      "id": "99.21bf61ee609c2895",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Bangladish",
+                                          "id": "100.21bf61ee609c2895",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Myanamar",
+                                              "id": "103.21bf61ee609c2895",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "Laos",
+                                                  "id": "104.21bf61ee609c2895"
+                                                },
+                                                "2": {
+                                                  "title": "Thailand",
+                                                  "id": "105.21bf61ee609c2895"
+                                                },
+                                                "3": {
+                                                  "title": "Cambodia",
+                                                  "id": "106.21bf61ee609c2895",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "Malaysia",
+                                                      "id": "109.21bf61ee609c2895",
+                                                      "ideas": {
+                                                        "1": {
+                                                          "title": "Indonesia",
+                                                          "id": "111.21bf61ee609c2895"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "4": {
+                                                  "title": "Vietnam",
+                                                  "id": "108.21bf61ee609c2895"
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "2": {
+                                          "title": "Nepal",
+                                          "id": "101.21bf61ee609c2895"
+                                        },
+                                        "3": {
+                                          "title": "Bhutan",
+                                          "id": "102.21bf61ee609c2895"
+                                        },
+                                        "4": {
+                                          "title": "Sri-lanka",
+                                          "id": "110.21bf61ee609c2895"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "5": {
+                              "title": "Resources",
+                              "id": "151.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Iran",
+                                  "id": "152.21bf61ee609c2895"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "9": {
+                          "title": "Russia",
+                          "id": "97.21bf61ee609c2895",
+                          "attr": {}
+                        },
+                        "12": {
+                          "title": "Georgia",
+                          "id": "90.21bf61ee609c2895",
+                          "attr": {},
+                          "ideas": {}
+                        },
+                        "13": {
+                          "title": "Armenia",
+                          "id": "89.21bf61ee609c2895",
+                          "attr": {}
+                        },
+                        "14": {
+                          "title": "Turkey",
+                          "id": "86.21bf61ee609c2895",
+                          "attr": {}
+                        },
+                        "24": {
+                          "title": "Azerbijan",
+                          "id": "87.21bf61ee609c2895",
+                          "attr": {
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "3": {
+                              "title": "Nagorno-Karabakh war",
+                              "id": "138.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Nagorno-Karabakh_War",
+                                  "id": "136.21bf61ee609c2895",
+                                  "ideas": {},
+                                  "attr": {}
+                                },
+                                "2": {
+                                  "title": "name of a region and it broke away from the country",
+                                  "id": "147.21bf61ee609c2895"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "had wars between it and Armenia",
+                              "id": "139.21bf61ee609c2895"
+                            },
+                            "5": {
+                              "title": "has a percentage of Armenians",
+                              "id": "141.21bf61ee609c2895"
+                            },
+                            "6": {
+                              "title": "Former Soviet state",
+                              "id": "142.21bf61ee609c2895",
+                              "attr": {
+                                "style": {
+                                  "width": 110
+                                }
+                              }
+                            },
+                            "17": {
+                              "title": "Resources",
+                              "id": "145.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://en.wikipedia.org/wiki/Azerbaijan",
+                                  "id": "135.21bf61ee609c2895",
+                                  "attr": {}
+                                },
+                                "2": {
+                                  "title": "Outline",
+                                  "id": "148.21bf61ee609c2895",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://en.wikipedia.org/wiki/Outline_of_Azerbaijan",
+                                      "id": "149.21bf61ee609c2895"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "0.5": {
+                              "title": "Capital",
+                              "id": "144.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "Baku",
+                                  "id": "143.21bf61ee609c2895",
+                                  "attr": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "34": {
+                          "title": "Resources",
+                          "id": "125.21bf61ee609c2895",
+                          "ideas": {
+                            "1": {
+                              "title": "Map of Asia",
+                              "id": "126.21bf61ee609c2895",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://www.mapsofworld.com/asia/",
+                                  "id": "127.21bf61ee609c2895"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "35": {
+                          "title": "Regions",
+                          "id": "267.67f96bbf1c3356fd",
+                          "ideas": {
+                            "1": {
+                              "title": "Caucasus",
+                              "id": "268.67f96bbf1c3356fd"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "North America",
+                      "id": "5.3692f3ffba8149d8",
+                      "attr": {},
+                      "ideas": {}
+                    },
+                    "4": {
+                      "title": "South America",
+                      "id": "6.3692f3ffba8149d8",
+                      "attr": {}
+                    },
+                    "5": {
+                      "title": "Antarcitca",
+                      "id": "11.3692f3ffba8149d8",
+                      "attr": {}
+                    },
+                    "6": {
+                      "title": "Europe",
+                      "id": "9.3692f3ffba8149d8",
+                      "ideas": {
+                        "1": {
+                          "title": "From Spain on the western coast of europe",
+                          "id": "219.67f96bbf1c3356fd",
+                          "ideas": {
+                            "1": {
+                              "title": "West Europe",
+                              "id": "220.67f96bbf1c3356fd",
+                              "ideas": {
+                                "1": {
+                                  "title": "Portugal",
+                                  "id": "222.67f96bbf1c3356fd"
+                                },
+                                "2": {
+                                  "title": "Spain",
+                                  "id": "224.67f96bbf1c3356fd"
+                                },
+                                "3": {
+                                  "title": "France",
+                                  "id": "225.67f96bbf1c3356fd"
+                                },
+                                "4": {
+                                  "title": "United Kingdom",
+                                  "id": "227.67f96bbf1c3356fd"
+                                },
+                                "5": {
+                                  "title": "Ireland",
+                                  "id": "228.67f96bbf1c3356fd"
+                                },
+                                "6": {
+                                  "title": "Belgium",
+                                  "id": "229.67f96bbf1c3356fd"
+                                },
+                                "7": {
+                                  "title": "Netherlands",
+                                  "id": "230.67f96bbf1c3356fd"
+                                },
+                                "8": {
+                                  "title": "Germany",
+                                  "id": "231.67f96bbf1c3356fd"
+                                },
+                                "9": {
+                                  "title": "Switzerland",
+                                  "id": "234.67f96bbf1c3356fd"
+                                },
+                                "10": {
+                                  "title": "Austria",
+                                  "id": "235.67f96bbf1c3356fd"
+                                },
+                                "11": {
+                                  "title": "Italy",
+                                  "id": "236.67f96bbf1c3356fd"
+                                }
+                              },
+                              "attr": {
+                                "style": {
+                                  "width": 68
+                                },
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "East Europe",
+                              "id": "221.67f96bbf1c3356fd",
+                              "ideas": {
+                                "1": {
+                                  "title": "Czech",
+                                  "id": "238.67f96bbf1c3356fd"
+                                },
+                                "2": {
+                                  "title": "Slovakia",
+                                  "id": "239.67f96bbf1c3356fd"
+                                },
+                                "3": {
+                                  "title": "Hungary",
+                                  "id": "240.67f96bbf1c3356fd"
+                                },
+                                "4": {
+                                  "title": "Croatia",
+                                  "id": "241.67f96bbf1c3356fd"
+                                },
+                                "5": {
+                                  "title": "Bosnia and Hergozovina",
+                                  "id": "242.67f96bbf1c3356fd"
+                                },
+                                "6": {
+                                  "title": "Serbia",
+                                  "id": "243.67f96bbf1c3356fd"
+                                },
+                                "7": {
+                                  "title": "Macedonia",
+                                  "id": "244.67f96bbf1c3356fd"
+                                },
+                                "8": {
+                                  "title": "Albania",
+                                  "id": "245.67f96bbf1c3356fd"
+                                },
+                                "9": {
+                                  "title": "Bulgaria",
+                                  "id": "248.67f96bbf1c3356fd"
+                                },
+                                "10": {
+                                  "title": "Greece",
+                                  "id": "249.67f96bbf1c3356fd"
+                                },
+                                "11": {
+                                  "title": "Romania",
+                                  "id": "250.67f96bbf1c3356fd",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=HVJ1zpBhIMo",
+                                      "id": "288.7b7395f83c518c33"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "12": {
+                                  "title": "Ukraine",
+                                  "id": "251.67f96bbf1c3356fd"
+                                },
+                                "13": {
+                                  "title": "Poland",
+                                  "id": "252.67f96bbf1c3356fd"
+                                },
+                                "14": {
+                                  "title": "Lithuania",
+                                  "id": "253.67f96bbf1c3356fd"
+                                },
+                                "15": {
+                                  "title": "Latvia",
+                                  "id": "255.67f96bbf1c3356fd"
+                                },
+                                "16": {
+                                  "title": "Estonia",
+                                  "id": "256.67f96bbf1c3356fd"
+                                },
+                                "17": {
+                                  "title": "Belarus",
+                                  "id": "257.67f96bbf1c3356fd",
+                                  "ideas": {
+                                    "2": {
+                                      "title": "Capital",
+                                      "id": "276.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Minsk",
+                                          "id": "277.67f96bbf1c3356fd"
+                                        }
+                                      }
+                                    },
+                                    "3": {
+                                      "title": "it has a dictatorship",
+                                      "id": "278.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "one of the last in europe",
+                                          "id": "285.67f96bbf1c3356fd"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "4": {
+                                      "title": "had wars with poland ",
+                                      "id": "279.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "lost some territory",
+                                          "id": "284.67f96bbf1c3356fd"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "5": {
+                                      "title": "was devestated by WWII",
+                                      "id": "280.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "lost third of its population",
+                                          "id": "282.67f96bbf1c3356fd"
+                                        },
+                                        "2": {
+                                          "title": "half of its resources",
+                                          "id": "283.67f96bbf1c3356fd"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "6": {
+                                      "title": "Questions",
+                                      "id": "286.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "do all russian common wealth share an organization",
+                                          "id": "287.67f96bbf1c3356fd"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "16": {
+                                      "title": "Resources",
+                                      "id": "271.67f96bbf1c3356fd",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Wikipedia",
+                                          "id": "274.67f96bbf1c3356fd",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "https://en.wikipedia.org/wiki/Belarus",
+                                              "id": "275.67f96bbf1c3356fd"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "5.5": {
+                                  "title": "Montenegro",
+                                  "id": "262.67f96bbf1c3356fd"
+                                },
+                                "5.75": {
+                                  "title": "Kosovo",
+                                  "id": "264.67f96bbf1c3356fd"
+                                },
+                                "11.5": {
+                                  "title": "Maldova",
+                                  "id": "265.67f96bbf1c3356fd"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "Scandanavia",
+                              "id": "237.67f96bbf1c3356fd",
+                              "ideas": {
+                                "1": {
+                                  "title": "Denmark",
+                                  "id": "258.67f96bbf1c3356fd"
+                                },
+                                "2": {
+                                  "title": "Norway",
+                                  "id": "259.67f96bbf1c3356fd"
+                                },
+                                "3": {
+                                  "title": "Sweden",
+                                  "id": "260.67f96bbf1c3356fd"
+                                },
+                                "4": {
+                                  "title": "Finland",
+                                  "id": "261.67f96bbf1c3356fd"
+                                },
+                                "5": {
+                                  "title": "Iceland",
+                                  "id": "269.67f96bbf1c3356fd"
+                                },
+                                "6": {
+                                  "title": "Greenland",
+                                  "id": "270.67f96bbf1c3356fd"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Australia",
+                      "id": "10.3692f3ffba8149d8",
+                      "ideas": {
+                        "1": {
+                          "title": "new zealand seems to be part of Australasia and Oceania.",
+                          "id": "13.3692f3ffba8149d8"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2.5": {
+                      "title": "Africa",
+                      "id": "154.58bedab62d4775e7",
+                      "ideas": {
+                        "1": {
+                          "title": "Egypt",
+                          "id": "155.58bedab62d4775e7",
+                          "ideas": {
+                            "1": {
+                              "title": "Libya",
+                              "id": "156.58bedab62d4775e7",
+                              "ideas": {
+                                "1": {
+                                  "title": "Algeria",
+                                  "id": "159.58bedab62d4775e7",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Morocco",
+                                      "id": "161.58bedab62d4775e7"
+                                    },
+                                    "2": {
+                                      "title": "Mali",
+                                      "id": "163.58bedab62d4775e7",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Guinea",
+                                          "id": "170.58bedab62d4775e7",
+                                          "ideas": {
+                                            "3": {
+                                              "title": "Borders",
+                                              "id": "209.2036da580f121891",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "Liberia",
+                                                  "id": "172.58bedab62d4775e7",
+                                                  "attr": {}
+                                                },
+                                                "2": {
+                                                  "title": "Sierra Leone",
+                                                  "id": "171.58bedab62d4775e7",
+                                                  "attr": {}
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            },
+                                            "4": {
+                                              "title": "Where does the name Guinea come from?",
+                                              "id": "212.2036da580f121891",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "The word Guinea (Guinée in french) comes from the berber term \"akal-n-iguinaouen\" which means \"country of the black men\".In the past, Africa was called \"Guinea\".",
+                                                  "id": "213.2036da580f121891"
+                                                },
+                                                "2": {
+                                                  "title": "Seems to be disputed",
+                                                  "id": "216.2036da580f121891"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            },
+                                            "5": {
+                                              "title": "Why is Papa new Guinea in the south west pacific called that?",
+                                              "id": "214.2036da580f121891",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "Papua New Guinea, on the other hand, is a country in the southwest Pacific. It was called 'New Guinea' because early European explorers thought it resembled the Guinea region of Africa and so they named it after that region.",
+                                                  "id": "215.2036da580f121891"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            },
+                                            "6": {
+                                              "title": "Resources",
+                                              "id": "217.2036da580f121891",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "https://en.wikipedia.org/wiki/Guinea",
+                                                  "id": "218.2036da580f121891"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "2": {
+                                          "title": "Burkina Faso",
+                                          "id": "174.58bedab62d4775e7",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Togo",
+                                              "id": "176.58bedab62d4775e7"
+                                            },
+                                            "2": {
+                                              "title": "Benin",
+                                              "id": "177.58bedab62d4775e7",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "Nigeria",
+                                                  "id": "178.58bedab62d4775e7",
+                                                  "attr": {}
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "3": {
+                                          "title": "Cote D'Ivoire",
+                                          "id": "173.58bedab62d4775e7",
+                                          "attr": {
+                                            "collapsed": true
+                                          },
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Ghana",
+                                              "id": "175.58bedab62d4775e7"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "3": {
+                                      "title": "Mauritania",
+                                      "id": "164.58bedab62d4775e7",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Senegal",
+                                          "id": "166.58bedab62d4775e7",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Guinea Bissau",
+                                              "id": "167.58bedab62d4775e7",
+                                              "ideas": {}
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "4": {
+                                      "title": "Niger",
+                                      "id": "165.58bedab62d4775e7"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "Niger",
+                                  "id": "162.58bedab62d4775e7"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "Chad",
+                              "id": "157.58bedab62d4775e7",
+                              "ideas": {
+                                "1": {
+                                  "title": "Cameroon",
+                                  "id": "179.58bedab62d4775e7",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Equatorial Guinea",
+                                      "id": "184.2036da580f121891"
+                                    },
+                                    "2": {
+                                      "title": "Gabon",
+                                      "id": "205.2036da580f121891"
+                                    },
+                                    "3": {
+                                      "title": "Congo",
+                                      "id": "206.2036da580f121891"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "Central African Republic",
+                                  "id": "180.58bedab62d4775e7",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Congo",
+                                      "id": "185.2036da580f121891"
+                                    },
+                                    "2": {
+                                      "title": "DRC",
+                                      "id": "186.2036da580f121891",
+                                      "ideas": {
+                                        "2": {
+                                          "title": "Uganda",
+                                          "id": "188.2036da580f121891"
+                                        },
+                                        "3": {
+                                          "title": "Rwanda",
+                                          "id": "189.2036da580f121891"
+                                        },
+                                        "4": {
+                                          "title": "Burundi",
+                                          "id": "190.2036da580f121891"
+                                        },
+                                        "5": {
+                                          "title": "Angola",
+                                          "id": "191.2036da580f121891",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Namibia",
+                                              "id": "200.2036da580f121891"
+                                            },
+                                            "2": {
+                                              "title": "Botswana",
+                                              "id": "201.2036da580f121891",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "South Africa",
+                                                  "id": "204.2036da580f121891"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "6": {
+                                          "title": "Zambia",
+                                          "id": "192.2036da580f121891",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Zimbabwe",
+                                              "id": "202.2036da580f121891"
+                                            },
+                                            "2": {
+                                              "title": "Mozambique",
+                                              "id": "203.2036da580f121891"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "7": {
+                                          "title": "Malawi",
+                                          "id": "193.2036da580f121891"
+                                        },
+                                        "8": {
+                                          "title": "Tanzania",
+                                          "id": "199.2036da580f121891"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "Sudan",
+                              "id": "158.58bedab62d4775e7",
+                              "ideas": {
+                                "1": {
+                                  "title": "Eriteria",
+                                  "id": "194.2036da580f121891"
+                                },
+                                "2": {
+                                  "title": "Ethiopia",
+                                  "id": "195.2036da580f121891",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Somalia",
+                                      "id": "196.2036da580f121891",
+                                      "attr": {}
+                                    }
+                                  }
+                                },
+                                "4": {
+                                  "title": "South Sudan",
+                                  "id": "187.2036da580f121891",
+                                  "attr": {},
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Kenya",
+                                      "id": "197.2036da580f121891"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Off",
+                          "id": "61.21bf61ee609c2895",
+                          "ideas": {
+                            "1": {
+                              "title": "Madagascar ",
+                              "id": "62.21bf61ee609c2895"
+                            },
+                            "2": {
+                              "title": "Seychelles",
+                              "id": "63.21bf61ee609c2895"
+                            },
+                            "3": {
+                              "title": "Mauritius",
+                              "id": "64.21bf61ee609c2895"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "13": {
+                          "title": "Resources",
+                          "ideas": {
+                            "1": {
+                              "title": "Map",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://www.africaguide.com/afmap.htm",
+                                  "id": "183.2036da580f121891"
+                                }
+                              },
+                              "id": "182.2036da580f121891"
+                            }
+                          },
+                          "id": "181.2036da580f121891",
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "8": {
+                  "title": "Resources",
+                  "id": "15.21bf61ee609c2895",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Continent#Definitions_and_application",
+                      "id": "16.21bf61ee609c2895"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.3692f3ffba8149d8"
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Geography",
+  "links": []
+}

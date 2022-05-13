@@ -1,0 +1,35 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "UX",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "3.5c91886258e63de5"
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "4.5c91886258e63de5",
+          "ideas": {
+            "1": {
+              "title": "Apple design principles",
+              "id": "5.5c91886258e63de5",
+              "ideas": {
+                "1": {
+                  "title": "https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/OSXHIGuidelines/Strategies.html#//apple_ref/doc/uid/20000957-CH19-SW1",
+                  "id": "6.5c91886258e63de5"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "UX"
+}

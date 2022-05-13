@@ -1,0 +1,43 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Ramda",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "4.4d328132f2e354ed",
+          "ideas": {
+            "1": {
+              "title": "Map",
+              "id": "8.4d328132f2e354ed"
+            },
+            "2": {
+              "title": "Curry",
+              "id": "10.4d328132f2e354ed"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "5.4d328132f2e354ed",
+          "ideas": {
+            "1": {
+              "title": "http://ramdajs.com/",
+              "id": "6.4d328132f2e354ed"
+            },
+            "2": {
+              "title": "Code Pen",
+              "id": "7.4d328132f2e354ed"
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Ramda"
+}

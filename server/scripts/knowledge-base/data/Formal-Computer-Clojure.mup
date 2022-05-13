@@ -1,0 +1,668 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Clojure",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 176,
+          "ideas": {
+            "6": {
+              "title": "namespaces",
+              "id": 285,
+              "ideas": {
+                "1": {
+                  "title": "everything run in a namespace",
+                  "id": 286
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Code as data",
+              "id": 277,
+              "ideas": {
+                "1": {
+                  "title": "extend the language",
+                  "id": 278
+                },
+                "2": {
+                  "title": "provide your own AST",
+                  "id": 279
+                },
+                "3": {
+                  "title": "Everything is a macro",
+                  "id": "351.415fe69d057f7d07",
+                  "ideas": {
+                    "1": {
+                      "title": "example: defn",
+                      "id": "352.415fe69d057f7d07"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Functions",
+              "id": 291,
+              "ideas": {
+                "2": {
+                  "title": "Defn",
+                  "id": "305.151e8d75c72a8a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://kimh.github.io/clojure-by-example/#defn",
+                      "id": "309.151e8d75c72a8a"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Multi-Variadic Functions",
+                  "id": 292,
+                  "ideas": {
+                    "1": {
+                      "title": "functions that can have different implementations (overrides)",
+                      "id": "307.151e8d75c72a8a"
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre class=\"highlight clojure\" style=\"margin-bottom: 0px; font-family: &quot;Ubuntu Mono&quot;, monospace; font-size: 18.6667px; background: rgb(238, 238, 238); padding: 18pt; overflow-x: auto; line-height: 18pt; color: rgb(34, 34, 34);\"><code style=\"font-family: monospace, serif; font-size: 1em;\"><span class=\"c1\" style=\"color: rgb(153, 153, 136);\">; You can have multi-variadic functions, too\n</span><span class=\"p\">(</span><span class=\"k\" style=\"color: rgb(0, 0, 0); font-weight: 700;\">defn</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"n\" style=\"color: rgb(51, 51, 51);\">hello3</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\">\n  </span><span class=\"p\">([]</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"s\" style=\"color: rgb(208, 16, 64);\">\"Hello World\"</span><span class=\"p\">)</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\">\n  </span><span class=\"p\">([</span><span class=\"nb\" style=\"color: rgb(0, 134, 179); font-weight: 700;\">name</span><span class=\"p\">]</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"p\">(</span><span class=\"nb\" style=\"color: rgb(0, 134, 179); font-weight: 700;\">str</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"s\" style=\"color: rgb(208, 16, 64);\">\"Hello \"</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"nb\" style=\"color: rgb(0, 134, 179); font-weight: 700;\">name</span><span class=\"p\">)))</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\">\n</span><span class=\"p\">(</span><span class=\"nf\" style=\"color: rgb(153, 0, 0); font-weight: 700;\">hello3</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"s\" style=\"color: rgb(208, 16, 64);\">\"Jake\"</span><span class=\"p\">)</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"c1\" style=\"color: rgb(153, 153, 136);\">; =&gt; \"Hello Jake\"\n</span><span class=\"p\">(</span><span class=\"nf\" style=\"color: rgb(153, 0, 0); font-weight: 700;\">hello3</span><span class=\"p\">)</span><span class=\"w\" style=\"color: rgb(187, 187, 187);\"> </span><span class=\"c1\" style=\"color: rgb(153, 153, 136);\">; =&gt; \"Hello World\"</span></code></pre>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "14": {
+                  "title": "Annonymous functions",
+                  "id": "310.151e8d75c72a8a",
+                  "ideas": {
+                    "1": {
+                      "title": "#",
+                      "id": "311.151e8d75c72a8a"
+                    },
+                    "2": {
+                      "title": "Example",
+                      "id": "312.151e8d75c72a8a",
+                      "ideas": {
+                        "1": {
+                          "title": "#(+ 1 2)",
+                          "id": "313.151e8d75c72a8a"
+                        },
+                        "2": {
+                          "title": "(let [plus #(+ 1 %)]\n         (plus 10))",
+                          "id": "314.151e8d75c72a8a",
+                          "attr": {
+                            "position": [
+                              16,
+                              3,
+                              1
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "24": {
+              "title": "Collections",
+              "id": "339.3a6561e045326f8d",
+              "ideas": {
+                "1": {
+                  "title": "Operations",
+                  "id": "340.3a6561e045326f8d",
+                  "ideas": {
+                    "1": {
+                      "title": "Map",
+                      "id": "341.3a6561e045326f8d"
+                    },
+                    "2": {
+                      "title": "Filter ",
+                      "id": "342.3a6561e045326f8d"
+                    },
+                    "3": {
+                      "title": "Reduce",
+                      "id": "343.3a6561e045326f8d",
+                      "ideas": {
+                        "1": {
+                          "title": "https://clojuredocs.org/clojure.core/reduce",
+                          "id": "345.3a6561e045326f8d"
+                        },
+                        "2": {
+                          "title": "with conj you can convert between different collection types",
+                          "id": "350.3a6561e045326f8d",
+                          "attr": {
+                            "note": {
+                              "index": 65,
+                              "text": ";converting a vector to a set\n(reduce conj #{} [:a :b :c])"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Reverse",
+                      "id": "344.3a6561e045326f8d"
+                    },
+                    "5": {
+                      "title": "conj",
+                      "id": "346.3a6561e045326f8d",
+                      "ideas": {
+                        "1": {
+                          "title": "https://clojuredocs.org/clojure.core/conj",
+                          "id": "347.3a6561e045326f8d"
+                        },
+                        "2": {
+                          "title": "if it's a vector it adds to the end of the list",
+                          "id": "348.3a6561e045326f8d"
+                        },
+                        "3": {
+                          "title": "if it's a list it adds it to the beginning",
+                          "id": "349.3a6561e045326f8d"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Vectors",
+                  "id": "331.3a6561e045326f8d",
+                  "ideas": {
+                    "1": {
+                      "title": "[1 2 3]",
+                      "id": "333.3a6561e045326f8d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Sequences",
+                  "id": "323.4a45a059367f8809",
+                  "ideas": {
+                    "2": {
+                      "title": "Resources",
+                      "id": "325.4a45a059367f8809",
+                      "ideas": {
+                        "1": {
+                          "title": "API",
+                          "id": "326.4a45a059367f8809",
+                          "ideas": {
+                            "1": {
+                              "title": "https://clojure.github.io/clojure/",
+                              "id": "327.4a45a059367f8809"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Clojure site",
+                          "id": "329.4a45a059367f8809",
+                          "ideas": {
+                            "1": {
+                              "title": "https://clojure.org/reference/sequences",
+                              "id": "330.4a45a059367f8809"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "https://clojure.org/reference/sequences",
+                          "id": "324.4a45a059367f8809",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "0.5": {
+                      "title": "Lists",
+                      "id": "332.3a6561e045326f8d",
+                      "ideas": {
+                        "1": {
+                          "title": "'(1 2 3)",
+                          "id": "334.3a6561e045326f8d",
+                          "attr": {}
+                        }
+                      }
+                    },
+                    "1.25": {
+                      "title": "they only provide data when accessed, meaning you can have an infinite list",
+                      "id": "354.415fe69d057f7d07"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "35": {
+              "title": "Advanced",
+              "id": "300.151e8d75c72a8a",
+              "ideas": {
+                "1": {
+                  "title": "Keywords",
+                  "id": 261,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Destructuring",
+                  "id": 269,
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.tutorialspoint.com/clojure/clojure_destructuring.htm",
+                      "id": 270
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Serialization",
+                  "id": 282,
+                  "ideas": {
+                    "1": {
+                      "title": "resources",
+                      "id": 283,
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Serialization",
+                          "id": 284
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Macros",
+                  "id": 280,
+                  "ideas": {
+                    "1": {
+                      "title": "Metaprogramming",
+                      "id": 281
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Java interop",
+                  "id": 287,
+                  "ideas": {
+                    "1": {
+                      "title": "all java.lang is imported to each namespace",
+                      "id": 288
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Atoms",
+                  "id": 260,
+                  "ideas": {
+                    "1": {
+                      "title": "accessed with @",
+                      "id": 267
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<b style=\"box-sizing: border-box; color: rgb(0, 0, 0); font-family: Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif; font-size: 15px; text-align: justify;\">Atoms</b><span style=\"color: rgb(0, 0, 0); font-family: Verdana, Geneva, Tahoma, Arial, Helvetica, sans-serif; font-size: 15px; text-align: justify;\">&nbsp;are a data type in Clojure that provide a way to manage shared, synchronous, independent state</span>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Agents",
+                  "id": 257,
+                  "ideas": {},
+                  "attr": {}
+                },
+                "10": {
+                  "title": "Watchers",
+                  "id": 256,
+                  "attr": {}
+                },
+                "11": {
+                  "title": "Pattern Matching",
+                  "id": 271,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/clojure/core.match",
+                      "id": 272
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Doesn't have type annotation",
+                  "id": 252,
+                  "ideas": {
+                    "1": {
+                      "title": "except third party",
+                      "id": 253
+                    },
+                    "2": {
+                      "title": "metadata?",
+                      "id": 265,
+                      "ideas": {
+                        "1": {
+                          "title": "it seems to be a key value object associated with a value",
+                          "id": 266
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18.5": {
+              "title": "Bindings",
+              "id": "302.151e8d75c72a8a",
+              "ideas": {
+                "1": {
+                  "title": "You can bind a variable in one expression and make it available to subsequent evaluation",
+                  "id": "303.151e8d75c72a8a"
+                },
+                "2": {
+                  "title": "https://kimh.github.io/clojure-by-example/#bindings",
+                  "id": "316.151e8d75c72a8a"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-20": {
+          "title": "Resources",
+          "id": 239,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "4": {
+              "title": "Tutorials",
+              "id": 247,
+              "ideas": {
+                "1": {
+                  "title": "Tutorials point",
+                  "id": 245,
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.tutorialspoint.com/clojure/",
+                      "id": 246
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Learn Clojure in y Minutes",
+                  "id": 289,
+                  "ideas": {
+                    "1": {
+                      "title": "https://learnxinyminutes.com/docs/clojure/",
+                      "id": 290
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Official Clojure site on how to install",
+                  "id": "296.151e8d75c72a8a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/technomancy/leiningen/blob/stable/doc/TUTORIAL.md",
+                      "id": "297.151e8d75c72a8a"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Third Party",
+              "id": 237,
+              "ideas": {
+                "1": {
+                  "title": "ClojureScript",
+                  "id": 238,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrR3RTS3FJanJ5WG8",
+                      "id": 241
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Pattern matching in clojure",
+                  "id": 273,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/clojure/core.match",
+                      "id": 274
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Lein",
+                  "id": "356.415fe69d057f7d07"
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Other mindmups",
+              "id": 251,
+              "ideas": {
+                "1": {
+                  "title": "Functional programming mindmup",
+                  "id": 250,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrQjd4djROcllPcWs/view?usp=sharing",
+                      "id": "328.4a45a059367f8809"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Practical examples of using clojure in production",
+              "id": 275,
+              "ideas": {
+                "1": {
+                  "title": "https://groups.google.com/forum/#!topic/clojure/kG3vEGeP2oc",
+                  "id": 276
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Docs",
+              "id": "321.4a45a059367f8809",
+              "ideas": {
+                "1": {
+                  "title": "https://clojuredocs.org/",
+                  "id": "322.4a45a059367f8809"
+                },
+                "2": {
+                  "title": "Quick Clojure Ref",
+                  "id": "337.3a6561e045326f8d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://clojuredocs.org/quickref",
+                      "id": "338.3a6561e045326f8d"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Examples",
+              "id": "357.4faa9d48389b1f7",
+              "ideas": {
+                "2": {
+                  "title": "Web Crawler",
+                  "id": "359.4faa9d48389b1f7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/clojurebook/ClojureProgramming/blob/master/ch04-concurrency-webcrawler/src/com/clojurebook/concurrency/webcrawler.clj#L5",
+                      "id": "358.4faa9d48389b1f7",
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Podcasts",
+              "id": "362.4faa9d48389b1f7",
+              "ideas": {
+                "1": {
+                  "title": "Defn Podcast",
+                  "id": "363.4faa9d48389b1f7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://defn.audio/",
+                      "id": "364.4faa9d48389b1f7"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Books",
+              "id": "365.32b7ef589a5203e",
+              "ideas": {
+                "1": {
+                  "title": "ClojureProgramming Book",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/clojurebook/ClojureProgramming",
+                      "id": "367.32b7ef589a5203e"
+                    }
+                  },
+                  "id": "366.32b7ef589a5203e",
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Clojure"
+}

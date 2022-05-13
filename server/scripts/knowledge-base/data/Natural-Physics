@@ -1,0 +1,2628 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Physics",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<div><a href=\"https://en.m.wikipedia.org/wiki/Outline_of_physics\" title=\"Outline of physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; border: 0px; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Physics</a><span style=\"color: rgb(37, 37, 37); font-family: 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', sans-serif; font-size: 16px; line-height: 26.4px;\">&nbsp;– physical science that studies matter and its motion through space-time, and related concepts such as energy and force</span><ul style=\"margin-bottom: 0px; margin-left: 1em; color: rgb(37, 37, 37); font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; border: 0px; font-stretch: inherit; vertical-align: baseline; list-style: circle inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Acoustics\" title=\"Acoustics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Acoustics</a>&nbsp;– study of mechanical waves in solids, liquids, and gases (such as vibration and sound)</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Agrophysics\" title=\"Agrophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Agrophysics</a>&nbsp;– study of physics applied to&nbsp;<a href=\"https://en.m.wikipedia.org/wiki/Agroecosystems\" title=\"Agroecosystems\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">agroecosystems</a><ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Soil_physics\" title=\"Soil physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Soil physics</a>&nbsp;– study of soil physical properties and processes.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Astrophysics\" title=\"Astrophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Astrophysics</a>&nbsp;– study of the physical aspects of celestial objects</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Outline_of_astronomy\" title=\"Outline of astronomy\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Astronomy</a>&nbsp;– studies the universe beyond Earth, including its formation and development, and the evolution, physics, chemistry, meteorology, and motion of celestial objects (such as galaxies, planets, etc.) and phenomena that originate outside the atmosphere of Earth (such as the cosmic background radiation).<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Astrodynamics\" title=\"Astrodynamics\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Astrodynamics</a>&nbsp;– application of ballistics and celestial mechanics to the practical problems concerning the motion of rockets and other spacecraft.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Astrometry\" title=\"Astrometry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Astrometry</a>&nbsp;– branch of astronomy that involves precise measurements of the positions and movements of stars and other celestial bodies.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Cosmology\" title=\"Cosmology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Cosmology</a>&nbsp;– discipline that deals with the nature of the Universe as a whole.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Extragalactic_astronomy\" title=\"Extragalactic astronomy\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Extragalactic astronomy</a>&nbsp;– branch of astronomy concerned with objects outside our own Milky Way Galaxy</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Galactic_astronomy\" title=\"Galactic astronomy\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Galactic astronomy</a>&nbsp;– study of our own Milky Way galaxy and all its contents.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Physical_cosmology\" title=\"Physical cosmology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Physical cosmology</a>&nbsp;– study of the largest-scale structures and dynamics of the universe and is concerned with fundamental questions about its formation and evolution.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Planetary_science\" title=\"Planetary science\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Planetary science</a>&nbsp;– scientific study of planets (including Earth), moons, and planetary systems, in particular those of the Solar System and the processes that form them.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Astronomy#Stellar_astronomy\" title=\"Astronomy\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Stellar astronomy</a>&nbsp;– natural science that deals with the study of celestial objects (such as stars, planets, comets, nebulae, star clusters and galaxies) and phenomena that originate outside the atmosphere of Earth (such as cosmic background radiation)</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Atmospheric_physics\" title=\"Atmospheric physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Atmospheric physics</a>&nbsp;– study of the application of physics to the atmosphere</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Atomic,_molecular,_and_optical_physics\" title=\"Atomic, molecular, and optical physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Atomic, molecular, and optical physics</a>&nbsp;– study of how matter and light interact</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Biophysics\" title=\"Biophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Biophysics</a>&nbsp;– study of physical processes relating to biology<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Medical_physics\" title=\"Medical physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Medical physics</a>&nbsp;– application of physics concepts, theories and methods to medicine.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Neurophysics\" title=\"Neurophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Neurophysics</a>&nbsp;– branch of biophysics dealing with the nervous system.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_physics\" title=\"Chemical physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical physics</a>&nbsp;– branch of physics that studies chemical processes from the point of view of physics.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Computational_physics\" title=\"Computational physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Computational physics</a>&nbsp;– study and implementation of numerical algorithms to solve problems in physics for which a quantitative theory already exists.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Condensed_matter_physics\" title=\"Condensed matter physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Condensed matter physics</a>&nbsp;– study of the physical properties of condensed phases of matter.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Cryogenics\" title=\"Cryogenics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Cryogenics</a>&nbsp;– cryogenics is the study of the production of very low temperature (below −150&nbsp;°C, −238&nbsp;°F or 123K) and the behavior of materials at those temperatures.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Dynamics_(mechanics)\" title=\"Dynamics (mechanics)\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Dynamics</a>&nbsp;– study of the causes of motion and changes in motion</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Econophysics\" title=\"Econophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Econophysics</a>&nbsp;– interdisciplinary research field, applying theories and methods originally developed by physicists in order to solve problems in economics</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Electromagnetism\" title=\"Electromagnetism\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Electromagnetism</a>&nbsp;– branch of science concerned with the forces that occur between electrically charged particles.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Geophysics\" title=\"Geophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Geophysics</a>&nbsp;– the physics of the Earth and its environment in space; also the study of the Earth using quantitative physical methods, see also&nbsp;<a href=\"https://en.m.wikipedia.org/wiki/Outline_of_geography#Physical_geography\" title=\"Outline of geography\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">physical geography</a>&nbsp;below</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Materials_physics\" title=\"Materials physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Materials physics</a>&nbsp;– use of physics to describe materials in many different ways such as force, heat, light and mechanics.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Mathematical_physics\" title=\"Mathematical physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Mathematical physics</a>&nbsp;– application of mathematics to problems in physics and the development of mathematical methods for such applications and for the formulation of physical theories.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Mechanics\" title=\"Mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Mechanics</a>&nbsp;– branch of physics concerned with the behavior of physical bodies when subjected to forces or displacements, and the subsequent effects of the bodies on their environment.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Biomechanics\" title=\"Biomechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Biomechanics</a>&nbsp;– study of the structure and function of biological systems such as humans, animals, plants, organs, and cells by means of the methods of mechanics.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Classical_mechanics\" title=\"Classical mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Classical mechanics</a>&nbsp;– one of the two major sub-fields of mechanics, which is concerned with the set of physical laws describing the motion of bodies under the action of a system of forces.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Continuum_mechanics\" title=\"Continuum mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Continuum mechanics</a>&nbsp;– branch of mechanics that deals with the analysis of the kinematics and the mechanical behavior of materials modeled as a continuous mass rather than as discrete particles.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Fluid_mechanics\" title=\"Fluid mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Fluid mechanics</a>&nbsp;– study of fluids and the forces on them.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Quantum_mechanics\" title=\"Quantum mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Quantum mechanics</a>&nbsp;– branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Thermodynamics\" title=\"Thermodynamics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Thermodynamics</a>&nbsp;– branch of physical science concerned with heat and its relation to other forms of energy and work.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Nuclear_physics\" title=\"Nuclear physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Nuclear physics</a>&nbsp;– field of physics that studies the building blocks and interactions of atomic nuclei.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Optics\" title=\"Optics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Optics</a>&nbsp;– branch of physics which involves the behavior and properties of light, including its interactions with matter and the construction of instruments that use or detect it.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Particle_physics\" title=\"Particle physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Particle physics</a>&nbsp;– branch of physics that studies the existence and interactions of particles that are the constituents of what is usually referred to as matter or radiation.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Psychophysics\" title=\"Psychophysics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Psychophysics</a>&nbsp;– quantitatively investigates the relationship between physical stimuli and the sensations and perceptions they affect.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Plasma_physics\" title=\"Plasma physics\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Plasma physics</a>&nbsp;– state of matter similar to gas in which a certain portion of the particles are ionized.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Polymer_physics\" title=\"Polymer physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Polymer physics</a>&nbsp;– field of physics that studies polymers, their fluctuations, mechanical properties, as well as the kinetics of reactions involving degradation and polymerisation of polymers and monomers respectively.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Quantum_physics\" title=\"Quantum physics\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Quantum physics</a>&nbsp;– branch of physics dealing with physical phenomena where the action is on the order of the Planck constant.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Theory_of_relativity\" title=\"Theory of relativity\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Relativity</a>&nbsp;– in physics, usually encompasses two theories by Albert Einstein: special relativity and general relativity.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Statics\" title=\"Statics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Statics</a>&nbsp;– branch of mechanics concerned with the analysis of loads (force, torque/moment) on physical systems in static equilibrium, that is, in a state where the relative positions of subsystems do not vary over time, or where components and structures are at a constant velocity.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Solid_state_physics\" title=\"Solid state physics\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Solid state physics</a>&nbsp;– study of rigid matter, or solids, through methods such as quantum mechanics, crystallography, electromagnetism, and metallurgy.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Vehicle_dynamics\" title=\"Vehicle dynamics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Vehicle dynamics</a>&nbsp;– dynamics of vehicles, here assumed to be ground vehicles.</li></ul></div>"
+        },
+        "style": {},
+        "position": [
+          -28,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 3,
+          "ideas": {
+            "1": {
+              "title": "The scientific method",
+              "id": 9,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div><ul><li>Identify a problem<br></li><li>Make an educated guess about the answer. This is called hypothesis.<br></li><li>Perform experiments to test your hypothesis<br></li><li>Formulate a general rule<br></li></ul></div><div>- See more at: http://www.introduction-to-physics.com/#sthash.FKxnFqdF.dpuf</div>"
+                },
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Electricity",
+              "id": 11,
+              "attr": {
+                "style": {
+                  "background": "#008080"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Electric force",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "you have two forces acting on you",
+                      "id": 15,
+                      "ideas": {
+                        "1": {
+                          "title": "Replling",
+                          "id": 16
+                        },
+                        "2": {
+                          "title": "Atttracting",
+                          "id": 17
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "you don't feel them because they balance each other out",
+                      "id": 18
+                    },
+                    "3": {
+                      "title": "How to calculate",
+                      "id": 52,
+                      "ideas": {
+                        "1": {
+                          "title": "Coulombs law",
+                          "id": 53,
+                          "attr": {
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "F = K * |q1| * |q2| / d^2",
+                              "id": 55,
+                              "ideas": {
+                                "1": {
+                                  "title": "d is distance between two objects",
+                                  "id": 56
+                                },
+                                "2": {
+                                  "title": "q quantity of charge",
+                                  "id": 57
+                                },
+                                "3": {
+                                  "title": "k is called the proportionality constant or electrostatic constant.\n",
+                                  "id": 58,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "9,000,000,000 N.m2/C2",
+                                      "id": 59
+                                    }
+                                  }
+                                },
+                                "4": {
+                                  "title": "Interpreting the results",
+                                  "id": 60,
+                                  "attr": {
+                                    "attachment": {
+                                      "contentType": "text/html",
+                                      "content": "<div>The sign just tells you how the particles will behave.</div><div><br></div><div>If the charges have the same sign, the force is repulsive.</div><div><br></div><div>If the charges have different signs, the force is attractive.</div><div><br></div><div>However, when doing the math, the values of the charges must be positive.</div><div><br></div><div><div>1 Coulomb is the charge of approximately 6.24 quintillion electrons.</div><div><br></div><div>or 6.24 billion billion electrons.</div><div><br></div><div>or 6.24 ×10 18</div><div><br></div><div>In other words, it is the charge that goes through a 100-watt light bulb in 1 second.</div></div>"
+                                    },
+                                    "style": {}
+                                  }
+                                },
+                                "5": {
+                                  "title": "Gravity law ",
+                                  "id": 61,
+                                  "attr": {
+                                    "attachment": {
+                                      "contentType": "text/html",
+                                      "content": "<div class=\"eq-c\" style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">F = G&nbsp;<div class=\"fraction\" style=\"display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.01em; text-align: center;\"><span class=\"fup\" style=\"display: block; padding: 0.2em;\">m<sub>1</sub>m<sub>2</sub></span><span class=\"fdn\" style=\"display: block; padding: 0.2em; border-top-width: thin; border-top-style: solid; border-top-color: rgb(0, 0, 0);\">d<sup>2</sup></span></div></div><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><b>Gravitational force</b>:</p><ul style=\"list-style: none; margin-bottom: 40px; margin-left: 0px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">Product of masses</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">G is very small<br></li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">Only attractive</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">Inverse-square law<br></li></ul><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><b>Electrical force</b>:</p><ul style=\"list-style: none; margin-bottom: 40px; margin-left: 0px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">attractive or repulsive</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">K is very big</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">Product of charges</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;../image-files/checkmark.png&quot;) 0px 4px no-repeat;\">Inverse-square law</li></ul>"
+                                    },
+                                    "style": {}
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Atoms contain",
+                  "id": 19,
+                  "ideas": {
+                    "3": {
+                      "title": "Electron",
+                      "id": 22
+                    },
+                    "4": {
+                      "title": "Nuclues",
+                      "id": 23,
+                      "ideas": {
+                        "1": {
+                          "title": "Proton",
+                          "id": 20,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "Neutron",
+                          "id": 21,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "if it has more electrons",
+                      "id": 24,
+                      "ideas": {
+                        "1": {
+                          "title": "it's negatively charged",
+                          "id": 25
+                        },
+                        "2": {
+                          "title": "if it has more prutons",
+                          "id": 26,
+                          "ideas": {
+                            "1": {
+                              "title": "it's positive",
+                              "id": 27
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Electron affinity",
+                      "id": 28,
+                      "ideas": {
+                        "1": {
+                          "title": "doesn't lose electrons easily",
+                          "id": 29
+                        },
+                        "2": {
+                          "title": "unlike human skin or silk",
+                          "id": 30
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "when you rub your feet, you attract electric charge",
+                  "id": 31,
+                  "ideas": {
+                    "1": {
+                      "title": "so when you touch a door, you get electrocuted due to the transfer of electrons",
+                      "id": 32
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Electrons",
+                  "id": 35,
+                  "ideas": {
+                    "1": {
+                      "title": "Mobile electrons are good conductors",
+                      "id": 36,
+                      "ideas": {
+                        "1": {
+                          "title": "because they move freely in the outer sphere of an atom",
+                          "id": 37
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "the more electrons the better conductivity",
+                      "id": 38
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Induction",
+                  "id": 62,
+                  "ideas": {
+                    "1": {
+                      "title": "Charging by induction",
+                      "id": 63,
+                      "ideas": {
+                        "1": {
+                          "title": "http://www.introduction-to-physics.com/charging-by-induction.html",
+                          "id": 64
+                        },
+                        "2": {
+                          "title": "if you have two spheres and a rod",
+                          "id": 65,
+                          "ideas": {
+                            "1": {
+                              "title": "you can charge one sphere with negative and another with positive. ",
+                              "id": 66
+                            },
+                            "2": {
+                              "title": "they become one conductor",
+                              "id": 67
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "if you have one sphere and you touch it. You are grounded at that point. The electrons will transfer from your finger to the ground",
+                          "id": 68,
+                          "ideas": {
+                            "1": {
+                              "title": "you are grounded",
+                              "id": 69
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Conductors",
+                  "id": 34,
+                  "ideas": {
+                    "1": {
+                      "title": "good conductors",
+                      "id": 40,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "Some materials are naturally good conductors. Metals such as aluminum, gold, silver, platinum, copper, steel, and iron are good conductors just like they are good conductors of heat."
+                        },
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Insulators",
+                      "id": 33,
+                      "ideas": {
+                        "1": {
+                          "title": "bad conductors",
+                          "id": 41,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "However, in some materials, electrons are not as free to move around. Instead, they are tightly bound to atoms. There materials are poor conductors of electricity. We call these materials insulators."
+                            },
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "electrons are tightly bound, they are not free to move",
+                              "id": 42
+                            },
+                            "2": {
+                              "title": "Example of bad conductors",
+                              "id": 43,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<div>Some examples of insulators are glass, rubber, and porcelain.</div>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "they are used to prevent electricity from flowing outside",
+                          "id": 45,
+                          "ideas": {
+                            "1": {
+                              "title": "Like a wire",
+                              "id": 46
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "An insulator that surrounds a metal to prevent someone from getting hurt",
+                          "id": 98
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "Semi conductors",
+                      "id": 47,
+                      "ideas": {
+                        "1": {
+                          "title": "Silicon",
+                          "id": 48
+                        },
+                        "2": {
+                          "title": "Germanium",
+                          "id": 49
+                        },
+                        "3": {
+                          "title": "transistors are semi conductors",
+                          "id": 50
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Super conductors",
+                      "id": 51,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<div>In some materials, however, called superconductors, the resistance is equal to 0. If a current is set up in a superconductor, electricity will continue to flow indefinitely or \"forever\" with no battery or other source of energy needed to maintain it.</div>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Electrostatic Force",
+                  "id": 70,
+                  "ideas": {
+                    "1": {
+                      "title": "with a positive charge around an object",
+                      "id": 71,
+                      "ideas": {
+                        "1": {
+                          "title": "there will be an electric field around the object",
+                          "id": 72
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "similar to gravitational field",
+                      "id": 73,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Formula",
+                      "id": 74,
+                      "ideas": {
+                        "1": {
+                          "title": "E = k |q| / d^2",
+                          "id": 75
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Direction of electric field",
+                      "id": 76,
+                      "ideas": {
+                        "1": {
+                          "title": "Place  a positive charge near an electric field coming from a sphere that's negatively charged",
+                          "id": 77,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<img src=\"http://www.introduction-to-physics.com/images/direction-of-field-line.png\" width=\"102\" data-pin-media=\"http://www.introduction-to-physics.com/images/direction-of-field-line.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; max-width: none; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; text-align: center;\">"
+                            },
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "to see this",
+                              "id": 79,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<img src=\"http://www.introduction-to-physics.com/images/electric-field-lines.png\" width=\"176\" data-pin-media=\"http://www.introduction-to-physics.com/images/electric-field-lines.png\" style=\"max-width: none; border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; text-align: center;\">"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "is a vector",
+                          "id": 80,
+                          "ideas": {
+                            "1": {
+                              "title": "since it has direction",
+                              "id": 81
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Electric dipole",
+                          "id": 82,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<h3 style=\"font-family: Desyrel, 'Comic Sans MS', 'Marker Felt', sans-serif; line-height: 1.25; font-weight: normal; font-size: 27px; color: rgb(0, 157, 224); margin-top: 18px; margin-bottom: 9px; background-color: rgb(220, 235, 236);\"><span style=\"font-size: 23px;\">Electric field lines for an electric dipole.</span></h3><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">An&nbsp;<b>electric dipole</b>&nbsp;is a system&nbsp;made up of&nbsp;2 charges with equal magnitude, but opposite sign.&nbsp;<br></p><div class=\"ImageBlock ImageBlockCenter\" style=\"text-align: center; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><img src=\"http://www.introduction-to-physics.com/images/electric-dipole.png\" width=\"259\" data-pin-media=\"http://www.introduction-to-physics.com/images/electric-dipole.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; max-width: none;\"></div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "capacitor",
+                          "id": 83,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Each plate has more than one of the same charge one on top of the other.<br></p><div class=\"ImageBlock ImageBlockCenter\" style=\"text-align: center; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><img src=\"http://www.introduction-to-physics.com/images/parallel-plate.png\" width=\"71\" data-pin-media=\"http://www.introduction-to-physics.com/images/parallel-plate.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; max-width: none;\"></div>"
+                            },
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.introduction-to-physics.com/what-is-a-capacitor.html",
+                              "id": 90
+                            },
+                            "2": {
+                              "title": "Definition",
+                              "id": 92,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<div>What is a capacitor? A capacitor is a common device used in electricity to store electrical energy.</div><div><br></div><div>This electrical energy can then be released later in many ways.</div><div><br></div><div><ul><li>To power a light bulb.<br></li><li>Create a flash when taking a photo with a digital camera.<br></li><li>To power a specific device for a short time during a power outage.<br></li></ul><div><br></div></div>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Electric potential energy",
+                      "id": 84,
+                      "ideas": {
+                        "1": {
+                          "title": "VS. potential energy",
+                          "id": 85,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "An object has potential energy as a result of its location. If you try to lift an object, the object is located in a force field and that force field is gravity. When the object is lifted to a certain height it has gravitational potential energy. If you compress a spring, it will also store potential energy. In both cases, this potential energy (PE) that the object has stored has the ability to do work when released."
+                            },
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "When you left an object it  has the potential to exert a certain energy when it's started, since it falls within a gravitational field",
+                              "id": 86
+                            },
+                            "2": {
+                              "title": "Or a spring, the more you compress, the more energy an object will store",
+                              "id": 87
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "When a charged object move towards a positive rod, it will store Electric PE ",
+                          "id": 88,
+                          "ideas": {
+                            "1": {
+                              "title": "the closer, the more energy it will contain",
+                              "id": 89
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "Electric current",
+                  "id": 93,
+                  "ideas": {
+                    "1": {
+                      "title": "Flow of electric charge",
+                      "id": 94,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "conduction electrons",
+                      "id": 95,
+                      "ideas": {
+                        "1": {
+                          "title": "are electrons that move freely",
+                          "id": 96
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "image of a current",
+                      "id": 97,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">In the images below, we show a flow of electric charge so things can be crystal clear in your mind. The red arrows shows the direction.</p><div class=\"ImageBlock ImageBlockCenter\" style=\"text-align: center; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><img src=\"http://www.introduction-to-physics.com/images/direction-of-electric-current.png\" width=\"196\" data-pin-media=\"http://www.introduction-to-physics.com/images/direction-of-electric-current.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; max-width: none;\"></div>"
+                        },
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "inside a wire",
+                          "id": 99,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<img src=\"http://www.introduction-to-physics.com/images/flow-of-electric-charge.png\" width=\"407\" alt=\"Flow of electric charge\" title=\"Flow of electric charge\" data-pin-media=\"http://www.introduction-to-physics.com/images/flow-of-electric-charge.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; max-width: none; background-color: rgb(220, 235, 236);\"><span class=\"Caption CaptionCenter\" style=\"margin-left: auto; margin-right: auto; font-weight: bold; display: block; margin-bottom: 12px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; max-width: 407px; text-align: center !important; margin-top: 6px !important; background-color: rgb(220, 235, 236);\">Flow of electric charge inside a wire</span>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Unit is ampere",
+                      "id": 100,
+                      "ideas": {
+                        "1": {
+                          "title": "understanding it",
+                          "id": 101,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">1 ampere is the flow of 1 coulomb of charge every second.</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">You could also say&nbsp;1 coulomb of charge per second.</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">1 ampere is the electric current in 100-watt light bult</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">1 coulomb is the electric charge of 6.24 billion billion electrons or &nbsp; 6.24 quintillion electrons.</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">That is a lot of electrons flowing inside a wire every second!</p>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Ohm's law",
+                      "id": 102,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Ohm's law is a formula discovered by Ohm which helps us to measure the electric current in a circuit.</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"></p><span style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">- See more at: http://www.introduction-to-physics.com/ohm-s-law.html#sthash.hoGnjCSc.dpuf</span>"
+                        },
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "formula to measure electric current ",
+                          "id": 103
+                        },
+                        "2": {
+                          "title": "C = voltage / resistance",
+                          "id": 124
+                        },
+                        "3": {
+                          "title": "1 ampere ",
+                          "id": 125,
+                          "ideas": {
+                            "1": {
+                              "title": "1 voltage",
+                              "id": 126
+                            },
+                            "2": {
+                              "title": "1 resistance (ohm)",
+                              "id": 127
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "Voltage source",
+                      "id": 105,
+                      "ideas": {
+                        "1": {
+                          "title": "charges don't flow unless they are connected to a",
+                          "id": 107,
+                          "ideas": {
+                            "1": {
+                              "title": "battery",
+                              "id": 109,
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "generator",
+                              "id": 111
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "it's like an electric pump",
+                          "id": 108
+                        },
+                        "3": {
+                          "title": "the higher the voltage, the more current will flow",
+                          "id": 112,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">In summary a voltage source is a device used to move electric current in a circuit. The higher the voltage, the more current will flow in the circuit. Home outlets can deliver 120 volts while a AA battery could deliver 1.5 &nbsp;volts.</p><div class=\"ImageBlock ImageBlockCenter\" style=\"text-align: center; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><img src=\"http://www.introduction-to-physics.com/images/voltage-symbols.png\" width=\"335\" alt=\"voltage symbols\" title=\"voltage symbols\" data-pin-media=\"http://www.introduction-to-physics.com/images/voltage-symbols.png\" style=\"border-style: solid; border-color: rgb(0, 0, 0); margin: 0px; max-width: none;\"><span class=\"Caption CaptionCenter\" style=\"margin-left: auto; margin-right: auto; font-weight: bold; font-size: 14px; display: block; margin-bottom: 12px; max-width: 335px; margin-top: 6px !important;\"></span></div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "DC",
+                          "id": 113,
+                          "ideas": {
+                            "1": {
+                              "title": "direct current",
+                              "id": 117
+                            },
+                            "2": {
+                              "title": "batteries",
+                              "id": 118
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "AC",
+                          "id": 115,
+                          "ideas": {
+                            "1": {
+                              "title": "Alternative current",
+                              "id": 116,
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "generator",
+                              "id": 120
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "7": {
+                      "title": "Electric resistance",
+                      "id": 106,
+                      "ideas": {
+                        "1": {
+                          "title": "opposite of voltage",
+                          "id": 121,
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "it will prevent the flow of electricity",
+                          "id": 122,
+                          "attr": {
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "Depends on",
+                          "id": 123,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">The electric resistance may depend on the following factors</p><ul style=\"list-style: none; margin-bottom: 40px; margin-left: 0px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;http://www.introduction-to-physics.com/sd/image-files/xcheckmark.png.pagespeed.ic.rLe9M2ZitI.png&quot;) 0px 4px no-repeat;\">The conductivity of the material&nbsp;</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;http://www.introduction-to-physics.com/sd/image-files/xcheckmark.png.pagespeed.ic.rLe9M2ZitI.png&quot;) 0px 4px no-repeat;\">The thickness of the material</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;http://www.introduction-to-physics.com/sd/image-files/xcheckmark.png.pagespeed.ic.rLe9M2ZitI.png&quot;) 0px 4px no-repeat;\">The length of the material</li><li style=\"margin: 0px 0px 0px 20px; padding: 0px 0px 0px 30px; background: url(&quot;http://www.introduction-to-physics.com/sd/image-files/xcheckmark.png.pagespeed.ic.rLe9M2ZitI.png&quot;) 0px 4px no-repeat;\">The temperature</li></ul>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    },
+                    "8": {
+                      "title": "Electric power",
+                      "id": 128,
+                      "ideas": {
+                        "1": {
+                          "title": "voltage * current",
+                          "id": 129,
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "in watts",
+                          "id": 130
+                        },
+                        "3": {
+                          "title": "example",
+                          "id": 131,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<div>Say for instance an iron is rated at 1200 watts. If you home outlet is 120 volts, the iron will draw a current of 10 amperes.</div><div><br></div><div>Why? It is because 1200 &nbsp;= 10 × 120</div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "another formula",
+                          "id": 132,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<h3 style=\"font-family: Desyrel, 'Comic Sans MS', 'Marker Felt', sans-serif; line-height: 1.25; font-weight: normal; font-size: 27px; color: rgb(0, 157, 224); margin-top: 18px; margin-bottom: 9px; background-color: rgb(220, 235, 236);\">&nbsp; &nbsp; &nbsp;Electric power definition #2<br><br></h3><div class=\"eq-c\" style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Electric power =&nbsp;<div class=\"fraction\" style=\"display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.01em; text-align: center;\"><span class=\"fup\" style=\"display: block; padding: 0.2em;\">energy</span><span class=\"fdn\" style=\"display: block; padding: 0.2em; border-top-width: thin; border-top-style: solid; border-top-color: rgb(0, 0, 0);\">time</span></div></div><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">From the formula, you can see that the electric power is the rate at which energy is transferred. This second definition of electric power can also help us to calculate the cost of electric energy and we will show you how in a different lesson.</p><div class=\"eq-c\" style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">If&nbsp;<div class=\"fraction\" style=\"display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.01em; text-align: center;\"><span class=\"fup\" style=\"display: block; padding: 0.2em;\">10</span><span class=\"fdn\" style=\"display: block; padding: 0.2em; border-top-width: thin; border-top-style: solid; border-top-color: rgb(0, 0, 0);\">2</span></div>&nbsp;= 5, then 10 = 5 × 2</div><br style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><div class=\"eq-c\" style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">If electric power =&nbsp;<div class=\"fraction\" style=\"display: inline-block; position: relative; vertical-align: middle; letter-spacing: 0.01em; text-align: center;\"><span class=\"fup\" style=\"display: block; padding: 0.2em;\">energy</span><span class=\"fdn\" style=\"display: block; padding: 0.2em; border-top-width: thin; border-top-style: solid; border-top-color: rgb(0, 0, 0);\">time</span></div>&nbsp;&nbsp; then, energy = electric power × time</div><br style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><span style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">energy = electric power × time is the formula to use to calculate the cost of electric energy.</span>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "9": {
+                      "title": "Circuits",
+                      "id": 133,
+                      "ideas": {
+                        "1": {
+                          "title": "types",
+                          "id": 134,
+                          "ideas": {
+                            "1": {
+                              "title": "series",
+                              "id": 135,
+                              "attr": {
+                                "style": {}
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "current doesn't have a choice of paths between a and b",
+                                  "id": 143
+                                },
+                                "2": {
+                                  "title": "http://www.introduction-to-physics.com/series-circuit-rules.html",
+                                  "id": 138,
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "parallel",
+                              "id": 144,
+                              "ideas": {
+                                "1": {
+                                  "title": "a current has a choice of paths",
+                                  "id": 145
+                                },
+                                "2": {
+                                  "title": "http://www.introduction-to-physics.com/parallel-circuit-rules.html",
+                                  "id": 146
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "resistors",
+                          "id": 139,
+                          "ideas": {
+                            "1": {
+                              "title": "constricts the flow of voltage",
+                              "id": 140,
+                              "ideas": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true,
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true,
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "6": {
+              "title": "Anti Matter",
+              "id": "307.d3542940eb23d53"
+            },
+            "7": {
+              "title": "Worm Hole",
+              "id": "308.d3542940eb23d53"
+            },
+            "8": {
+              "title": "Most of the universe is dark",
+              "id": "309.d3542940eb23d53"
+            },
+            "9": {
+              "title": "Black Hole",
+              "id": "310.d3542940eb23d53",
+              "ideas": {
+                "1": {
+                  "title": " A body that shrink on its own self acted by it's overwhelming gravitational force",
+                  "id": "311.d3542940eb23d53",
+                  "ideas": {
+                    "1": {
+                      "title": "Singularity",
+                      "id": "312.d3542940eb23d53"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "313.d3542940eb23d53",
+                  "ideas": {
+                    "1": {
+                      "title": "Amazing explanation for Black Holes",
+                      "id": "314.d3542940eb23d53",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=9WbrujNXSw8",
+                          "id": "315.d3542940eb23d53"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Pauli Exclusion",
+              "ideas": {
+                "1": {
+                  "title": "electrons can't be on the same energy level",
+                  "id": "317.7c2f30f649b6ab6f"
+                }
+              },
+              "id": "316.7c2f30f649b6ab6f",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Quantum mechanics",
+              "id": "318.1fd2e30dbb68fa76",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Quantum_mechanics",
+                  "id": "319.1fd2e30dbb68fa76"
+                },
+                "2": {
+                  "title": "restrict values only to be discrete",
+                  "id": "320.1fd2e30dbb68fa76"
+                },
+                "3": {
+                  "title": "Plank's law",
+                  "id": "321.1fd2e30dbb68fa76"
+                },
+                "4": {
+                  "title": "Planck's constanty",
+                  "id": "322.1fd2e30dbb68fa76",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Planck_constant",
+                      "id": "323.1fd2e30dbb68fa76"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "black body raditation",
+                  "id": "324.1fd2e30dbb68fa76",
+                  "attr": {}
+                },
+                "6": {
+                  "title": "wave-particle duality",
+                  "id": "325.1fd2e30dbb68fa76",
+                  "ideas": {
+                    "1": {
+                      "title": "sub atomic particles exhibit both",
+                      "id": "326.1fd2e30dbb68fa76"
+                    }
+                  }
+                },
+                "7": {
+                  "title": "Four phenomenas that quantum mechanics explain",
+                  "id": "327.1fd2e30dbb68fa76",
+                  "ideas": {
+                    "1": {
+                      "title": "quantization of certain physical properties",
+                      "id": "328.3a0ced29e1d18bf9"
+                    },
+                    "2": {
+                      "title": "quantum entanglement",
+                      "id": "329.3a0ced29e1d18bf9"
+                    },
+                    "3": {
+                      "title": "principle of uncertainty",
+                      "id": "330.3a0ced29e1d18bf9"
+                    },
+                    "4": {
+                      "title": "wave–particle duality",
+                      "id": "331.3a0ced29e1d18bf9"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Quantum coherence",
+                  "id": "333.3a0ced29e1d18bf9",
+                  "attr": {
+                    "note": {
+                      "index": 156,
+                      "text": "Quantum coherence is an essential difference between classical and quantum theories as illustrated by the Einstein–Podolsky–Rosen (EPR) paradox — an attack on a certain philosophical interpretation of quantum mechanics by an appeal to local realism.[49] Quantum interference involves adding together probability amplitudes, whereas classical \"waves\" infer that there is an adding together of intensities. For microscopic bodies, the extension of the system is much smaller than the coherence length, which gives rise to long-range entanglement and other nonlocal phenomena characteristic of quantum systems.[50] Quantum coherence is not typically evident at macroscopic scales, though an exception to this rule may occur at extremely low temperatures (i.e. approaching absolute zero) at which quantum behavior may manifest itself macroscopically.[51] This is in accordance with the following observations:\n\nMany macroscopic properties of a classical system are a direct consequence of the quantum behavior of its parts. For example, the stability of bulk matter (consisting of atoms and molecules which would quickly collapse under electric forces alone), the rigidity of solids, and the mechanical, thermal, chemical, optical and magnetic properties of matter are all results of the interaction of electric charges under the rules of quantum mechanics.[52]\nWhile the seemingly \"exotic\" behavior of matter posited by quantum mechanics and relativity theory become more apparent when dealing with particles of extremely small size or velocities approaching the speed of light, the laws of classical, often considered \"Newtonian\", physics remain accurate in predicting the behavior of the vast majority of \"large\" objects (on the order of the size of large molecules or bigger) at velocities much smaller than the velocity of light.[53]"
+                    }
+                  }
+                },
+                "10": {
+                  "title": "my thoughts",
+                  "id": "334.3a0ced29e1d18bf9",
+                  "ideas": {
+                    "1": {
+                      "title": "one particle exhibits random behavior, but in large systems, the sum of these random results can appear uniform",
+                      "id": "332.3a0ced29e1d18bf9",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "there is a matrix of states that a particle can exhibit",
+                      "id": "335.3a0ced29e1d18bf9",
+                      "ideas": {
+                        "1": {
+                          "title": "we can calculate each state at, let's say a certain position",
+                          "id": "337.3a0ced29e1d18bf9"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Applications",
+                  "id": "338.3a0ced29e1d18bf9",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Quantum_mechanics#/media/File:Rtd_seq_v3.gif",
+                      "id": "339.3a0ced29e1d18bf9"
+                    },
+                    "2": {
+                      "title": "Encryption",
+                      "id": "340.3a0ced29e1d18bf9",
+                      "ideas": {},
+                      "attr": {
+                        "note": {
+                          "index": 162,
+                          "text": "Researchers are currently seeking robust methods of directly manipulating quantum states. Efforts are being made to more fully develop quantum cryptography, which will theoretically allow guaranteed secure transmission of information.\n\nAn inherent advantage yielded by quantum cryptography when compared to classical cryptography is the detection of passive eavesdropping. This is a natural result of the behavior of quantum bits; due to the observer effect, if a bit in a superposition state were to be observed, the superposition state would collapse into an eigenstate. Because the intended recipient was expecting to receive the bit in a superposition state, the intended recipient would know there was an attack, because the bit's state would no longer be in a superposition.[83]"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "https://en.wikipedia.org/wiki/Quantum_cryptography",
+                      "id": "342.3a0ced29e1d18bf9"
+                    },
+                    "4": {
+                      "title": "https://en.wikipedia.org/wiki/Quantum_computing",
+                      "id": "343.3a0ced29e1d18bf9"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Gentle introduction to quantum mechanics notes",
+                  "id": "434.da4d.4ab0da994-b591.635f0fbbd",
+                  "ideas": {
+                    "2": {
+                      "title": "Photons once passed throught a polaroid with a preffered axis, will polarize to that axis",
+                      "id": "436.da4d.4ab0da994-b591.635f0fbbd",
+                      "ideas": {
+                        "1": {
+                          "title": "for example V = 1/2 * a + 1/2 * b",
+                          "id": "438.da4d.4ab0da994-b591.635f0fbbd"
+                        },
+                        "2": {
+                          "title": "if the polaroid is horizontally oriented, about a quarter of the particles will get through",
+                          "id": "439.da4d.4ab0da994-b591.635f0fbbd"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Laser",
+              "id": "344.7fe0c5c39c0042b9",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Laser",
+                  "id": "345.7fe0c5c39c0042b9"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Neutrinos",
+              "id": "346.0beb.7643e1a91-4baa.66e421863",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=md1CKUQp04Q",
+                  "id": "347.0beb.7643e1a91-4baa.66e421863"
+                },
+                "2": {
+                  "title": "https://en.wikipedia.org/wiki/Neutrino",
+                  "id": "348.0beb.7643e1a91-4baa.66e421863"
+                },
+                "3": {
+                  "title": "so small we can hardly detect it",
+                  "id": "349.0beb.7643e1a91-4baa.66e421863"
+                },
+                "4": {
+                  "title": "we have to run experiments underground",
+                  "id": "350.0beb.7643e1a91-4baa.66e421863"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Decay",
+              "id": "360.fca5.ee6ef25b8-9225.a2161c9d2",
+              "ideas": {
+                "1": {
+                  "title": "beta decay",
+                  "id": "361.fca5.ee6ef25b8-9225.a2161c9d2"
+                },
+                "2": {
+                  "title": "particles decay to something else",
+                  "id": "362.fca5.ee6ef25b8-9225.a2161c9d2"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Light",
+              "id": "386.ab9e.cbf5bd522-2ce0.9d9d49cc1",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Light",
+                  "id": "387.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                },
+                "2": {
+                  "title": "visible light is 400–700 nanometers",
+                  "id": "388.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                },
+                "3": {
+                  "title": "frequency range of 430–750 terahertz (THz).",
+                  "id": "389.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                },
+                "4": {
+                  "title": "physics treats all electromagnetic radiation as one",
+                  "id": "390.ab9e.cbf5bd522-2ce0.9d9d49cc1",
+                  "ideas": {
+                    "1": {
+                      "title": "X rays",
+                      "id": "391.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    },
+                    "2": {
+                      "title": "Microwaves",
+                      "id": "392.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    },
+                    "3": {
+                      "title": "radio waves",
+                      "id": "393.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "spectrum image link",
+                  "id": "394.ab9e.cbf5bd522-2ce0.9d9d49cc1",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Light#/media/File:EM_spectrum.svg",
+                      "id": "395.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "different wavelengths form different colors",
+                  "id": "396.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                },
+                "7": {
+                  "title": "red, green and blue",
+                  "id": "397.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                },
+                "8": {
+                  "title": "http://hyperphysics.phy-astr.gsu.edu/hbase/vision/pricol2.html",
+                  "id": "398.ab9e.cbf5bd522-2ce0.9d9d49cc1",
+                  "ideas": {
+                    "1": {
+                      "title": "intense",
+                      "id": "399.ab9e.cbf5bd522-2ce0.9d9d49cc1",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "magenta",
+                      "id": "401.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    },
+                    "3": {
+                      "title": "cyan",
+                      "id": "402.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    },
+                    "4": {
+                      "title": "yellow",
+                      "id": "404.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    },
+                    "5": {
+                      "title": "are subtractive colors",
+                      "id": "405.ab9e.cbf5bd522-2ce0.9d9d49cc1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "Wave Length",
+                  "id": "408.e132.e539d4096-6f03.bc76aa35",
+                  "ideas": {
+                    "1": {
+                      "title": "if the wave length is longer the frequency will be less",
+                      "id": "409.e132.e539d4096-6f03.bc76aa35"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "0.25": {
+                  "title": "Maxwell's Equations",
+                  "id": "410.e132.e539d4096-6f03.bc76aa35",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=K40lNL3KsJ4",
+                      "id": "412.e132.e539d4096-6f03.bc76aa35"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "0.75": {
+                  "title": "Electromagnetic waves",
+                  "id": "411.e132.e539d4096-6f03.bc76aa35",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "Basics",
+              "id": 4,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><b><em>Mechanics&nbsp;</em></b>:&nbsp; linear motion,&nbsp;Newton's laws, circular motion, etc.</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><b><em>Properties of matter&nbsp;</em></b>: liquid , solid, or gas</p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><em><b>Electricity&nbsp;and magnetism</b>&nbsp;:&nbsp;</em>electric current, circuits, tec.</p><span style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">- See more at: http://www.introduction-to-physics.com/#sthash.FKxnFqdF.dpuf</span>"
+                },
+                "style": {}
+              }
+            },
+            "4.5": {
+              "title": "Forces",
+              "id": "381.fca5.ee6ef25b8-9225.a2161c9d2",
+              "ideas": {
+                "3": {
+                  "title": "Gravity",
+                  "id": "384.fca5.ee6ef25b8-9225.a2161c9d2",
+                  "ideas": {
+                    "1": {
+                      "title": "F = G * MM/r2",
+                      "id": "416.8517.e77ff43ef-d4f1.1092f305"
+                    },
+                    "2": {
+                      "title": "g is the gravitational constant",
+                      "id": "417.8517.e77ff43ef-d4f1.1092f305",
+                      "ideas": {
+                        "1": {
+                          "title": "6.674 * 10 ^ -11 Newton",
+                          "id": "422.8517.e77ff43ef-d4f1.1092f305",
+                          "ideas": {
+                            "1": {
+                              "title": "(m/kg) ^ 2",
+                              "id": "425.8517.e77ff43ef-d4f1.1092f305"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Spherically symmetrical spheres concentrate their mass in the center",
+                      "id": "431.8517.e77ff43ef-d4f1.1092f305",
+                      "ideas": {
+                        "1": {
+                          "title": "center of Mass",
+                          "id": "432.8517.e77ff43ef-d4f1.1092f305"
+                        }
+                      }
+                    },
+                    "14": {
+                      "title": "Resources",
+                      "id": "418.8517.e77ff43ef-d4f1.1092f305",
+                      "ideas": {
+                        "1": {
+                          "title": "https://courses.lumenlearning.com/boundless-physics/chapter/newtons-law-of-universal-gravitation/",
+                          "id": "419.8517.e77ff43ef-d4f1.1092f305",
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "https://study.com/academy/lesson/calculating-acceleration-due-to-gravity-formula-lesson-quiz.html",
+                          "id": "433.8517.e77ff43ef-d4f1.1092f305"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2.5": {
+                      "title": "Center of Mass",
+                      "id": "426.8517.e77ff43ef-d4f1.1092f305",
+                      "attr": {},
+                      "ideas": {}
+                    },
+                    "0.5": {
+                      "title": "gravitational force: A very long-range, but relatively weak fundamental force of attraction that acts between all particles that have mass; believed to be mediated by gravitons.",
+                      "id": "429.8517.e77ff43ef-d4f1.1092f305",
+                      "ideas": {},
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Electromagnetism",
+                  "id": "385.fca5.ee6ef25b8-9225.a2161c9d2",
+                  "ideas": {
+                    "1": {
+                      "title": "Orsted discovered that electricity and magnetism are related",
+                      "id": "445.9cb7.8d17a5a6b-da87.2b87ae81f",
+                      "ideas": {
+                        "1": {
+                          "title": "famous compass needle experiement",
+                          "id": "446.9cb7.8d17a5a6b-da87.2b87ae81f"
+                        },
+                        "2": {
+                          "title": "apparently that theory was already circulating",
+                          "id": "447.9cb7.8d17a5a6b-da87.2b87ae81f"
+                        },
+                        "4": {
+                          "title": "Resources",
+                          "id": "449.9cb7.8d17a5a6b-da87.2b87ae81f",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Oersted%27s_law",
+                              "id": "448.9cb7.8d17a5a6b-da87.2b87ae81f",
+                              "attr": {}
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Faraday Law of induction",
+                      "id": "450.9cb7.8d17a5a6b-da87.2b87ae81f",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Faraday%27s_law_of_induction",
+                          "id": "451.9cb7.8d17a5a6b-da87.2b87ae81f",
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "The electromotive force around a closed path is equal to the negative of the time rate of change of the magnetic flux enclosed by the path.[13][14]\n\n\n\n",
+                          "id": "453.9cb7.8d17a5a6b-da87.2b87ae81f"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Ohm's law",
+                      "id": "456.f67a.964a1cb06-48df.fbf86f378",
+                      "ideas": {
+                        "1": {
+                          "title": "I = V/R",
+                          "id": "458.f67a.964a1cb06-48df.fbf86f378",
+                          "ideas": {
+                            "1": {
+                              "title": "Current = Voltage over Resistance",
+                              "id": "461.f67a.964a1cb06-48df.fbf86f378"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "https://en.wikipedia.org/wiki/Ohm%27s_law",
+                          "id": "462.f67a.964a1cb06-48df.fbf86f378"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Force in general is a Vector Quantity",
+                  "id": "428.8517.e77ff43ef-d4f1.1092f305",
+                  "ideas": {}
+                },
+                "6": {
+                  "title": "Weak Nuclear Force",
+                  "id": "303.d3542940eb23d53",
+                  "ideas": {
+                    "2": {
+                      "title": "gev measurement",
+                      "id": "354.fca5.ee6ef25b8-9225.a2161c9d2",
+                      "ideas": {
+                        "1": {
+                          "title": "giga electron volt",
+                          "id": "363.fca5.ee6ef25b8-9225.a2161c9d2"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "If an electron moves from one terminal of a nine-volt battery to the other, its motion energy will increase by nine electron-volts.\n\n",
+                      "id": "355.fca5.ee6ef25b8-9225.a2161c9d2"
+                    },
+                    "4": {
+                      "title": "Resources",
+                      "id": "356.fca5.ee6ef25b8-9225.a2161c9d2",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=yOiABZM7wTU",
+                          "id": "357.fca5.ee6ef25b8-9225.a2161c9d2"
+                        },
+                        "2": {
+                          "title": "https://home.fnal.gov/~cheung/rtes/RTESWeb/LQCD_site/pages/weakforce.htm",
+                          "id": "353.fca5.ee6ef25b8-9225.a2161c9d2",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3.5": {
+                      "title": "particles are made of",
+                      "id": "375.fca5.ee6ef25b8-9225.a2161c9d2",
+                      "ideas": {
+                        "1": {
+                          "title": "quarks",
+                          "id": "364.fca5.ee6ef25b8-9225.a2161c9d2",
+                          "ideas": {
+                            "1": {
+                              "title": " they have colors to distinguish",
+                              "id": "365.fca5.ee6ef25b8-9225.a2161c9d2"
+                            },
+                            "2": {
+                              "title": "flavors",
+                              "id": "366.fca5.ee6ef25b8-9225.a2161c9d2",
+                              "ideas": {
+                                "1": {
+                                  "title": "up",
+                                  "id": "367.fca5.ee6ef25b8-9225.a2161c9d2",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "most of things",
+                                      "id": "373.fca5.ee6ef25b8-9225.a2161c9d2"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "down ",
+                                  "id": "368.fca5.ee6ef25b8-9225.a2161c9d2",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "most of things",
+                                      "id": "374.fca5.ee6ef25b8-9225.a2161c9d2"
+                                    }
+                                  }
+                                },
+                                "3": {
+                                  "title": "charm ",
+                                  "id": "369.fca5.ee6ef25b8-9225.a2161c9d2"
+                                },
+                                "4": {
+                                  "title": "strange",
+                                  "id": "370.fca5.ee6ef25b8-9225.a2161c9d2"
+                                },
+                                "5": {
+                                  "title": "top",
+                                  "id": "371.fca5.ee6ef25b8-9225.a2161c9d2"
+                                },
+                                "6": {
+                                  "title": "bottom",
+                                  "id": "372.fca5.ee6ef25b8-9225.a2161c9d2"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "electrons are one up quark and two down quark",
+                          "id": "376.fca5.ee6ef25b8-9225.a2161c9d2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3.75": {
+                      "title": "Carbon dating",
+                      "id": "378.fca5.ee6ef25b8-9225.a2161c9d2",
+                      "ideas": {
+                        "1": {
+                          "title": "the weak force is what turn Carbon 14 into something else",
+                          "id": "379.fca5.ee6ef25b8-9225.a2161c9d2"
+                        },
+                        "2": {
+                          "title": "meaning by changing the quarks and losing Bosons to other particles the quarks turn into something else",
+                          "id": "380.fca5.ee6ef25b8-9225.a2161c9d2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Strong Nuclear Force",
+                  "id": "304.d3542940eb23d53",
+                  "ideas": {
+                    "1": {
+                      "title": "Bind atoms together",
+                      "id": "305.d3542940eb23d53"
+                    },
+                    "2": {
+                      "title": "It's bound by forces that have been around since the beginning of time",
+                      "id": "306.d3542940eb23d53"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "2": {
+          "title": "Wikipedia",
+          "id": "147.73a28e198fe10f08",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "148.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "is the natural science that involves the study of matter[4] and its motion and behavior through space and time, along with related concepts such as energy and force.[5] One of the most fundamental scientific disciplines, the main goal of physics is to understand how the universe behaves.[a][6][7][8]",
+                  "id": "149.73a28e198fe10f08"
+                },
+                "2": {
+                  "title": "physics scope",
+                  "id": "262.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 129,
+                      "text": "Physics covers a wide range of phenomena, from elementary particles (such as quarks, neutrinos, and electrons) to the largest superclusters of galaxies. Included in these phenomena are the most basic objects composing all other things. Therefore, physics is sometimes called the \"fundamental science\".[47] Physics aims to describe the various phenomena that occur in nature in terms of simpler phenomena. Thus, physics aims to both connect the things observable to humans to root causes, and then connect these causes together."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "It intersected with other disciplines",
+              "id": "150.73a28e198fe10f08",
+              "attr": {
+                "note": {
+                  "index": 129,
+                  "text": "Physics intersects with many interdisciplinary areas of research, such as biophysics and quantum chemistry"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Biophysics",
+                  "id": "151.73a28e198fe10f08"
+                },
+                "2": {
+                  "title": "Quantum chemistry",
+                  "id": "152.73a28e198fe10f08"
+                }
+              }
+            },
+            "3": {
+              "title": "Contributions",
+              "id": "153.73a28e198fe10f08",
+              "attr": {
+                "note": {
+                  "index": 132,
+                  "text": "Physics also makes significant contributions through advances in new technologies that arise from theoretical breakthroughs. For example, advances in the understanding of electromagnetism or nuclear physics led directly to the development of new products that have dramatically transformed modern-day society, such as television, computers, domestic appliances, and nuclear weapons;[6] advances in thermodynamics led to the development of industrialization, and advances in mechanics inspired the development of calculus."
+                }
+              }
+            },
+            "4": {
+              "title": "History",
+              "id": "154.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "Presocratic/Greek philosopher who dismissed the idea that non-natural things have effects on nature",
+                  "id": "155.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Thales_of_Miletus",
+                      "id": "156.73a28e198fe10f08"
+                    },
+                    "2": {
+                      "title": "Thales",
+                      "id": "157.73a28e198fe10f08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Astronomy and physics seem to be together in some sense",
+                  "id": "158.73a28e198fe10f08"
+                },
+                "4": {
+                  "title": "Atomism was already there",
+                  "id": "160.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Atomism",
+                      "id": "159.73a28e198fe10f08",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Contributions from the islamic world",
+                  "id": "161.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 140,
+                      "text": "The most notable innovations were in the field of optics and vision, which came from the works of many scientists like Ibn Sahl, Al-Kindi, Ibn Al-Haitham, Al-Farisi and Avicenna. The most notable work was The Book of Optics (also known as Kitāb al-Manāẓir), written by Ibn Al-Haitham, in which he was not only the first to disprove the ancient Greek idea about vision, but also came up with a new theory. In the book, he was also the first to study the phenomenon of the pinhole camera and delved further into the way the eye itself works. Using dissections and the knowledge of previous scholars, he was able to begin to explain how light enters the eye, is focused, and is projected to the back of the eye: and built then the world's first camera obscura hundreds of years before the modern development of photography.[17]"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "ibn al-haitham",
+                  "id": "162.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "Pioneered the area of optics",
+                      "id": "165.73a28e198fe10f08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Classical physics",
+                  "id": "163.73a28e198fe10f08",
+                  "ideas": {},
+                  "attr": {
+                    "note": {
+                      "index": 143,
+                      "text": "Classical physics\nMain article: Classical physics\n\nSir Isaac Newton (1643–1727), whose laws of motion and universal gravitation were major milestones in classical physics\nPhysics became a separate science when early modern Europeans used experimental and quantitative methods to discover what are now considered to be the laws of physics.[18][page needed]\n\nMajor developments in this period include the replacement of the geocentric model of the solar system with the heliocentric Copernican model, the laws governing the motion of planetary bodies determined by Johannes Kepler between 1609 and 1619, pioneering work on telescopes and observational astronomy by Galileo Galilei in the 16th and 17th Centuries, and Isaac Newton's discovery and unification of the laws of motion and universal gravitation that would come to bear his name.[19] Newton also developed calculus,[c] the mathematical study of change, which provided new mathematical methods for solving physical problems.[20]\n\nThe discovery of new laws in thermodynamics, chemistry, and electromagnetics resulted from greater research efforts during the Industrial Revolution as energy needs increased.[21] The laws comprising classical physics remain very widely used for objects on everyday scales travelling at non-relativistic speeds, since they provide a very close approximation in such situations, and theories such as quantum mechanics and the theory of relativity simplify to their classical equivalents at such scales. However, inaccuracies in classical mechanics for very small objects and very high velocities led to the development of modern physics in the 20th century."
+                    }
+                  }
+                },
+                "8": {
+                  "title": "Modern Physics",
+                  "id": "167.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 144,
+                      "text": "Modern physics began in the early 20th century with the work of Max Planck in quantum theory and Albert Einstein's theory of relativity. Both of these theories came about due to inaccuracies in classical mechanics in certain situations. Classical mechanics predicted a varying speed of light, which could not be resolved with the constant speed predicted by Maxwell's equations of electromagnetism; this discrepancy was corrected by Einstein's theory of special relativity, which replaced classical mechanics for fast-moving bodies and allowed for a constant speed of light.[22] Black body radiation provided another problem for classical physics, which was corrected when Planck proposed that the excitation of material oscillators is possible only in discrete steps proportional to their frequency; this, along with the photoelectric effect and a complete theory predicting discrete energy levels of electron orbitals, led to the theory of quantum mechanics taking over from classical physics at very small scales.[23]\n\nQuantum mechanics would come to be pioneered by Werner Heisenberg, Erwin Schrödinger and Paul Dirac.[23] From this early work, and work in related fields, the Standard Model of particle physics was derived.[24] Following the discovery of a particle with properties consistent with the Higgs boson at CERN in 2012,[25] all fundamental particles predicted by the standard model, and no others, appear to exist; however, physics beyond the Standard Model, with theories such as supersymmetry, is an active area of research.[26] Areas of mathematics in general are important to this field, such as the study of probabilities."
+                    }
+                  }
+                },
+                "9": {
+                  "title": "Difference between classical and modern physics",
+                  "id": "187.3f1eda55fdb585d",
+                  "ideas": {
+                    "1": {
+                      "title": "Classical physics predicted the light to be   in varying speeds. Which conflicted with Maxwell's equations",
+                      "id": "188.3f1eda55fdb585d"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "Physics started as a natural philosophy till the late 1800s",
+                  "id": "190.3f1eda55fdb585d"
+                },
+                "11": {
+                  "title": "Eras",
+                  "id": "197.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "Classical Physics",
+                      "id": "198.73a28e198fe10f08",
+                      "ideas": {
+                        "1": {
+                          "title": "anything developed before the 20th century",
+                          "id": "200.73a28e198fe10f08",
+                          "ideas": {}
+                        },
+                        "2": {
+                          "title": "classical mechanics, acoustics, optics, thermodynamics, and electromagnetism",
+                          "id": "203.73a28e198fe10f08"
+                        },
+                        "3": {
+                          "title": "classical mechanics",
+                          "id": "204.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "statics",
+                              "id": "205.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "study of the forces on a body or bodies not subject to an acceleration",
+                                  "id": "207.73a28e198fe10f08"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "kinematics",
+                              "id": "206.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "study of motion without regard to its causes",
+                                  "id": "208.73a28e198fe10f08"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "dynamics",
+                              "id": "209.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "study of motion and the forces that affect it",
+                                  "id": "210.73a28e198fe10f08"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "it also can be divided into",
+                              "id": "211.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "solid mechanics",
+                                  "id": "212.73a28e198fe10f08"
+                                },
+                                "2": {
+                                  "title": "fluid mechanics",
+                                  "id": "213.73a28e198fe10f08"
+                                },
+                                "3": {
+                                  "title": "both are called continuum mechanics",
+                                  "id": "214.73a28e198fe10f08",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "the latter include such branches as hydrostatics, hydrodynamics, aerodynamics, and pneumatics.",
+                                      "id": "215.73a28e198fe10f08"
+                                    },
+                                    "2": {
+                                      "title": "pneumatics",
+                                      "id": "216.73a28e198fe10f08",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Pneumatics (From Greek: πνεύμα) is a branch of engineering that makes use of gas or pressurized air.",
+                                          "id": "217.73a28e198fe10f08"
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "optics",
+                          "id": "218.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "Optics, the study of light, is concerned not only with visible light but also with infrared and ultraviolet radiation, which exhibit all of the phenomena of visible light except visibility, e.g., reflection, refraction, interference, diffraction, dispersion, and polarization of light.",
+                              "id": "219.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Thermodynamics",
+                          "id": "220.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": " Heat is a form of energy, the internal energy possessed by the particles of which a substance is composed; thermodynamics deals with the relationships between heat and other forms of energy",
+                              "id": "221.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "Electricity and magnetism",
+                          "id": "222.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "Electricity and magnetism have been studied as a single branch of physics since the intimate connection between them was discovered in the early 19th century; an electric current gives rise to a magnetic field, and a changing magnetic field induces an electric current. Electrostatics deals with electric charges at rest, electrodynamics with moving charges, and magnetostatics with magnetic poles at rest.",
+                              "id": "223.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Modern Physics",
+                      "id": "199.73a28e198fe10f08",
+                      "ideas": {
+                        "1": {
+                          "title": "difference between classical and modern",
+                          "id": "224.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "https://upload.wikimedia.org/wikipedia/commons/5/56/Modernphysicsfields.svg",
+                              "id": "244.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "note": {
+                              "index": 195,
+                              "text": "Classical physics is generally concerned with matter and energy on the normal scale of observation, while much of modern physics is concerned with the behavior of matter and energy under extreme conditions or on a very large or very small scale. For example, atomic and nuclear physics studies matter on the smallest scale at which chemical elements can be identified. The physics of elementary particles is on an even smaller scale since it is concerned with the most basic units of matter; this branch of physics is also known as high-energy physics because of the extremely high energies necessary to produce many types of particles in particle accelerators. On this scale, ordinary, commonsense notions of space, time, matter, and energy are no longer valid.[40]"
+                            },
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Deals with matter on a very small scale.",
+                          "id": "226.73a28e198fe10f08"
+                        },
+                        "3": {
+                          "title": "It's called high energy physics",
+                          "id": "227.73a28e198fe10f08"
+                        },
+                        "4": {
+                          "title": "On this scale, ordinary, commonsense notions of space, time, matter, and energy are no longer valid.[40]",
+                          "id": "228.73a28e198fe10f08"
+                        },
+                        "5": {
+                          "title": "example of fields under it",
+                          "id": "229.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": " For example, atomic and nuclear physics studies matter on the smallest scale at which chemical elements can be identified. The physics of elementary particles is on an even smaller scale since it is concerned with the most basic units of matter; this branch of physics is also known as high-energy physics because of the extremely high energies necessary to produce many types of particles in particle accelerators. On this scale, ordinary, commonsense notions of space, time, matter, and energy are no longer valid.[40]",
+                              "id": "230.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "Classical mechanics to quantum theory",
+                          "id": "231.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "Classical mechanics approximates nature as continuous, while quantum theory is concerned with the discrete nature of many phenomena at the atomic and subatomic level and with the complementary aspects of particles and waves in the description of such phenomena.",
+                              "id": "232.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "The theory of relativity",
+                          "id": "233.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "special theory of relativity",
+                              "id": "235.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": " concerned with relative uniform motion in a straight line",
+                                  "id": "236.73a28e198fe10f08"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "General theory of relativity",
+                              "id": "237.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "the general theory of relativity with accelerated motion and its connection with gravitation",
+                                  "id": "238.73a28e198fe10f08"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "e = mc2",
+                              "id": "358.fca5.ee6ef25b8-9225.a2161c9d2",
+                              "ideas": {
+                                "1": {
+                                  "title": "energy is mass times the square of the speed of light",
+                                  "id": "359.fca5.ee6ef25b8-9225.a2161c9d2"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "note": {
+                              "index": 203,
+                              "text": "The theory of relativity is concerned with the description of phenomena that take place in a frame of reference that is in motion with respect to an observer"
+                            },
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "Quantum mechanics",
+                          "id": "239.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": " Max Planck, Erwin Schrödinger",
+                              "id": "240.73a28e198fe10f08"
+                            },
+                            "2": {
+                              "title": "Quantum field theory",
+                              "id": "241.73a28e198fe10f08",
+                              "ideas": {
+                                "1": {
+                                  "title": "Later, quantum field theory unified quantum mechanics and special relativity",
+                                  "id": "242.73a28e198fe10f08"
+                                }
+                              },
+                              "attr": {}
+                            },
+                            "3": {
+                              "title": "Quantum gravity",
+                              "id": "243.73a28e198fe10f08"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Particle physics",
+              "id": "169.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "the standard model for particles",
+                  "id": "170.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 148,
+                      "text": "Around 1980, an elementary particle's status as indeed elementary—an ultimate constituent of substance—was mostly discarded for a more practical outlook,[1] embodied in particle physics' Standard Model, science's most experimentally successful theory.[5][7] Many elaborations upon and theories beyond the Standard Model, including the extremely popular supersymmetry, double the number of elementary particles by hypothesizing that each known particle associates with a \"shadow\" partner far more massive,[8][9] although all such superpartners remain undiscovered.[7][10] Meanwhile, an elementary boson mediating gravitation—the graviton—remains hypothetical.[1]"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Standard_Model",
+                      "id": "185.73a28e198fe10f08"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "all fundamental particles were predicted",
+                  "id": "171.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "it's an elementry particle",
+                      "id": "172.73a28e198fe10f08",
+                      "attr": {
+                        "note": {
+                          "index": 149,
+                          "text": "In particle physics, an elementary particle or fundamental particle is a particle whose substructure is unknown; thus, it is unknown whether it is composed of other particles.[1] Known elementary particles include the fundamental fermions (quarks, leptons, antiquarks, and antileptons), which generally are \"matter particles\" and \"antimatter particles\", as well as the fundamental bosons (gauge bosons and the Higgs boson), which generally are \"force particles\" that mediate interactions among fermions.[1] A particle containing two or more elementary particles is a composite particle."
+                        }
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "matter particles and anti-matter particles",
+                          "id": "173.73a28e198fe10f08",
+                          "ideas": {
+                            "1": {
+                              "title": "quarks, leptons, antiquarks, and antileptons",
+                              "id": "180.73a28e198fe10f08"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "gauge bosons and higgs boson",
+                          "id": "176.73a28e198fe10f08",
+                          "attr": {},
+                          "ideas": {
+                            "1": {
+                              "title": "force particle that mediate the interactions among fermions",
+                              "id": "177.73a28e198fe10f08"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "A particle containing two or more elementary particles is composite particle",
+                          "id": "179.73a28e198fe10f08"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "photon",
+                  "id": "181.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "is the particle of electromagentic field",
+                      "id": "182.73a28e198fe10f08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Higgs",
+                  "id": "284.d49f800b181c360",
+                  "ideas": {
+                    "1": {
+                      "title": "Higgs Field",
+                      "id": "285.d49f800b181c360",
+                      "ideas": {
+                        "1": {
+                          "title": "some subatomic particles have more mass than others simply because they interact with the field around them.",
+                          "id": "287.d49f800b181c360",
+                          "ideas": {
+                            "1": {
+                              "title": "electron",
+                              "id": "289.d49f800b181c360"
+                            },
+                            "2": {
+                              "title": "Top quark",
+                              "id": "290.d49f800b181c360"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Higgs boson",
+                          "id": "286.d49f800b181c360",
+                          "ideas": {
+                            "1": {
+                              "title": "smallest part of the higgs field",
+                              "id": "288.d49f800b181c360"
+                            }
+                          },
+                          "attr": {}
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Subatomic particles",
+                  "id": "291.d49f800b181c360",
+                  "ideas": {
+                    "1": {
+                      "title": "Bosons",
+                      "id": "292.d49f800b181c360"
+                    },
+                    "2": {
+                      "title": "Formyons",
+                      "id": "293.d49f800b181c360"
+                    },
+                    "3": {
+                      "title": "https://www.youtube.com/watch?v=eD7hXLRqWWM",
+                      "id": "294.d49f800b181c360"
+                    },
+                    "4": {
+                      "title": "Lengthy Documentary",
+                      "id": "298.d49f800b181c360",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=DumhiyQn0CM",
+                          "id": "299.d49f800b181c360"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Atomic Structure",
+                  "id": "295.d49f800b181c360",
+                  "ideas": {
+                    "2": {
+                      "title": "https://www.youtube.com/watch?v=h6LPAwAmnCQ",
+                      "id": "297.d49f800b181c360"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "String Theory",
+                  "id": "300.d49f800b181c360"
+                },
+                "18": {
+                  "title": "Resources",
+                  "id": "283.d49f800b181c360",
+                  "ideas": {
+                    "1": {
+                      "title": "Richard Feynman Lectures",
+                      "id": "301.d49f800b181c360",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=kW6rR9H9Vu8",
+                          "id": "302.d49f800b181c360"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "The scientific method in physics",
+              "id": "191.3f1eda55fdb585d",
+              "ideas": {
+                "1": {
+                  "title": "The scientific method employs a priori reasoning as well as a posteriori reasoning and the use of Bayesian inference to measure the validity of a given theory.[29]",
+                  "id": "192.3f1eda55fdb585d"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Core theories",
+              "id": "195.3f1eda55fdb585d",
+              "ideas": {
+                "1": {
+                  "title": "classical mechanics, quantum mechanics, thermodynamics and statistical mechanics, electromagnetism, and special relativity.",
+                  "id": "196.3f1eda55fdb585d"
+                },
+                "2": {
+                  "title": "General Relativity",
+                  "id": "194.3f1eda55fdb585d",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/General_relativity",
+                      "id": "193.3f1eda55fdb585d",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Theory of relativety",
+                  "id": "189.3f1eda55fdb585d",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Maxwell's equation of electromagnetism",
+                  "id": "186.3f1eda55fdb585d",
+                  "attr": {
+                    "style": {
+                      "background": "#008080"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "How electricity and magnetism generated each other",
+                      "id": "272.7c5526e1109a9c59",
+                      "ideas": {
+                        "1": {
+                          "title": "so an electricity generated a magnetic field and vice versa and a wave is created",
+                          "id": "273.7c5526e1109a9c59"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Markony ",
+                      "id": "274.7c5526e1109a9c59",
+                      "ideas": {
+                        "1": {
+                          "title": "which ushered the era of wireless communication",
+                          "id": "275.7c5526e1109a9c59"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Quantum Mechanics",
+                  "id": "168.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "protons and electrons have up quarks and down quarks",
+                      "id": "184.73a28e198fe10f08"
+                    },
+                    "2": {
+                      "title": "Quantum Entaglement",
+                      "id": "276.51bc865c18b0a7c2",
+                      "ideas": {
+                        "1": {
+                          "title": "When two particles are affected by each other from a distance",
+                          "id": "277.51bc865c18b0a7c2"
+                        },
+                        "2": {
+                          "title": "There is a paradox here which violates the theory of local realism (a particle can only be affected by its surrounding)",
+                          "id": "278.51bc865c18b0a7c2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Quantum State",
+                      "id": "279.51bc865c18b0a7c2"
+                    },
+                    "4": {
+                      "title": "SuperPosition",
+                      "id": "280.51bc865c18b0a7c2",
+                      "ideas": {
+                        "1": {
+                          "title": "A particle can have an excited and non-excited state",
+                          "id": "281.51bc865c18b0a7c2"
+                        },
+                        "2": {
+                          "title": "When observed, one of the two will appear (randomly)",
+                          "id": "282.51bc865c18b0a7c2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 145,
+                      "text": "At that time, the recent advent of quantum mechanics was radically altering the conception of particles, as a single particle could seemingly span a field as would a wave, a paradox still eluding satisfactory explanation.[3][4][5]"
+                    },
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Relation with other fields",
+              "id": "245.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Ontology",
+                  "id": "246.73a28e198fe10f08",
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "an image showing the relation between different fields",
+                  "id": "249.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "https://upload.wikimedia.org/wikipedia/commons/8/86/Physics_and_other_sciences.png",
+                      "id": "250.73a28e198fe10f08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Applied physics",
+              "id": "251.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "using physics to solve a particular problem",
+                  "id": "253.73a28e198fe10f08",
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Statics",
+                  "id": "255.73a28e198fe10f08",
+                  "ideas": {
+                    "1": {
+                      "title": "building bridges",
+                      "id": "256.73a28e198fe10f08",
+                      "ideas": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "https://en.wikipedia.org/wiki/Applied_physics",
+                  "id": "258.73a28e198fe10f08"
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 218,
+                  "text": "Applied physics is a general term for physics research which is intended for a particular use. An applied physics curriculum usually contains a few classes in an applied discipline, like geology or electrical engineering. It usually differs from engineering in that an applied physicist may not be designing something in particular, but rather is using physics or conducting physics research with the aim of developing new technologies or solving a problem.\n\nThe approach is similar to that of applied mathematics. Applied physicists use physics in scientific research. For instance, people working on accelerator physics might seek to build better particle detectors for research in theoretical physics.\n\nPhysics is used heavily in engineering. For example, statics, a subfield of mechanics, is used in the building of bridges and other static structures. The understanding and use of acoustics results in sound control and better concert halls; similarly, the use of optics creates better optical devices. An understanding of physics makes for more realistic flight simulators, video games, and movies, and is often critical in forensic investigations.\n\nWith the standard consensus that the laws of physics are universal and do not change with time, physics can be used to study things that would ordinarily be mired in uncertainty. For example, in the study of the origin of the earth, one can reasonably model earth's mass, temperature, and rate of rotation, as a function of time allowing one to extrapolate forward or backward in time and so predict future or prior events. It also allows for simulations in engineering which drastically speed up the development of a new technology.\n\nBut there is also considerable interdisciplinarity in the physicist's methods, so many other important fields are influenced by physics (e.g., the fields of econophysics and sociophysics)."
+                },
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "fields",
+              "id": "259.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "theoritical physics",
+                  "id": "261.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 224,
+                      "text": "Theoretical physics has historically taken inspiration from philosophy; electromagnetism was unified this way.[d] Beyond the known universe, the field of theoretical physics also deals with hypothetical issues,[e] such as parallel universes, a multiverse, and higher dimensions. Theorists invoke these ideas in hopes of solving particular problems with existing theories. They then explore the consequences of these ideas and work toward making testable predictions."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "theory of everything",
+              "id": "263.73a28e198fe10f08",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Theory_of_everything",
+                  "id": "264.73a28e198fe10f08"
+                },
+                "2": {
+                  "title": "string theory",
+                  "id": "265.73a28e198fe10f08",
+                  "attr": {
+                    "note": {
+                      "index": 228,
+                      "text": "Eventually a single explanatory framework, called \"string theory\", has emerged that intends to be the ultimate theory of the universe. String theory posits that at the beginning of the universe (up to 10−43 seconds after the Big Bang), the four fundamental forces were once a single fundamental force. According to string theory, every particle in the universe, at its most microscopic level (Planck length), consists of varying combinations of vibrating strings (or strands) with preferred patterns of vibration. String theory further claims that it is through these specific oscillatory patterns of strings that a particle of unique mass and force charge is created (that is to say, the electron is a type of string that vibrates one way, while the up-quark is a type of string vibrating another way, and so forth)."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Research fields",
+              "id": "266.73a28e198fe10f08",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 229,
+                  "text": "particle physics; condensed matter physics; atomic, molecular, and optical physics; astrophysics; and applied physics. Some physics departments also support physics education research and physics outreach.[55]"
+                }
+              }
+            }
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "id": 2,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Intro to Physics",
+              "id": 5,
+              "ideas": {
+                "1": {
+                  "title": "http://www.introduction-to-physics.com/",
+                  "id": 6
+                },
+                "2": {
+                  "title": "links from physics tutorial",
+                  "id": 10,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/units-of-speed.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Units of Speed</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Learn what the units of speed are. Learn also how to convert a unit to another such as miles per hour to kilometer per hour</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/adding-vectors.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Adding Vectors</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">adding vectors using arrows is what you will learn here</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/trigonometric-identities.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Trigonometric Identities</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">A list of the basic trigonometric identities with some good illustrations.</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/definition-of-speed.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Definition of Speed</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">A definition of speed is given with crystal clear explanations and examples</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/definition-of-velocity.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Definition of Velocity</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">A definition of velocity is given with crystal clear explanations and examples. Velocity versus speed is also explained.</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/definition-of-acceleration.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Definition of Acceleration</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">A definition of acceleration is given with crystal clear explanations and examples. The difference between speed and acceleration is also explained.</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/free-fall-equations.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Free Fall Equations</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Find here the free fall equations and an explanations of where these equations came from</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/graph-of-speed.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Graph of Speed</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Learn to read the graph of speed versus time</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/definition-of-inertia.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Definition of Inertia</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">A definition of inertia along with great discoveries by famous mathematicians and physicians such as Galileo and Newton</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/newton-s-second-law.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Newton's Second Law</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Newton's second law of motion is explained here in plain English. Learn how to derive the formula F = m x a</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/third-law-of-newton.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Third Law of Newton</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Explanations and examples of the third law of newton. Learn about action and reaction</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/rotation-versus-revolution.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Difference between Rotation and Revolution</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Learn quickly the difference between rotation and revolution</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/how-to-calculate-momentum.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">How to Calculate Momentum</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">This lesson will show you how to calculate the momentum of moving objects</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/work-formula.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Work Formula</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Find the work formula here and learn about the meaning of work in physics</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/vibrations-and-waves.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Vibrations and Waves</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">Understand quickly the meaning of vibrations and waves with crystal clear explanations</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/what-is-a-neutral-atom.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">What is a Neutral Atom</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">What is a neutral atom? Find out what an atom is with crystal clear explanations</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/what-is-temperature.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">What is Temperature?</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">What is temperature? Please explain to me clearly in terms that I can understand</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/electricity-lessons.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Great Electricity Lessons and some history.</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">These electricity lessons will show you in simple terms how electricity work.</dd><dt style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; font-weight: normal; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><a href=\"http://www.introduction-to-physics.com/introduction-to-physics-blog.html\" style=\"text-decoration: underline; color: rgb(195, 169, 142);\" target=\"_blank\">Introduction to physics blog</a></dt><dd style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">The introduction to physics blog will keep you up-to-date to all new physics lessons that are added to the website or updated. Subscribe here!</dd><span style=\"color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\">- See more at: http://www.introduction-to-physics.com/#sthash.FKxnFqdF.dpuf</span>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {}
+                },
+                "3": {
+                  "title": "Famous figures in electricity",
+                  "id": 13,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><b>John Ambrose Fleming:&nbsp;</b>First radio in 1904 and founder of electronic devices.</span></p><p style=\"margin-top: 24px; margin-bottom: 24px; color: rgb(61, 82, 85); font-family: OpenSans, Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22.5px; background-color: rgb(220, 235, 236);\"><span style=\"color: rgb(51, 51, 51); background-color: rgb(255, 255, 255);\"><b>Konrad Zuse</b>: &nbsp;First programmable computer and founder of modern computer in 1943.</span></p>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Video tutorials",
+              "id": "267.56f1f90a34248fd8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=ZM8ECpBuQYE&list=PL8dPuuaLjXtN0ge7yDk_UA0ldZJdhwkoV",
+                  "id": "268.56f1f90a34248fd8",
+                  "ideas": {
+                    "1": {
+                      "title": "crash course",
+                      "id": "269.56f1f90a34248fd8"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "map of physics",
+              "id": "271.6aba72aff33ce441"
+            },
+            "4": {
+              "title": "great physics lecture",
+              "id": "351.b032.7f7494fe-dfe9.2f6822c5c",
+              "ideas": {
+                "1": {
+                  "title": "https://youtu.be/0NbBjNiw4tk",
+                  "id": "352.b032.7f7494fe-dfe9.2f6822c5c"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 394,
+      "ideaIdTo": 385,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed",
+          "arrow": true
+        }
+      }
+    },
+    {
+      "ideaIdFrom": "255.73a28e198fe10f08",
+      "ideaIdTo": "205.73a28e198fe10f08",
+      "attr": {
+        "style": {
+          "color": "#707070",
+          "lineStyle": "solid",
+          "arrow": "to"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Physics"
+}

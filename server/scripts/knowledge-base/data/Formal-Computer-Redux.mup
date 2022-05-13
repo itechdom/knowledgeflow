@@ -1,0 +1,622 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Redux",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 109,
+          "ideas": {
+            "4": {
+              "title": "Archeticture",
+              "id": 196,
+              "ideas": {
+                "1": {
+                  "title": "one giant state for the whole app",
+                  "id": 191,
+                  "ideas": {
+                    "1": {
+                      "title": "reducers will slice the data and return a new state everytime",
+                      "id": 192
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Based on what?",
+                  "id": 186,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "Prior Art\n\nRedux has a mixed heritage. It is similar to some patterns and technologies, but is also different from them in important ways. We’ll explore some of the similarities and the differences below.\n\nFlux\n\nCan Redux be considered a&nbsp;[Flux](https://facebook.github.io/flux/)&nbsp;implementation?[Yes](https://twitter.com/fisherwebdev/status/616278911886884864), and&nbsp;[no](https://twitter.com/andrestaltz/status/616270755605708800).\n\n(Don’t worry,&nbsp;[Flux creators](https://twitter.com/jingc/status/616608251463909376)&nbsp;[approve of it](https://twitter.com/fisherwebdev/status/616286955693682688), if that’s all you wanted to know.)\n\nRedux was inspired by several important qualities of Flux. Like Flux, Redux prescribes that you concentrate your model update logic in a certain layer of your application (“stores” in Flux, “reducers” in Redux). Instead of letting the application code directly mutate the data, both tell you to describe every mutation as a plain object called an “action”.\n\nUnlike Flux,&nbsp;Redux does not have the concept of a Dispatcher. This is because it relies on pure functions instead of event emitters, and pure functions are easy to compose and don’t need an additional entity managing them. Depending on how you view Flux, you may see this as either a deviation or an implementation detail. Flux has often been&nbsp;described as&nbsp;(state, action) =&gt; state. In this sense, Redux is true to the Flux architecture, but makes it simpler thanks to pure functions.\n\nAnother important difference from Flux is that&nbsp;Redux assumes you never mutate your data. You can use plain objects and arrays for your state just fine, but mutating them inside the reducers is strongly discouraged. You should always return a new object, which is easy with the&nbsp;[object spread syntax proposed for ES7](https://github.com/sebmarkbage/ecmascript-rest-spread)&nbsp;and implemented in&nbsp;[Babel](http://babeljs.io/), or with a library like&nbsp;[Immutable](https://facebook.github.io/immutable-js).\n\nWhile it is technically&nbsp;possible&nbsp;to&nbsp;[write impure reducers](https://github.com/rackt/redux/issues/328#issuecomment-125035516)&nbsp;that mutate the data for performance corner cases, we actively discourage you from doing this. Development features like time travel, record/replay, or hot reloading will break. Moreover it doesn’t seem like immutability poses performance problems in most real apps, because, as&nbsp;[Om](https://github.com/omcljs/om)&nbsp;demonstrates, even if you lose out on object allocation, you still win by avoiding expensive re-renders and re-calculations, as you know exactly what changed thanks to reducer purity.\n\nElm\n\n[Elm](http://elm-lang.org/)&nbsp;is a functional programming language inspired by Haskell and created by&nbsp;[Evan Czaplicki](https://twitter.com/czaplic). It enforces[a “model view update” architecture](https://github.com/evancz/elm-architecture-tutorial/), where the update has the following signature:&nbsp;(state, action) =&gt; state. Technically, Elm “updaters” are equivalent to the reducers in Redux.\n\nUnlike Redux, Elm is a language, so it is able to benefit from many things like enforced purity, static typing, out of the box immutability, and pattern matching (using the&nbsp;case&nbsp;expression). Even if you don’t plan to use Elm, you should read about the Elm architecture, and play with it. There is an interesting[JavaScript library playground implementing similar ideas](https://github.com/paldepind/noname-functional-frontend-framework). We should look there for inspiration on Redux! One way that we can get closer to the static typing of Elm is by&nbsp;[using a gradual typing solution like Flow](https://github.com/rackt/redux/issues/290).\n\nImmutable\n\n[Immutable](https://facebook.github.io/immutable-js)&nbsp;is a JavaScript library implementing persistent data structures. It is performant and has an idiomatic JavaScript API.\n\nImmutable and most similar libraries are orthogonal to Redux. Feel free to use them together!\n\nRedux doesn’t care&nbsp;how&nbsp;you store the state—it can be a plain object, an Immutable object, or anything else.&nbsp;You’ll probably want a (de)serialization mechanism for writing universal apps and hydrating their state from the server, but other than that, you can use any data storage library&nbsp;as long as it supports immutability. For example, it doesn’t make sense to use Backbone for Redux state, because Backbone models are mutable.\n\nNote that, even if your immutable library supports cursors, you shouldn’t use them in a Redux app. The whole state tree should be considered read-only, and you should use Redux for updating the state, and subscribing to the updates. Therefore writing via cursor doesn’t make sense for Redux.&nbsp;If your only use case for cursors is decoupling the state tree from the UI tree and gradually refining the cursors, you should look at selectors instead.&nbsp;Selectors are composable getter functions. See&nbsp;[reselect](http://github.com/faassen/reselect)&nbsp;for a really great and concise implementation of composable selectors.\n\nBaobab\n\n[Baobab](https://github.com/Yomguithereal/baobab)&nbsp;is another popular library implementing immutable API for updating plain JavaScript objects. While you can use it with Redux, there is little benefit in using them together.\n\nMost of the functionality Baobab provides is related to updating the data with cursors, but Redux enforces that the only way to update the data is to dispatch an action. Therefore they solve the same problem differently, and don’t complement each other.\n\nUnlike Immutable, Baobab doesn’t yet implement any special efficient data structures under the hood, so you don’t really win anything from using it together with Redux. It’s easier to just use plain objects in this case.\n\nRx\n\n[Reactive Extensions](https://github.com/Reactive-Extensions/RxJS)&nbsp;(and their undergoing&nbsp;[modern rewrite](https://github.com/ReactiveX/RxJS)) are a superb way to manage the complexity of asynchronous apps. In fact&nbsp;[there is an effort to create a library that models human-computer interaction as interdependent observables](http://cycle.js.org/).\n\nDoes it make sense to use Redux together with Rx? Sure! They work great together. For example, it is easy to expose a Redux store as an observable:\n\nfunction toObservable(store) {   return {     subscribe({ onNext }) {       let dispose = store.subscribe(() =&gt; onNext(store.getState()))       onNext(store.getState())       return { dispose }     }   } } Similarly, you can compose different asynchronous streams to turn them into actions before feeding them to&nbsp;store.dispatch().\n\nThe question is: do you really need Redux if you already use Rx? Maybe not. It’s not hard to&nbsp;[re-implement Redux in Rx](https://github.com/jas-chen/rx-redux). Some say it’s a two-liner using Rx&nbsp;.scan()&nbsp;method. It may very well be!\n\nIf you’re in doubt, check out the Redux source code (there isn’t much going on there), as well as its ecosystem (for example,&nbsp;[the developer tools](https://github.com/gaearon/redux-devtools)). If you don’t care too much about it and want to go with the reactive data flow all the way, you might want to explore something like&nbsp;[Cycle](http://cycle.js.org/)&nbsp;instead, or even combine it with Redux. Let us know how it goes!"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Doesn't use event emitters just functions",
+                  "id": "234.155505b97e4d6967",
+                  "ideas": {
+                    "1": {
+                      "title": "reducers",
+                      "id": "235.155505b97e4d6967",
+                      "ideas": {
+                        "1": {
+                          "title": "they obviously don't mutate data, they return a new object",
+                          "id": "236.155505b97e4d6967"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "API",
+              "id": 198,
+              "ideas": {
+                "1": {
+                  "title": "Bind Action Creators",
+                  "id": 199,
+                  "ideas": {
+                    "1": {
+                      "title": "seems to convert actions into dispatch function calls",
+                      "id": 200
+                    },
+                    "4": {
+                      "title": "Resources",
+                      "id": 230,
+                      "ideas": {
+                        "1": {
+                          "title": "http://redux.js.org/docs/api/bindActionCreators.html",
+                          "id": 229,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<table class=\"highlight tab-size js-file-line-container\" data-tab-size=\"2\" style=\"box-sizing: border-box; tab-size: 2; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; background-color: rgb(255, 255, 255);\"><tbody style=\"box-sizing: border-box;\"><tr style=\"box-sizing: border-box;\"><td id=\"LC5\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\">/**</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L6\" class=\"blob-num js-line-number\" data-line-number=\"6\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC6\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * Turns an object whose values are action creators, into an object with the</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L7\" class=\"blob-num js-line-number\" data-line-number=\"7\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC7\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * same keys, but with every function wrapped into a `dispatch` call so they</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L8\" class=\"blob-num js-line-number\" data-line-number=\"8\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC8\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * may be invoked directly. This is just a convenience method, as you can call</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L9\" class=\"blob-num js-line-number\" data-line-number=\"9\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC9\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L10\" class=\"blob-num js-line-number\" data-line-number=\"10\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC10\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> *</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L11\" class=\"blob-num js-line-number\" data-line-number=\"11\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC11\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * For convenience, you can also pass a single function as the first argument,</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L12\" class=\"blob-num js-line-number\" data-line-number=\"12\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC12\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * and get a function in return.</span></td></tr></tbody></table>"
+                    },
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Provider",
+                  "id": 201
+                },
+                "3": {
+                  "title": "CreateStore",
+                  "id": 218,
+                  "ideas": {
+                    "1": {
+                      "title": "Creates a new store by passing in a reducer",
+                      "id": 219
+                    },
+                    "2": {
+                      "title": "It will dispatch an init action by default",
+                      "id": 220,
+                      "ideas": {
+                        "1": {
+                          "title": "to allow other reducers to populate initial state",
+                          "id": 221
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Store will only change if you call an action on it",
+                      "id": 226,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Combine Reducers",
+                  "id": 222,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<table class=\"highlight tab-size js-file-line-container\" data-tab-size=\"2\" style=\"box-sizing: border-box; tab-size: 2; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; background-color: rgb(255, 255, 255);\"><tbody style=\"box-sizing: border-box;\"><tr style=\"box-sizing: border-box;\"><td id=\"LC84\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\">/**</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L85\" class=\"blob-num js-line-number\" data-line-number=\"85\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC85\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * Turns an object whose values are different reducer functions, into a single</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L86\" class=\"blob-num js-line-number\" data-line-number=\"86\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC86\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * reducer function. It will call every child reducer, and gather their results</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L87\" class=\"blob-num js-line-number\" data-line-number=\"87\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC87\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * into a single state object, whose keys correspond to the keys of the passed</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L88\" class=\"blob-num js-line-number\" data-line-number=\"88\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC88\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * reducer functions.</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L89\" class=\"blob-num js-line-number\" data-line-number=\"89\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC89\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> *</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L90\" class=\"blob-num js-line-number\" data-line-number=\"90\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC90\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * <span class=\"pl-k\" style=\"box-sizing: border-box; color: rgb(167, 29, 93);\">@param</span> <span class=\"pl-en\" style=\"box-sizing: border-box; color: rgb(121, 93, 163);\">{Object}</span> <span class=\"pl-smi\" style=\"box-sizing: border-box; color: rgb(51, 51, 51);\">reducers</span> An object whose values correspond to different</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L91\" class=\"blob-num js-line-number\" data-line-number=\"91\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC91\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * reducer functions that need to be combined into one. One handy way to obtain</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L92\" class=\"blob-num js-line-number\" data-line-number=\"92\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC92\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * it is to use ES6 `import * as reducers` syntax. The reducers may never return</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L93\" class=\"blob-num js-line-number\" data-line-number=\"93\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC93\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * undefined for any action. Instead, they should return their initial state</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L94\" class=\"blob-num js-line-number\" data-line-number=\"94\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC94\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * if the state passed to them was undefined, and the current state for any</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L95\" class=\"blob-num js-line-number\" data-line-number=\"95\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC95\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * unrecognized action.</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L96\" class=\"blob-num js-line-number\" data-line-number=\"96\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC96\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> *</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L97\" class=\"blob-num js-line-number\" data-line-number=\"97\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC97\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * <span class=\"pl-k\" style=\"box-sizing: border-box; color: rgb(167, 29, 93);\">@returns</span> <span class=\"pl-en\" style=\"box-sizing: border-box; color: rgb(121, 93, 163);\">{Function}</span> A reducer function that invokes every reducer inside the</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L98\" class=\"blob-num js-line-number\" data-line-number=\"98\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC98\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> * passed object, and builds a state object with the same shape.</span></td></tr><tr style=\"box-sizing: border-box;\"><td id=\"L99\" class=\"blob-num js-line-number\" data-line-number=\"99\" style=\"box-sizing: border-box; padding: 0px 10px; width: 50px; min-width: 50px; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; line-height: 20px; color: rgba(0, 0, 0, 0.298039); text-align: right; white-space: nowrap; vertical-align: top; cursor: pointer; -webkit-user-select: none; border-style: solid; border-color: rgb(238, 238, 238); border-image: initial; border-width: 0px 1px 0px 0px;\"></td><td id=\"LC99\" class=\"blob-code blob-code-inner js-file-line\" style=\"box-sizing: border-box; padding: 0px 10px; position: relative; line-height: 20px; vertical-align: top; overflow: visible; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 12px; word-wrap: normal; white-space: pre;\"><span class=\"pl-c\" style=\"box-sizing: border-box; color: rgb(150, 152, 150);\"> */</span></td></tr></tbody></table>"
+                    },
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Compose",
+                  "id": 223,
+                  "ideas": {
+                    "1": {
+                      "title": "Compose functions together",
+                      "id": 224
+                    },
+                    "2": {
+                      "title": "https://github.com/reactjs/redux/blob/master/src/compose.js",
+                      "id": 225
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "Subscribe",
+                  "id": 231
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Middleware (Thunk)",
+              "id": 202,
+              "ideas": {
+                "1": {
+                  "title": "Why?",
+                  "id": 203,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "Redux middleware solves different problems than Express or Koa middleware, but in a conceptually similar way.&nbsp;It provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.&nbsp;People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more."
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Thunk",
+                  "id": 206,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "index": 28,
+                      "text": "In a gist, Redux Thunk teaches Redux to recognize special kinds of actions that are in fact functions:\n\nimport { createStore, applyMiddleware } from 'redux'\nimport thunk from 'redux-thunk'\n\nconst store = createStore(\n  reducer,\n  applyMiddleware(thunk)\n)\n\n// It still recognizes plain object actions\nstore.dispatch({ type: 'INCREMENT' })\n\n// But with thunk middleware, it also recognizes functions\nstore.dispatch(function (dispatch) {\n  // ... which themselves may dispatch many times\n  dispatch({ type: 'INCREMENT' })\n  dispatch({ type: 'INCREMENT' })\n  dispatch({ type: 'INCREMENT' })\n\n  setTimeout(() => {\n    // ... even asynchronously!\n    dispatch({ type: 'DECREMENT' })\n  }, 1000)\n})"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "A thunk is a function that wraps an expression to delay its evaluation.",
+                      "id": "247.155505b97e4d6967",
+                      "attr": {}
+                    }
+                  }
+                },
+                "13": {
+                  "title": "Resources",
+                  "id": 204,
+                  "ideas": {
+                    "1": {
+                      "title": "http://redux.js.org/docs/advanced/Middleware.html",
+                      "id": 205
+                    },
+                    "2": {
+                      "title": "https://github.com/gaearon/redux-thunk",
+                      "id": "248.155505b97e4d6967",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "14": {
+                  "title": "it helps redux recognizes dispatched functions",
+                  "id": "279.77e3dc6a03668d65",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Reducers",
+              "id": 207,
+              "ideas": {
+                "1": {
+                  "title": "Takes previous state",
+                  "id": 208
+                },
+                "2": {
+                  "title": "and an Action",
+                  "id": 209
+                },
+                "3": {
+                  "title": "Returns new state",
+                  "id": 210
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "With React",
+              "id": 227,
+              "ideas": {
+                "1": {
+                  "title": "http://redux.js.org/docs/basics/UsageWithReact.html",
+                  "id": 232
+                },
+                "2": {
+                  "title": "Connect",
+                  "id": 233,
+                  "ideas": {
+                    "1": {
+                      "title": "connects a component to a store",
+                      "id": "264.155505b97e4d6967",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options",
+                          "id": "265.155505b97e4d6967"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Arguments",
+                      "id": "268.155505b97e4d6967",
+                      "ideas": {
+                        "1": {
+                          "title": "mapStateToProps: Function",
+                          "id": "266.155505b97e4d6967",
+                          "ideas": {
+                            "1": {
+                              "title": "map your current state to the props and subscribe to any changes that the store",
+                              "id": "267.155505b97e4d6967"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "mapDispatchToProps: Object or function",
+                          "id": "270.155505b97e4d6967",
+                          "ideas": {
+                            "1": {
+                              "title": "if an object is passed",
+                              "id": "272.155505b97e4d6967"
+                            },
+                            "2": {
+                              "title": "if it's function",
+                              "id": "273.155505b97e4d6967",
+                              "ideas": {
+                                "1": {
+                                  "title": "you will get dispatch and you have to use",
+                                  "id": "274.155505b97e4d6967",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://redux.js.org/docs/api/bindActionCreators.html",
+                                      "id": "275.155505b97e4d6967"
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "if you don't pass anything",
+                              "id": "276.155505b97e4d6967",
+                              "ideas": {},
+                              "attr": {
+                                "note": {
+                                  "index": 50,
+                                  "text": "If you do not supply your own mapDispatchToProps function or object full of action creators, the default mapDispatchToProps implementation just injects dispatch into your component’s props."
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "mergeProps",
+                          "id": "278.155505b97e4d6967",
+                          "attr": {
+                            "note": {
+                              "index": 51,
+                              "text": "[mergeProps(stateProps, dispatchProps, ownProps): props] (Function): If specified, it is passed the result of mapStateToProps(), mapDispatchToProps(), and the parent props. The plain object you return from it will be passed as props to the wrapped component. You may specify this function to select a slice of the state based on props, or to bind action creators to a particular variable from props. If you omit it, Object.assign({}, ownProps, stateProps, dispatchProps) is used by default."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Selectors",
+              "id": "237.155505b97e4d6967",
+              "ideas": {
+                "1": {
+                  "title": "reselect",
+                  "id": "238.155505b97e4d6967"
+                },
+                "2": {
+                  "title": "https://github.com/reactjs/reselect",
+                  "id": "239.155505b97e4d6967"
+                }
+              },
+              "attr": {
+                "note": {
+                  "index": 38,
+                  "text": "Selectors can compute derived data, allowing Redux to store the minimal possible state.\nSelectors are efficient. A selector is not recomputed unless one of its arguments changes.\nSelectors are composable. They can be used as input to other selectors."
+                },
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Actions",
+              "id": "241.155505b97e4d6967",
+              "ideas": {
+                "1": {
+                  "title": "has",
+                  "id": "242.155505b97e4d6967",
+                  "ideas": {
+                    "1": {
+                      "title": "Name",
+                      "id": "243.155505b97e4d6967"
+                    },
+                    "2": {
+                      "title": "Data associated with that action",
+                      "id": "244.155505b97e4d6967"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "then reducers come in",
+                  "id": "245.155505b97e4d6967"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Redux thinking",
+              "id": "249.155505b97e4d6967",
+              "ideas": {
+                "1": {
+                  "title": "Have actions and associate them with data typs",
+                  "id": "250.155505b97e4d6967",
+                  "ideas": {
+                    "1": {
+                      "title": "examples",
+                      "id": "251.155505b97e4d6967",
+                      "ideas": {
+                        "1": {
+                          "title": "AddChild (id)",
+                          "id": "252.155505b97e4d6967"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "You will get them in your store and map them to \"Selectors\"",
+                  "id": "253.155505b97e4d6967"
+                },
+                "3": {
+                  "title": "Selectors then derive new data and call other selectors if need be",
+                  "id": "254.155505b97e4d6967"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Next State = (Previous State , Action)",
+              "id": "255.155505b97e4d6967"
+            },
+            "14": {
+              "title": "You always have one state object and reducers are responsible for producing new states based on an action",
+              "id": "260.155505b97e4d6967"
+            },
+            "15": {
+              "title": "Splitting Reducers",
+              "id": "261.155505b97e4d6967",
+              "attr": {
+                "note": {
+                  "index": 56,
+                  "text": "When splitting the reducer, there should be a function for each base property of the state. For example if your state has a \"name\" property and an \"attrs\" property, there should be a name reducer and an attrs reducer. While the first argument to the root reducer function is the current state of the store, the first argument passed to the sub-reducer functions is the current value of that property in the store."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "you essentially pass a new state to the reducer and it will produce a new state",
+                  "id": "262.155505b97e4d6967",
+                  "ideas": {
+                    "1": {
+                      "title": "then we combine them together later",
+                      "id": "263.155505b97e4d6967"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        },
+        "34": {
+          "title": "Source code",
+          "id": 211,
+          "attr": {
+            "position": [
+              58,
+              52,
+              1
+            ],
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "https://github.com/reactjs/redux/tree/master/src",
+              "id": 212
+            },
+            "2": {
+              "title": "CreateStore",
+              "id": 215,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/reactjs/redux/blob/master/src/createStore.js",
+                  "id": 216
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "3": {
+              "title": "https://github.com/xgrommx/awesome-redux",
+              "id": 187,
+              "ideas": {
+                "1": {
+                  "title": "awesome list of examples",
+                  "id": 188
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "https://github.com/jchapron/redux-friendlist-demo/tree/v1.0",
+              "id": 189,
+              "ideas": {
+                "1": {
+                  "title": "redux example app",
+                  "id": 190
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "http://redux.js.org/docs/basics/UsageWithReact.html",
+              "id": 194,
+              "ideas": {
+                "1": {
+                  "title": "docs",
+                  "id": 195
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Thrid Party",
+              "id": 111,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {}
+            },
+            "7": {
+              "title": "Egg Head By Dan Abramov",
+              "id": "256.155505b97e4d6967",
+              "ideas": {
+                "1": {
+                  "title": "https://egghead.io/lessons/javascript-redux-the-reducer-function",
+                  "id": "257.155505b97e4d6967"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Playground example",
+              "id": "258.155505b97e4d6967",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/itechdom/playground/tree/react",
+                  "id": "259.155505b97e4d6967"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 308,
+      "ideaIdTo": 305,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Redux"
+}

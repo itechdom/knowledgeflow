@@ -1,0 +1,62 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Rethinkdb",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "4.3276959e94a9b466",
+          "ideas": {
+            "1": {
+              "title": "Reql",
+              "id": "10.15a46519951df80f"
+            },
+            "2": {
+              "title": "Push notification",
+              "id": "11.15a46519951df80f",
+              "ideas": {
+                "1": {
+                  "title": "instead of websockets and long polling http connection",
+                  "id": "12.15a46519951df80f"
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "5.3276959e94a9b466",
+          "ideas": {
+            "1": {
+              "title": "https://www.rethinkdb.com/blog/realtime-web/",
+              "id": "6.3276959e94a9b466",
+              "ideas": {
+                "1": {
+                  "title": "blog post",
+                  "id": "7.3276959e94a9b466"
+                }
+              }
+            },
+            "2": {
+              "title": "FAQ",
+              "id": "8.15a46519951df80f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.rethinkdb.com/faq/",
+                  "id": "9.15a46519951df80f"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Rethinkdb",
+  "links": []
+}

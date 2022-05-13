@@ -1,0 +1,408 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Chemistry",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<div><a href=\"https://en.m.wikipedia.org/wiki/Outline_of_chemistry\" title=\"Outline of chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; margin: 0px; padding: 0px; border: 0px; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemistry</a><span style=\"color: rgb(37, 37, 37); font-family: 'Helvetica Neue', Helvetica, 'Nimbus Sans L', Arial, 'Liberation Sans', sans-serif; font-size: 16px; line-height: 26.4px;\">&nbsp;– physical science of atomic matter (matter that is composed of chemical elements), especially its chemical reactions, but also including its properties, structure, composition, behavior, and changes as they relate the chemical reactions</span><ul style=\"margin-bottom: 0px; margin-left: 1em; color: rgb(37, 37, 37); font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; line-height: inherit; border: 0px; font-stretch: inherit; vertical-align: baseline; list-style: circle inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Analytical_chemistry\" title=\"Analytical chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Analytical chemistry</a>&nbsp;– study of the separation, identification, and quantification of the chemical components of natural and artificial materials.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Astrochemistry\" title=\"Astrochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Astrochemistry</a>&nbsp;– study of the abundance and reactions of chemical elements and molecules in the universe, and their interaction with radiation.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Cosmochemistry\" title=\"Cosmochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Cosmochemistry</a>&nbsp;– study of the chemical composition of matter in the universe and the processes that led to those compositions</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Atmospheric_chemistry\" title=\"Atmospheric chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Atmospheric chemistry</a>&nbsp;– branch of atmospheric science in which the chemistry of the Earth's atmosphere and that of other planets is studied. It is a multidisciplinary field of research and draws on environmental chemistry, physics, meteorology, computer modeling, oceanography, geology and volcanology and other disciplines</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Outline_of_biochemistry\" title=\"Outline of biochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Biochemistry</a>&nbsp;– study of chemical processes in living organisms, including, but not limited to, living matter. Biochemistry governs all living organisms and living processes.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Agrochemistry\" title=\"Agrochemistry\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Agrochemistry</a>&nbsp;– study of both chemistry and biochemistry which are important in agricultural production, the processing of raw products into foods and beverages, and in environmental monitoring and remediation.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Bioinorganic_chemistry\" title=\"Bioinorganic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Bioinorganic chemistry</a>&nbsp;– examines the role of metals in biology.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Bioorganic_chemistry\" title=\"Bioorganic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Bioorganic chemistry</a>&nbsp;– rapidly growing scientific discipline that combines organic chemistry and biochemistry.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Biophysical_chemistry\" title=\"Biophysical chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Biophysical chemistry</a>&nbsp;– new branch of chemistry that covers a broad spectrum of research activities involving biological systems.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Environmental_chemistry\" title=\"Environmental chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Environmental chemistry</a>&nbsp;– scientific study of the chemical and biochemical phenomena that occur in natural places.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Immunochemistry\" title=\"Immunochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Immunochemistry</a>&nbsp;– branch of chemistry that involves the study of the reactions and components on the immune system.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Medicinal_chemistry\" title=\"Medicinal chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Medicinal chemistry</a>&nbsp;– discipline at the intersection of chemistry, especially synthetic organic chemistry, and pharmacology and various other biological specialties, where they are involved with design, chemical synthesis and development for market of pharmaceutical agents (drugs).</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Pharmacology\" title=\"Pharmacology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Pharmacology</a>&nbsp;– branch of medicine and biology concerned with the study of drug action.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Natural_product_chemistry\" title=\"Natural product chemistry\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Natural product chemistry</a>&nbsp;– chemical compound or substance produced by a living organism – found in nature that usually has a pharmacological or biological activity for use in pharmaceutical drug discovery and drug design.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Neurochemistry\" title=\"Neurochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Neurochemistry</a>&nbsp;– specific study of neurochemicals, which include neurotransmitters and other molecules such as neuro-active drugs that influence neuron function.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Computational_chemistry\" title=\"Computational chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Computational chemistry</a>&nbsp;– branch of chemistry that uses principles of computer science to assist in solving chemical problems.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemo-informatics\" title=\"Chemo-informatics\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemo-informatics</a>&nbsp;– use of computer and informational techniques, applied to a range of problems in the field of chemistry.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Molecular_mechanics\" title=\"Molecular mechanics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Molecular mechanics</a>&nbsp;– uses Newtonian mechanics to model molecular systems.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Flavor_chemistry\" title=\"Flavor chemistry\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Flavor chemistry</a>&nbsp;– someone who uses chemistry to engineer artificial and natural flavors.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Flow_chemistry\" title=\"Flow chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Flow chemistry</a>&nbsp;– chemical reaction is run in a continuously flowing stream rather than in batch production.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Geochemistry\" title=\"Geochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Geochemistry</a>&nbsp;– study of the mechanisms behind major geological systems using chemistry<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Aqueous_geochemistry\" title=\"Aqueous geochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Aqueous geochemistry</a>&nbsp;– study of the role of various elements in watersheds, including copper, sulfur, mercury, and how elemental fluxes are exchanged through atmospheric-terrestrial-aquatic interactions</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Isotope_geochemistry\" title=\"Isotope geochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Isotope geochemistry</a>&nbsp;– study of the relative and absolute concentrations of the elements and their isotopes using chemistry and geology</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Ocean_chemistry\" title=\"Ocean chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Ocean chemistry</a>&nbsp;– studies the chemistry of marine environments including the influences of different variables.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Organic_geochemistry\" title=\"Organic geochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Organic geochemistry</a>&nbsp;– study of the impacts and processes that organisms have had on Earth</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Regional,_environmental_and_exploration_geochemistry\" title=\"Regional, environmental and exploration geochemistry\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Regional, environmental and exploration geochemistry</a>&nbsp;– study of the spatial variation in the chemical composition of materials at the surface of the Earth</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Inorganic_chemistry\" title=\"Inorganic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Inorganic chemistry</a>&nbsp;– branch of chemistry concerned with the properties and behavior of inorganic compounds.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Nuclear_chemistry\" title=\"Nuclear chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Nuclear chemistry</a>&nbsp;– subfield of chemistry dealing with radioactivity, nuclear processes and nuclear properties.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Radiochemistry\" title=\"Radiochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Radiochemistry</a>&nbsp;– chemistry of radioactive materials, where radioactive isotopes of elements are used to study the properties and chemical reactions of non-radioactive isotopes (often within radiochemistry the absence of radioactivity leads to a substance being described as being inactive as the isotopes are stable).</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Outline_of_organic_chemistry\" title=\"Outline of organic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Organic chemistry</a>&nbsp;– study of the structure, properties, composition, reactions, and preparation (by synthesis or by other means) of carbon-based compounds, hydrocarbons, and their derivatives.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Petrochemistry\" title=\"Petrochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Petrochemistry</a>&nbsp;– branch of chemistry that studies the transformation of crude oil (petroleum) and natural gas into useful products or raw materials.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Organometallic_chemistry\" title=\"Organometallic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Organometallic chemistry</a>&nbsp;– study of chemical compounds containing bonds between carbon and a metal.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Photochemistry\" title=\"Photochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Photochemistry</a>&nbsp;– study of chemical reactions that proceed with the absorption of light by atoms or molecules..</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Physical_chemistry\" title=\"Physical chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Physical chemistry</a>&nbsp;– study of macroscopic, atomic, subatomic, and particulate phenomena in chemical systems in terms of physical laws and concepts.<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_kinetics\" title=\"Chemical kinetics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical kinetics</a>&nbsp;– the study of rates of chemical processes.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_thermodynamics\" title=\"Chemical thermodynamics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical thermodynamics</a>&nbsp;– study of the interrelation of heat and work with chemical reactions or with physical changes of state within the confines of the laws of thermodynamics.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Electrochemistry\" title=\"Electrochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Electrochemistry</a>&nbsp;– branch of chemistry that studies chemical reactions which take place in a solution at the interface of an electron conductor (a metal or a semiconductor) and an ionic conductor (the electrolyte), and which involve electron transfer between the electrode and the electrolyte or species in solution.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Femtochemistry\" title=\"Femtochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Femtochemistry</a>&nbsp;– Femtochemistry is the science that studies chemical reactions on extremely short timescales, approximately 10<sup style=\"font-size: 0.75em; line-height: 1; vertical-align: super; margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; box-sizing: border-box; background: none;\">−15</sup>&nbsp;seconds (one femtosecond, hence the name).</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Mathematical_chemistry\" title=\"Mathematical chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Mathematical chemistry</a>&nbsp;– area of research engaged in novel applications of mathematics to chemistry; it concerns itself principally with the mathematical modeling of chemical phenomena.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Mechanochemistry\" title=\"Mechanochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Mechanochemistry</a>&nbsp;– coupling of the mechanical and the chemical phenomena on a molecular scale and includes mechanical breakage, chemical behaviour of mechanically stressed solids (e.g., stress-corrosion cracking), tribology, polymer degradation under shear, cavitation-related phenomena (e.g., sonochemistry and sonoluminescence), shock wave chemistry and physics, and even the burgeoning field of molecular machines.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Physical_organic_chemistry\" title=\"Physical organic chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Physical organic chemistry</a>&nbsp;– study of the interrelationships between structure and reactivity in organic molecules.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Quantum_chemistry\" title=\"Quantum chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Quantum chemistry</a>&nbsp;– branch of chemistry whose primary focus is the application of quantum mechanics in physical models and experiments of chemical systems.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Sonochemistry\" title=\"Sonochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Sonochemistry</a>&nbsp;– study of the effect of sonic waves and wave properties on chemical systems.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Stereochemistry\" title=\"Stereochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Stereochemistry</a>&nbsp;– study of the relative spatial arrangement of atoms within molecules.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Supramolecular_chemistry\" title=\"Supramolecular chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Supramolecular chemistry</a>&nbsp;– area of chemistry beyond the molecules and focuses on the chemical systems made up of a discrete number of assembled molecular subunits or components.</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Thermochemistry\" title=\"Thermochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Thermochemistry</a>&nbsp;– study of the energy and heat associated with chemical reactions and/or physical transformations.</li></ul></li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Phytochemistry\" title=\"Phytochemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Phytochemistry</a>&nbsp;– strict sense of the word the study of phytochemicals.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Polymer_chemistry\" title=\"Polymer chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Polymer chemistry</a>&nbsp;– multidisciplinary science that deals with the chemical synthesis and chemical properties of polymers or macromolecules.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Solid-state_chemistry\" title=\"Solid-state chemistry\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Solid-state chemistry</a>&nbsp;– study of the synthesis, structure, and properties of solid phase materials, particularly, but not necessarily exclusively of, non-molecular solids</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Multidisciplinary fields involving chemistry<ul style=\"margin-left: 1em; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; list-style-position: inside; box-sizing: border-box; background: none;\"><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_biology\" title=\"Chemical biology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical biology</a>&nbsp;– scientific discipline spanning the fields of chemistry and biology that involves the application of chemical techniques and tools, often compounds produced through synthetic chemistry, to the study and manipulation of biological systems.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_engineering\" title=\"Chemical engineering\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical engineering</a>&nbsp;– branch of engineering that deals with physical science (e.g., chemistry and physics), and life sciences (e.g., biology, microbiology and biochemistry) with mathematics and economics, to the process of converting raw materials or chemicals into more useful or valuable forms.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_oceanography\" title=\"Chemical oceanography\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical oceanography</a>&nbsp;– study of the behavior of the chemical elements within the Earth's oceans.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Chemical_physics\" title=\"Chemical physics\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Chemical physics</a>&nbsp;– branch of physics that studies chemical processes from the point of view of physics.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Materials_science\" title=\"Materials science\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Materials science</a>&nbsp;– interdisciplinary field applying the properties of matter to various areas of science and engineering.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Nanotechnology\" title=\"Nanotechnology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Nanotechnology</a>&nbsp;– study of manipulating matter on an atomic and molecular scale</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Oenology\" title=\"Oenology\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Oenology</a>&nbsp;– science and study of all aspects of wine and winemaking except vine-growing and grape-harvesting, which is a subfield called viticulture.</li><li style=\"line-height: inherit; margin: 0px 0px 10px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Spectroscopy\" title=\"Spectroscopy\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Spectroscopy</a>&nbsp;– study of the interaction between matter and radiated energy</li><li style=\"line-height: inherit; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\"><a href=\"https://en.m.wikipedia.org/wiki/Surface_science\" title=\"Surface science\" target=\"_blank\" style=\"color: rgb(90, 54, 150); margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; vertical-align: baseline; box-sizing: border-box; background: none;\">Surface science</a>&nbsp;– Surface science is the study of physical and chemical phenomena that occur at the interface of two phases, including solid–liquid interfaces, solid–gas interfaces, solid–vacuum interfaces, and liquid–gas interfaces.</li></ul></li></ul></div>"
+        },
+        "style": {},
+        "position": [
+          -37,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "12": {
+          "title": "Concepts",
+          "id": 6,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "4": {
+              "title": "definition",
+              "id": "18.5968a98dcba70a43",
+              "attr": {
+                "note": {
+                  "index": 6,
+                  "text": "similar to how chemistry is often called the central science because of its role in linking the physical sciences. For example, chemistry studies properties, structures, and reactions of matter (chemistry's focus on the atomic scale distinguishes it from physics). Structures are formed because particles exert electrical forces on each other, properties include physical characteristics of given substances, and reactions are bound by laws of physics, like conservation of energy, mass, and charge.\n\n\nAnother definition is:\nthe science that studies the composition, structure, properties and change of matter"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "studies",
+                  "id": "21.5162598dd2ffa8c2",
+                  "ideas": {
+                    "1": {
+                      "title": "Composition",
+                      "id": "22.5162598dd2ffa8c2"
+                    },
+                    "2": {
+                      "title": "Structure",
+                      "id": "23.5162598dd2ffa8c2"
+                    },
+                    "3": {
+                      "title": "Properties",
+                      "id": "24.5162598dd2ffa8c2"
+                    },
+                    "4": {
+                      "title": "Change of matter",
+                      "id": "25.5162598dd2ffa8c2"
+                    }
+                  }
+                }
+              }
+            },
+            "14": {
+              "title": "Organic chemistry",
+              "id": "61.70d6.bd5506281-10e4.18187105",
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Organic_chemistry",
+                  "id": "62.70d6.bd5506281-10e4.18187105"
+                }
+              }
+            },
+            "24": {
+              "title": "chemical reaction",
+              "id": 9,
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "A&nbsp;[chemical reaction](https://en.wikipedia.org/wiki/Chemical_reaction)&nbsp;is a transformation of some substances into one or more different substances.[[39]](https://en.wikipedia.org/wiki/Chemistry#cite_note-39)&nbsp;The basis of such a chemical transformation is the rearrangement of electrons in the chemical bonds between atoms. It can be symbolically depicted through a&nbsp;[chemical equation](https://en.wikipedia.org/wiki/Chemical_equation), which usually involves atoms as subjects. The number of atoms on the left and the right in the equation for a chemical transformation is equal. (When the number of atoms on either side is unequal, the transformation is referred to as a&nbsp;[nuclear reaction](https://en.wikipedia.org/wiki/Nuclear_reaction)&nbsp;or&nbsp;[radioactive decay](https://en.wikipedia.org/wiki/Radioactive_decay).) The type of chemical reactions a substance may undergo and the energy changes that may accompany it are constrained by certain basic rules, known as chemical laws."
+                }
+              }
+            },
+            "34": {
+              "title": "Studies of change to matter",
+              "id": 4,
+              "attr": {
+                "style": {}
+              }
+            },
+            "35": {
+              "title": "History",
+              "id": "26.5162598dd2ffa8c2",
+              "ideas": {
+                "1": {
+                  "title": "Father of chemistry",
+                  "id": "27.5162598dd2ffa8c2",
+                  "ideas": {
+                    "1": {
+                      "title": "French chemist Antoine Lavoisier",
+                      "id": "28.5162598dd2ffa8c2",
+                      "ideas": {
+                        "1": {
+                          "title": " the chemical analogue of Newton in physics; who did more than any other to establish the new science on proper theoretical footing, by elucidating the principle of conservation of mass and developing a new system of chemical nomenclature used to this day.[37]",
+                          "id": "29.5162598dd2ffa8c2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Before his work, many discoveries were made at the same time",
+                  "id": "30.5162598dd2ffa8c2",
+                  "attr": {
+                    "note": {
+                      "index": 16,
+                      "text": "specifically relating to the nature of 'air' which was discovered to be composed of many different gases. The Scottish chemist Joseph Black (the first experimental chemist) and the Dutchman J. B. van Helmont discovered carbon dioxide, or what Black called 'fixed air' in 1754; Henry Cavendish discovered hydrogen and elucidated its properties and Joseph Priestley and, independently, Carl Wilhelm Scheele isolated pure oxygen."
+                    }
+                  }
+                },
+                "4": {
+                  "title": "late 1900s",
+                  "id": "39.5162598dd2ffa8c2",
+                  "attr": {
+                    "note": {
+                      "index": 20,
+                      "text": "British William Prout first proposed ordering all the elements by their atomic weight as all atoms had a weight that was an exact multiple of the atomic weight of hydrogen. J. A. R. Newlands devised an early table of elements, which was then developed into the modern periodic table of elements[41] in the 1860s by Dmitri Mendeleev and independently by several other scientists including Julius Lothar Meyer.[42][43] The inert gases, later called the noble gases were discovered by William Ramsay in collaboration with Lord Rayleigh at the end of the century, thereby filling in the basic structure of the table."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "William Prout proposed organizing elements by atomic weight",
+                      "id": "36.5162598dd2ffa8c2",
+                      "ideas": {
+                        "1": {
+                          "title": "a weight that's an exact multiple of hydrogen",
+                          "id": "37.5162598dd2ffa8c2",
+                          "ideas": {
+                            "1": {
+                              "title": "which led to periodic table",
+                              "id": "38.5162598dd2ffa8c2"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "36": {
+              "title": "Theories",
+              "id": "31.5162598dd2ffa8c2",
+              "ideas": {
+                "1": {
+                  "title": "Theory of atoms",
+                  "id": "32.5162598dd2ffa8c2",
+                  "ideas": {
+                    "1": {
+                      "title": "History",
+                      "id": "33.5162598dd2ffa8c2",
+                      "ideas": {
+                        "1": {
+                          "title": "John dalton",
+                          "id": "34.5162598dd2ffa8c2",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 20,
+                              "text": "English scientist John Dalton proposed the modern theory of atoms; that all substances are composed of indivisible 'atoms' of matter and that different atoms have varying atomic weights."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "37": {
+              "title": "Conservation of energy",
+              "id": "40.6e3e8c06cb5d407a",
+              "attr": {
+                "note": {
+                  "index": 25,
+                  "text": "a principle stating that energy cannot be created or destroyed, but can be altered from one form to another."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Wikipedia",
+                  "id": "41.6e3e8c06cb5d407a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Conservation_of_energy",
+                      "id": "42.6e3e8c06cb5d407a"
+                    }
+                  }
+                }
+              }
+            },
+            "38": {
+              "title": "Mole",
+              "id": "43.6e3e8c06cb5d407a",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Mole_(unit)",
+                  "id": "44.6e3e8c06cb5d407a"
+                },
+                "2": {
+                  "title": "an amount equivalent to c12 (Carbon)",
+                  "id": "45.6e3e8c06cb5d407a"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "39": {
+              "title": "Matter",
+              "id": "46.6e3e8c06cb5d407a",
+              "ideas": {
+                "1": {
+                  "title": "4 states",
+                  "id": "47.6e3e8c06cb5d407a",
+                  "ideas": {
+                    "1": {
+                      "title": "Solid",
+                      "id": "48.6e3e8c06cb5d407a"
+                    },
+                    "2": {
+                      "title": "Liquid",
+                      "id": "49.6e3e8c06cb5d407a"
+                    },
+                    "3": {
+                      "title": "Gas",
+                      "id": "50.6e3e8c06cb5d407a"
+                    },
+                    "4": {
+                      "title": "Plasma",
+                      "id": "51.6e3e8c06cb5d407a",
+                      "attr": {
+                        "note": {
+                          "index": 35,
+                          "text": "plasma does not exist freely on the Earth's surface under normal conditions, and can only be artificially generated by heating or subjecting a neutral gas to a strong electromagnetic field to the point an ionised gaseous substance becomes increasingly electrically conductive, and long-range electromagnetic fields dominate the behavior of the matter.[4]"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Plasma_(physics)",
+                          "id": "52.6e3e8c06cb5d407a"
+                        },
+                        "3": {
+                          "title": "Nice video explaining it",
+                          "id": "54.6e3e8c06cb5d407a",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.youtube.com/watch?v=94tReSbyPYc",
+                              "id": "53.6e3e8c06cb5d407a",
+                              "attr": {}
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Gases can't conduct electricity, plasma can",
+                          "id": "55.6e3e8c06cb5d407a"
+                        },
+                        "5": {
+                          "title": "Stars are hot balls of plasma",
+                          "id": "56.6e3e8c06cb5d407a"
+                        },
+                        "6": {
+                          "title": "Neon signs",
+                          "id": "57.6e3e8c06cb5d407a",
+                          "ideas": {}
+                        },
+                        "7": {
+                          "title": "Fluorescent lights ",
+                          "id": "59.6e3e8c06cb5d407a"
+                        },
+                        "8": {
+                          "title": "Lightining",
+                          "id": "60.6e3e8c06cb5d407a"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "id": 3,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": 7,
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Chemistry#Principles_of_modern_chemistry",
+                  "id": 8
+                }
+              },
+              "attr": {
+                "position": [
+                  93,
+                  -163,
+                  1
+                ]
+              }
+            },
+            "3": {
+              "title": "Interactive periodic table",
+              "id": 12,
+              "ideas": {
+                "1": {
+                  "title": "http://www.ptable.com/",
+                  "id": 13
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "http://www.chemistryviews.org/view/0/index.html",
+              "id": 14
+            },
+            "5": {
+              "title": "http://www.chemguide.co.uk/",
+              "id": 15
+            },
+            "6": {
+              "title": "What are the best chemistry websites? quora",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "https://www.quora.com/What-are-the-top-10-websites-a-chemistry-student-must-visit",
+                  "id": 17
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    },
+    {
+      "ideaIdFrom": 394,
+      "ideaIdTo": 385,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed",
+          "arrow": true
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Chemistry"
+}

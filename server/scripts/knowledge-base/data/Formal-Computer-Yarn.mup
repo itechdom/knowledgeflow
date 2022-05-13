@@ -1,0 +1,31 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Yarn",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "concepts",
+          "id": 183,
+          "ideas": {}
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {},
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Yarn"
+}

@@ -1,0 +1,403 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Reactive Programming",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.4853e1c4f16ed2a9",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "6.4853e1c4f16ed2a9",
+              "attr": {
+                "note": {
+                  "index": 3,
+                  "text": "reactive programming is a programming paradigm oriented around data flows and the propagation of change. This means that it should be possible to express static or dynamic data flows with ease in the programming languages used, and that the underlying execution model will automatically propagate changes through the data flow."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "for example, if we have a = b + c",
+                  "id": "8.4853e1c4f16ed2a9",
+                  "ideas": {
+                    "1": {
+                      "title": "in imperative programming",
+                      "id": "9.4853e1c4f16ed2a9",
+                      "ideas": {
+                        "1": {
+                          "title": "that means a's value will change once, but isn't reflected if b and c change in the future",
+                          "id": "11.4853e1c4f16ed2a9",
+                          "attr": {
+                            "style": {
+                              "width": 279
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "in reactive programmig",
+                      "id": "10.4853e1c4f16ed2a9",
+                      "ideas": {
+                        "1": {
+                          "title": "the value of a is always tied to the value of b + c",
+                          "id": "12.4853e1c4f16ed2a9"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "in hdl",
+                  "id": "13.4853e1c4f16ed2a9",
+                  "ideas": {
+                    "1": {
+                      "title": "any circuit change is reflected",
+                      "id": "14.4853e1c4f16ed2a9",
+                      "attr": {
+                        "note": {
+                          "index": 10,
+                          "text": "Another example is a hardware description language such as Verilog. In this case, reactive programming allows changes to be modeled as they propagate through a circuit."
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Gerard Barry nice quote on Reactive Programming",
+                  "id": "16.4853e1c4f16ed2a9",
+                  "attr": {
+                    "style": {
+                      "width": 220
+                    },
+                    "note": {
+                      "index": 12,
+                      "text": "Quoting Gérard Berry:[2]\n\nIt is convenient to distinguish roughly between three kinds of computer programs. Transformational programs compute results from a given set of inputs; typical examples are compilers or numerical computation programs. Interactive programs interact at their own speed with users or with other programs; from a user point of view, a time-sharing system is interactive. Reactive programs also maintain a continuous interaction with their environment, but at a speed which is determined by the environment, not the program itself. Interactive programs work at their own pace and mostly deal with communication, while reactive programs only work in respond to external demands and mostly deal with accurate interrupt handling. Real-time programs are usually reactive. However, there are reactive programs that are not usually considered as being real-time, such as protocols, system drivers, or man-machine interface handlers."
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Very useful in building UIs",
+                  "id": "15.4853e1c4f16ed2a9",
+                  "attr": {
+                    "note": {
+                      "index": 11,
+                      "text": "Reactive programming has foremost been proposed as a way to simplify the creation of interactive user interfaces, animations in real time systems, but is essentially a general programming paradigm."
+                    }
+                  }
+                },
+                "5": {
+                  "title": " it is a form of what could be described as \"explicit parallelism\", and could therefore be beneficial for utilizing the power of parallel hardware.",
+                  "id": "43.4853e1c4f16ed2a9"
+                }
+              }
+            },
+            "4": {
+              "title": "Programming Models",
+              "id": "17.4853e1c4f16ed2a9",
+              "ideas": {
+                "1": {
+                  "title": "Synchrony",
+                  "id": "20.4853e1c4f16ed2a9",
+                  "attr": {
+                    "note": {
+                      "index": 14,
+                      "text": "Synchrony: is the underlying model of time synchronous versus asynchronous?"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Determinism",
+                  "id": "21.4853e1c4f16ed2a9",
+                  "attr": {
+                    "note": {
+                      "index": 15,
+                      "text": "Determinism: Deterministic versus non-deterministic in both evaluation process and results (the former does not necessarily imply the latter)"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Update Process",
+                  "id": "22.4853e1c4f16ed2a9",
+                  "attr": {
+                    "note": {
+                      "index": 16,
+                      "text": "Update process: callbacks versus dataflow versus actors"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Callbacks",
+                      "id": "23.4853e1c4f16ed2a9"
+                    },
+                    "2": {
+                      "title": "Dataflow",
+                      "id": "24.4853e1c4f16ed2a9"
+                    },
+                    "3": {
+                      "title": "Actors",
+                      "id": "25.4853e1c4f16ed2a9"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Implementation",
+              "id": "26.4853e1c4f16ed2a9",
+              "attr": {
+                "note": {
+                  "index": 20,
+                  "text": "Essence of Implementations[edit]\nThe runtime of reactive programming languages usually relies on a graph that captures the dependencies among the reactive values. In the graph, nodes represent computations and edges model dependency relationships. The language runtime uses the graph to keep track of which computations must be executed again when one of the inputs changes."
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Graph with nodes",
+                  "id": "27.4853e1c4f16ed2a9",
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Lines between nodes represent dependency",
+                  "id": "29.4853e1c4f16ed2a9"
+                },
+                "3": {
+                  "title": "The language runtime uses graph to keep track of which computations must be executed again when one of the input changes",
+                  "id": "30.4853e1c4f16ed2a9",
+                  "attr": {
+                    "style": {
+                      "width": 255
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Change Propogration algorithms",
+                  "id": "31.4853e1c4f16ed2a9",
+                  "attr": {
+                    "note": {
+                      "index": 24,
+                      "text": "Change Propagation Algorithms[edit]\nThere are numerous implementation techniques used by reactive programming systems that represent the data flow graph explicitly. The most common algorithms are:\n\npull\npush\nhybrid push-pull"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "pull",
+                      "id": "32.4853e1c4f16ed2a9"
+                    },
+                    "2": {
+                      "title": "push",
+                      "id": "33.4853e1c4f16ed2a9"
+                    },
+                    "3": {
+                      "title": "hybrid push-pull",
+                      "id": "34.4853e1c4f16ed2a9"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Challenges",
+                  "id": "36.4853e1c4f16ed2a9",
+                  "ideas": {
+                    "1": {
+                      "title": "Glitches",
+                      "id": "37.4853e1c4f16ed2a9",
+                      "ideas": {
+                        "1": {
+                          "title": "some expressions might be evaluated twice to arrive at the correct results",
+                          "id": "38.4853e1c4f16ed2a9"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Cyclic Dependency",
+                      "id": "39.4853e1c4f16ed2a9",
+                      "attr": {
+                        "note": {
+                          "index": 31,
+                          "text": "Topological sorting of dependencies depends on the dependency graph being a directed acyclic graph (DAG). In practice, a program may define a dependency graph that has cycles. Usually, reactive programming languages expect such cycles to be \"broken\" by placing some element along a \"back edge\" to permit reactive updating to terminate. Typically, languages provide an operator like delay that is used by the update mechanism for this purpose, since a delay implies that what follows must be evaluated in the \"next time step\" (allowing the current evaluation to terminate)."
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Interaction with a Mutable State",
+                      "id": "40.4853e1c4f16ed2a9",
+                      "attr": {
+                        "note": {
+                          "index": 32,
+                          "text": "Interaction with Mutable State[edit]\nReactive languages typically assume that their expressions are purely functional. This allows an update mechanism to choose different orders in which to perform updates, and leave the specific order unspecified (thereby enabling optimizations). When a reactive language is embedded in a programming language with state, however, it may be possible for programmers to perform mutable operations. How to make this interaction smooth remains an open problem.\n\nIn some cases, it is possible to have principled partial solutions. Two such solutions include:\n\nA language might offer a notion of \"mutable cell\". A mutable cell is one that the reactive update system is aware of, so that changes made to the cell propagate to the rest of the reactive program. This enables the non-reactive part of the program to perform a traditional mutation while enabling reactive code to be aware of and respond to this update, thus maintaining the consistency of the relationship between values in the program. An example of a reactive language that provides such a cell is FrTime.[3]\nProperly encapsulated object-oriented libraries offer an encapsulated notion of state. In principle, it is therefore possible for such a library to interact smoothly with the reactive portion of a language. For instance, callbacks can be installed in the getters of the object-oriented library to notify the reactive update engine about state changes, and changes in the reactive component can be pushed to the object-oriented library through getters. FrTime employs such a strategy.[4]"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Dynamic Updating of dependency Graph",
+                      "id": "41.4853e1c4f16ed2a9",
+                      "attr": {
+                        "note": {
+                          "index": 33,
+                          "text": "Dynamic Updating of the Graph of Dependencies[edit]\nIn some reactive languages, the graph of dependencies is static, i.e., the graph is fixed throughout the program's execution. In other languages, the graph can be \"dynamic\", i.e., it can change as the program executes. For a simple example, consider this illustrative example (where seconds is a reactive value):\n\nt =\n  if ((seconds mod 2) == 0):\n    seconds + 1\n  else:\n    seconds - 1\n  end\nt + 1\nEvery second, the value of this expression changes to a different reactive expression, which t + 1 then depends on. Therefore, the graph of dependencies updates every second.\n\nPermitting dynamic updating of dependencies provides significant expressive power (for instance, dynamic dependencies routinely occur in graphical user interface (GUI) programs). However, the reactive update engine must decide whether to reconstruct expressions each time, or to keep an expression's node constructed but inactive; in the latter case, ensure that they do not participate in the computation when they are not supposed to be active."
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "6": {
+              "title": "how is the Dependency Graph built?",
+              "id": "35.4853e1c4f16ed2a9",
+              "attr": {
+                "style": {
+                  "width": 210
+                },
+                "note": {
+                  "index": 28,
+                  "text": "There are two principal ways in which the dependency graph is built:\n\nThe graph of dependencies is maintained implicitly by an event loop. In this case, the registration of explicit callbacks creates implicit dependencies. This means that the inversion of control induced by callbacks is left in place; however, by making the callbacks functional (returning a state value instead of a unit value) callbacks become compositional.\nThe graph of dependencies is program-specific and given by the programmer. This approach enables addressing the inversion of control of callbacks in two ways: either the graph is specified explicitly (typically using a DSL which may be embedded), or the graph is implicitly defined by expressions and generated by \"the language\"."
+                }
+              }
+            },
+            "7": {
+              "title": "Higher Order Reactive Programming, when?",
+              "id": "42.4853e1c4f16ed2a9",
+              "attr": {
+                "note": {
+                  "index": 35,
+                  "text": "Higher-order reactive programming[edit]\nReactive programming could be said to be of higher order if it supports the idea that data flows could be used to construct other data flows. That is, the resulting value out of a data flow is another data flow graph that is executed using the same evaluation model as the first."
+                }
+              }
+            },
+            "8": {
+              "title": "Branches",
+              "id": "44.4853e1c4f16ed2a9",
+              "ideas": {
+                "2": {
+                  "title": "Functional Reactive Programming",
+                  "id": "47.4853e1c4f16ed2a9",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Functional_reactive_programming",
+                      "id": "45.4853e1c4f16ed2a9",
+                      "ideas": {},
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Incremental Computing",
+              "id": "48.4853e1c4f16ed2a9",
+              "ideas": {
+                "2": {
+                  "title": "https://en.wikipedia.org/wiki/Incremental_computing",
+                  "id": "52.4853e1c4f16ed2a9"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Stream processing",
+              "id": "54.4853e1c4f16ed2a9",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Stream_processing",
+                  "id": "50.4853e1c4f16ed2a9",
+                  "ideas": {},
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.4853e1c4f16ed2a9",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "4.4853e1c4f16ed2a9",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Reactive_programming",
+                  "id": "5.4853e1c4f16ed2a9"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Third Party",
+              "id": "55.4853e1c4f16ed2a9",
+              "ideas": {
+                "1": {
+                  "title": "Rx",
+                  "id": "56.4853e1c4f16ed2a9",
+                  "ideas": {
+                    "1": {
+                      "title": "http://reactivex.io/",
+                      "id": "57.4853e1c4f16ed2a9"
+                    },
+                    "2": {
+                      "title": "RxJS",
+                      "id": "58.4853e1c4f16ed2a9",
+                      "ideas": {
+                        "1": {
+                          "title": "http://reactivex.io/rxjs/",
+                          "id": "59.4853e1c4f16ed2a9"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Reactive Programming",
+  "links": []
+}

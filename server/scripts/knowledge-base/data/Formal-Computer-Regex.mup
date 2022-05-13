@@ -1,0 +1,618 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Regex",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 7,
+          "ideas": {
+            "9": {
+              "title": "In Ruby",
+              "id": "82.15080f9f608b0c6e",
+              "ideas": {
+                "2": {
+                  "title": "Capturing",
+                  "id": 9,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "### capturing\n\n* We can specify variables in regex that we can refer to later\n\n* The example below stores month, day and year when given a date.\n\n```ruby\n\n(?<month>\\d{1,2})\\/(?<day>\\d{1,2})\\/(?<year>\\d{4})\n\n```\n\nThen we can do something like this:\n\n```ruby\n\ndate_string = \"06/11/1985\"\n\npattern = /(?&lt;month&gt;\\d{1,2})\\/(?&lt;day&gt;\\d{1,2})\\/(?&lt;year&gt;\\d{4})/\n\nresult = date_string.match(pattern)\n\n# we can now access the days, month and year\n\nresult[:day] #11\n\nresult[:month] #06\n\nresult[:year] #1985\n\n```\n\n### exercise\n\n* Write a pattern that will take a decimal number (ie: 3.4)\n\n* It captures the number in dollars and cents\n\n* display the dollars and cents in that number\n\n* You should modify the previous example\n\n```ruby\n\n(?&lt;month&gt;\\d{1,2})\\/(?&lt;day&gt;\\d{1,2})\\/(?&lt;year&gt;\\d{4})\n\n```"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Ways to use Regex",
+                  "id": 10,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div>### Ways to Use Regex in Ruby</div><div><br></div><div>* Match</div><div>* Scan</div><div>* =~</div><div>* Gsub</div><div>* Split</div><div><br></div><div>```ruby</div><div><br></div><div>a = /a/</div><div><br></div><div>a.class # Regexp</div><div><br></div><div>myString = \"A woman once said. A man once said. A child once said\"</div><div><br></div><div>match = myString.match(a) #this will return a</div><div><br></div><div>match = myString.scan(a) #this will return [\"a\", \"a\", \"a\", \"a\", \"a\"]</div><div><br></div><div>match = myString.gsub(a,\"b\") #this will replace all a(s) with b, leaving behind capital A</div><div><br></div><div>myString =~ a #return the index of the first occurance&nbsp;</div><div><br></div><div>match = myString.split(a) # split a string by a(s)</div><div><br></div><div>```</div>"
+                    },
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "You need to escape special chars to make them literal",
+                  "id": 17,
+                  "ideas": {},
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "Similar to the DOT char. if you want to the actual . character (as in at the end of a sentence). Then you must escape it with \\"
+                    },
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Optional element",
+                  "id": 19,
+                  "ideas": {
+                    "1": {
+                      "title": "?",
+                      "id": 20
+                    },
+                    "2": {
+                      "title": "http://regex.learncodethehardway.org/book/ex8.html",
+                      "id": 21
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Repitition",
+                  "id": 22,
+                  "ideas": {
+                    "1": {
+                      "title": "http://regex.learncodethehardway.org/book/ex9.html",
+                      "id": 23
+                    }
+                  },
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p style=\"box-sizing: border-box; margin-bottom: 17px; padding: 0px; direction: ltr; font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif; line-height: 1.6; color: rgb(34, 34, 34);\">The regex symbol for \"one-or-more\" is&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">+</tt>&nbsp;and for \"zero-or-more\" is&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">*</tt>. Just like with the \"optional\" symbol&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">?</tt>&nbsp;you place it after the regex symbol or character set to repeat and that's it.</p>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "More advanced",
+                  "id": 24,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<ul class=\"simple\" style=\"box-sizing: border-box; margin-bottom: 17px; margin-left: 0px; direction: ltr; line-height: 1.6; list-style-position: outside; color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;\"><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">Limit repetition in more complex ways.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">Group expressions.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">Alternate between one or more expressions.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">Special regex engine modifications for more complex tasks.</li></ul>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "limiting the number",
+                      "id": 25,
+                      "attr": {
+                        "style": {},
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<ul class=\"simple\" style=\"box-sizing: border-box; margin-bottom: 17px; margin-left: 0px; direction: ltr; line-height: 1.6; list-style-position: outside; color: rgb(34, 34, 34); font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;\"><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">If you put&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">{X}</tt>&nbsp;in the same place you'd put a&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">+</tt>&nbsp;(after something to repeat) then it will make sure that it is repeated&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">X</tt>&nbsp;times.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">If you put&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">{X,Y}</tt>&nbsp;then it will make sure it repeates at least X times, but not more than Y times.</li><li style=\"box-sizing: border-box; margin: 0px 0px 0px 20px; padding: 0px; direction: ltr;\">If you put a&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">?</tt>&nbsp;after any of the repetition symbols it means \"non-greedy\". This is unfortunate because&nbsp;<tt class=\"docutils literal\" style=\"box-sizing: border-box;\">?</tt>&nbsp;also means \"optional\" but just remember that placing it after repetition means \"non-greedy\".</li></ul>"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "http://regex.learncodethehardway.org/book/ex10.html",
+                          "id": 26
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": 27,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "[0-9]{2}-[0-9]{2}-[0-9]{2,4}?<div><br></div><div>The way to explain \"non-greedy\" is simply that most regex engines try to match repetition to the biggest part of the corpus text possible. If you run into situations where you're matching too much with repetition, then you can use ? to tell it to match the smallest repetition possible.<br></div>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "http://regex.learncodethehardway.org/book/ex11.html",
+                      "id": 28,
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "When not to use them",
+              "id": 13,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Infamous mail address Regex",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "Use lexer instead",
+                      "id": 16
+                    }
+                  }
+                }
+              }
+            },
+            "11": {
+              "title": "Standards",
+              "id": "83.15080f9f608b0c6e",
+              "ideas": {
+                "1": {
+                  "title": "POSIX",
+                  "id": "84.15080f9f608b0c6e"
+                },
+                "2": {
+                  "title": "Perl",
+                  "id": "85.15080f9f608b0c6e"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Regex processor",
+              "id": "88.15080f9f608b0c6e",
+              "attr": {
+                "note": {
+                  "index": 75,
+                  "text": "A regex processor translates a regular expression in the above syntax into an internal representation which can be executed and matched against a string representing the text being searched in. One possible approach is the Thompson's construction algorithm to construct a nondeterministic finite automaton (NFA), which is then made deterministic and the resulting DFA is run on the target text string to recognize substrings that match the regular expression. The picture shows the NFA scheme N(s*) obtained from the regular expression s*, where s denotes a simpler regular expression in turn, which has already been recursively translated to the NFA N(s)."
+                }
+              },
+              "ideas": {
+                "1": {
+                  "title": "infinite Automaton picture",
+                  "id": "89.15080f9f608b0c6e",
+                  "ideas": {
+                    "1": {
+                      "title": "https://commons.wikimedia.org/wiki/File:Thompson-kleene-star.svg#/media/File:Thompson-kleene-star.svg",
+                      "id": "90.15080f9f608b0c6e"
+                    }
+                  }
+                }
+              }
+            },
+            "26": {
+              "title": "Patterns",
+              "id": "147.15080f9f608b0c6e",
+              "ideas": {
+                "3": {
+                  "title": "range",
+                  "ideas": {
+                    "1": {
+                      "title": "-",
+                      "id": "104.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "103.15080f9f608b0c6e",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Start of a string",
+                  "ideas": {
+                    "1": {
+                      "title": "\\A",
+                      "id": "106.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "105.15080f9f608b0c6e",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "End of a string",
+                  "ideas": {
+                    "1": {
+                      "title": "\\z",
+                      "id": "108.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "107.15080f9f608b0c6e",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Reserved Characters",
+                  "ideas": {
+                    "1": {
+                      "title": ". | ( ) [ ] { } + \\ ^ $ * ?",
+                      "id": "146.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "145.15080f9f608b0c6e",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "[abc]",
+                  "id": "99.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "Single Characters",
+                      "ideas": {},
+                      "id": "98.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "13": {
+                  "title": "[^abc]",
+                  "id": "102.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "negate",
+                      "ideas": {},
+                      "id": "100.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "14": {
+                  "title": "(a|b)",
+                  "ideas": {
+                    "1": {
+                      "title": "a or b",
+                      "id": "131.15080f9f608b0c6e"
+                    },
+                    "2": {
+                      "title": "or",
+                      "attr": {
+                        "style": {
+                          "width": 50
+                        }
+                      },
+                      "ideas": {},
+                      "id": "129.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "130.15080f9f608b0c6e",
+                  "attr": {}
+                },
+                "15": {
+                  "title": "( )",
+                  "id": "95.15080f9f608b0c6e",
+                  "ideas": {
+                    "1": {
+                      "title": "string to be matched later?",
+                      "id": "159.15080f9f608b0c6e"
+                    },
+                    "2": {
+                      "title": "Back reference",
+                      "id": "150.15080f9f608b0c6e",
+                      "ideas": {
+                        "1": {
+                          "title": " to refer to previous atoms of a completing pattern of atoms",
+                          "id": "157.15080f9f608b0c6e"
+                        }
+                      },
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 60,
+                      "text": "Parentheses are used to define the scope and precedence of the operators (among other uses). For example, gray|grey and gr(a|e)y are equivalent patterns which both describe the set of \"gray\" or \"grey\"."
+                    }
+                  }
+                }
+              }
+            },
+            "31": {
+              "title": "Character Classes",
+              "ideas": {
+                "9": {
+                  "title": ".",
+                  "id": "111.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "any single character",
+                      "id": "160.15080f9f608b0c6e"
+                    }
+                  }
+                },
+                "10": {
+                  "title": "\\s",
+                  "id": "113.15080f9f608b0c6e",
+                  "attr": {
+                    "style": {
+                      "width": 50
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "whitespace characer",
+                      "ideas": {},
+                      "id": "112.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "11": {
+                  "title": "\\b",
+                  "id": "125.15080f9f608b0c6e",
+                  "attr": {
+                    "style": {
+                      "width": 50
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "word boundry",
+                      "ideas": {},
+                      "id": "124.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "12": {
+                  "title": "\\W",
+                  "id": "123.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "non-word",
+                      "ideas": {},
+                      "id": "122.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "13": {
+                  "title": "\\w",
+                  "id": "121.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "Word character",
+                      "ideas": {},
+                      "id": "120.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "14": {
+                  "title": "\\D",
+                  "id": "119.15080f9f608b0c6e",
+                  "attr": {
+                    "style": {
+                      "width": 50
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Any non-digit",
+                      "ideas": {},
+                      "id": "118.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "15": {
+                  "title": "\\d",
+                  "id": "117.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "Any digit",
+                      "ideas": {},
+                      "id": "116.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                },
+                "16": {
+                  "title": "\\S",
+                  "id": "115.15080f9f608b0c6e",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "non-whitespace character",
+                      "ideas": {},
+                      "id": "114.15080f9f608b0c6e",
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "id": "109.15080f9f608b0c6e"
+            },
+            "32": {
+              "title": "Quantifier",
+              "ideas": {
+                "1": {
+                  "title": "?",
+                  "ideas": {
+                    "1": {
+                      "title": "Zero or one of a",
+                      "id": "134.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "133.15080f9f608b0c6e"
+                },
+                "2": {
+                  "title": "*",
+                  "ideas": {
+                    "1": {
+                      "title": "Zero or more of a",
+                      "id": "136.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "135.15080f9f608b0c6e"
+                },
+                "3": {
+                  "title": "+",
+                  "ideas": {
+                    "1": {
+                      "title": "One or more of a",
+                      "id": "138.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "137.15080f9f608b0c6e"
+                },
+                "4": {
+                  "title": "{number}",
+                  "ideas": {
+                    "1": {
+                      "title": "exactly this number",
+                      "id": "140.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "139.15080f9f608b0c6e"
+                },
+                "5": {
+                  "title": "{number,}",
+                  "ideas": {
+                    "1": {
+                      "title": "exactly this number or more",
+                      "id": "142.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "141.15080f9f608b0c6e"
+                },
+                "6": {
+                  "title": "{number,number}",
+                  "ideas": {
+                    "1": {
+                      "title": "between 3 and 6",
+                      "id": "144.15080f9f608b0c6e"
+                    }
+                  },
+                  "id": "143.15080f9f608b0c6e"
+                }
+              },
+              "id": "132.15080f9f608b0c6e",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "42": {
+              "title": "Examples",
+              "id": "86.15080f9f608b0c6e",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Regular_expression#Examples",
+                  "id": "87.15080f9f608b0c6e"
+                },
+                "2": {
+                  "title": "H(ä|ae?)ndel",
+                  "id": "91.15080f9f608b0c6e",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "position": [
+                  85,
+                  220,
+                  2
+                ]
+              }
+            },
+            "4.5": {
+              "title": "History",
+              "id": "151.15080f9f608b0c6e",
+              "ideas": {
+                "1": {
+                  "title": "inventor",
+                  "id": "152.15080f9f608b0c6e",
+                  "ideas": {
+                    "1": {
+                      "title": "The concept arose in the 1950s when the American mathematician Stephen Cole Kleene formalized the description of a regular language.",
+                      "id": "153.15080f9f608b0c6e"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "position": [
+                  79,
+                  -262,
+                  1
+                ]
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "ideas": {
+            "1": {
+              "title": "http://regex.learncodethehardway.org/book/",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "Regex the hard way",
+                  "id": 5
+                }
+              }
+            },
+            "3": {
+              "title": "http://www.rexegg.com/regex-best-trick.html",
+              "id": 11,
+              "ideas": {
+                "1": {
+                  "title": "Best Regex trick",
+                  "id": 12
+                }
+              }
+            },
+            "4": {
+              "title": "games",
+              "id": "148.15080f9f608b0c6e",
+              "ideas": {
+                "1": {
+                  "title": "https://regexcrossword.com/challenges/tutorial/puzzles/1",
+                  "id": "149.15080f9f608b0c6e"
+                }
+              }
+            }
+          },
+          "id": 3,
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Regex"
+}

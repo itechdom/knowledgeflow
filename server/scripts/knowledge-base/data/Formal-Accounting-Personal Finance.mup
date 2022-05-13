@@ -1,0 +1,33 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Personal Finance",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.713c65c53f4591bf",
+          "ideas": {
+            "1": {
+              "title": "Loans",
+              "id": "3.713c65c53f4591bf"
+            },
+            "2": {
+              "title": "Budgeting",
+              "id": "4.713c65c53f4591bf"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "5.713c65c53f4591bf"
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Personal Finance"
+}

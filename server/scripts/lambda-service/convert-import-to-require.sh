@@ -1,0 +1,1 @@
+node ./scripts/lambda-service/convert-import-to-require.js

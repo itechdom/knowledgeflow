@@ -1,0 +1,34 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Semver",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "-3": {
+          "title": "Resources",
+          "id": 179,
+          "ideas": {
+            "1": {
+              "title": "https://www.atlassian.com/git/tutorials/comparing-workflows/",
+              "id": 180,
+              "ideas": {
+                "1": {
+                  "title": "Attlasian Git workflow",
+                  "id": 181
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Semver"
+}

@@ -1,0 +1,148 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Visual Programming",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.60c6a75709f618a4",
+          "ideas": {
+            "1": {
+              "title": "Types",
+              "id": "5.60c6a75709f618a4",
+              "ideas": {
+                "2": {
+                  "title": "Data flow",
+                  "id": "7.60c6a75709f618a4",
+                  "ideas": {
+                    "3": {
+                      "title": "Languages",
+                      "id": "12.60c6a75709f618a4",
+                      "ideas": {
+                        "1": {
+                          "title": "Flowgorithm",
+                          "id": "13.60c6a75709f618a4",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Flowgorithm",
+                              "id": "11.60c6a75709f618a4",
+                              "attr": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Resources",
+                      "id": "22.60c6a75709f618a4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Flow-based_programming",
+                          "id": "23.60c6a75709f618a4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 4,
+                      "text": "For example, many VPLs (known as dataflow or diagrammatic programming)[3] are based on the idea of \"boxes and arrows\", where boxes or other screen objects are treated as entities, connected by arrows, lines or arcs which represent relations."
+                    },
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "For Kids",
+                  "id": "15.60c6a75709f618a4",
+                  "ideas": {
+                    "1": {
+                      "title": "Kodu",
+                      "id": "16.60c6a75709f618a4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.kodugamelab.com/",
+                          "id": "17.60c6a75709f618a4"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Scratch",
+                      "id": "18.60c6a75709f618a4"
+                    },
+                    "3": {
+                      "title": "Snap!",
+                      "id": "19.60c6a75709f618a4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Snap!_(programming_language)",
+                          "id": "21.60c6a75709f618a4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "MS visual studio is a visual programming language",
+              "id": "8.60c6a75709f618a4"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "4.60c6a75709f618a4",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "9.60c6a75709f618a4",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Visual_programming_language#Definition",
+                  "id": "10.60c6a75709f618a4"
+                }
+              }
+            },
+            "2": {
+              "title": "Languages",
+              "id": "24.53dcd3fe1c12e5dc",
+              "ideas": {
+                "1": {
+                  "title": "Skov",
+                  "id": "25.53dcd3fe1c12e5dc",
+                  "ideas": {
+                    "1": {
+                      "title": "http://skov.software/en/",
+                      "id": "27.53dcd3fe1c12e5dc",
+                      "attr": {}
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Luna",
+                  "id": "26.53dcd3fe1c12e5dc",
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.luna-lang.org/",
+                      "id": "28.53dcd3fe1c12e5dc"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Visual Programming",
+  "links": []
+}

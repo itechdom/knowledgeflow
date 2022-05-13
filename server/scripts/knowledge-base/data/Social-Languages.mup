@@ -1,0 +1,149 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Languages",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "3.1a0623f75c925cf1",
+          "ideas": {
+            "1": {
+              "title": "How to learn a language",
+              "id": "12.6029afddee5c9aec",
+              "ideas": {
+                "1": {
+                  "title": "Make mistakes",
+                  "id": "13.6029afddee5c9aec"
+                }
+              }
+            },
+            "2": {
+              "title": "Techniques",
+              "id": "14.6029afddee5c9aec",
+              "ideas": {
+                "1": {
+                  "title": "Listen to 24 hour radio",
+                  "id": "15.6029afddee5c9aec"
+                },
+                "2": {
+                  "title": "Spaced repitition",
+                  "id": "21.6029afddee5c9aec"
+                }
+              }
+            },
+            "3": {
+              "title": "Using mnemonics",
+              "id": "16.6029afddee5c9aec",
+              "ideas": {
+                "1": {
+                  "title": "Visualizing a table out of tissue",
+                  "id": "17.6029afddee5c9aec",
+                  "ideas": {
+                    "1": {
+                      "title": "Tisch",
+                      "id": "18.6029afddee5c9aec"
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "Writing",
+              "id": "22.6029afddee5c9aec",
+              "ideas": {
+                "1": {
+                  "title": "How to write english better",
+                  "id": "24.6029afddee5c9aec",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.coursera.org/learn/learning-how-to-learn/lecture/01m6e/optional-interview-with-writing-coach-daphne-gray-grant",
+                      "id": "25.6029afddee5c9aec"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "In Writing we try to activate the diffuse mode",
+                  "id": "26.6029afddee5c9aec"
+                },
+                "3": {
+                  "title": "Don't outline!!!!!",
+                  "id": "27.6029afddee5c9aec"
+                },
+                "4": {
+                  "title": "Resources",
+                  "id": "30.6029afddee5c9aec",
+                  "ideas": {
+                    "1": {
+                      "title": "writeordie.com",
+                      "id": "31.6029afddee5c9aec",
+                      "ideas": {
+                        "1": {
+                          "title": "the screen turns pink when you stop writing",
+                          "id": "33.6029afddee5c9aec"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "4.1a0623f75c925cf1",
+          "ideas": {
+            "1": {
+              "title": "Polyglots",
+              "id": "5.1a0623f75c925cf1",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/channel/UCNhX3WQEkraW3VHPyup8jkQ",
+                  "id": "6.1a0623f75c925cf1"
+                },
+                "2": {
+                  "title": "Books",
+                  "id": "7.6029afddee5c9aec",
+                  "ideas": {
+                    "1": {
+                      "title": "Fluent in 3 months",
+                      "id": "8.6029afddee5c9aec",
+                      "ideas": {}
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Videos",
+                  "id": "10.6029afddee5c9aec",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.coursera.org/learn/learning-how-to-learn/lecture/L4yKh/optional-interview-with-benny-the-irish-polyglot-about-learning-languages",
+                      "id": "11.6029afddee5c9aec"
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Tools",
+              "id": "19.6029afddee5c9aec",
+              "ideas": {
+                "1": {
+                  "title": "Anki",
+                  "id": "20.6029afddee5c9aec"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Languages",
+  "links": []
+}

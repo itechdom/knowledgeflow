@@ -1,0 +1,772 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Natural-Biology-Neuroscience",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.5e1d3976836f1c19",
+          "ideas": {
+            "5": {
+              "title": "Brain",
+              "id": "18.9471.46f4f52fa-fb92.95ad5cbde",
+              "ideas": {
+                "1": {
+                  "title": "Amgdela",
+                  "id": "7.5e1d3976836f1c19",
+                  "ideas": {
+                    "1": {
+                      "title": "recognizes fear",
+                      "id": "12.5e1d3976836f1c19"
+                    },
+                    "2": {
+                      "title": "recognizes creepy face",
+                      "id": "13.5e1d3976836f1c19"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Dopamine",
+                  "id": "15.91ac.b9e70a5ca-24e0.4f5c95d6f",
+                  "ideas": {
+                    "1": {
+                      "title": "allows you to finish something or goals",
+                      "id": "16.91ac.b9e70a5ca-24e0.4f5c95d6f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Frontal Cortex",
+                  "id": "8.5e1d3976836f1c19",
+                  "ideas": {
+                    "1": {
+                      "title": "controls awarenss?",
+                      "id": "10.5e1d3976836f1c19"
+                    },
+                    "2": {
+                      "title": "turns off when you are sleeping",
+                      "id": "11.5e1d3976836f1c19",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "agression",
+                  "id": "4.5e1d3976836f1c19",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=wLE71i4JJiM",
+                      "id": "5.5e1d3976836f1c19",
+                      "ideas": {
+                        "1": {
+                          "title": "1:15:00",
+                          "id": "17.91ac.b9e70a5ca-24e0.4f5c95d6f"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Cellular strucutre",
+                  "id": "23.9471.46f4f52fa-fb92.95ad5cbde",
+                  "ideas": {
+                    "2": {
+                      "title": "Cell types",
+                      "id": "25.9471.46f4f52fa-fb92.95ad5cbde",
+                      "ideas": {
+                        "1": {
+                          "title": "Neurons",
+                          "id": "24.9471.46f4f52fa-fb92.95ad5cbde",
+                          "ideas": {
+                            "1": {
+                              "title": "Synapses",
+                              "id": "28.9471.46f4f52fa-fb92.95ad5cbde",
+                              "ideas": {
+                                "1": {
+                                  "title": "points of communication",
+                                  "id": "29.9471.46f4f52fa-fb92.95ad5cbde"
+                                },
+                                "2": {
+                                  "title": "https://en.wikipedia.org/wiki/Synaptic_plasticity",
+                                  "id": "30.9471.46f4f52fa-fb92.95ad5cbde"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "action potential",
+                              "id": "59.61c1.ba1691cf8-6840.d499c3e1b",
+                              "ideas": {
+                                "1": {
+                                  "title": "nurotransimoters",
+                                  "id": "60.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "release a chemical",
+                                      "id": "61.61c1.ba1691cf8-6840.d499c3e1b"
+                                    },
+                                    "2": {
+                                      "title": "that will excite other nerve cells to transfer information",
+                                      "id": "147.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "psychoactive drugs",
+                                  "id": "62.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "The great majority of psychoactive drugs exert their effects by altering specific neurotransmitter systems. This applies to drugs such as cannabinoids, nicotine, heroin, cocaine, alcohol, fluoxetine, chlorpromazine, and many others.[65]",
+                                      "id": "63.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "4": {
+                                  "title": "pain killers are inhabitory",
+                                  "id": "65.61c1.ba1691cf8-6840.d499c3e1b"
+                                },
+                                "7": {
+                                  "title": "Questions",
+                                  "id": "134.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "electro chemical gradient?",
+                                      "id": "135.61c1.ba1691cf8-6840.d499c3e1b"
+                                    },
+                                    "2": {
+                                      "title": "what are gated channels",
+                                      "id": "136.61c1.ba1691cf8-6840.d499c3e1b",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "do they just filter out certain atoms to pass by",
+                                          "id": "137.61c1.ba1691cf8-6840.d499c3e1b"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "8": {
+                                  "title": "My thoughts",
+                                  "id": "139.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {},
+                                  "attr": {}
+                                },
+                                "9": {
+                                  "title": "deplolarization",
+                                  "id": "141.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "attr": {}
+                                },
+                                "10": {
+                                  "title": "polarization",
+                                  "id": "142.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "-70 mv resting volt",
+                                      "id": "143.61c1.ba1691cf8-6840.d499c3e1b"
+                                    },
+                                    "2": {
+                                      "title": "because of the movement of Pottasium and Sodium between different gates in the cell, we get a difference in voltage that will cause deploraization of the cell and that wave of depolrazation travels across the axons",
+                                      "id": "144.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "11": {
+                                  "title": "action potential occurs at -55 mv",
+                                  "id": "145.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {}
+                                },
+                                "21": {
+                                  "title": "Resources",
+                                  "id": "133.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=HZh0A-lWSmY",
+                                      "id": "132.61c1.ba1691cf8-6840.d499c3e1b",
+                                      "attr": {}
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "different in the brain than in the spinal cord",
+                              "id": "106.61c1.ba1691cf8-6840.d499c3e1b",
+                              "ideas": {
+                                "1": {
+                                  "title": "in the spinal cord",
+                                  "id": "107.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "4": {
+                                      "title": "according to their function",
+                                      "id": "111.61c1.ba1691cf8-6840.d499c3e1b",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Sensory",
+                                          "id": "108.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "attr": {}
+                                        },
+                                        "2": {
+                                          "title": "Motor",
+                                          "id": "109.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "attr": {}
+                                        },
+                                        "3": {
+                                          "title": "interneurons",
+                                          "id": "110.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "attr": {}
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "it's hard to distinguish in the brain",
+                                  "id": "112.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "2": {
+                                      "title": "neurons are categorized by the chemicals they release",
+                                      "id": "64.61c1.ba1691cf8-6840.d499c3e1b",
+                                      "ideas": {
+                                        "2": {
+                                          "title": "types of neurons",
+                                          "id": "105.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "https://qbi.uq.edu.au/brain/brain-anatomy/types-neurons",
+                                              "id": "104.61c1.ba1691cf8-6840.d499c3e1b",
+                                              "attr": {}
+                                            }
+                                          }
+                                        },
+                                        "3": {
+                                          "title": "gultmate",
+                                          "id": "114.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "excites",
+                                              "id": "117.61c1.ba1691cf8-6840.d499c3e1b"
+                                            }
+                                          }
+                                        },
+                                        "4": {
+                                          "title": "GABA",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "inhibits",
+                                              "id": "116.61c1.ba1691cf8-6840.d499c3e1b"
+                                            }
+                                          },
+                                          "id": "115.61c1.ba1691cf8-6840.d499c3e1b",
+                                          "attr": {}
+                                        }
+                                      },
+                                      "attr": {}
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "So neurons transmit signals through both a chemical and electrical signal",
+                              "id": "118.61c1.ba1691cf8-6840.d499c3e1b",
+                              "attr": {}
+                            },
+                            "5": {
+                              "title": "Resources",
+                              "id": "119.61c1.ba1691cf8-6840.d499c3e1b",
+                              "ideas": {
+                                "1": {
+                                  "title": "under the microscope",
+                                  "id": "120.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=zUUvDr5dIGc",
+                                      "id": "121.61c1.ba1691cf8-6840.d499c3e1b"
+                                    },
+                                    "2": {
+                                      "title": "https://www.youtube.com/watch?v=yu1fnXBxxEM",
+                                      "id": "123.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "videos about neurons",
+                                  "id": "124.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=HZh0A-lWSmY",
+                                      "id": "125.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  }
+                                },
+                                "3": {
+                                  "title": "explaining action potential",
+                                  "id": "131.61c1.ba1691cf8-6840.d499c3e1b"
+                                },
+                                "4": {
+                                  "title": "neuron simulation",
+                                  "id": "148.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "2": {
+                                      "title": "https://www.youtube.com/watch?v=WBoRTkUFZgI",
+                                      "id": "150.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  }
+                                },
+                                "5": {
+                                  "title": "neurons in the brain simulation",
+                                  "id": "151.61c1.ba1691cf8-6840.d499c3e1b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://www.youtube.com/watch?v=u28ijlP6L6M",
+                                      "id": "152.61c1.ba1691cf8-6840.d499c3e1b"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {
+                                  "background": "#008000"
+                                },
+                                "collapsed": true
+                              }
+                            },
+                            "4.5": {
+                              "title": "trviia",
+                              "id": "126.61c1.ba1691cf8-6840.d499c3e1b",
+                              "ideas": {
+                                "1": {
+                                  "title": "we have 100 billion neurons",
+                                  "id": "127.61c1.ba1691cf8-6840.d499c3e1b"
+                                }
+                              }
+                            },
+                            "4.75": {
+                              "title": "My thoughts",
+                              "id": "129.61c1.ba1691cf8-6840.d499c3e1b",
+                              "attr": {
+                                "style": {
+                                  "background": "#FFCC00"
+                                },
+                                "collapsed": true
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "they have input output, just like neural nets",
+                                  "id": "130.61c1.ba1691cf8-6840.d499c3e1b"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Gilial",
+                          "id": "26.9471.46f4f52fa-fb92.95ad5cbde"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "all creatures are bylaterian",
+                  "id": "33.9471.46f4f52fa-fb92.95ad5cbde",
+                  "attr": {}
+                },
+                "13": {
+                  "title": "our brains are larger in size compared to other mammals",
+                  "id": "57.61c1.ba1691cf8-6840.d499c3e1b",
+                  "attr": {}
+                },
+                "18": {
+                  "title": "Resources",
+                  "id": "19.9471.46f4f52fa-fb92.95ad5cbde",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Brain",
+                      "id": "20.9471.46f4f52fa-fb92.95ad5cbde"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {
+                      "background": "#008000"
+                    }
+                  }
+                },
+                "17.375": {
+                  "title": "Blood-brain barrier",
+                  "id": "75.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "acts almost as a gate",
+                      "id": "76.61c1.ba1691cf8-6840.d499c3e1b"
+                    },
+                    "2": {
+                      "title": "metabolism then becomes different than other parts of the brain",
+                      "id": "77.61c1.ba1691cf8-6840.d499c3e1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "17.84375": {
+                  "title": "Functions",
+                  "id": "79.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "perception",
+                      "id": "80.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "hormone regulation",
+                      "id": "153.7960.358f41362-6393.7bae9c93c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "17.921875": {
+                  "title": "My thoughts",
+                  "id": "84.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "each part of the brain is responsible for one thing",
+                      "id": "81.61c1.ba1691cf8-6840.d499c3e1b",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "we have an inherent biological clock",
+                      "id": "82.61c1.ba1691cf8-6840.d499c3e1b",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "magnetic field sense of some birds",
+                      "id": "78.61c1.ba1691cf8-6840.d499c3e1b",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "brains and (nuerons in that matter) release chemicals that either excite or inhibit",
+                      "ideas": {
+                        "1": {
+                          "title": "pain killers are inhabitory",
+                          "ideas": {},
+                          "id": "86.61c1.ba1691cf8-6840.d499c3e1b"
+                        },
+                        "2": {
+                          "title": "gultmate",
+                          "ideas": {
+                            "1": {
+                              "title": "excites",
+                              "id": "88.61c1.ba1691cf8-6840.d499c3e1b"
+                            }
+                          },
+                          "id": "87.61c1.ba1691cf8-6840.d499c3e1b"
+                        },
+                        "3": {
+                          "title": "GABA",
+                          "ideas": {
+                            "1": {
+                              "title": "inhibits",
+                              "id": "90.61c1.ba1691cf8-6840.d499c3e1b"
+                            }
+                          },
+                          "id": "89.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "id": "85.61c1.ba1691cf8-6840.d499c3e1b"
+                    },
+                    "5": {
+                      "title": "leeches have tail brain",
+                      "ideas": {
+                        "1": {
+                          "title": "go figure",
+                          "id": "92.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "id": "91.61c1.ba1691cf8-6840.d499c3e1b",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "changes in behavior causes the brain structure to change",
+                      "id": "99.61c1.ba1691cf8-6840.d499c3e1b",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#FF9900"
+                    },
+                    "collapsed": true
+                  }
+                },
+                "17.8828125": {
+                  "title": "Sleep",
+                  "id": "93.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "REM",
+                      "id": "94.61c1.ba1691cf8-6840.d499c3e1b"
+                    },
+                    "2": {
+                      "title": "non-REM",
+                      "id": "95.61c1.ba1691cf8-6840.d499c3e1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "Parts of the brain",
+                  "id": "40.61c1.ba1691cf8-6840.d499c3e1b",
+                  "attr": {
+                    "note": {
+                      "index": 4,
+                      "text": "The medulla, along with the spinal cord, contains many small nuclei involved in a wide variety of sensory and involuntary motor functions such as vomiting, heart rate and digestive processes.[7]\nThe pons lies in the brainstem directly above the medulla. Among other things, it contains nuclei that control often voluntary but simple acts such as sleep, respiration, swallowing, bladder function, equilibrium, eye movement, facial expressions, and posture.[38]\n\nThe hypothalamus is a small region at the base of the forebrain, whose complexity and importance belies its size. It is composed of numerous small nuclei, each with distinct connections and neurochemistry. The hypothalamus is engaged in additional involuntary or partially voluntary acts such as sleep and wake cycles, eating and drinking, and the release of some hormones.[39]\n\nThe thalamus is a collection of nuclei with diverse functions: some are involved in relaying information to and from the cerebral hemispheres, while others are involved in motivation. The subthalamic area (zona incerta) seems to contain action-generating systems for several types of \"consummatory\" behaviors such as eating, drinking, defecation, and copulation.[40]\n\nThe cerebellum modulates the outputs of other brain systems, whether motor related or thought related, to make them certain and precise. Removal of the cerebellum does not prevent an animal from doing anything in particular, but it makes actions hesitant and clumsy. This precision is not built-in, but learned by trial and error. The muscle coordination learned while riding a bicycle is an example of a type of neural plasticity that may take place largely within the cerebellum.[7] 10% of the brain's total volume consists of the cerebellum and 50% of all neurons are held within its structure.[41]\n\nThe optic tectum allows actions to be directed toward points in space, most commonly in response to visual input. In mammals it is usually referred to as the superior colliculus, and its best-studied function is to direct eye movements. It also directs reaching movements and other object-directed actions. It receives strong visual inputs, but also inputs from other senses that are useful in directing actions, such as auditory input in owls and input from the thermosensitive pit organs in snakes. In some primitive fishes, such as lampreys, this region is the largest part of the brain.[42] The superior colliculus is part of the midbrain.\n\nThe pallium is a layer of gray matter that lies on the surface of the forebrain and is the most complex and most recent evolutionary development of the brain as an organ.[43] In reptiles and mammals, it is called the cerebral cortex. Multiple functions involve the pallium, including smell and spatial memory. In mammals, where it becomes so large as to dominate the brain, it takes over functions from many other brain areas. In many mammals, the cerebral cortex consists of folded bulges called gyri that create deep furrows or fissures called sulci. The folds increase the surface area of the cortex and therefore increase the amount of gray matter and the amount of information that can be stored and processed.[44]\n\nThe hippocampus, strictly speaking, is found only in mammals. However, the area it derives from, the medial pallium, has counterparts in all vertebrates. There is evidence that this part of the brain is involved in complex events such as spatial memory and navigation in fishes, birds, reptiles, and mammals.[45]\n\nThe basal ganglia are a group of interconnected structures in the forebrain. The primary function of the basal ganglia appears to be action selection: they send inhibitory signals to all parts of the brain that can generate motor behaviors, and in the right circumstances can release the inhibition, so that the action-generating systems are able to execute their actions. Reward and punishment exert their most important neural effects by altering connections within the basal ganglia.[46]\n\nThe olfactory bulb is a special structure that processes olfactory sensory signals and sends its output to the olfactory part of the pallium. It is a major brain component in many vertebrates, but is greatly reduced in humans and other primates (whose senses are dominated by information acquired by sight rather than smell).[47]"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "2": {
+                      "title": "Basil Ganglia",
+                      "id": "43.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "reward punishment",
+                          "id": "98.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "cerebellum",
+                      "id": "46.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "percision",
+                          "id": "51.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "pallium",
+                      "id": "48.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "cereberal cortext",
+                          "id": "47.61c1.ba1691cf8-6840.d499c3e1b",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "hippocampus",
+                          "id": "55.61c1.ba1691cf8-6840.d499c3e1b",
+                          "ideas": {
+                            "1": {
+                              "title": "long term memory?",
+                              "id": "100.61c1.ba1691cf8-6840.d499c3e1b"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "amygdala",
+                          "id": "56.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "17": {
+                      "title": "olfactory bulb",
+                      "id": "41.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {},
+                      "attr": {}
+                    },
+                    "18": {
+                      "title": "optic tectum",
+                      "id": "49.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "visual inputs",
+                          "id": "50.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "21": {
+                      "title": "involuntary",
+                      "id": "54.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "pons ",
+                          "id": "52.61c1.ba1691cf8-6840.d499c3e1b",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "medulla",
+                          "id": "53.61c1.ba1691cf8-6840.d499c3e1b",
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "Hypothalmus",
+                          "id": "44.61c1.ba1691cf8-6840.d499c3e1b",
+                          "attr": {}
+                        },
+                        "4": {
+                          "title": "thalmus",
+                          "id": "45.61c1.ba1691cf8-6840.d499c3e1b",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "22": {
+                      "title": "cerebral cortex",
+                      "id": "58.61c1.ba1691cf8-6840.d499c3e1b"
+                    }
+                  }
+                },
+                "17.90234375": {
+                  "title": "nuclei",
+                  "id": "96.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "plural form of nucleus.",
+                      "id": "97.61c1.ba1691cf8-6840.d499c3e1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "17.86328125": {
+                  "title": "How to detect things in the brain?",
+                  "id": "103.61c1.ba1691cf8-6840.d499c3e1b",
+                  "ideas": {
+                    "1": {
+                      "title": "EEG",
+                      "id": "73.61c1.ba1691cf8-6840.d499c3e1b",
+                      "ideas": {
+                        "1": {
+                          "title": "detects electric fields that extend outside of the brain",
+                          "id": "74.61c1.ba1691cf8-6840.d499c3e1b"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "6": {
+              "title": "tangent",
+              "id": "37.9471.46f4f52fa-fb92.95ad5cbde",
+              "ideas": {
+                "1": {
+                  "title": "Power of half",
+                  "id": "39.9471.46f4f52fa-fb92.95ad5cbde"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {}
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.5e1d3976836f1c19",
+          "ideas": {
+            "1": {
+              "title": "nice basic explanation",
+              "id": "101.61c1.ba1691cf8-6840.d499c3e1b",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=kMKc8nfPATI",
+                  "id": "102.61c1.ba1691cf8-6840.d499c3e1b"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "",
+  "links": [],
+  "attr": {}
+}

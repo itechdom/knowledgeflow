@@ -1,0 +1,1009 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "PHP",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "7": {
+          "title": "Concepts",
+          "id": 310,
+          "ideas": {
+            "6": {
+              "title": "Syntax",
+              "id": "349.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "http://php.net/manual/en/langref.php",
+                  "id": "350.58d42c33547ddd21"
+                },
+                "8": {
+                  "title": "Variables",
+                  "id": "377.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "$varName",
+                      "id": "378.58d42c33547ddd21"
+                    },
+                    "2": {
+                      "title": "Pre-defined variables",
+                      "id": "431.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/reserved.variables.php",
+                          "id": "432.58d42c33547ddd21"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Global Variables",
+                      "id": "358.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "$__SERVER",
+                          "id": "359.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "constants",
+                  "id": "380.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "define(\"constName\",\"value\");",
+                      "id": "381.58d42c33547ddd21"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "functions",
+                  "id": "382.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "http://php.net/manual/en/language.functions.php",
+                      "id": "383.58d42c33547ddd21"
+                    },
+                    "2": {
+                      "title": "function fn( ) {  }",
+                      "id": "384.58d42c33547ddd21"
+                    },
+                    "3": {
+                      "title": "you can't define functions within functions like javascript",
+                      "id": "386.58d42c33547ddd21"
+                    },
+                    "4": {
+                      "title": "arguments",
+                      "id": "387.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "you can pass arguments by reference",
+                          "id": "388.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "default",
+                          "id": "389.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "arg=\"default_value\"",
+                              "id": "390.58d42c33547ddd21"
+                            },
+                            "2": {
+                              "title": "mind the order",
+                              "id": "391.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Variable Functions",
+                      "id": "397.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/functions.variable-functions.php",
+                          "id": "398.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "example",
+                          "id": "399.58d42c33547ddd21"
+                        },
+                        "3": {
+                          "title": "you can just call the variable name with a parentheses but you have to locate the function",
+                          "id": "400.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "built-in function reference",
+                      "id": "347.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/funcref.php",
+                          "id": "348.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "echo",
+                          "id": "353.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "to send results back to the client",
+                              "id": "354.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "which is basically an stdout?",
+                                  "id": "355.58d42c33547ddd21"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Implode",
+                          "id": "362.58d42c33547ddd21",
+                          "attr": {
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "similar to split(' \")",
+                              "id": "466.58d42c33547ddd21"
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "Curl",
+                          "id": "339.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "http://php.net/manual/en/book.curl.php",
+                              "id": "340.58d42c33547ddd21"
+                            },
+                            "2": {
+                              "title": "examples",
+                              "id": "341.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://php.net/manual/en/curl.examples.php",
+                                  "id": "342.58d42c33547ddd21"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "setopt",
+                              "id": "479.58d42c33547ddd21"
+                            },
+                            "4": {
+                              "title": "exec",
+                              "id": "480.58d42c33547ddd21"
+                            },
+                            "5": {
+                              "title": "close",
+                              "id": "481.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "style": {
+                              "width": 50
+                            },
+                            "note": {
+                              "index": 7,
+                              "text": "PHP supports libcurl, a library created by Daniel Stenberg, that allows you to connect and communicate to many different types of servers with many different types of protocols. libcurl currently supports the http, https, ftp, gopher, telnet, dict, file, and ldap protocols. libcurl also supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading (this can also be done with PHP's ftp extension), HTTP form based upload, proxies, cookies, and user+password authentication."
+                            },
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "types",
+                  "id": "392.58d42c33547ddd21",
+                  "ideas": {
+                    "3": {
+                      "title": "http://php.net/manual/en/language.types.php",
+                      "id": "433.58d42c33547ddd21"
+                    },
+                    "4": {
+                      "title": "How to check for types",
+                      "id": "435.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "getType",
+                          "id": "436.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "is_int",
+                          "id": "437.58d42c33547ddd21"
+                        },
+                        "3": {
+                          "title": "is_string",
+                          "id": "438.58d42c33547ddd21"
+                        },
+                        "4": {
+                          "title": "Boolean",
+                          "id": "439.58d42c33547ddd21",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 44,
+                              "text": "When converting to boolean, the following values are considered FALSE:\n\nthe boolean FALSE itself\nthe integer 0 (zero)\nthe float 0.0 (zero)\nthe empty string, and the string \"0\"\nan array with zero elements\nthe special type NULL (including unset variables)\nSimpleXML objects created from empty tags"
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "integers",
+                          "id": "441.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "http://php.net/manual/en/language.types.integer.php",
+                              "id": "442.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "6": {
+                          "title": "floats",
+                          "id": "443.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "http://php.net/manual/en/language.types.float.php",
+                              "id": "444.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "7": {
+                          "title": "string",
+                          "id": "445.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "no unicode support",
+                              "id": "446.58d42c33547ddd21",
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "http://php.net/manual/en/language.types.string.php",
+                              "id": "448.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "8": {
+                          "title": "array",
+                          "id": "449.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "http://php.net/manual/en/language.types.array.php",
+                              "id": "450.58d42c33547ddd21"
+                            },
+                            "2": {
+                              "title": "it's actually an ordered map",
+                              "id": "451.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "keys can be integer or string",
+                                  "id": "453.58d42c33547ddd21"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "you can use the bracket notation as of PHP 5.2",
+                              "id": "452.58d42c33547ddd21"
+                            },
+                            "4": {
+                              "title": "you can have mixed types in the array too",
+                              "id": "454.58d42c33547ddd21"
+                            },
+                            "5": {
+                              "title": "array_map",
+                              "id": "467.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "expects a closure",
+                                  "id": "468.58d42c33547ddd21"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "9": {
+                          "title": "Objects and Classes",
+                          "id": "455.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "http://php.net/manual/en/language.types.object.php",
+                              "id": "456.58d42c33547ddd21"
+                            },
+                            "2": {
+                              "title": "constructor",
+                              "id": "472.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "__construct",
+                                  "id": "473.58d42c33547ddd21"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "serialization",
+                              "id": "475.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "http://php.net/manual/en/language.oop5.serialization.php",
+                                  "id": "476.58d42c33547ddd21"
+                                }
+                              }
+                            },
+                            "0.5": {
+                              "title": "http://php.net/manual/en/language.oop5.decon.php",
+                              "id": "474.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "10": {
+                          "title": "type casting",
+                          "id": "457.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "()",
+                              "id": "458.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "11": {
+                          "title": "Resources",
+                          "id": "459.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "Special variables that contains a reference to an external resource",
+                              "id": "460.58d42c33547ddd21"
+                            },
+                            "2": {
+                              "title": "holds special handles like open files and database connections",
+                              "id": "461.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "12": {
+                          "title": "callbacks",
+                          "id": "462.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "use call_user_function()",
+                              "id": "463.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "to execute a function passed down?",
+                                  "id": "464.58d42c33547ddd21"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "closures",
+                              "id": "465.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Control Structure",
+                  "id": "401.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "http://php.net/manual/en/language.control-structures.php",
+                      "id": "402.58d42c33547ddd21"
+                    },
+                    "2": {
+                      "title": "if",
+                      "id": "403.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "PHP has a one line if",
+                          "id": "404.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "if the tags are separated",
+                      "id": "405.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "use if and endif",
+                          "id": "406.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "<?php if  ?>\n<?php endif;?>",
+                          "id": "407.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "foreach",
+                      "id": "408.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "easy way to iterate over arrays",
+                          "id": "409.58d42c33547ddd21"
+                        },
+                        "3": {
+                          "title": "http://php.net/manual/en/control-structures.foreach.php",
+                          "id": "412.58d42c33547ddd21"
+                        },
+                        "4": {
+                          "title": "you can use foreach($var as $key => $value){\n\n}",
+                          "id": "477.58d42c33547ddd21",
+                          "attr": {
+                            "style": {
+                              "width": 297
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "to iterate over keys and values of an object",
+                              "id": "478.58d42c33547ddd21"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Declare",
+                      "id": "416.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/control-structures.declare.php",
+                          "id": "417.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "for encoding and ticker function",
+                          "id": "418.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "or setTimeout in JS",
+                              "id": "419.58d42c33547ddd21"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "return",
+                      "id": "420.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/function.return.php",
+                          "id": "421.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "require",
+                      "id": "422.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/function.require.php",
+                          "id": "423.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "difference between it and include is that include will only issue a warning, but require will end execution",
+                          "id": "424.58d42c33547ddd21"
+                        },
+                        "3": {
+                          "title": "remember require isn't a function",
+                          "id": "425.58d42c33547ddd21"
+                        },
+                        "4": {
+                          "title": "require once and include once",
+                          "id": "426.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "will load the file only once",
+                              "id": "427.58d42c33547ddd21"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "8": {
+                      "title": "Goto",
+                      "id": "428.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/control-structures.goto.php",
+                          "id": "429.58d42c33547ddd21"
+                        },
+                        "2": {
+                          "title": "http://php.net/manual/en/control-structures.goto.php",
+                          "id": "430.58d42c33547ddd21"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "Version Specific",
+                  "id": "434.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "7.0",
+                      "id": 296,
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "https://blog.engineyard.com/2015/what-to-expect-php-7",
+                          "id": 297
+                        },
+                        "2": {
+                          "title": "Introduces Type Declaration",
+                          "id": "395.58d42c33547ddd21"
+                        },
+                        "3": {
+                          "title": "Strict Mode",
+                          "id": "396.58d42c33547ddd21"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "14": {
+                  "title": "@",
+                  "id": "483.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "it suppresses error messages",
+                      "id": "484.58d42c33547ddd21"
+                    }
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "General Use Cases",
+              "id": "351.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "http://php.net/manual/en/features.php",
+                  "id": "352.58d42c33547ddd21"
+                },
+                "2": {
+                  "title": "Nice features",
+                  "id": "343.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "has a nice support for XML with LibXML",
+                      "id": "344.58d42c33547ddd21"
+                    }
+                  },
+                  "attr": {}
+                },
+                "3": {
+                  "title": "Usages",
+                  "id": "330.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "Server side application",
+                      "id": "331.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "installation",
+                          "id": "334.58d42c33547ddd21",
+                          "ideas": {
+                            "1": {
+                              "title": "you configure a server-module or a cgi",
+                              "id": "335.58d42c33547ddd21",
+                              "ideas": {
+                                "1": {
+                                  "title": "I think this is connected to Apache?",
+                                  "id": "336.58d42c33547ddd21"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "PHP works as either a module, or as a CGI processor.",
+                              "id": "337.58d42c33547ddd21"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Terminal Apps",
+                      "id": "332.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "easy, just use the PHP parser",
+                          "id": "338.58d42c33547ddd21"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Desktop Apps",
+                      "id": "333.58d42c33547ddd21"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Questions",
+              "id": "363.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "Authentication",
+                  "id": "356.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "Digest",
+                      "id": "357.58d42c33547ddd21"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Installation and configuration",
+              "id": "364.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "Runtime Configs",
+                  "id": "365.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "http://php.net/manual/en/configuration.file.php",
+                      "id": "366.58d42c33547ddd21"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Advanced",
+              "id": "369.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "http://php.net/manual/en/internals2.php",
+                  "id": "370.58d42c33547ddd21"
+                },
+                "2": {
+                  "title": "Memory Management",
+                  "id": "371.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "http://php.net/manual/en/internals2.memory.management.php",
+                      "id": "372.58d42c33547ddd21"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Multi Threading",
+                  "id": "373.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "Thread Safety",
+                      "id": "375.58d42c33547ddd21",
+                      "ideas": {
+                        "1": {
+                          "title": "http://php.net/manual/en/internals2.memory.tsrm.php",
+                          "id": "376.58d42c33547ddd21"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  82,
+                  191,
+                  1
+                ],
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 293,
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/PHP",
+              "id": 294
+            },
+            "2": {
+              "title": "Implementations",
+              "id": 295,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">While Zend PHP is still the most popular implementation, several other implementations have been developed. Some of these are&nbsp;<a href=\"https://en.wikipedia.org/wiki/Compiler\" title=\"Compiler\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">compilers</a>&nbsp;or support&nbsp;<a href=\"https://en.wikipedia.org/wiki/JIT_compilation\" title=\"JIT compilation\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">JIT compilation</a>, and hence offer performance benefits over Zend PHP at the expense of lacking full PHP compatibility. Alternative implementations include the following:</p><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/HipHop_Virtual_Machine\" title=\"HipHop Virtual Machine\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">HipHop Virtual Machine</a>&nbsp;(HHVM)&nbsp;– developed at Facebook and available as open source, it converts PHP code into a high-level bytecode (commonly known as an&nbsp;<a href=\"https://en.wikipedia.org/wiki/Intermediate_language\" title=\"Intermediate language\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">intermediate language</a>), which is then translated into x86-64 machine code dynamically at runtime by a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Just-in-time_compiler\" title=\"Just-in-time compiler\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">just-in-time</a>&nbsp;(JIT) compiler, resulting in up to 6× performance improvements.<sup id=\"cite_ref-112\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/PHP#cite_note-112\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\" target=\"_blank\">[112]</a></sup></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Parrot_virtual_machine\" title=\"Parrot virtual machine\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Parrot</a>&nbsp;– a virtual machine designed to run dynamic languages efficiently; Pipp transforms the PHP source code into the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Parrot_intermediate_representation\" title=\"Parrot intermediate representation\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Parrot intermediate representation</a>, which is then translated into the Parrot's bytecode and executed by the virtual machine.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Phalanger_(compiler)\" title=\"Phalanger (compiler)\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Phalanger</a>&nbsp;– compiles PHP into&nbsp;<a href=\"https://en.wikipedia.org/wiki/Common_Intermediate_Language\" title=\"Common Intermediate Language\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Common Intermediate Language</a>&nbsp;(CIL) bytecode</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/HipHop_for_PHP\" title=\"HipHop for PHP\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">HipHop</a>&nbsp;– developed at Facebook and available as open source, it transforms the PHP scripts into&nbsp;<a href=\"https://en.wikipedia.org/wiki/C%2B%2B\" title=\"C++\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">C++</a>&nbsp;code and then compiles the resulting code, reducing the server load up to 50%. In early 2013, Facebook deprecated it in favor of HHVM due to multiple reasons, including deployment difficulties and lack of support for the whole PHP language, including the&nbsp;<tt style=\"font-family: monospace, Courier;\">create_function()</tt>&nbsp;and&nbsp;<tt style=\"font-family: monospace, Courier;\">eval()</tt>&nbsp;constructs.<sup id=\"cite_ref-113\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/PHP#cite_note-113\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\" target=\"_blank\">[113]</a></sup></li></ul>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Hiphop",
+                  "id": 309
+                }
+              }
+            },
+            "4": {
+              "title": "Writing C Extensions",
+              "id": 324,
+              "ideas": {
+                "1": {
+                  "title": "http://devzone.zend.com/303/extension-writing-part-i-introduction-to-php-and-zend/#Heading2",
+                  "id": 325
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Project Starters",
+              "id": 233,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Third Party",
+              "id": 299,
+              "ideas": {
+                "2": {
+                  "title": "Composer",
+                  "id": 302,
+                  "ideas": {
+                    "1": {
+                      "title": "https://getcomposer.org/doc/01-basic-usage.md",
+                      "id": 303
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Apache",
+                  "id": 306,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrZVF2SHl1MGZlNW8",
+                      "id": 308,
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "nginx",
+                  "id": 307
+                },
+                "5": {
+                  "title": "Packagist",
+                  "id": 300,
+                  "ideas": {
+                    "1": {
+                      "title": "PHP package repo",
+                      "id": 301
+                    },
+                    "2": {
+                      "title": "https://packagist.org/explore/popular?page=3",
+                      "id": 304
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Flavors",
+              "id": 321,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Hack",
+                  "id": 322,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIreW5Cem9kbW01b00",
+                      "id": 323
+                    }
+                  }
+                }
+              }
+            },
+            "8": {
+              "title": "Manual",
+              "id": "326.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "http://php.net/manual/en/",
+                  "id": "327.58d42c33547ddd21"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "extensions list",
+              "id": "345.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "http://php.net/manual/en/extensions.alphabetical.php",
+                  "id": "346.58d42c33547ddd21"
+                }
+              },
+              "attr": {}
+            },
+            "10": {
+              "title": "REPL",
+              "id": "414.58d42c33547ddd21",
+              "ideas": {
+                "1": {
+                  "title": "https://repl.it/languages/php",
+                  "id": "415.58d42c33547ddd21"
+                },
+                "2": {
+                  "title": "All my experiments",
+                  "id": "470.58d42c33547ddd21",
+                  "ideas": {
+                    "1": {
+                      "title": "https://repl.it/F08Q/0",
+                      "id": "471.58d42c33547ddd21"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              108,
+              -2,
+              4
+            ],
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "PHP"
+}

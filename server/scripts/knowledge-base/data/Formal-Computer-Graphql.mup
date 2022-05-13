@@ -1,0 +1,752 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Graphql",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "11": {
+          "title": "Concepts",
+          "id": 4,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "12": {
+              "title": "questions",
+              "id": "39.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "it says: \"we recommend passing a fully hydrated request and response object\"",
+                  "id": "40.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11.5": {
+              "title": "Guidelines",
+              "id": "41.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "build a graph ql schema that mirros what the client would request",
+                  "id": "34.2357276c6e781613",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "pagination",
+                  "id": "28.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "http://graphql.org/learn/pagination/",
+                      "id": "30.2357276c6e781613",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "batching",
+                  "id": "27.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "merging multiple requests together",
+                      "id": "29.2357276c6e781613",
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "https://github.com/facebook/dataloader",
+                      "id": "31.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "facebook data loader",
+                          "id": "32.2357276c6e781613"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "How to build a Nodejs App with GraphQL",
+                  "id": "35.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "let all the authentication middlewares run first",
+                      "id": "36.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "http://graphql.org/learn/serving-over-http/",
+                      "id": "37.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "authorization should always be in the business logic layer",
+                  "id": "38.2357276c6e781613",
+                  "attr": {}
+                },
+                "6": {
+                  "title": "thinking in Graphs",
+                  "id": "33.2357276c6e781613",
+                  "attr": {}
+                },
+                "7": {
+                  "title": "you usually expose one end point?",
+                  "id": "26.2357276c6e781613",
+                  "attr": {}
+                },
+                "8": {
+                  "title": "Name your queries so you can easily debug them",
+                  "id": "56.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "definition",
+              "id": "22.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "a query language",
+                  "id": "23.2357276c6e781613"
+                },
+                "2": {
+                  "title": "replaces REST",
+                  "id": "24.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6.75": {
+              "title": "Schema",
+              "id": "13.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "http://graphql.org/learn/schema/",
+                  "id": "68.2357276c6e781613"
+                },
+                "8": {
+                  "title": "types",
+                  "id": "86.2357276c6e781613",
+                  "ideas": {
+                    "2": {
+                      "title": "Scalar",
+                      "id": "25.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "cannot resolve to more than one sub fields",
+                          "id": "75.2357276c6e781613"
+                        },
+                        "2": {
+                          "title": "Int",
+                          "id": "87.2357276c6e781613"
+                        },
+                        "4": {
+                          "title": "String",
+                          "id": "70.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "String is one of the built-in scalar types - these are types that resolve to a single scalar object, and can't have sub-selections in the query. We'll go over scalar types more late",
+                              "id": "73.2357276c6e781613"
+                            },
+                            "2": {
+                              "title": "it's a scalar type",
+                              "id": "74.2357276c6e781613"
+                            },
+                            "3": {
+                              "title": "String!",
+                              "id": "76.2357276c6e781613",
+                              "ideas": {
+                                "1": {
+                                  "title": "means it's non-nullable",
+                                  "id": "77.2357276c6e781613"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "Float",
+                          "id": "89.2357276c6e781613"
+                        },
+                        "6": {
+                          "title": "Boolean",
+                          "id": "90.2357276c6e781613"
+                        },
+                        "7": {
+                          "title": "ID",
+                          "id": "91.2357276c6e781613"
+                        },
+                        "8": {
+                          "title": "Custom",
+                          "id": "92.2357276c6e781613",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 24,
+                              "text": "In most GraphQL service implementations, there is also a way to specify custom scalar types. For example, we could define a Date type:\n\nscalar Date\nThen it's up to our implementation to define how that type should be serialized, deserialized, and validated. For example, you could specify that the Date type should always be serialized into an integer timestamp, and your client should know to expect that format for any date fields."
+                            }
+                          }
+                        },
+                        "9": {
+                          "title": "Enums",
+                          "id": "94.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "they are a special case of scalar type, they accept only a predefined set of values",
+                              "id": "95.2357276c6e781613"
+                            },
+                            "2": {
+                              "title": "example",
+                              "id": "96.2357276c6e781613",
+                              "attr": {
+                                "note": {
+                                  "index": 27,
+                                  "text": "enum Episode {\n  NEWHOPE\n  EMPIRE\n  JEDI\n}"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Query and Mutations",
+                      "id": "80.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "syntax",
+                          "id": "81.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "schema {\n  query: Query\n  mutation: Mutation\n}",
+                              "id": "82.2357276c6e781613"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "every graphql service must have a query type",
+                          "id": "83.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "that means you need to have a type in your schema called Query",
+                              "id": "85.2357276c6e781613"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "may or may not have mutations",
+                          "id": "84.2357276c6e781613"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Lists",
+                      "id": "71.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "Syntax",
+                          "id": "78.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "[ObjectType]",
+                              "id": "79.2357276c6e781613"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Non-Null",
+                      "id": "97.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "add an exclamation point",
+                          "id": "98.2357276c6e781613"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Interfaces",
+                      "id": "100.2357276c6e781613",
+                      "ideas": {
+                        "1": {
+                          "title": "predefined set of fields and types",
+                          "id": "101.2357276c6e781613"
+                        },
+                        "2": {
+                          "title": "You implement an interface if you want to enforce them",
+                          "id": "102.2357276c6e781613"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Unions",
+                      "id": "103.2357276c6e781613",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Similar to interfaces, but you can get a list of possible types",
+                          "id": "104.2357276c6e781613"
+                        },
+                        "2": {
+                          "title": "Example",
+                          "id": "105.2357276c6e781613",
+                          "ideas": {
+                            "1": {
+                              "title": "union\n SearchResult \n=\n \nHuman\n \n|\n \nDroid\n \n|\n \nStarship",
+                              "id": "106.2357276c6e781613"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    },
+                    "8": {
+                      "title": "Input",
+                      "id": "107.2357276c6e781613",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "used with mutations",
+                          "id": "108.2357276c6e781613"
+                        },
+                        "2": {
+                          "title": "add input instead of type",
+                          "id": "109.2357276c6e781613"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Contains Queries and Mutations",
+                  "id": "127.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9.125": {
+              "title": "Queries",
+              "id": "46.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "Fragments",
+                  "id": "44.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "http://graphql.org/learn/queries/#fragments",
+                      "id": "45.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "A way to specify a query that will be repeated",
+                      "id": "110.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Aliases",
+                  "id": "42.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "http://graphql.org/learn/queries/#aliases",
+                      "id": "43.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Fields",
+                  "id": "47.2357276c6e781613"
+                },
+                "4": {
+                  "title": "Arguments",
+                  "id": "48.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "pass static values",
+                      "id": "60.2357276c6e781613",
+                      "ideas": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Directives",
+                  "id": "58.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "gives you extra features that you might need in specific instances",
+                      "id": "64.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Mutations",
+                  "id": "65.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "Used when submitting a data",
+                      "id": "66.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "You get data back",
+                      "id": "67.2357276c6e781613"
+                    },
+                    "3": {
+                      "title": "They are processed in order",
+                      "id": "124.2357276c6e781613"
+                    }
+                  }
+                },
+                "2.5": {
+                  "title": "Variables",
+                  "id": "50.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "http://graphql.org/learn/queries/#variables",
+                      "id": "51.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "you pass variables seperately",
+                      "id": "52.2357276c6e781613"
+                    },
+                    "3": {
+                      "title": "! exclamation to make a variable required",
+                      "id": "55.2357276c6e781613"
+                    },
+                    "4": {
+                      "title": "pass dynamic argument values",
+                      "id": "59.2357276c6e781613"
+                    },
+                    "5": {
+                      "title": "so we don't have to encode it?",
+                      "id": "63.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10.3125": {
+              "title": "How is graphql executed?",
+              "id": "111.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "http://graphql.org/learn/execution/",
+                  "id": "112.2357276c6e781613"
+                },
+                "2": {
+                  "title": "every field has a resolver function",
+                  "id": "113.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9.71875": {
+              "title": "Introspection",
+              "id": "114.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "http://graphql.org/learn/introspection/",
+                  "id": "115.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "Main Website",
+              "id": 6,
+              "ideas": {
+                "2": {
+                  "title": "http://graphql.org/",
+                  "id": 9
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "learn graphql",
+              "id": "10.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "http://graphql.org/learn/",
+                  "id": "11.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Link to external mindmaps",
+              "id": "16.2357276c6e781613",
+              "ideas": {
+                "2": {
+                  "title": "react",
+                  "id": "18.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrWmxWUm9rR1ktZDQ/view?usp=sharing",
+                      "id": "17.2357276c6e781613",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "functional programming",
+                  "id": "19.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrQjd4djROcllPcWs/view?usp=sharing",
+                      "id": "20.2357276c6e781613"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "meta",
+              "id": "116.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/chentsulin/awesome-graphql",
+                  "id": "117.2357276c6e781613"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "third party",
+              "id": "120.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "Express-graphql",
+                  "id": "118.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/graphql/express-graphql",
+                      "id": "119.2357276c6e781613"
+                    }
+                  },
+                  "attr": {}
+                },
+                "2": {
+                  "title": "graffiti",
+                  "id": "125.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "transforms your current data model into GraphQL",
+                      "id": "126.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "https://github.com/RisingStack/graffiti",
+                      "id": "134.2357276c6e781613"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Relay",
+                  "id": "130.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/relay/",
+                      "id": "131.2357276c6e781613"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Comprehensive Boilerplate",
+                  "id": "135.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/codefoundries/UniversalRelayBoilerplate",
+                      "id": "136.2357276c6e781613"
+                    },
+                    "2": {
+                      "title": "http://codefoundries.com/products/UniversalRelayBoilerplate.html",
+                      "id": "137.2357276c6e781613"
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Graphql with SQL",
+                  "id": "138.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/mrblueblue/graphql-express-sqlite",
+                      "id": "139.2357276c6e781613"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "examples",
+              "id": "121.2357276c6e781613",
+              "ideas": {
+                "1": {
+                  "title": "Graphql with mongoose",
+                  "id": "122.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/RisingStack/graphql-server",
+                      "id": "123.2357276c6e781613"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Graphql with AWS",
+                  "id": "128.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/jonsharratt/graphql-aws",
+                      "id": "129.2357276c6e781613"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Relay Starter Kit",
+                  "id": "132.2357276c6e781613",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/relayjs/relay-starter-kit",
+                      "id": "133.2357276c6e781613"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Tutorial",
+              "id": "140.1eb2856275717f16",
+              "ideas": {
+                "2": {
+                  "title": "Graphql",
+                  "id": "142.1eb2856275717f16",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.graph.cool/graphql-up/",
+                      "id": "141.1eb2856275717f16",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Graphql"
+}

@@ -1,0 +1,26 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Arabic",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "10": {
+          "title": "Concepts",
+          "id": 14,
+          "ideas": {},
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Arabic"
+}

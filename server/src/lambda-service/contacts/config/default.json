@@ -1,0 +1,19 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "0.0.0.0",
+    "media": "https://api.markab.io"
+  },
+  "db": {
+    "host": "mongodb://javasop:osamah1989@cluster0-shard-00-00-a3c8j.mongodb.net:27017,cluster0-shard-00-01-a3c8j.mongodb.net:27017,cluster0-shard-00-02-a3c8j.mongodb.net:27017/orbital?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority",
+    "remote": "mongodb://localhost",
+    "port": 27017
+  },
+  "redirectUrl": "orbital-site.s3-website-us-east-1.amazonaws.com",
+  "secret": "ijwtooo",
+  "auth": {
+    "google": {
+      "callbackURL": "orbital-site.s3-website-us-east-1.amazonaws.com"
+    }
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Physiology",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.51e8bc0d1a54155b",
+          "ideas": {
+            "1": {
+              "title": "Stomach",
+              "id": "7.665de2a0d762cbe3",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=ZuJzYYIS9c4",
+                  "id": "9.665de2a0d762cbe3"
+                },
+                "3": {
+                  "title": "https://www.youtube.com/watch?v=bo2Ape8JHqA",
+                  "id": "11.665de2a0d762cbe3",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Small intestine",
+              "id": "15.665de2a0d762cbe3",
+              "ideas": {
+                "1": {
+                  "title": "12 foot coil tube",
+                  "id": "16.665de2a0d762cbe3"
+                },
+                "2": {
+                  "title": "we absorb most of our nutrients",
+                  "id": "18.665de2a0d762cbe3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "large intestine",
+              "id": "19.665de2a0d762cbe3"
+            },
+            "4": {
+              "title": "our brain send signals to our esophagus  informing it to contract",
+              "id": "10.665de2a0d762cbe3",
+              "ideas": {
+                "1": {
+                  "title": "to move the food down",
+                  "id": "13.665de2a0d762cbe3"
+                },
+                "2": {
+                  "title": "that's why we can eat upside down",
+                  "id": "14.665de2a0d762cbe3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.51e8bc0d1a54155b",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "4.51e8bc0d1a54155b",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Physiology",
+                  "id": "6.51e8bc0d1a54155b"
+                }
+              }
+            },
+            "2": {
+              "title": "Abdmonial anatomy tour",
+              "id": "21.665de2a0d762cbe3"
+            },
+            "3": {
+              "title": "https://www.youtube.com/watch?v=bt9nHo0Fb_Q",
+              "id": "22.ba2c.609c8a263-350c.d2a828854"
+            }
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          -38,
+          -15,
+          1
+        ]
+      }
+    }
+  },
+  "title": "",
+  "links": []
+}

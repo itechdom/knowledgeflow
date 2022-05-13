@@ -1,0 +1,166 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Discrete Math",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.15b7d6b0840b6b67",
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "10.15b7d6b0840b6b67",
+              "ideas": {
+                "1": {
+                  "title": "continuously varying quantities and related notions.",
+                  "id": "11.15b7d6b0840b6b67"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "History",
+              "id": "12.15b7d6b0840b6b67",
+              "ideas": {
+                "1": {
+                  "title": "Appeared in 1980s and is now in some schools",
+                  "id": "13.15b7d6b0840b6b67"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Includes",
+              "id": "14.15b7d6b0840b6b67",
+              "ideas": {
+                "1": {
+                  "title": "Theoritcal Computer science",
+                  "id": "15.15b7d6b0840b6b67"
+                },
+                "2": {
+                  "title": "Information Theory",
+                  "id": "16.15b7d6b0840b6b67"
+                },
+                "3": {
+                  "title": "Logic",
+                  "id": "17.15b7d6b0840b6b67"
+                },
+                "7": {
+                  "title": "Probability",
+                  "id": "21.15b7d6b0840b6b67"
+                },
+                "8": {
+                  "title": "Number Theory",
+                  "id": "22.15b7d6b0840b6b67"
+                },
+                "9": {
+                  "title": "Algebra",
+                  "id": "24.15b7d6b0840b6b67"
+                },
+                "10": {
+                  "title": "Geometry",
+                  "id": "25.15b7d6b0840b6b67"
+                },
+                "11": {
+                  "title": "Toplogy",
+                  "id": "26.15b7d6b0840b6b67"
+                },
+                "12": {
+                  "title": "Operations Research",
+                  "id": "27.15b7d6b0840b6b67"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Graph Theory",
+              "id": "20.15b7d6b0840b6b67",
+              "attr": {
+                "style": {
+                  "background": "#008080"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrMGhxdWFkZGJFbGs/view?usp=sharing",
+                  "id": "28.15b7d6b0840b6b67"
+                }
+              }
+            },
+            "5": {
+              "title": "Combinatorics",
+              "id": "19.15b7d6b0840b6b67",
+              "attr": {
+                "style": {
+                  "background": "#008080"
+                }
+              }
+            },
+            "6": {
+              "title": "Set Theory",
+              "id": "18.15b7d6b0840b6b67",
+              "attr": {
+                "style": {
+                  "background": "#008080"
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "2": {
+          "title": "Wikipedia",
+          "id": "5.15b7d6b0840b6b67",
+          "ideas": {
+            "1": {
+              "title": "Discontinuous structures",
+              "id": "6.15b7d6b0840b6b67",
+              "ideas": {
+                "1": {
+                  "title": "unliked for example real numbers, that are smooth and follow more of a gradual change",
+                  "id": "7.15b7d6b0840b6b67"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Resources",
+              "id": "8.15b7d6b0840b6b67",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Discrete_mathematics",
+                  "id": "9.15b7d6b0840b6b67"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.15b7d6b0840b6b67"
+        }
+      }
+    }
+  },
+  "title": "Discrete Math"
+}

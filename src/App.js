@@ -1018,82 +1018,7 @@ class App extends React.Component {
                   );
                 }}
               ></Route>
-              <Route
-                path={`${this.props.match.path}`}
-                render={(routeProps) => {
-                  return (
-                    <MainWrapper
-                      logo={logo}
-                      user={this.state.currentUser}
-                      {...routeProps}
-                      {...this.props}
-                      routeList={
-                        this.state.currentUser && this.state.currentUser.isAdmin
-                          ? [...mainRouteList, adminRoute]
-                          : [...mainRouteList]
-                      }
-                      drawerRouteList={
-                        this.state.currentUser && this.state.currentUser.isAdmin
-                          ? [...mainRouteList, adminRoute, logoutRoute]
-                          : [...mainRouteList, logoutRoute]
-                      }
-                      onRouteClick={(route) => {
-                        if (route.indexOf("http") !== -1) {
-                          return window.open(route);
-                        }
-                        return routeProps.history.push(`${route}`);
-                      }}
-                      classes={{
-                        ...classes,
-                        tabMenu: `${classes["white"]}`,
-                        content: `${classes.noScroll}`,
-                        menuTabsClasses: {
-                          flexContainer: `${classes["center"]}`,
-                        },
-                      }}
-                      render={(currentProps) => (
-                        <Switch>
-                          <Route
-                            path={`${routeProps.match.path}`}
-                            render={(props) => {
-                              return (
-                                <Crud
-                                  modelName="knowledge"
-                                  SERVER={config.SERVER}
-                                  offlineStorage={offlineStorage}
-                                  notificationDomainStore={
-                                    rootStore.notificationDomainStore
-                                  }
-                                  crudDomainStore={rootStore.crudDomainStore}
-                                  render={(props) => {
-                                    return (
-                                      <World
-                                        location={this.props.location}
-                                        currentTags={this.state.tags}
-                                        selected={this.state.selected}
-                                        currentUser={this.state.currentUser}
-                                        setState={(props) =>
-                                          this.setState(props)
-                                        }
-                                        renderDialog={(props) =>
-                                          this.renderDialog(props)
-                                        }
-                                        knowledge={props.knowledge}
-                                      />
-                                    );
-                                  }}
-                                />
-                              );
-                            }}
-                          ></Route>
-                        </Switch>
-                      )}
-                    />
-                  );
-                }}
-              />
-              {/* View knowledge, since it's an independent page */}
-              <Route
+               <Route
                 path={`${this.props.match.path}knowledge/view/:id`}
                 render={(routeProps) => {
                   const {
@@ -1200,6 +1125,188 @@ class App extends React.Component {
                   );
                 }}
               />
+               <Route
+                path={`${this.props.match.path}knowledge`}
+                render={(routeProps) => {
+                  const {
+                    match: { params },
+                  } = routeProps;
+                  let query = { _id: params.id };
+                  return (
+                    <Crud
+                      modelName="knowledge"
+                      SERVER={config.SERVER}
+                      offlineStorage={offlineStorage}
+                      notificationDomainStore={
+                        rootStore.notificationDomainStore
+                      }
+                      crudDomainStore={rootStore.crudDomainStore}
+                      paginate={false}
+                      query={query}
+                      render={(props) => {
+                        // console.log(
+                        //   "PROPS",
+                        //   props.knowledge_undoManager.history
+                        // );
+                        let knowledge =
+                          props.knowledge_queryResult &&
+                          props.knowledge_queryResult.data &&
+                          props.knowledge_queryResult.data[0];
+                        if (!knowledge || props.knowledge_loading) {
+                          return <Loading></Loading>;
+                        }
+                        return (
+                          <MainWrapper
+                            logo={logo}
+                            routeList={[
+                              {
+                                url: "all",
+                                name: "All",
+                                icon: "",
+                              },
+                            ]}
+                            drawerRouteList={
+                              this.state.currentUser &&
+                              this.state.currentUser.isAdmin
+                                ? [...mainRouteList, adminRoute, logoutRoute]
+                                : [...mainRouteList, logoutRoute]
+                            }
+                            user={this.state.currentUser}
+                            {...routeProps}
+                            {...this.props}
+                            onRouteClick={(route) => {
+                              this.setState({
+                                tags: new Set([]),
+                              });
+                              if (route.indexOf("http") !== -1) {
+                                return window.open(route);
+                              }
+                              return routeProps.history.push(`${route}`);
+                            }}
+                            classes={{
+                              ...classes,
+                              tabMenu: `${classes["white"]}`,
+                              menuTabsClasses: {
+                                flexContainer: `${classes["center"]}`,
+                              },
+                            }}
+                          >
+                            <Wikipedia
+                              SERVER={config.SERVER}
+                              offlineStorage={offlineStorage}
+                              notificationDomainStore={
+                                rootStore.notificationDomainStore
+                              }
+                            >
+                              <Knowledge
+                                onEdit={(model) => {
+                                  routeProps.history.push(
+                                    `//edit/${model._id}`
+                                  );
+                                }}
+                                onDelete={() => {
+                                  routeProps.history.goBack();
+                                }}
+                                classes={classes}
+                                location={this.props.location}
+                                currentTags={this.state.tags}
+                                selected={this.state.selected}
+                                currentUser={this.state.currentUser}
+                                setState={(props) => this.setState(props)}
+                                model={knowledge}
+                                knowledge_updateModel={
+                                  props.knowledge_updateModel
+                                }
+                                knowledge_deleteModel={
+                                  props.knowledge_deleteModel
+                                }
+                                renderDialog={(props) =>
+                                  this.renderDialog(props)
+                                }
+                              />
+                            </Wikipedia>
+                          </MainWrapper>
+                        );
+                      }}
+                    />
+                  );
+                }}
+              />
+              <Route
+                path={`${this.props.match.path}`}
+                render={(routeProps) => {
+                  return (
+                    <MainWrapper
+                      logo={logo}
+                      user={this.state.currentUser}
+                      {...routeProps}
+                      {...this.props}
+                      routeList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute]
+                          : [...mainRouteList]
+                      }
+                      drawerRouteList={
+                        this.state.currentUser && this.state.currentUser.isAdmin
+                          ? [...mainRouteList, adminRoute, logoutRoute]
+                          : [...mainRouteList, logoutRoute]
+                      }
+                      onRouteClick={(route) => {
+                        if (route.indexOf("http") !== -1) {
+                          return window.open(route);
+                        }
+                        return routeProps.history.push(`${route}`);
+                      }}
+                      classes={{
+                        ...classes,
+                        tabMenu: `${classes["white"]}`,
+                        content: `${classes.noScroll}`,
+                        menuTabsClasses: {
+                          flexContainer: `${classes["center"]}`,
+                        },
+                      }}
+                      render={(currentProps) => (
+                        <Switch>
+                          <Route
+                            path={`${routeProps.match.path}`}
+                            render={(props) => {
+                              return (
+                                <Crud
+                                  modelName="knowledge"
+                                  SERVER={config.SERVER}
+                                  offlineStorage={offlineStorage}
+                                  notificationDomainStore={
+                                    rootStore.notificationDomainStore
+                                  }
+                                  crudDomainStore={rootStore.crudDomainStore}
+                                  render={(props) => {
+                                    return (
+                                      <World
+                                        location={this.props.location}
+                                        currentTags={this.state.tags}
+                                        selected={this.state.selected}
+                                        currentUser={this.state.currentUser}
+                                        setState={(props) =>
+                                          this.setState(props)
+                                        }
+                                        renderDialog={(props) =>
+                                          this.renderDialog(props)
+                                        }
+                                        knowledge={props.knowledge}
+                                      />
+                                    );
+                                  }}
+                                />
+                              );
+                            }}
+                          ></Route>
+                        </Switch>
+                      )}
+                    />
+                  );
+                }}
+              />
+              {/* View knowledge, since it's an independent page */}
               <Route
                 path={`${this.props.match.path}:tag?`}
                 render={(routeProps) => {

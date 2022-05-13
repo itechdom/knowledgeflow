@@ -1,0 +1,82 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-Compuer-Google App Engine",
+      "id": 1,
+      "attr": {
+        "position": [
+          -62,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.8e87.382e10caf-214a.45e537b3",
+          "ideas": {
+            "1": {
+              "title": "Cost",
+              "id": "4.8e87.382e10caf-214a.45e537b3",
+              "ideas": {
+                "1": {
+                  "title": "Charges for CPU usage",
+                  "id": "5.8e87.382e10caf-214a.45e537b3"
+                },
+                "2": {
+                  "title": "https://cloud.google.com/pricing/#one",
+                  "id": "6.8e87.382e10caf-214a.45e537b3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Google App Engine",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/file/d/1b4e_tIuM9eUS7xH59gMAc0Cfg7dDgQ0g/view?usp=sharing",
+                  "id": "10.8e87.382e10caf-214a.45e537b3"
+                },
+                "2": {
+                  "title": "manages scalability for you",
+                  "id": "11.8e87.382e10caf-214a.45e537b3"
+                },
+                "3": {
+                  "title": "it won't charge you if you are under the free limit",
+                  "id": "12.8e87.382e10caf-214a.45e537b3"
+                }
+              },
+              "id": "9.8e87.382e10caf-214a.45e537b3",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Google Compute engine",
+              "ideas": {
+                "1": {
+                  "title": "more control, gives you access to the terminal ... etc",
+                  "id": "14.8e87.382e10caf-214a.45e537b3"
+                }
+              },
+              "id": "13.8e87.382e10caf-214a.45e537b3",
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.8e87.382e10caf-214a.45e537b3"
+        }
+      }
+    }
+  },
+  "title": "",
+  "links": []
+}

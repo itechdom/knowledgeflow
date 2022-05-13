@@ -1,0 +1,81 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Zoology",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.4c1f38177ba113c7",
+          "ideas": {
+            "1": {
+              "title": "How do you know you have life",
+              "id": "8.4c1f38177ba113c7",
+              "ideas": {
+                "1": {
+                  "title": "You have DNA",
+                  "id": "9.4c1f38177ba113c7"
+                },
+                "2": {
+                  "title": "Homeostasis",
+                  "id": "10.4c1f38177ba113c7"
+                },
+                "3": {
+                  "title": "Ability to reproduce",
+                  "id": "11.4c1f38177ba113c7"
+                },
+                "4": {
+                  "title": "Ability to evolve and adapt",
+                  "id": "12.4c1f38177ba113c7"
+                },
+                "5": {
+                  "title": "Ability to consume food",
+                  "id": "13.4c1f38177ba113c7",
+                  "ideas": {
+                    "1": {
+                      "title": "hetrorophic ",
+                      "id": "16.4c1f38177ba113c7"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Ability to grow",
+                  "id": "14.4c1f38177ba113c7"
+                },
+                "7": {
+                  "title": "You are made up of cells",
+                  "id": "15.4c1f38177ba113c7"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.4c1f38177ba113c7",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "4.4c1f38177ba113c7",
+              "ideas": {
+                "1": {
+                  "title": "https://en.m.wikipedia.org/wiki/Zoology",
+                  "id": "5.4c1f38177ba113c7"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Zoology",
+  "links": []
+}

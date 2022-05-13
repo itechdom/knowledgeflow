@@ -1,0 +1,444 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "RxJS.presentation",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "38": {
+          "title": "How I use it",
+          "id": 291,
+          "ideas": {
+            "1": {
+              "title": "1.Node Example",
+              "id": 322,
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "43": {
+          "title": "Questions?",
+          "id": 345,
+          "attr": {
+            "style": {}
+          }
+        },
+        "48": {
+          "title": "Resources",
+          "id": 179,
+          "ideas": {},
+          "attr": {
+            "style": {},
+            "note": {
+              "text": "[The introduction to Reactive Programming you’ve been missing](https://gist.github.com/staltz/868e7e9bc2a7b8c1f754): a thorough introduction to RxJS by Cycle.js author Andre Staltz.\n\n[Introduction to Rx](http://introtorx.com/): an online book focused on Rx.NET, but most concepts map directly to RxJS.\n\n[ReactiveX.io](http://reactivex.io/): official cross-language documentation site for ReactiveX.\n\n[Learn Rx](http://reactivex.io/learnrx/): an interactive tutorial with arrays and Observables, by Jafar Husain.\n\n[RxJS lessons at Egghead.io](https://egghead.io/technologies/rx)\n\n[RxJS GitBook](http://xgrommx.github.io/rx-book/)\n\n[RxMarbles](http://rxmarbles.com/): interactive diagrams of RxJS operators, built with Cycle.js.\n\n[Async JavaScript at Netflix](https://www.youtube.com/watch?v=XRYN2xt11Ek): video of Jafar Husain introducing RxJS."
+            }
+          }
+        },
+        "58": {
+          "title": "Topics we didn't cover",
+          "id": 299,
+          "attr": {
+            "position": [
+              134,
+              198,
+              46
+            ],
+            "style": {},
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "1.Schedulers",
+              "id": 343,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Explanation:</div><ul><li><a href=\"http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/scheduling_and_concurrency.html\" target=\"_blank\">http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/scheduling_and_concurrency.html</a></li></ul><div><br></div><div>API Docs:</div><div><ul><li><a href=\"API docs: http://xgrommx.github.io/rx-book/content/schedulers/index.html\" target=\"_blank\">http://xgrommx.github.io/rx-book/content/schedulers/index.html</a><br></li></ul></div>"
+                },
+                "style": {},
+                "position": [
+                  81,
+                  -126,
+                  1
+                ]
+              }
+            },
+            "2": {
+              "title": "2.Subjects",
+              "attr": {
+                "style": {},
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Explanation:</div><ul><li><a href=\"http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/subjects.html API docs: http://xgrommx.github.io/rx-book/content/subjects/index.html\" target=\"_blank\">http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/subjects.html&nbsp;</a><a href=\"http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/subjects.html API docs: http://xgrommx.github.io/rx-book/content/subjects/index.html\" target=\"_blank\"><br></a></li></ul><div><br><div>API Docs:</div><div><ul><li><a href=\"http://xgrommx.github.io/rx-book/content/getting_started_with_rxjs/subjects.html API docs: http://xgrommx.github.io/rx-book/content/subjects/index.html\" target=\"_blank\">http://xgrommx.github.io/rx-book/content/subjects/index.html</a><br></li></ul></div></div>"
+                }
+              },
+              "ideas": {},
+              "id": 306
+            },
+            "3": {
+              "title": "3.Notification",
+              "attr": {
+                "style": {},
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Explanation:<br></div><div><ul><li><a href=\"Docs API: http://xgrommx.github.io/rx-book/content/notification/index.html\" target=\"_blank\">http://xgrommx.github.io/rx-book/content/notification/index.html</a><br></li></ul></div>"
+                }
+              },
+              "ideas": {},
+              "id": 317
+            },
+            "4": {
+              "title": "4.Hot vs Cold Observables",
+              "id": 325,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "Docs:<br><ul><li><a href=\"https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/creating.md#cold-vs-hot-observables\" target=\"_blank\">https://github.com/Reactive-Extensions/RxJS/blob/master/doc/gettingstarted/creating.md#cold-vs-hot-observables</a></li></ul>"
+                },
+                "style": {}
+              }
+            },
+            "5": {
+              "title": "5. Marble Diagrams",
+              "id": 335,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>Visualize all Observable operators:</div><div><ul><li><a href=\"http://rxmarbles.com/\" target=\"_blank\">http://rxmarbles.com/</a><br></li></ul></div>"
+                },
+                "style": {}
+              }
+            }
+          }
+        },
+        "2.625": {
+          "title": "Intro to RxJS",
+          "id": 268,
+          "attr": {
+            "style": {},
+            "position": [
+              130,
+              -208,
+              47
+            ],
+            "attachment": {
+              "contentType": "text/html",
+              "content": "Osama Alghanmi<div>Front End Developer @ &lt;i&gt;EffectiveUI&lt;/i&gt;<br><div><br><div>&lt;i class=\"fa fa-github\"&gt;&lt;/i&gt;itechdom</div><div>&lt;i class=\"fa fa-twitter\"&gt;&lt;/i&gt;@itechdom</div></div></div>"
+            },
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "1.Start with an example",
+              "id": 271,
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "* &lt;div class=\"fragment\"&gt; Let's see how we can display a list of tweets, filter it by hashtags. &lt;/div&gt;\n\n\n\n\n\n\n&lt;i class=\"fa fa-lightbulb-o\"&gt;&lt;/i&gt; functional means: &lt;b&gt;Non-mutating, Stateless, Composable&lt;/b&gt;\n\n&lt;/pre&gt;\n\n&lt;/div&gt;"
+                }
+              }
+            },
+            "2": {
+              "title": "2. Harsh Reality",
+              "id": 273,
+              "ideas": {},
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "* &lt;div class=\"fragment\"&gt;In the previous example, getTweets is asynchronous&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Easy! The solution is:&lt;/div&gt;\n\n&lt;div class=\"fragment\"&gt;\n\n&lt;/div&gt;"
+                }
+              }
+            },
+            "2.5": {
+              "title": "3.What about Promises?",
+              "id": 295,
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "* &lt;div class=\"fragment\"&gt;Promises serve almost the same purpose as RxJS Observables&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Problems with Promises:&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Chaining Promises&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Canceling Promises&lt;/div&gt;"
+                }
+              },
+              "ideas": {}
+            }
+          }
+        },
+        "19.25": {
+          "title": "Excercise",
+          "id": 298,
+          "attr": {
+            "style": {},
+            "note": {
+              "text": "&lt;pre&gt;\n\n&lt;code&gt;\n\ntest('querying over events', function () {\n\n&nbsp; var results = 0;\n\n&nbsp; var e = new EventEmitter();\n\n&nbsp; Observable.fromEvent(e, 'click')\n\n&nbsp; &nbsp; .filter(function (click) { return click.x === click.y })\n\n&nbsp; &nbsp; .map(function (click) { return __ + __; })\n\n&nbsp; &nbsp; .subscribe(function (x) { results = x; });\n\n&nbsp; e.emit('click', {x: 100, y: 50});\n\n&nbsp; e.emit('click', {x: 75, &nbsp;y: 75});\n\n&nbsp; e.emit('click', {x: 40, &nbsp;y: 80});\n\n&nbsp; equal(results, 150);\n\n// fill in the __ inside map\n\n});\n\n&lt;/code&gt;\n\n&lt;/pre&gt;"
+            }
+          }
+        },
+        "10.9375": {
+          "title": "RxJS to the rescue!",
+          "id": 145,
+          "ideas": {
+            "1": {
+              "title": "1. Observables",
+              "id": 318,
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "* &lt;div class=\"fragment\"&gt;Building blocks of FRP in RxJS&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;First class objects to represent Asynchronous Data&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Operators with fabulous Functional Grammar&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;Interoperable with other sync/async data&lt;/div&gt;\n\n&lt;div class=\"fragment\"&gt;\n\n&lt;pre&gt;\n\n&lt;i class=\"fa fa-lightbulb-o\"&gt;&lt;/i&gt; An Observable is an event stream which can emit zero or more events, and may or may not finish.&nbsp;\n\nIf it finishes, then it does so by either emitting an error or&nbsp;\n\na special “complete” event.\n\n&lt;/pre&gt;\n\n&lt;/div&gt;"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "1. Arrays Are iterable",
+                  "id": 342,
+                  "attr": {
+                    "position": [
+                      129,
+                      -107,
+                      1
+                    ],
+                    "style": {},
+                    "note": {
+                      "text": "&lt;div class=\"fragment\"&gt;\n\n&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nArray\n\n&nbsp; .of(1, 2, 3, 4, 5)\n\n&nbsp; .map(x =&gt; x * x)\n\n&nbsp; .filter(x =&gt; x%2 === 0)\n\n&nbsp; .reduce((x, acc) =&gt; x + acc)\n\n&lt;/code&gt;\n\n&lt;/pre&gt;\n\n&lt;/div&gt;"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "2.Observables are iterables",
+                  "id": 320,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "&lt;div class=\"fragment\"&gt;\n\n&lt;/pre&gt;\n\n&lt;code&gt;\n\nObservable\n\n&nbsp; .of(1, 2, 3, 4, 5)\n\n&nbsp; .map(x =&gt; x * x)\n\n&nbsp; .filter(x =&gt; x%2 === 0)\n\n&nbsp; .reduce((x, acc) =&gt; x + acc)\n\n&lt;/code&gt;\n\n&lt;/pre&gt;\n\n&lt;/div&gt;\n\n&lt;div class=\"fragment\"&gt;\n\n&lt;pre&gt;\n\n&lt;i class=\"fa fa-lightbulb-o\"&gt;&lt;/i&gt; Remember:\n\n&nbsp;we return a new Observable every time we do any transformation\n\n&lt;/pre&gt;\n\n&lt;/div&gt;"
+                    }
+                  }
+                },
+                "12": {
+                  "title": "3.Observables are lazy",
+                  "id": 319,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nlet users_ = getUsersObservable();\n\nlet notJohnConners_ =&nbsp;\n\n&nbsp; users_\n\n&nbsp; &nbsp; .map(user =&gt; user.fullName)\n\n&nbsp; &nbsp; .map(name =&gt; name.first + ' ' + name.last)\n\n&nbsp; &nbsp; .filter(x =&gt; x === 'John Connor');\n\nnotJohnConners_.subscribe(\n\n&nbsp;(user) =&gt; console.log('New user arrived: ', user),\n\n&nbsp;(error) =&gt; console.log('Error Occured', error),\n\n&nbsp;() =&gt; console.log('All Done')\n\n)\n\n&lt;/code&gt;\n\n&lt;/pre&gt;"
+                    }
+                  }
+                },
+                "13": {
+                  "title": "4.You can make anything into an observable",
+                  "id": 321,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "1.Arrays",
+                      "id": 327,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nvar a = [1, 2, 3, 4, 5];\n\nvar a$ = Observable.from(a);\n\nvar b$ = Observable.of(1, 2, 3);\n\n&lt;/code&gt;\n\n&lt;/pre&gt; &nbsp; &nbsp;"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "2.Promises",
+                      "id": 328,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nvar a = iPromiseOfSomething();\n\nvar a_ = Observable.fromPromise(a);\n\n&lt;/code&gt;\n\n&lt;/pre&gt;"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "3.Events",
+                      "id": 329,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "&lt;pre class=\"fragment\"&gt;\n\n&lt;code class=\"js\"&gt;\n\nvar result = document\n\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;.getElementById('result');\n\nvar source =&nbsp;\n\nRx.Observable.fromEvent(result, 'click');\n\nvar observer = Rx.Observer.create(\n\n&nbsp; &nbsp; function (x) {\n\n&nbsp; &nbsp; &nbsp; &nbsp; console.log('Next: ' + x);\n\n&nbsp; &nbsp; },\n\n&nbsp; &nbsp; function (err) {\n\n&nbsp; &nbsp; &nbsp; &nbsp; console.log('Error: ' + err);\n\n&nbsp; &nbsp; },\n\n&nbsp; &nbsp; function () {\n\n&nbsp; &nbsp; &nbsp; &nbsp; console.log('Completed');\n\n&nbsp; &nbsp; }\n\n);\n\nsource.subscribe(observer)\n\n&lt;/code&gt;\n\n&lt;/pre&gt;\n\n&lt;pre class=\"fragment\"&gt;\n\n&lt;i class=\"fa fa-lightbulb-o\"&gt;&lt;/i&gt; Rx will truncate multiple arguments from events,&nbsp;\n\nyou can use the selector function to combine all of them&lt;/b&gt;\n\n&lt;/pre&gt;"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "4.Callbacks",
+                      "id": 330,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nwriteFile = require('fs').writeFile;\n\nwf_ = Observable\n\n&nbsp; &nbsp; &nbsp; .fromNodeCallback(writeFile);\n\n&lt;/code&gt;\n\n&lt;/pre&gt;"
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "5.Custom Observables",
+                      "id": 334,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "* &lt;div class=\"fragment\"&gt;Similar to resolve and reject in Promises&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;We can create custom observables&lt;/div&gt;\n\n* &lt;div class=\"fragment\"&gt;We have three functions: OnNext, OnComplete, OnError&lt;/div&gt;\n\n&lt;div class=\"fragment\"&gt;\n\n&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nvar source = Rx.Observable.create(function (observer) {\n\n&nbsp; observer.onNext(42);\n\n&nbsp; observer.onCompleted();\n\n&nbsp; return function () {\n\n&nbsp; &nbsp; console.log('disposed');\n\n&nbsp; }\n\n});\n\nvar subscription = source.subscribe(\n\n&nbsp; function (x) { console.log('onNext: %s', x); },\n\n&nbsp; function (e) { console.log('onError: %s', e); },\n\n&nbsp; function () { console.log('onCompleted'); });\n\nsubscription.dispose();\n\n&lt;/code&gt;\n\n&lt;/pre&gt;\n\n&lt;/div&gt;"
+                        }
+                      }
+                    }
+                  }
+                },
+                "14": {
+                  "title": "5. You can combine multiple Observables",
+                  "id": 344,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "&lt;pre&gt;\n\n&lt;code class=\"js\"&gt;\n\nvar api1 = \"https://en.wikipedia.org/w/api.php?action=query&amp;prop=extracts&amp;format=json&amp;exintro=&amp;titles=Stack%20Overflow\";\n\nvar api2 = \"https://en.wikipedia.org/w/api.php?action=query&amp;prop=extracts&amp;format=json&amp;exintro=&amp;titles=Computer%20Science\";\n\nvar promise1 = $.get(api1);\n\nvar promise2 = $.get(api2);\n\nvar source1 =&nbsp;\n\nRx.Observable.fromPromise(promise1);\n\nvar source2=&nbsp;\n\nRx.Observable.fromPromise(promise2);\n\nvar combined = Rx.Observable.concat(source1,source2);\n\n&lt;/code&gt;\n\n&lt;/pre&gt;"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "15.09375": {
+          "title": "Reactive Programming",
+          "id": 338,
+          "attr": {
+            "style": {},
+            "note": {
+              "text": "RxJS is Based on the observer and iterator patterns\nReactive can be explained as:\n\nModule Foo and Module Bar\n\nModule Bar is said to be reactive when it listens to modules Foo's changes\n\nFoo doesn't know that Bar exists!"
+            },
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "1. Imperative Programming",
+              "id": 339,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "2. Reactive Programming",
+              "id": 341,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "-2": {
+          "title": "Resources",
+          "id": "349.1c44e3876565cad2",
+          "ideas": {
+            "1": {
+              "title": "Code Pens",
+              "id": "350.143eb02353c57841",
+              "ideas": {
+                "10": {
+                  "title": "RxJS",
+                  "id": "372.6d4f05fa9b3f8711",
+                  "ideas": {
+                    "1": {
+                      "title": "http://codepen.io/javasop/pen/zrRMxo",
+                      "id": "356.143eb02353c57841",
+                      "attr": {}
+                    }
+                  }
+                },
+                "11": {
+                  "title": "Promises",
+                  "id": "373.6d4f05fa9b3f8711",
+                  "ideas": {
+                    "1": {
+                      "title": "Promises",
+                      "id": "369.5ce61fa767edd93c",
+                      "attr": {
+                        "note": {
+                          "index": 43,
+                          "text": "let promise1 = createPromise();\nlet promise2 = getWikipediaArticle();\n//consumePromise(promise1);\n//consumePromise(promise2);\nconsumeMultiplePromises([promise2,promise1]);\n\nfunction createPromise(){\n  \n  let promise = new Promise((resolve,reject)=>{\n    let button = document.getElementById('button');\n    button.addEventListener(\"click\", (event)=>{\n      resolve(\"clicked!\");\n    });\n    if(!button){\n      reject('button not found');\n    }\n  });\n  \n  return promise;\n  \n}\n\nfunction getWikipediaArticle(){\n  return new Promise((resolve,reject)=>{\n      let api = \"https://crossorigin.me/https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=Stack%20Overflow\";\n      var xhr = new XMLHttpRequest();\n      xhr.open('GET', api);\n      xhr.onload = function() {\n          if (xhr.status === 200) {\n              resolve('Wikipedia Article is: ' + xhr.responseText);\n          }\n          else {\n              reject('Request failed.  Returned status of ' + xhr.status);\n          }\n      };\n      xhr.send();\n  });\n}\n\nfunction consumePromise(promise){\n    promise.then((eventData)=>{\n      console.log(eventData);\n    }).catch((err)=>{\n      console.log(err);\n    })\n}\n\nfunction consumeMultiplePromises(promiseList){\n  //Promise all\n  Promise.all(promiseList).then((data)=>{\n    console.log(\"Promise.all\",data);\n  }).catch((err)=>{\n    console.log(err);\n  })\n  //Promise race\n  Promise.race(promiseList).then((data)=>{\n    console.log(\"Promise.race\",data);\n  }).catch((err)=>{\n    console.log(err);\n  })\n}"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "http://codepen.io/javasop/pen/LxJLzK?editors=1011",
+                      "id": "374.216aff22f6c6502a"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Prezi slides",
+              "id": "363.143eb02353c57841",
+              "ideas": {
+                "1": {
+                  "title": "http://prezi.com/mhbbv5w0o8qd/?utm_campaign=share&utm_medium=copy",
+                  "id": "366.b8fe503224dbb06"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Docs",
+              "id": "376.216aff22f6c6502a",
+              "ideas": {
+                "2": {
+                  "title": "getting started",
+                  "id": "378.216aff22f6c6502a",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/Reactive-Extensions/RxJS/tree/master/doc/gettingstarted",
+                      "id": "377.216aff22f6c6502a",
+                      "ideas": {},
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "README!!!!!",
+          "id": "347.368b3f5d58d5ce4c",
+          "ideas": {
+            "1": {
+              "title": "Press 'F' to expand or collapse nodes",
+              "id": "348.368b3f5d58d5ce4c"
+            }
+          },
+          "attr": {
+            "style": {
+              "background": "#993300"
+            },
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "RxJS.presentation"
+}

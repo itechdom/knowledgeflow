@@ -1,0 +1,232 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Data Science",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "3": {
+          "title": "Concepts",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Cluster management",
+              "id": 10
+            },
+            "2": {
+              "title": "Master and workers",
+              "id": 11
+            },
+            "3": {
+              "title": "Data frames",
+              "id": 12
+            },
+            "0.5": {
+              "title": "Definition",
+              "id": "17.70d0303682b67e49",
+              "ideas": {
+                "1": {
+                  "title": "Related to Knowledge Discovery?",
+                  "id": "20.70d0303682b67e49",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Data_mining#Process",
+                      "id": "21.70d0303682b67e49"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Extracting knowledge and insights from Data",
+                  "id": "22.70d0303682b67e49"
+                },
+                "3": {
+                  "title": "Related Fields",
+                  "id": "23.70d0303682b67e49",
+                  "ideas": {
+                    "1": {
+                      "title": "Statistics",
+                      "id": "24.70d0303682b67e49"
+                    },
+                    "2": {
+                      "title": "in particular from the subdomains of machine learning, classification, cluster analysis, data mining, databases, and visualization.",
+                      "id": "26.70d0303682b67e49"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Data deluge",
+                  "id": "27.70d0303682b67e49"
+                },
+                "5": {
+                  "title": "Process",
+                  "id": "28.70d0303682b67e49",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Data_science#/media/File:Data_visualization_process_v1.png",
+                      "id": "29.70d0303682b67e49"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Publications",
+                  "id": "32.70d0303682b67e49",
+                  "ideas": {
+                    "1": {
+                      "title": "In April 2002, the International Council for Science: Committee on Data for Science and Technology (CODATA)",
+                      "id": "33.70d0303682b67e49"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Roles of a Data Scientist",
+                  "id": "36.70d0303682b67e49",
+                  "attr": {
+                    "note": {
+                      "index": 15,
+                      "text": "Data scientists use their data and analytical ability to find and interpret rich data sources; manage large amounts of data despite hardware, software, and bandwidth constraints; merge data sources; ensure consistency of datasets; create visualizations to aid in understanding data; build mathematical models using the data; and present and communicate the data insights/findings. They are often expected to produce answers in days rather than months, work by exploratory analysis and rapid iteration, and to produce and present results with dashboards (displays of current values) rather than papers/reports, as statisticians normally do.[23]"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.75": {
+              "title": "History",
+              "id": "34.70d0303682b67e49",
+              "ideas": {}
+            }
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "Third party",
+              "id": 8,
+              "ideas": {
+                "1": {
+                  "title": "Spark",
+                  "id": 2,
+                  "ideas": {
+                    "1": {
+                      "title": "http://vid.plus/2STfulBcorA",
+                      "id": 3,
+                      "ideas": {
+                        "1": {
+                          "title": "lecture",
+                          "id": 14
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "http://spark.apache.org/",
+                      "id": 6,
+                      "ideas": {
+                        "1": {
+                          "title": "main website",
+                          "id": 13
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Hadoop",
+                  "id": 4,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Corpora",
+              "id": "15.349141df8777723f",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/dariusk/corpora",
+                  "id": "16.349141df8777723f"
+                }
+              }
+            },
+            "3": {
+              "title": "Wikipedia",
+              "id": "18.70d0303682b67e49",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Data_science",
+                  "id": "19.70d0303682b67e49"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Good Books",
+              "id": "30.70d0303682b67e49",
+              "ideas": {
+                "1": {
+                  "title": "http://shop.oreilly.com/product/0636920028529.do#PowerReview",
+                  "id": "31.70d0303682b67e49"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Tutorials",
+              "id": "37.70d0303682b67e49",
+              "ideas": {}
+            },
+            "6": {
+              "title": "Courses",
+              "id": "39.70d0303682b67e49"
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Data Science"
+}

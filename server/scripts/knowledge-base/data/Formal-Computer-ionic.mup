@@ -1,0 +1,38 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "ionic",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.352dae35cf47103c"
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.352dae35cf47103c",
+          "ideas": {
+            "1": {
+              "title": "Mindmaps",
+              "id": "4.352dae35cf47103c",
+              "ideas": {
+                "1": {
+                  "title": "Angular",
+                  "id": "5.352dae35cf47103c"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "ionic"
+}

@@ -1,0 +1,70 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Spring",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.6cff5b0875f217ea",
+          "ideas": {
+            "1": {
+              "title": "beans",
+              "id": "5.13500c64cec130e",
+              "ideas": {
+                "1": {
+                  "title": "encapsulates many objects into a single one. They have zero arguments and setters and getters",
+                  "id": "6.13500c64cec130e"
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "7.13500c64cec130e",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/JavaBeans",
+                      "id": "8.13500c64cec130e"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Can be controlled by external application",
+                  "id": "9.13500c64cec130e"
+                },
+                "4": {
+                  "title": "It's almost an object that provides easy access to properties",
+                  "id": "10.13500c64cec130e",
+                  "ideas": {
+                    "1": {
+                      "title": "http://stackoverflow.com/questions/3295496/what-is-a-javabean-exactly",
+                      "id": "11.13500c64cec130e"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Annotations",
+              "id": "12.62c0826bc96f42d2"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.6cff5b0875f217ea",
+          "ideas": {
+            "1": {
+              "title": "https://projects.spring.io/spring-framework/",
+              "id": "4.6cff5b0875f217ea"
+            }
+          }
+        }
+      }
+    }
+  },
+  "title": "Spring"
+}

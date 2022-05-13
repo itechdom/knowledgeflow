@@ -1,0 +1,1684 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "mindmaps",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.642aa6e9ba941975",
+          "ideas": {
+            "1": {
+              "title": "Implementations",
+              "id": "3.642aa6e9ba941975",
+              "ideas": {
+                "5": {
+                  "title": "Imperative",
+                  "id": "258.7a99ec64f4b8741b",
+                  "ideas": {
+                    "1": {
+                      "title": "Canvas",
+                      "id": "13.7aab08a8b5ee1fd4",
+                      "ideas": {
+                        "2": {
+                          "title": "The logic is",
+                          "id": "18.7aab08a8b5ee1fd4",
+                          "ideas": {
+                            "4": {
+                              "title": "Do a recursion over the tree",
+                              "id": "32.7aab08a8b5ee1fd4",
+                              "ideas": {
+                                "1": {
+                                  "title": "if the node has siblings",
+                                  "id": "22.7aab08a8b5ee1fd4",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "use the position and height of the sibling container",
+                                      "id": "25.7aab08a8b5ee1fd4",
+                                      "ideas": {}
+                                    }
+                                  },
+                                  "attr": {}
+                                },
+                                "2": {
+                                  "title": "else",
+                                  "id": "24.7aab08a8b5ee1fd4",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "display all nodes using this formula",
+                                      "id": "19.7aab08a8b5ee1fd4",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "The formula to display a list of nodes around a a parent",
+                                          "id": "15.7aab08a8b5ee1fd4",
+                                          "attr": {
+                                            "note": {
+                                              "index": 5,
+                                              "text": "we need to add an offset on both sides to cover when we move the elements up and down\nmaybe we can move the bounds out a little?"
+                                            }
+                                          },
+                                          "ideas": {}
+                                        }
+                                      },
+                                      "attr": {}
+                                    }
+                                  },
+                                  "attr": {}
+                                },
+                                "3": {
+                                  "title": "Don't forget to add any margins",
+                                  "id": "33.7aab08a8b5ee1fd4",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "VERTICAL_MARGIN",
+                                      "id": "34.7aab08a8b5ee1fd4"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "How can I center the child nodes?",
+                          "id": "51.7aab08a8b5ee1fd4",
+                          "attr": {
+                            "note": {
+                              "index": 10,
+                              "text": "//we need to add an offset on both sides to cover when we move the elements up and down\n\t\t\t\t//maybe we can move the bounds out a little?"
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "two solutions",
+                              "id": "52.7aab08a8b5ee1fd4",
+                              "ideas": {
+                                "1": {
+                                  "title": "to use the formula",
+                                  "id": "53.7aab08a8b5ee1fd4",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "that results in a bug with the lines",
+                                      "id": "54.7aab08a8b5ee1fd4"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "Source Code",
+                          "id": "200.4e545a5d1deba61b",
+                          "ideas": {
+                            "1": {
+                              "title": "Resources",
+                              "id": "201.4e545a5d1deba61b",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://github.com/itechdom/itechdom-blog/tree/mindmap/app/client/components/mindmap",
+                                  "id": "202.4e545a5d1deba61b"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "Concepts",
+                              "id": "204.4e545a5d1deba61b",
+                              "ideas": {
+                                "1": {
+                                  "title": "Imports",
+                                  "id": "205.4e545a5d1deba61b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "var $ = require('jquery');",
+                                      "id": "206.4e545a5d1deba61b"
+                                    },
+                                    "2": {
+                                      "title": "var PIXI = require('pixi.js');",
+                                      "id": "207.4e545a5d1deba61b",
+                                      "attr": {
+                                        "style": {
+                                          "width": 188
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "2": {
+                                  "title": "Consts",
+                                  "id": "208.4e545a5d1deba61b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "const VERTICAL_MARGIN = 40;",
+                                      "id": "209.4e545a5d1deba61b",
+                                      "attr": {
+                                        "style": {
+                                          "width": 200
+                                        }
+                                      }
+                                    },
+                                    "2": {
+                                      "title": "const HORINZONTAL_MARGIN = 100",
+                                      "id": "210.4e545a5d1deba61b",
+                                      "attr": {
+                                        "style": {
+                                          "width": 200
+                                        }
+                                      }
+                                    },
+                                    "3": {
+                                      "title": "const BOX_HEIGHT = 22;",
+                                      "id": "211.4e545a5d1deba61b",
+                                      "attr": {
+                                        "style": {
+                                          "width": 195
+                                        }
+                                      }
+                                    },
+                                    "4": {
+                                      "title": "const TEXT_MARGIN = 20;",
+                                      "id": "212.4e545a5d1deba61b",
+                                      "attr": {
+                                        "style": {
+                                          "width": 193
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "3": {
+                                  "title": "Class mindmapView",
+                                  "id": "213.4e545a5d1deba61b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Methods",
+                                      "id": "214.4e545a5d1deba61b",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "createText(text)",
+                                          "id": "218.4e545a5d1deba61b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "createTextStyle()",
+                                              "id": "220.4e545a5d1deba61b"
+                                            },
+                                            "2": {
+                                              "title": "var basicText = new PIXI.text(text,style)",
+                                              "id": "222.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 284
+                                                }
+                                              }
+                                            },
+                                            "3": {
+                                              "title": "basicText.x = 0",
+                                              "id": "223.4e545a5d1deba61b"
+                                            },
+                                            "4": {
+                                              "title": "basicText.y = 0",
+                                              "id": "224.4e545a5d1deba61b"
+                                            },
+                                            "5": {
+                                              "title": "return basicText",
+                                              "id": "225.4e545a5d1deba61b"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "2": {
+                                          "title": "createLine(position1,position2)",
+                                          "id": "226.4e545a5d1deba61b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "var line = new PIXI.Graphics()",
+                                              "id": "227.4e545a5d1deba61b"
+                                            },
+                                            "2": {
+                                              "title": "line.lineStyle(1,0x000FF,1);",
+                                              "id": "228.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 199
+                                                }
+                                              }
+                                            },
+                                            "3": {
+                                              "title": "line.moveTo(position1.x,position1.y)",
+                                              "id": "229.4e545a5d1deba61b"
+                                            },
+                                            "4": {
+                                              "title": "line.lineTo(position2.x,position2.y)",
+                                              "id": "230.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 238
+                                                }
+                                              }
+                                            },
+                                            "5": {
+                                              "title": "line.endFill();",
+                                              "id": "231.4e545a5d1deba61b"
+                                            },
+                                            "6": {
+                                              "title": "return line;",
+                                              "id": "232.4e545a5d1deba61b"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "3": {
+                                          "title": "createBox()",
+                                          "id": "233.4e545a5d1deba61b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "var shadowFilter = new PIXI.filters.DropShadowFilter()",
+                                              "id": "234.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 347
+                                                }
+                                              }
+                                            },
+                                            "2": {
+                                              "title": "var box = new PIXI.graphics()",
+                                              "id": "235.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 230
+                                                }
+                                              }
+                                            },
+                                            "3": {
+                                              "title": "box.lineStyle(2,0x000000,1)",
+                                              "id": "236.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 243
+                                                }
+                                              }
+                                            },
+                                            "4": {
+                                              "title": "box.beginFill(0xFFFFFF,1)",
+                                              "id": "237.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 241
+                                                }
+                                              }
+                                            },
+                                            "5": {
+                                              "title": "box.drawRect(0,0,80,50)",
+                                              "id": "238.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 249
+                                                }
+                                              }
+                                            },
+                                            "6": {
+                                              "title": "return box;",
+                                              "id": "239.4e545a5d1deba61b"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "4": {
+                                          "title": "traverse(mindmap,processFunction,parent)",
+                                          "id": "240.4e545a5d1deba61b",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "var obj;",
+                                              "id": "241.4e545a5d1deba61b"
+                                            },
+                                            "2": {
+                                              "title": "var count = 0;",
+                                              "id": "242.4e545a5d1deba61b"
+                                            },
+                                            "3": {
+                                              "title": "loop over mindmap",
+                                              "id": "244.4e545a5d1deba61b",
+                                              "attr": {
+                                                "note": {
+                                                  "index": 61,
+                                                  "text": "for(var key in mindmap){\n\t\t\tobj = mindmap[key];\n\t\t\tobj.order = count;\n\t\t\tprocessFunction(obj,key,parent);\n\t\t\tthis.traverse(obj.ideas,processFunction,obj);\n\t\t\tcount++;\n\t\t}"
+                                                }
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "5": {
+                                          "title": "drawLine(childContainer, parentContainer, childBox, parentBox)",
+                                          "id": "245.4e545a5d1deba61b",
+                                          "attr": {
+                                            "style": {
+                                              "width": 412
+                                            },
+                                            "note": {
+                                              "index": 62,
+                                              "text": "var line;\n\t\t//delete the line if it already exists\n\t\tif(line){\n\t\t\tthis.stage.removeChild(line);\n\t\t}\n\t\t//FIX: for a quirk in pixi.js container coordinates\n\t\tif(childContainer.toGlobal(this.stage.position).y === 0){\n\t\t\tvar childBoxPosition = childContainer.toGlobal(this.rootContainer.position);\n\t\t\tvar parentBoxPosition = parentContainer.toGlobal(this.stage.position);\n\t\t}\n\t\telse{\n\t\t\tvar childBoxPosition = childContainer.toGlobal(this.stage.position);\n\t\t\tvar parentBoxPosition = parentContainer.toGlobal(this.stage.position);\n\t\t}\n\n\t\tchildBoxPosition.x += childBox.x;\n\t\tchildBoxPosition.y += childBox.y;\n\t\tparentBoxPosition.x += parentBox.x;\n\t\tparentBoxPosition.y += parentBox.y;\n\n\t\tline = this.createLine(childBoxPosition,parentBoxPosition);\n\t\tthis.stage.addChild(line);\n\t\treturn line;"
+                                            },
+                                            "collapsed": true
+                                          },
+                                          "ideas": {
+                                            "1": {
+                                              "title": "childContainer.toGlobal here",
+                                              "id": "246.4e545a5d1deba61b",
+                                              "attr": {
+                                                "style": {
+                                                  "width": 186
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "6": {
+                                          "title": "update(node)",
+                                          "id": "247.4e545a5d1deba61b",
+                                          "attr": {
+                                            "note": {
+                                              "index": 64,
+                                              "text": "update(node){\n\t\tvar obj;\n\t\tvar parent = node.obj;\n\t\t//change children\n\t\tfor (var key in node.obj.ideas){\n\t\t\tobj = node.obj.ideas[key];\n\t\t\tif(parent.line){\n\t\t\t\tthis.drawLine(obj.mainContainer,parent.mainContainer,obj.line);\n\t\t\t}\n\t\t\tobj.box.x = obj.box.x + 3;\n\t\t};\n\t}"
+                                            }
+                                          }
+                                        },
+                                        "7": {
+                                          "title": "render(tree)",
+                                          "id": "248.4e545a5d1deba61b",
+                                          "attr": {
+                                            "note": {
+                                              "index": 65,
+                                              "text": "render(tree){\n\n\t\tthis.tree = tree;\n\t\tvar x,y;\n\t\tvar length;\n\t\tvar mainContainer;\n\t\tvar box;\n\t\tvar sText;\n\t\tvar text;\n\t\tvar sibling;\n\t\tvar siblingHeight = 0;\n\t\tvar arrangement;\n\t\tvar debugRect;\n\t\tthis.currentHeight = 0;\n\t\tvar gPosition = {y:0};\n\t\tvar line;\n\t\tvar that = this;\n\t\tthis.traverse(tree,(mindmapObj,key,parent)=&amp;gt;{\n\n\t\t\tbox = this.createBox();\n\t\t\tbox.interactive = true;\n\t\t\tmainContainer = new PIXI.Container();\n\t\t\tdebugRect = new PIXI.Graphics();\n\n\t\t\tmindmapObj.mainContainer = mainContainer;\n\t\t\tmindmapObj.box = box;\n\n\t\t\tsText = mindmapObj.title.slice(0,10);\n\t\t\ttext = this.createText(sText);\n\t\t\tif(text.width &amp;gt; box.width){\n\t\t\t\tbox.width = text.width;\n\t\t\t}\n\t\t\telse{\n\t\t\t\ttext.y += 10\n\t\t\t}\n\t\t\t//store a reference to the object here to be used when updating the object's position\n\t\t\tbox.obj = mindmapObj;\n\t\t\tbox.addChild(text);\n\t\t\tmainContainer.addChild(box);\n\n\t\t\t// events for drag start\n\t\t\tbox\n\t\t\t.on('mousedown', onDragStart)\n\t\t\t.on('touchstart', onDragStart)\n\t\t\t// events for drag end\n\t\t\t.on('mouseup', onDragEnd)\n\t\t\t.on('mouseupoutside', onDragEnd)\n\t\t\t.on('touchend', onDragEnd)\n\t\t\t.on('touchendoutside', onDragEnd)\n\t\t\t// events for drag move\n\t\t\t.on('mousemove', onDragMove)\n\t\t\t.on('touchmove', onDragMove);\n\n\t\t\tif(parent){\n\t\t\t\t//we need to add an offset on both sides to cover when we move the elements up and down\n\t\t\t\t//maybe we can move the bounds out a little?\n\t\t\t\tparent.mainContainer.addChild(mainContainer);\n\t\t\t\t//get previous sibling\n\t\t\t\tvar count = 0;\n\t\t\t\tvar order;\n\t\t\t\tparent.ideasArr = [];\n\t\t\t\tObject.keys(parent.ideas).map((key,index)=&amp;gt;{\n\t\t\t\t\tparent.ideasArr.push(parent.ideas[key]);\n\t\t\t\t\tcount++;\n\t\t\t\t})\n\t\t\t\tsibling = parent.ideasArr[mindmapObj.order-1];\n\t\t\t\tlength = count;\n\t\t\t\tif(sibling){\n\t\t\t\t\tmainContainer.x += HORIZONTAL_MARGIN;\n\t\t\t\t\tmainContainer.y = sibling.mainContainer.y + sibling.mainContainer.height + VERTICAL_MARGIN ;\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tmainContainer.x += HORIZONTAL_MARGIN;\n\t\t\t\t\t//mainContainer.y -= ((-1 * Math.floor(length/2)) + mindmapObj.order);\n\t\t\t\t}\n\t\t\t\t//for debugging\n\t\t\t\tif(mindmapObj.title.indexOf(\"Concepts\") !== -1){\n\t\t\t\t}\n\t\t\t\t//drawLine\n\t\t\t\tvar po = box.toLocal(mainContainer.position);\n\t\t\t\tthis.drawLine(mainContainer,parent.mainContainer,box,parent.box);\n\t\t\t\tmindmapObj.line = line;\n\t\t\t}\n\t\t\telse{\n\t\t\t\tthis.rootContainer.addChild(mainContainer);\n\t\t\t}\n\t\t})\n\t\tfunction onDragStart(event)\n\t\t{\n\t\t\t// store a reference to the data\n\t\t\t// the reason for this is because of multitouch\n\t\t\t// we want to track the movement of this particular touch\n\t\t\tthis.data = event.data;\n\t\t\tthis.alpha = 0.5;\n\t\t\tthis.dragging = true;\n\t\t}\n\n\t\tfunction onDragEnd()\n\t\t{\n\t\t\tthis.alpha = 1;\n\t\t\tthis.dragging = false;\n\t\t\t// set the interaction data to null\n\t\t\tthis.data = null;\n\t\t\t//rerender the tree;\n\t\t\tthat.update(this);\n\t\t\t//save the new tree\n\t\t}\n\t\tfunction onDragMove()\n\t\t{\n\t\t\tif (this.dragging)\n\t\t\t{\n\t\t\t\tvar newPosition = this.data.getLocalPosition(this.parent);\n\t\t\t\tthis.position.x = newPosition.x;\n\t\t\t\tthis.position.y = newPosition.y;\n\t\t\t}\n\t\t}\n\t}"
+                                            }
+                                          },
+                                          "ideas": {}
+                                        },
+                                        "8": {
+                                          "title": "constructor",
+                                          "id": "250.4e545a5d1deba61b",
+                                          "attr": {
+                                            "note": {
+                                              "index": 66,
+                                              "text": "constructor() {\n\n\t\tthis.renderer = PIXI.autoDetectRenderer(4000, 4000, { antialias: true });\n\t\tthis.renderer.autoResize = true;\n\t\tthis.renderer.backgroundColor = 0x00BFFF;\n\n\t\t$('app').append(this.renderer.view);\n\n\t\tthis.stage = new PIXI.Container();\n\t\tthis.rootContainer = new PIXI.Container();\n\t\tthis.stage.interactive = true;\n\n\t\t//add a container to the center of the screen\n\t\tthis.rootContainer.x = this.renderer.width /3;\n\t\tthis.rootContainer.y = this.renderer.height / 6;\n\n\t\tthis.stage.addChild(this.rootContainer);\n\n\t\tthis.renderer.render(this.stage);\n\n\t\trequestAnimationFrame( animate );\n\t\tvar that = this;\n\n\t\tfunction animate() {\n\t\t\trequestAnimationFrame(animate);\n\t\t\tthat.renderer.render(that.stage);\n\t\t}\n\t}\n}"
+                                            },
+                                            "collapsed": true
+                                          },
+                                          "ideas": {
+                                            "1": {
+                                              "title": "how can I make the size flexible to the elements",
+                                              "id": "251.4e545a5d1deba61b"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "4": {
+                                  "title": "module.exports = new mindmapView();",
+                                  "id": "217.4e545a5d1deba61b"
+                                },
+                                "5": {
+                                  "title": "Improvements",
+                                  "id": "254.4e545a5d1deba61b",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "I need to define a better way to manage parent child in Pixi.js",
+                                      "id": "255.4e545a5d1deba61b"
+                                    },
+                                    "2": {
+                                      "title": "also organize your object hirarachy better",
+                                      "id": "256.4e545a5d1deba61b"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "note": {
+                              "index": 24,
+                              "text": "'use strict';\nvar $ = require('jquery');\nvar PIXI = require('pixi.js');\n\nconst VERTICAL_MARGIN = 40;\nconst HORIZONTAL_MARGIN = 100;\nconst BOX_HEIGHT = 22;\nconst TEXT_MARGIN = 20;\n\n//have a running height of the container\n\nclass mindmapView {\n\n\tcreateText(text){\n\t\tvar style = this.createTextStyle();\n\t\tvar basicText = new PIXI.Text(text,style);\n\t\tbasicText.x = 0;\n\t\tbasicText.y = 0;\n\t\treturn basicText;\n\t}\n\tcreateLine(position1,position2){\n\t\tvar line = new PIXI.Graphics();\n\t\tline.lineStyle(1, 0x0000FF, 1);\n\t\tline.moveTo(position1.x, position1.y);\n\t\tline.lineTo(position2.x, position2.y);\n\t\tline.endFill();\n\t\treturn line;\n\t}\n\tcreateTextStyle(){\n\t\tvar style = {\n\t\t\tfont : '16px Arial',\n\t\t\tfill : '#000000',\n\t\t\twordWrap : true,\n\t\t\twordWrapWidth : 50\n\t\t};\n\t\treturn style;\n\t}\n\tcreateBox(){\n\t\tvar shadowFilter = new PIXI.filters.DropShadowFilter();\n\t\tvar box = new PIXI.Graphics();\n\t\tbox.lineStyle(2, 0x000000, 1);\n\t\tbox.beginFill(0xFFFFFF, 1);\n\t\tbox.drawRect(0, 0, 80, 50);\n\t\treturn box;\n\t}\n\ttraverse(mindmap,processFunction,parent){\n\t\tvar obj;\n\t\tvar count = 0;\n\t\t//return upper sibling and below sibling\n\t\tfor(var key in mindmap){\n\t\t\tobj = mindmap[key];\n\t\t\tobj.order = count;\n\t\t\tprocessFunction(obj,key,parent);\n\t\t\tthis.traverse(obj.ideas,processFunction,obj);\n\t\t\tcount++;\n\t\t}\n\t}\n\tdrawLine(childContainer,parentContainer,childBox,parentBox){\n\t\tvar line;\n\t\t//delete the line if it already exists\n\t\tif(line){\n\t\t\tthis.stage.removeChild(line);\n\t\t}\n\t\t//FIX: for a quirk in pixi.js container coordinates\n\t\tif(childContainer.toGlobal(this.stage.position).y === 0){\n\t\t\tvar childBoxPosition = childContainer.toGlobal(this.rootContainer.position);\n\t\t\tvar parentBoxPosition = parentContainer.toGlobal(this.stage.position);\n\t\t}\n\t\telse{\n\t\t\tvar childBoxPosition = childContainer.toGlobal(this.stage.position);\n\t\t\tvar parentBoxPosition = parentContainer.toGlobal(this.stage.position);\n\t\t}\n\n\t\tchildBoxPosition.x += childBox.x;\n\t\tchildBoxPosition.y += childBox.y;\n\t\tparentBoxPosition.x += parentBox.x;\n\t\tparentBoxPosition.y += parentBox.y;\n\n\t\tline = this.createLine(childBoxPosition,parentBoxPosition);\n\t\tthis.stage.addChild(line);\n\t\treturn line;\n\t}\n\tupdate(node){\n\t\tvar obj;\n\t\tvar parent = node.obj;\n\t\t//change children\n\t\tfor (var key in node.obj.ideas){\n\t\t\tobj = node.obj.ideas[key];\n\t\t\tif(parent.line){\n\t\t\t\tthis.drawLine(obj.mainContainer,parent.mainContainer,obj.line);\n\t\t\t}\n\t\t\tobj.box.x = obj.box.x + 3;\n\t\t};\n\t}\n\trender(tree){\n\n\t\tthis.tree = tree;\n\t\tvar x,y;\n\t\tvar length;\n\t\tvar mainContainer;\n\t\tvar box;\n\t\tvar sText;\n\t\tvar text;\n\t\tvar sibling;\n\t\tvar siblingHeight = 0;\n\t\tvar arrangement;\n\t\tvar debugRect;\n\t\tthis.currentHeight = 0;\n\t\tvar gPosition = {y:0};\n\t\tvar line;\n\t\tvar that = this;\n\t\tthis.traverse(tree,(mindmapObj,key,parent)=>{\n\n\t\t\tbox = this.createBox();\n\t\t\tbox.interactive = true;\n\t\t\tmainContainer = new PIXI.Container();\n\t\t\tdebugRect = new PIXI.Graphics();\n\n\t\t\tmindmapObj.mainContainer = mainContainer;\n\t\t\tmindmapObj.box = box;\n\n\t\t\tsText = mindmapObj.title.slice(0,10);\n\t\t\ttext = this.createText(sText);\n\t\t\tif(text.width > box.width){\n\t\t\t\tbox.width = text.width;\n\t\t\t}\n\t\t\telse{\n\t\t\t\ttext.y += 10\n\t\t\t}\n\t\t\t//store a reference to the object here to be used when updating the object's position\n\t\t\tbox.obj = mindmapObj;\n\t\t\tbox.addChild(text);\n\t\t\tmainContainer.addChild(box);\n\n\t\t\t// events for drag start\n\t\t\tbox\n\t\t\t.on('mousedown', onDragStart)\n\t\t\t.on('touchstart', onDragStart)\n\t\t\t// events for drag end\n\t\t\t.on('mouseup', onDragEnd)\n\t\t\t.on('mouseupoutside', onDragEnd)\n\t\t\t.on('touchend', onDragEnd)\n\t\t\t.on('touchendoutside', onDragEnd)\n\t\t\t// events for drag move\n\t\t\t.on('mousemove', onDragMove)\n\t\t\t.on('touchmove', onDragMove);\n\n\t\t\tif(parent){\n\t\t\t\t//we need to add an offset on both sides to cover when we move the elements up and down\n\t\t\t\t//maybe we can move the bounds out a little?\n\t\t\t\tparent.mainContainer.addChild(mainContainer);\n\t\t\t\t//get previous sibling\n\t\t\t\tvar count = 0;\n\t\t\t\tvar order;\n\t\t\t\tparent.ideasArr = [];\n\t\t\t\tObject.keys(parent.ideas).map((key,index)=>{\n\t\t\t\t\tparent.ideasArr.push(parent.ideas[key]);\n\t\t\t\t\tcount++;\n\t\t\t\t})\n\t\t\t\tsibling = parent.ideasArr[mindmapObj.order-1];\n\t\t\t\tlength = count;\n\t\t\t\tif(sibling){\n\t\t\t\t\tmainContainer.x += HORIZONTAL_MARGIN;\n\t\t\t\t\tmainContainer.y = sibling.mainContainer.y + sibling.mainContainer.height + VERTICAL_MARGIN ;\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tmainContainer.x += HORIZONTAL_MARGIN;\n\t\t\t\t\t//mainContainer.y -= ((-1 * Math.floor(length/2)) + mindmapObj.order);\n\t\t\t\t}\n\t\t\t\t//for debugging\n\t\t\t\tif(mindmapObj.title.indexOf(\"Concepts\") !== -1){\n\t\t\t\t}\n\t\t\t\t//drawLine\n\t\t\t\tvar po = box.toLocal(mainContainer.position);\n\t\t\t\tthis.drawLine(mainContainer,parent.mainContainer,box,parent.box);\n\t\t\t\tmindmapObj.line = line;\n\t\t\t}\n\t\t\telse{\n\t\t\t\tthis.rootContainer.addChild(mainContainer);\n\t\t\t}\n\t\t})\n\t\tfunction onDragStart(event)\n\t\t{\n\t\t\t// store a reference to the data\n\t\t\t// the reason for this is because of multitouch\n\t\t\t// we want to track the movement of this particular touch\n\t\t\tthis.data = event.data;\n\t\t\tthis.alpha = 0.5;\n\t\t\tthis.dragging = true;\n\t\t}\n\n\t\tfunction onDragEnd()\n\t\t{\n\t\t\tthis.alpha = 1;\n\t\t\tthis.dragging = false;\n\t\t\t// set the interaction data to null\n\t\t\tthis.data = null;\n\t\t\t//rerender the tree;\n\t\t\tthat.update(this);\n\t\t\t//save the new tree\n\t\t}\n\t\tfunction onDragMove()\n\t\t{\n\t\t\tif (this.dragging)\n\t\t\t{\n\t\t\t\tvar newPosition = this.data.getLocalPosition(this.parent);\n\t\t\t\tthis.position.x = newPosition.x;\n\t\t\t\tthis.position.y = newPosition.y;\n\t\t\t}\n\t\t}\n\t}\n\tconstructor() {\n\n\t\tthis.renderer = PIXI.autoDetectRenderer(4000, 4000, { antialias: true });\n\t\tthis.renderer.autoResize = true;\n\t\tthis.renderer.backgroundColor = 0x00BFFF;\n\n\t\t$('app').append(this.renderer.view);\n\n\t\tthis.stage = new PIXI.Container();\n\t\tthis.rootContainer = new PIXI.Container();\n\t\tthis.stage.interactive = true;\n\n\t\t//add a container to the center of the screen\n\t\tthis.rootContainer.x = this.renderer.width /3;\n\t\tthis.rootContainer.y = this.renderer.height / 6;\n\n\t\tthis.stage.addChild(this.rootContainer);\n\n\t\tthis.renderer.render(this.stage);\n\n\t\trequestAnimationFrame( animate );\n\t\tvar that = this;\n\n\t\tfunction animate() {\n\t\t\trequestAnimationFrame(animate);\n\t\t\tthat.renderer.render(that.stage);\n\t\t}\n\t}\n}\nmodule.exports = new mindmapView();"
+                            },
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "DOM",
+                      "id": "17.7aab08a8b5ee1fd4",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Functional",
+                  "id": "259.7a99ec64f4b8741b",
+                  "ideas": {
+                    "2": {
+                      "title": "React",
+                      "id": "273.7a99ec64f4b8741b",
+                      "ideas": {
+                        "1": {
+                          "title": "Archeticture",
+                          "attr": {
+                            "style": {}
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "React-Redux",
+                              "attr": {
+                                "style": {}
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "going to start with no stores, just passing data to the component",
+                                  "id": "262.7a99ec64f4b8741b"
+                                }
+                              },
+                              "id": "261.7a99ec64f4b8741b"
+                            },
+                            "2": {
+                              "title": "Components",
+                              "ideas": {
+                                "1": {
+                                  "title": "Board",
+                                  "ideas": {},
+                                  "id": "264.7a99ec64f4b8741b"
+                                },
+                                "2": {
+                                  "title": "Menu",
+                                  "id": "265.7a99ec64f4b8741b"
+                                },
+                                "3": {
+                                  "title": "Tree",
+                                  "attr": {
+                                    "style": {},
+                                    "attachment": {
+                                      "contentType": "text/html",
+                                      "content": "<span style=\"color: rgb(79, 79, 79); font-family: Helvetica, &quot;Arial Unicode MS&quot;, sans-serif; font-size: 12px; font-weight: bold; line-height: 18px; text-align: center; white-space: pre-wrap; background-color: rgb(224, 224, 224);\">any parent node contains its children and is resposible for the space between it and its neighbors</span>"
+                                    }
+                                  },
+                                  "ideas": {},
+                                  "id": "266.7a99ec64f4b8741b"
+                                },
+                                "4": {
+                                  "title": "Connections",
+                                  "id": "290.1093fd3131b52abb",
+                                  "ideas": {
+                                    "4": {
+                                      "title": "Example 1",
+                                      "id": "297.1093fd3131b52abb",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Parent Node",
+                                          "id": "292.1093fd3131b52abb",
+                                          "ideas": {},
+                                          "attr": {
+                                            "note": {
+                                              "index": 84,
+                                              "text": "display: block;\n    position: absolute;\n    left: 128px;\n    top: -38px;"
+                                            }
+                                          }
+                                        },
+                                        "2": {
+                                          "title": "Child Node",
+                                          "id": "294.1093fd3131b52abb",
+                                          "attr": {
+                                            "note": {
+                                              "index": 85,
+                                              "text": "display: block;\n    position: absolute;\n    left: 209px;\n    top: -62px;"
+                                            }
+                                          }
+                                        },
+                                        "3": {
+                                          "title": "PATH",
+                                          "id": "295.1093fd3131b52abb",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Same as the parent's top and left",
+                                              "id": "298.1093fd3131b52abb"
+                                            }
+                                          },
+                                          "attr": {
+                                            "note": {
+                                              "index": 86,
+                                              "text": "left: 128px;\n    top: -62px;\n    width: 135px;\n    height: 54px;"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    },
+                                    "5": {
+                                      "title": "we have to draw a box that contains the parent and child box in one box",
+                                      "id": "300.1093fd3131b52abb",
+                                      "ideas": {
+                                        "1": {
+                                          "title": "Provided",
+                                          "id": "301.1093fd3131b52abb",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "Box Width and Height for both the parent and child",
+                                              "id": "303.1093fd3131b52abb"
+                                            },
+                                            "2": {
+                                              "title": "we have to calculate the distance between the two to calculate the width between them",
+                                              "id": "304.1093fd3131b52abb"
+                                            },
+                                            "3": {
+                                              "title": "we add up any x or y changes to the height",
+                                              "id": "305.1093fd3131b52abb"
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        },
+                                        "2": {
+                                          "title": "I think",
+                                          "id": "307.1093fd3131b52abb",
+                                          "ideas": {
+                                            "1": {
+                                              "title": "bottom right coordinates",
+                                              "id": "308.1093fd3131b52abb"
+                                            },
+                                            "2": {
+                                              "title": "what do we need to draw a box",
+                                              "id": "309.1093fd3131b52abb",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "x,y of origin",
+                                                  "id": "310.1093fd3131b52abb"
+                                                },
+                                                "2": {
+                                                  "title": "x,y of end",
+                                                  "id": "311.1093fd3131b52abb"
+                                                },
+                                                "4": {
+                                                  "title": "it starts the same as the parent",
+                                                  "id": "313.1093fd3131b52abb",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "and continues to till the child's bottom right coordinate",
+                                                      "id": "315.1093fd3131b52abb",
+                                                      "ideas": {
+                                                        "1": {
+                                                          "title": "which is ",
+                                                          "id": "316.1093fd3131b52abb"
+                                                        },
+                                                        "2": {
+                                                          "title": "Box Width and Height + position",
+                                                          "id": "317.1093fd3131b52abb"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                "14": {
+                                                  "title": "drawReact according to coordinates",
+                                                  "id": "312.1093fd3131b52abb"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            },
+                                            "6": {
+                                              "title": "to get the containing box's width",
+                                              "id": "324.1093fd3131b52abb",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "take parent's location",
+                                                  "id": "319.1093fd3131b52abb",
+                                                  "attr": {}
+                                                },
+                                                "2": {
+                                                  "title": "add the child's width",
+                                                  "id": "321.1093fd3131b52abb",
+                                                  "ideas": {
+                                                    "1": {
+                                                      "title": "you will get the width",
+                                                      "id": "322.1093fd3131b52abb"
+                                                    }
+                                                  },
+                                                  "attr": {}
+                                                },
+                                                "1.5": {
+                                                  "title": "subtract it from child's location",
+                                                  "id": "320.1093fd3131b52abb",
+                                                  "attr": {}
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            },
+                                            "7": {
+                                              "title": "to get the containing box height",
+                                              "id": "325.1093fd3131b52abb",
+                                              "ideas": {
+                                                "1": {
+                                                  "title": "parent's height",
+                                                  "id": "327.1093fd3131b52abb"
+                                                }
+                                              },
+                                              "attr": {
+                                                "collapsed": true
+                                              }
+                                            }
+                                          },
+                                          "attr": {
+                                            "collapsed": true
+                                          }
+                                        }
+                                      },
+                                      "attr": {
+                                        "collapsed": true
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                },
+                                "5": {
+                                  "title": "Node",
+                                  "id": "291.1093fd3131b52abb"
+                                }
+                              },
+                              "id": "263.7a99ec64f4b8741b"
+                            },
+                            "3": {
+                              "title": "Source Code",
+                              "attr": {
+                                "style": {}
+                              },
+                              "ideas": {
+                                "1": {
+                                  "title": "src",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "Renderer separate to support multiple sources DOM, WebGL, Mobile ",
+                                      "attr": {
+                                        "style": {}
+                                      },
+                                      "id": "272.7a99ec64f4b8741b"
+                                    }
+                                  },
+                                  "id": "271.7a99ec64f4b8741b"
+                                }
+                              },
+                              "id": "270.7a99ec64f4b8741b"
+                            }
+                          },
+                          "id": "260.7a99ec64f4b8741b"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Graph Drawing",
+                  "id": "275.305282b2a8e210c0",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Graph_drawing",
+                      "id": "276.305282b2a8e210c0"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Types",
+              "id": "67.423bf63b3f213807",
+              "ideas": {
+                "1": {
+                  "title": "Sequencing",
+                  "id": "68.423bf63b3f213807"
+                },
+                "2": {
+                  "title": "Compare and contrast",
+                  "id": "70.423bf63b3f213807"
+                },
+                "4": {
+                  "title": "Categorization",
+                  "id": "74.423bf63b3f213807"
+                },
+                "5": {
+                  "title": "Relationship",
+                  "id": "75.423bf63b3f213807"
+                },
+                "15": {
+                  "title": "Resource",
+                  "id": "71.423bf63b3f213807",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=Pd75FtRr9og",
+                      "id": "72.423bf63b3f213807"
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "An event or opinion",
+                  "id": "73.423bf63b3f213807"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "History",
+              "id": "159.48dcb3cab77182c3",
+              "ideas": {
+                "1": {
+                  "title": "Tony Buzan first proposed it",
+                  "id": "160.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "A tedx talk",
+                      "id": "187.48dcb3cab77182c3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=nMZCghZ1hB4",
+                          "id": "188.48dcb3cab77182c3"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "https://imindmap.com/",
+                      "id": "191.48dcb3cab77182c3",
+                      "ideas": {}
+                    },
+                    "3": {
+                      "title": "https://www.youtube.com/watch?v=QEokHNWf-Qg",
+                      "id": "198.48dcb3cab77182c3",
+                      "ideas": {
+                        "1": {
+                          "title": "a lecture about learning how to learn by tony buzan",
+                          "id": "199.48dcb3cab77182c3"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Based on Radiant thinking",
+                  "id": "136.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "which talks about how the brain works",
+                      "id": "137.48dcb3cab77182c3"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Who invented the mindmaps?",
+                  "id": "99.67c111abacc87fea",
+                  "ideas": {
+                    "1": {
+                      "title": "Santiago ",
+                      "id": "100.67c111abacc87fea",
+                      "ideas": {
+                        "1": {
+                          "title": "he was a neuroscientist and drew pictures of the way the brain is structured",
+                          "id": "101.67c111abacc87fea"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Why use mindmaps?",
+              "id": "161.48dcb3cab77182c3",
+              "attr": {
+                "note": {
+                  "index": 75,
+                  "text": "Ideas that are formulated are drawn in a radial manner and its purpose is to invoke both the creative and logical sides of the brain (Vidal 2004)"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "it's non-restricted thinking",
+                  "id": "162.48dcb3cab77182c3"
+                },
+                "2": {
+                  "title": "Dump all ideas on to the tool and wait for your brain to sort it out",
+                  "id": "163.48dcb3cab77182c3"
+                },
+                "3": {
+                  "title": "Widget based tools seem to affect the \"idea\" generation process",
+                  "id": "140.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "Goel 1995",
+                      "id": "141.48dcb3cab77182c3"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "To manage the manager",
+                  "id": "189.48dcb3cab77182c3"
+                }
+              }
+            },
+            "14": {
+              "title": "Application of mindmaps",
+              "id": "164.48dcb3cab77182c3",
+              "ideas": {
+                "1": {
+                  "title": "Note taking  •Learning/Studying •Problem solving •Planning •Teaching ",
+                  "id": "165.48dcb3cab77182c3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Research on Mindmaps",
+              "id": "166.48dcb3cab77182c3",
+              "ideas": {
+                "1": {
+                  "title": "was conducted on 60 medical students",
+                  "id": "168.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "students got 10 - 24 percent increase in retention",
+                      "id": "169.48dcb3cab77182c3"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Used by front range community college in their nursing program?",
+                  "id": "170.48dcb3cab77182c3"
+                },
+                "3": {
+                  "title": "Thorsten, Carsten et al. (2002)",
+                  "id": "171.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "conducted experiments on collaboration among students and concluded that ideas were generated more by mindmaps than any other tool",
+                      "id": "172.48dcb3cab77182c3"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "(Brinkman 2003) and that the user of mind-maps had aided them in organising information, allowing students to “see the structure of the respective mathematical knowledge”.",
+                  "id": "173.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "in teaching math",
+                      "id": "174.48dcb3cab77182c3"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Usual features",
+              "id": "177.48dcb3cab77182c3",
+              "attr": {
+                "note": {
+                  "index": 89,
+                  "text": "From these few popular examples of computer based mind-mapping tools, there are many similarities that they all share. For example the mind-mapping tools all possess the usual computer functionalities such as load, save, print, cut, copy, paste, undo, redo, spell check and search. In addition, they all allow a different view of the map, whereby users can view the map in a beautified tree structure. Lastly these applications all feature mind-map export in various formats (power point, PDF, word document, webpage and as an image)."
+                }
+              },
+              "ideas": {}
+            },
+            "17": {
+              "title": "The human language!!!!!!",
+              "id": "190.48dcb3cab77182c3"
+            },
+            "27": {
+              "title": "Layout Algorithms",
+              "id": "84.4584a617bdad3ac4",
+              "ideas": {
+                "1": {
+                  "title": "Radial Tree",
+                  "id": "85.4584a617bdad3ac4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Radial_tree",
+                      "id": "86.4584a617bdad3ac4"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Spicy Nodes",
+                  "id": "87.4584a617bdad3ac4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/SpicyNodes",
+                      "id": "88.4584a617bdad3ac4"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Types",
+                  "ideas": {
+                    "3": {
+                      "title": "Based on how nodes are drawn",
+                      "id": "66.423bf63b3f213807",
+                      "ideas": {
+                        "1": {
+                          "title": "Nodes are uniformed around their parent + move up and down based on sibling nodes",
+                          "ideas": {
+                            "1": {
+                              "title": "We always calculate the if the sibling nodes has children, what is their number? How does that affect the height?",
+                              "id": "10.642aa6e9ba941975"
+                            },
+                            "2": {
+                              "title": "similar to mindmup",
+                              "id": "102.3db99385294c1990"
+                            }
+                          },
+                          "id": "9.642aa6e9ba941975"
+                        },
+                        "2": {
+                          "title": "Nodes are drawn freely based on the empty space around them ",
+                          "ideas": {
+                            "1": {
+                              "title": "What's the algorithm?",
+                              "id": "8.642aa6e9ba941975"
+                            }
+                          },
+                          "id": "7.642aa6e9ba941975"
+                        },
+                        "3": {
+                          "title": "using boxes to display hierarchal data",
+                          "id": "105.3db99385294c1990",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Treemapping",
+                              "id": "106.3db99385294c1990"
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "dimensions",
+                          "id": "107.3db99385294c1990",
+                          "ideas": {
+                            "1": {
+                              "title": "2d",
+                              "id": "108.3db99385294c1990"
+                            },
+                            "2": {
+                              "title": "3d",
+                              "id": "109.3db99385294c1990"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Based on Restricted vs. free style",
+                      "id": "134.48dcb3cab77182c3",
+                      "ideas": {
+                        "1": {
+                          "title": "Intellegent mindmapping book mentions a free, sketch like mindmap",
+                          "id": "135.48dcb3cab77182c3",
+                          "ideas": {
+                            "1": {
+                              "title": "Intellegent inking",
+                              "id": "142.48dcb3cab77182c3"
+                            },
+                            "2": {
+                              "title": "Terminology",
+                              "id": "148.48dcb3cab77182c3",
+                              "ideas": {
+                                "2": {
+                                  "title": "Stroke",
+                                  "id": "150.48dcb3cab77182c3",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "A mouse down, mouse up movement Himetric Ink space coordinates (1 Himetric unit = 0.01 mm",
+                                      "id": "151.48dcb3cab77182c3"
+                                    }
+                                  }
+                                },
+                                "3": {
+                                  "title": "Central Nodes",
+                                  "id": "152.48dcb3cab77182c3",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "The first and main idea of a mind-map Node               A group of ink strokes that represent a coherent idea",
+                                      "id": "153.48dcb3cab77182c3"
+                                    }
+                                  }
+                                },
+                                "4": {
+                                  "title": "Connector",
+                                  "id": "154.48dcb3cab77182c3",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "An ink stroke that connects two nodes that are related )",
+                                      "id": "155.48dcb3cab77182c3"
+                                    }
+                                  }
+                                },
+                                "5": {
+                                  "title": "Grouper",
+                                  "id": "156.48dcb3cab77182c3",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "A module that intelligently groups relevant ink strokes together",
+                                      "id": "157.48dcb3cab77182c3"
+                                    }
+                                  }
+                                },
+                                "15": {
+                                  "title": " Divider            ",
+                                  "id": "149.48dcb3cab77182c3",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "A module that classifies ink strokes into text or drawing by their features.",
+                                      "id": "158.48dcb3cab77182c3"
+                                    }
+                                  },
+                                  "attr": {
+                                    "position": [
+                                      60,
+                                      212,
+                                      1
+                                    ]
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Sometimes there is a reflow algorithm that organizes the mindmaps for you",
+                      "id": "176.48dcb3cab77182c3"
+                    }
+                  },
+                  "id": "6.642aa6e9ba941975",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Graphs",
+                  "id": "277.14f87f13a33f5b24",
+                  "ideas": {
+                    "1": {
+                      "title": "Resources",
+                      "id": "278.14f87f13a33f5b24",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/anvaka/graph-drawing-libraries/blob/master/README.md",
+                          "id": "279.14f87f13a33f5b24"
+                        },
+                        "2": {
+                          "title": "Viva Graphjs",
+                          "id": "280.14f87f13a33f5b24",
+                          "ideas": {
+                            "1": {
+                              "title": "https://github.com/anvaka/VivaGraphJS",
+                              "id": "281.14f87f13a33f5b24"
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "Vis",
+                          "id": "282.14f87f13a33f5b24",
+                          "ideas": {
+                            "1": {
+                              "title": "https://github.com/almende/vis",
+                              "id": "283.14f87f13a33f5b24"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "28": {
+              "title": "My Principles for using Mindmaps",
+              "ideas": {
+                "1": {
+                  "title": "Always include resources for you knowledge, this helps verify them",
+                  "id": "329.78d24f5c3d56685f"
+                },
+                "2": {
+                  "title": "Simplify each step in a summary mindmap",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "this helps you recall it in the future",
+                      "id": "331.78d24f5c3d56685f"
+                    }
+                  },
+                  "id": "330.78d24f5c3d56685f"
+                }
+              },
+              "id": "328.78d24f5c3d56685f",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "Definitions",
+              "id": "179.48dcb3cab77182c3",
+              "ideas": {
+                "2": {
+                  "title": "My definition",
+                  "id": "180.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "Mindmaps are a connection diagram for the brain to store for later retrieval",
+                      "id": "91.67c111abacc87fea",
+                      "ideas": {
+                        "1": {
+                          "title": "Encoding in a sense",
+                          "id": "92.67c111abacc87fea"
+                        },
+                        "2": {
+                          "title": "That's why we can show different images of a mindmap for a student to grasp",
+                          "id": "93.67c111abacc87fea",
+                          "ideas": {
+                            "1": {
+                              "title": "That way they can recall it easily",
+                              "id": "94.67c111abacc87fea"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  86,
+                  -203,
+                  1
+                ],
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "12": {
+          "title": "Wikipedia",
+          "id": "117.3db99385294c1990",
+          "attr": {
+            "position": [
+              88,
+              52,
+              1
+            ],
+            "collapsed": true
+          },
+          "ideas": {
+            "1": {
+              "title": "Concept mapping",
+              "id": "111.3db99385294c1990",
+              "attr": {}
+            },
+            "2": {
+              "title": "mindmapping",
+              "id": "118.3db99385294c1990",
+              "ideas": {
+                "1": {
+                  "title": "they are a type of spider diagram",
+                  "id": "119.3db99385294c1990",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Spider_diagram",
+                      "id": "120.3db99385294c1990"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "difference between it and concept mapping",
+                  "id": "121.3db99385294c1990",
+                  "ideas": {
+                    "1": {
+                      "title": "mindmapping focus around one central concept",
+                      "id": "124.3db99385294c1990"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "information mapping",
+              "id": "125.3db99385294c1990",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Information_mapping",
+                  "id": "126.3db99385294c1990"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "cognitive mapping",
+              "id": "128.3db99385294c1990",
+              "ideas": {
+                "1": {
+                  "title": "Branchit-enterprise",
+                  "id": "130.3db99385294c1990",
+                  "attr": {}
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "35.7aab08a8b5ee1fd4",
+          "ideas": {
+            "1": {
+              "title": "PIXI mindmap",
+              "id": "36.7aab08a8b5ee1fd4",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrc0hTODZnQ1NSc1U/view?usp=sharing",
+                  "id": "37.7aab08a8b5ee1fd4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Angular mindmap with D3",
+              "id": "39.7aab08a8b5ee1fd4",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/mofas/mindMap",
+                  "id": "50.7aab08a8b5ee1fd4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Visualization Libraries",
+              "id": "55.27261449dd3b091",
+              "ideas": {
+                "1": {
+                  "title": "https://gephi.org/",
+                  "id": "56.27261449dd3b091"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Public Mindmaps",
+              "id": "57.423bf63b3f213807",
+              "ideas": {
+                "2": {
+                  "title": "Mindomo",
+                  "id": "60.423bf63b3f213807",
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.mindomo.com/mind-maps",
+                      "id": "58.423bf63b3f213807",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Front-end Development",
+                      "id": "62.423bf63b3f213807",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.mindomo.com/mindmap/front-end-development-e999af6b49404020b63ca473111c4b02",
+                          "id": "63.423bf63b3f213807",
+                          "ideas": {
+                            "1": {
+                              "title": "I like his use of boxes to denote a separate topic",
+                              "id": "64.423bf63b3f213807"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Serving mindmaps with CDN",
+              "id": "76.423bf63b3f213807",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=1upDpNNBQtY",
+                  "id": "77.423bf63b3f213807"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Tools",
+              "id": "78.423bf63b3f213807",
+              "ideas": {
+                "1": {
+                  "title": "MindMeister",
+                  "id": "79.423bf63b3f213807"
+                },
+                "2": {
+                  "title": "Mindomo",
+                  "id": "80.423bf63b3f213807"
+                },
+                "3": {
+                  "title": "Mindmup",
+                  "id": "81.423bf63b3f213807",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=TR-OdE_QhLc",
+                      "id": "185.48dcb3cab77182c3",
+                      "ideas": {
+                        "1": {
+                          "title": "really nice tutorial for mindmup 1.x",
+                          "id": "186.48dcb3cab77182c3"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "IMM",
+                  "id": "146.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "Ink based tool",
+                      "id": "147.48dcb3cab77182c3"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "iMindMap, ConceptDraw, Inspiration 8, Mind Manager Pro)",
+                  "id": "175.48dcb3cab77182c3"
+                },
+                "6": {
+                  "title": "Lucid Chart",
+                  "id": "181.48dcb3cab77182c3"
+                },
+                "7": {
+                  "title": "Mind Node",
+                  "id": "182.48dcb3cab77182c3"
+                },
+                "8": {
+                  "title": "EDraw",
+                  "id": "183.48dcb3cab77182c3"
+                },
+                "9": {
+                  "title": "XMind",
+                  "id": "184.48dcb3cab77182c3"
+                },
+                "10": {
+                  "title": "iMindmap",
+                  "id": "193.48dcb3cab77182c3",
+                  "ideas": {
+                    "1": {
+                      "title": "Tony Buzan",
+                      "id": "194.48dcb3cab77182c3"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Promoting long learning",
+              "id": "82.423bf63b3f213807",
+              "ideas": {
+                "1": {
+                  "title": "http://www.mindmeister.com/blog/2016/10/24/8-lesson-ideas-to-promote-lifelong-learning/",
+                  "id": "83.423bf63b3f213807"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Great tool for hosting local web servers on nearby computers",
+              "id": "89.443c04b9f66831b",
+              "ideas": {
+                "1": {
+                  "title": "https://flyweb.github.io/posts/2016/11/01/introducing-flyweb.html",
+                  "id": "90.443c04b9f66831b"
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {
+                  "width": 165
+                }
+              }
+            },
+            "10": {
+              "title": "Intellegent Mindmapping Book",
+              "id": "131.48dcb3cab77182c3",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrd3JTV0xBbWYzX28",
+                  "id": "133.48dcb3cab77182c3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Research",
+              "id": "138.48dcb3cab77182c3",
+              "ideas": {
+                "1": {
+                  "title": "Bailey and Konstan 2003; Plimmer and Apperley 2003",
+                  "id": "139.48dcb3cab77182c3"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Xmind source code",
+              "id": "252.17bf562d15d17ca8",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/xmindltd/xmind",
+                  "id": "253.17bf562d15d17ca8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Third Party",
+              "id": "284.61dc12c99291af87",
+              "ideas": {
+                "1": {
+                  "title": "GO.js Interactive Diagramming library",
+                  "id": "286.61dc12c99291af87",
+                  "ideas": {
+                    "1": {
+                      "title": "http://gojs.net/latest/index.html",
+                      "id": "287.61dc12c99291af87"
+                    },
+                    "2": {
+                      "title": "Mindmaps",
+                      "id": "288.61dc12c99291af87",
+                      "ideas": {
+                        "1": {
+                          "title": "http://gojs.net/latest/samples/mindMap.html",
+                          "id": "289.61dc12c99291af87"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": "53.7aab08a8b5ee1fd4",
+      "ideaIdTo": "19.7aab08a8b5ee1fd4",
+      "attr": {
+        "style": {
+          "color": "#707070",
+          "lineStyle": "solid",
+          "arrow": "to"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "mindmaps"
+}

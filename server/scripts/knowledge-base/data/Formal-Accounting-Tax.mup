@@ -1,0 +1,170 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Tax",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": 28,
+          "ideas": {
+            "1": {
+              "title": "Income tax",
+              "id": 29
+            },
+            "2": {
+              "title": "State tax",
+              "id": 30
+            },
+            "3": {
+              "title": "Federal tax",
+              "id": 32
+            },
+            "4": {
+              "title": "Property tax",
+              "id": 33
+            },
+            "5": {
+              "title": "Deductions",
+              "id": 34
+            },
+            "6": {
+              "title": "LLC",
+              "ideas": {
+                "1": {
+                  "title": "https://turbotax.intuit.com/tax-tools/tax-tips/Small-Business-Taxes/Limited-Liability-Company-Taxes/INF12029.html",
+                  "id": "39.3bc4a44efd01ffc2"
+                },
+                "2": {
+                  "title": "we would be considered a partnership",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.irs.gov/businesses/small-businesses-self-employed/partnerships",
+                      "id": "41.3bc4a44efd01ffc2"
+                    }
+                  },
+                  "id": "40.3bc4a44efd01ffc2",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "from what I understand the partnership and the partners both are liable for taxes",
+                  "ideas": {
+                    "1": {
+                      "title": "the partnership itself is considered a passthrough over to the partner",
+                      "ideas": {
+                        "1": {
+                          "title": "so they add or deduct income from their annual income tax",
+                          "id": "44.3bc4a44efd01ffc2"
+                        }
+                      },
+                      "id": "43.3bc4a44efd01ffc2"
+                    },
+                    "2": {
+                      "title": "http://articles.bplans.com/how-partnerships-are-taxed/",
+                      "id": "45.3bc4a44efd01ffc2"
+                    }
+                  },
+                  "id": "42.3bc4a44efd01ffc2",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "How do we file?",
+                  "id": "46.3bc4a44efd01ffc2",
+                  "attr": {
+                    "note": {
+                      "index": 16,
+                      "text": "Even though the partnership itself does not pay income taxes, it must file Form 1065 with the IRS. This form is an informational return the IRS reviews to determine whether the partners are reporting their income correctly. The partnership must also provide a “Schedule K-1” to the IRS and to each partner, which breaks down each partner’s share of the business’ profits and losses. In turn, each partner reports this profit and loss information on his or her individual Form 1040, with Schedule E attached."
+                    }
+                  }
+                },
+                "5": {
+                  "title": "When do we pay taxes",
+                  "id": "47.3bc4a44efd01ffc2",
+                  "ideas": {
+                    "1": {
+                      "title": "Every quarter",
+                      "id": "48.3bc4a44efd01ffc2"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Distributive share ",
+                  "id": "49.3bc4a44efd01ffc2"
+                },
+                "7": {
+                  "title": "Schedule E",
+                  "id": "50.3bc4a44efd01ffc2"
+                },
+                "8": {
+                  "title": "1040",
+                  "id": "51.3bc4a44efd01ffc2",
+                  "ideas": {
+                    "1": {
+                      "title": "income tax return",
+                      "id": "52.3bc4a44efd01ffc2"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "38.3bc4a44efd01ffc2",
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<ol class=\"topic-parts\" style=\"box-sizing: border-box; border: 1px solid rgb(215, 226, 237); font-stretch: inherit; line-height: 24px; font-family: Helvetica, Arial, 'Lucida Grande', sans-serif; vertical-align: baseline; margin-bottom: 35px; margin-left: 0px; padding-top: 10px; padding-bottom: 10px; list-style: none; border-radius: 4px;\"><li class=\"current-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/1\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(51, 51, 51); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 26px; font-family: inherit; vertical-align: baseline; margin: -13px 0px 0px; padding: 0px 10px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 26px; color: rgb(255, 255, 255); background-color: rgb(37, 37, 37);\">Part 1</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Introduction to Accounting Basics, A Story for Relating to Accounting Basics</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/2\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 2</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Income Statement</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/3\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 3</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Balance Sheet – Assets</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/4\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 4</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Balance Sheet – Liabilities and Stockholders' Equity</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px; background: rgb(245, 245, 245);\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/5\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); text-decoration: underline; display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 5</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Statement of Cash Flows, Double Entry System, Sample Transaction #1</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/6\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 6</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Sample Transactions #2 - #3</div></a></li><li class=\"noncurrent-page\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 1px 0px; position: relative; min-height: 24px;\"><a href=\"http://www.accountingcoach.com/accounting-basics/explanation/7\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 8px 0px 30px; color: rgb(65, 133, 177); display: inline-block; min-height: 24px; width: 714px; position: relative; background: transparent;\"><span class=\"part\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; font-family: inherit; vertical-align: baseline; margin: -12px 0px 0px; padding: 0px 8px 0px 12px; display: inline-block; position: absolute; top: 12px; left: 0px; height: 24px;\">Part 7</span><div class=\"part-name\" style=\"box-sizing: border-box; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: 20px; font-family: inherit; vertical-align: baseline; margin: 0px; padding: 0px 0px 0px 60px; width: auto; display: inline-block;\">Sample Transactions #4 - #6</div></a></li></ol>"
+            }
+          }
+        },
+        "-6": {
+          "title": "Resouces",
+          "id": 27,
+          "ideas": {
+            "2": {
+              "title": "tax basics",
+              "id": 36,
+              "ideas": {
+                "1": {
+                  "title": "http://www.salary.com/talking-taxes-tax-basics-for-beginners/",
+                  "id": 35,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "About LLC",
+              "id": "53.3bc4a44efd01ffc2",
+              "ideas": {
+                "1": {
+                  "title": "https://www.legalzoom.com/affiliate/business/business-formation/?r=88835337&utm_source=3936&utm_medium=affiliate&utm_campaign=business",
+                  "id": "54.3bc4a44efd01ffc2"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Tax"
+}

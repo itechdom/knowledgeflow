@@ -1,0 +1,57 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "React.material-ui",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.2b1d70d8b712ab9f",
+          "ideas": {
+            "1": {
+              "title": "themes",
+              "id": "6.2b1d70d8b712ab9f"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.2b1d70d8b712ab9f",
+          "ideas": {
+            "1": {
+              "title": "Main doc website",
+              "id": "4.2b1d70d8b712ab9f",
+              "ideas": {
+                "1": {
+                  "title": "http://www.material-ui.com/#/customization/themes",
+                  "id": "5.2b1d70d8b712ab9f"
+                }
+              }
+            },
+            "2": {
+              "title": "Github docs folder",
+              "id": "7.2b1d70d8b712ab9f",
+              "ideas": {
+                "1": {
+                  "title": "has a nice cross platform",
+                  "id": "8.2b1d70d8b712ab9f",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/callemall/material-ui/tree/master/docs",
+                      "id": "9.2b1d70d8b712ab9f"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "React.material-ui"
+}

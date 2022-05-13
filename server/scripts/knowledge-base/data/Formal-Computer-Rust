@@ -1,0 +1,1220 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Rust",
+      "attr": {
+        "style": {},
+        "position": [
+          -19,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "concepts",
+          "id": 8,
+          "ideas": {
+            "5": {
+              "title": "Macros",
+              "id": 19,
+              "ideas": {
+                "1": {
+                  "title": "!",
+                  "id": 20,
+                  "attr": {}
+                },
+                "2": {
+                  "title": "println!",
+                  "id": "220.14c6d4683c951292"
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Ownership",
+              "id": 23,
+              "ideas": {
+                "1": {
+                  "title": "Borrowing",
+                  "id": 24,
+                  "ideas": {
+                    "1": {
+                      "title": "Handing over a variable to a function",
+                      "id": 26
+                    },
+                    "2": {
+                      "title": "we don't have to return the variable to be used again",
+                      "id": "204.646f86f1293b6b64"
+                    },
+                    "3": {
+                      "title": "Represeneted in References",
+                      "id": "205.646f86f1293b6b64",
+                      "ideas": {
+                        "1": {
+                          "title": "Mutable",
+                          "id": "206.646f86f1293b6b64",
+                          "ideas": {
+                            "1": {
+                              "title": "You can't have two mutable references at the same time without using a block",
+                              "id": "208.646f86f1293b6b64"
+                            },
+                            "2": {
+                              "title": "Rust also protects you from dangling references by giving out compile time errors if you try to ruse a pointer after it goes out of scope",
+                              "id": "209.646f86f1293b6b64"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Immutable",
+                          "id": "207.646f86f1293b6b64"
+                        },
+                        "3": {
+                          "title": "Summary of rules",
+                          "id": "212.646f86f1293b6b64",
+                          "attr": {
+                            "note": {
+                              "index": 54,
+                              "text": ". At any given time, you can have either but not both of:\n- One mutable reference.\n- Any number of immutable references.\n2. References must always be valid"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "&variable",
+                  "id": 104,
+                  "ideas": {
+                    "1": {
+                      "title": "borrowing",
+                      "id": 105
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Borrowed value is automatically returned to the owner when it goes out of scope",
+                  "id": "125.7e78b0d0428ab1b",
+                  "ideas": {}
+                },
+                "5": {
+                  "title": "Heap",
+                  "id": "174.646f86f1293b6b64",
+                  "ideas": {
+                    "1": {
+                      "title": "Allocate a dynamic amount of memory",
+                      "id": "195.646f86f1293b6b64"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Stack",
+                  "id": "196.646f86f1293b6b64",
+                  "ideas": {
+                    "1": {
+                      "title": "Fixed size",
+                      "id": "197.646f86f1293b6b64",
+                      "ideas": {
+                        "1": {
+                          "title": "function variables are allocated on the stack",
+                          "id": "198.646f86f1293b6b64"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Primitive types are stored here",
+                      "id": "199.646f86f1293b6b64"
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "201.646f86f1293b6b64",
+                      "ideas": {
+                        "1": {
+                          "title": "Best chapter I have seen explaining this",
+                          "id": "202.646f86f1293b6b64",
+                          "ideas": {
+                            "1": {
+                              "title": "https://doc.rust-lang.org/book/second-edition/ch04-01-what-is-ownership.html#memory-and-allocation",
+                              "id": "203.646f86f1293b6b64"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Slices",
+                  "id": "213.399768989ec50e1a",
+                  "ideas": {
+                    "1": {
+                      "title": "take a reference to a part of a string",
+                      "id": "214.399768989ec50e1a"
+                    },
+                    "2": {
+                      "title": "Type that signfies string slice",
+                      "id": "215.399768989ec50e1a",
+                      "attr": {},
+                      "ideas": {
+                        "1": {
+                          "title": "&str",
+                          "id": "216.399768989ec50e1a"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "There should be one mutable variable pointing to the same area in Memory",
+                  "ideas": {},
+                  "id": "231.14c6d4683c951292",
+                  "attr": {}
+                },
+                "9": {
+                  "title": "lifetime",
+                  "id": 27,
+                  "ideas": {
+                    "1": {
+                      "title": "scope in other langs",
+                      "id": 28
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "variables",
+                  "id": 57,
+                  "ideas": {
+                    "1": {
+                      "title": "immutable",
+                      "id": 58
+                    },
+                    "2": {
+                      "title": "instead of reassigning a value to a variable, we shadow",
+                      "id": 64,
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "Wait a minute, I thought we already had a guess? We do, but Rust allows us to ‘shadow’ the previous guess with a new one. This is often used in this exact situation, where guess starts as a String, but we want to convert it to an u32. Shadowing lets us re-use the guess name, rather than forcing us to come up with two unique names like guess_str and guess, or something else."
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Memory Management",
+                      "attr": {
+                        "style": {},
+                        "note": {
+                          "text": "if we have 1GB of memory, then we get an array of 1 - 230\n\nstack and heap both access this array.\n\nheap allocates from the end\n\nStack starts from zero"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Allocates to stack by default",
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "Last in first out",
+                              "id": "243.14c6d4683c951292"
+                            },
+                            "2": {
+                              "title": "when you call a function you allocate a new stack frame",
+                              "id": "244.14c6d4683c951292"
+                            },
+                            "3": {
+                              "title": "Limited in size, but fast",
+                              "id": "245.14c6d4683c951292"
+                            },
+                            "4": {
+                              "title": "Rust automatically clears up the memory once the function ends",
+                              "id": "246.14c6d4683c951292"
+                            }
+                          },
+                          "id": "242.14c6d4683c951292"
+                        },
+                        "2": {
+                          "title": "Heap",
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "Bigger size",
+                              "id": "248.14c6d4683c951292",
+                              "attr": {}
+                            },
+                            "2": {
+                              "title": "Slow",
+                              "id": "249.14c6d4683c951292"
+                            },
+                            "3": {
+                              "title": "Memory stays longer and has to be deallocated",
+                              "id": "250.14c6d4683c951292"
+                            },
+                            "4": {
+                              "title": "Most garbage collected languages use the heap",
+                              "id": "251.14c6d4683c951292"
+                            }
+                          },
+                          "id": "247.14c6d4683c951292"
+                        },
+                        "3": {
+                          "title": "use jemalloc for managing memory",
+                          "id": "252.14c6d4683c951292",
+                          "attr": {}
+                        }
+                      },
+                      "id": "241.14c6d4683c951292"
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Control structure",
+              "id": 65,
+              "ideas": {
+                "1": {
+                  "title": "Loop",
+                  "id": 66,
+                  "ideas": {
+                    "1": {
+                      "title": "infinite loop",
+                      "id": 68,
+                      "ideas": {
+                        "1": {
+                          "title": "break",
+                          "id": 69
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "match",
+                  "id": 70
+                },
+                "3": {
+                  "title": "While loop",
+                  "id": "173.646f86f1293b6b64"
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Structs",
+              "id": 75,
+              "ideas": {
+                "1": {
+                  "title": "creates a class",
+                  "id": 77
+                },
+                "2": {
+                  "title": "Tuple structs",
+                  "id": "217.399768989ec50e1a",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Resources",
+                  "id": "224.14c6d4683c951292",
+                  "ideas": {
+                    "1": {
+                      "title": "https://doc.rust-lang.org/book/second-edition/ch05-00-structs.html",
+                      "id": "225.14c6d4683c951292"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "it's basically an Object in Javascript",
+                  "id": "271.ab79.e1890a1ab-4d06.cf3ab1995",
+                  "ideas": {
+                    "1": {
+                      "title": "has spread operators",
+                      "id": "272.ab79.e1890a1ab-4d06.cf3ab1995"
+                    },
+                    "2": {
+                      "title": "you can omit keyname sometimes, just like JavaScript",
+                      "id": "273.ab79.e1890a1ab-4d06.cf3ab1995"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3.5": {
+                  "title": "Types",
+                  "id": "257.14c6d4683c951292",
+                  "ideas": {
+                    "1": {
+                      "title": "Unit",
+                      "id": "258.14c6d4683c951292"
+                    },
+                    "2": {
+                      "title": "Tuple",
+                      "id": "259.14c6d4683c951292"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "multi-threading",
+              "id": 80,
+              "ideas": {
+                "1": {
+                  "title": "mutexes",
+                  "id": 81,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "This Table has an vector of Mutexes. A mutex is a way to control concurrency: only one thread can access the contents at once. This is exactly the property we need with our forks. We use an empty tuple, (), inside the mutex, since we’re not actually going to use the value, just hold onto it."
+                    }
+                  }
+                },
+                "2": {
+                  "title": "when a thread locks a mutex, other threads have to wait till it becomes available",
+                  "id": 82
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "25": {
+              "title": "Enums and Pattern Matching",
+              "id": "226.14c6d4683c951292",
+              "ideas": {
+                "2": {
+                  "title": "Option",
+                  "attr": {
+                    "note": {
+                      "index": 65,
+                      "text": "Option is another similar wrapper type that simply denotes that we either have some result or we don’t. If we have no result, the type has a value of None, and the actual result is wrapped by Some(value). As you might suggest, the type itself can be compared to null or None values that can be found in many programming languages, but actually Option is much safer — you’ll never get the very common NullReferenceException error unless you want to, as it works the same way as the Result type: when you unwrap() the Option it shuts down the process if the result is None."
+                    },
+                    "collapsed": true
+                  },
+                  "id": "229.14c6d4683c951292",
+                  "ideas": {
+                    "2": {
+                      "title": "The option enum and why it's better than Nill Values",
+                      "id": "261.14c6d4683c951292",
+                      "ideas": {
+                        "1": {
+                          "title": "https://doc.rust-lang.org/book/second-edition/ch06-01-defining-an-enum.html#the-option-enum-and-its-advantages-over-null-values",
+                          "id": "260.14c6d4683c951292",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Match",
+                  "id": "127.7e78b0d0428ab1b",
+                  "ideas": {
+                    "1": {
+                      "title": "Similar to a Switch statement",
+                      "id": "128.7e78b0d0428ab1b"
+                    },
+                    "2": {
+                      "title": "it returns the result of a match back to us",
+                      "id": "131.7e78b0d0428ab1b"
+                    },
+                    "3": {
+                      "title": "Better than If because we don't have to always return a boolan",
+                      "id": "262.14c6d4683c951292",
+                      "ideas": {
+                        "1": {
+                          "title": "it can be an enum",
+                          "id": "263.14c6d4683c951292"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "If let",
+                      "id": "266.14c6d4683c951292"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "unwrap",
+                  "id": "126.7e78b0d0428ab1b",
+                  "attr": {
+                    "note": {
+                      "index": 62,
+                      "text": "But we don’t have to — remember that strange unwrap() function that we were calling all the time? It has a standard implementation that terminates the program execution in case if the result is an error and returns it unwrapped if it’s normal. So basically by using unwrap we’re telling that we’re interested in the immediate result only, and it’s OK to shut down the program if an error has happened."
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Result types",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "for encoding error information",
+                      "id": "233.14c6d4683c951292"
+                    },
+                    "2": {
+                      "title": "is returned by functions as a result of an operations",
+                      "attr": {
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "example ",
+                          "ideas": {
+                            "1": {
+                              "title": "IO operations",
+                              "id": "236.14c6d4683c951292"
+                            },
+                            "2": {
+                              "title": "Any other libs",
+                              "id": "237.14c6d4683c951292"
+                            }
+                          },
+                          "id": "235.14c6d4683c951292"
+                        }
+                      },
+                      "id": "234.14c6d4683c951292"
+                    },
+                    "3": {
+                      "title": "they are enums",
+                      "ideas": {
+                        "1": {
+                          "title": "enum variants",
+                          "id": "239.14c6d4683c951292"
+                        }
+                      },
+                      "id": "238.14c6d4683c951292"
+                    },
+                    "4": {
+                      "title": "Err(_) pattern in the second arm. The _ is a catchall value",
+                      "id": "240.14c6d4683c951292"
+                    }
+                  },
+                  "id": "232.14c6d4683c951292"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "26": {
+              "title": "Functional Programming",
+              "id": "230.14c6d4683c951292",
+              "ideas": {
+                "1": {
+                  "title": "Functions",
+                  "id": "168.646f86f1293b6b64",
+                  "ideas": {
+                    "1": {
+                      "title": "snake case",
+                      "id": "169.646f86f1293b6b64",
+                      "ideas": {
+                        "1": {
+                          "title": "function_name",
+                          "id": "170.646f86f1293b6b64"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Closures",
+                  "id": "141.7e78b0d0428ab1b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://doc.rust-lang.org/book/first-edition/closures.html",
+                      "id": "142.7e78b0d0428ab1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "27": {
+              "title": "Advanced",
+              "id": "254.14c6d4683c951292",
+              "ideas": {
+                "1": {
+                  "title": "calling rust from other languages",
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "FFI",
+                      "id": "256.14c6d4683c951292"
+                    }
+                  },
+                  "id": "255.14c6d4683c951292"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "28": {
+              "title": "RC counting",
+              "id": "274.ab79.e1890a1ab-4d06.cf3ab1995",
+              "ideas": {
+                "1": {
+                  "title": "https://doc.rust-lang.org/book/ch15-04-rc.html",
+                  "id": "275.ab79.e1890a1ab-4d06.cf3ab1995"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "29": {
+              "title": "Strings",
+              "id": "276.19ff.abbe437d8-03cf.e634bee79"
+            },
+            "30": {
+              "title": "web frameworks",
+              "id": "277.19ff.abbe437d8-03cf.e634bee79",
+              "ideas": {
+                "1": {
+                  "title": "Rocket",
+                  "id": "278.19ff.abbe437d8-03cf.e634bee79",
+                  "ideas": {
+                    "1": {
+                      "title": "uses Hyper",
+                      "id": "279.19ff.abbe437d8-03cf.e634bee79",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/hyperium/hyper",
+                          "id": "280.19ff.abbe437d8-03cf.e634bee79"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "serde::derive ",
+                  "id": "282.19ff.abbe437d8-03cf.e634bee79",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/serde-rs/serde",
+                      "id": "283.19ff.abbe437d8-03cf.e634bee79"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "31": {
+              "title": "impl",
+              "id": "284.e906.843825c43-33af.8e99adfa1",
+              "ideas": {
+                "1": {
+                  "title": "https://doc.rust-lang.org/std/keyword.impl.html",
+                  "id": "285.e906.843825c43-33af.8e99adfa1"
+                },
+                "2": {
+                  "title": "implement functions on types",
+                  "id": "286.e906.843825c43-33af.8e99adfa1"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3.5": {
+              "title": "Types",
+              "ideas": {
+                "1": {
+                  "title": "Scalar",
+                  "ideas": {
+                    "1": {
+                      "title": "Integer",
+                      "ideas": {
+                        "1": {
+                          "title": "Unsigned",
+                          "id": "178.646f86f1293b6b64",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Signed",
+                          "id": "179.646f86f1293b6b64"
+                        }
+                      },
+                      "id": "177.646f86f1293b6b64",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Floaing point",
+                      "id": "180.646f86f1293b6b64",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Boolean",
+                      "id": "181.646f86f1293b6b64",
+                      "attr": {}
+                    },
+                    "4": {
+                      "title": "Character",
+                      "ideas": {
+                        "1": {
+                          "title": "Unicode scalar value",
+                          "ideas": {
+                            "1": {
+                              "title": "can represent more than ascii ",
+                              "id": "184.646f86f1293b6b64"
+                            }
+                          },
+                          "id": "183.646f86f1293b6b64"
+                        }
+                      },
+                      "id": "182.646f86f1293b6b64",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "id": "176.646f86f1293b6b64",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Compound",
+                  "ideas": {
+                    "1": {
+                      "title": "Tuples",
+                      "ideas": {
+                        "1": {
+                          "title": "List of values of different types ",
+                          "ideas": {
+                            "1": {
+                              "title": "we can access the values by destructuring thm",
+                              "id": "188.646f86f1293b6b64"
+                            }
+                          },
+                          "id": "187.646f86f1293b6b64"
+                        }
+                      },
+                      "id": "186.646f86f1293b6b64",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Arrays",
+                      "id": "189.646f86f1293b6b64",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Vectors",
+                      "ideas": {
+                        "1": {
+                          "title": "Can grow and shrink in size",
+                          "id": "191.646f86f1293b6b64"
+                        }
+                      },
+                      "id": "190.646f86f1293b6b64",
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "id": "185.646f86f1293b6b64",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "String",
+                  "ideas": {
+                    "1": {
+                      "title": "it's just a vector of 8 bytes",
+                      "id": "193.646f86f1293b6b64"
+                    },
+                    "2": {
+                      "title": "It can grow in size, that's why it's better than string literal, for example st = \"hello\"",
+                      "id": "194.646f86f1293b6b64"
+                    }
+                  },
+                  "id": "192.646f86f1293b6b64",
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "175.646f86f1293b6b64",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4.5": {
+              "title": "Definition",
+              "id": "253.14c6d4683c951292",
+              "ideas": {
+                "1": {
+                  "title": "Features",
+                  "id": 12,
+                  "ideas": {
+                    "1": {
+                      "title": "No Garbage collection",
+                      "id": 13
+                    },
+                    "2": {
+                      "title": "Reducing runtime overhead by letting the compiler do the work for us sometimes",
+                      "id": 14
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "30.5": {
+              "title": "trait",
+              "id": "124.7e78b0d0428ab1b",
+              "ideas": {
+                "1": {
+                  "title": "like interface?",
+                  "id": "288.e906.843825c43-33af.8e99adfa1"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "2": {
+          "title": "Impressions",
+          "id": "264.14c6d4683c951292",
+          "ideas": {
+            "1": {
+              "title": "Saving you from that billion dollar mistake since 2010",
+              "id": "265.14c6d4683c951292"
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "-10": {
+          "title": "Resources",
+          "id": 2,
+          "ideas": {
+            "1": {
+              "title": "https://www.rust-lang.org/",
+              "id": 3
+            },
+            "2": {
+              "title": "Docs",
+              "id": 4,
+              "ideas": {
+                "1": {
+                  "title": "http://doc.rust-lang.org/book/README.html",
+                  "id": 5
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Docker hub",
+              "id": 6,
+              "ideas": {
+                "1": {
+                  "title": "https://hub.docker.com/r/jimmycuadra/rust/",
+                  "id": 7
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Third party",
+              "id": 15,
+              "ideas": {
+                "1": {
+                  "title": "Cargo",
+                  "id": 16,
+                  "ideas": {
+                    "1": {
+                      "title": "Package manager",
+                      "id": 17,
+                      "ideas": {
+                        "1": {
+                          "title": "https://crates.io/",
+                          "id": 18
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "TOML type",
+                      "id": 33,
+                      "ideas": {}
+                    },
+                    "3": {
+                      "title": "build",
+                      "id": 35,
+                      "ideas": {
+                        "1": {
+                          "title": "create target folder and add the bin there",
+                          "id": 36
+                        },
+                        "2": {
+                          "title": "--release",
+                          "id": 41,
+                          "ideas": {
+                            "1": {
+                              "title": "build with optimization",
+                              "id": 43,
+                              "ideas": {}
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "run",
+                      "id": 38,
+                      "ideas": {
+                        "1": {
+                          "title": "build and run",
+                          "id": 39
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "new",
+                      "id": 45,
+                      "ideas": {
+                        "1": {
+                          "title": "create new project",
+                          "id": 46
+                        },
+                        "2": {
+                          "title": "--bin",
+                          "id": 47,
+                          "ideas": {
+                            "1": {
+                              "title": "for not a library",
+                              "id": 48
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "update",
+                      "id": 62,
+                      "ideas": {
+                        "1": {
+                          "title": "ignore cargo.lock and update the dependencies",
+                          "id": 63
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      110.5,
+                      -61,
+                      1
+                    ],
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Browser",
+                  "id": 99,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/servo/servo",
+                      "id": 101
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Lightweight IO ",
+                  "id": "120.7e78b0d0428ab1b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/carllerche/mio",
+                      "id": "121.7e78b0d0428ab1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Hyper",
+                  "id": "134.7e78b0d0428ab1b",
+                  "ideas": {
+                    "1": {
+                      "title": "HTTP Library",
+                      "id": "135.7e78b0d0428ab1b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Iron",
+                  "id": 50,
+                  "ideas": {
+                    "1": {
+                      "title": "web",
+                      "id": 51,
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/iron/iron",
+                          "id": 52
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Tokio",
+                  "id": "136.7e78b0d0428ab1b"
+                },
+                "8": {
+                  "title": "Futures",
+                  "id": "137.7e78b0d0428ab1b"
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "https://killercup.github.io/trpl-ebook/trpl-2015-05-13-a4.pdf",
+              "id": 30,
+              "ideas": {
+                "1": {
+                  "title": "book",
+                  "id": 31,
+                  "ideas": {
+                    "1": {
+                      "title": "page 119",
+                      "id": 71
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "24 days of Rust",
+              "id": "108.7e78b0d0428ab1b",
+              "ideas": {
+                "1": {
+                  "title": "https://zsiciarz.github.io/24daysofrust/",
+                  "id": "109.7e78b0d0428ab1b"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Crates",
+              "id": "112.7e78b0d0428ab1b",
+              "ideas": {
+                "1": {
+                  "title": "https://crates.io/",
+                  "id": "113.7e78b0d0428ab1b"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Rust By Example",
+              "id": "122.7e78b0d0428ab1b",
+              "ideas": {
+                "1": {
+                  "title": "https://rustbyexample.com/generics/gen_trait.html",
+                  "id": "123.7e78b0d0428ab1b"
+                },
+                "2": {
+                  "title": "Toy web rendering engine",
+                  "id": "267.eb47.9e0ba1ee7-a15f.0ea1f8d9b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/mbrubeck/robinson",
+                      "id": "268.eb47.9e0ba1ee7-a15f.0ea1f8d9b"
+                    },
+                    "2": {
+                      "title": "blog series",
+                      "id": "269.eb47.9e0ba1ee7-a15f.0ea1f8d9b",
+                      "ideas": {
+                        "1": {
+                          "title": "https://limpet.net/mbrubeck/2014/08/08/toy-layout-engine-1.html",
+                          "id": "270.eb47.9e0ba1ee7-a15f.0ea1f8d9b"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Books",
+              "id": "138.7e78b0d0428ab1b",
+              "ideas": {
+                "2": {
+                  "title": "Rust lang book",
+                  "id": "140.7e78b0d0428ab1b",
+                  "ideas": {
+                    "1": {
+                      "title": "https://doc.rust-lang.org/book/first-edition/",
+                      "id": "139.7e78b0d0428ab1b",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Second Edition",
+                      "id": "222.14c6d4683c951292",
+                      "ideas": {
+                        "1": {
+                          "title": "https://doc.rust-lang.org/book/second-edition/",
+                          "id": "223.14c6d4683c951292"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Rust"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "node-services-pro",
+  "version": "0.0.1",
+  "description": "pro services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itechdom/node-services-pro.git"
+  },
+  "keywords": [
+    "node",
+    "services",
+    "pro"
+  ],
+  "author": "sam alghanmi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itechdom/node-services-pro/issues"
+  },
+  "homepage": "https://github.com/itechdom/node-services-pro#readme",
+  "dependencies": {
+    "@slack/web-api": "^5.2.1",
+    "tedious": "^6.6.0",
+    "tedious-connection-pool": "^1.0.5"
+  }
+}

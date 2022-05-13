@@ -1,0 +1,38 @@
+{
+  "auth": {
+    "google": {
+      "clientId": "CLIENT_ID",
+      "clientSecret": "CLIENT_SECRET",
+      "callbackURL": "CALLBACK_URL"
+    },
+    "aws": {
+      "accessKeyID": "ACCESS_KEY_ID",
+      "secretAccessKey": "SECRET_ACCESS_KEY"
+    },
+    "stripe": {
+      "stripeId": "STRIPE_ID",
+      "stripeSecret": "STRIPE_SECRET"
+    },
+    "gmail": {
+      "gmailUser": "GMAIL_USER",
+      "gmailPassword": "GMAIL_PASSWORD"
+    },
+    "atlas": {
+      "user": "ATLAS_USER",
+      "pass": "ATLAS_PASS"
+    },
+    "azuredb": {
+      "db": "AZURE_DB",
+      "server": "AZURE_DB_SERVER",
+      "user": "AZURE_DB_USER",
+      "pass": "AZURE_DB_PASS"
+    },
+    "slack": {
+      "appId": "SLACK_APP_ID",
+      "clientId": "SLACK_CLIENT_ID",
+      "clientSecret": "SLACK_CLIENT_SECRET",
+      "signingSecret": "SLACK_SIGNING_SECRET",
+      "verificationToken": "SLACK_VERIFICATION_TOKEN"
+    }
+  }
+}

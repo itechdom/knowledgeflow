@@ -1,0 +1,264 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Neural Networks",
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.237b5b1335e1358f",
+          "ideas": {
+            "9": {
+              "title": "Problems",
+              "id": "22.237b5b1335e1358f",
+              "ideas": {
+                "1": {
+                  "title": "the idea of similarity",
+                  "id": "24.237b5b1335e1358f",
+                  "ideas": {
+                    "1": {
+                      "title": "the system has to be ok with a level of confidence less than 100%, since human beings are already comfortable with it",
+                      "id": "25.237b5b1335e1358f"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "0.5": {
+              "title": "Introduction",
+              "id": "39.194381793902211f",
+              "ideas": {
+                "4": {
+                  "title": "How can we build a system where a failure of one component doesn't influence all others",
+                  "id": "43.194381793902211f",
+                  "attr": {}
+                },
+                "5": {
+                  "title": "How does it learn",
+                  "id": "27.237b5b1335e1358f",
+                  "attr": {
+                    "note": {
+                      "index": 16,
+                      "text": "These systems of simulated neural nets can exhibit learning when based on D.O.Hebb's rule for learning developed in 1949, such that:\n\n\"the connections between cells that are active at the same time will be strengthened, increasing the probability that the first cell will excite the second cell in the future. Connections between cells whose activity is not synchronised will be weakened. Synchronised patterns of firing that occur repeatedly will eventually become stable representations (or memories) of the inputs that give rise to them, and can be reactivated by only partial inputs.\" [Ferry, 1987, p56]."
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Neurons that fire at the same time constitute memory, and can be excited by any partial input",
+                      "id": "28.237b5b1335e1358f"
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Information is actually encoded in the neural networks themselves",
+                  "id": "29.237b5b1335e1358f",
+                  "attr": {
+                    "note": {
+                      "index": 18,
+                      "text": "Information is encoded in neural connections rather than separate memory elements, as unique patterns of interconnections. Also the system learns 'spontaneously' because it alters the strength of particular interconnections according to the repitition of use of those interconnections and the array of possible experiences provided and possible solutions arrived at, i.e. training. In computer terms it might be thought of as 'self-programming'."
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "Best definition of neural networks",
+                  "attr": {
+                    "note": {
+                      "index": 19,
+                      "text": "\"A biological neuron receives information from other neurons through synaptic connections and passes on signals to as many as a thousand other neurons. The synapse, or connection between neurons, mediates the 'strength' with which a signal crosses from one neuron to another. Both the simplified biological model and the artificial network share a common mathematical formulation as a dynamical system - a system of several interacting parts whose state evolves continuously with time. Computational behaviour is a collective property that results from having many computing elements act on one another in a richly interconnected system. The overall progress of the computation is determined not by step-by-step instructions but by the rich structure of connections between computing devices. Instead of advancing and then restoring the computational path at discrete intervals, the circuit channels or focuses it in one continuous process.\" [Tank & Hopfield, 1987, pp62-63]"
+                    }
+                  },
+                  "id": "41.194381793902211f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "1.375": {
+              "title": "Elements",
+              "id": "42.194381793902211f",
+              "ideas": {
+                "1": {
+                  "title": "Perceptron",
+                  "id": "21.237b5b1335e1358f",
+                  "attr": {
+                    "note": {
+                      "index": 11,
+                      "text": "The Perceptron consists in a net of sensor units feeding to a set of association units which feed one or more response units. If the sensor units feed enough 'yes' votes to the association unit to which they are mapped to exceed the threshold of that association unit then it will be excited or 'fire'. When enough association units fire so as to exceed the threshold of the reponse unit to which they are mapped, then the response unit will fire. If the result is correct then the tresholds of the response units will be left as they are, but if the result is incorrect then the thresholds of the response units will be modified. This process is iterated enough times for the response unit to give a correct response to the input of the whole Perceptron system. Thus the Perceptron is said to be 'trainable'. The output of the network is affected by altering the weighting or the value contributed by each connection."
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Neurons",
+                  "id": "40.194381793902211f",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Neurons push each other to fire",
+                      "ideas": {},
+                      "id": "44.194381793902211f",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Neurons circulating for indefinite period of time might tell us what memory is",
+                      "attr": {
+                        "note": {
+                          "index": 5,
+                          "text": "McCulloch and Pitts also spoke of neuron nets having circular interconnections in which \"activity may be set up in a circuit and continue reverberating around it for an indefinite period of time, so that any realisable (result) may involve reference to past events of an indefinite degree of remoteness.\" [McCulloch & Pitts, 1943] thus producing a regenerative process which might be akin to learning and to memory."
+                        }
+                      },
+                      "ideas": {},
+                      "id": "48.194381793902211f"
+                    },
+                    "3": {
+                      "title": "Types of Neurons",
+                      "attr": {
+                        "note": {
+                          "index": 3,
+                          "text": "1. Receptor, afferent or input neurons which receive the impulse to fire from a sensor.\n2. Central or inner neurons which are synapsed onto from receptor and other neurons and synapse onto output and other neurons.\n3. Effector neurons which receive impulses from both inner neurons and directly from receptors."
+                        }
+                      },
+                      "ideas": {},
+                      "id": "49.194381793902211f"
+                    },
+                    "4": {
+                      "title": "Operation of Neurons",
+                      "attr": {
+                        "note": {
+                          "index": 4,
+                          "text": "1. Propagation delay is assumed to be constant for all neurons,\n2. Neurons fire at discrete moments, not continuously.\n3. Each synapse output stage impinges onto only one synaptic input stage on a subsequent neuron.\n4. Each neuron can have a number of input synaptic stages.\n5. Synaptic input stages contribute to overcoming of a threshold below which the neuron will not fire."
+                        }
+                      },
+                      "ideas": {},
+                      "id": "50.194381793902211f"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Control Networks",
+                  "id": "13.237b5b1335e1358f",
+                  "attr": {
+                    "note": {
+                      "index": 6,
+                      "text": "there is no way to say that firing neurons are the only way human being learn, but I guess we could say:\nThat there will be action co-ordinating or integrating centres 'above' the direct control networks. The stimulated versus the willed movement are distinguished as having different antecedents. The complex systems of neural nets are organised hierarchically with layers of processing nets projecting to higher \"integrating\" layers and so on up to the cortical planning and control layers. Also many layers use descending projections to control what they are being fed in the way of information. This prevents swamping and allows attention and concentration on particular processes."
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Synapses",
+                  "id": "47.194381793902211f",
+                  "ideas": {
+                    "1": {
+                      "title": "Adjusting the weight of the synapse firing",
+                      "attr": {
+                        "note": {
+                          "index": 9,
+                          "text": "The idea of an adjustable synapse allows an artificial neuron network to go beyond the process of simply making decisions based on a look-up-table or the execution of a set of logical rules as in an ordinary computer. The network can tailor its response to, or \"interpret\", its input by adjusting the weighting of each synapse in adding to a threshold so that new responses can be made to variations in the input conditions. If the actual output of the network is compared with the desired output then an error value can be determined which can be incorporated into the weighting of the synapse"
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "when the actual output and the desired output is compared, we can get an error value that will be the input of the next synapse",
+                          "id": "46.194381793902211f"
+                        }
+                      },
+                      "id": "45.194381793902211f"
+                    },
+                    "2": {
+                      "title": "Connections ?",
+                      "id": "26.237b5b1335e1358f",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.237b5b1335e1358f",
+          "ideas": {
+            "1": {
+              "title": "Neural network playground",
+              "id": "4.237b5b1335e1358f",
+              "ideas": {
+                "1": {
+                  "title": "http://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2,2&seed=0.25653&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false",
+                  "id": "5.237b5b1335e1358f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Amazing overview of neural networks",
+              "id": "11.237b5b1335e1358f",
+              "ideas": {
+                "1": {
+                  "title": "http://www.psych.utoronto.ca/users/reingold/courses/ai/cache/neur_net.htm",
+                  "id": "12.237b5b1335e1358f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "Interesting applications",
+              "id": "31.237b5b1335e1358f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.quora.com/What-are-the-most-interesting-applications-in-the-field-of-neural-networks-and-deep-learning",
+                  "id": "32.237b5b1335e1358f"
+                },
+                "2": {
+                  "title": "https://www.youtube.com/watch?v=Bui3DWs02h4",
+                  "id": "34.237b5b1335e1358f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Applying deep learning",
+              "id": "37.237b5b1335e1358f",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=F1ka6a13S9I",
+                  "id": "38.237b5b1335e1358f"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Neural Networks",
+  "links": []
+}

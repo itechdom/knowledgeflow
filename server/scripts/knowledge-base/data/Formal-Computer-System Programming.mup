@@ -1,0 +1,88 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "System Programming",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<div><b><br></b></div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 176,
+          "ideas": {
+            "1": {
+              "title": "What is it?",
+              "id": 241,
+              "attr": {
+                "style": {},
+                "note": {
+                  "text": "systems programming aims to produce software which provides services to the&nbsp;[computer hardware](https://en.wikipedia.org/wiki/Computer_hardware)&nbsp;(e.g.&nbsp;[disk defragmenter](https://en.wikipedia.org/wiki/Defragmentation)). It requires a greater degree of hardware awareness."
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 233,
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/System_programming",
+              "id": 242,
+              "ideas": {
+                "1": {
+                  "title": "System Programming",
+                  "id": 243
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-11": {
+          "title": "Programmed in",
+          "id": 234,
+          "ideas": {
+            "1": {
+              "title": "Go",
+              "id": 236,
+              "ideas": {}
+            },
+            "2": {
+              "title": "Rust",
+              "id": 238
+            },
+            "3": {
+              "title": "C++",
+              "id": 239
+            },
+            "4": {
+              "title": "D",
+              "id": 240
+            },
+            "5": {
+              "title": "https://en.wikipedia.org/wiki/System_programming_language",
+              "id": 244,
+              "attr": {}
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "System Programming"
+}

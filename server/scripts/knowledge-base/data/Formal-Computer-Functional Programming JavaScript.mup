@@ -1,0 +1,1104 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Functional.js",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Welcome to GDI's intro to Javascript. My name is \"Sam\" it's Osama Alghanmi and with me is Pedro Meza. We work for Charter communication doing Javascript.&nbsp;<div><br></div><div><br></div><div><b>Figure out a group activity that breaks the ice: I think that introduction first and then for 15 mins we talk to each other in a group of (a number here depending on the number of students).&nbsp;</b></div><div><b><br></b></div><div><b>\"This will enable us to break that first barrier\"</b></div><div><b><br></b></div><div><b><br></b></div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "12.5": {
+          "title": "Concepts",
+          "id": 654,
+          "ideas": {
+            "3": {
+              "title": "Compose",
+              "id": 304,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "select two or more functions and call them together together within your body, so the first function result will be piped in to the next",
+                  "id": 305,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; overflow: auto; direction: ltr; margin-bottom: 16px; padding: 16px; line-height: 1.45; border: 0px; border-radius: 3px; word-wrap: normal; letter-spacing: 0.2px; background-color: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; direction: ltr; margin: 0px; white-space: pre; display: inline; max-width: initial; overflow: initial; line-height: inherit; word-wrap: normal; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> toUpperCase = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">x</span>) </span>{ <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">return</span> x.toUpperCase(); };\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> exclaim = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">x</span>) </span>{ <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">return</span> x + <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(113, 140, 0);\">'!'</span>; };\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> shout = compose(exclaim, toUpperCase);\n\nshout(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(113, 140, 0);\">\"send in the clowns\"</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(142, 144, 140);\">//=&gt; \"SEND IN THE CLOWNS!\"</span></code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Pointfree",
+                  "id": 307,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; overflow: auto; direction: ltr; margin-bottom: 16px; padding: 16px; line-height: 1.45; border: 0px; border-radius: 3px; word-wrap: normal; letter-spacing: 0.2px; background-color: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; direction: ltr; margin: 0px; white-space: pre; display: inline; max-width: initial; overflow: initial; line-height: inherit; word-wrap: normal; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(142, 144, 140);\">//not pointfree because we mention the data: word</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> snakeCase = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">function</span> (<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">word</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">return</span> word.toLowerCase().replace(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(200, 40, 41);\">/\\s+/ig</span>, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(113, 140, 0);\">'_'</span>);\n};\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(142, 144, 140);\">//pointfree</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> snakeCase = compose(replace(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(200, 40, 41);\">/\\s+/ig</span>, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(113, 140, 0);\">'_'</span>), toLowerCase);</code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "relies on category theory",
+                  "id": 308
+                },
+                "0.5": {
+                  "title": "sequence matters sometimes",
+                  "id": 669,
+                  "ideas": {
+                    "1": {
+                      "title": "how do we remedy that?",
+                      "id": 671,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> loudLastUpper = compose(exclaim, toUpperCase, head, reverse);\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// or</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> last = compose(head, reverse);\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> loudLastUpper = compose(exclaim, toUpperCase, last);</code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\">we composed last on its own to make the order doesn't matter</pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// or</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> last = compose(head, reverse);\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> angry = compose(exclaim, toUpperCase);\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> loudLastUpper = compose(angry, last);\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// more variations...</span></code></pre>"
+                        },
+                        "style": {}
+                      },
+                      "ideas": {}
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "momization",
+              "id": 653,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {}
+            },
+            "5": {
+              "title": "Higher order function",
+              "id": 301,
+              "ideas": {
+                "1": {
+                  "title": "A function that takes or returns other functions",
+                  "id": 303
+                },
+                "2": {
+                  "title": "Higher order Functions sometimes act as \"enhancers\"",
+                  "id": 667,
+                  "ideas": {
+                    "1": {
+                      "title": "check out the pen example",
+                      "id": 668
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Pure Functions",
+              "id": 655,
+              "ideas": {
+                "2": {
+                  "title": "A pure function is a function that, given the same input, will always return the same output and does not have any observable side effect.\n",
+                  "id": 657
+                },
+                "3": {
+                  "title": "We are concerned with a what a function does then how",
+                  "id": 684,
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "identity function",
+              "id": 673,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> id = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> x;\n};</code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// identity</span>\ncompose(id, f) == compose(f, id) == f;\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// true</span></code></pre></code></pre>"
+                },
+                "style": {}
+              }
+            },
+            "13": {
+              "title": "Functor",
+              "id": 694,
+              "ideas": {
+                "1": {
+                  "title": "A Functor is a type that implements map and obeys some laws\n",
+                  "id": 696,
+                  "ideas": {
+                    "1": {
+                      "title": "for example",
+                      "id": 697,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> Maybe = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.__value = x;\n};\n\nMaybe.of = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">new</span> Maybe(x);\n};\n\nMaybe.prototype.isNothing = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\"></span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> (<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.__value === <span class=\"hljs-literal\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">null</span> || <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.__value === <span class=\"hljs-literal\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">undefined</span>);\n};\n\nMaybe.prototype.map = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">f</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.isNothing() ? Maybe.of(<span class=\"hljs-literal\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">null</span>) : Maybe.of(f(<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.__value));\n};</code></pre>"
+                        },
+                        "style": {}
+                      },
+                      "ideas": {}
+                    },
+                    "2": {
+                      "title": "Array",
+                      "id": 708
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "is it sometimes called a container?",
+                  "id": 700,
+                  "attr": {
+                    "style": {
+                      "background": "#800000"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Array.of",
+                      "id": 701,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "container that creates a new Array ",
+                          "id": 703,
+                          "ideas": {
+                            "1": {
+                              "title": "so you can do something like",
+                              "id": 704,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">Maybe.of({\n  name: <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'Boris'</span>,\n}).map(_.prop(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'age'</span>)).map(add(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">10</span>));</code></pre>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "5": {
+                  "title": "IO functors to handle side effects",
+                  "id": 711,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "We can link functiors to control actions",
+                  "id": 713,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Pure application</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//=====================</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// blogTemplate :: String</span>\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  blogPage :: Posts -&gt; HTML</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> blogPage = Handlebars.compile(blogTemplate);\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  renderPage :: Posts -&gt; HTML</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> renderPage = compose(blogPage, sortBy(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'date'</span>));\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  blog :: Params -&gt; Task Error HTML</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> blog = compose(map(renderPage), getJSON(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'/posts'</span>));\n\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Impure calling code</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//=====================</span>\nblog({}).fork(\n  <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">error</span>) </span>{\n    $(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">\"#error\"</span>).html(error.message);\n  },\n  <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">page</span>) </span>{\n    $(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">\"#main\"</span>).html(page);\n  }\n);\n\n$(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'#spinner'</span>).show();</code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "Pointed functor",
+                  "id": 774,
+                  "ideas": {
+                    "1": {
+                      "title": "functor with of method to create a new object",
+                      "id": 775
+                    },
+                    "2": {
+                      "title": "Applicative Functors",
+                      "id": 777,
+                      "ideas": {
+                        "1": {
+                          "title": "a pointed functor with ap method",
+                          "id": 814
+                        },
+                        "2": {
+                          "title": "rules",
+                          "id": 815,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">F.of(x).map(f) == F.of(f).ap(F.of(x))\n</code></pre><div><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">Maybe.of(add).ap(Maybe.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">2</span>)).ap(Maybe.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">3</span>));\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe(5)</span>\n\nTask.of(add).ap(Task.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">2</span>)).ap(Task.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">3</span>));\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Task(5)</span></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\"><br></span></code></pre></code></div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "liftA4",
+                          "id": 816
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Monads are pointed functors that can flatten\n",
+                  "id": 776
+                },
+                "10": {
+                  "title": "Remember, Ramda \"map\" will handle running map on the functor iteself",
+                  "id": 778
+                },
+                "11": {
+                  "title": "Composition law with functors",
+                  "id": 789,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  topRoute :: String -&gt; Maybe String</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> topRoute = compose(Maybe.of, reverse);\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  bottomRoute :: String -&gt; Maybe String</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> bottomRoute = compose(map(reverse), Maybe.of);\n\n\ntopRoute(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'hi'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe('ih')</span>\n\nbottomRoute(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'hi'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe('ih')</span></code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "12": {
+                  "title": "Other examples of functors",
+                  "id": 790,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p class=\"comments-section\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: 16px; orphans: 3; widows: 3; margin-bottom: 0.85em; position: relative; letter-spacing: 0.2px; line-height: 27.2px;\">We've seen a few different functors, but there are infinitely many. Some notable omissions are iterable data structures like trees, lists, maps, pairs, you name it. eventstreams and observables are both functors. Others can be for encapsulation or even just type modelling. Functors are all around us and we'll use them extensively throughout the book.</p>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "types",
+              "id": 716,
+              "ideas": {
+                "1": {
+                  "title": "Union Types",
+                  "id": 717,
+                  "ideas": {
+                    "2": {
+                      "title": "Example",
+                      "id": 722,
+                      "ideas": {
+                        "1": {
+                          "title": "choices",
+                          "id": 719,
+                          "ideas": {
+                            "1": {
+                              "title": "Credit card",
+                              "id": 720
+                            },
+                            "2": {
+                              "title": "Cash",
+                              "id": 721
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Multiplication type",
+                  "id": 718,
+                  "ideas": {
+                    "1": {
+                      "title": "combining two sets of input together",
+                      "id": 723
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "no types in FP, we compose them",
+                  "id": 724,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "Type signutre",
+                  "id": 685,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  capitalize :: String -&gt; String</span>\n</code></pre><div><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\"><br></span></code></div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "if we are looking at more results and more arguments",
+                      "id": 686,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  match :: Regex -&gt; (String -&gt; [String])</span>\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  onHoliday :: String -&gt; [String]</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> onHoliday = match(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(200, 40, 41);\">/holiday/ig</span>);</code></pre>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch7.html#tales-from-the-cryptic",
+                      "id": 687
+                    },
+                    "5": {
+                      "title": "Hindley-Milner type signatures",
+                      "id": 693,
+                      "ideas": {
+                        "1": {
+                          "title": "we can predict the implmenetation from the signatures",
+                          "id": 690,
+                          "ideas": {
+                            "1": {
+                              "title": "// head :: [a] -> a\n",
+                              "id": 691,
+                              "ideas": {
+                                "1": {
+                                  "title": "head takes an array [a] and returns an element",
+                                  "id": 692
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Never throw an exception or return null, try to constrict the \"set\"",
+                      "id": 732,
+                      "ideas": {
+                        "1": {
+                          "title": "not sure what this means?",
+                          "id": "825.4515bd52d322d615"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Examples",
+                      "id": "824.4515bd52d322d615",
+                      "ideas": {
+                        "1": {
+                          "title": "reduce signature",
+                          "id": 688,
+                          "ideas": {
+                            "1": {
+                              "title": "the most complicated",
+                              "id": 689
+                            }
+                          },
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  reduce :: (b -&gt; a -&gt; b) -&gt; b -&gt; [a] -&gt; b</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> reduce = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">f, x, xs</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> xs.reduce(f, x);\n});</code></pre>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "5": {
+                  "title": "Functions that have the same signature are compatiable",
+                  "id": 736
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Partial Application",
+              "id": 742,
+              "ideas": {
+                "1": {
+                  "title": "Currying",
+                  "id": 286,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; overflow: auto; direction: ltr; margin-bottom: 16px; padding: 16px; line-height: 1.45; border: 0px; border-radius: 3px; word-wrap: normal; letter-spacing: 0.2px; background-color: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; direction: ltr; margin: 0px; white-space: pre; display: inline; max-width: initial; overflow: initial; line-height: inherit; word-wrap: normal; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> add = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">y</span>) </span>{\n    <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">return</span> x + y;\n  };\n};\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> increment = add(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">1</span>);\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(137, 89, 168);\">var</span> addTen = add(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">10</span>);\n\nincrement(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">2</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(142, 144, 140);\">// 3</span>\n\naddTen(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(245, 135, 31);\">2</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(142, 144, 140);\">// 12</span></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace; font-size: 13.6px; overflow: auto; direction: ltr; margin-bottom: 16px; padding: 16px; line-height: 1.45; border: 0px; border-radius: 3px; word-wrap: normal; letter-spacing: 0.2px; background-color: rgb(247, 247, 247);\">you split off a function into two functions</pre>"
+                    },
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "loadash currying",
+                      "id": 295
+                    },
+                    "3": {
+                      "title": "You can call a function with fewer arguments than it expects. It returns a function that takes the remaining arguments.",
+                      "id": 659,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "A good example",
+                      "id": 663,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> curry = <span class=\"hljs-built_in\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">require</span>(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'lodash/curry'</span>);\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> match = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">what, str</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> str.match(what);\n});\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> replace = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">what, replacement, str</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> str.replace(what, replacement);\n});\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> filter = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">f, ary</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> ary.filter(f);\n});\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> map = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">f, ary</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> ary.map(f);\n});</code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">match(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(200, 40, 41);\">/\\s+/g</span>, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'hello world'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// [ ' ' ]</span>\n\nmatch(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(200, 40, 41);\">/\\s+/g</span>)(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'hello world'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// [ ' ' ]</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> hasSpaces = match(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(200, 40, 41);\">/\\s+/g</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// function(x) { return x.match(/\\s+/g) }</span>\n\nhasSpaces(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'hello world'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// [ ' ' ]</span>\n\nhasSpaces(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'spaceless'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// null</span>\n\nfilter(hasSpaces, [<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'tori_spelling'</span>, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'tori amos'</span>]);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// ['tori amos']</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> findSpaces = filter(hasSpaces);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// function(xs) { return xs.filter(function(x) { return x.match(/\\s+/g) }) }</span>\n\nfindSpaces([<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'tori_spelling'</span>, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'tori amos'</span>]);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// ['tori amos']</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> noVowels = replace(<span class=\"hljs-regexp\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(200, 40, 41);\">/[aeiouy]/ig</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// function(replacement, x) { return x.replace(/[aeiouy]/ig, replacement) }</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> censored = noVowels(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">\"*\"</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// function(x) { return x.replace(/[aeiouy]/ig, '*') }</span>\n\ncensored(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'Chocolate Rain'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// 'Ch*c*l*t* R**n'</span></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\"><br></span></code></pre></code></pre>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "5": {
+                      "title": "Partial Application",
+                      "id": 738,
+                      "ideas": {
+                        "1": {
+                          "title": "you can use it for dependency injection",
+                          "id": 739
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "Monads",
+              "id": 743,
+              "ideas": {
+                "8": {
+                  "title": "Definitions",
+                  "id": 792,
+                  "ideas": {
+                    "1": {
+                      "title": "Simply Chainning continuations",
+                      "id": 744,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Railway track if you think of it, so connecting railway tracks ",
+                      "id": 750,
+                      "ideas": {},
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "3": {
+                      "title": "Forks in the road",
+                      "id": 745,
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "4": {
+                      "title": "They are like onions",
+                      "id": 791,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "you peel away its layers",
+                          "id": 794
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Monads are pointed functors that can flatten",
+                      "id": 802,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "with join ()",
+                          "id": 803
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Examples",
+                  "id": 799,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Why monads",
+                      "id": 798,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Support</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// ===========================</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> fs = <span class=\"hljs-built_in\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">require</span>(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'fs'</span>);\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  readFile :: String -&gt; IO String</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> readFile = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">filename</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">new</span> IO(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\"></span>) </span>{\n    <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> fs.readFileSync(filename, <span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'utf-8'</span>);\n  });\n};\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  print :: String -&gt; IO String</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> print = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">new</span> IO(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\"></span>) </span>{\n    <span class=\"hljs-built_in\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">console</span>.log(x);\n    <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> x;\n  });\n};\n\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Example</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// ===========================</span>\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  cat :: String -&gt; IO (IO String)</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> cat = compose(map(print), readFile);\n\ncat(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'.git/config'</span>);\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// IO(IO('[core]\\nrepositoryformatversion = 0\\n'))</span></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">Because of this, we have map(map(Resule)) to peel away </span></code></pre>"
+                        },
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "using join",
+                          "id": 800,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> mmo = Maybe.of(Maybe.of(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'nunchucks'</span>));\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe(Maybe('nunchucks'))</span>\n\nmmo.join();\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe('nunchucks')</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> ioio = IO.of(IO.of(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'pizza'</span>));\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// IO(IO('pizza'))</span>\n\nioio.join();\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// IO('pizza')</span>\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> ttt = Task.of(Task.of(Task.of(<span class=\"hljs-string\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(113, 140, 0);\">'sewers'</span>)));\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Task(Task(Task('sewers')));</span>\n\nttt.join();\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Task(Task('sewers'))</span></code></pre>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "21": {
+                  "title": "Pain Points",
+                  "id": 793,
+                  "attr": {
+                    "style": {
+                      "background": "#800000"
+                    },
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "To connect mismatch function with each other through bind",
+                      "id": 752,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "What does that mean?",
+                          "id": 795
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "How to implement join so it can \"unpackage\" more than two layers at once",
+                      "id": 804,
+                      "ideas": {
+                        "1": {
+                          "title": "Recursion?",
+                          "id": 805
+                        }
+                      }
+                    }
+                  }
+                },
+                "22": {
+                  "title": "We abstract join after map into ",
+                  "id": 806,
+                  "ideas": {
+                    "1": {
+                      "title": "chain",
+                      "id": 807,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">//  chain :: Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m b</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> chain = curry(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">f, m</span>)</span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> m.map(f).join(); <span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// or compose(join, map(f))(m)</span>\n});</code></pre>"
+                        },
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "or flatmap",
+                          "id": 808
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Examples",
+                      "id": 809,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">Maybe.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">3</span>).chain(<span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">three</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> Maybe.of(<span class=\"hljs-number\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">2</span>).map(add(three));\n});\n<span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// Maybe(5);</span></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">As you noticed, we remove the extra layer of \"Maybe\" by doing chain (map, then join)</span></code></pre>"
+                        },
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "23": {
+                  "title": "When to use just .map and when to use .chain",
+                  "id": 810,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p class=\"comments-section\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: 16px; orphans: 3; widows: 3; margin-bottom: 0.85em; position: relative; letter-spacing: 0.2px; line-height: 27.2px;\"><code style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; padding: 0.2em; border: none; color: inherit; background-color: rgb(247, 247, 247);\">map</code>&nbsp;when returning a \"normal\" value and&nbsp;<code style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; padding: 0.2em; border: none; color: inherit; background-color: rgb(247, 247, 247);\">chain</code>&nbsp;when we're returning another functor.</p>"
+                    },
+                    "style": {}
+                  }
+                },
+                "24": {
+                  "title": "monads halt execution",
+                  "id": 817,
+                  "ideas": {
+                    "1": {
+                      "title": "so it's good to use them when we want to run things sequanitially",
+                      "id": 818
+                    }
+                  }
+                },
+                "9.5": {
+                  "title": "Monads have to implement join",
+                  "id": 801,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\">Maybe.prototype.join = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\"></span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.isNothing() ? Maybe.of(<span class=\"hljs-literal\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">null</span>) : <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">this</span>.__value;\n}</code></pre>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "Monoid",
+              "id": 757,
+              "ideas": {
+                "1": {
+                  "title": "Follows three rules",
+                  "id": 758,
+                  "ideas": {
+                    "1": {
+                      "title": "The result of combining two things is one of the things",
+                      "id": 759
+                    },
+                    "2": {
+                      "title": "Associativity (order doesn't matter, for example, addition, multiplication",
+                      "id": 760,
+                      "ideas": {
+                        "1": {
+                          "title": "you get parrallaziation for free",
+                          "id": 763,
+                          "ideas": {
+                            "1": {
+                              "title": "because you combine everything by breaking up little calculations",
+                              "id": 764
+                            },
+                            "2": {
+                              "title": "you get incremental accumlation",
+                              "id": 765
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Identity element",
+                      "id": 761,
+                      "ideas": {
+                        "1": {
+                          "title": "Zero in Addition",
+                          "id": 762
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Relationship between monads and monoids",
+                  "id": 771,
+                  "ideas": {
+                    "1": {
+                      "title": "monads are monoids because they satisfy the conditions of monoid",
+                      "id": 772
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "22": {
+              "title": "Endomorphism",
+              "id": 769,
+              "ideas": {
+                "1": {
+                  "title": "Functions with the same input andoutput",
+                  "id": 770
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "23": {
+              "title": "I stopped here",
+              "id": 811,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            },
+            "24": {
+              "title": "General Principles",
+              "id": 725,
+              "ideas": {
+                "1": {
+                  "title": "Map Compisition's law",
+                  "id": 674,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-comment\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(142, 144, 140);\">// map's composition law</span>\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> law = compose(map(f), map(g)) === map(compose(f, g));</code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Map seems to be the iterator for list like structures. look into notes",
+                  "id": 665,
+                  "ideas": {},
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> getChildren = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">x</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> x.childNodes;\n};\n\n<span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> allTheChildren = map(getChildren);</code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><br></code></pre><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><pre style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 16px; break-inside: avoid; direction: ltr; margin-bottom: 1.275em; padding: 0.85em 1em; border: none; overflow: auto; word-wrap: normal; letter-spacing: 0.2px; line-height: 27.2px; background: rgb(247, 247, 247);\"><code class=\"lang-js\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-family: Consolas, &quot;Liberation Mono&quot;, Menlo, Courier, monospace; font-size: 0.85em; break-inside: avoid; direction: ltr; margin: 0px; border-width: initial; border-style: none; display: inline; max-width: initial; overflow: initial; line-height: inherit; white-space: pre; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: 0px 0px; background-repeat: initial;\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">var</span> allTheChildren = <span class=\"hljs-function\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(66, 113, 174);\"><span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">function</span>(<span class=\"hljs-params\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(245, 135, 31);\">elements</span>) </span>{\n  <span class=\"hljs-keyword\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; font-size: inherit; color: rgb(137, 89, 168);\">return</span> _.map(elements, getChildren);\n};</code></pre></code></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Relies on the idea of function from math",
+                  "id": 280,
+                  "ideas": {
+                    "1": {
+                      "title": "One input and one output",
+                      "id": 282
+                    },
+                    "2": {
+                      "title": "no side effects",
+                      "id": 283,
+                      "ideas": {
+                        "1": {
+                          "title": "side effects are",
+                          "id": 288,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<p style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; margin-bottom: 16px; font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px;\">Side effects may include, but are not limited to</p><ul style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; padding-left: 2em; margin-bottom: 16px; font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px;\"><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">changing the file system</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">inserting a record into a database</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">making an http call</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">mutations</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">printing to the screen / logging</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">obtaining user input</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">querying the DOM</li><li style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased;\">accessing system state</li></ul>"
+                            },
+                            "style": {}
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "18.5": {
+              "title": "Continuations",
+              "id": 740,
+              "ideas": {
+                "1": {
+                  "title": "You pass a callback for some cases",
+                  "id": 741,
+                  "ideas": {
+                    "1": {
+                      "title": "If I have two",
+                      "id": 747,
+                      "ideas": {
+                        "1": {
+                          "title": "then display \"error\"",
+                          "id": 748
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 726,
+          "ideas": {
+            "8": {
+              "title": "Code Pen",
+              "id": 787,
+              "ideas": {
+                "1": {
+                  "title": "Chapter 8",
+                  "id": 786,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://codepen.io/javasop/pen/zKqpOx?editors=0010#0",
+                      "id": 788
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Tutorials",
+              "id": 819,
+              "ideas": {
+                "1": {
+                  "title": "https://leandromoreira.com.br/2016/09/08/functor-pointed-functor-monad-and-applicative-functor-in-js/",
+                  "id": 820
+                },
+                "2": {
+                  "title": "Immutability Changes Everything",
+                  "id": "831.335fc410c9278458",
+                  "ideas": {
+                    "1": {
+                      "title": "http://highscalability.com/blog/2015/1/26/paper-immutability-changes-everything-by-pat-helland.html",
+                      "id": "832.335fc410c9278458"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "11": {
+              "title": "Third Party",
+              "id": 773,
+              "ideas": {
+                "2": {
+                  "title": "Folktale",
+                  "id": 780,
+                  "ideas": {
+                    "1": {
+                      "title": "Data.task",
+                      "id": 781
+                    }
+                  }
+                },
+                "3": {
+                  "title": "A small functional lib",
+                  "id": 821,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/yoshuawuyts/choo/blob/master/README.md",
+                      "id": 822
+                    },
+                    "2": {
+                      "title": "Choo",
+                      "id": 823
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "http://docs.folktalejs.org/en/latest/index.html",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Suite of libraries to make functional programming easier",
+                      "id": 730
+                    }
+                  },
+                  "id": 729
+                },
+                "5": {
+                  "title": "Popular functional Programming Libraries",
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<a href=\"https://lodash.com/\" target=\"_blank\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(65, 131, 196); font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">lodash</a><span style=\"font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px;\">,&nbsp;</span><a href=\"http://underscorejs.org/\" target=\"_blank\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(65, 131, 196); font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">underscore</a><span style=\"font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px;\">, and&nbsp;</span><a href=\"http://ramdajs.com/\" target=\"_blank\" style=\"box-sizing: border-box; -webkit-tap-highlight-color: transparent; -webkit-font-smoothing: antialiased; color: rgb(65, 131, 196); font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\">ramda</a><span style=\"font-size: 16px; letter-spacing: 0.2px; line-height: 25.6px;\">.</span>"
+                    },
+                    "style": {}
+                  },
+                  "id": 728
+                },
+                "6": {
+                  "title": "Immutable",
+                  "id": "828.37a8f8b2647e2a83",
+                  "ideas": {
+                    "2": {
+                      "title": "Trees",
+                      "id": "830.37a8f8b2647e2a83",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/lukasbuenger/immutable-treeutils",
+                          "id": "829.37a8f8b2647e2a83",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Videos",
+              "id": "826.4515bd52d322d615",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=E8I19uA-wGY",
+                  "id": 715,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "intro to functional programming in general",
+                      "id": 733
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Books",
+              "id": "827.4515bd52d322d615",
+              "ideas": {
+                "1": {
+                  "title": "https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch6.html",
+                  "id": 727,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 554,
+      "ideaIdTo": 475,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Functional.js"
+}

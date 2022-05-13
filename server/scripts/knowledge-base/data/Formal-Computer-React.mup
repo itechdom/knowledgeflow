@@ -1,0 +1,1433 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "React",
+      "attr": {
+        "style": {},
+        "position": [
+          -23,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 109,
+          "ideas": {
+            "7": {
+              "title": "Server Side Rendering",
+              "id": "545.6a3810df3cdb5d15",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "546.6a3810df3cdb5d15",
+                  "ideas": {
+                    "1": {
+                      "title": "Mobx Server Side rendering",
+                      "id": "547.6a3810df3cdb5d15",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/kuuup/mobx-ssr-example",
+                          "id": "548.6a3810df3cdb5d15"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Source Code",
+              "id": 335,
+              "ideas": {
+                "1": {
+                  "title": "src/",
+                  "id": 336,
+                  "ideas": {
+                    "1": {
+                      "title": "renderers",
+                      "id": 337,
+                      "ideas": {
+                        "2": {
+                          "title": "dom",
+                          "id": 358,
+                          "ideas": {
+                            "2": {
+                              "title": "https://github.com/facebook/react/tree/master/src/renderers/dom",
+                              "id": "371.1c413e4492f1b5ca"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Native",
+                          "id": 359
+                        },
+                        "4": {
+                          "title": "Noop",
+                          "id": 360
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "shared",
+                      "id": "361.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "contains third party",
+                          "id": "362.1c413e4492f1b5ca",
+                          "ideas": {
+                            "1": {
+                              "title": "webcomponents",
+                              "id": "363.1c413e4492f1b5ca"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "addons",
+                      "id": "364.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/facebook/react/tree/master/src/addons",
+                          "id": "365.1c413e4492f1b5ca"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "umd",
+                      "id": "370.1c413e4492f1b5ca"
+                    },
+                    "3.5": {
+                      "title": "Isomorphic",
+                      "id": "369.1c413e4492f1b5ca"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "372.1c413e4492f1b5ca",
+                  "ideas": {
+                    "1": {
+                      "title": "Describing react source",
+                      "id": "373.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react/contributing/codebase-overview.html",
+                          "id": "374.1c413e4492f1b5ca",
+                          "ideas": {
+                            "1": {
+                              "title": "from React's website",
+                              "id": "375.1c413e4492f1b5ca"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "General Notes",
+                  "id": "376.1c413e4492f1b5ca",
+                  "ideas": {
+                    "1": {
+                      "title": "Haste",
+                      "id": "377.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "Custom Module System",
+                          "id": "378.1c413e4492f1b5ca"
+                        },
+                        "2": {
+                          "title": "when you import you need to specify relative paths",
+                          "id": "379.1c413e4492f1b5ca",
+                          "ideas": {}
+                        },
+                        "3": {
+                          "title": "all filenames are globally unique",
+                          "id": "381.1c413e4492f1b5ca"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "They don't use any external utilities",
+                      "id": "382.1c413e4492f1b5ca"
+                    },
+                    "3": {
+                      "title": "They have a nice way to structure their code",
+                      "id": "383.1c413e4492f1b5ca",
+                      "attr": {
+                        "note": {
+                          "index": 38,
+                          "text": "Shared Code\nEven though Haste allows us to import any module from anywhere in the repository, we follow a convention to avoid cyclic dependencies and other unpleasant surprises. By convention, a file may only import files in the same folder or in subfolders below.\n\nFor example, files inside src/renderers/dom/stack/client may import other files in the same folder or any folder below.\n\nHowever they can't import modules from src/renderers/dom/stack/server because it is not a child directory of src/renderers/dom/stack/client.\n\nThere is an exception to this rule. Sometimes we do need to share functionality between two groups of modules. In this case, we hoist the shared module up to a folder called shared inside the closest common ancestor folder of the modules that need to rely on it.\n\nFor example, code shared between src/renderers/dom/stack/client and src/renderers/dom/stack/server lives in src/renderers/dom/shared.\n\nBy the same logic, if src/renderers/dom/stack/client needs to share a utility with something in src/renderers/native, this utility would be in src/renderers/shared.\n\nThis convention is not enforced but we check for it during a pull request review."
+                        },
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "a file may only import a file in its directory or a subfolder (one level only)",
+                          "id": "384.1c413e4492f1b5ca"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Questions",
+                      "id": "366.1c413e4492f1b5ca",
+                      "ideas": {},
+                      "attr": {}
+                    },
+                    "7": {
+                      "title": "They are trying to move away from Classes",
+                      "id": "392.1c413e4492f1b5ca"
+                    },
+                    "8": {
+                      "title": "Dyanmic Injection",
+                      "id": "393.1c413e4492f1b5ca",
+                      "attr": {
+                        "note": {
+                          "index": 41,
+                          "text": "Dynamic Injection\nReact uses dynamic injection in some modules. While it is always explicit, it is still unfortunate because it hinders understanding of the code. The main reason it exists is because React originally only supported DOM as a target. React Native started as a React fork. We had to add dynamic injection to let React Native override some behaviors.\n\nYou may see modules declaring their dynamic dependencies like this:\n\n// Dynamically injected\nvar textComponentClass = null;\n\n// Relies on dynamically injected value\nfunction createInstanceForText(text) {\n  return new textComponentClass(text);\n}\n\nvar ReactHostComponent = {\n  createInstanceForText,\n\n  // Provides an opportunity for dynamic injection\n  injection: {\n    injectTextComponentClass: function(componentClass) {\n      textComponentClass = componentClass;\n    },\n  },\n};\n\nmodule.exports = ReactHostComponent;\nThe injection field is not handled specially in any way. But by convention, it means that this module wants to have some (presumably platform-specific) dependencies injected into it at runtime.\n\nIn React DOM, ReactDefaultInjection injects a DOM-specific implementation:\n\nReactHostComponent.injection.injectTextComponentClass(ReactDOMTextComponent);\nIn React Native, ReactNativeDefaultInjection injects its own implementation:\n\nReactHostComponent.injection.injectTextComponentClass(ReactNativeTextComponent);\nThere are multiple injection points in the codebase. In the future, we intend to get rid of the dynamic injection mechanism and wire up all the pieces statically during the build."
+                        }
+                      }
+                    },
+                    "9": {
+                      "title": "Monorepo",
+                      "id": "394.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "http://danluu.com/monorepo/",
+                          "id": "395.1c413e4492f1b5ca"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "10": {
+                      "title": "multiple packages",
+                      "id": "396.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "is that why you have an isomorphic folder?",
+                          "id": "397.1c413e4492f1b5ca"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 44,
+                          "text": "Multiple Packages\nReact is a monorepo. Its repository contains multiple separate packages so that their changes can be coordinated together, and documentation and issues live in one place.\n\nThe npm metadata such as package.json files is located in the packages top-level folder. However, there is almost no real code in it.\n\nFor example, packages/react/react.js re-exports src/isomorphic/React.js, the real npm entry point. Other packages mostly repeat this pattern. All the important code lives in src.\n\nWhile the code is separated in the source tree, the exact package boundaries are slightly different for npm packages and standalone browser builds."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "12": {
+                      "title": "Third party",
+                      "id": "399.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "Documentation tool",
+                          "id": "386.1c413e4492f1b5ca",
+                          "ideas": {
+                            "1": {
+                              "title": "JSDoc",
+                              "id": "388.1c413e4492f1b5ca"
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Flow",
+                          "id": "389.1c413e4492f1b5ca",
+                          "ideas": {
+                            "1": {
+                              "title": "@flow tag",
+                              "id": "390.1c413e4492f1b5ca"
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "Warning Module",
+                          "id": "398.1c413e4492f1b5ca",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "13": {
+                      "title": "__DEV__",
+                      "id": "367.1c413e4492f1b5ca",
+                      "ideas": {
+                        "1": {
+                          "title": "how is this assigned? is it replaced during build time",
+                          "id": "368.1c413e4492f1b5ca"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 38,
+                          "text": "It is inlined during the compile step, and turns into process.env.NODE_ENV !== 'production' checks in the CommonJS builds."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "14": {
+                      "title": "Core",
+                      "id": "401.1c413e4492f1b5ca"
+                    },
+                    "15": {
+                      "title": "Reconcilation",
+                      "id": "402.1c413e4492f1b5ca"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.25": {
+                  "title": "packages/",
+                  "id": "400.1c413e4492f1b5ca"
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Virtual DOM",
+              "id": 327,
+              "ideas": {
+                "1": {
+                  "title": "dom nodes are called components",
+                  "id": 328
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "25": {
+              "title": "Core",
+              "id": "455.3c00f79508479691",
+              "ideas": {
+                "1": {
+                  "title": "How does react re-render?",
+                  "id": 333,
+                  "attr": {
+                    "style": {},
+                    "note": {
+                      "text": "So the basic assumptions behind a component and its state changes are:\n\n* render()&nbsp;is only a function of the component’s&nbsp;state&nbsp;and&nbsp;props.\n\n* the state does not change except when&nbsp;setState()&nbsp;is called.\n\n* the props do not change except when our parent re-renders us with different props.\n\nBasically, in terms of functional programming, you write&nbsp;[idempotent](http://en.wikipedia.org/wiki/Idempotence), composable functions. Data is coming to your functions as input which emit tree like representations as return values. When data changes, functions are re-run again with new data as input. React diffs the result of previous function call with new one and it effectively calculates the difference between the tree structures. From higher level perspective, React is a function which takes two DOMs and generates a list of DOM operations to be applied to the DOM, i.e., it is&nbsp;[referentially transparent](http://en.wikipedia.org/wiki/Referential_transparency_%28computer_science%29)."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "26": {
+              "title": "Reconciler",
+              "id": "456.5f225201abf452e4",
+              "ideas": {
+                "2": {
+                  "title": "Motivation",
+                  "id": "458.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "Every element produces its own tree",
+                      "id": "460.5f225201abf452e4"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Resources",
+                  "id": "462.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react/docs/reconciliation.html",
+                      "id": "457.5f225201abf452e4",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Research Paper on Tree diffing algorithms",
+                      "id": "463.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "http://grfia.dlsi.ua.es/ml/algorithms/references/editsurvey_bille.pdf",
+                          "id": "464.5f225201abf452e4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2.25": {
+                  "title": "React compares two root elements when diffing",
+                  "id": "468.5f225201abf452e4"
+                },
+                "2.375": {
+                  "title": "Diffing Algorithm",
+                  "id": "469.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "Depends on the types of elements",
+                      "id": "475.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "Elements of different types",
+                          "id": "476.5f225201abf452e4",
+                          "ideas": {
+                            "1": {
+                              "title": "React will tear down the old tree",
+                              "id": "467.5f225201abf452e4",
+                              "attr": {},
+                              "ideas": {
+                                "1": {
+                                  "title": "ComponentWillUnmount()",
+                                  "id": "466.5f225201abf452e4",
+                                  "ideas": {},
+                                  "attr": {}
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "DOM elements of the same type",
+                          "id": "477.5f225201abf452e4",
+                          "ideas": {
+                            "1": {
+                              "title": "it will keep the both DOM nodes and update their attributes only",
+                              "id": "479.5f225201abf452e4"
+                            }
+                          }
+                        },
+                        "1.5": {
+                          "title": "Elements of the same type",
+                          "id": "480.5f225201abf452e4",
+                          "ideas": {
+                            "1": {
+                              "title": "Instance stays the same to maintain state",
+                              "id": "481.5f225201abf452e4"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Recursing on Children",
+                      "id": "482.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "React will iterate over the two new lists at the same time and generates a mutation for every difference",
+                          "id": "483.5f225201abf452e4",
+                          "ideas": {
+                            "1": {
+                              "title": "this can be a performance problem if you don't have the key prop",
+                              "id": "484.5f225201abf452e4"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "As a last resort, you can pass item's index in the array as a key. This can work well if the items are never reordered, but reorders will be slow.",
+                          "id": "485.5f225201abf452e4"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Questions",
+                      "id": "486.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "Why is using an index in React considered bad?",
+                          "id": "488.5f225201abf452e4",
+                          "ideas": {
+                            "1": {
+                              "title": "because you might change the element in an array and react will assume that index is the same element which may cause unpredictable behavior",
+                              "id": "489.5f225201abf452e4"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2.5625": {
+                  "title": "When React is about to add the new DOM tree",
+                  "id": "474.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "ComponentDidMount",
+                      "id": "470.5f225201abf452e4",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "ComponentWillMount",
+                      "id": "471.5f225201abf452e4",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "remember, this is changing in React 17",
+                      "id": "562.d8e3.a8dc6d5e5-93ac.2ac2de7",
+                      "ideas": {
+                        "1": {
+                          "title": "https://medium.com/@baphemot/understanding-react-react-16-3-component-life-cycle-23129bc7a705",
+                          "id": "563.d8e3.a8dc6d5e5-93ac.2ac2de7"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "27": {
+              "title": "JSX",
+              "id": "497.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "you can use dot notations to call a sub-component",
+                  "id": "498.5f225201abf452e4"
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "499.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "JSX in Depth",
+                      "id": "500.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react/docs/jsx-in-depth.html",
+                          "id": "501.5f225201abf452e4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "Props Default is True",
+                  "id": "502.5f225201abf452e4"
+                },
+                "1.75": {
+                  "title": "Props.children",
+                  "id": "504.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react/docs/jsx-in-depth.html",
+                      "id": "505.5f225201abf452e4"
+                    },
+                    "2": {
+                      "title": "false, null, undefined, true don't render",
+                      "id": "506.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "so you can conditionally render components",
+                          "id": "507.5f225201abf452e4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.875": {
+                  "title": "Controlled vs Un-Controlled Components",
+                  "id": "508.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://goshakkk.name/controlled-vs-uncontrolled-inputs-react/",
+                      "id": "509.5f225201abf452e4"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "28": {
+              "title": "Optimizing performance",
+              "id": "510.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "https://facebook.github.io/react/docs/optimizing-performance.html",
+                  "id": "511.5f225201abf452e4"
+                },
+                "2": {
+                  "title": "shouldComponentUpdate",
+                  "id": "512.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "you can limit which state will cause your component to rerender",
+                      "id": "514.5f225201abf452e4"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "React.PureComponent",
+                  "id": "515.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "it does a shallow comparison to props and state",
+                      "id": "516.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "avoid mutating data as this will cause the component to not re-render",
+                          "id": "517.5f225201abf452e4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "31": {
+              "title": "Higher Order Components",
+              "id": "525.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "https://facebook.github.io/react/docs/higher-order-components.html",
+                  "id": "526.5f225201abf452e4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "32": {
+              "title": "Un-Controlled Components",
+              "id": "527.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "https://facebook.github.io/react/docs/uncontrolled-components.html",
+                  "id": "528.5f225201abf452e4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "33": {
+              "title": "Animations",
+              "id": "529.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "530.5f225201abf452e4",
+                  "ideas": {
+                    "2": {
+                      "title": "ReactCSSTransitonGroup",
+                      "id": "532.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://codepen.io/agrewell/pen/ZYdGOJ",
+                          "id": "531.5f225201abf452e4",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "34": {
+              "title": "React DnD",
+              "id": "535.660e32f1795f9372",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "536.660e32f1795f9372",
+                  "ideas": {
+                    "1": {
+                      "title": "https://react-dnd.github.io/react-dnd/",
+                      "id": "537.660e32f1795f9372"
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "Different backends that can work with HTML5, Touch ... etc",
+                  "id": "538.660e32f1795f9372"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "35": {
+              "title": "Third Party",
+              "id": "539.28281ce91f578c18",
+              "ideas": {
+                "1": {
+                  "title": "React Router",
+                  "id": "542.28281ce91f578c18",
+                  "ideas": {
+                    "1": {
+                      "title": "Resources",
+                      "id": "543.28281ce91f578c18",
+                      "ideas": {
+                        "1": {
+                          "title": "https://reacttraining.com/react-router/web/guides/quick-start",
+                          "id": "544.28281ce91f578c18"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "45": {
+              "title": "My Impressions",
+              "id": "519.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "We use Immutable so we can control what re-renders ",
+                  "id": "520.5f225201abf452e4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "55": {
+              "title": "Web Components",
+              "id": "523.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "https://facebook.github.io/react/docs/web-components.html",
+                  "id": "524.5f225201abf452e4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14.5": {
+              "title": "Refs",
+              "id": "490.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "passes a reference to the DOM element in a callback so you can interact with it",
+                  "id": "492.5f225201abf452e4"
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "493.5f225201abf452e4",
+                  "ideas": {
+                    "1": {
+                      "title": "CodePen",
+                      "id": "494.5f225201abf452e4",
+                      "ideas": {
+                        "1": {
+                          "title": "https://codepen.io/javasop/pen/QvGqjG?editors=0010",
+                          "id": "495.5f225201abf452e4"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "You can't use it with Functional Components",
+                  "id": "496.5f225201abf452e4",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "28.5": {
+              "title": "Context",
+              "id": "521.5f225201abf452e4",
+              "ideas": {
+                "1": {
+                  "title": "Pass down data down the tree without having to pass it as props",
+                  "id": "522.5f225201abf452e4"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3.5": {
+              "title": "Animation",
+              "id": "551.f8abce145859c08",
+              "ideas": {
+                "1": {
+                  "title": "Tweening",
+                  "id": "552.f8abce145859c08",
+                  "ideas": {
+                    "1": {
+                      "title": "Animating different frames?",
+                      "id": "558.f8abce145859c08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": "553.f8abce145859c08",
+                  "ideas": {
+                    "1": {
+                      "title": "React-motion youtube talk",
+                      "id": "554.f8abce145859c08",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=1tavDv5hXpo",
+                          "id": "556.f8abce145859c08"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.5": {
+                  "title": "Spring",
+                  "id": "557.f8abce145859c08",
+                  "ideas": {
+                    "1": {
+                      "title": "They only care about final destination of the animation",
+                      "id": "559.f8abce145859c08"
+                    },
+                    "2": {
+                      "title": "conserve the animation speed for me",
+                      "id": "560.f8abce145859c08"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "1.75": {
+                  "title": "Unmounting Tweens",
+                  "id": "561.f8abce145859c08"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "1.75": {
+              "title": "HOC",
+              "id": "564.d8e3.a8dc6d5e5-93ac.2ac2de7",
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "HOC example: \"withStyles\"",
+                  "id": "568.d8e3.a8dc6d5e5-93ac.2ac2de7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/airbnb/react-with-styles/blob/master/src/withStyles.jsx",
+                      "id": "569.d8e3.a8dc6d5e5-93ac.2ac2de7"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "https://reactjs.org/docs/higher-order-components.html",
+                  "id": "570.d8e3.a8dc6d5e5-93ac.2ac2de7"
+                }
+              }
+            },
+            "0.875": {
+              "title": "pureComponent",
+              "id": "566.d8e3.a8dc6d5e5-93ac.2ac2de7",
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://reactjs.org/docs/react-api.html#reactpurecomponent",
+                  "id": "567.d8e3.a8dc6d5e5-93ac.2ac2de7"
+                }
+              }
+            },
+            "0.4375": {
+              "title": "Hooks",
+              "id": "572.4f13.762071768-8fc7.72fc29ca6",
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "useState",
+                  "id": "573.4f13.762071768-8fc7.72fc29ca6",
+                  "ideas": {
+                    "1": {
+                      "title": "https://reactjs.org/docs/hooks-state.html",
+                      "id": "577.4f13.762071768-8fc7.72fc29ca6"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "useHooks",
+                  "id": "574.4f13.762071768-8fc7.72fc29ca6",
+                  "ideas": {
+                    "1": {
+                      "title": "instead of componentDidMount and componentDidUpdate",
+                      "id": "575.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://reactjs.org/docs/hooks-effect.html",
+                          "id": "576.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "cleanup after hooks",
+                      "id": "578.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://reactjs.org/docs/hooks-effect.html#example-using-hooks-1",
+                          "id": "579.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "you can use them multiple hooks in one component",
+                      "id": "580.4f13.762071768-8fc7.72fc29ca6"
+                    },
+                    "4": {
+                      "title": "Performance",
+                      "id": "581.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects",
+                          "id": "582.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "only use them in functions",
+                  "id": "583.4f13.762071768-8fc7.72fc29ca6"
+                },
+                "4": {
+                  "title": "Resources",
+                  "id": "584.4f13.762071768-8fc7.72fc29ca6",
+                  "ideas": {
+                    "1": {
+                      "title": "All Hooks",
+                      "id": "585.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://reactjs.org/docs/hooks-reference.html",
+                          "id": "586.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2.5": {
+                  "title": "useCallbacks",
+                  "id": "587.4f13.762071768-8fc7.72fc29ca6",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "example",
+                      "id": "588.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "https://medium.com/@sdolidze/react-hooks-memoization-99a9a91c8853",
+                          "id": "590.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "or useMemo",
+                      "id": "589.4f13.762071768-8fc7.72fc29ca6"
+                    },
+                    "3": {
+                      "title": "basically to skip rerender when given the same props",
+                      "id": "591.4f13.762071768-8fc7.72fc29ca6",
+                      "ideas": {
+                        "1": {
+                          "title": "useMemo",
+                          "id": "592.4f13.762071768-8fc7.72fc29ca6"
+                        },
+                        "2": {
+                          "title": "that way we can provide deep comparsion since react does a shallow compare",
+                          "id": "593.4f13.762071768-8fc7.72fc29ca6"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "2.75": {
+                  "title": "useReducer",
+                  "id": "594.4f13.762071768-8fc7.72fc29ca6",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://reactjs.org/docs/hooks-reference.html#usereducer",
+                      "id": "595.4f13.762071768-8fc7.72fc29ca6"
+                    }
+                  }
+                },
+                "1.5": {
+                  "title": "useEffect",
+                  "id": "596.4f13.762071768-8fc7.72fc29ca6",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://reactjs.org/docs/hooks-reference.html#useeffect",
+                      "id": "597.4f13.762071768-8fc7.72fc29ca6"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "note": {
+              "text": "GUIDES\n\n[Why React?](https://facebook.github.io/react/docs/why-react.html)\n\n[Displaying Data](https://facebook.github.io/react/docs/displaying-data.html)[JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)\n\n[JSX Spread Attributes](https://facebook.github.io/react/docs/jsx-spread.html)\n\n[JSX Gotchas](https://facebook.github.io/react/docs/jsx-gotchas.html)\n\n[Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)\n\n[Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)\n\n[Reusable Components](https://facebook.github.io/react/docs/reusable-components.html)\n\n[Transferring Props](https://facebook.github.io/react/docs/transferring-props.html)\n\n[Forms](https://facebook.github.io/react/docs/forms.html)\n\n[Working With the Browser](https://facebook.github.io/react/docs/working-with-the-browser.html)[Refs to Components](https://facebook.github.io/react/docs/more-about-refs.html)\n\n[Tooling Integration](https://facebook.github.io/react/docs/tooling-integration.html)[Language Tooling](https://facebook.github.io/react/docs/language-tooling.html)\n\n[Package Management](https://facebook.github.io/react/docs/package-management.html)\n\n[Server-side Environments](https://facebook.github.io/react/docs/environments.html)\n\n[Add-Ons](https://facebook.github.io/react/docs/addons.html)[Animation](https://facebook.github.io/react/docs/animation.html)\n\n[Two-Way Binding Helpers](https://facebook.github.io/react/docs/two-way-binding-helpers.html)\n\n[Test Utilities](https://facebook.github.io/react/docs/test-utils.html)\n\n[Cloning Elements](https://facebook.github.io/react/docs/clone-with-props.html)\n\n[Keyed Fragments](https://facebook.github.io/react/docs/create-fragment.html)\n\n[Immutability Helpers](https://facebook.github.io/react/docs/update.html)\n\n[PureRenderMixin](https://facebook.github.io/react/docs/pure-render-mixin.html)\n\n[Performance Tools](https://facebook.github.io/react/docs/perf.html)\n\n[Shallow Compare](https://facebook.github.io/react/docs/shallow-compare.html)\n\n[Advanced Performance](https://facebook.github.io/react/docs/advanced-performance.html)\n\n[Context](https://facebook.github.io/react/docs/context.html)"
+            }
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "2": {
+              "title": "Main Website",
+              "id": 185,
+              "ideas": {
+                "1": {
+                  "title": "http://facebook.github.io/react/",
+                  "id": 186
+                }
+              },
+              "attr": {
+                "position": [
+                  110,
+                  -114,
+                  1
+                ],
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Thrid Party",
+              "id": 111,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Structor",
+                  "id": 188,
+                  "ideas": {
+                    "2": {
+                      "title": "https://github.com/ipselon/structor",
+                      "id": "451.614b4ed91883a121"
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "React Webpack generator",
+                  "id": 201,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/newtriks/generator-react-webpack#app",
+                      "id": 203
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "React Native",
+                  "id": 312,
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react-native/",
+                      "id": 313
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Material UI",
+                  "id": 314,
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.material-ui.com/#/components/radio-button",
+                      "id": 315
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Native React IDE",
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://david-peter.de/cube-composer/",
+                      "id": "440.3f5f9cba965f90b6"
+                    }
+                  },
+                  "id": "439.3f5f9cba965f90b6"
+                },
+                "6": {
+                  "title": "State Management",
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Mobx",
+                      "id": "442.3f5f9cba965f90b6"
+                    },
+                    "2": {
+                      "title": "Redux",
+                      "id": "443.3f5f9cba965f90b6"
+                    }
+                  },
+                  "id": "441.3f5f9cba965f90b6"
+                },
+                "7": {
+                  "title": "Reusable components",
+                  "id": 319,
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.reactjsx.com/",
+                      "id": 320
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Blocks",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/whoisandie/react-blocks",
+                      "id": "449.3f5f9cba965f90b6"
+                    }
+                  },
+                  "id": "448.3f5f9cba965f90b6",
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "React Router",
+                  "id": "540.28281ce91f578c18",
+                  "ideas": {
+                    "1": {
+                      "title": "https://reacttraining.com/react-router/",
+                      "id": "541.28281ce91f578c18"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "8": {
+              "title": "Meta",
+              "id": "444.3f5f9cba965f90b6",
+              "ideas": {
+                "1": {
+                  "title": "Awesome List",
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/enaqx/awesome-react",
+                      "id": "446.3f5f9cba965f90b6"
+                    }
+                  },
+                  "id": "445.3f5f9cba965f90b6"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Link to external mindmaps",
+              "id": "404.3860c78083979995",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrejRBenBobXhROEU/view?usp=sharing",
+                  "id": "405.3860c78083979995",
+                  "ideas": {
+                    "1": {
+                      "title": "material-ui",
+                      "id": "406.3860c78083979995"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Mobx",
+                  "id": "437.3f5f9cba965f90b6",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrMU1fRGlBX3QtM0k/view?usp=sharing",
+                      "id": "438.3f5f9cba965f90b6"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Projects",
+                  "id": 317,
+                  "ideas": {
+                    "1": {
+                      "title": "React mindmap",
+                      "id": 318,
+                      "ideas": {
+                        "1": {
+                          "title": "https://drive.google.com/open?id=0B9tPYCpuqoIra0tib1hkMXBNaTg",
+                          "id": 356
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "React Native",
+                  "id": "452.3c00f79508479691",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrN1B6RWRfQUJqTGM/view?usp=sharing",
+                      "id": "453.3c00f79508479691"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Redux",
+                  "id": "549.394d86dabcb48563",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrQUphSGdrejA3dVE/view?usp=sharing",
+                      "id": "550.394d86dabcb48563"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "Tutorials",
+              "id": "450.3f5f9cba965f90b6",
+              "ideas": {
+                "1": {
+                  "title": "React Mini Patterns",
+                  "id": "423.540bc48ea6633cc9",
+                  "ideas": {
+                    "1": {
+                      "title": "https://hackernoon.com/10-react-mini-patterns-c1da92f068c5?gi=b499da5cb240#.qt1f1t13g",
+                      "id": "424.540bc48ea6633cc9"
+                    }
+                  },
+                  "attr": {}
+                },
+                "2": {
+                  "title": "React mystified",
+                  "id": 330,
+                  "ideas": {
+                    "1": {
+                      "title": "http://blog.reverberate.org/2014/02/react-demystified.html",
+                      "id": 331
+                    },
+                    "2": {
+                      "title": "Explains react from the ground up",
+                      "id": 332
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "position": [
+                  92,
+                  119,
+                  2
+                ]
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 308,
+      "ideaIdTo": 305,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "React"
+}

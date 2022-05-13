@@ -1,0 +1,56 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Postgres",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "11": {
+          "title": "Concepts",
+          "id": 4,
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 5,
+          "ideas": {
+            "1": {
+              "title": "https://www.postgresql.org/",
+              "id": 6
+            },
+            "2": {
+              "title": "Docs",
+              "id": 7,
+              "ideas": {
+                "1": {
+                  "title": "https://www.postgresql.org/docs/9.6/static/intro-whatis.html",
+                  "id": 8
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Postgres"
+}

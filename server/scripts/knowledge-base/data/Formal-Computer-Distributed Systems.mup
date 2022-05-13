@@ -1,0 +1,120 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Distributed Systems",
+      "attr": {
+        "position": [
+          -66,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.42da26b9d22db425",
+          "ideas": {
+            "1": {
+              "title": "CRDTS",
+              "id": "5.42da26b9d22db425",
+              "attr": {
+                "note": {
+                  "index": 3,
+                  "text": "Replicating Data across nodes in a distributed system\nA lot of conflict resolution mechanism (concurrency anamolies)\nEventual consistency"
+                }
+              }
+            },
+            "2": {
+              "title": "message passing",
+              "id": "7.60ec.62dec4c62-3452.7fd79b789",
+              "ideas": {
+                "1": {
+                  "title": "grpc",
+                  "id": "8.60ec.62dec4c62-3452.7fd79b789"
+                },
+                "2": {
+                  "title": "http",
+                  "id": "9.60ec.62dec4c62-3452.7fd79b789"
+                },
+                "3": {
+                  "title": "other protocols",
+                  "id": "10.60ec.62dec4c62-3452.7fd79b789"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "global definition",
+              "id": "11.60ec.62dec4c62-3452.7fd79b789",
+              "attr": {
+                "note": {
+                  "index": 8,
+                  "text": "There are several autonomous computational entities (computers or nodes), each of which has its own local memory.[8]\n\n\nThe entities communicate with each other by message passing.[9]"
+                }
+              }
+            },
+            "4": {
+              "title": "FSM",
+              "id": "12.60ec.62dec4c62-3452.7fd79b789",
+              "ideas": {
+                "1": {
+                  "title": "Finite state machine",
+                  "id": "13.60ec.62dec4c62-3452.7fd79b789",
+                  "ideas": {
+                    "2": {
+                      "title": "Resources",
+                      "id": "15.60ec.62dec4c62-3452.7fd79b789",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Finite-state_machine",
+                          "id": "14.60ec.62dec4c62-3452.7fd79b789",
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Eventual Consistency",
+              "id": "16.60ec.62dec4c62-3452.7fd79b789",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Eventual_consistency",
+                  "id": "17.60ec.62dec4c62-3452.7fd79b789"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.42da26b9d22db425",
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Distributed_computing",
+              "id": "6.60ec.62dec4c62-3452.7fd79b789"
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Distributed Systems"
+}

@@ -1,0 +1,125 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Elixir",
+      "attr": {
+        "style": {},
+        "position": [
+          -21,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "2": {
+          "title": "Concepts",
+          "id": 13,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Features",
+              "id": 9,
+              "ideas": {
+                "1": {
+                  "title": "Reliable ",
+                  "id": 14
+                },
+                "2": {
+                  "title": "Concurrent support is high",
+                  "id": 15
+                },
+                "3": {
+                  "title": "Processes use data to communiacte as apposed to shared variables",
+                  "id": 16
+                },
+                "4": {
+                  "title": "there's a VM",
+                  "id": 17,
+                  "ideas": {
+                    "1": {
+                      "title": "Runs on Erlang",
+                      "id": "20.62fa.de44ec518-55d6.121e41757"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {
+                  "background": "#008000",
+                  "backgroundColor": "#C0C0C0",
+                  "text": {
+                    "color": "#333300"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-6": {
+          "title": "Resources",
+          "id": 2,
+          "ideas": {
+            "2": {
+              "title": "main website",
+              "id": 19,
+              "attr": {
+                "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "http://elixir-lang.org/",
+                  "id": 18,
+                  "ideas": {},
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "3": {
+              "title": "Erlang",
+              "id": "21.62fa.de44ec518-55d6.121e41757",
+              "ideas": {
+                "1": {
+                  "title": "http://erlang.org/doc/index.html",
+                  "id": "23.62fa.de44ec518-55d6.121e41757"
+                }
+              }
+            },
+            "4": {
+              "title": "Web Framework",
+              "id": "24.62fa.de44ec518-55d6.121e41757",
+              "ideas": {
+                "1": {
+                  "title": "https://phoenixframework.org/",
+                  "id": "25.62fa.de44ec518-55d6.121e41757"
+                }
+              }
+            },
+            "5": {
+              "title": "Implement REST API",
+              "id": "26.62fa.de44ec518-55d6.121e41757",
+              "ideas": {
+                "1": {
+                  "title": "https://blog.lelonek.me/minimal-elixir-http2-server-64188d0c1f3a",
+                  "id": "27.62fa.de44ec518-55d6.121e41757"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Elixir"
+}

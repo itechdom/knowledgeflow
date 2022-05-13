@@ -1,0 +1,43 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Formal-Computer-Matterjs",
+      "id": 1,
+      "attr": {
+        "position": [
+          -79,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.88ec.84681d4b6-106f.e1cc542a8"
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.88ec.84681d4b6-106f.e1cc542a8",
+          "ideas": {
+            "1": {
+              "title": "Physics Mindmap",
+              "id": "4.88ec.84681d4b6-106f.e1cc542a8",
+              "ideas": {
+                "1": {
+                  "title": "https://drive.mindmup.com/map/1ByrPhfpqzAZzRSVSPSrZFyM5AGWSYlSg",
+                  "id": "5.88ec.84681d4b6-106f.e1cc542a8"
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "title": ""
+}

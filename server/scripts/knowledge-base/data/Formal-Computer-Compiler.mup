@@ -1,0 +1,536 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Compiler",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.3cef68cb40d91e26",
+          "ideas": {
+            "7": {
+              "title": "Phases",
+              "id": "13.3cef68cb40d91e26",
+              "attr": {
+                "note": {
+                  "index": 12,
+                  "text": "lexical analysis, preprocessing, parsing, semantic analysis (syntax-directed translation), code generation, and code optimization."
+                }
+              },
+              "ideas": {
+                "6": {
+                  "title": "Parts",
+                  "ideas": {
+                    "1": {
+                      "title": "Front end",
+                      "attr": {
+                        "note": {
+                          "index": 40,
+                          "text": "The front end verifies syntax and semantics according to a specific source language. Performs type checking by collecting type information. Generates errors and warnings, if any, highlighting[dubious – discuss] them on the source code. Aspects of the front end include lexical analysis, syntax analysis, and semantic analysis. Eventually generates an intermediate representation or IR of the source code for processing by the middle-end. This IR is usually a lower level of representation of the program with respect to the source code."
+                        },
+                        "position": [
+                          60,
+                          -269,
+                          1
+                        ]
+                      },
+                      "id": "48.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "Purpose",
+                          "id": "56.3cef68cb40d91e26",
+                          "attr": {
+                            "note": {
+                              "index": 23,
+                              "text": "The compiler frontend analyzes the source code to build an internal representation of the program, called the intermediate representation or IR. It also manages the symbol table, a data structure mapping each symbol in the source code to associated information such as location, type and scope."
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "this is usually broken into phases",
+                          "id": "57.3cef68cb40d91e26",
+                          "ideas": {
+                            "1": {
+                              "title": "Lexical Analysis",
+                              "id": "58.3cef68cb40d91e26",
+                              "ideas": {
+                                "1": {
+                                  "title": "Scanning and Evaluating",
+                                  "id": "62.3cef68cb40d91e26"
+                                },
+                                "2": {
+                                  "title": "Generates tokens",
+                                  "id": "68.3cef68cb40d91e26"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "Semantic Analysis",
+                              "id": "59.3cef68cb40d91e26",
+                              "ideas": {
+                                "1": {
+                                  "title": "Generates an Abstract syntax tree",
+                                  "id": "64.3cef68cb40d91e26"
+                                }
+                              },
+                              "attr": {
+                                "note": {
+                                  "index": 31,
+                                  "text": "Semantic analysis is the phase in which the compiler adds semantic information to the parse tree and builds the symbol table. This phase performs semantic checks such as type checking (checking for type errors), or object binding (associating variable and function references with their definitions), or definite assignment (requiring all local variables to be initialized before use), rejecting incorrect programs or issuing warnings. Semantic analysis usually requires a complete parse tree, meaning that this phase logically follows the parsing phase, and logically precedes the code generation phase, though it is often possible to fold multiple phases into one pass over the code in a compiler implementation."
+                                },
+                                "collapsed": true
+                              }
+                            },
+                            "4": {
+                              "title": "Resources",
+                              "id": "66.3cef68cb40d91e26",
+                              "ideas": {
+                                "1": {
+                                  "title": "an image showing lexing and parsing",
+                                  "id": "65.3cef68cb40d91e26",
+                                  "attr": {},
+                                  "ideas": {
+                                    "1": {
+                                      "title": "https://commons.wikimedia.org/wiki/File:Xxx_Scanner_and_parser_example_for_C.gif#/media/File:Xxx_Scanner_and_parser_example_for_C.gif",
+                                      "id": "67.3cef68cb40d91e26"
+                                    }
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "1.5": {
+                              "title": "Syntax Analysis",
+                              "id": "60.3cef68cb40d91e26",
+                              "ideas": {
+                                "1": {
+                                  "title": "also known as parsing",
+                                  "id": "61.3cef68cb40d91e26"
+                                },
+                                "2": {
+                                  "title": "builds parse tree",
+                                  "id": "63.3cef68cb40d91e26"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Middle",
+                      "attr": {
+                        "note": {
+                          "index": 41,
+                          "text": "The middle end performs optimizations on a form other than the source code or machine code. This source code/machine code independence is intended to enable generic optimizations to be shared between versions of the compiler supporting different languages and target processors. Examples of middle end optimizations are removal of useless (dead code elimination) or unreachable code (reachability analysis), discovery and propagation of constant values (constant propagation), relocation of computation to a less frequently executed place (e.g., out of a loop), or specialization of computation based on the context. Eventually it may[clarification needed] generate another IR for to be used in the back end."
+                        }
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "performas optamization on the frontend code",
+                          "id": "50.3cef68cb40d91e26"
+                        },
+                        "2": {
+                          "title": "Intermediate code generator",
+                          "id": "19.3cef68cb40d91e26",
+                          "ideas": {
+                            "1": {
+                              "title": "this is non-optamized",
+                              "id": "20.3cef68cb40d91e26"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "id": "49.3cef68cb40d91e26"
+                    },
+                    "3": {
+                      "title": "Backend (machine)",
+                      "attr": {
+                        "note": {
+                          "index": 42,
+                          "text": "The back end takes the output from the middle end. It may perform more analysis, transformations and optimizations that are for a particular computer. Generates the target-dependent assembly code, performing register allocation in process. Performs optimizations of the target code utilization of the hardware, like figuring out how to keep parallel execution units busy by filling delay slots. Although most algorithms for optimization are NP-hard, heuristic techniques are well-developed and currently implemented in production-quality compilers.[14] Typically the output of a back end is machine code specialized for a particular processor and operating system."
+                        }
+                      },
+                      "id": "51.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "runs the code on a target machine",
+                          "id": "52.3cef68cb40d91e26"
+                        },
+                        "2": {
+                          "title": "this is very machine dependent",
+                          "id": "70.3cef68cb40d91e26"
+                        },
+                        "3": {
+                          "title": "Intermediate code optimizer",
+                          "id": "21.3cef68cb40d91e26",
+                          "ideas": {
+                            "1": {
+                              "title": "generates something that can be run by the machine in an efficient manner",
+                              "id": "22.3cef68cb40d91e26"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "Separation of these parts make it easy to hook up different front-ends to backends",
+                      "id": "53.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "Examples",
+                          "id": "54.3cef68cb40d91e26",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 28,
+                              "text": "Practical examples of this approach are the GNU Compiler Collection, LLVM,[15] and the Amsterdam Compiler Kit, which have multiple front-ends, shared analysis and multiple back-ends."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "id": "47.3cef68cb40d91e26",
+                  "attr": {}
+                },
+                "7": {
+                  "title": "Resources",
+                  "id": "81.3cef68cb40d91e26",
+                  "ideas": {
+                    "1": {
+                      "title": "Simple tutorial showing compiler design",
+                      "id": "82.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "https://www.youtube.com/watch?v=54bo1qaHAfk",
+                          "id": "83.3cef68cb40d91e26"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Diagram showing different phases a compilation goes through",
+                      "id": "14.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "https://commons.wikimedia.org/wiki/File:Compiler.svg#/media/File:Compiler.svg",
+                          "id": "15.3cef68cb40d91e26"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "9": {
+              "title": "Techniques",
+              "id": "23.3cef68cb40d91e26",
+              "attr": {
+                "note": {
+                  "index": 22,
+                  "text": "Program development by stepwise refinement (also the title of a 1971 paper by Wirth)[8]\nThe use of a recursive descent parser\nThe use of Extended Backus–Naur Form (EBNF) to specify the syntax of a language\nA code generator producing portable P-code\nThe use of tombstone diagrams in the formal description of the bootstrapping problem."
+                }
+              }
+            },
+            "12": {
+              "title": "Special Type of Compilers",
+              "id": "29.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "JIT",
+                  "id": "25.3cef68cb40d91e26",
+                  "attr": {
+                    "note": {
+                      "index": 24,
+                      "text": "Just-in-time compiler (JIT compiler) is the last part of a multi-pass compiler chain in which some compilation stages are deferred to run-time. Examples are implemented in Smalltalk, Java and Microsoft .NET's Common Intermediate Language (CIL) systems.\nApplications are first compiled using a bytecode compiler and delivered in a machine-independent intermediate representation. This bytecode is then compiled using a JIT compiler to native machine code just when the execution of the program is required.[9]"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Byte Interpretation",
+                  "id": "26.3cef68cb40d91e26",
+                  "attr": {
+                    "note": {
+                      "index": 25,
+                      "text": "Bytecode compilers that compile to assembly language of a theoretical machine, like some Prolog implementations\nThis Prolog machine is also known as the Warren Abstract Machine (or WAM).\nBytecode compilers for Java, Python are also examples of this category."
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Hardware compilers",
+                  "id": "30.3cef68cb40d91e26",
+                  "attr": {
+                    "note": {
+                      "index": 27,
+                      "text": "hardware compilers (also known as syntheses tools) are compilers whose output is a description of the hardware configuration instead of a sequence of instructions.\nThe output of these compilers target computer hardware at a very low level, for example a field-programmable gate array (FPGA) or structured application-specific integrated circuit (ASIC).[10] Such compilers are said to be hardware compilers, because the source code they compile effectively controls the final configuration of the hardware and how it operates. The output of the compilation is only an interconnection of transistors or lookup tables.\nAn example of hardware compiler is XST,[11][12] the Xilinx Synthesis Tool used for configuring FPGAs. Similar tools are available from Altera,[13] Synplicity, Synopsys and other hardware vendors."
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "PQCC",
+              "id": "37.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/PQCC",
+                  "id": "38.3cef68cb40d91e26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Target machine types",
+              "id": "39.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "ARM",
+                  "id": "40.3cef68cb40d91e26"
+                },
+                "2": {
+                  "title": "X86",
+                  "id": "41.3cef68cb40d91e26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Compiler correctness",
+              "id": "71.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "A branch of computer science concerned with compilers being correct",
+                  "id": "72.3cef68cb40d91e26"
+                },
+                "2": {
+                  "title": "https://en.wikipedia.org/wiki/Compiler_correctness",
+                  "id": "73.3cef68cb40d91e26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "types",
+              "id": "84.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "Cross compiler ",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "a compiler that runs on multiple OS",
+                      "id": "86.3cef68cb40d91e26"
+                    },
+                    "2": {
+                      "title": "Compilers that generate a code that runs on a VM aren't cross compilers since the code generated may or may not run on the target machine",
+                      "id": "87.3cef68cb40d91e26"
+                    }
+                  },
+                  "id": "85.3cef68cb40d91e26"
+                },
+                "2": {
+                  "title": "Interpretation",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Running on the same machine",
+                      "id": "89.3cef68cb40d91e26"
+                    }
+                  },
+                  "id": "88.3cef68cb40d91e26"
+                },
+                "3": {
+                  "title": "Transpiler",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "A compiler that translates between two high level languages",
+                      "id": "91.3cef68cb40d91e26"
+                    }
+                  },
+                  "id": "90.3cef68cb40d91e26"
+                },
+                "4": {
+                  "title": "One Pass Vs. Multi Pass",
+                  "id": "33.3cef68cb40d91e26",
+                  "ideas": {
+                    "1": {
+                      "title": "How many times a compiler has to go over the source to compile the code",
+                      "id": "34.3cef68cb40d91e26"
+                    },
+                    "2": {
+                      "title": "Early languages tended to use One Pass",
+                      "id": "35.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "due to resource limitation",
+                          "id": "36.3cef68cb40d91e26"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "Uknowns",
+              "id": "92.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "Linker",
+                  "id": "32.3cef68cb40d91e26",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "Assembler",
+                  "id": "31.3cef68cb40d91e26",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              81,
+              -54,
+              1
+            ]
+          }
+        },
+        "2": {
+          "title": "Project",
+          "id": "74.3cef68cb40d91e26",
+          "ideas": {
+            "1": {
+              "title": "Write a simple lexical parser",
+              "id": "75.3cef68cb40d91e26"
+            },
+            "2": {
+              "title": "Write a simple Parsing module that generates a Parse Tree",
+              "id": "76.3cef68cb40d91e26"
+            },
+            "3": {
+              "title": "Invent your own symantics",
+              "id": "77.3cef68cb40d91e26"
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.3cef68cb40d91e26",
+          "ideas": {
+            "1": {
+              "title": "Wikipedia",
+              "id": "27.3cef68cb40d91e26",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Compiler",
+                  "id": "28.3cef68cb40d91e26"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "Third Party",
+              "id": "78.3cef68cb40d91e26",
+              "ideas": {
+                "2": {
+                  "title": "Lexers",
+                  "id": "93.3cef68cb40d91e26",
+                  "ideas": {
+                    "1": {
+                      "title": "yacc",
+                      "id": "94.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "yet another compiler compiler",
+                          "id": "97.3cef68cb40d91e26"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Lexical Parser for Javascript",
+                      "id": "79.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/aaditmshah/lexer",
+                          "id": "80.3cef68cb40d91e26"
+                        }
+                      },
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "lex/flex",
+                      "id": "95.3cef68cb40d91e26",
+                      "ideas": {
+                        "1": {
+                          "title": "flex is the open source version",
+                          "id": "96.3cef68cb40d91e26"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Compiler",
+  "links": []
+}

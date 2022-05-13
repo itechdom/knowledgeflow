@@ -1,0 +1,555 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Data Structures and Algorithms",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "0.5": {
+          "title": "Concepts",
+          "id": 144,
+          "ideas": {
+            "12": {
+              "title": "complexity",
+              "id": 435,
+              "ideas": {
+                "1": {
+                  "title": "Big O Notation",
+                  "id": 436,
+                  "ideas": {
+                    "1": {
+                      "title": "O(s)\n",
+                      "id": 438,
+                      "ideas": {
+                        "1": {
+                          "title": "time increases with size linearly",
+                          "id": 439,
+                          "ideas": {
+                            "1": {
+                              "title": "the more of s, the longer it takes",
+                              "id": 440
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "O(1)",
+                      "id": 441,
+                      "ideas": {
+                        "1": {
+                          "title": "time remains constant",
+                          "id": 442,
+                          "ideas": {}
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Look at the analogy on page 39 of cracking the code interview",
+                      "id": 445
+                    },
+                    "4": {
+                      "title": "O(log N)",
+                      "id": 446
+                    },
+                    "5": {
+                      "title": "O(N log N)",
+                      "id": 447
+                    },
+                    "6": {
+                      "title": "O(N)",
+                      "id": 448
+                    },
+                    "7": {
+                      "title": "O(N^2)",
+                      "id": 449
+                    },
+                    "8": {
+                      "title": "O(N^3)",
+                      "id": 450
+                    },
+                    "9": {
+                      "title": "O(2^n)",
+                      "id": 451
+                    },
+                    "10": {
+                      "title": "O(wh)",
+                      "id": 452,
+                      "ideas": {
+                        "1": {
+                          "title": "the time it takes you to brush a surface increase by width and height",
+                          "id": 453
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "2": {
+                  "title": "Space Complexity",
+                  "id": 454,
+                  "ideas": {
+                    "2": {
+                      "title": "O (n) space",
+                      "id": 456,
+                      "ideas": {
+                        "1": {
+                          "title": "if we are recursively going through a function, we expect to have more space since we will be using the call stack",
+                          "id": 457
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Math",
+                  "id": 458,
+                  "ideas": {
+                    "1": {
+                      "title": "Log",
+                      "id": 459
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Cracking the coding interview is a really good book and I should refer to it",
+                  "id": 460
+                },
+                "5": {
+                  "title": "What's the base of log?",
+                  "id": 482,
+                  "ideas": {
+                    "1": {
+                      "title": "2 or 10 ?",
+                      "id": 488
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "background": "#800000"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Data Structures",
+              "id": 461,
+              "ideas": {
+                "1": {
+                  "title": "Graph",
+                  "id": 425,
+                  "ideas": {
+                    "1": {
+                      "title": "the internet",
+                      "id": 426
+                    },
+                    "2": {
+                      "title": "there's usually a data structure on top of the graph?",
+                      "id": 431
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Linked List",
+                  "id": 494,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "Trees, Tries, Graphs",
+                  "id": 495,
+                  "attr": {
+                    "style": {}
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Binary Search Trees",
+                      "id": "518.32719db01bcf2888",
+                      "ideas": {
+                        "1": {
+                          "title": "Search is as fast as a sorted array",
+                          "id": "519.32719db01bcf2888"
+                        },
+                        "2": {
+                          "title": "Insertion and deletion is as fast as a linked list",
+                          "id": "520.32719db01bcf2888"
+                        },
+                        "3": {
+                          "title": "Basic Operations",
+                          "id": "521.32719db01bcf2888",
+                          "attr": {
+                            "note": {
+                              "index": 36,
+                              "text": "Insert − Inserts an element in a tree/create a tree.\n\nSearch − Searches an element in a tree.\n\nPreorder Traversal − Traverses a tree in a pre-order manner.\n\nInorder Traversal − Traverses a tree in an in-order manner.\n\nPostorder Traversal − Traverses a tree in a post-order manner."
+                            }
+                          }
+                        },
+                        "4": {
+                          "title": "Applications of Binary Tree",
+                          "id": "523.32719db01bcf2888",
+                          "ideas": {
+                            "1": {
+                              "title": "https://stackoverflow.com/questions/2130416/what-are-the-applications-of-binary-trees",
+                              "id": "524.32719db01bcf2888"
+                            },
+                            "2": {
+                              "title": "to implement Set and Map",
+                              "id": "526.32719db01bcf2888"
+                            },
+                            "3": {
+                              "title": "They become useful when you balance them",
+                              "id": "529.32719db01bcf2888"
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "Balanced Binary Tree",
+                          "id": "525.32719db01bcf2888"
+                        }
+                      }
+                    },
+                    "12": {
+                      "title": "Resources",
+                      "id": "512.32719db01bcf2888",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Tree_(data_structure)",
+                          "id": "513.32719db01bcf2888"
+                        },
+                        "2": {
+                          "title": "Tutorials Point",
+                          "id": "516.32719db01bcf2888",
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm",
+                              "id": "517.32719db01bcf2888"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6.5": {
+                      "title": "Interesting Facts",
+                      "id": "522.32719db01bcf2888",
+                      "ideas": {
+                        "1": {
+                          "title": "As a Data Structure we don't consider parent as a data that we store, we are only concerned with the node and the children that it stores",
+                          "id": "514.32719db01bcf2888",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Stacks & Queues",
+                  "id": 496,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "7": {
+                  "title": "Heaps",
+                  "id": 497,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "Vectors/ ArrayList",
+                  "id": 498,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "9": {
+                  "title": "Hash Tables",
+                  "id": 499,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "How to implement?",
+                      "id": 502,
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          88,
+                          -55,
+                          1
+                        ],
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Array of linked lists Hash function",
+                          "id": 504
+                        },
+                        "2": {
+                          "title": "Example",
+                          "id": 506,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<div>Hash:</div><div><br></div>\"hi\" -&gt; 103230 -&gt; &nbsp; [ 0 -&gt; LinkedList( \"hi\" -&gt; \"abc\" )<div>\"abc\" -&gt; 980 -&gt; [0 -&gt; LinkedList(empty) ]</div><div><br></div><div>notice how hi points to the linked list. The linked list contains both the key and value.</div><div>hi and the number it leads to is the hash function, the hash function takes a finite set of integer numbers and does this calculation:</div><div>function hash(arr,integerNumber){</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>var elementIndex = integerNumber % arr.length;</div></blockquote></div><div>}</div><div>the element index in this case points to the array. Cases we could run into with a Hash table is:</div><div><br></div><div>1) multiple keys (hi or abc in the previous example) map to one location</div><div>2) multiple integer numbers can map to the same array index (aka, the result of hash( ) is the same index)</div><div><br></div><div>to retrieve a value by its keys, we repeat this process: compute hash code from key and then compute the index from the key, then lookup the linked list and retrieve the value (second position here).</div><div><br></div><div>we can also implement hash table with balanced binary search tree. This gives us an O(log N) lookup time. Potentially uses less space since we no longer allocate a large array, we can also iterate through the keys in order.</div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "1.5": {
+                          "title": "in JavaScript",
+                          "id": 507,
+                          "ideas": {
+                            "1": {
+                              "title": "https://gist.github.com/alexhawkins/f6329420f40e5cafa0a4",
+                              "id": 508
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Complexity",
+                      "id": 503
+                    }
+                  }
+                },
+                "10": {
+                  "title": "Set",
+                  "id": "527.32719db01bcf2888"
+                },
+                "11": {
+                  "title": "Map",
+                  "id": "528.32719db01bcf2888"
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "14": {
+              "title": "Algorithms",
+              "id": 462,
+              "ideas": {
+                "1": {
+                  "title": "Search",
+                  "id": 463,
+                  "ideas": {
+                    "1": {
+                      "title": "Binary",
+                      "id": 464,
+                      "ideas": {
+                        "1": {
+                          "title": "Psuedo code",
+                          "id": 465,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "Search(9) within {1,5,8,9,11,13,15,19,21}<div>compare 9 to 11 -&gt; smaller</div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\">//split the array in half and look before 9 first since it's smaller than 11</blockquote></div><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>compare 9 within {1, 5, 8, 9}</div></blockquote></div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>compare 9 to 8 -&gt; bigger</div><div>search 9 within {9}</div></blockquote></div></blockquote><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div><blockquote style=\"margin: 0 0 0 40px; border: none; padding: 0px;\"><div>compare 9 to 9</div><div>return;</div></blockquote></div></blockquote></blockquote>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "3": {
+                          "title": "Complexity",
+                          "id": 477,
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "N = 16",
+                              "id": 467,
+                              "ideas": {
+                                "1": {
+                                  "title": "Next, N = 8",
+                                  "id": 468
+                                },
+                                "2": {
+                                  "title": "because we search half of each set we get",
+                                  "id": 469,
+                                  "ideas": {}
+                                },
+                                "3": {
+                                  "title": "The result of Log16",
+                                  "id": 472,
+                                  "ideas": {
+                                    "1": {
+                                      "title": "4",
+                                      "id": 473,
+                                      "ideas": {
+                                        "1": {
+                                          "title": "that's how many times it will take for the algorithm to multiply 1 by 2",
+                                          "id": 474,
+                                          "attr": {
+                                            "style": {}
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "style": {},
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "It always log N when the set is halved each time",
+                              "id": 480
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {},
+                        "position": [
+                          77,
+                          -71.1875,
+                          1
+                        ],
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Depth First",
+                      "id": 500
+                    },
+                    "3": {
+                      "title": "Breadth First",
+                      "id": 501
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Sort",
+                  "id": 490,
+                  "ideas": {
+                    "1": {
+                      "title": "Merge Sort",
+                      "id": 491
+                    },
+                    "2": {
+                      "title": "Quick Sort",
+                      "id": 492
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-4.5": {
+          "title": "Resources",
+          "id": 407,
+          "ideas": {
+            "6": {
+              "title": "JavaScript",
+              "id": 437,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/thejameskyle/itsy-bitsy-data-structures/blob/master/itsy-bitsy-data-structures.js",
+                  "id": 423,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Algorithm Visualizer",
+              "id": "510.3627827ce37f1e56",
+              "ideas": {
+                "1": {
+                  "title": "http://algo-visualizer.jasonpark.me/#path=backtracking/knight's_tour/basic",
+                  "id": "511.3627827ce37f1e56"
+                }
+              }
+            }
+          },
+          "attr": {
+            "style": {},
+            "position": [
+              227,
+              5,
+              1
+            ]
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Data Structures and Algorithms"
+}

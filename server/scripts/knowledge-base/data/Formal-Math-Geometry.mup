@@ -1,0 +1,69 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Geometry",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.6cab1c8da67c529f",
+          "ideas": {
+            "1": {
+              "title": "Sin",
+              "id": "4.1b5719efaf08afaf"
+            },
+            "2": {
+              "title": "Cos",
+              "id": "5.1b5719efaf08afaf",
+              "ideas": {}
+            },
+            "3": {
+              "title": "Tan",
+              "id": "6.1b5719efaf08afaf"
+            },
+            "4": {
+              "title": "inverse Cos",
+              "id": "7.1b5719efaf08afaf"
+            },
+            "5": {
+              "title": "Inverse Sin",
+              "id": "8.1b5719efaf08afaf"
+            },
+            "6": {
+              "title": "Inverse Tan",
+              "id": "9.6e95e0d9ff9d8c8f"
+            },
+            "9": {
+              "title": "Laws of cosines",
+              "id": "12.6e95e0d9ff9d8c8f",
+              "ideas": {
+                "1": {
+                  "title": "in vectors (linear algebra), we are working with the average geometry by having it in a set of |R ^ 2",
+                  "id": "10.6e95e0d9ff9d8c8f",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "C^2 = A^2 + B^2 - 2*A*B*cos(theta)",
+                  "id": "11.6e95e0d9ff9d8c8f",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.6cab1c8da67c529f"
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "Geometry"
+}

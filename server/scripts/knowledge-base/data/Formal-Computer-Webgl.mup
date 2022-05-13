@@ -1,0 +1,138 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Webgl",
+      "id": 1,
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.3aaf0b50c4b92559",
+          "ideas": {
+            "1": {
+              "title": "Shaders",
+              "id": "16.d7df.74e28f326-2142.ac403df18",
+              "ideas": {
+                "1": {
+                  "title": "they take vertices and they render pixel positions and colors",
+                  "id": "17.d7df.74e28f326-2142.ac403df18"
+                },
+                "2": {
+                  "title": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context",
+                  "id": "18.d7df.74e28f326-2142.ac403df18"
+                },
+                "3": {
+                  "title": "two types",
+                  "id": "19.d7df.74e28f326-2142.ac403df18",
+                  "ideas": {
+                    "1": {
+                      "title": "Fragments",
+                      "id": "20.d7df.74e28f326-2142.ac403df18"
+                    },
+                    "2": {
+                      "title": "Vertex",
+                      "id": "21.d7df.74e28f326-2142.ac403df18"
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "Matrices",
+              "id": "24.84eb.ec83d48cd-7d29.1332f67bb",
+              "ideas": {
+                "1": {
+                  "title": "Webgl and Matrices",
+                  "id": "25.84eb.ec83d48cd-7d29.1332f67bb",
+                  "ideas": {
+                    "1": {
+                      "title": "https://webglfundamentals.org/webgl/lessons/webgl-2d-matrices.html",
+                      "id": "26.84eb.ec83d48cd-7d29.1332f67bb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.3aaf0b50c4b92559",
+          "ideas": {
+            "1": {
+              "title": "Third Party",
+              "id": "4.3aaf0b50c4b92559",
+              "ideas": {
+                "1": {
+                  "title": "React-Three",
+                  "id": "5.3aaf0b50c4b92559",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/Izzimach/react-three",
+                      "id": "6.3aaf0b50c4b92559"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "External Mindmaps",
+                  "id": "7.3aaf0b50c4b92559",
+                  "ideas": {
+                    "1": {
+                      "title": "Three.js",
+                      "id": "8.3aaf0b50c4b92559",
+                      "ideas": {
+                        "1": {
+                          "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrdUVuaTlJRm0wQkU/view?usp=sharing",
+                          "id": "9.3aaf0b50c4b92559"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Graphics Programming",
+                      "id": "22.d7df.74e28f326-2142.ac403df18",
+                      "ideas": {
+                        "1": {
+                          "title": "https://drive.mindmup.com/map/1U-QG_m16elVvU4yCySdb3NHXHAYLr6VL",
+                          "id": "23.d7df.74e28f326-2142.ac403df18"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "2": {
+              "title": "intro to webgl with Three.js",
+              "id": "12.3aaf0b50c4b92559",
+              "ideas": {
+                "1": {
+                  "title": "http://davidscottlyons.com/threejs/presentations/frontporch14/#slide-1",
+                  "id": "13.3aaf0b50c4b92559"
+                }
+              }
+            },
+            "3": {
+              "title": "webgl",
+              "id": "14.d7df.74e28f326-2142.ac403df18",
+              "ideas": {
+                "1": {
+                  "title": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context",
+                  "id": "15.d7df.74e28f326-2142.ac403df18"
+                }
+              }
+            }
+          }
+        }
+      },
+      "attr": {
+        "position": [
+          -25,
+          -15,
+          1
+        ]
+      }
+    }
+  },
+  "title": "Webgl"
+}

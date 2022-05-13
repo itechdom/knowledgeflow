@@ -1,0 +1,42 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Apache",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "-10": {
+          "title": "Resources",
+          "id": 407,
+          "ideas": {
+            "2": {
+              "title": "https://httpd.apache.org/",
+              "id": 411
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Apache"
+}

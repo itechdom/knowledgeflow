@@ -1,0 +1,949 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Statistics",
+      "attr": {
+        "style": {},
+        "position": [
+          -33,
+          -15,
+          1
+        ]
+      },
+      "ideas": {
+        "7": {
+          "title": "Concepts",
+          "id": 27,
+          "ideas": {
+            "6": {
+              "title": "Branches",
+              "id": 43,
+              "ideas": {
+                "1": {
+                  "title": "Statistical Computing",
+                  "id": 44,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<h3 style=\"color: black; margin-top: 0.3em; margin-bottom: 0px; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; font-size: 1.2em; line-height: 1.6; font-family: sans-serif; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Statistical_computing\">Statistical computing</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Statistics&amp;action=edit&amp;section=24\" title=\"Edit section: Statistical computing\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\"><span style=\"line-height: 22.4px;\">Increased computing power has also led to the growing popularity of computationally intensive methods based on</span><span style=\"line-height: 22.4px;\">&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Resampling_(statistics)\" title=\"Resampling (statistics)\" style=\"line-height: 22.4px; color: rgb(11, 0, 128); background: none;\" target=\"_blank\">resampling</a><span style=\"line-height: 22.4px;\">, such as permutation tests and the</span><span style=\"line-height: 22.4px;\">&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Bootstrapping_(statistics)\" title=\"Bootstrapping (statistics)\" style=\"line-height: 22.4px; color: rgb(11, 0, 128); background: none;\" target=\"_blank\">bootstrap</a><span style=\"line-height: 22.4px;\">, while techniques such as</span><span style=\"line-height: 22.4px;\">&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Gibbs_sampling\" title=\"Gibbs sampling\" style=\"line-height: 22.4px; color: rgb(11, 0, 128); background: none;\" target=\"_blank\">Gibbs sampling</a><span style=\"line-height: 22.4px;\">&nbsp;</span><span style=\"line-height: 22.4px;\">have made use of Bayesian models more feasible. The computer revolution has implications for the future of statistics with new emphasis on \"experimental\" and \"empirical\" statistics. A large number of both general and special purpose</span><span style=\"line-height: 22.4px;\">&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/List_of_statistical_packages\" title=\"List of statistical packages\" style=\"line-height: 22.4px; color: rgb(11, 0, 128); background: none;\" target=\"_blank\">statistical software</a><span style=\"line-height: 22.4px;\">&nbsp;</span><span style=\"line-height: 22.4px;\">are now available.</span>The rapid and sustained increases in computing power starting from the second half of the 20th century have had a substantial impact on the practice of statistical science. Early statistical models were almost always from the class of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Linear_model\" title=\"Linear model\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">linear models</a>, but powerful computers, coupled with suitable numerical&nbsp;<a href=\"https://en.wikipedia.org/wiki/Algorithms\" title=\"Algorithms\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">algorithms</a>, caused an increased interest in&nbsp;<a href=\"https://en.wikipedia.org/wiki/Nonlinear_regression\" title=\"Nonlinear regression\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">nonlinear models</a>&nbsp;(such as&nbsp;<a href=\"https://en.wikipedia.org/wiki/Neural_networks\" title=\"Neural networks\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">neural networks</a>) as well as the creation of new types, such as<a href=\"https://en.wikipedia.org/wiki/Generalized_linear_model\" title=\"Generalized linear model\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">generalized linear models</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Multilevel_model\" title=\"Multilevel model\" style=\"color: rgb(11, 0, 128); background: none;\" target=\"_blank\">multilevel models</a>.</p>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  71,
+                  -153,
+                  1
+                ]
+              }
+            },
+            "7": {
+              "title": "Definition",
+              "id": "45.1077babe520a9de8",
+              "ideas": {
+                "1": {
+                  "title": "the study of the collection, analysis, interpretation, presentation, and organization of data.[1][2] ",
+                  "id": "46.1077babe520a9de8"
+                }
+              }
+            },
+            "8": {
+              "title": "Statistical model",
+              "id": "47.1077babe520a9de8",
+              "attr": {}
+            },
+            "11": {
+              "title": "Type of experimentations ",
+              "id": "51.1077babe520a9de8",
+              "ideas": {
+                "1": {
+                  "title": "Observational study",
+                  "id": "50.1077babe520a9de8",
+                  "attr": {
+                    "note": {
+                      "index": 10,
+                      "text": "In contrast, an observational study does not involve experimental manipulation."
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Experimental Study",
+                  "id": "48.1077babe520a9de8",
+                  "attr": {
+                    "note": {
+                      "index": 8,
+                      "text": "An experimental study involves taking measurements of the system under study, manipulating the system, and then taking additional measurements using the same procedure to determine if the manipulation has modified the values of the measurements"
+                    }
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Taking measurements of the system under study, manipulating something, then seeing the effect",
+                      "id": "49.1077babe520a9de8"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Methods",
+              "id": "52.1077babe520a9de8",
+              "ideas": {
+                "1": {
+                  "title": "Descriptive",
+                  "id": "53.1077babe520a9de8",
+                  "ideas": {
+                    "1": {
+                      "title": "Summarizes a data sample, such as index, mean, median ... etc",
+                      "id": "55.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Mean and others are called numerical descriptors",
+                          "id": "70.1077babe520a9de8"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Data types",
+                      "id": "71.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Continuous data",
+                          "id": "72.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "Like income",
+                              "id": "75.1077babe520a9de8"
+                            },
+                            "2": {
+                              "title": "they have specific numerical descriptors attached to them",
+                              "id": "78.1077babe520a9de8",
+                              "ideas": {
+                                "1": {
+                                  "title": "such as mean, ... etc",
+                                  "id": "79.1077babe520a9de8"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Categorical data",
+                          "id": "74.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "Like race",
+                              "id": "77.1077babe520a9de8"
+                            },
+                            "2": {
+                              "title": "they have frequency and percentages",
+                              "id": "80.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "constructs",
+                      "id": "93.1077babe520a9de8",
+                      "ideas": {
+                        "2": {
+                          "title": "What's happiness and how do you measure it?",
+                          "id": "95.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "the construct is happiness",
+                              "id": "96.1077babe520a9de8",
+                              "ideas": {}
+                            },
+                            "2": {
+                              "title": "Operational definitions",
+                              "id": "97.1077babe520a9de8",
+                              "ideas": {
+                                "1": {
+                                  "title": "is the way to measure constructs",
+                                  "id": "98.1077babe520a9de8"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "find the variables that influence your construct",
+                          "id": "100.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "Extranous factors",
+                              "id": "101.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Averages can differ from one sample to the next",
+                      "id": "102.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Population average is",
+                          "id": "103.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "mu",
+                              "id": "104.1077babe520a9de8",
+                              "ideas": {
+                                "1": {
+                                  "title": "the greek letter",
+                                  "id": "105.1077babe520a9de8"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "the sample average",
+                          "id": "106.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "x bar",
+                              "id": "107.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "the difference between the two is",
+                          "id": "108.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "sampling error",
+                              "id": "109.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Random distribution",
+                      "id": "110.1077babe520a9de8"
+                    },
+                    "6": {
+                      "title": "Variable types",
+                      "id": "111.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Independent variable",
+                          "id": "112.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "remember the example of hours slept and the memory score",
+                              "id": "114.1077babe520a9de8"
+                            },
+                            "2": {
+                              "title": "predictor variable",
+                              "id": "115.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "dependent variable",
+                          "id": "116.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "or outcome",
+                              "id": "117.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Lurking",
+                          "id": "118.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "those that affect your dependent variables",
+                              "id": "119.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Correlation doesn't infur causation",
+                      "id": "120.1077babe520a9de8"
+                    },
+                    "8": {
+                      "title": "Visualizing data",
+                      "id": "121.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Frequencey",
+                          "id": "154.6de5dd9c02426585"
+                        },
+                        "2": {
+                          "title": "Relative Frequncy",
+                          "id": "155.6de5dd9c02426585"
+                        },
+                        "3": {
+                          "title": "Examples",
+                          "id": "156.6de5dd9c02426585",
+                          "ideas": {
+                            "1": {
+                              "title": "hand length and height",
+                              "id": "157.6de5dd9c02426585",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://docs.google.com/spreadsheets/d/1nXKXeTezBbIKUlckP7Ct5pdUlZ205xTMHF5Jt6rIN_g/edit#gid=0",
+                                  "id": "158.6de5dd9c02426585"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "9": {
+                      "title": "Ways to gather data",
+                      "id": "122.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "surveys",
+                          "id": "123.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "there is problem with truthful response",
+                              "id": "124.1077babe520a9de8"
+                            },
+                            "2": {
+                              "title": "response bias",
+                              "id": "125.1077babe520a9de8",
+                              "ideas": {
+                                "1": {
+                                  "title": "not understanding the question",
+                                  "id": "126.1077babe520a9de8"
+                                },
+                                "2": {
+                                  "title": "or not responding",
+                                  "id": "149.6de5dd9c02426585"
+                                }
+                              }
+                            },
+                            "3": {
+                              "title": "used to analyze constructs",
+                              "id": "127.1077babe520a9de8"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "2": {
+                          "title": "Controlled experiements",
+                          "id": "128.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "A control group",
+                              "id": "129.1077babe520a9de8"
+                            },
+                            "3": {
+                              "title": "Experimental group",
+                              "id": "132.1077babe520a9de8",
+                              "ideas": {}
+                            },
+                            "13": {
+                              "title": "we use a placebo effect ",
+                              "id": "131.1077babe520a9de8",
+                              "attr": {
+                                "position": [
+                                  174,
+                                  68,
+                                  1
+                                ]
+                              }
+                            },
+                            "15": {
+                              "title": "ways to reduce bias",
+                              "id": "135.1077babe520a9de8",
+                              "ideas": {
+                                "1": {
+                                  "title": "we use double blind",
+                                  "id": "133.1077babe520a9de8",
+                                  "attr": {
+                                    "collapsed": true
+                                  },
+                                  "ideas": {
+                                    "1": {
+                                      "title": "the researcher don't know about the control or the experimental group",
+                                      "id": "136.1077babe520a9de8"
+                                    }
+                                  }
+                                },
+                                "2": {
+                                  "title": "blind",
+                                  "id": "137.1077babe520a9de8",
+                                  "ideas": {
+                                    "1": {
+                                      "title": "not telling the sample if it received treatment or not",
+                                      "id": "138.1077babe520a9de8"
+                                    }
+                                  },
+                                  "attr": {
+                                    "collapsed": true
+                                  }
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "10": {
+                      "title": "Controlled factors",
+                      "id": "139.6de5dd9c02426585",
+                      "ideas": {
+                        "1": {
+                          "title": "in the sleep experiments, we are controlling where they slept, the look of the pill and the place",
+                          "id": "140.6de5dd9c02426585"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "11": {
+                      "title": "Population Parameter",
+                      "id": "142.6de5dd9c02426585",
+                      "ideas": {
+                        "1": {
+                          "title": "any number that describes a whole population",
+                          "id": "143.6de5dd9c02426585"
+                        },
+                        "2": {
+                          "title": "this includes mean, variance",
+                          "id": "144.6de5dd9c02426585"
+                        },
+                        "3": {
+                          "title": "this is the whole scope of people within a study, not necessarily everyone who could take this study ",
+                          "id": "150.6de5dd9c02426585"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "12": {
+                      "title": "Sample statistic",
+                      "id": "148.6de5dd9c02426585"
+                    },
+                    "13": {
+                      "title": "Hypotheses",
+                      "id": "151.6de5dd9c02426585",
+                      "ideas": {
+                        "1": {
+                          "title": "statement about the relationship between two variables",
+                          "id": "152.6de5dd9c02426585"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 13,
+                      "text": "Descriptive statistics are most often concerned with two sets of properties of a distribution (sample or population): central tendency (or location) seeks to characterize the distribution's central or typical value, while dispersion (or variability) characterizes the extent to which members of the distribution depart from its center and each other. Inferences on mathematical statistics are made under the framework of probability theory, which deals with the analysis of random phenomena."
+                    },
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Inferential ",
+                  "id": "54.1077babe520a9de8",
+                  "ideas": {
+                    "1": {
+                      "title": "Makes conclusions about the whole population although there is a chance of error",
+                      "id": "56.1077babe520a9de8"
+                    },
+                    "2": {
+                      "title": "Relies on probability theory",
+                      "id": "57.1077babe520a9de8"
+                    },
+                    "3": {
+                      "title": "we need it to draw conclusions about the whole population since obtaining said population is hard",
+                      "id": "84.1077babe520a9de8",
+                      "attr": {
+                        "note": {
+                          "index": 27,
+                          "text": "To still draw meaningful conclusions about the entire population, inferential statistics is needed. It uses patterns in the sample data to draw inferences about the population represented, accounting for randomness. These inferences may take the form of: answering yes/no questions about the data (hypothesis testing), estimating numerical characteristics of the data (estimation), describing associations within the data (correlation) and modeling relationships within the data (for example, using regression analysis). Inference can extend to forecasting, prediction and estimation of unobserved values either in or associated with the population being studied; it can include extrapolation and interpolation of time series or spatial data, and can also include data mining."
+                        }
+                      },
+                      "ideas": {}
+                    },
+                    "4": {
+                      "title": "Sampling techniques",
+                      "id": "91.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Random Sampling",
+                          "id": "92.1077babe520a9de8",
+                          "ideas": {
+                            "1": {
+                              "title": "individuals in such a way that everyone has the chance of being selected",
+                              "id": "146.6de5dd9c02426585"
+                            },
+                            "2": {
+                              "title": "selection of one individual doesn't affect any other",
+                              "id": "147.6de5dd9c02426585"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "types of inferences",
+                      "id": "85.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Correlation",
+                          "id": "86.1077babe520a9de8"
+                        },
+                        "2": {
+                          "title": "Estimation",
+                          "id": "87.1077babe520a9de8"
+                        },
+                        "3": {
+                          "title": "Relationships",
+                          "id": "88.1077babe520a9de8"
+                        },
+                        "4": {
+                          "title": "it can also extend to ...",
+                          "id": "89.1077babe520a9de8",
+                          "attr": {
+                            "note": {
+                              "index": 32,
+                              "text": "Inference can extend to forecasting, prediction and estimation of unobserved values either in or associated with the population being studied; it can include extrapolation and interpolation of time series or spatial data, and can also include data mining."
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "note": {
+                      "index": 15,
+                      "text": "inferential statistics, which draws conclusions from data that are subject to random variation (e.g., observational errors, sampling variation).[5]"
+                    },
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Null Hypothesis",
+              "id": "58.1077babe520a9de8",
+              "attr": {
+                "note": {
+                  "index": 18,
+                  "text": "A standard statistical procedure involves the test of the relationship between two statistical data sets, or a data set and a synthetic data drawn from idealized model. A hypothesis is proposed for the statistical relationship between the two data sets, and this is compared as an alternative to an idealized null hypothesis of no relationship between two data sets. Rejecting or disproving the null hypothesis is done using statistical tests that quantify the sense in which the null can be proven false, given the data that are used in the test. Working from a null hypothesis, two basic forms of error are recognized: Type I errors (null hypothesis is falsely rejected giving a \"false positive\") and Type II errors (null hypothesis fails to be rejected and an actual difference between populations is missed giving a \"false negative\").[6] Multiple problems have come to be associated with this framework: ranging from obtaining a sufficient sample size to specifying an adequate null hypothesis.[citation needed]"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Comparing two data sets, one real and the other an idealized model. We then propose a hypotheses. ",
+                  "id": "59.1077babe520a9de8",
+                  "ideas": {
+                    "1": {
+                      "title": "Then we get two types of errors",
+                      "id": "61.1077babe520a9de8",
+                      "ideas": {
+                        "1": {
+                          "title": "Type 1",
+                          "id": "62.1077babe520a9de8",
+                          "attr": {
+                            "note": {
+                              "index": 21,
+                              "text": "Type I errors (null hypothesis is falsely rejected giving a \"false positive\")"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Type 2",
+                          "id": "63.1077babe520a9de8",
+                          "attr": {
+                            "note": {
+                              "index": 22,
+                              "text": "Type II errors (null hypothesis fails to be rejected and an actual difference between populations is missed giving a \"false negative\")."
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "14": {
+              "title": "Measurement processes that are generating data in the first place are subject to errors",
+              "id": "64.1077babe520a9de8",
+              "ideas": {
+                "1": {
+                  "title": "Random (Noise)",
+                  "id": "65.1077babe520a9de8"
+                },
+                "2": {
+                  "title": "Bias",
+                  "id": "66.1077babe520a9de8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Big data",
+              "id": "67.1077babe520a9de8"
+            },
+            "16": {
+              "title": "Math",
+              "id": "68.1077babe520a9de8",
+              "ideas": {},
+              "attr": {
+                "note": {
+                  "index": 27,
+                  "text": "Mathematical techniques used for this include mathematical analysis, linear algebra, stochastic analysis, differential equations, and measure-theoretic probability theory.[11][12]"
+                }
+              }
+            },
+            "18": {
+              "title": "Data collection",
+              "id": "90.1077babe520a9de8",
+              "ideas": {
+                "1": {
+                  "title": "Census",
+                  "id": "81.1077babe520a9de8",
+                  "ideas": {
+                    "1": {
+                      "title": "to gather all data from all of the population",
+                      "id": "82.1077babe520a9de8"
+                    },
+                    "2": {
+                      "title": "when we can't reach that, we deal with a sample",
+                      "id": "83.1077babe520a9de8"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "19": {
+              "title": "Variance",
+              "id": "159.22ee34d9e1b2b73e"
+            },
+            "20": {
+              "title": "Standard Deviation",
+              "id": "160.22ee34d9e1b2b73e",
+              "ideas": {
+                "1": {
+                  "title": "How much a collection of values deviate from the mean",
+                  "id": "161.c254.a17300804-7b9c.0b852ac73"
+                },
+                "2": {
+                  "title": "Derivation of standard deviation is standard error",
+                  "id": "164.c254.a17300804-7b9c.0b852ac73"
+                },
+                "3": {
+                  "title": "https://en.wikipedia.org/wiki/Standard_deviation",
+                  "id": "165.c254.a17300804-7b9c.0b852ac73"
+                },
+                "4": {
+                  "title": "Get the mean then square root the difference each measured value from it and devide by N-1 where N is the number of values",
+                  "id": "166.c254.a17300804-7b9c.0b852ac73"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "21": {
+              "title": "Mean",
+              "id": "162.c254.a17300804-7b9c.0b852ac73",
+              "ideas": {
+                "1": {
+                  "title": "Average",
+                  "id": "163.c254.a17300804-7b9c.0b852ac73"
+                }
+              }
+            },
+            "22": {
+              "title": "Normal Distribution",
+              "id": "167.c254.a17300804-7b9c.0b852ac73"
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 25,
+          "ideas": {
+            "1": {
+              "title": "https://en.wikipedia.org/wiki/Statistics",
+              "id": 26
+            },
+            "2": {
+              "title": "Applied Math",
+              "id": 21,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<h4 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 22.4px; color: black; font-size: 14px; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Applied_Mathematics\">Applied Mathematics</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: -webkit-isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0px; color: rgb(85, 85, 85); margin-left: 0px;\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Outline_of_academic_disciplines&amp;action=edit&amp;section=28\" title=\"Edit section: Applied Mathematics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0px; color: rgb(85, 85, 85); margin-right: 0px;\">]</span></span></h4><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Applied_mathematics\" title=\"Applied mathematics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Applied mathematics</a></div><table class=\"multicol\" role=\"presentation\" style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px; padding: 0px; border: 0px; width: 1069px; background-image: initial; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><tbody><tr><td style=\"width: 533px; vertical-align: top;\"><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Approximation_theory\" title=\"Approximation theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Approximation theory</a><br></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Numerical_analysis\" title=\"Numerical analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Numerical analysis</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Operations_research\" title=\"Operations research\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Operations research</a><ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Mathematical_optimization\" title=\"Mathematical optimization\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Mathematical optimization</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Linear_programming\" title=\"Linear programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Linear programming</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Dynamic_programming\" title=\"Dynamic programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Dynamic programming</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Assignment_problem\" title=\"Assignment problem\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Assignment problem</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Decision_analysis\" title=\"Decision analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Decision analysis</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Inventory_theory\" title=\"Inventory theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Inventory theory</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Job_shop_scheduling\" title=\"Job shop scheduling\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Scheduling</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Real_options_analysis\" title=\"Real options analysis\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Real options analysis</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Systems_analysis\" title=\"Systems analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Systems analysis</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Stochastic_processes\" title=\"Stochastic processes\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Stochastic processes</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Optimal_maintenance\" title=\"Optimal maintenance\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Optimal maintenance</a></li></ul></li></ul></td><td style=\"width: 532px; vertical-align: top;\"><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Dynamical_systems\" title=\"Dynamical systems\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Dynamical systems</a><ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Chaos_theory\" title=\"Chaos theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Chaos theory</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Fractal_geometry\" title=\"Fractal geometry\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Fractal geometry</a></li></ul></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Mathematical_physics\" title=\"Mathematical physics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Mathematical physics</a><ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Quantum_mechanics\" title=\"Quantum mechanics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Quantum mechanics</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Quantum_field_theory\" title=\"Quantum field theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Quantum field theory</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Quantum_gravity\" title=\"Quantum gravity\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Quantum gravity</a><ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/String_theory\" title=\"String theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">String theory</a></li></ul></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Statistical_mechanics\" title=\"Statistical mechanics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Statistical mechanics</a></li></ul></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Theory_of_computation\" title=\"Theory of computation\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Theory of computation</a><ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Computational_complexity_theory\" title=\"Computational complexity theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Computational complexity theory</a></li></ul></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Information_theory\" title=\"Information theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Information theory</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Cryptography\" title=\"Cryptography\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Cryptography</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Combinatorics\" title=\"Combinatorics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Combinatorics</a>&nbsp;(<a href=\"https://en.wikipedia.org/wiki/Outline_of_combinatorics\" title=\"Outline of combinatorics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">outline</a>)<ul style=\"margin-top: 0.3em; margin-left: 1.6em; list-style-type: disc; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Coding_theory\" title=\"Coding theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Coding theory</a></li></ul></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Graph_theory\" title=\"Graph theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Graph theory</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Game_theory\" title=\"Game theory\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Game theory</a></li></ul></td></tr></tbody></table>"
+                },
+                "style": {
+                  "background": "#800000"
+                },
+                "position": [
+                  121,
+                  82,
+                  4
+                ],
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Graph Theory",
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Path Finding Algorithm",
+                      "ideas": {
+                        "1": {
+                          "title": "https://qiao.github.io/PathFinding.js/visual/",
+                          "id": 6
+                        }
+                      },
+                      "id": 5
+                    },
+                    "2": {
+                      "title": "https://github.com/andrewhayward/dijkstra",
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "dijkstra",
+                          "id": 8
+                        }
+                      },
+                      "id": 7
+                    }
+                  },
+                  "id": 4
+                },
+                "2": {
+                  "title": "Statistics",
+                  "id": 24,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<a href=\"https://en.wikipedia.org/wiki/Statistics\" title=\"Statistics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; background: none;\">Statistics</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif;\">&nbsp;(</span><a href=\"https://en.wikipedia.org/wiki/Outline_of_statistics\" title=\"Outline of statistics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; background: none;\">outline</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif;\">)</span><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; color: rgb(37, 37, 37); font-family: sans-serif; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;);\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Mathematical_statistics\" title=\"Mathematical statistics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Mathematical statistics</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Econometrics\" title=\"Econometrics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Econometrics</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Actuarial_science\" title=\"Actuarial science\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Actuarial science</a></li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Demography\" title=\"Demography\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Demography</a></li></ul>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "0.5": {
+              "title": "in Programming",
+              "id": 28,
+              "ideas": {
+                "1": {
+                  "title": "Python",
+                  "id": 29,
+                  "ideas": {
+                    "1": {
+                      "title": "scipy",
+                      "id": 30,
+                      "ideas": {
+                        "1": {
+                          "title": "numpy",
+                          "id": 31,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<span style=\"font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; font-size: 16px; line-height: 25.6px;\">which provides convenient and fast N-dimensional array manipulation</span>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "https://github.com/scipy/scipy",
+                          "id": 34
+                        },
+                        "3": {
+                          "title": "How can it be used?",
+                          "id": 35,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<h2 style=\"margin-top: 9.5px; margin-bottom: 0.5em; font-family: 'Trebuchet MS', sans-serif; line-height: 38px; color: rgb(85, 85, 85); font-size: 20.8px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(204, 204, 204);\">What are NumPy, SciPy, matplotlib, ...?<a class=\"headerlink\" href=\"https://www.scipy.org/getting-started.html#what-are-numpy-scipy-matplotlib\" title=\"Permalink to this headline\" style=\"color: rgb(85, 85, 85); visibility: hidden;\"></a></h2><p style=\"margin-bottom: 9.5px; font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 19px;\">SciPy and friends can be used for a variety of tasks:</p><ul class=\"simple\" style=\"margin-bottom: 9.5px; font-family: 'Open Sans', sans-serif; font-size: 13px; line-height: 19px;\"><li style=\"line-height: 19px;\"><em>NumPy</em>‘s array type augments the Python language with an efficient data structure useful for numerical work, e.g., manipulating matrices.<em>NumPy</em>&nbsp;also provides basic numerical routines, such as tools for finding eigenvectors.</li><li style=\"line-height: 19px;\"><em>SciPy</em>&nbsp;contains additional routines needed in scientific work: for example, routines for computing integrals numerically, solving differential equations, optimization, and sparse matrices.</li><li style=\"line-height: 19px;\">The&nbsp;<a class=\"reference external\" href=\"http://matplotlib.sourceforge.net/\">matplotlib</a>&nbsp;module produces high quality plots. With it you can turn your data or your models into figures for presentations or articles. No need to do the numerical work in one program, save the data, and plot it with another program.</li><li style=\"line-height: 19px;\">Using&nbsp;<a class=\"reference external\" href=\"http://ipython.org/\">IPython</a>&nbsp;makes interactive work easy. Data processing, exploration of numerical models, trying out operations on-the-fly allows to go quickly from an idea to a result. See the&nbsp;<a class=\"reference external\" href=\"http://ipython.org/\">IPython site</a>&nbsp;for many examples.</li><li style=\"line-height: 19px;\">There is a sizeable collection of both generic and application-specific numerical and scientific code, written using Python, NumPy and SciPy. Don’t reinvent the wheel, there may already be a pre-made solution for your problem. See&nbsp;<a class=\"reference internal\" href=\"https://www.scipy.org/topical-software.html\"><em>Topical Software</em></a>&nbsp;for a partial list.</li><li style=\"line-height: 19px;\">As Python is a popular general-purpose programming language, it has many advanced modules for building for example interactive applications (see e.g.&nbsp;<a class=\"reference external\" href=\"http://www.wxpython.org/\">wxPython</a>&nbsp;and&nbsp;<a class=\"reference external\" href=\"http://code.enthought.com/projects/traits/\">Traits</a>) or web sites (see e.g.&nbsp;<a class=\"reference external\" href=\"https://www.djangoproject.com/\">Django</a>). Using SciPy with these is a quick way to build a fully-fledged scientific application.</li></ul>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "4": {
+                          "title": "Lectures to teach stats in python",
+                          "id": 36,
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.scipy-lectures.org/index.html",
+                              "id": 37
+                            }
+                          }
+                        },
+                        "5": {
+                          "title": "core packages",
+                          "id": 38,
+                          "ideas": {
+                            "1": {
+                              "title": "https://www.scipy.org/docs.html",
+                              "id": 39
+                            }
+                          }
+                        },
+                        "6": {
+                          "title": "Recipes",
+                          "id": 40,
+                          "ideas": {
+                            "1": {
+                              "title": "http://scipy-cookbook.readthedocs.org/",
+                              "id": 41
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  121,
+                  -75,
+                  3
+                ],
+                "style": {},
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": "127.1077babe520a9de8",
+      "ideaIdTo": "93.1077babe520a9de8",
+      "attr": {
+        "style": {
+          "color": "#707070",
+          "lineStyle": "solid",
+          "arrow": "to"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Statistics"
+}

@@ -1,0 +1,821 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Haskell",
+      "attr": {},
+      "ideas": {
+        "0.5": {
+          "title": "Concepts",
+          "id": 7,
+          "ideas": {
+            "8": {
+              "title": "installation",
+              "id": 17,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/bitemyapp/learnhaskell/blob/master/install.md",
+                  "id": 18
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "GHC",
+              "id": "45.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "Glasgow Haskell Compiler",
+                  "id": "46.b2dafee72688b40"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Questions",
+              "id": "53.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "N Plus K patterns",
+                  "id": "54.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "that's fact(n+1) = (n+1) * fact(n)",
+                      "id": "55.b2dafee72688b40"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Hindley-Milner type systgm",
+                  "id": "57.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system",
+                      "id": "58.b2dafee72688b40"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "7.5": {
+              "title": "Features",
+              "id": "47.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "Pure",
+                  "id": 23,
+                  "attr": {}
+                },
+                "2": {
+                  "title": "Lazy",
+                  "id": 24,
+                  "ideas": {
+                    "1": {
+                      "title": "Resources",
+                      "id": "42.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "Wikipedia Definition of Lazy",
+                          "id": "43.b2dafee72688b40",
+                          "ideas": {
+                            "1": {
+                              "title": "https://en.wikipedia.org/wiki/Lazy_evaluation",
+                              "id": "44.b2dafee72688b40"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Functional",
+                  "id": 25,
+                  "attr": {}
+                },
+                "4": {
+                  "title": "strict but you don't have to specify sometimes?",
+                  "id": 8,
+                  "ideas": {},
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<pre style=\"font-family: monospace, Courier; color: black; border-color: rgb(221, 221, 221); padding: 1em; line-height: 1.3em; font-size: 14px; background-color: rgb(249, 249, 249);\"><span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Type annotation (optional)</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">::</span> <span class=\"p\">(</span><span class=\"kt\" style=\"color: rgb(176, 0, 64);\">Integral</span> <span class=\"n\">a</span><span class=\"p\">)</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=&gt;</span> <span class=\"n\">a</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">-&gt;</span> <span class=\"n\">a</span></pre>"
+                    },
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "FFI",
+                  "id": "49.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "foreign function interface",
+                      "id": "50.b2dafee72688b40"
+                    },
+                    "2": {
+                      "title": "Allow bindings to other languages",
+                      "id": "51.b2dafee72688b40"
+                    }
+                  },
+                  "attr": {
+                    "style": {
+                      "width": 50
+                    }
+                  }
+                },
+                "6": {
+                  "title": " pattern matching, list comprehension, type classes, and type polymorphism.",
+                  "id": "56.b2dafee72688b40"
+                },
+                "7": {
+                  "title": "Monads",
+                  "id": "59.b2dafee72688b40",
+                  "ideas": {},
+                  "attr": {
+                    "note": {
+                      "index": 15,
+                      "text": "The construct which represents side effects is an example of a monad. Monads are a general framework which can model different kinds of computation, including error handling, nondeterminism, parsing, and software transactional memory. Monads are defined as ordinary datatypes, but Haskell provides some syntactic sugar for their use."
+                    }
+                  }
+                },
+                "8": {
+                  "title": "Type Class",
+                  "id": "63.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "is a set of types",
+                      "id": "64.b2dafee72688b40"
+                    },
+                    "2": {
+                      "title": "That way we can implement certain functions that can apply to any type under a type class",
+                      "id": "120.2797623eb08492c1",
+                      "ideas": {
+                        "1": {
+                          "title": "example ...",
+                          "id": "122.2797623eb08492c1"
+                        },
+                        "2": {
+                          "title": "It's Like an interface",
+                          "id": "135.22cfef29935801d"
+                        },
+                        "3": {
+                          "title": "Eq typeclass is implemented by all types and basically its members have to implement \"==\" and \"/=\" function",
+                          "id": "136.22cfef29935801d"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Resources",
+                      "id": "133.22cfef29935801d",
+                      "ideas": {
+                        "1": {
+                          "title": "http://learnyouahaskell.com/types-and-typeclasses",
+                          "id": "137.22cfef29935801d"
+                        }
+                      }
+                    },
+                    "4": {
+                      "title": "show :: Show a => a -> String",
+                      "id": "138.22cfef29935801d",
+                      "ideas": {
+                        "1": {
+                          "title": "this is a type annotation for typeclasses",
+                          "id": "139.22cfef29935801d"
+                        }
+                      }
+                    }
+                  }
+                },
+                "9": {
+                  "title": "Functions",
+                  "id": "68.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "saying f::Int -> Int",
+                      "id": "69.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "is really saying it's a function that takes one argument and returns another function that returns another Int",
+                          "id": "70.b2dafee72688b40"
+                        },
+                        "2": {
+                          "title": "the last thing is always what the function is returning",
+                          "id": "106.2797623eb08492c1"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Haskell will infer type declaration for you if you don't",
+                      "id": "104.2797623eb08492c1"
+                    },
+                    "3": {
+                      "title": "Multi Variadic Functions",
+                      "id": "107.2797623eb08492c1",
+                      "ideas": {
+                        "1": {
+                          "title": "Many implementations of the same function",
+                          "id": "108.2797623eb08492c1"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Recursion",
+                      "id": "109.2797623eb08492c1",
+                      "ideas": {
+                        "1": {
+                          "title": "factorial :: Int -> Int",
+                          "id": "110.2797623eb08492c1",
+                          "ideas": {
+                            "1": {
+                              "title": "factorial 0 = 1",
+                              "id": "112.2797623eb08492c1"
+                            },
+                            "2": {
+                              "title": "factorial n = n * factorial (n-1)",
+                              "id": "113.2797623eb08492c1"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Guards",
+                      "id": "114.2797623eb08492c1",
+                      "ideas": {
+                        "1": {
+                          "title": "isOdd n \n| n `mod` 2 == 0 = False\n| otherwise = True",
+                          "id": "115.2797623eb08492c1"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "10": {
+                  "title": "Collections",
+                  "id": "73.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "List",
+                      "id": "74.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "Comprehension",
+                          "id": "75.b2dafee72688b40",
+                          "attr": {
+                            "note": {
+                              "index": 23,
+                              "text": "[x*2 | x <- [1..5]] -- [2, 4, 6, 8, 10]"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "with Conditional",
+                          "id": "76.b2dafee72688b40",
+                          "ideas": {},
+                          "attr": {
+                            "note": {
+                              "index": 24,
+                              "text": "[x*2 | x <- [1..5], x*2 > 4] -- [6, 8, 10]"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Every element must be of the same type",
+                          "id": "78.b2dafee72688b40"
+                        },
+                        "4": {
+                          "title": "You can generate different lists as so",
+                          "id": "95.2797623eb08492c1",
+                          "ideas": {
+                            "1": {
+                              "title": "[2,4 .. 10]",
+                              "id": "96.2797623eb08492c1",
+                              "ideas": {
+                                "1": {
+                                  "title": "will generate even numbered list",
+                                  "id": "97.2797623eb08492c1"
+                                }
+                              }
+                            },
+                            "2": {
+                              "title": "['A','B' .. 'Z']",
+                              "id": "98.2797623eb08492c1",
+                              "ideas": {
+                                "1": {
+                                  "title": "will generate A - Z",
+                                  "id": "99.2797623eb08492c1"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "You can generate infinite lists",
+                          "id": "100.2797623eb08492c1",
+                          "ideas": {
+                            "1": {
+                              "title": "it's lazy so it won't access them till you need them",
+                              "id": "101.2797623eb08492c1"
+                            }
+                          }
+                        },
+                        "6": {
+                          "title": "Zip",
+                          "id": "102.2797623eb08492c1",
+                          "ideas": {
+                            "1": {
+                              "title": "combine two lists into a list of tuples",
+                              "id": "103.2797623eb08492c1"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Tuple",
+                      "id": "79.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "you can mix different types",
+                          "id": "80.b2dafee72688b40"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "11": {
+                  "title": "Control Flow",
+                  "id": "81.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "Guards",
+                      "id": "82.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "Easy way to do branching",
+                          "id": "83.b2dafee72688b40"
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 29,
+                          "text": "-- Guards: an easy way to do branching in functions\nfib x\n  | x < 2 = 1\n  | otherwise = fib (x - 1) + fib (x - 2)"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Pattern Matching",
+                      "id": "84.b2dafee72688b40",
+                      "ideas": {
+                        "1": {
+                          "title": "Similar to Guards",
+                          "id": "85.b2dafee72688b40",
+                          "ideas": {
+                            "1": {
+                              "title": "but haskell does something ?",
+                              "id": "86.b2dafee72688b40"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 31,
+                          "text": "-- Pattern matching is similar. Here we have given three different\n-- equations that define fib. Haskell will automatically use the first\n-- equation whose left hand side pattern matches the value.\nfib 1 = 1\nfib 2 = 2\nfib x = fib (x - 1) + fib (x - 2)"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "12": {
+                  "title": "Infix Operators",
+                  "id": "90.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "5 `mod` 3",
+                      "id": "91.2797623eb08492c1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "Curry",
+                  "id": "116.2797623eb08492c1"
+                },
+                "14": {
+                  "title": "Lambdas",
+                  "id": "117.2797623eb08492c1"
+                },
+                "15": {
+                  "title": "Structs",
+                  "id": "118.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "to create a new data type",
+                      "id": "119.2797623eb08492c1"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "position": [
+                  75,
+                  -65,
+                  1
+                ],
+                "collapsed": true
+              }
+            },
+            "7.75": {
+              "title": "Syntax",
+              "id": "48.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "code examples",
+                  "id": 11,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.3999996185303px; color: rgb(37, 37, 37); font-family: sans-serif;\">Here is the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Factorial\" title=\"Factorial\" style=\"color: rgb(11, 0, 128); background: none;\">factorial</a>&nbsp;function in Haskell, defined in a few different ways:</p><div class=\"mw-highlight mw-content-ltr\" dir=\"ltr\" style=\"direction: ltr; unicode-bidi: embed; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px; background: rgb(248, 248, 248);\"><pre style=\"font-family: monospace, Courier; color: black; border-color: rgb(221, 221, 221); padding: 1em; line-height: 1.3em; background-color: rgb(249, 249, 249);\"><span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Type annotation (optional)</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">::</span> <span class=\"p\">(</span><span class=\"kt\" style=\"color: rgb(176, 0, 64);\">Integral</span> <span class=\"n\">a</span><span class=\"p\">)</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=&gt;</span> <span class=\"n\">a</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">-&gt;</span> <span class=\"n\">a</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Using recursion</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">|</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">&lt;</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">2</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">*</span> <span class=\"n\">factorial</span> <span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">-</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span><span class=\"p\">)</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Using recursion, with guards</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span>\n  <span class=\"o\" style=\"color: rgb(102, 102, 102);\">|</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">&lt;</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">2</span>     <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span>\n  <span class=\"o\" style=\"color: rgb(102, 102, 102);\">|</span> <span class=\"n\">otherwise</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">*</span> <span class=\"n\">factorial</span> <span class=\"p\">(</span><span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">-</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span><span class=\"p\">)</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Using recursion but written without pattern matching</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"kr\" style=\"color: rgb(0, 128, 0); font-weight: bold;\">if</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">&gt;</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">0</span> <span class=\"kr\" style=\"color: rgb(0, 128, 0); font-weight: bold;\">then</span> <span class=\"n\">n</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">*</span> <span class=\"n\">factorial</span> <span class=\"p\">(</span><span class=\"n\">n</span><span class=\"o\" style=\"color: rgb(102, 102, 102);\">-</span><span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span><span class=\"p\">)</span> <span class=\"kr\" style=\"color: rgb(0, 128, 0); font-weight: bold;\">else</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Using a list</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"n\">product</span> <span class=\"p\">[</span><span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span><span class=\"o\" style=\"color: rgb(102, 102, 102);\">..</span><span class=\"n\">n</span><span class=\"p\">]</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Using fold (implements product)</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"n\">n</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"n\">foldl</span> <span class=\"p\">(</span><span class=\"o\" style=\"color: rgb(102, 102, 102);\">*</span><span class=\"p\">)</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span> <span class=\"p\">[</span><span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span><span class=\"o\" style=\"color: rgb(102, 102, 102);\">..</span><span class=\"n\">n</span><span class=\"p\">]</span>\n\n<span class=\"c1\" style=\"color: rgb(64, 128, 128); font-style: italic;\">-- Point-free style</span>\n<span class=\"nf\" style=\"color: rgb(0, 0, 255);\">factorial</span> <span class=\"ow\" style=\"color: rgb(170, 34, 255); font-weight: bold;\">=</span> <span class=\"n\">foldr</span> <span class=\"p\">(</span><span class=\"o\" style=\"color: rgb(102, 102, 102);\">*</span><span class=\"p\">)</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span> <span class=\"o\" style=\"color: rgb(102, 102, 102);\">.</span> <span class=\"n\">enumFromTo</span> <span class=\"mi\" style=\"color: rgb(102, 102, 102);\">1</span></pre></div>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Simple main",
+                      "id": 31,
+                      "attr": {
+                        "attachment": {
+                          "contentType": "text/html",
+                          "content": "<pre class=\"de1\" style=\"margin-bottom: 0px; padding: 0px; font-family: monospace; line-height: 1.2em; overflow: auto; border: 0px none white; font-stretch: normal; font-size: medium; vertical-align: top; color: rgb(0, 0, 0); background: none rgb(255, 255, 255);\">main <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">::</span> <span class=\"kw4\" style=\"margin: 0px; padding: 0px; color: rgb(204, 204, 0); font-weight: bold;\">IO</span> <span class=\"br0\" style=\"margin: 0px; padding: 0px; color: green;\">(</span><span class=\"br0\" style=\"margin: 0px; padding: 0px; color: green;\">)</span>\nmain <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">=</span> <span class=\"kw1\" style=\"margin: 0px; padding: 0px; font-weight: bold; color: rgb(0, 102, 204);\">do</span>\n    <span class=\"kw3\" style=\"margin: 0px; padding: 0px; color: rgb(85, 68, 136) !important; font-weight: bold;\">putStrLn</span> <span class=\"st0\" style=\"margin: 0px; padding: 0px; color: rgb(221, 17, 68) !important; background-image: initial !important; background-attachment: initial !important; background-color: rgb(60, 179, 113); background-size: initial !important; background-origin: initial !important; background-clip: initial !important; background-position: initial !important; background-repeat: initial !important;\">\"Enter two lines\"</span>\n    line1 <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">&lt;-</span> <span class=\"kw3\" style=\"margin: 0px; padding: 0px; color: rgb(85, 68, 136) !important; font-weight: bold;\">getLine</span>                                    <span class=\"co1\" style=\"margin: 0px; padding: 0px; color: rgb(93, 71, 139); font-style: italic;\">-- line1&nbsp;:: String</span>\n    line2 <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">&lt;-</span> <span class=\"kw3\" style=\"margin: 0px; padding: 0px; color: rgb(85, 68, 136) !important; font-weight: bold;\">getLine</span>                                    <span class=\"co1\" style=\"margin: 0px; padding: 0px; color: rgb(93, 71, 139); font-style: italic;\">-- line2&nbsp;:: String</span>\n    <span class=\"kw3\" style=\"margin: 0px; padding: 0px; color: rgb(85, 68, 136) !important; font-weight: bold;\">putStrLn</span> <span class=\"br0\" style=\"margin: 0px; padding: 0px; color: green;\">(</span><span class=\"st0\" style=\"margin: 0px; padding: 0px; color: rgb(221, 17, 68) !important; background-image: initial !important; background-attachment: initial !important; background-color: rgb(60, 179, 113); background-size: initial !important; background-origin: initial !important; background-clip: initial !important; background-position: initial !important; background-repeat: initial !important;\">\"you said: \"</span> <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">++</span> line1 <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">++</span> <span class=\"st0\" style=\"margin: 0px; padding: 0px; color: rgb(221, 17, 68) !important; background-image: initial !important; background-attachment: initial !important; background-color: rgb(60, 179, 113); background-size: initial !important; background-origin: initial !important; background-clip: initial !important; background-position: initial !important; background-repeat: initial !important;\">\" and \"</span> <span class=\"sy0\" style=\"margin: 0px; padding: 0px; color: rgb(51, 153, 51); font-weight: bold;\">++</span> line2<span class=\"br0\" style=\"margin: 0px; padding: 0px; color: green;\">)</span></pre>"
+                        },
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "https://wiki.haskell.org/Learn_Haskell_in_10_minutes#Simple_expressions",
+                      "id": 29,
+                      "ideas": {
+                        "1": {
+                          "title": "simple tutorial",
+                          "id": 30
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Patentheses not required",
+                  "id": 28,
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 2,
+          "ideas": {
+            "6": {
+              "title": "Third Party",
+              "id": 12,
+              "ideas": {
+                "3": {
+                  "title": "Stack",
+                  "id": 32,
+                  "ideas": {
+                    "1": {
+                      "title": "a virtual env for haskell",
+                      "id": 33
+                    },
+                    "2": {
+                      "title": "Very easy haskell setup",
+                      "id": 34
+                    },
+                    "3": {
+                      "title": "http://docs.haskellstack.org/en/stable/README.html",
+                      "id": 35
+                    },
+                    "4": {
+                      "title": "remember to append -exe when running ",
+                      "id": 37
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Cabal",
+                  "id": 14,
+                  "ideas": {
+                    "1": {
+                      "title": "Package Manager",
+                      "id": 15
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "13": {
+                  "title": "GHC",
+                  "id": 13,
+                  "ideas": {
+                    "1": {
+                      "title": "Compiler, REPL, ",
+                      "id": 16
+                    },
+                    "2": {
+                      "title": "command to compile",
+                      "id": 21,
+                      "ideas": {
+                        "1": {
+                          "title": "% ghc --make Main.hs -o main",
+                          "id": 22
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      73,
+                      56,
+                      1
+                    ],
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Tutorials",
+              "id": "38.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "Learn haskell",
+                  "id": 27,
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/bitemyapp/learnhaskell",
+                      "id": 26,
+                      "ideas": {},
+                      "attr": {}
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Learn X in Y Minutes",
+                  "id": "71.b2dafee72688b40",
+                  "ideas": {
+                    "1": {
+                      "title": "https://learnxinyminutes.com/docs/haskell/",
+                      "id": "72.b2dafee72688b40"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "A great quick youtube tutorial",
+                  "id": "123.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=02_H3LjqMr8",
+                      "id": "124.2797623eb08492c1"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Haskell Concepts in One Sentence",
+                  "id": "131.37194139176c77a6",
+                  "ideas": {
+                    "1": {
+                      "title": "https://torchhound.github.io/posts/haskellOneSentence.html",
+                      "id": "132.37194139176c77a6"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "8": {
+              "title": "Books",
+              "id": "39.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "http://book.realworldhaskell.org/read/why-functional-programming-why-haskell.html#id528893",
+                  "id": 36,
+                  "attr": {}
+                },
+                "2": {
+                  "title": "wikibooks",
+                  "id": 20,
+                  "attr": {},
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikibooks.org/wiki/Yet_Another_Haskell_Tutorial/Preamble",
+                      "id": 19,
+                      "ideas": {},
+                      "attr": {}
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Free Book",
+                  "id": "89.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "http://learnyouahaskell.com/chapters",
+                      "id": "88.2797623eb08492c1",
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "official",
+              "id": 6,
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://www.haskell.org/",
+                  "id": 5,
+                  "ideas": {},
+                  "attr": {}
+                }
+              }
+            },
+            "10": {
+              "title": "REPL IT",
+              "id": "61.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "https://repl.it/GvBF/0",
+                  "id": "62.b2dafee72688b40"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Haskell Code",
+              "id": "87.b2dafee72688b40"
+            },
+            "12": {
+              "title": "Exercises",
+              "id": "125.2797623eb08492c1",
+              "ideas": {
+                "1": {
+                  "title": "99 questions",
+                  "id": "126.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "https://wiki.haskell.org/99_questions/1_to_10",
+                      "id": "127.2797623eb08492c1"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Cheat sheets",
+              "id": "128.2797623eb08492c1",
+              "ideas": {
+                "1": {
+                  "title": "https://learnxinyminutes.com/docs/haskell/",
+                  "id": "129.2797623eb08492c1",
+                  "ideas": {
+                    "1": {
+                      "title": "Stopped at problem 5",
+                      "id": "130.2797623eb08492c1"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "1.5": {
+          "title": "Wikipedia",
+          "id": "40.b2dafee72688b40",
+          "ideas": {
+            "1": {
+              "title": "Resources",
+              "id": "41.b2dafee72688b40",
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Haskell_(programming_language)",
+                  "id": 3,
+                  "attr": {}
+                }
+              }
+            }
+          },
+          "attr": {
+            "collapsed": true
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Haskell"
+}

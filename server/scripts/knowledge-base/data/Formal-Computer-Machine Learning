@@ -1,0 +1,947 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Machine Learning",
+      "attr": {
+        "style": {},
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<h2 style=\"color: black; font-weight: normal; margin-top: 1em; margin-bottom: 0.25em; overflow: hidden; padding: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); font-size: 1.5em; font-family: 'Linux Libertine', Georgia, Times, serif; line-height: 1.3; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><br></h2>"
+        },
+        "position": [
+          -60,
+          -24,
+          1
+        ]
+      },
+      "ideas": {
+        "-11": {
+          "title": "Resources",
+          "id": 15,
+          "ideas": {
+            "2": {
+              "title": "https://en.wikipedia.org/wiki/Machine_learning",
+              "id": 3,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "Data sets",
+              "id": 5,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/caesar0301/awesome-public-datasets",
+                  "id": 22
+                }
+              }
+            },
+            "4": {
+              "title": "NLP",
+              "id": 27,
+              "ideas": {
+                "1": {
+                  "title": "https://explosion.ai/blog/deep-learning-formula-nlp",
+                  "id": 28
+                },
+                "2": {
+                  "title": "great paper on some advances in machine learning",
+                  "id": 29,
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.cs.cmu.edu/~diyiy/docs/naacl16.pdf",
+                      "id": 30
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Intro to Machine learning udacity course",
+              "id": 31,
+              "ideas": {
+                "1": {
+                  "title": "https://www.udacity.com/course/intro-to-machine-learning--ud120",
+                  "id": 32
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "7": {
+              "title": "Third Party",
+              "attr": {
+                "style": {
+                  "background": "#008000"
+                },
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Octave",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/gkokaisel/MachineLearning",
+                      "id": "36.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "35.4b0409a076bf7e07"
+                },
+                "2": {
+                  "title": "Recommendation in R",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://blog.yhathq.com/posts/recommender-system-in-r.html?utm_medium=referral&utm_source=pulsenews",
+                      "id": "38.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "37.4b0409a076bf7e07"
+                },
+                "3": {
+                  "title": "Artificial intelligence games",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://code.google.com/p/opennero/",
+                      "id": "40.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "39.4b0409a076bf7e07"
+                },
+                "4": {
+                  "title": "NLP in Node",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/NaturalNode/natural",
+                      "id": "42.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "41.4b0409a076bf7e07"
+                },
+                "5": {
+                  "title": "openML",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.kdnuggets.com/2014/08/openml-share-discover-do-machine-learning.html",
+                      "id": "44.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "43.4b0409a076bf7e07"
+                },
+                "6": {
+                  "title": "Neural Networks",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://karpathy.github.io/neuralnets/",
+                      "id": "46.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "45.4b0409a076bf7e07"
+                },
+                "7": {
+                  "title": "Prediction io",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://docs.prediction.io/current/",
+                      "id": "48.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "47.4b0409a076bf7e07"
+                },
+                "8": {
+                  "title": "NLP",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Medical",
+                      "ideas": {
+                        "1": {
+                          "title": "http://knowledgemap.mc.vanderbilt.edu/research/content/sectag-tagging-clinical-note-section-headers",
+                          "id": "51.4b0409a076bf7e07"
+                        },
+                        "2": {
+                          "title": "http://nlp.stanford.edu/software/",
+                          "id": "52.4b0409a076bf7e07"
+                        },
+                        "3": {
+                          "title": "Ytex",
+                          "ideas": {
+                            "1": {
+                              "title": "https://code.google.com/p/ytex/",
+                              "id": "54.4b0409a076bf7e07"
+                            }
+                          },
+                          "id": "53.4b0409a076bf7e07"
+                        },
+                        "4": {
+                          "title": "Corpus",
+                          "ideas": {
+                            "1": {
+                              "title": "https://catalog.ldc.upenn.edu/LDC2006T13",
+                              "id": "56.4b0409a076bf7e07"
+                            }
+                          },
+                          "id": "55.4b0409a076bf7e07"
+                        }
+                      },
+                      "id": "50.4b0409a076bf7e07"
+                    },
+                    "2": {
+                      "title": "termonlogies",
+                      "ideas": {
+                        "1": {
+                          "title": "http://wisdio.com/What-does-mean-such-acronyms-like-NN-NNP-JJ-used-in-POS-part-of-speech-tagging",
+                          "ideas": {
+                            "1": {
+                              "title": "JJ DD .....",
+                              "ideas": {},
+                              "id": "59.4b0409a076bf7e07"
+                            }
+                          },
+                          "id": "58.4b0409a076bf7e07"
+                        }
+                      },
+                      "id": "57.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "49.4b0409a076bf7e07"
+                },
+                "9": {
+                  "title": "Weka",
+                  "attr": {
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://sourceforge.net/projects/weka/",
+                      "id": "61.4b0409a076bf7e07"
+                    }
+                  },
+                  "id": "60.4b0409a076bf7e07"
+                },
+                "10": {
+                  "title": "TensorFlow",
+                  "id": "73.1ddf9dda87010a2c",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.tensorflow.org/",
+                      "id": "74.1ddf9dda87010a2c"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "34.4b0409a076bf7e07"
+            },
+            "8": {
+              "title": "Machine Learning the hard way",
+              "id": "62.4b0409a076bf7e07",
+              "ideas": {
+                "1": {
+                  "title": "https://medium.com/@keithwhor/using-graph-theory-to-build-a-simple-recommendation-engine-in-javascript-ec43394b35a3#.yp6m5212l",
+                  "id": "63.4b0409a076bf7e07"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "https://www.kaggle.com/",
+              "id": "66.59baba9b47338ea6",
+              "ideas": {
+                "1": {
+                  "title": "Your home for data science",
+                  "id": "67.59baba9b47338ea6",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Tutorial",
+              "id": "69.625ea9ba4457858a",
+              "ideas": {
+                "1": {
+                  "title": "Deep learning Papers",
+                  "id": "70.625ea9ba4457858a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap/blob/master/README.md",
+                      "id": "72.625ea9ba4457858a"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Meta",
+              "id": "104.6315fe0af53f6b94",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/josephmisiti/awesome-machine-learning#ruby-general-purpose",
+                  "id": "105.6315fe0af53f6b94"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Mindmaps",
+              "id": "123.73602ae46fe547c0",
+              "ideas": {
+                "1": {
+                  "title": "Statistics",
+                  "id": "124.73602ae46fe547c0",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIramNuSHBfRFNyV3M/view?usp=sharing",
+                      "id": "125.73602ae46fe547c0"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Kaggle",
+              "id": "129.3d85b3c4a955d8f8",
+              "ideas": {
+                "1": {
+                  "title": "https://www.kaggle.com/",
+                  "id": "131.3d85b3c4a955d8f8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "ann tutorial",
+              "id": "163.34927dc919c6f451",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=d1qVR_xbmn4&t=0s&index=2&list=PLonlF40eS6nyYmALgj2sFMFMJF0nHwJ0M",
+                  "id": "164.34927dc919c6f451"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "0.125": {
+          "title": "Concept",
+          "id": 7,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "3": {
+              "title": "TODO",
+              "id": "133.1b8ea8210ed46cd7",
+              "ideas": {
+                "1": {
+                  "title": "Follow up on this tutorial",
+                  "id": "134.1b8ea8210ed46cd7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=aircAruvnKk",
+                      "id": "135.1b8ea8210ed46cd7"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Approaches",
+              "id": 18,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<h2 style=\"margin-top: 1em; margin-bottom: 0.25em; font-family: 'Linux Libertine', Georgia, Times, serif; font-weight: normal; line-height: 1.3; color: black; font-size: 1.5em; overflow: hidden; padding: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(170, 170, 170); background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Approaches\">Approaches</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate; font-family: sans-serif;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=6\" title=\"Edit section: Approaches\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h2><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/List_of_machine_learning_algorithms\" title=\"List of machine learning algorithms\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">List of machine learning algorithms</a></div><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Decision_tree_learning\">Decision tree learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=7\" title=\"Edit section: Decision tree learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Decision_tree_learning\" title=\"Decision tree learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Decision tree learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Decision tree learning uses a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Decision_tree\" title=\"Decision tree\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">decision tree</a>&nbsp;as a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Predictive_modelling\" title=\"Predictive modelling\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">predictive model</a>, which maps observations about an item to conclusions about the item's target value.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Association_rule_learning\">Association rule learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=8\" title=\"Edit section: Association rule learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Association_rule_learning\" title=\"Association rule learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Association rule learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Association rule learning is a method for discovering interesting relations between variables in large databases.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Artificial_neural_networks\">Artificial neural networks</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=9\" title=\"Edit section: Artificial neural networks\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Artificial_neural_network\" title=\"Artificial neural network\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Artificial neural network</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">An&nbsp;<a href=\"https://en.wikipedia.org/wiki/Artificial_neural_network\" title=\"Artificial neural network\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">artificial neural network</a>&nbsp;(ANN) learning algorithm, usually called \"neural network\" (NN), is a learning algorithm that is inspired by the structure and functional aspects of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Biological_neural_networks\" title=\"Biological neural networks\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">biological neural networks</a>. Computations are structured in terms of an interconnected group of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Artificial_neuron\" title=\"Artificial neuron\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">artificial neurons</a>, processing information using a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Connectionism\" title=\"Connectionism\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">connectionist</a>&nbsp;approach to&nbsp;<a href=\"https://en.wikipedia.org/wiki/Computation\" title=\"Computation\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">computation</a>. Modern neural networks are<a href=\"https://en.wikipedia.org/wiki/Non-linear\" title=\"Non-linear\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">non-linear</a>&nbsp;<a href=\"https://en.wikipedia.org/wiki/Statistical\" title=\"Statistical\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">statistical</a>&nbsp;<a href=\"https://en.wikipedia.org/wiki/Data_modeling\" title=\"Data modeling\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">data modeling</a>&nbsp;tools. They are usually used to model complex relationships between inputs and outputs, to&nbsp;<a href=\"https://en.wikipedia.org/wiki/Pattern_recognition\" title=\"Pattern recognition\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">find patterns</a>&nbsp;in data, or to capture the statistical structure in an unknown&nbsp;<a href=\"https://en.wikipedia.org/wiki/Joint_probability_distribution\" title=\"Joint probability distribution\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">joint probability distribution</a>&nbsp;between observed variables.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Inductive_logic_programming\">Inductive logic programming</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=10\" title=\"Edit section: Inductive logic programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Inductive_logic_programming\" title=\"Inductive logic programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Inductive logic programming</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Inductive logic programming (ILP) is an approach to rule learning using&nbsp;<a href=\"https://en.wikipedia.org/wiki/Logic_programming\" title=\"Logic programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">logic programming</a>&nbsp;as a uniform representation for input examples, background knowledge, and hypotheses. Given an encoding of the known background knowledge and a set of examples represented as a logical database of facts, an ILP system will derive a hypothesized logic program that&nbsp;<a href=\"https://en.wikipedia.org/wiki/Entailment\" title=\"Entailment\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">entails</a>&nbsp;all positive and no negative examples.&nbsp;<a href=\"https://en.wikipedia.org/wiki/Inductive_programming\" title=\"Inductive programming\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Inductive programming</a>&nbsp;is a related field that considers any kind of programming languages for representing hypotheses (and not only logic programming), such as functional programs.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Support_vector_machines\">Support vector machines</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=11\" title=\"Edit section: Support vector machines\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Support_vector_machines\" title=\"Support vector machines\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Support vector machines</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Support vector machines (SVMs) are a set of related&nbsp;<a href=\"https://en.wikipedia.org/wiki/Supervised_learning\" title=\"Supervised learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">supervised learning</a>&nbsp;methods used for&nbsp;<a href=\"https://en.wikipedia.org/wiki/Statistical_classification\" title=\"Statistical classification\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">classification</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Regression_analysis\" title=\"Regression analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">regression</a>. Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that predicts whether a new example falls into one category or the other.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Clustering\">Clustering</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=12\" title=\"Edit section: Clustering\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cluster_analysis\" title=\"Cluster analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Cluster analysis</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Cluster analysis is the assignment of a set of observations into subsets (called&nbsp;<i>clusters</i>) so that observations within the same cluster are similar according to some predesignated criterion or criteria, while observations drawn from different clusters are dissimilar. Different clustering techniques make different assumptions on the structure of the data, often defined by some&nbsp;<i>similarity metric</i>&nbsp;and evaluated for example by&nbsp;<i>internal compactness</i>&nbsp;(similarity between members of the same cluster) and&nbsp;<i>separation</i>&nbsp;between different clusters. Other methods are based on&nbsp;<i>estimated density</i>&nbsp;and&nbsp;<i>graph connectivity</i>. Clustering is a method of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Unsupervised_learning\" title=\"Unsupervised learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">unsupervised learning</a>, and a common technique for&nbsp;<a href=\"https://en.wikipedia.org/wiki/Statistics\" title=\"Statistics\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">statistical</a>&nbsp;<a href=\"https://en.wikipedia.org/wiki/Data_analysis\" title=\"Data analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">data analysis</a>.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Bayesian_networks\">Bayesian networks</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=13\" title=\"Edit section: Bayesian networks\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Bayesian_network\" title=\"Bayesian network\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Bayesian network</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">A Bayesian network, belief network or directed acyclic graphical model is a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Graphical_model\" title=\"Graphical model\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">probabilistic graphical model</a>&nbsp;that represents a set of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Random_variables\" title=\"Random variables\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">random variables</a>&nbsp;and their&nbsp;<a href=\"https://en.wikipedia.org/wiki/Conditional_independence\" title=\"Conditional independence\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">conditional independencies</a>&nbsp;via a<a href=\"https://en.wikipedia.org/wiki/Directed_acyclic_graph\" title=\"Directed acyclic graph\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">directed acyclic graph</a>&nbsp;(DAG). For example, a Bayesian network could represent the probabilistic relationships between diseases and symptoms. Given symptoms, the network can be used to compute the probabilities of the presence of various diseases. Efficient algorithms exist that perform&nbsp;<a href=\"https://en.wikipedia.org/wiki/Inference\" title=\"Inference\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">inference</a>&nbsp;and learning.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Reinforcement_learning\">Reinforcement learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=14\" title=\"Edit section: Reinforcement learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Reinforcement_learning\" title=\"Reinforcement learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Reinforcement learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Reinforcement learning is concerned with how an&nbsp;<i>agent</i>&nbsp;ought to take&nbsp;<i>actions</i>&nbsp;in an&nbsp;<i>environment</i>&nbsp;so as to maximize some notion of long-term&nbsp;<i>reward</i>. Reinforcement learning algorithms attempt to find a&nbsp;<i>policy</i>&nbsp;that maps&nbsp;<i>states</i>&nbsp;of the world to the actions the agent ought to take in those states. Reinforcement learning differs from the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Supervised_learning\" title=\"Supervised learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">supervised learning</a>&nbsp;problem in that correct input/output pairs are never presented, nor sub-optimal actions explicitly corrected.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Representation_learning\">Representation learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=15\" title=\"Edit section: Representation learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Representation_learning\" title=\"Representation learning\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Representation learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Several learning algorithms, mostly&nbsp;<a href=\"https://en.wikipedia.org/wiki/Unsupervised_learning\" title=\"Unsupervised learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">unsupervised learning</a>&nbsp;algorithms, aim at discovering better representations of the inputs provided during training. Classical examples include&nbsp;<a href=\"https://en.wikipedia.org/wiki/Principal_components_analysis\" title=\"Principal components analysis\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">principal components analysis</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Cluster_analysis\" title=\"Cluster analysis\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">cluster analysis</a>. Representation learning algorithms often attempt to preserve the information in their input but transform it in a way that makes it useful, often as a pre-processing step before performing classification or predictions, allowing to reconstruct the inputs coming from the unknown data generating distribution, while not being necessarily faithful for configurations that are implausible under that distribution.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\"><a href=\"https://en.wikipedia.org/wiki/Manifold_learning\" title=\"Manifold learning\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Manifold learning</a>&nbsp;algorithms attempt to do so under the constraint that the learned representation is low-dimensional.&nbsp;<a href=\"https://en.wikipedia.org/wiki/Sparse_coding\" title=\"Sparse coding\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Sparse coding</a>&nbsp;algorithms attempt to do so under the constraint that the learned representation is sparse (has many zeros).&nbsp;<a href=\"https://en.wikipedia.org/wiki/Multilinear_subspace_learning\" title=\"Multilinear subspace learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Multilinear subspace learning</a>&nbsp;algorithms aim to learn low-dimensional representations directly from&nbsp;<a href=\"https://en.wikipedia.org/wiki/Tensor\" title=\"Tensor\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">tensor</a>&nbsp;representations for multidimensional data, without reshaping them into (high-dimensional) vectors.<span id=\"cite_ref-17\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-17\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[17]</a></span>&nbsp;<a href=\"https://en.wikipedia.org/wiki/Deep_learning\" title=\"Deep learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Deep learning</a>&nbsp;algorithms discover multiple levels of representation, or a hierarchy of features, with higher-level, more abstract features defined in terms of (or generating) lower-level features. It has been argued that an intelligent machine is one that learns a representation that disentangles the underlying factors of variation that explain the observed data.<span id=\"cite_ref-18\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-18\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[18]</a></span></p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Similarity_and_metric_learning\">Similarity and metric learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=16\" title=\"Edit section: Similarity and metric learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Similarity_learning\" title=\"Similarity learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Similarity learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">In this problem, the learning machine is given pairs of examples that are considered similar and pairs of less similar objects. It then needs to learn a similarity function (or a distance metric function) that can predict if new objects are similar. It is sometimes used in&nbsp;<a href=\"https://en.wikipedia.org/wiki/Recommendation_systems\" title=\"Recommendation systems\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Recommendation systems</a>.</p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Sparse_dictionary_learning\">Sparse dictionary learning</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=17\" title=\"Edit section: Sparse dictionary learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Sparse_dictionary_learning\" title=\"Sparse dictionary learning\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Sparse dictionary learning</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">In this method, a datum is represented as a linear combination of basis functions, and the coefficients are assumed to be sparse. Let&nbsp;<i>x</i>&nbsp;be a&nbsp;<i>d</i>-dimensional datum,&nbsp;<i>D</i>&nbsp;be a&nbsp;<i>d</i>&nbsp;by&nbsp;<i>n</i>&nbsp;matrix, where each column of&nbsp;<i>D</i>&nbsp;represents a basis function.&nbsp;<i>r</i>&nbsp;is the coefficient to represent&nbsp;<i>x</i>&nbsp;using&nbsp;<i>D</i>. Mathematically, sparse dictionary learning means solving&nbsp;<img class=\"mwe-math-fallback-image-inline tex\" alt=\"x \\approx D r\" src=\"https://upload.wikimedia.org/math/c/5/a/c5a06d5e6226b8d57b76ecfc1677896a.png\" style=\"border-style: none; border-width: initial; margin: 0px; display: inline-block;\">&nbsp;where&nbsp;<i>r</i>&nbsp;is sparse. Generally speaking,&nbsp;<i>n</i>&nbsp;is assumed to be larger than&nbsp;<i>d</i>&nbsp;to allow the freedom for a sparse representation.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Learning a dictionary along with sparse representations is&nbsp;<a href=\"https://en.wikipedia.org/wiki/Strongly_NP-hard\" title=\"Strongly NP-hard\" class=\"mw-redirect\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">strongly NP-hard</a>&nbsp;and also difficult to solve approximately.<span id=\"cite_ref-19\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-19\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[19]</a></span>&nbsp;A popular heuristic method for sparse dictionary learning is&nbsp;<a href=\"https://en.wikipedia.org/wiki/K-SVD\" title=\"K-SVD\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">K-SVD</a>.</p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Sparse dictionary learning has been applied in several contexts. In classification, the problem is to determine which classes a previously unseen datum belongs to. Suppose a dictionary for each class has already been built. Then a new datum is associated with the class such that it's best sparsely represented by the corresponding dictionary. Sparse dictionary learning has also been applied in image de-noising. The key idea is that a clean image patch can be sparsely represented by an image dictionary, but the noise cannot.<span id=\"cite_ref-20\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-20\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[20]</a></span></p><h3 style=\"margin-top: 0.3em; margin-bottom: 0px; font-family: sans-serif; line-height: 1.6; color: black; font-size: 1.2em; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom-style: none; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\"><span class=\"mw-headline\" id=\"Genetic_algorithms\">Genetic algorithms</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=18\" title=\"Edit section: Genetic algorithms\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><div class=\"hatnote relarticle mainarticle\" style=\"font-style: italic; padding-left: 1.6em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\">Main article:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Genetic_algorithm\" title=\"Genetic algorithm\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">Genetic algorithm</a></div><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">A genetic algorithm (GA) is a&nbsp;<a href=\"https://en.wikipedia.org/wiki/Search_algorithm\" title=\"Search algorithm\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">search</a>&nbsp;<a href=\"https://en.wikipedia.org/wiki/Heuristic_(computer_science)\" title=\"Heuristic (computer science)\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">heuristic</a>&nbsp;that mimics the process of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Natural_selection\" title=\"Natural selection\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">natural selection</a>, and uses methods such as&nbsp;<a href=\"https://en.wikipedia.org/wiki/Mutation_(genetic_algorithm)\" title=\"Mutation (genetic algorithm)\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">mutation</a>&nbsp;and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Crossover_(genetic_algorithm)\" title=\"Crossover (genetic algorithm)\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">crossover</a>&nbsp;to generate new&nbsp;<a href=\"https://en.wikipedia.org/wiki/Chromosome_(genetic_algorithm)\" title=\"Chromosome (genetic algorithm)\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">genotype</a>&nbsp;in the hope of finding good solutions to a given problem. In machine learning, genetic algorithms found some uses in the 1980s and 1990s.<span id=\"cite_ref-21\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-21\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[21]</a></span><span id=\"cite_ref-22\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-22\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[22]</a></span>&nbsp;Vice versa, machine learning techniques have been used to improve the performance of genetic and&nbsp;<a href=\"https://en.wikipedia.org/wiki/Evolutionary_algorithm\" title=\"Evolutionary algorithm\" target=\"_blank\" style=\"color: rgb(11, 0, 128); background: none;\">evolutionary algorithms</a>.<span id=\"cite_ref-23\" class=\"reference\" style=\"position: relative; font-size: 11.2px; line-height: 1; vertical-align: baseline; top: -0.5em; unicode-bidi: isolate;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-23\" target=\"_blank\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[23]</a></span></p>"
+                },
+                "style": {}
+              },
+              "ideas": {}
+            },
+            "7": {
+              "title": "Definition",
+              "id": 17,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Statistics + ML",
+                  "id": 13,
+                  "ideas": {
+                    "1": {
+                      "title": "Statistical Learning",
+                      "id": 14
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "A branch of Artificial Intellegence",
+                  "id": 2,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "3": {
+                  "title": "Closely related to statistics",
+                  "id": 4,
+                  "attr": {
+                    "style": {}
+                  }
+                },
+                "4": {
+                  "title": "ML VS Data mining",
+                  "id": 10,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: 22.4px; color: rgb(37, 37, 37); font-family: sans-serif;\">Machine learning and data mining often employ the same methods and overlap significantly. They can be roughly distinguished as follows:</p><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.4px;\"><li style=\"margin-bottom: 0.1em;\">Machine learning focuses on prediction, based on&nbsp;<i>known</i>&nbsp;properties learned from the training data.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Data_mining\" title=\"Data mining\" style=\"color: rgb(11, 0, 128); background: none;\">Data mining</a>&nbsp;focuses on the&nbsp;<a href=\"https://en.wikipedia.org/wiki/Discovery_(observation)\" title=\"Discovery (observation)\" style=\"color: rgb(11, 0, 128); background: none;\">discovery</a>&nbsp;of (previously)&nbsp;<i>unknown</i>&nbsp;properties in the data. This is the analysis step of&nbsp;<a href=\"https://en.wikipedia.org/wiki/Knowledge_discovery\" title=\"Knowledge discovery\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); background: none;\">Knowledge Discovery</a>&nbsp;in Databases.</li></ul>"
+                    },
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "10": {
+              "title": "Categories",
+              "id": 24,
+              "ideas": {
+                "1": {
+                  "title": "Unsupervised Learning",
+                  "id": 9,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Neural Network",
+                      "id": "120.73602ae46fe547c0",
+                      "ideas": {
+                        "1": {
+                          "title": "Feed Forward",
+                          "id": "121.73602ae46fe547c0"
+                        },
+                        "2": {
+                          "title": "Convolutional",
+                          "id": "122.73602ae46fe547c0",
+                          "attr": {}
+                        },
+                        "3": {
+                          "title": "Resources",
+                          "id": "126.3d85b3c4a955d8f8",
+                          "ideas": {
+                            "1": {
+                              "title": "Mindmaps",
+                              "id": "127.3d85b3c4a955d8f8",
+                              "ideas": {
+                                "1": {
+                                  "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrWVpHOWU4bHN3REk/view?usp=sharing",
+                                  "id": "128.3d85b3c4a955d8f8"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Reinforcement learning",
+                  "id": 25,
+                  "attr": {}
+                },
+                "0.5": {
+                  "title": "Supervised learning",
+                  "id": 8,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Feature Selection",
+                      "id": "77.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "There are many Algorithms that can simplify your inputs and helps you select the right features",
+                          "id": "78.6315fe0af53f6b94"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": "76.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Supervised_learning",
+                          "id": "75.6315fe0af53f6b94",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Nodejs libs",
+                          "id": "119.73602ae46fe547c0"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "1.5": {
+                      "title": "Two ways in choosing algorithms",
+                      "id": "79.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "Low/High Variance",
+                          "id": "80.6315fe0af53f6b94"
+                        },
+                        "2": {
+                          "title": "Low/High Bias",
+                          "id": "81.6315fe0af53f6b94"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "1.75": {
+                      "title": "Algorithms",
+                      "id": "82.6315fe0af53f6b94",
+                      "ideas": {},
+                      "attr": {
+                        "note": {
+                          "index": 21,
+                          "text": "The most widely used learning algorithms are Support Vector Machines, linear regression, logistic regression, naive Bayes, linear discriminant analysis, decision trees, k-nearest neighbor algorithm, and Neural Networks (Multilayer perceptron)."
+                        }
+                      }
+                    },
+                    "1.625": {
+                      "title": "Feature Vector",
+                      "id": "86.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "https://en.wikipedia.org/wiki/Feature_vector",
+                          "id": "87.6315fe0af53f6b94"
+                        },
+                        "2": {
+                          "title": "an N deminsional Vector representing our object",
+                          "id": "107.6315fe0af53f6b94"
+                        },
+                        "3": {
+                          "title": "You should reduce the number of deminsions",
+                          "id": "108.6315fe0af53f6b94"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "1.875": {
+                      "title": "Cross Validation Across multiple algorithms to determine if one algorithm is better than others",
+                      "id": "85.6315fe0af53f6b94"
+                    },
+                    "1.9375": {
+                      "title": "Function to fit our data",
+                      "id": "88.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "Loss Function to determine that amount ",
+                          "id": "92.6315fe0af53f6b94"
+                        },
+                        "3": {
+                          "title": "Risk minimization",
+                          "id": "98.6315fe0af53f6b94",
+                          "ideas": {
+                            "1": {
+                              "title": "Risk Function",
+                              "id": "96.6315fe0af53f6b94",
+                              "attr": {}
+                            },
+                            "2": {
+                              "title": "Empirical Risk Minimization",
+                              "id": "99.6315fe0af53f6b94"
+                            },
+                            "3": {
+                              "title": "Structural Risk Minimization",
+                              "id": "100.6315fe0af53f6b94",
+                              "ideas": {
+                                "1": {
+                                  "title": "Applies a penalty to enforce reqularization",
+                                  "id": "101.6315fe0af53f6b94"
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "note": {
+                          "index": 25,
+                          "text": "There are two basic approaches to choosing {\\displaystyle f} f or {\\displaystyle g} g: empirical risk minimization and structural risk minimization.[6] Empirical risk minimization seeks the function that best fits the training data. Structural risk minimize includes a penalty function that controls the bias/variance tradeoff."
+                        },
+                        "collapsed": true
+                      }
+                    },
+                    "1.96875": {
+                      "title": "Questions",
+                      "id": "97.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "Conditional vs Joint probabilistic models",
+                          "id": "89.6315fe0af53f6b94",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Problems",
+                          "id": "93.6315fe0af53f6b94",
+                          "ideas": {
+                            "1": {
+                              "title": "Overfitting",
+                              "id": "94.6315fe0af53f6b94"
+                            }
+                          },
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "1.984375": {
+                      "title": "Examples",
+                      "id": "102.6315fe0af53f6b94",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/michaelimstepf/supervised-learning",
+                          "id": "103.6315fe0af53f6b94"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<h3 style=\"color: rgb(0, 0, 0); background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; margin-top: 0.3em; margin-bottom: 0px; overflow: hidden; padding-top: 0.5em; padding-bottom: 0px; border-bottom: none; font-size: 1.2em; line-height: 1.6; font-family: sans-serif;\"><span class=\"mw-headline\" id=\"Types_of_problems_and_tasks\">Types of problems and tasks</span><span class=\"mw-editsection\" style=\"-webkit-user-select: none; font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; display: inline-block; white-space: nowrap; unicode-bidi: isolate;\"><span class=\"mw-editsection-bracket\" style=\"margin-right: 0.25em; color: rgb(85, 85, 85);\">[</span><a href=\"https://en.wikipedia.org/w/index.php?title=Machine_learning&amp;action=edit&amp;section=2\" title=\"Edit section: Types of problems and tasks\" style=\"color: rgb(11, 0, 128); background: none;\">edit</a><span class=\"mw-editsection-bracket\" style=\"margin-left: 0.25em; color: rgb(85, 85, 85);\">]</span></span></h3><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: inherit; color: rgb(37, 37, 37); font-family: sans-serif;\"><span id=\"Algorithm_types\"></span></p><p style=\"margin-top: 0.5em; margin-bottom: 0.5em; line-height: inherit; color: rgb(37, 37, 37); font-family: sans-serif;\">Machine learning tasks are typically classified into three broad categories, depending on the nature of the learning \"signal\" or \"feedback\" available to a learning system. These are<sup id=\"cite_ref-aima_11-0\" class=\"reference\" style=\"line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-aima-11\" style=\"color: rgb(11, 0, 128); background: none;\">[11]</a></sup></p><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(&quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A&quot;); color: rgb(37, 37, 37); font-family: sans-serif;\"><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Supervised_learning\" title=\"Supervised learning\" style=\"color: rgb(11, 0, 128); background: none;\">Supervised learning</a>: The computer is presented with example inputs and their desired outputs, given by a \"teacher\", and the goal is to learn a general rule that&nbsp;<a href=\"https://en.wikipedia.org/wiki/Map_(mathematics)\" title=\"Map (mathematics)\" style=\"color: rgb(11, 0, 128); background: none;\">maps</a>&nbsp;inputs to outputs.</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Unsupervised_learning\" title=\"Unsupervised learning\" style=\"color: rgb(11, 0, 128); background: none;\">Unsupervised learning</a>: No labels are given to the learning algorithm, leaving it on its own to find structure in its input. Unsupervised learning can be a goal in itself (discovering hidden patterns in data) or a means towards an end (<a href=\"https://en.wikipedia.org/wiki/Feature_learning\" title=\"Feature learning\" style=\"color: rgb(11, 0, 128); background: none;\">feature learning</a>).</li><li style=\"margin-bottom: 0.1em;\"><a href=\"https://en.wikipedia.org/wiki/Reinforcement_learning\" title=\"Reinforcement learning\" style=\"color: rgb(11, 0, 128); background: none;\">Reinforcement learning</a>: A computer program interacts with a dynamic environment in which it must perform a certain goal (such as&nbsp;<a href=\"https://en.wikipedia.org/wiki/Autonomous_car\" title=\"Autonomous car\" style=\"color: rgb(11, 0, 128); background: none;\">driving a vehicle</a>), without a teacher explicitly telling it whether it has come close to its goal. Another example is learning to play a game by playing against an opponent.<sup id=\"cite_ref-bishop_4-2\" class=\"reference\" style=\"line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;\"><a href=\"https://en.wikipedia.org/wiki/Machine_learning#cite_note-bishop-4\" style=\"color: rgb(11, 0, 128); background: none;\">[4]</a></sup><sup class=\"reference\" style=\"line-height: 1; unicode-bidi: isolate; white-space: nowrap; font-size: 11.2px;\">:3</sup></li></ul>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "NLP",
+              "id": 26,
+              "ideas": {
+                "1": {
+                  "title": "https://en.wikipedia.org/wiki/Natural_language_processing",
+                  "id": "109.6315fe0af53f6b94"
+                },
+                "2": {
+                  "title": "Syntax",
+                  "id": "114.6315fe0af53f6b94"
+                },
+                "3": {
+                  "title": "Semantics",
+                  "id": "115.6315fe0af53f6b94"
+                },
+                "4": {
+                  "title": "Problems it's solving",
+                  "id": "116.6315fe0af53f6b94",
+                  "ideas": {
+                    "1": {
+                      "title": "https://en.wikipedia.org/wiki/Optical_character_recognition",
+                      "id": "117.6315fe0af53f6b94"
+                    },
+                    "2": {
+                      "title": "Optical Character Recognition",
+                      "id": "118.6315fe0af53f6b94"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Problems",
+              "id": "111.6315fe0af53f6b94",
+              "ideas": {
+                "1": {
+                  "title": "Image Recognition",
+                  "id": "112.6315fe0af53f6b94"
+                },
+                "2": {
+                  "title": "Onset detection",
+                  "id": "132.326507beb864df33",
+                  "ideas": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "24": {
+              "title": "History",
+              "id": 19,
+              "ideas": {
+                "1": {
+                  "title": "Instead of hard if, then rules",
+                  "id": 20,
+                  "ideas": {
+                    "1": {
+                      "title": "We have statistical models than can predict things more accurately",
+                      "id": 21
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4.5": {
+              "title": "Neural networks",
+              "id": "136.1b8ea8210ed46cd7",
+              "ideas": {
+                "1": {
+                  "title": "Layers of nodes",
+                  "id": "137.1b8ea8210ed46cd7",
+                  "attr": {}
+                },
+                "2": {
+                  "title": "each neuron is a function",
+                  "id": "138.1b8ea8210ed46cd7",
+                  "ideas": {
+                    "1": {
+                      "title": "takes all the inputs from previous neurons and output a number",
+                      "id": "139.1b8ea8210ed46cd7",
+                      "attr": {
+                        "note": {
+                          "index": 67,
+                          "text": "um"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "a weighted sum",
+                      "id": "140.1b8ea8210ed46cd7"
+                    },
+                    "3": {
+                      "title": "+ bias",
+                      "id": "141.1b8ea8210ed46cd7"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Segmoid function",
+                  "id": "142.1b8ea8210ed46cd7",
+                  "attr": {}
+                },
+                "4": {
+                  "title": "Leru",
+                  "id": "143.1b8ea8210ed46cd7",
+                  "ideas": {
+                    "1": {
+                      "title": "activation function",
+                      "id": "159.34927dc919c6f451"
+                    },
+                    "2": {
+                      "title": "above a threashhold, increase the weight of this node",
+                      "id": "160.34927dc919c6f451"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Resources",
+                  "id": "145.1b8ea8210ed46cd7",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=Aut32pR5PQA",
+                      "id": "146.1b8ea8210ed46cd7"
+                    }
+                  }
+                },
+                "0.5": {
+                  "title": "back propogation",
+                  "id": "144.1b8ea8210ed46cd7",
+                  "ideas": {
+                    "1": {
+                      "title": "go back and update the previous weights based on the output",
+                      "id": "147.30fa430837bbf450"
+                    },
+                    "2": {
+                      "title": "minimize the error here",
+                      "id": "148.30fa430837bbf450",
+                      "ideas": {
+                        "1": {
+                          "title": "Y^ - Y",
+                          "id": "149.30fa430837bbf450"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "gradient descent",
+                      "id": "151.30fa430837bbf450"
+                    },
+                    "4": {
+                      "title": "but this means that backpropogation needs an \"expected output\", which limits it",
+                      "id": "152.30fa430837bbf450",
+                      "ideas": {
+                        "1": {
+                          "title": "from being free to make choices (evolutionary nn)",
+                          "id": "153.30fa430837bbf450"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4.5": {
+                  "title": "tensorflows",
+                  "id": "154.30fa430837bbf450",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=oxf3o8IbCk4",
+                      "id": "155.30fa430837bbf450"
+                    },
+                    "2": {
+                      "title": "dataflow graph based",
+                      "id": "156.30fa430837bbf450",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "tensor",
+                      "id": "157.30fa430837bbf450",
+                      "ideas": {
+                        "1": {
+                          "title": "is an n dimensional matrix",
+                          "id": "158.30fa430837bbf450"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4.75": {
+                  "title": "you can pick the number of layers",
+                  "id": "161.34927dc919c6f451",
+                  "ideas": {
+                    "1": {
+                      "title": "recommended two?",
+                      "id": "162.34927dc919c6f451"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Machine Learning"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Database",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "No SQL",
+          "id": 2,
+          "ideas": {
+            "5": {
+              "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrdWs3THppUF9GYWc",
+              "id": 15
+            }
+          }
+        },
+        "11": {
+          "title": "SQL",
+          "id": 4,
+          "attr": {
+            "position": [
+              92.5,
+              83,
+              1
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "1": {
+              "title": "Postgres",
+              "id": 19
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": 18,
+          "ideas": {
+            "1": {
+              "title": "Gun",
+              "id": 16,
+              "ideas": {
+                "1": {
+                  "title": "http://gun.js.org/#step1",
+                  "id": 17
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 93,
+      "ideaIdTo": 94,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "Database"
+}

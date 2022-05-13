@@ -1,0 +1,1604 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "Nodejs",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "25": {
+          "title": "Concepts",
+          "id": 192,
+          "ideas": {
+            "5": {
+              "title": "Event loop",
+              "id": 250,
+              "ideas": {
+                "1": {
+                  "title": "Non-Blocking io",
+                  "id": 249,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div>## Nodejs is Non-Blocking</div><div><br></div><div>What are the things that block?</div><div><br></div><div>* Reads/Writes on the Database</div><div>* Calls to other web services</div><div><br></div><div>* In other web frameworks, we create a separate thread for each request.</div><div>* Nodejs uses only one thread!</div><div><br></div><div><br></div><div>## Events</div><div>&nbsp; &nbsp;&nbsp;</div><div>An event can be, for example:</div><div><br></div><div>* Incoming Connection from the client</div><div>* Incoming Data from the client</div><div>* Server close event.</div><div>* event event event.</div><div><br></div><div><br></div><div>## Events (Continue)</div><div><br></div><div>Let's look at our server, what are the events our server can have?</div><div><br></div><div>* request</div><div>* connection</div><div>* close</div><div><br></div><div>https://nodejs.org/api/http.html#http_event_request</div><div><br></div><div><br></div><div>## Block Node</div><div><br></div><div>The only way you can block your application is that you don't end the event callback.</div><div><br></div><div>```</div><div>var http = require('http');</div><div><br></div><div>server = http.createServer();</div><div><br></div><div>server.on('request',function(req,res){</div><div><br></div><div>&nbsp; &nbsp; res.writeHead(\"hello\");</div><div>&nbsp; &nbsp; res.write(\"hi there\");</div><div>&nbsp; &nbsp; console.log(\"If you don't call res.end node will stop the whole application\");</div><div>&nbsp; &nbsp; console.log(\"This is a very common mistake\");</div><div>&nbsp; &nbsp;&nbsp;</div><div>});</div><div><br></div><div>server.listen(1337, '127.0.0.1');</div><div>```</div>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "6": {
+              "title": "Core Modules",
+              "id": 252,
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<div id=\"toc\" style=\"box-sizing: border-box; font-family: source-sans-pro, sans-serif; font-size: 18px; line-height: 34px;\"><h2 style=\"box-sizing: border-box; color: rgb(0, 0, 0); margin-top: 1em; font-weight: 400; font-size: 25px; letter-spacing: 1px;\">Table of Contents</h2></div><div id=\"apicontent\" style=\"box-sizing: border-box; font-family: source-sans-pro, sans-serif; font-size: 18px; line-height: 34px;\"><ul style=\"box-sizing: border-box; margin-top: 1em; margin-bottom: 0px; margin-left: 0px; padding-left: 40px; font-size: 15px; line-height: 24px;\"><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/documentation.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">About these Docs</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/synopsis.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Synopsis</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/assert.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Assertion Testing</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/buffer.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Buffer</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/addons.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">C/C++ Addons</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/child_process.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Child Processes</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/cluster.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Cluster</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/console.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Console</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/crypto.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Crypto</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/debugger.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Debugger</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/dns.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">DNS</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/domain.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Domain</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/events.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Events</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/fs.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">File System</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/globals.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Globals</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/http.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">HTTP</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/https.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">HTTPS</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/modules.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Modules</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/net.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Net</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/os.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">OS</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/path.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Path</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/process.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Process</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/punycode.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Punycode</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/querystring.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Query Strings</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/readline.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Readline</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/repl.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">REPL</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/smalloc.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Smalloc</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/stream.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Stream</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/string_decoder.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">String Decoder</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/timers.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Timers</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/tls.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">TLS/SSL</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/tty.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">TTY</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/dgram.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">UDP/Datagram</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/url.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">URL</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/util.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">Utilities</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/vm.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">VM</a></li><li style=\"box-sizing: border-box;\"><a href=\"https://nodejs.org/api/zlib.html\" style=\"box-sizing: border-box; color: rgb(128, 189, 1); font-weight: bold;\" target=\"_blank\">ZLIB</a></li></ul></div>"
+                },
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Process",
+                  "id": 253,
+                  "ideas": {}
+                },
+                "2": {
+                  "title": "Buffer",
+                  "id": 268,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/ChALkeR/notes/blob/master/Buffer-knows-everything.md",
+                      "id": 336
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Sockets",
+                  "id": 324,
+                  "ideas": {
+                    "1": {
+                      "title": "File descriptiors?",
+                      "id": 325,
+                      "ideas": {
+                        "1": {
+                          "title": "I ran into that issue with mac when openning more 5000 connections",
+                          "id": 326
+                        },
+                        "2": {
+                          "title": "It has to do with the limit",
+                          "id": 327
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Clusters",
+                  "id": 328,
+                  "ideas": {
+                    "1": {
+                      "title": "when I clustered, I noticed Node accepts more requests",
+                      "id": 329
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "6": {
+                  "title": "Streams",
+                  "id": 242,
+                  "ideas": {
+                    "1": {
+                      "title": "https://nodejs.org/api/stream.html",
+                      "id": 255,
+                      "ideas": {
+                        "1": {
+                          "title": "api for stream",
+                          "id": 256
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "FRP",
+                      "id": 294,
+                      "ideas": {
+                        "1": {
+                          "title": "https://blog.risingstack.com/functional-reactive-programming-with-the-power-of-nodejs-streams/",
+                          "id": 295
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "Third party",
+                      "id": 331,
+                      "ideas": {
+                        "1": {
+                          "title": "Through",
+                          "id": 333,
+                          "ideas": {
+                            "1": {
+                              "title": "I can pipe to through if I wanted to, to avoid writing different files",
+                              "id": 334,
+                              "attr": {
+                                "attachment": {
+                                  "contentType": "text/html",
+                                  "content": "<div>var through2 = require('through2')</div><div><br></div><div>fs.createReadStream('ex.txt')</div><div>&nbsp; .pipe(through2(function (chunk, enc, callback) {</div><div><br></div><div>&nbsp; &nbsp; for (var i = 0; i &lt; chunk.length; i++)</div><div>&nbsp; &nbsp; &nbsp; if (chunk[i] == 97)</div><div>&nbsp; &nbsp; &nbsp; &nbsp; chunk[i] = 122 // swap 'a' for 'z'</div><div><br></div><div>&nbsp; &nbsp; this.push(chunk)</div><div><br></div><div>&nbsp; &nbsp; callback()</div><div><br></div><div>&nbsp; &nbsp;}))</div><div>&nbsp; .pipe(fs.createWriteStream('out.txt'))</div>"
+                                },
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Pipe",
+                      "id": "375.276b63a2f02b9e83",
+                      "ideas": {
+                        "1": {
+                          "title": "pipe readable stream to writable",
+                          "id": "376.276b63a2f02b9e83",
+                          "ideas": {
+                            "1": {
+                              "title": "think of the example of reading a file stream and piping it to a write stream to copy (for example)",
+                              "id": "377.276b63a2f02b9e83"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "Implementing C++ modules",
+              "id": 257,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "https://nodejs.org/api/addons.html",
+                  "id": 272
+                },
+                "5": {
+                  "title": "Node abstraction for V8 so you don't have to worry about either node or V8 version",
+                  "id": 308,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/nodejs/nan",
+                      "id": 307,
+                      "ideas": {},
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "6": {
+                  "title": "Examples",
+                  "id": 311,
+                  "ideas": {
+                    "1": {
+                      "title": "node addons example",
+                      "id": 310,
+                      "attr": {
+                        "style": {}
+                      },
+                      "ideas": {
+                        "2": {
+                          "title": "https://nodejs.org/api/addons.html#addons_addon_examples",
+                          "id": 314
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Node-QT",
+                      "id": 312,
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/arturadib/node-qt",
+                          "id": 313
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "8": {
+              "title": "Archeticture",
+              "id": 258,
+              "ideas": {
+                "1": {
+                  "title": "Libuv",
+                  "id": 260,
+                  "ideas": {
+                    "1": {
+                      "title": "events",
+                      "id": 261
+                    },
+                    "2": {
+                      "title": "I think there's another library here",
+                      "id": 275
+                    },
+                    "3": {
+                      "title": "https://github.com/libuv/libuv",
+                      "id": 276
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "V8",
+                  "id": 262,
+                  "ideas": {
+                    "1": {
+                      "title": "javascript interpreter",
+                      "id": 263
+                    },
+                    "2": {
+                      "title": "https://code.google.com/p/v8/",
+                      "id": 273,
+                      "ideas": {
+                        "1": {
+                          "title": "home page",
+                          "id": 274
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\">Node.js provides an&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Event-driven_architecture\" title=\"Event-driven architecture\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.3999996185303px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\" target=\"_blank\">event-driven architecture</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\">&nbsp;and a&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Non-blocking_I/O\" title=\"Non-blocking I/O\" class=\"mw-redirect\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.3999996185303px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\" target=\"_blank\">non-blocking I/O</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\">&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Application_programming_interface\" title=\"Application programming interface\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.3999996185303px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\" target=\"_blank\">API</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\">&nbsp;that optimizes an application's throughput and scalability. These technologies are commonly used for&nbsp;</span><a href=\"https://en.wikipedia.org/wiki/Real-time_web\" title=\"Real-time web\" style=\"color: rgb(11, 0, 128); font-family: sans-serif; line-height: 22.3999996185303px; background-image: none; background-attachment: initial; background-size: initial; background-origin: initial; background-clip: initial; background-position: initial; background-repeat: initial;\" target=\"_blank\">real-time web</a><span style=\"color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\">&nbsp;applications.</span>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Server Side Rendering",
+              "id": 278,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/runvnc/angular-on-server/wiki/Running-AngularJS-on-the-server-with-Node.js-and-jsdom",
+                  "id": 279,
+                  "ideas": {
+                    "1": {
+                      "title": "attempt to render on server side",
+                      "id": 280
+                    }
+                  }
+                },
+                "2": {
+                  "title": "how would it work?",
+                  "id": 281,
+                  "ideas": {
+                    "1": {
+                      "title": "request comes in",
+                      "id": 283
+                    },
+                    "2": {
+                      "title": "there's a shared route",
+                      "id": 284
+                    },
+                    "3": {
+                      "title": "server renders a little bit",
+                      "id": 285
+                    },
+                    "4": {
+                      "title": "client is served",
+                      "id": 286
+                    },
+                    "5": {
+                      "title": "client renders",
+                      "id": 287
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "https://github.com/tmpvar/jsdom",
+                  "id": 288,
+                  "ideas": {
+                    "1": {
+                      "title": "javascript implementation of HTML",
+                      "id": 289
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Performance",
+              "id": 296,
+              "ideas": {
+                "1": {
+                  "title": "http://www.sitepoint.com/5-easy-performance-tweaks-node-js-express/",
+                  "id": 297
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Security",
+              "id": 298,
+              "ideas": {
+                "1": {
+                  "title": "Abusing eval",
+                  "id": 299,
+                  "ideas": {
+                    "1": {
+                      "title": "sending a request with an eval statement",
+                      "id": 300
+                    },
+                    "2": {
+                      "title": "http://bishankochher.blogspot.com/2011/12/nodejs-security-good-bad-and-ugly.html",
+                      "id": 301,
+                      "ideas": {
+                        "1": {
+                          "title": "blog post regarding that",
+                          "id": 302
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Resources",
+                  "id": 305,
+                  "ideas": {
+                    "1": {
+                      "title": "https://nodesecurity.io/resources",
+                      "id": 303,
+                      "ideas": {
+                        "1": {
+                          "title": "node security team",
+                          "id": 304
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "https://speakerdeck.com/ckarande/top-overlooked-security-threats-to-node-dot-js-web-applications",
+                      "id": 306
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "0.5": {
+                  "title": "JWT",
+                  "id": "423.62e6c538cae43ae2",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrMl9mWWNwYVpZWTQ/view?usp=sharing",
+                      "id": "424.62e6c538cae43ae2"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Buffer Class",
+              "id": 358,
+              "ideas": {
+                "1": {
+                  "title": "Significant difference between browser programming and Server",
+                  "id": 359
+                },
+                "2": {
+                  "title": "Node doesn't have access to ES6 typed arrays and Array Buffer",
+                  "id": 360
+                },
+                "3": {
+                  "title": "Deals with Binary data",
+                  "id": 361
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Global",
+              "id": 362,
+              "ideas": {
+                "1": {
+                  "title": "Process Object",
+                  "id": 363,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "The process Object\nThe process object is an essential component of the Node environment, as it pro‐\nvides information about the runtime environment. In addition, standard input/\noutput (I/O) occurs through process, you can gracefully terminate a Node applica‐\ntion, and you can even signal when the Node event loop (covered in the section “The\nEvent Queue (Loop)” on page 33) has finished a cycle.\nThe process object is featured in many applications throughout the book, so check\nthe index for all appearances. For now, we’ll take a closer look at the process object’s\nenvironmental reporting, as well as the all-important standard I/O.\nThe process object provides access to information about the Node environment, as\nwell as the runtime environment. To explore, we’ll use the -p command-line option\nwith node, which executes a script and returns an immediate result. For instance, to\ncheck out the process.versions property, type the following:"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Buffer",
+              "id": 364,
+              "ideas": {
+                "1": {
+                  "title": "Node uses an octet stream",
+                  "id": 365,
+                  "ideas": {
+                    "1": {
+                      "title": "and 8 bit binary format",
+                      "id": 366
+                    }
+                  }
+                },
+                "2": {
+                  "title": "String decoder",
+                  "id": 367,
+                  "ideas": {
+                    "1": {
+                      "title": "better for outputing an incomplete stream",
+                      "id": 368
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "process.nextTick()",
+              "id": 369
+            },
+            "16": {
+              "title": "Compression",
+              "id": "378.276b63a2f02b9e83",
+              "ideas": {
+                "1": {
+                  "title": "Gzip ",
+                  "id": "379.276b63a2f02b9e83",
+                  "ideas": {
+                    "1": {
+                      "title": "seems to be more reliable?",
+                      "id": "381.276b63a2f02b9e83"
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": "382.276b63a2f02b9e83",
+                      "ideas": {
+                        "1": {
+                          "title": "http://stackoverflow.com/questions/388595/why-use-deflate-instead-of-gzip-for-text-files-served-by-apache",
+                          "id": "383.276b63a2f02b9e83"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Deflate",
+                  "id": "380.276b63a2f02b9e83"
+                },
+                "3": {
+                  "title": "The client has to send a header",
+                  "id": "384.276b63a2f02b9e83",
+                  "ideas": {
+                    "1": {
+                      "title": "Accept-Encoding",
+                      "id": "385.276b63a2f02b9e83",
+                      "ideas": {
+                        "1": {
+                          "title": "With either",
+                          "id": "389.276b63a2f02b9e83",
+                          "ideas": {
+                            "1": {
+                              "title": "Gzip",
+                              "id": "390.276b63a2f02b9e83"
+                            },
+                            "2": {
+                              "title": "deflate",
+                              "id": "391.276b63a2f02b9e83"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "Net",
+              "id": "406.5d1517eead45e79b",
+              "ideas": {
+                "1": {
+                  "title": "https://nodejs.org/api/net.html#net_new_net_socket_options",
+                  "id": "407.5d1517eead45e79b"
+                },
+                "2": {
+                  "title": "Connect()",
+                  "id": "488.4e1f5fd27ba32c3",
+                  "ideas": {
+                    "1": {
+                      "title": "returns a duplex streams",
+                      "id": "489.4e1f5fd27ba32c3"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "18": {
+              "title": "Streams",
+              "ideas": {
+                "2": {
+                  "title": "Definition",
+                  "id": "449.4e1f5fd27ba32c3",
+                  "attr": {
+                    "position": [
+                      76,
+                      -70,
+                      2
+                    ],
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Instance of an EventEmitter",
+                      "id": "418.18a69e4bfa8b9df4",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "benefits",
+                      "id": "448.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "you get a backpressure mechanism for free to throttle writes for slow consumers.",
+                          "id": "446.4e1f5fd27ba32c3",
+                          "ideas": {
+                            "1": {
+                              "title": "on slow consumers",
+                              "id": "447.4e1f5fd27ba32c3"
+                            }
+                          },
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Node won't buffer data needlessly",
+                          "id": "451.4e1f5fd27ba32c3"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "Types",
+                  "id": "413.18a69e4bfa8b9df4",
+                  "ideas": {
+                    "1": {
+                      "title": "Readable",
+                      "id": "414.18a69e4bfa8b9df4",
+                      "ideas": {
+                        "1": {
+                          "title": "creating a stream",
+                          "id": "463.4e1f5fd27ba32c3",
+                          "attr": {
+                            "note": {
+                              "index": 102,
+                              "text": "var Readable = require('stream').Readable;\n\nvar rs = new Readable;\n//pushing null means the stream is done\nrs.push('beep ');\nrs.push('boop\\n');\nrs.push(null);\n\nrs.pipe(process.stdout);"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "If you want to create a readable stream that pushes arbitrary values instead of just strings and buffers, make sure to create your readable stream with Readable({ objectMode: true }).",
+                          "id": "465.4e1f5fd27ba32c3",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Writeable",
+                      "id": "417.18a69e4bfa8b9df4",
+                      "ideas": {
+                        "1": {
+                          "title": "Writable",
+                          "id": "422.18a69e4bfa8b9df4",
+                          "ideas": {
+                            "1": {
+                              "title": "you can write to it",
+                              "id": "466.4e1f5fd27ba32c3"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "Transform",
+                          "id": "454.4e1f5fd27ba32c3",
+                          "attr": {
+                            "note": {
+                              "index": 107,
+                              "text": "Transform streams are a certain type of duplex stream (both readable and writable). The distinction is that in Transform streams, the output is in some way calculated from the input.\n\nYou might also hear transform streams referred to as \"through streams\".\n\nThrough streams are simple readable/writable filters that transform input and produce output"
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "they transform some input into a writable streams",
+                              "id": "467.4e1f5fd27ba32c3"
+                            },
+                            "2": {
+                              "title": "sometimes they are called through streams",
+                              "id": "468.4e1f5fd27ba32c3"
+                            },
+                            "3": {
+                              "title": "inherits from Duplex Streams",
+                              "id": "496.6995bab6da5141ef"
+                            }
+                          }
+                        },
+                        "3": {
+                          "title": "Duplex",
+                          "id": "455.4e1f5fd27ba32c3",
+                          "ideas": {
+                            "1": {
+                              "title": "both ends of the stream are writable and readable at the same time",
+                              "id": "470.4e1f5fd27ba32c3",
+                              "ideas": {
+                                "1": {
+                                  "title": "in two way communication as in RPC",
+                                  "id": "476.4e1f5fd27ba32c3"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "2": {
+                              "title": "whenever you see this",
+                              "id": "472.4e1f5fd27ba32c3",
+                              "ideas": {
+                                "1": {
+                                  "title": "a.pipe(b).pipe(a)",
+                                  "id": "474.4e1f5fd27ba32c3"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            },
+                            "3": {
+                              "title": "Net.connect()",
+                              "id": "484.4e1f5fd27ba32c3",
+                              "ideas": {
+                                "1": {
+                                  "title": "net.connect()This function returns a [duplex stream] that connects over tcp to a remote host.You can start writing to the stream right away and the writes will be buffered until the 'connect' event fires.",
+                                  "id": "485.4e1f5fd27ba32c3"
+                                }
+                              },
+                              "attr": {
+                                "collapsed": true
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "Classic",
+                          "id": "456.4e1f5fd27ba32c3",
+                          "attr": {
+                            "note": {
+                              "index": 115,
+                              "text": "Classic readable streams are just event emitters that emit \"data\" events when they have data for their consumers and emit \"end\" events when they are done producing data for their consumers."
+                            },
+                            "collapsed": true
+                          },
+                          "ideas": {
+                            "1": {
+                              "title": "whenever the stream has data listener",
+                              "id": "477.4e1f5fd27ba32c3"
+                            },
+                            "2": {
+                              "title": "they are just event emitters",
+                              "id": "478.4e1f5fd27ba32c3"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "5": {
+                      "title": "Examples of Streams",
+                      "id": "459.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "Net.socket is a duplex stream",
+                          "id": "420.18a69e4bfa8b9df4",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "8": {
+                      "title": "Resources",
+                      "id": "457.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/substack/stream-handbook",
+                          "id": "409.18a69e4bfa8b9df4",
+                          "attr": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "5": {
+                  "title": "Operations",
+                  "id": "415.18a69e4bfa8b9df4",
+                  "ideas": {
+                    "1": {
+                      "title": "Pipe( )",
+                      "id": "416.18a69e4bfa8b9df4",
+                      "ideas": {
+                        "1": {
+                          "title": "node will take care of listening to 'data' and 'end' events for you and writes the data to the stream",
+                          "id": "453.4e1f5fd27ba32c3"
+                        },
+                        "2": {
+                          "title": "it hooks a readable stream to a writable stream",
+                          "id": "458.4e1f5fd27ba32c3"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "18": {
+                  "title": "Resources",
+                  "id": "419.18a69e4bfa8b9df4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://howtonode.org/coding-challenges-with-streams",
+                      "id": "410.18a69e4bfa8b9df4",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "https://nodejs.org/api/stream.html",
+                      "id": "421.18a69e4bfa8b9df4"
+                    },
+                    "4": {
+                      "title": "GITHUB REPO",
+                      "id": "461.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/itechdom/playground/tree/node-streams",
+                          "id": "462.4e1f5fd27ba32c3"
+                        }
+                      }
+                    },
+                    "5": {
+                      "title": "Third Party",
+                      "id": "479.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "Through",
+                          "id": "480.4e1f5fd27ba32c3"
+                        },
+                        "2": {
+                          "title": "Concat Stream",
+                          "id": "481.4e1f5fd27ba32c3"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "6": {
+                      "title": "Built-in Streams",
+                      "id": "482.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/substack/stream-handbook#built-in-streams",
+                          "id": "483.4e1f5fd27ba32c3"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "7": {
+                      "title": "Controlling Streams",
+                      "id": "486.4e1f5fd27ba32c3",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/substack/stream-handbook#control-streams",
+                          "id": "487.4e1f5fd27ba32c3"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "position": [
+                      83,
+                      73,
+                      1
+                    ],
+                    "collapsed": true
+                  }
+                }
+              },
+              "id": "408.18a69e4bfa8b9df4",
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "20": {
+              "title": "Logging",
+              "id": "504.2f43403aad90d9c2",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "505.2f43403aad90d9c2",
+                  "ideas": {
+                    "1": {
+                      "title": "How to do Logging",
+                      "id": "506.2f43403aad90d9c2",
+                      "ideas": {
+                        "1": {
+                          "title": "https://blog.risingstack.com/node-js-logging-tutorial/",
+                          "id": "507.2f43403aad90d9c2"
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Third Party",
+                      "id": "508.2f43403aad90d9c2",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/winstonjs/winston",
+                          "id": "509.2f43403aad90d9c2"
+                        },
+                        "2": {
+                          "title": "Winston",
+                          "id": "510.2f43403aad90d9c2"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "30": {
+              "title": "Third Party",
+              "id": "425.6a43c9067fb8c213",
+              "ideas": {
+                "1": {
+                  "title": "Config",
+                  "id": "427.6a43c9067fb8c213",
+                  "ideas": {
+                    "1": {
+                      "title": "configurations that cascade",
+                      "id": "429.6a43c9067fb8c213"
+                    },
+                    "2": {
+                      "title": "the root is default.json",
+                      "id": "430.6a43c9067fb8c213",
+                      "ideas": {
+                        "1": {
+                          "title": "is where configuration will fall to eventually",
+                          "id": "431.6a43c9067fb8c213"
+                        }
+                      }
+                    },
+                    "3": {
+                      "title": "https://github.com/lorenwest/node-config/wiki/Configuration-Files",
+                      "id": "432.6a43c9067fb8c213"
+                    },
+                    "4": {
+                      "title": "environment variables take precedent",
+                      "id": "433.6a43c9067fb8c213"
+                    },
+                    "5": {
+                      "title": "files are loaded in this order",
+                      "id": "434.6a43c9067fb8c213",
+                      "attr": {
+                        "note": {
+                          "index": 115,
+                          "text": "default.EXT\ndefault-{instance}.EXT\n{deployment}.EXT\n{deployment}-{instance}.EXT\n{short_hostname}.EXT\n{short_hostname}-{instance}.EXT\n{short_hostname}-{deployment}.EXT\n{short_hostname}-{deployment}-{instance}.EXT\n{full_hostname}.EXT\n{full_hostname}-{instance}.EXT\n{full_hostname}-{deployment}.EXT\n{full_hostname}-{deployment}-{instance}.EXT\nlocal.EXT\nlocal-{instance}.EXT\nlocal-{deployment}.EXT\nlocal-{deployment}-{instance}.EXT\n(Finally, custom environment variables can override all files)"
+                        }
+                      }
+                    },
+                    "6": {
+                      "title": "loading multi instance configs",
+                      "id": "435.6a43c9067fb8c213",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/lorenwest/node-config/wiki/Configuration-Files#multi-instance-deployments",
+                          "id": "436.6a43c9067fb8c213"
+                        }
+                      }
+                    },
+                    "7": {
+                      "title": "two main methods",
+                      "id": "437.6a43c9067fb8c213",
+                      "ideas": {
+                        "1": {
+                          "title": "get('server.port')",
+                          "id": "438.6a43c9067fb8c213"
+                        },
+                        "2": {
+                          "title": "has",
+                          "id": "439.6a43c9067fb8c213",
+                          "ideas": {
+                            "1": {
+                              "title": "check if the config file contains this",
+                              "id": "440.6a43c9067fb8c213"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "8": {
+                      "title": "Securely store config files in production",
+                      "id": "441.6a43c9067fb8c213",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/lorenwest/node-config/wiki/Securing-Production-Config-Files#introduction",
+                          "id": "442.6a43c9067fb8c213"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Morgan",
+                  "id": "428.6a43c9067fb8c213",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/expressjs/morgan",
+                      "id": "443.6a43c9067fb8c213"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "Express",
+                  "id": "444.6a43c9067fb8c213",
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrTEhHZXNmZ2pRWjQ/view?usp=sharing",
+                      "id": "445.6a43c9067fb8c213"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "Passport",
+                  "id": "498.52330efc5d35ec35"
+                },
+                "5": {
+                  "title": "Mongoose",
+                  "id": "501.4cb9046c4231231c"
+                },
+                "6": {
+                  "title": "Winston",
+                  "id": "511.2f43403aad90d9c2"
+                },
+                "7": {
+                  "title": "AWS Integration",
+                  "id": "512.22ce8205eb4aa926",
+                  "ideas": {
+                    "1": {
+                      "title": "Cloud Formation Example from AWS labs",
+                      "id": "522.22ce8205eb4aa926",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/awslabs/ecs-refarch-cloudformation",
+                          "id": "523.22ce8205eb4aa926"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": "514.22ce8205eb4aa926",
+                      "ideas": {
+                        "1": {
+                          "title": "https://aws.amazon.com/sdk-for-node-js/",
+                          "id": "513.22ce8205eb4aa926",
+                          "attr": {}
+                        },
+                        "2": {
+                          "title": "Mindmap",
+                          "id": "518.22ce8205eb4aa926",
+                          "ideas": {
+                            "1": {
+                              "title": "https://drive.google.com/file/d/0B9tPYCpuqoIrcjJGM2pFOFBhWUU/view?usp=sharing",
+                              "id": "519.22ce8205eb4aa926"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "1.5": {
+                      "title": "AWS lambda with express example",
+                      "id": "524.22ce8205eb4aa926",
+                      "ideas": {
+                        "1": {
+                          "title": "https://github.com/awslabs/aws-serverless-express",
+                          "id": "525.22ce8205eb4aa926"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "1": {
+              "title": "Node Api",
+              "id": 240,
+              "ideas": {
+                "1": {
+                  "title": "https://nodejs.org/api/",
+                  "id": 241
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "2": {
+              "title": "http://nodeschool.io/#workshoppers",
+              "id": 247,
+              "ideas": {
+                "1": {
+                  "title": "Nodeschool open source workshops",
+                  "id": 248
+                },
+                "2": {
+                  "title": "The list",
+                  "id": 251,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<div id=\"learnyounode\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a class=\"js-workshop-link\" href=\"https://www.github.com/workshopper/learnyounode\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">learnyounode</a></h4><p data-i18n=\"workshopper-learnyounode\" style=\"line-height: 28px; min-height: 2.8em;\">Learn the basics of node: asynchronous i/o, http.</p><code data-i18n=\"workshopper-learnyounode-command\" style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g learnyounode</code></div><div id=\"how-to-npm\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a class=\"js-workshop-link\" href=\"https://github.com/npm/how-to-npm\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">How to npm</a></h4><p data-i18n=\"workshopper-how-to-npm\" style=\"line-height: 28px; min-height: 2.8em;\">Learn how to use and create npm modules.</p><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g how-to-npm</code></div><div id=\"streamadventure\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a class=\"js-workshop-link\" href=\"https://www.github.com/substack/stream-adventure\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">stream-adventure</a></h4><p style=\"line-height: 28px; min-height: 2.8em;\"><span data-i18n=\"workshopper-streamadventure\">Learn to compose streaming interfaces with&nbsp;</span><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">.pipe()</code><span data-i18n=\"workshopper-streamadventure2\">.</span></p><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g stream-adventure</code></div><div id=\"streamadventure\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\"><br></code></div><div id=\"streamadventure\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\"><br></code></div><div id=\"streamadventure\" class=\"workshopper\" style=\"padding-bottom: 20px; font-family: 'Source Sans Pro'; font-size: medium; line-height: normal;\"><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\"><div id=\"javascripting\" class=\"workshopper\" style=\"padding-bottom: 20px; color: rgb(51, 51, 51); font-family: 'Source Sans Pro'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(255, 255, 255);\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a class=\"js-workshop-link\" href=\"https://www.github.com/sethvincent/javascripting\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">javascripting</a></h4><p data-i18n=\"workshopper-javascripting\" style=\"line-height: 28px; min-height: 2.8em;\">Learn the basics of JavaScript. No previous programming experience required.</p><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g javascripting</code></div><div id=\"gitit\" class=\"workshopper\" style=\"padding-bottom: 20px; color: rgb(51, 51, 51); font-family: 'Source Sans Pro'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(255, 255, 255);\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a class=\"js-workshop-link\" href=\"https://www.github.com/jlord/git-it\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">git-it</a></h4><p data-i18n=\"workshopper-gitit\" style=\"line-height: 28px; min-height: 2.8em;\">Learn Git and GitHub basics.</p><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g git-it</code></div><div id=\"scope-chains-closures\" class=\"workshopper\" style=\"padding-bottom: 20px; color: rgb(51, 51, 51); font-family: 'Source Sans Pro'; font-size: medium; line-height: normal; white-space: normal; background-color: rgb(255, 255, 255);\"><h4 style=\"margin-top: 0px; line-height: 28px;\"><a href=\"https://www.github.com/jesstelford/scope-chains-closures\" target=\"_blank\" style=\"color: rgb(51, 51, 51); border: none; border-radius: 3px; font-size: 20px; padding: 6px 10px; font-family: 'Source Code Pro'; font-weight: 500; display: block; background: rgb(255, 229, 31);\">Scope Chains &amp; Closures</a></h4><p data-i18n=\"workshopper-scope-chains-closures\" style=\"line-height: 28px; min-height: 2.8em;\">Learn the details of Scope, Scope Chains, Closures, and Garbage Collection.</p><code style=\"font-family: 'Source Code Pro'; padding: 3px 5px; line-height: 20px; background: rgb(250, 250, 250);\">npm install -g scope-chains-closures</code></div></code></div>"
+                    },
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "3": {
+              "title": "http://www.technology-ebay.de/the-teams/mobile-de/blog/nodejs-real-world",
+              "id": 290,
+              "ideas": {
+                "1": {
+                  "title": "Node.js in Real World",
+                  "id": 291
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Web services",
+              "id": 339,
+              "ideas": {
+                "1": {
+                  "title": "http://blog.steveklabnik.com/posts/2011-07-03-nobody-understands-rest-or-http",
+                  "id": 340
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "Discovering Leaks in Javascript",
+              "id": 341,
+              "ideas": {
+                "1": {
+                  "title": "http://www.alexkras.com/simple-guide-to-finding-a-javascript-memory-leak-in-node-js/",
+                  "id": 342
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "HTTP 2",
+              "id": 356,
+              "ideas": {
+                "1": {
+                  "title": "https://blog.cloudflare.com/accelerating-node-js-applications-with-http-2-server-push/",
+                  "id": 357
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "7": {
+              "title": "Books",
+              "id": 370,
+              "ideas": {
+                "1": {
+                  "title": "Learning Node. 2E",
+                  "id": 371,
+                  "ideas": {
+                    "1": {
+                      "title": "Chapter 3",
+                      "id": 372
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "Stream",
+              "id": "392.53efd482a1e62eba",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/substack/stream-handbook",
+                  "id": "393.53efd482a1e62eba"
+                },
+                "2": {
+                  "title": "https://howtonode.org/coding-challenges-with-streams",
+                  "id": "394.53efd482a1e62eba"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Graph Theory in JavaScript",
+              "id": "396.53efd482a1e62eba",
+              "ideas": {
+                "1": {
+                  "title": "https://medium.com/@keithwhor/using-graph-theory-to-build-a-simple-recommendation-engine-in-javascript-ec43394b35a3#.yp6m5212l",
+                  "id": "397.53efd482a1e62eba"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "10": {
+              "title": "Swagger",
+              "id": "398.53efd482a1e62eba",
+              "ideas": {
+                "2": {
+                  "title": "https://github.com/swagger-api/swagger-node",
+                  "id": "401.53efd482a1e62eba",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "11": {
+              "title": "Third Party",
+              "id": 264,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Package management",
+                  "id": 265,
+                  "ideas": {
+                    "1": {
+                      "title": "NPM",
+                      "id": 266
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Frameworks",
+                  "id": 267,
+                  "attr": {
+                    "attachment": {
+                      "contentType": "text/html",
+                      "content": "<dl style=\"margin-top: 0.2em; margin-bottom: 0.5em; color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"><dt style=\"margin-bottom: 0.1em;\">Frameworks</dt></dl><ul style=\"margin-top: 0.3em; margin-bottom: 0px; margin-left: 1.6em; list-style-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%225%22%20height%3D%2213%22%3E%0A%3Ccircle%20cx%3D%222.5%22%20cy%3D%229.5%22%20r%3D%222.5%22%20fill%3D%22%2300528c%22%2F%3E%0A%3C%2Fsvg%3E%0A); color: rgb(37, 37, 37); font-family: sans-serif; line-height: 22.3999996185303px;\"><li style=\"margin-bottom: 0.1em;\">Server frameworks:&nbsp;<a href=\"https://en.wikipedia.org/wiki/Express.js\" title=\"Express.js\" style=\"color: rgb(11, 0, 128); background: none;\">Express.js</a>,&nbsp;<a href=\"https://en.wikipedia.org/wiki/Socket.IO\" title=\"Socket.IO\" style=\"color: rgb(11, 0, 128); background: none;\">Socket.IO</a>, Koa.js, Hapi.js, Total.js, Nodal<sup id=\"cite_ref-44\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/Node.js#cite_note-44\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[44]</a></sup><sup id=\"cite_ref-45\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/Node.js#cite_note-45\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[45]</a></sup><sup id=\"cite_ref-46\" class=\"reference\" style=\"line-height: 1; font-size: 11.1999998092651px; unicode-bidi: -webkit-isolate;\"><a href=\"https://en.wikipedia.org/wiki/Node.js#cite_note-46\" style=\"color: rgb(11, 0, 128); white-space: nowrap; background: none;\">[46]</a></sup></li><li style=\"margin-bottom: 0.1em;\">MVC frameworks: Meteor, Derby, Sails, Mean, MeanJS, Tower.js, Nombo, Geddy, Compound, Yahoo! Mojito</li></ul>"
+                    },
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "Koa",
+                      "id": 320,
+                      "ideas": {
+                        "1": {
+                          "title": "http://koajs.com/#application",
+                          "id": 319,
+                          "attr": {
+                            "style": {}
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    },
+                    "2": {
+                      "title": "Express",
+                      "id": 321,
+                      "ideas": {
+                        "1": {
+                          "title": "http://expressjs.com/",
+                          "id": 322
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                },
+                "3": {
+                  "title": "JSDom + Server Side rendering",
+                  "id": 292,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/cheeriojs/cheerio",
+                      "id": 293
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "http://s-a.github.io/iron-node/",
+                  "id": 337,
+                  "ideas": {
+                    "1": {
+                      "title": "nice debugger",
+                      "id": 338
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "5": {
+                  "title": "https://github.com/node-inspector/node-inspector#quick-start",
+                  "id": 346,
+                  "ideas": {
+                    "1": {
+                      "title": "debugging",
+                      "id": 347
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "6": {
+                  "title": "Git integration",
+                  "id": 348,
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.nodegit.org/",
+                      "id": 349
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "8": {
+                  "title": "REST Guidelines",
+                  "id": 352,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/Microsoft/api-guidelines/blob/master/Guidelines.md",
+                      "id": 353
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "NPM GUI",
+                  "id": 354,
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.npmjs.com/package/npm-gui",
+                      "id": 355
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "10": {
+                  "title": "Async",
+                  "id": 373,
+                  "ideas": {
+                    "1": {
+                      "title": "http://caolan.github.io/async/",
+                      "id": 374
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "11": {
+                  "title": "Logging",
+                  "id": "403.32fa05d5eaf02cb6",
+                  "ideas": {
+                    "2": {
+                      "title": "HTTP Request logging",
+                      "id": "503.2f43403aad90d9c2",
+                      "ideas": {
+                        "1": {
+                          "title": "Morgan",
+                          "id": "404.32fa05d5eaf02cb6",
+                          "ideas": {
+                            "1": {
+                              "title": "https://github.com/expressjs/morgan",
+                              "id": "405.32fa05d5eaf02cb6"
+                            }
+                          },
+                          "attr": {}
+                        }
+                      }
+                    }
+                  }
+                },
+                "12": {
+                  "title": "Deep Stream",
+                  "id": "491.49643fa9e912ff94",
+                  "ideas": {
+                    "1": {
+                      "title": "https://deepstream.io/blog/deepstream-2.0-more-than-1000-times-faster-than-socket.io/",
+                      "id": "492.49643fa9e912ff94"
+                    }
+                  }
+                },
+                "5.5": {
+                  "title": "system usage app in electron",
+                  "id": 350,
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/joereynolds/fanbox/blob/master/readme.md",
+                      "id": 351
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "12": {
+              "title": "Tutorials",
+              "id": "493.5f33f30ed378df1a",
+              "ideas": {
+                "1": {
+                  "title": "Top Tutorials",
+                  "id": "494.5f33f30ed378df1a",
+                  "ideas": {
+                    "1": {
+                      "title": "https://medium.mybridge.co/node-js-top-10-articles-of-the-year-v-2017-79df8269d0f3#.8wco0uogh",
+                      "id": "495.5f33f30ed378df1a"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "13": {
+              "title": "Database Service",
+              "id": "499.25138cd2de74e4d9",
+              "ideas": {
+                "1": {
+                  "title": "https://gist.github.com/jgoux/a130371948f06512ef1b4df2fbf4e798https://gist.github.com/jgoux/a130371948f06512ef1b4df2fbf4e798",
+                  "id": "500.25138cd2de74e4d9"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "Nodejs"
+}

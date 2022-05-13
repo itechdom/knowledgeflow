@@ -1,0 +1,702 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "React Native",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 109,
+          "ideas": {
+            "1": {
+              "title": "Definition",
+              "id": "450.3e1cacb110e3223e",
+              "attr": {
+                "collapsed": true
+              },
+              "ideas": {
+                "1": {
+                  "title": "Pillars",
+                  "id": "444.3ee86993f97ce28b",
+                  "ideas": {
+                    "1": {
+                      "title": "Touch Handling",
+                      "id": "441.3ee86993f97ce28b",
+                      "attr": {}
+                    },
+                    "2": {
+                      "title": "Native Components",
+                      "id": "442.3ee86993f97ce28b",
+                      "attr": {}
+                    },
+                    "3": {
+                      "title": "Style & Layout",
+                      "id": "443.3ee86993f97ce28b",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Learn once, write anywhere",
+                  "id": "440.3ee86993f97ce28b",
+                  "attr": {}
+                },
+                "3": {
+                  "title": "How it works ?",
+                  "id": "438.3ee86993f97ce28b",
+                  "ideas": {
+                    "1": {
+                      "title": "there is a javascript thread running and updating the app natively",
+                      "id": "439.3ee86993f97ce28b"
+                    },
+                    "2": {
+                      "title": "They running a real javascript engine (JS CO) in ios",
+                      "id": "445.3ee86993f97ce28b",
+                      "ideas": {
+                        "1": {
+                          "title": "there is a websocket connection between the app and the browser",
+                          "id": "446.3ee86993f97ce28b"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "4": {
+                  "title": "iOS Stuff",
+                  "id": "447.3ee86993f97ce28b",
+                  "ideas": {
+                    "1": {
+                      "title": "Linear Constraint Solver?",
+                      "id": "448.3ee86993f97ce28b"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "Command line",
+              "id": "376.ec37a67a2aac5a8",
+              "ideas": {
+                "1": {
+                  "title": "react-native run-ios",
+                  "id": "377.ec37a67a2aac5a8"
+                },
+                "2": {
+                  "title": "react-native run-android",
+                  "id": "378.ec37a67a2aac5a8"
+                },
+                "3": {
+                  "title": "react-native start",
+                  "id": "400.6f7623b412945583",
+                  "ideas": {
+                    "1": {
+                      "title": "to start the packager",
+                      "id": "401.6f7623b412945583"
+                    }
+                  }
+                },
+                "4": {
+                  "title": "React native packager",
+                  "id": "379.ec37a67a2aac5a8",
+                  "attr": {}
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "9": {
+              "title": "Components",
+              "id": "380.ec37a67a2aac5a8",
+              "ideas": {
+                "1": {
+                  "title": "List View",
+                  "id": "381.ec37a67a2aac5a8",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react-native/docs/using-a-listview.html#content",
+                      "id": "404.6f7623b412945583"
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Navigator",
+                  "id": "382.ec37a67a2aac5a8",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react-native/docs/navigator.html",
+                      "id": "415.6f7623b412945583"
+                    },
+                    "2": {
+                      "title": "Guide",
+                      "id": "435.9ca88c12c1d9dd9",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/navigation.html#content",
+                          "id": "436.9ca88c12c1d9dd9"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "3": {
+                  "title": "TouchableHighlight",
+                  "id": "452.3e1cacb110e3223e",
+                  "ideas": {
+                    "1": {
+                      "title": "on Android",
+                      "id": "462.3e1cacb110e3223e",
+                      "ideas": {
+                        "1": {
+                          "title": "use TouchableNativeFeedback",
+                          "id": "464.3e1cacb110e3223e"
+                        }
+                      }
+                    }
+                  }
+                },
+                "4": {
+                  "title": "IOS",
+                  "id": "453.3e1cacb110e3223e"
+                },
+                "5": {
+                  "title": "Android",
+                  "id": "454.3e1cacb110e3223e"
+                },
+                "6": {
+                  "title": "View",
+                  "id": "455.3e1cacb110e3223e",
+                  "ideas": {
+                    "1": {
+                      "title": "Styles",
+                      "id": "456.3e1cacb110e3223e"
+                    },
+                    "2": {
+                      "title": "Touch Handling",
+                      "id": "457.3e1cacb110e3223e",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/handling-touches.html",
+                          "id": "459.3e1cacb110e3223e"
+                        },
+                        "2": {
+                          "title": "To use Complicated Gestures use",
+                          "id": "465.3e1cacb110e3223e",
+                          "ideas": {
+                            "1": {
+                              "title": "https://facebook.github.io/react-native/docs/touchablewithoutfeedback.html",
+                              "id": "466.3e1cacb110e3223e"
+                            },
+                            "2": {
+                              "title": "TouchableWithoutFeedback",
+                              "id": "467.3e1cacb110e3223e"
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Accessiblity",
+                      "id": "458.3e1cacb110e3223e",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/accessibility.html",
+                          "id": "460.3e1cacb110e3223e",
+                          "ideas": {}
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "7": {
+                  "title": "Gesture Responder System",
+                  "id": "423.9ca88c12c1d9dd9",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react-native/docs/gesture-responder-system.html",
+                      "id": "424.9ca88c12c1d9dd9"
+                    },
+                    "2": {
+                      "title": "Touchable Highlight",
+                      "id": "425.9ca88c12c1d9dd9",
+                      "ideas": {
+                        "1": {
+                          "title": "use it wherever you use a link on the web",
+                          "id": "426.9ca88c12c1d9dd9"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "3": {
+                      "title": "Lifecycle",
+                      "id": "427.9ca88c12c1d9dd9",
+                      "ideas": {
+                        "1": {
+                          "title": "onStartShouldSetResponder",
+                          "id": "428.9ca88c12c1d9dd9",
+                          "ideas": {
+                            "1": {
+                              "title": "register your view as a responder",
+                              "id": "430.9ca88c12c1d9dd9"
+                            }
+                          }
+                        },
+                        "2": {
+                          "title": "onMoveShouldSetResponder",
+                          "id": "429.9ca88c12c1d9dd9"
+                        },
+                        "3": {
+                          "title": "onResponderGrant",
+                          "id": "432.9ca88c12c1d9dd9",
+                          "ideas": {
+                            "1": {
+                              "title": "The View is now responding for touch events. This is the time to highlight and show the user what is happening",
+                              "id": "434.9ca88c12c1d9dd9"
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "4": {
+                      "title": "Pan Responder",
+                      "id": "418.6f7623b412945583",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/panresponder.html",
+                          "id": "420.6f7623b412945583"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "8": {
+                  "title": "Networking",
+                  "id": "405.6f7623b412945583",
+                  "ideas": {
+                    "1": {
+                      "title": "Use Fetch API",
+                      "id": "407.6f7623b412945583",
+                      "ideas": {
+                        "1": {
+                          "title": "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+                          "id": "408.6f7623b412945583"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": "409.6f7623b412945583",
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/network.html",
+                          "id": "410.6f7623b412945583"
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                },
+                "9": {
+                  "title": "Style",
+                  "id": 354,
+                  "ideas": {
+                    "2": {
+                      "title": "Height and Width is unitless",
+                      "id": 357,
+                      "ideas": {
+                        "1": {
+                          "title": "depends on the pixel density of the device",
+                          "id": 358,
+                          "ideas": {}
+                        },
+                        "4": {
+                          "title": "Resources",
+                          "id": 362,
+                          "ideas": {
+                            "1": {
+                              "title": "https://facebook.github.io/react-native/docs/height-and-width.html#content",
+                              "id": 361,
+                              "attr": {
+                                "style": {}
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "attr": {
+                        "collapsed": true
+                      }
+                    },
+                    "12": {
+                      "title": "Resources",
+                      "id": 355,
+                      "ideas": {
+                        "1": {
+                          "title": "https://facebook.github.io/react-native/docs/style.html#content",
+                          "id": 356
+                        }
+                      }
+                    },
+                    "13": {
+                      "title": "FlexBox",
+                      "id": 360,
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "1": {
+                          "title": "Dimensions",
+                          "id": 363,
+                          "attr": {
+                            "attachment": {
+                              "contentType": "text/html",
+                              "content": "<div><span style=\"font-size: 17px; line-height: 40px; background-color: rgb(245, 252, 255);\"><b>Flex Dimensions&nbsp;</b></span></div><div><span style=\"font-size: 17px; line-height: 40px; background-color: rgb(245, 252, 255);\"><b>Use flex in a component's style to have the component expand and shrink dynamically based on available space. Normally you will use flex: 1, which tells a component to fill all available space, shared evenly amongst each other component with the same parent. The larger the flex given, the higher the ratio of space a component will take compared to its siblings.</b></span></div>"
+                            },
+                            "style": {}
+                          }
+                        },
+                        "2": {
+                          "title": "Direction",
+                          "id": 364,
+                          "ideas": {
+                            "1": {
+                              "title": "how the elements are organized",
+                              "id": 365
+                            },
+                            "2": {
+                              "title": "resources",
+                              "id": 366,
+                              "ideas": {
+                                "1": {
+                                  "title": "https://facebook.github.io/react-native/docs/flexbox.html#content",
+                                  "id": 367
+                                }
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "Align items",
+                          "id": 368,
+                          "ideas": {
+                            "2": {
+                              "title": "Determine how content is organized on the secondary axis",
+                              "id": 371
+                            },
+                            "12": {
+                              "title": "resources",
+                              "id": 369,
+                              "ideas": {
+                                "1": {
+                                  "title": "https://facebook.github.io/react-native/docs/flexbox.html#content",
+                                  "id": 370
+                                }
+                              },
+                              "attr": {
+                                "position": [
+                                  106,
+                                  95,
+                                  1
+                                ]
+                              }
+                            }
+                          },
+                          "attr": {
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "they actually reimplemented flexbox",
+                          "id": "449.3ee86993f97ce28b"
+                        }
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "14": {
+              "title": "Performance",
+              "id": "412.6f7623b412945583",
+              "ideas": {
+                "1": {
+                  "title": "they say use FlatList or sectionList instead",
+                  "id": "413.6f7623b412945583",
+                  "ideas": {
+                    "1": {
+                      "title": "https://facebook.github.io/react-native/docs/flatlist.html",
+                      "id": "414.6f7623b412945583"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "https://facebook.github.io/react-native/docs/performance.html",
+                  "id": "437.3ee86993f97ce28b"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Advanced",
+              "id": "468.32b97ed02c77d063"
+            },
+            "16": {
+              "title": "Developing Native Modules",
+              "id": "471.32a08391a285e34b",
+              "ideas": {
+                "1": {
+                  "title": "https://facebook.github.io/react-native/docs/native-modules-ios.html",
+                  "id": "472.32a08391a285e34b"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "9": {
+              "title": "Tutorials",
+              "id": 321,
+              "ideas": {
+                "2": {
+                  "title": "https://facebook.github.io/react-native/docs/tutorial.html",
+                  "id": 351
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "10": {
+              "title": "Docs",
+              "id": "399.412516f68911e84b"
+            },
+            "11": {
+              "title": "Meta",
+              "id": 349,
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/jondot/awesome-react-native",
+                  "id": 350
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "12": {
+              "title": "Projects",
+              "id": 317,
+              "ideas": {},
+              "attr": {
+                "style": {}
+              }
+            },
+            "14": {
+              "title": "Tutorials",
+              "id": "387.ec37a67a2aac5a8",
+              "ideas": {
+                "2": {
+                  "title": "React native min 48",
+                  "id": "390.ec37a67a2aac5a8",
+                  "ideas": {
+                    "1": {
+                      "title": "https://www.youtube.com/watch?v=r5OPRhelEIU",
+                      "id": "388.ec37a67a2aac5a8",
+                      "attr": {}
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "15": {
+              "title": "Third party",
+              "id": "391.685f59fac00885d4",
+              "ideas": {
+                "1": {
+                  "title": "react native networking",
+                  "id": "392.685f59fac00885d4",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/eduedix/react-native-networking",
+                      "id": "393.685f59fac00885d4"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Native Base",
+                  "id": "397.5c8888483d50017f",
+                  "ideas": {
+                    "1": {
+                      "title": "http://nativebase.io/docs/v2.0.0/components#",
+                      "id": "398.5c8888483d50017f"
+                    }
+                  }
+                },
+                "3": {
+                  "title": "Drag and Drop",
+                  "id": "416.6f7623b412945583",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/deanmcpherson/react-native-drag-drop",
+                      "id": "417.6f7623b412945583"
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "16": {
+              "title": "My Github Examples",
+              "id": "394.7b4ef2dba3458867",
+              "ideas": {
+                "2": {
+                  "title": "BudgetQT",
+                  "id": "396.7b4ef2dba3458867",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/itechdom/BudgetQT",
+                      "id": "395.7b4ef2dba3458867",
+                      "attr": {}
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            },
+            "17": {
+              "title": "React Native Playground",
+              "id": "451.3e1cacb110e3223e"
+            },
+            "4.5": {
+              "title": "Link to External Mindmaps",
+              "id": "419.6f7623b412945583",
+              "ideas": {
+                "1": {
+                  "title": "React Mindmap",
+                  "id": 347,
+                  "ideas": {
+                    "1": {
+                      "title": "https://drive.google.com/open?id=0B9tPYCpuqoIrQTNyVTY3aWhuVUk",
+                      "id": 348
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                },
+                "2": {
+                  "title": "Mobx mindmap",
+                  "id": "383.ec37a67a2aac5a8"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 308,
+      "ideaIdTo": 305,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "React Native"
+}

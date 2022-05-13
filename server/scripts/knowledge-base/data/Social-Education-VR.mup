@@ -1,0 +1,39 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "VR",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.12482a243b99b31e"
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.12482a243b99b31e",
+          "ideas": {
+            "1": {
+              "title": "Samsung VR",
+              "id": "4.12482a243b99b31e",
+              "ideas": {
+                "1": {
+                  "title": "https://www.youtube.com/watch?v=LVX7iruysrM",
+                  "id": "6.12482a243b99b31e"
+                }
+              }
+            },
+            "2": {
+              "title": "Google Cardboard",
+              "id": "5.12482a243b99b31e"
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "VR"
+}

@@ -1,0 +1,69 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "ClojureScript",
+      "attr": {
+        "style": {}
+      },
+      "ideas": {
+        "14": {
+          "title": "Concepts",
+          "id": 176,
+          "ideas": {}
+        },
+        "-20": {
+          "title": "Resources",
+          "id": 239,
+          "attr": {
+            "style": {}
+          },
+          "ideas": {
+            "2": {
+              "title": "Official",
+              "id": "241.8922e45159b10b0",
+              "ideas": {
+                "1": {
+                  "title": "https://clojurescript.org/",
+                  "id": "240.8922e45159b10b0",
+                  "attr": {}
+                }
+              }
+            },
+            "3": {
+              "title": "OM",
+              "id": "242.8922e45159b10b0",
+              "ideas": {
+                "1": {
+                  "title": "Clojure's interface to React",
+                  "id": "244.8922e45159b10b0",
+                  "ideas": {
+                    "1": {
+                      "title": "https://github.com/omcljs/om",
+                      "id": "245.8922e45159b10b0"
+                    }
+                  }
+                }
+              }
+            },
+            "4": {
+              "title": "Quick Start Github",
+              "id": "246.3f7e49e460d99e99",
+              "ideas": {
+                "1": {
+                  "title": "https://github.com/clojure/clojurescript/wiki/Quick-Start",
+                  "id": "247.3f7e49e460d99e99"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [],
+  "attr": {},
+  "title": "ClojureScript"
+}

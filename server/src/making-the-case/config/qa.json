@@ -1,0 +1,19 @@
+{
+  "server": {
+    "port": 4000,
+    "host": "0.0.0.0",
+    "media": "https://api.markab.io"
+  },
+  "db": {
+    "host": "mongodb+srv://javasop:osamah1989@cluster0-a3c8j.mongodb.net/",
+    "remote": "mongodb://localhost",
+    "port": 27017
+  },
+  "redirectUrl": "orbital-site.s3-website-us-east-1.amazonaws.com",
+  "secret": "ijwtooo",
+  "auth": {
+    "google": {
+      "callbackURL": "orbital-site.s3-website-us-east-1.amazonaws.com"
+    }
+  }
+}

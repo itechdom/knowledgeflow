@@ -1,0 +1,124 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "System Archeticture",
+      "attr": {},
+      "ideas": {
+        "1": {
+          "title": "Concepts",
+          "id": "2.7b8f637586df806d",
+          "ideas": {
+            "1": {
+              "title": "LMAX",
+              "id": "4.7b8f637586df806d",
+              "ideas": {
+                "1": {
+                  "title": "Resources",
+                  "id": "5.7b8f637586df806d",
+                  "ideas": {
+                    "1": {
+                      "title": "http://martinfowler.com/articles/lmax.html",
+                      "id": "6.7b8f637586df806d"
+                    }
+                  }
+                },
+                "2": {
+                  "title": "Consists of",
+                  "id": "7.7b8f637586df806d",
+                  "ideas": {
+                    "1": {
+                      "title": "Business Logic Processor",
+                      "id": "8.7b8f637586df806d",
+                      "ideas": {
+                        "1": {
+                          "title": "Single Threaded",
+                          "id": "9.7b8f637586df806d"
+                        },
+                        "2": {
+                          "title": "Keeping everything in memory",
+                          "id": "14.7b8f637586df806d"
+                        },
+                        "3": {
+                          "title": "How does it handle Crashes?",
+                          "id": "15.7b8f637586df806d",
+                          "attr": {
+                            "note": {
+                              "index": 10,
+                              "text": "Using an in-memory structure has an important consequence - what happens if everything crashes? Even the most resilient systems are vulnerable to someone pulling the power. The heart of dealing with this is Event Sourcing - which means that the current state of the Business Logic Processor is entirely derivable by processing the input events. As long as the input event stream is kept in a durable store (which is one of the jobs of the input disruptor) you can always recreate the current state of the business logic engine by replaying the events."
+                            }
+                          },
+                          "ideas": {}
+                        }
+                      }
+                    },
+                    "2": {
+                      "title": "Disruptors",
+                      "id": "10.7b8f637586df806d",
+                      "ideas": {
+                        "1": {
+                          "title": "Input",
+                          "id": "11.7b8f637586df806d"
+                        },
+                        "2": {
+                          "title": "Output",
+                          "id": "12.7b8f637586df806d"
+                        },
+                        "3": {
+                          "title": "Both run concurrently to handle IO",
+                          "id": "13.7b8f637586df806d"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "position": [
+                  97,
+                  -86,
+                  1
+                ]
+              }
+            },
+            "2": {
+              "title": "Cloud",
+              "id": "19.47f3fb8794b3006c",
+              "ideas": {
+                "1": {
+                  "title": "AWS",
+                  "id": "20.47f3fb8794b3006c",
+                  "ideas": {}
+                }
+              }
+            }
+          }
+        },
+        "-1": {
+          "title": "Resources",
+          "id": "3.7b8f637586df806d",
+          "ideas": {
+            "1": {
+              "title": "LMAX Thread messaging library",
+              "id": "17.7b8f637586df806d",
+              "ideas": {
+                "1": {
+                  "title": "https://lmax-exchange.github.io/disruptor/",
+                  "id": "18.7b8f637586df806d"
+                }
+              },
+              "attr": {
+                "collapsed": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "attr": {},
+  "title": "System Archeticture"
+}

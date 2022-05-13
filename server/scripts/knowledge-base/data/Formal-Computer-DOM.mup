@@ -1,0 +1,345 @@
+{
+  "id": "root",
+  "formatVersion": 3,
+  "ideas": {
+    "1": {
+      "id": 1,
+      "title": "DOM",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "Welcome to GDI's intro to Javascript. My name is \"Sam\" it's Osama Alghanmi and with me is Pedro Meza. We work for Charter communication doing Javascript.&nbsp;<div><br></div><div><br></div><div><b>Figure out a group activity that breaks the ice: I think that introduction first and then for 15 mins we talk to each other in a group of (a number here depending on the number of students).&nbsp;</b></div><div><b><br></b></div><div><b>\"This will enable us to break that first barrier\"</b></div><div><b><br></b></div><div><b><br></b></div>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "-3": {
+          "title": "Resources",
+          "id": 181,
+          "ideas": {
+            "17": {
+              "title": "Tutorials",
+              "id": 686,
+              "ideas": {
+                "2": {
+                  "title": "flexbox learning game",
+                  "id": 600,
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  },
+                  "ideas": {
+                    "1": {
+                      "title": "http://flexboxfroggy.com/",
+                      "id": 599,
+                      "ideas": {},
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "19": {
+              "title": "DOM Enlightment",
+              "id": 689,
+              "ideas": {
+                "1": {
+                  "title": "http://domenlightenment.com/",
+                  "id": 688,
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              }
+            },
+            "20": {
+              "title": "Web Workers",
+              "id": 585,
+              "ideas": {
+                "1": {
+                  "title": "http://www.sitepoint.com/parallel-javascript-with-paralleljs/",
+                  "id": 586
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            }
+          },
+          "attr": {
+            "style": {}
+          }
+        },
+        "26.5": {
+          "title": "Concepts",
+          "id": 687,
+          "attr": {
+            "position": [
+              120,
+              -24,
+              2
+            ],
+            "style": {}
+          },
+          "ideas": {
+            "2": {
+              "title": "Web Engines",
+              "id": 372,
+              "ideas": {
+                "4": {
+                  "title": "Blink",
+                  "id": 373,
+                  "ideas": {
+                    "1": {
+                      "title": "http://www.chromium.org/blink#TOC-Blink-s-Mission:",
+                      "id": 374
+                    },
+                    "2": {
+                      "title": "Resources",
+                      "id": 377,
+                      "ideas": {
+                        "1": {
+                          "title": "the chromium project",
+                          "id": 375,
+                          "ideas": {
+                            "1": {
+                              "title": "http://www.chromium.org/developers",
+                              "id": 376
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "3": {
+                          "title": "https://en.wikipedia.org/wiki/Comparison_of_web_browser_engines",
+                          "id": 388,
+                          "ideas": {
+                            "1": {
+                              "title": "different browser engines",
+                              "id": 389
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "4": {
+                          "title": "https://github.com/nwjs/blink",
+                          "id": 390,
+                          "ideas": {
+                            "1": {
+                              "title": "unofficial mirror",
+                              "id": 391
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        },
+                        "5": {
+                          "title": "https://bitbucket.org/chromiumembedded/cef",
+                          "id": 392,
+                          "ideas": {
+                            "1": {
+                              "title": "best way to use blink is with Chromium embedded framework",
+                              "id": 393
+                            }
+                          },
+                          "attr": {
+                            "style": {},
+                            "collapsed": true
+                          }
+                        }
+                      },
+                      "attr": {
+                        "style": {}
+                      }
+                    }
+                  },
+                  "attr": {
+                    "style": {}
+                  }
+                }
+              },
+              "attr": {
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "4": {
+              "title": "Everything inherits from Node",
+              "id": 313,
+              "ideas": {
+                "1": {
+                  "title": "HTML ELEMENT",
+                  "id": 314
+                },
+                "2": {
+                  "title": "TEXT NODE",
+                  "id": 315
+                }
+              },
+              "attr": {
+                "attachment": {
+                  "contentType": "text/html",
+                  "content": "<h2 id=\"1.4\" style=\"font-family: Tahoma; font-size: 1.3em; border-radius: 4px; margin-top: 80px; margin-bottom: 24px; padding: 8px; color: rgb(51, 51, 51); line-height: normal; background: rgb(247, 247, 249);\">1.4 Properties and methods for working nodes</h2><p style=\"line-height: 1.8em; font-family: Helvetica; font-size: 16px;\">Like we have been discussing all node objects (e.g&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">Element</em>,&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">Attr</em>,&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">Text</em>&nbsp;etc...) inherit properties and methods from a primary&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">Node</em>&nbsp;object. These properties and methods are the baseline values and functions for manipulating, inspecting, and traversing the DOM. In addtion to the properties and methods provided by the node interface there are a great deal of other relevant properties and methods that are provided by sub node interfaces such as the&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">document</em>,&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">HTMLElement</em>, or&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">HTML*Element</em>&nbsp;interface.</p><p style=\"line-height: 1.8em; font-family: Helvetica; font-size: 16px;\">Below I list out the most common&nbsp;<em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">Node</em>&nbsp;properties and methods inherited by all node objects including the relevant inherited properties for working with nodes from sub-node interfaces.</p><span style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\">Node Properties:</span><ul style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\"><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">childNodes</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">firstChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">lastChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">nextSibling</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">nodeName</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">nodeType</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">nodeValue</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">parentNode</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">previousSibling</em></li></ul><span style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\">Node Methods:</span><ul style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\"><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">appendChild()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">cloneNode()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">compareDocumentPosition()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">contains()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">hasChildNodes()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">insertBefore()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">isEqualNode()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">removeChild()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">replaceChild()</em></li></ul><p style=\"line-height: 1.8em; font-family: Helvetica; font-size: 16px;\">Document Methods:</p><ul style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\"><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">document.createElement()</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">document.createTextNode()</em></li></ul><p style=\"line-height: 1.8em; font-family: Helvetica; font-size: 16px;\">HTML * Element Properties:</p><ul style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\"><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">innerHTML</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">outerHTML</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">textContent</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">innerText</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">outerText</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">firstElementChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">lastElementChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">nextElementChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">previousElementChild</em></li><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">children</em></li></ul><p style=\"line-height: 1.8em; font-family: Helvetica; font-size: 16px;\">HTML element Methods:</p><ul style=\"font-family: Helvetica; font-size: 16px; line-height: normal;\"><li style=\"list-style-type: disc; padding: 3.79688px 0px; line-height: 1.6em;\"><em style=\"color: rgb(96, 96, 96); font-family: 'Courier New', Courier, monospace;\">insertAdjacentHTML()</em></li></ul>"
+                },
+                "style": {},
+                "collapsed": true
+              }
+            },
+            "5": {
+              "title": "http://domenlightenment.com/#1.1",
+              "id": 312,
+              "attr": {
+                "style": {}
+              }
+            },
+            "6": {
+              "title": "Events",
+              "id": 316,
+              "attr": {
+                "style": {},
+                "collapsed": true
+              },
+              "ideas": {
+                "2": {
+                  "title": "http://domenlightenment.com/#11",
+                  "id": 318
+                },
+                "4": {
+                  "title": "Phases",
+                  "id": 692,
+                  "ideas": {
+                    "1": {
+                      "title": "Capture Phase",
+                      "id": 693
+                    },
+                    "2": {
+                      "title": "Bubbling phase",
+                      "id": 694
+                    }
+                  },
+                  "attr": {
+                    "collapsed": true,
+                    "style": {}
+                  }
+                },
+                "14": {
+                  "title": "Resources",
+                  "id": 690,
+                  "ideas": {
+                    "1": {
+                      "title": "http://domenlightenment.com/#11",
+                      "id": 691
+                    },
+                    "2": {
+                      "title": "https://www.w3.org/TR/DOM-Level-3-Events/#dom-event-architecture",
+                      "id": 695
+                    }
+                  },
+                  "attr": {
+                    "style": {},
+                    "collapsed": true
+                  }
+                }
+              }
+            },
+            "7": {
+              "title": "Animations",
+              "id": 581,
+              "ideas": {
+                "1": {
+                  "title": "Animate.css",
+                  "id": 582
+                },
+                "2": {
+                  "title": "Resources",
+                  "id": 704,
+                  "ideas": {
+                    "1": {
+                      "title": "https://css-tricks.com/controlling-css-animations-transitions-javascript/",
+                      "id": 705
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "style": {}
+              }
+            },
+            "8": {
+              "title": "API",
+              "id": 696,
+              "ideas": {
+                "1": {
+                  "title": "Document",
+                  "id": 697,
+                  "ideas": {
+                    "1": {
+                      "title": "querySelector",
+                      "id": 698,
+                      "attr": {
+                        "style": {},
+                        "collapsed": true
+                      },
+                      "ideas": {
+                        "2": {
+                          "title": "Resources",
+                          "id": 701,
+                          "ideas": {
+                            "1": {
+                              "title": "How are querySelector implemented under the hood",
+                              "id": 702,
+                              "ideas": {
+                                "1": {
+                                  "title": "http://stackoverflow.com/questions/25715538/how-does-queryselector-works-under-the-hood",
+                                  "id": 699,
+                                  "ideas": {},
+                                  "attr": {
+                                    "style": {}
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "attr": {
+                "collapsed": true,
+                "style": {}
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "ideaIdFrom": 554,
+      "ideaIdTo": 475,
+      "attr": {
+        "style": {
+          "color": "#FF0000",
+          "lineStyle": "dashed"
+        }
+      }
+    }
+  ],
+  "attr": {},
+  "title": "DOM"
+}
