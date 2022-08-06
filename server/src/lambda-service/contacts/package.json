@@ -26,7 +26,7 @@
     "googleapis": "^18.0.0",
     "joi": "^14.3.1",
     "moment": "^2.23.0",
-    "mongoose": "^5.2.1",
+    "mongoose": "^5.7.5",
     "mongoose-findorcreate": "^3.0.0",
     "mongoose-paginate": "^5.0.3",
     "serverless-http": "^2.3.0",
