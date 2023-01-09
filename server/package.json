@@ -81,7 +81,7 @@
     "regenerator-runtime": "^0.13.3",
     "serverless": "^1.38.0",
     "serverless-http": "^2.3.0",
-    "serverless-offline": "^5.11.0",
+    "serverless-offline": "^12.0.4",
     "supertest": "^3.4.2"
   },
   "jest": {
