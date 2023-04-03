@@ -4,7 +4,6 @@ import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
 import ImageGallery from "react-image-gallery";
 import { withState, compose } from "recompose";
-
 import {
   Chip,
   Card,
