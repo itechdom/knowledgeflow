@@ -30,7 +30,7 @@
     "bcrypt": "^3.0.1",
     "config": "^1.25.1",
     "dotenv": "^7.0.0",
-    "express": "^4.14.1",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.3",
     "express-session": "^1.15.6",
     "google-spreadsheets": "^0.5.1",
