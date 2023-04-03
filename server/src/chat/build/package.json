@@ -79,7 +79,7 @@
     "serverless": "^1.38.0",
     "supertest": "^3.4.2",
     "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.6"
+    "webpack-cli": "^3.3.12"
   },
   "jest": {
     "setupFiles": [
