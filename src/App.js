@@ -757,6 +757,7 @@ class App extends React.Component {
                                   routeProps.history.goBack();
                                 }}
                                 match={routeProps.match}
+                                history={routeProps.history}
                                 classes={classes}
                                 location={this.props.location}
                                 currentTags={this.state.tags}
