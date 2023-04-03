@@ -1,0 +1,1 @@
+/opt/homebrew/opt/mongodb-community/bin/mongod --config ./config/db/mongod.conf

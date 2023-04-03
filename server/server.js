@@ -74,15 +74,15 @@ const getExpressApp = (config) => {
   app.options("*", cors(corsOptions)); // enable pre-flight request for DELETE request
   app.use(cors(corsOptions));
   //CORS
-  // app.use(function(req, res, next) {
-  //   res.header("Access-Control-Allow-Origin", "*");
-  //   res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
-  //   res.header(
-  //     "Access-Control-Allow-Headers",
-  //     "Origin, X-Requested-With, Content-Type, Accept"
-  //   );
-  //   next();
-  // });
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
   // use body parser so we can get info = POST and/or URL parameters
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json({ limit: "50mb", type: "application/json" }));

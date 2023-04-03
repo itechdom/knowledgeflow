@@ -757,6 +757,7 @@ class App extends React.Component {
                                 onDelete={() => {
                                   routeProps.history.goBack();
                                 }}
+                                match={routeProps.match}
                                 classes={classes}
                                 location={this.props.location}
                                 currentTags={this.state.tags}
@@ -764,6 +765,7 @@ class App extends React.Component {
                                 currentUser={this.state.currentUser}
                                 setState={(props) => this.setState(props)}
                                 model={knowledge}
+                                knowledge={knowledge}
                                 knowledge_updateModel={
                                   props.knowledge_updateModel
                                 }

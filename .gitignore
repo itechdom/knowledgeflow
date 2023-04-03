@@ -3,6 +3,7 @@ node_modules
 jspm_packages
 lib
 client
+server/data/
 
 # Serverless directories
 .serverless
