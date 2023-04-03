@@ -1,5 +1,5 @@
 import React from "react";
-import ForceGraph2D from "react-force-graph-2d";
+// import ForceGraph2D from "react-force-graph-2d";
 class Tree extends React.Component {
   constructor(props) {
     super(props);
@@ -83,23 +83,24 @@ class Tree extends React.Component {
         }}
       />
     ) : (
-      <ForceGraph2D
-        graphData={this.state.graphData}
-        // centerAt={null}
-        width={this.props.width || 700}
-        height={this.props.height || 700}
-        nodeLabel={(node) => {
-          if (node.attr && node.attr.note && node.attr.note.text) {
-            return node.title + ": \n" + node.attr.note.text;
-          }
-          return node.title;
-        }}
-        nodeVal={(node) => {
-          return node.size;
-        }}
-        nodeAutoColorBy="group"
-        linkAutoColorBy="group"
-      />
+      <></>
+      // <ForceGraph2D
+      //   graphData={this.state.graphData}
+      //   // centerAt={null}
+      //   width={this.props.width || 700}
+      //   height={this.props.height || 700}
+      //   nodeLabel={(node) => {
+      //     if (node.attr && node.attr.note && node.attr.note.text) {
+      //       return node.title + ": \n" + node.attr.note.text;
+      //     }
+      //     return node.title;
+      //   }}
+      //   nodeVal={(node) => {
+      //     return node.size;
+      //   }}
+      //   nodeAutoColorBy="group"
+      //   linkAutoColorBy="group"
+      // />
     );
   }
 }
