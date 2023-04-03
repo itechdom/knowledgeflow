@@ -38,9 +38,6 @@ connectToDb((err, data) => {
   readFiles(
     "./data/",
     (filename, content) => {
-      if (filename !== "Formal-Computer-JavaScript.mup") {
-        return;
-      }
       let formattedNodeList = JSON.parse(content).ideas;
       let level = 0;
       formattedNodeList && formatMindmap(formattedNodeList, level);

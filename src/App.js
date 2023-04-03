@@ -699,9 +699,8 @@ class App extends React.Component {
                         //   props.knowledge_undoManager.history
                         // );
                         let knowledge =
-                          props.knowledge_queryResult &&
-                          props.knowledge_queryResult.data &&
-                          props.knowledge_queryResult.data[0];
+                          props.knowledge_queryResult 
+                          
                         if (!knowledge || props.knowledge_loading) {
                           return <Loading></Loading>;
                         }
