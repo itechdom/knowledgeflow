@@ -7,6 +7,7 @@ export const dateFilterRouteList = [
 export const mainFilterRouteList = [{ url: "all", name: "All", icon: "" }];
 
 export const mainRouteList = [
+  { url: "/knowledge", name: "Knowledge", icon: "memory" },
   { url: "/", name: "Knowledge Stories", icon: "memory" },
 ];
 
