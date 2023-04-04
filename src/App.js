@@ -54,7 +54,7 @@ import Knowledge from "./Knowledge/Knowledge";
 import KnowledgePreview from "./Knowledge/ModelPreview/ModelPreview";
 const loginBG = "";
 const registerBG = "";
-const logo = "https://orbital-clients.s3.amazonaws.com/_Main/Markab-KB.svg";
+const logo = "assets/images/logo-no-background.svg";
 const gaTrackingCode = "UA-46023413-2";
 const disableAuth = true;
 const offlineStorage = {
