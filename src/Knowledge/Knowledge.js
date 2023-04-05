@@ -3,7 +3,7 @@ import { styles } from "./Knowledge.styles.js";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
 import theme from "Theme";
 import ModelList from "../orbital-templates/Material/_shared/ModelList/ModelList";
-import ModelListItem from "./ModelList/ModelListItem";
+import ModelListItem from "./ModelList/ModelListItemFP";
 import ModelPreview from "./ModelPreview/ModelPreview";
 import { withStyles, Button } from "@material-ui/core";
 const ModelListActions = ({ onAdd }) => {

@@ -3,17 +3,16 @@ import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
 import ImageGallery from "react-image-gallery";
-import { withState, compose } from "recompose";
 import {
-  Chip,
-  Card,
-  CardActionArea,
-  CardContent,
-  CardActions,
-  CardMedia,
-  Typography,
-  IconButton,
-  Grid,
+    Chip,
+    Card,
+    CardActionArea,
+    CardContent,
+    CardActions,
+    CardMedia,
+    Typography,
+    IconButton,
+    Grid
 } from "@material-ui/core";
 
 const ModelListItemFP = ({
@@ -42,8 +41,6 @@ const ModelListItemFP = ({
     const [actionOpen, setActionOpen] = React.useState(false);
     //useState for anchorEl and setAnchorEl
     const [anchorEl, setAnchorEl] = React.useState(null);
-    //useState for setDeletedModel and deletedModel
-    const [deletedModel, setDeletedModel] = React.useState(null);
     const fetchImages = () => {
         if (model) {
             const segments = model.title.split("-");
@@ -96,96 +93,73 @@ const ModelListItemFP = ({
         );
     };
     return (
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2}>
-            <Card className={classes.card}>
-                <CardActionArea
-                    onClick={() => {
-                        onView
-                            ? onView(model)
-                            : history.push(`${match.path}/view/${model._id}`);
-                    }}
-                >
-                    <CardContent>
-                        <Typography variant="h5">
-                            {model.name || model.title}
-                        </Typography>
-                    </CardContent>
-                    <Grid container>
-                        {fetchedImage && fetchedImage.length > 0 ? (
-                            <Grid item xs={12}>
-                                {renderImageGallery()}
-                            </Grid>
-                        ) : (
-                            <Grid item xs={12}>
+        <Grid style={{ marginBottom: "10em" }} container justify="center">
+
+            <Grid item>
+                <Card className={classes.card}>
+                    <CardActionArea
+                        onClick={() => {
+                            onView
+                                ? onView(model)
+                                : history.push(`${match.path}/view/${model._id}`);
+                        }}
+                    >
+                        <CardContent>
+                            <Typography variant="h5">
+                                {model.name || model.title}
+                            </Typography>
+                        </CardContent>
+                        <Grid container>
+                            {fetchedImage && fetchedImage.length > 0 ? (
                                 <CardMedia
-                                    className={classes.media}
-                                    image={model.image}
-                                    title={model.name || model.title}
+                                    className={classes.cardImage}
+                                    component="img"
+                                    alt="Contemplative Reptile"
+                                    style={{ borderRadius: "150px", margin: "10px" }}
+                                    image={fetchedImage[0].small}
+                                    title="Contemplative Reptile"
                                 />
-                            </Grid>
-                        )}
-                    </Grid>
-                    <CardContent>
-                        <Typography variant="body2" color="textSecondary">
-                            {model.description}
-                        </Typography>
-                    </CardContent>
-                </CardActionArea>
-                <CardActions>
-                    <IconButton
-                        aria-label="more"
-                        aria-controls="long-menu"
-                        aria-haspopup="true"
-                        onClick={(event) => {
-                            setAnchorEl(event.currentTarget);
-                            setActionOpen(true);
+                            ) : (
+                                <img
+                                    width="250px"
+                                    height="250px"
+                                    style={{ borderRadius: "150px", margin: "10px" }}
+                                    src="https://picsum.photos/500/500"
+                                />
+                            )}
+                        </Grid>
+                        <CardContent>
+                            <Typography variant="body2" color="textSecondary">
+                                {model.description}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                        {model.tags.map((tag, index) => (
+                            <Chip
+                                key={index}
+                                size="small"
+                                style={{ fontSize: "10px", marginRight: "3px" }}
+                                variant="outlined"
+                                label={<>{tag}</>}
+                            />
+                        ))}
+                    </CardActions>
+                    <ConfirmDeleteModal
+                        open={open}
+                        setOpen={setOpen}
+                        onConfirm={() => {
+                            deleteModel(deletedModel).then(() => {
+                                setOpen(false);
+                            });
                         }}
-                    >
-                        <MoreVertIcon />
-                    </IconButton>
-                    <Menu
-                        id="long-menu"
-                        anchorEl={anchorEl}
-                        keepMounted
-                        open={actionOpen}
-                        onClose={() => {
-                            setActionOpen(false);
-                        }}
-                        PaperProps={{
-                            style: {
-                                maxHeight: ITEM_HEIGHT * 4.5,
-                                width: "20ch",
-                            },
-                        }}
-                    >
-                        <MenuItem
-                            onClick={() => {
-                                setActionOpen(false);
-                                onEdit
-                                    ? onEdit(model)
-                                    : history.push(
-                                        `${match.path}/edit/${model._id}`
-                                    );
-                            }}
-                        >
-                            Edit
-                        </MenuItem>
-                        <MenuItem
-                            onClick={() => {
-                                setActionOpen(false);
-                                setDeletedModel(model);
-                                setOpen(true);
-                            }}
-                        >
-                            Delete
-                        </MenuItem>
-                    </Menu>
-                </CardActions>
-            </Card>
+                    />
+                </Card>
+            </Grid>
         </Grid>
     );
 };
-export default enhance(ModelListItemFP);
+export default ModelListItemFP;
 
 
 
