@@ -21,7 +21,7 @@ import ListTree from "./ListTree.js";
 import DeleteIcon from "@material-ui/icons/Delete";
 import EditIcon from "@material-ui/icons/Edit";
 import ConfirmDeleteModal from "../../orbital-templates/Material/_shared/ConfirmDeleteModal/ConfirmDeleteModal";
-import GraphTree from "./GraphTree";
+// import GraphTree from "./GraphTree";
 import Mindmap from "./Mindmap";
 import { withState, compose } from "recompose";
 import star from "../../../assets/images/star.jpg";
@@ -367,7 +367,7 @@ const ModelPreview = (props) => {
                   }
                 }}
               >
-                <GraphTree
+                {/* <GraphTree
                   mindmapByKeys={mindmapByKeys}
                   editedNode={editedNode}
                   edit={edit}
@@ -375,7 +375,7 @@ const ModelPreview = (props) => {
                   width={graphContainer && graphContainer.width}
                   height={graphContainer && graphContainer.height}
                   {...TreeOperations}
-                />
+                /> */}
               </div>
             </Paper>
           </Grid>
