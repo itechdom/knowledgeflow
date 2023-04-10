@@ -30,7 +30,7 @@
     "@markab.io/node": "^5.1.0",
     "@markab.io/orbital-api": "^2.0.0",
     "apollo-server-express": "^2.1.0",
-    "aws-sdk": "^2.403.0",
+    "aws-sdk": "^2.1354.0",
     "bcrypt": "^3.0.1",
     "config": "^1.25.1",
     "cors": "^2.8.5",
