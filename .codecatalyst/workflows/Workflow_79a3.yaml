@@ -1,0 +1,9 @@
+Name: Workflow_79a3
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: PUSH
+    Branches:
+      - master
+Actions:
