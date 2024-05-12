@@ -1,0 +1,42 @@
+Name: Workflow_79a3
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: PUSH
+    Branches:
+      - master
+Actions:
+  InstallDependenciesBackend:     # Key for this action
+    Environment: dev
+    Commands:
+      - cd api 
+      - npm install
+
+  DeployBackend:                 # Key for this action
+    Environment: dev
+    Commands:
+      - cd api
+      - serverless deploy
+
+  InstallDependenciesFrontend:    # Key for this action
+    Environment: dev
+    Commands:
+      - cd knowledgeflow-v2
+      - npm install
+
+  BuildFrontend:                  # Key for this action
+    Environment: dev
+    Commands:
+      - cd knowledgeflow-v2
+      - npm run build
+
+  DeployFrontend:                 # Key for this action
+    Environment: AWS CLI
+    Commands:
+      - aws s3 sync knowledgeflow-v2/build s3://your-frontend-bucket-name --delete  # Replace with your bucket
+
+  InvalidateCloudFrontCache:     # Key for this action (Optional)
+    Environment: AWS CLI
+    Commands:
+      - aws cloudfront create-invalidation --distribution-id your-cloudfront-id --paths "/*" # If using CloudFront
