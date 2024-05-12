@@ -7,3 +7,36 @@ Triggers:
     Branches:
       - master
 Actions:
+  - Name: Install Dependencies (Backend)
+    Environment: Node.js
+    Commands:
+      - cd api 
+      - npm install
+
+  - Name: Deploy Backend
+    Environment: Node.js
+    Commands:
+      - cd api
+      - serverless deploy
+
+  - Name: Install Dependencies (Frontend)
+    Environment: Node.js
+    Commands:
+      - cd knowledgeflow-v2
+      - npm install
+
+  - Name: Build Frontend
+    Environment: Node.js
+    Commands:
+      - cd knowledgeflow-v2
+      - npm run build
+
+  - Name: Deploy Frontend
+    Environment: AWS CLI
+    Commands:
+      - aws s3 sync knowledgeflow-v2/build s3://your-frontend-bucket-name --delete  # Replace with your bucket
+
+  - Name: Invalidate CloudFront Cache (Optional)
+    Environment: AWS CLI
+    Commands:
+      - aws cloudfront create-invalidation --distribution-id your-cloudfront-id --paths "/*" # If using CloudFront
